@@ -1,0 +1,10 @@
+#First Commit 
+
+test de commit
+
+<<<<<<< HEAD
+# Blabla
+ Is it a problem ?
+=======
+# this is bound to cause trouble
+>>>>>>> very-bad
