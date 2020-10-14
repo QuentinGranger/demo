@@ -2,8 +2,4 @@
 
 test de commit
 
-# Blabla
-
-on a branch
-
-switched branch
+# this is bound to cause trouble
