@@ -3,7 +3,4 @@
 test de commit
 
 # Blabla
-
-on a branch
-
-switched branch
+ Is it a problem ?
