@@ -7,122 +7,134 @@ X-WR-CALNAME:🃏 Pokémon TCG — Sorties France
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
-SUMMARY:🃏 Sortie JCC — Pokébox Méga Forces
+SUMMARY:🟡 🃏 Sortie JCC — Pokébox Méga Forces
 LOCATION:France
-DESCRIPTION:Sortie française des Pokébox Méga Forces : Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex. Chaque boîte contient une carte promo et 4 boosters. Date référencée par PokéCardex.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Sortie française référencée par PokéCardex pour les Pokébox Méga Forces : Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Pokébox Méga Forces
+DESCRIPTION:Rappel dans 7 jours : 🃏 Pokébox Méga Forces
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Pokébox Méga Forces
+DESCRIPTION:Rappel demain : 🃏 Pokébox Méga Forces
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
-SUMMARY:🃏 Sortie JCC — 30e Anniversaire
+SUMMARY:✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire. Vague de lancement française avec notamment l'ETB 30e Anniversaire et plusieurs collections/coffrets associés.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — 30e Anniversaire
+DESCRIPTION:Rappel dans 7 jours : 🃏 30e Anniversaire
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — 30e Anniversaire
+DESCRIPTION:Rappel demain : 🃏 30e Anniversaire
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-SUMMARY:🃏 Sortie JCC — Vague 30 ans d'octobre
+SUMMARY:🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Vague française du 30e Anniversaire : lot de boosters / Bundle\, coffret Collection Classeur\, mini-boîtes 30 ans. Également référencé le duopack d'octobre Mimiqui de la Team Rocket / Ectoplasma / Marshadow.
+DESCRIPTION:Fiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Vague 30 ans d'octobre
+DESCRIPTION:Rappel dans 7 jours : 🃏 Vague 30 ans d'octobre
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Vague 30 ans d'octobre
+DESCRIPTION:Rappel demain : 🃏 Vague 30 ans d'octobre
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-SUMMARY:🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+SUMMARY:🟡 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
 LOCATION:France
-DESCRIPTION:Sortie française annoncée des Decks Combat du 30e Anniversaire mettant en vedette Mentali-ex et Noctali-ex.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Date actuellement référencée par des calendriers spécialisés pour les Decks Combat Mentali-ex et Noctali-ex.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+DESCRIPTION:Rappel dans 7 jours : 🃏 Decks Mentali-ex & Noctali-ex
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+DESCRIPTION:Rappel demain : 🃏 Decks Mentali-ex & Noctali-ex
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
+SUMMARY:🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Sortie française de l'extension Méga-Évolution : Règne Delta (ME06)\, avec notamment boosters/display et Coffret Dresseur d'Élite. La date du 6 novembre 2026 est référencée par plusieurs calendriers JCC spécialisés concordants.
+DESCRIPTION:Fiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06)\, boosters/display et ETB.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Règne Delta (ME06)
+DESCRIPTION:Rappel dans 7 jours : 🃏 Règne Delta (ME06)
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Règne Delta (ME06)
+DESCRIPTION:Rappel demain : 🃏 Règne Delta (ME06)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-30th-premium-wave-20261106@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:🃏 Sortie JCC — Coffrets premium 30 ans
+SUMMARY:🟡 🃏 Sortie JCC — Coffrets premium 30 ans
 LOCATION:France
-DESCRIPTION:Vague premium du 30e Anniversaire : Collections Ultra-Premium Mentali / Noctali\, collections avec figurine Mew / Mewtwo et Collection Premium Métamorph selon les calendriers français/européens actuellement référencés.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée par des calendriers français/européens spécialisés.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Coffrets premium 30 ans
+DESCRIPTION:Rappel dans 7 jours : 🃏 Coffrets premium 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Coffrets premium 30 ans
+DESCRIPTION:Rappel demain : 🃏 Coffrets premium 30 ans
 END:VALARM
 END:VEVENT
 END:VCALENDAR
