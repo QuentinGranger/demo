@@ -7,12 +7,14 @@ X-WR-CALNAME:⭐ Pokémon — Tout (France & Paris)
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20270104
-SUMMARY:🎪 Convention / événement — Admirez-les tous !
+SUMMARY:✅ 🎪 Convention / événement — Admirez-les tous !
 LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris
-DESCRIPTION:Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -27,72 +29,80 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
-SUMMARY:🃏 Sortie JCC — Pokébox Méga Forces
+SUMMARY:🟡 🃏 Sortie JCC — Pokébox Méga Forces
 LOCATION:France
-DESCRIPTION:Sortie française des Pokébox Méga Forces : Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex. Chaque boîte contient une carte promo et 4 boosters. Date référencée par PokéCardex.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Sortie française référencée par PokéCardex pour les Pokébox Méga Forces : Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Pokébox Méga Forces
+DESCRIPTION:Rappel dans 7 jours : 🃏 Pokébox Méga Forces
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Pokébox Méga Forces
+DESCRIPTION:Rappel demain : 🃏 Pokébox Méga Forces
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
-SUMMARY:🃏 Sortie JCC — 30e Anniversaire
+SUMMARY:✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire. Vague de lancement française avec notamment l'ETB 30e Anniversaire et plusieurs collections/coffrets associés.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — 30e Anniversaire
+DESCRIPTION:Rappel dans 7 jours : 🃏 30e Anniversaire
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — 30e Anniversaire
+DESCRIPTION:Rappel demain : 🃏 30e Anniversaire
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-SUMMARY:🃏 Sortie JCC — Vague 30 ans d'octobre
+SUMMARY:🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Vague française du 30e Anniversaire : lot de boosters / Bundle\, coffret Collection Classeur\, mini-boîtes 30 ans. Également référencé le duopack d'octobre Mimiqui de la Team Rocket / Ectoplasma / Marshadow.
+DESCRIPTION:Fiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Vague 30 ans d'octobre
+DESCRIPTION:Rappel dans 7 jours : 🃏 Vague 30 ans d'octobre
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Vague 30 ans d'octobre
+DESCRIPTION:Rappel demain : 🃏 Vague 30 ans d'octobre
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-SUMMARY:🎪 Convention — Lille Card Show
+SUMMARY:🟡 🎪 Convention — Lille Card Show
 LOCATION:Lille\, France
-DESCRIPTION:Salon cartes et TCG avec présence Pokémon attendue.
+DESCRIPTION:Fiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG référencé pour le 3 octobre 2026.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -107,12 +117,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9d0d150f-a5be-407d-812e-4465301f3d7c@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
-SUMMARY:🎪 Convention — Breizh TCG
+SUMMARY:🟡 🎪 Convention — Breizh TCG
 LOCATION:Saint-Brieuc\, France
-DESCRIPTION:Convention TCG avec Pokémon.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Convention TCG référencée avec présence Pokémon attendue.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -127,12 +139,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
-SUMMARY:🏆 Play! Pokémon — Championnats Régionaux Pokémon — Nice
+SUMMARY:✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
 LOCATION:Palais des Expositions\, Nice\, France
-DESCRIPTION:Événement officiel Play! Pokémon — Régionaux de Nice.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.
 CATEGORIES:Pokémon,Play! Pokémon,Compétition
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -147,12 +161,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261026
-SUMMARY:🎪 Convention — Paris Games Week + Gala TCG
+SUMMARY:✅ 🎪 Convention — Paris Games Week + Gala TCG
 LOCATION:Paris Expo Porte de Versailles\, Paris
-DESCRIPTION:Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -167,72 +183,80 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-SUMMARY:🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+SUMMARY:🟡 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
 LOCATION:France
-DESCRIPTION:Sortie française annoncée des Decks Combat du 30e Anniversaire mettant en vedette Mentali-ex et Noctali-ex.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Date actuellement référencée par des calendriers spécialisés pour les Decks Combat Mentali-ex et Noctali-ex.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+DESCRIPTION:Rappel dans 7 jours : 🃏 Decks Mentali-ex & Noctali-ex
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+DESCRIPTION:Rappel demain : 🃏 Decks Mentali-ex & Noctali-ex
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
+SUMMARY:🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Sortie française de l'extension Méga-Évolution : Règne Delta (ME06)\, avec notamment boosters/display et Coffret Dresseur d'Élite. La date du 6 novembre 2026 est référencée par plusieurs calendriers JCC spécialisés concordants.
+DESCRIPTION:Fiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06)\, boosters/display et ETB.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Règne Delta (ME06)
+DESCRIPTION:Rappel dans 7 jours : 🃏 Règne Delta (ME06)
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Règne Delta (ME06)
+DESCRIPTION:Rappel demain : 🃏 Règne Delta (ME06)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-30th-premium-wave-20261106@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:🃏 Sortie JCC — Coffrets premium 30 ans
+SUMMARY:🟡 🃏 Sortie JCC — Coffrets premium 30 ans
 LOCATION:France
-DESCRIPTION:Vague premium du 30e Anniversaire : Collections Ultra-Premium Mentali / Noctali\, collections avec figurine Mew / Mewtwo et Collection Premium Métamorph selon les calendriers français/européens actuellement référencés.
+DESCRIPTION:Fiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée par des calendriers français/européens spécialisés.
 CATEGORIES:Pokémon,TCG,Sortie JCC
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Sortie JCC — Coffrets premium 30 ans
+DESCRIPTION:Rappel dans 7 jours : 🃏 Coffrets premium 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Sortie JCC — Coffrets premium 30 ans
+DESCRIPTION:Rappel demain : 🃏 Coffrets premium 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9639e861-d366-45a3-bcf5-6816a7d78bf0@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
-SUMMARY:🎪 Convention — Le Royaume du TCG
+SUMMARY:✅ 🎪 Convention — Le Royaume du TCG
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Grand salon TCG avec forte présence Pokémon.
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
@@ -247,13 +271,15 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ed9346e9-9a83-4be1-9376-4f0d7ef4c34f@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
-SUMMARY:🎪 Événement — Pokémon Day 2027
+SUMMARY:✅ 🎪 Événement — Pokémon Day 2027
 LOCATION:France / en ligne
-DESCRIPTION:Journée Pokémon annuelle. Surveiller les annonces et éventuels événements à Paris.
-CATEGORIES:Pokémon,Événement,Convention
+DESCRIPTION:Fiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.
+CATEGORIES:Pokémon,Événement
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -267,12 +293,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:57771081-d189-4102-a78d-68758413cbc7@openai
-DTSTAMP:20260818T210200Z
+DTSTAMP:20260818T210800Z
+LAST-MODIFIED:20260818T210800Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20270708
 DTEND;VALUE=DATE:20270712
-SUMMARY:🎪 Convention — Japan Expo Paris 2027
+SUMMARY:🟡 🎪 Convention — Japan Expo Paris 2027
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Japan Expo 2027. Présence Pokémon à confirmer.
+DESCRIPTION:Fiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.
 CATEGORIES:Pokémon,Événement,Convention
 BEGIN:VALARM
 TRIGGER:-P7D
