@@ -1,0 +1,28 @@
+{
+  "version": "FORTNITE_CHANGE_INDEX_FR_V1",
+  "updated_at": "2026-08-19T15:57:00Z",
+  "source_ledger": "fortnite-change-ledger.json",
+  "notification_outbox": "fortnite-notification-outbox-france.json",
+  "authority": "DERIVED_ONLY",
+  "policy": {
+    "rebuildable": true,
+    "source_of_truth": "fortnite-change-ledger.json + fortnite-notification-outbox-france.json",
+    "never_drive_canon": true,
+    "write_noise": "Do not commit when the logical index is unchanged.",
+    "sorted_sets": true
+  },
+  "subject_heads": {},
+  "by_domain": {},
+  "by_change_type": {},
+  "open_changes_by_subject": {},
+  "consumed_notification_keys": [],
+  "unknown_delivery_keys": [],
+  "pending_reconciliation": [],
+  "stats": {
+    "changes": 0,
+    "subjects": 0,
+    "notification_intents": 0,
+    "consumed_notification_keys": 0,
+    "unknown_delivery": 0
+  }
+}
