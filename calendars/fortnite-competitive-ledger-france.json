@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-19T21:03:30Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -94,7 +94,7 @@
       "official_event_slug": "EWCParis",
       "series_id": "RELOAD_ELITE_SERIES",
       "season_id": null,
-      "name": "Reload Elite Series Championship — EWC 2026 — Riyad",
+      "name": "Reload Elite Series Championship — EWC 2026 — Paris",
       "competition_class": "RELOAD_ELITE",
       "status": "LIVE",
       "regions": ["GLOBAL"],
@@ -102,7 +102,7 @@
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": true,
-      "venue": {"name":"Boulevard City","city":"Riyadh","country":"Saudi Arabia","address":null},
+      "venue": {"name":null,"city":"Paris","country":"France","address":null},
       "date_window": {"start_date":"2026-08-19","end_date":"2026-08-22","time_precision":"DATE_RANGE"},
       "registration": null,
       "eligibility": {"status":"UNKNOWN"},
@@ -111,11 +111,12 @@
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "source_ids": ["fortnite_competitive","ewc_official"],
-      "source_urls": ["https://www.fortnite.com/competitive/events/S39_ReloadEliteSeriesFinal?region=NAC&round=S39_ReloadEliteSeries1Final_NAC","https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26"],
+      "source_urls": ["https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&region=NAC","https://www.signup.esportsworldcup.com/EWCPARIS26","https://resources.esportsworldcup.com/en/competitive-ops/articles/article"],
       "phases": [{"phase_id":"reload-elite-ewc-paris-2026:championship","name":"Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"LIVE","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATE_RANGE_ONLY"}],
       "history": [
         {"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."},
-        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","source_id":"ewc_official","note":"Exact EWC ticket page identifies Boulevard City, Riyadh. Multiple Fortnite Competitive qualifier pages also explicitly say the Championship is at EWC in Riyadh, Saudi Arabia. A broader EWC rules paragraph still says Paris; the conflict is preserved in audit while exact event logistics follow the specific ticket page."}
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","source_id":"ewc_official","note":"A previously followed EWC ticket page identified Boulevard City, Riyadh. Multiple regional qualifier pages also contained Riyadh wording; the conflict with Paris was retained in audit."},
+        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","source_id":"fortnite_competitive","note":"Current Reload Elite Series Championship details explicitly place the top 40 duos at the Esports World Cup in Paris, France, Aug 19–22. EWC's July 17 official rulebook update says the event was relocated to Paris, and the current EWC Paris signup says the 2026 Esports World Cup continues in Paris. Older regional qualifier copy still says Riyadh and is retained as conflicting historical evidence. Current championship/event-level sources control the canonical location."}
       ]
     },
     {
