@@ -9,6 +9,7 @@ X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
 X-POKEMON-PRICE-POLICY:OFFICIAL_EUR_EXACT_SKU_V2
 X-POKEMON-WAVE-POLICY:ONE_EVENT_CHECKLIST_V2
 X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
+X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
 DTSTAMP:20260819T031000Z
@@ -312,7 +313,7 @@ DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -593,7 +594,7 @@ X-POKEMON-TICKET-URL:https://ticket.japan-expo.com/fr
 X-POKEMON-TICKET-STATUS:PORTAL_AVAILABLE_2027_NOT_PUBLISHED
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:TICKET_NOT_YET_RELEASED
-DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles, mais la présence Pokémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositions Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; hall/entrée 2027 non encore précisé.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://ticket.japan-expo.com/fr — portail actif, billets spécifiques 2027 pas encore publiés au moment de la vérification.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/fr
+DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositions Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; hall/entrée 2027 non encore précisé.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://ticket.japan-expo.com/fr — portail actif, billets spécifiques 2027 pas encore publiés au moment de la vérification.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/fr
 URL:https://paris.japan-expo.com/fr
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
