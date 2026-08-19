@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TAXONOMY_FR_V2",
-  "updated_at": "2026-08-19T05:15:29Z",
+  "updated_at": "2026-08-19T06:38:00Z",
   "scope": "Fortnite — taxonomie sémantique France/Europe",
   "principles": {
     "stable_ids": "IDs ASCII stables ; labels FR/EN peuvent évoluer.",
@@ -47,7 +47,7 @@
       {"id":"SOLOS","label_fr":"Solo"},{"id":"DUOS","label_fr":"Duos"},{"id":"TRIOS","label_fr":"Trios"},{"id":"SQUADS","label_fr":"Escouades"},{"id":"TEAMS","label_fr":"Équipes"}
     ],
     "event_types": [
-      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},{"id":"SEASON_END","label_fr":"Fin de saison / passe de combat"},{"id":"PATCH_UPDATE","label_fr":"Mise à jour"},{"id":"LIVE_EVENT","label_fr":"Événement live"},{"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},{"id":"TOURNAMENT","label_fr":"Tournoi"},{"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},{"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},{"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},{"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},{"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"},{"id":"ITEM_SHOP_LAUNCH","label_fr":"Lancement boutique d'objets"}
+      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},{"id":"SEASON_END","label_fr":"Fin de saison / passe de combat"},{"id":"PATCH_UPDATE","label_fr":"Mise à jour"},{"id":"SERVICE_DOWNTIME","label_fr":"Maintenance / indisponibilité de service"},{"id":"LIVE_EVENT","label_fr":"Événement live"},{"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},{"id":"TOURNAMENT","label_fr":"Tournoi"},{"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},{"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},{"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},{"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},{"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"},{"id":"ITEM_SHOP_LAUNCH","label_fr":"Lancement boutique d'objets"}
     ],
     "platforms": [
       {"id":"PC","label_fr":"PC"},{"id":"PLAYSTATION","label_fr":"PlayStation"},{"id":"XBOX","label_fr":"Xbox"},{"id":"NINTENDO","label_fr":"Nintendo"},{"id":"ANDROID","label_fr":"Android"},{"id":"IOS","label_fr":"iOS"},{"id":"CLOUD","label_fr":"Cloud gaming"}
@@ -75,7 +75,7 @@
       {"id":"SEVEN_VS_IO","label_fr":"Les Sept contre l'Ordre imaginé"}
     ],
     "themes": [
-      {"id":"FNCS_GLOBAL","label_fr":"FNCS Global Championship"},{"id":"RANKED","label_fr":"Classé"},{"id":"ESPORTS_LIVE","label_fr":"Esport en présentiel"},{"id":"TICKETING","label_fr":"Billetterie"},{"id":"NEW_SEASON","label_fr":"Nouvelle saison"},{"id":"DOWNTIME","label_fr":"Maintenance / indisponibilité"},{"id":"COSMETICS","label_fr":"Cosmétiques"},{"id":"CREATOR_ECOSYSTEM","label_fr":"Écosystème créateur"},{"id":"LORE","label_fr":"Lore"},{"id":"LIVE_STORY","label_fr":"Événement narratif live"},{"id":"BATTLE_PASS","label_fr":"Passe de combat"},{"id":"RANK_RESET","label_fr":"Réinitialisation classée"}
+      {"id":"FNCS_GLOBAL","label_fr":"FNCS Global Championship"},{"id":"RANKED","label_fr":"Classé"},{"id":"ESPORTS_LIVE","label_fr":"Esport en présentiel"},{"id":"TICKETING","label_fr":"Billetterie"},{"id":"NEW_SEASON","label_fr":"Nouvelle saison"},{"id":"DOWNTIME","label_fr":"Maintenance / indisponibilité"},{"id":"SERVICE_STATUS","label_fr":"État des services Fortnite"},{"id":"COSMETICS","label_fr":"Cosmétiques"},{"id":"CREATOR_ECOSYSTEM","label_fr":"Écosystème créateur"},{"id":"LORE","label_fr":"Lore"},{"id":"LIVE_STORY","label_fr":"Événement narratif live"},{"id":"BATTLE_PASS","label_fr":"Passe de combat"},{"id":"RANK_RESET","label_fr":"Réinitialisation classée"}
     ]
   },
   "derived_relations": {
