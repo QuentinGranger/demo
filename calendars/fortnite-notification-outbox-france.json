@@ -97,7 +97,7 @@
     }
   ],
   "consumed_keys": {
-    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {"state":"RESERVED","intent_id":"nti_ed0b51ad60241c9af0b03ee3","reserved_at":"2026-08-19T18:12:23Z"}
+    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {"intent_id":"nti_ed0b51ad60241c9af0b03ee3","state":"RESERVED","last_event_id":"nde_95e876d4f72128dc579ed06f"}
   },
   "group_index": {},
   "history": [
