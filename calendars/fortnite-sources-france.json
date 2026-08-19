@@ -1,12 +1,13 @@
 {
   "version": "FORTNITE_OFFICIAL_SOURCE_REGISTRY_FR_V1",
-  "updated_at": "2026-08-19T09:35:00Z",
+  "updated_at": "2026-08-19T09:41:32Z",
   "scope": "Fortnite — France et Europe pertinente",
   "principles": {
     "authority_by_field": "Une source n'est autorisée à confirmer que les champs de son périmètre.",
     "france_guard": "Une annonce globale n'établit pas automatiquement une disponibilité ou un horaire France.",
     "competitive_primary": "Fortnite Competitive est la source primaire pour calendrier, formats, régions, conditions, sessions, qualification et résultats compétitifs.",
     "competitive_exhaustive_ledger": "Le calendrier compétitif officiel EU alimente le ledger compétitif exhaustif ; le .ics reste une projection sélective.",
+    "competitive_engine_v2": "Le ledger compétitif conserve les faits canoniques ; le moteur V2 calcule graphe, actionnabilité, conflits et projection, et l'index dérivé n'a aucune autorité.",
     "status_primary": "Epic Games Status est la source primaire pour incidents, maintenance, impact technique et rétablissement réellement publiés.",
     "service_link_guard": "Epic Status confirme l'état technique mais ne relie une maintenance à une saison, un patch ou un live event que si cette relation est explicitement publiée ou corroborée par une source Fortnite autorisée.",
     "no_social_only": "Un post social sert au signal ; rechercher la page officielle correspondante dès qu'elle existe."
@@ -46,9 +47,9 @@
       "authority": "PRIMARY_COMPETITIVE",
       "evidence_grade": "A",
       "territory": "GLOBAL_REGIONAL",
-      "domains": ["FNCS", "CUPS", "RANKED_CUPS", "RELOAD", "ZERO_BUILD", "MOBILE", "PLAYSTATION", "POWER_RANKING", "EU_SCHEDULE", "REGISTRATION", "QUALIFICATION", "PRIZE"],
-      "can_confirm": ["TOURNAMENT_DATE", "SESSION_TIME", "SESSION_END_TIME", "ROUND_LABEL", "SESSION_LABEL", "REGION", "MODE", "FORMAT", "PLATFORM_SCOPE", "ELIGIBILITY", "REGISTRATION_WINDOW_IF_PUBLISHED", "CHECK_IN_IF_PUBLISHED", "PRIZE_POOL_IF_PUBLISHED", "QUALIFICATION_IF_PUBLISHED", "RESULT", "SCHEDULE", "COMPETITIVE_SERVICE_RELATION_IF_EXPLICIT"],
-      "cannot_confirm": ["VENUE_TICKET_STOCK_UNLESS_LINKED", "GENERAL_SERVICE_STATE_WITHOUT_EPIC_STATUS", "UNPUBLISHED_REGISTRATION_DEADLINE", "UNPUBLISHED_PRIZE_DISTRIBUTION"],
+      "domains": ["FNCS", "CUPS", "RANKED_CUPS", "RELOAD", "ZERO_BUILD", "MOBILE", "PLAYSTATION", "POWER_RANKING", "EU_SCHEDULE", "REGISTRATION", "QUALIFICATION", "QUALIFICATION_GRAPH", "PRIZE", "OFFICIAL_IDS", "STATUS_CHANGES"],
+      "can_confirm": ["OFFICIAL_EVENT_ID", "OFFICIAL_SESSION_ID", "SERIES_ID_IF_PUBLISHED", "TOURNAMENT_DATE", "SESSION_TIME", "SESSION_END_TIME", "ROUND_LABEL", "SESSION_LABEL", "COMPETITION_STATUS", "SESSION_STATUS", "REGION", "MODE", "FORMAT", "PLATFORM_SCOPE", "ELIGIBILITY", "REGISTRATION_STATE_IF_PUBLISHED", "REGISTRATION_WINDOW_IF_PUBLISHED", "CHECK_IN_IF_PUBLISHED", "PRIZE_POOL_IF_PUBLISHED", "QUALIFICATION_IF_PUBLISHED", "ADVANCEMENT_EDGE_IF_PUBLISHED", "RESULT", "SCHEDULE", "COMPETITIVE_SERVICE_RELATION_IF_EXPLICIT"],
+      "cannot_confirm": ["VENUE_TICKET_STOCK_UNLESS_LINKED", "GENERAL_SERVICE_STATE_WITHOUT_EPIC_STATUS", "UNPUBLISHED_REGISTRATION_DEADLINE", "UNPUBLISHED_PRIZE_DISTRIBUTION", "PLAYER_QUALIFIED_WITHOUT_RESULT_EVIDENCE"],
       "priority": 1,
       "status": "ACTIVE"
     },
@@ -61,7 +62,7 @@
       "territory": "GLOBAL",
       "domains": ["MAINTENANCE", "INCIDENTS", "SERVICE_DEGRADATION", "LOGIN", "MATCHMAKING", "FORTNITE_SERVICES", "RECOVERY"],
       "can_confirm": ["INCIDENT", "MAINTENANCE_ANNOUNCEMENT", "SCHEDULED_START", "ACTUAL_START", "EXPECTED_END_IF_PUBLISHED", "SERVICE_EXTENSION_IF_EXPLICIT", "AFFECTED_SERVICE", "IMPACT_STATE", "RECOVERY_START", "SERVICE_RECOVERY", "RESOLUTION", "CANCELLATION"],
-      "cannot_confirm": ["PATCH_CONTENT", "PATCH_VERSION_UNLESS_EXPLICIT", "SEASON_DATE_UNLESS_PUBLISHED_ELSEWHERE", "SEASON_IDENTITY", "LIVE_EVENT_RELATION_UNLESS_EXPLICIT"],
+      "cannot_confirm": ["PATCH_CONTENT", "PATCH_VERSION_UNLESS_EXPLICIT", "SEASON_DATE_UNLESS_PUBLISHED_ELSEWHERE", "SEASON_IDENTITY", "LIVE_EVENT_RELATION_UNLESS_EXPLICIT", "TOURNAMENT_POSTPONEMENT_WITHOUT_COMPETITIVE_SOURCE"],
       "priority": 1,
       "status": "ACTIVE"
     },
@@ -100,7 +101,7 @@
       "territory": "ANTWERP_BE",
       "domains": ["FNCS_GLOBAL_2026", "VENUE", "TICKETING"],
       "can_confirm": ["VENUE", "ADDRESS", "TICKET_STATUS", "TICKET_PACKAGE", "VENUE_TIME"],
-      "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT", "OTHER_VENUES"],
+      "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT", "OTHER_VENUES", "COMPETITIVE_SESSION_TIME_WHEN_MARKED_AS_VENUE_ONLY"],
       "priority": 1,
       "status": "ACTIVE"
     },
@@ -112,8 +113,8 @@
       "evidence_grade": "A",
       "territory": "GLOBAL",
       "domains": ["EWC", "PARIS_2026", "FORTNITE_RELOAD"],
-      "can_confirm": ["EWC_EVENT", "VENUE_WHEN_PUBLISHED", "DATE_WHEN_PUBLISHED", "TICKETING_WHEN_PUBLISHED"],
-      "cannot_confirm": ["FNCS_RULES"],
+      "can_confirm": ["EWC_EVENT", "VENUE_WHEN_PUBLISHED", "DATE_WHEN_PUBLISHED", "TICKETING_WHEN_PUBLISHED", "ORGANIZER_SESSION_INFO_WHEN_EXPLICIT"],
+      "cannot_confirm": ["FNCS_RULES", "UNPUBLISHED_FORTNITE_QUALIFICATION"],
       "priority": 2,
       "status": "ACTIVE"
     },
@@ -133,6 +134,8 @@
   ],
   "linked_ledgers": {
     "service_events": "fortnite-service-events-france.json",
-    "competitive_intelligence": "fortnite-competitive-ledger-france.json"
+    "competitive_intelligence": "fortnite-competitive-ledger-france.json",
+    "competitive_engine": "fortnite-competitive-engine-france.json",
+    "competitive_index": "fortnite-competitive-index-france.json"
   }
 }
