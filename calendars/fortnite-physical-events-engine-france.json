@@ -1,37 +1,88 @@
 {
-  "version": "FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V1",
-  "updated_at": "2026-08-19T15:22:00Z",
+  "version": "FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V2",
+  "updated_at": "2026-08-19T15:38:00Z",
   "ledger": "fortnite-physical-events-france.json",
   "venue_registry": "fortnite-venues-france.json",
+  "access_ledger": "fortnite-physical-access-france.json",
   "ticketing_ledger": "fortnite-ticketing-france.json",
   "ticketing_provider_registry": "fortnite-ticketing-providers-france.json",
-  "scope": "Projection, travel planning, location and availability rules for official Fortnite physical events in France and Europe",
+  "index": "fortnite-physical-events-index-france.json",
+  "scope": "Projection, public access, venue operations, travel planning and availability rules for official Fortnite physical events in France and Europe",
+  "architecture": {
+    "identity_layer": "What the physical event is and how it relates to competitions/host events.",
+    "location_layer": "Venue, city, address precision, spaces/zones and verified GEO.",
+    "access_layer": "Admission mode, registration/check-in, age/ID/re-entry/accessibility and last-entry rules.",
+    "ticketing_layer": "Inventory, waitlist, price, session/category availability and scarcity evidence.",
+    "schedule_layer": "Public sessions/doors/stand hours distinct from competitive match schedule.",
+    "travel_layer": "Planning lead time derived from territory/date only; never fabricates transport/hotel availability.",
+    "onsite_layer": "Queue, credential, security and accessibility details only when directly published."
+  },
   "relevance": {
     "FEATURED": ["major Fortnite LAN in France/Europe", "FNCS Global/major final", "major official Epic/Fortnite activation in France", "major EWC/Red Bull/partner event with direct Fortnite program"],
     "CALENDAR": ["official viewing party", "convention with confirmed Fortnite/Epic stand", "official partner activation", "official community event with date/location/action"],
     "LEDGER_ONLY": ["incomplete physical signal", "minor partner presence without useful schedule", "city/date announcement with no actionable public access yet"]
   },
+  "planning_readiness": {
+    "IDENTITY_ONLY": "Event exists but date/location/access remain insufficient for planning.",
+    "DATE_CITY_KNOWN": "Date and city are known; exact venue or admission path may still be unknown.",
+    "VENUE_KNOWN": "Exact venue/building is known but public access path may still be unknown.",
+    "ACCESS_PATH_KNOWN": "A real public action exists: ticket, waitlist, attendance registration or explicit free entry.",
+    "PUBLIC_SESSION_KNOWN": "At least one actionable public session/doors/stand time is known.",
+    "PUBLIC_INFO_MATURE": "Venue, access path and useful public schedule are sufficiently mature for attendance planning."
+  },
   "actions": {
     "BUY_TICKET": "Direct ticket inventory is available/onsale.",
     "JOIN_WAITLIST": "Official waiting list is the best current access route.",
-    "REGISTER": "Official preregistration/registration exists but admission inventory is not yet available.",
-    "CHECK_IN": "A separate check-in is explicitly required.",
-    "ATTEND": "Access is already secured/free or no registration action is required.",
+    "REGISTER_INTEREST": "Notify-me/preregistration exists but does not establish admission or attendance registration.",
+    "REGISTER_ATTENDANCE": "Organizer explicitly requires/opens registration that grants or is required for attendance.",
+    "CHECK_IN": "A separate explicit check-in action is required and currently actionable.",
+    "ATTEND": "Free/open access is explicitly established or no further admission action is required at event scope.",
     "VISIT_STAND": "Convention/stand has an actionable public schedule/location.",
     "WATCH": "Viewing party or spectator session is the primary action.",
-    "FOLLOW": "Physical event is confirmed but no public action is yet available."
+    "MEET": "Meet-and-greet/session has an actionable access path.",
+    "FOLLOW": "Physical event is confirmed but no public admission action is yet established."
+  },
+  "action_resolution": {
+    "priority": ["CHECK_IN", "BUY_TICKET", "JOIN_WAITLIST", "REGISTER_ATTENDANCE", "ATTEND", "VISIT_STAND", "WATCH", "MEET", "REGISTER_INTEREST", "FOLLOW"],
+    "rules": [
+      "PREREGISTRATION_GENERIC => REGISTER_INTEREST, never REGISTER_ATTENDANCE",
+      "WAITLIST_WITHOUT_INVENTORY => JOIN_WAITLIST",
+      "AVAILABLE_OR_ON_SALE_DIRECT_INVENTORY => BUY_TICKET unless an earlier mandatory CHECK_IN applies now",
+      "FREE_REGISTRATION => REGISTER_ATTENDANCE",
+      "FREE_WALK_IN => ATTEND",
+      "UNKNOWN_ADMISSION + INTEREST_FORM => REGISTER_INTEREST",
+      "UNKNOWN_ADMISSION + NO_ACTION => FOLLOW"
+    ]
   },
   "location_policy": {
     "LOCATION": "Use venue registry address at best verified precision.",
     "GEO": "Materialize only when venue registry has verified numeric latitude/longitude and geo_source.",
     "structured_location": "X-APPLE-STRUCTURED-LOCATION may be added only when address/GEO are verified and the ICS validator accepts the folded property.",
     "maps": "Directions/maps links may be stored only from a direct venue/organizer or a deterministic map query based on an already verified address; never use a map result to upgrade canonical address precision.",
-    "venue_change": "Same logical event changing venue keeps event UID/physical_event_id, records previous venue in history and increments VEVENT SEQUENCE only if the projected LOCATION changes."
+    "venue_change": "Same logical event changing venue keeps event UID/physical_event_id, records previous venue in history and increments VEVENT SEQUENCE only if projected LOCATION changes.",
+    "subspaces": "Hall/stand/zone/entrance IDs may be projected only when the venue registry or event source explicitly ties that space to Fortnite.",
+    "tba_replacement": "A CITY-level TBA venue may be replaced by a newly confirmed venue_id without changing physical_event_id/event_uid. Preserve previous location in history."
+  },
+  "access_bridge": {
+    "source_of_truth": "FORTNITE_PHYSICAL_ACCESS_INTELLIGENCE_EU_V1",
+    "guards": [
+      "TICKET_IS_NOT_ADMISSION_BY_ITSELF",
+      "GENERIC_PREREGISTRATION_DOES_NOT_GUARANTEE_ENTRY",
+      "AGE_UNKNOWN_STAYS_UNKNOWN",
+      "ID_REQUIREMENT_UNKNOWN_STAYS_UNKNOWN",
+      "REENTRY_UNKNOWN_STAYS_UNKNOWN",
+      "ACCESSIBILITY_UNKNOWN_STAYS_UNKNOWN",
+      "QUEUE_WAIT_TIME_NEVER_INFERRED",
+      "CAPACITY_NEVER_INFERRED_FROM_VENUE_SIZE_OR_SEATMAP"
+    ],
+    "scope_order": ["SESSION_OVERRIDE", "ZONE_OVERRIDE", "EVENT_ACCESS_PROFILE", "UNKNOWN"],
+    "check_in": "Check-in opens/closes only from explicit published windows; event start is never substituted for check-in close.",
+    "last_entry": "LAST_ENTRY is separate from event/session end and is never inferred from doors/opening time.",
+    "accessibility": "PMR/companion/accessibility facts may be shown only at the exact scope published; never infer from a venue's general reputation or building type."
   },
   "ticketing_bridge": {
     "source_of_truth": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
-    "global_status": "Derive event access only from ticketing event-level state after considering session/category exceptions.",
-    "priority_order": ["BUY_TICKET", "JOIN_WAITLIST", "REGISTER", "CHECK_IN", "ATTEND", "FOLLOW"],
+    "global_status": "Ticket state never overrides access rules. Derive inventory from ticketing event-level state after considering session/category exceptions.",
     "guards": [
       "VIP_SOLD_OUT_DOES_NOT_MEAN_EVENT_SOLD_OUT",
       "ONE_SESSION_SOLD_OUT_DOES_NOT_MEAN_RUN_SOLD_OUT",
@@ -44,9 +95,33 @@
   "session_policy": {
     "public_session_id_stable": true,
     "venue_open_time_not_match_time": true,
+    "session_types": ["DOORS_OPEN", "VENUE_TIME", "PUBLIC_VIEWING", "STAND_OPEN", "MEET_AND_GREET", "CHECK_IN", "LAST_ENTRY", "ACTIVATION_SLOT", "OTHER_PUBLIC"],
     "same_run_new_session": "Keep same physical_event_id and normally same event_uid; add session and update description/alarms only if actionably useful.",
     "session_removed": "Require direct evidence or persistent unambiguous removal; a transient page failure does not remove a session.",
-    "session_statuses": ["ANNOUNCED","AVAILABLE","WAITLIST","SOLD_OUT","CLOSED","ENDED","CANCELLED","UNKNOWN"]
+    "session_statuses": ["ANNOUNCED","AVAILABLE","WAITLIST","SOLD_OUT","CLOSED","ENDED","CANCELLED","UNKNOWN"],
+    "time_conflict": "If two projected physical sessions overlap exactly or leave less than 30 minutes turnaround, store a planning conflict. Never automatically choose which event to attend."
+  },
+  "travel_policy": {
+    "travel_scopes": {
+      "PARIS_IDF": "Paris/Île-de-France local planning.",
+      "FRANCE_DOMESTIC": "France outside the local Paris/IDF scope.",
+      "CROSS_BORDER_EU": "Cross-border European travel from France.",
+      "EUROPE_OTHER": "European travel requiring substantial planning.",
+      "UNKNOWN": "Location insufficient for travel classification."
+    },
+    "rule": "Travel scope changes reminder lead time only. It never claims train, flight, hotel, visa, parking or local transport availability.",
+    "major_cross_border": "FEATURED + CROSS_BORDER_EU may use P30D planning reminder when still future.",
+    "local_exact_time": "Paris/IDF exact public session may use H-2 in addition to date reminders.",
+    "venue_tba": "A venue-TBA event can trigger a city/date planning reminder but should not produce route/entrance instructions."
+  },
+  "change_handling": {
+    "venue_changed": "Keep IDs, append previous venue, invalidate obsolete location-specific reminders, rebuild future ones.",
+    "session_rescheduled": "Keep session_id, store previous start/end, invalidate obsolete reminders and recalculate.",
+    "access_changed": "Ticket/access changes do not create a new event; recompute primary_action and only notify if materially actionable.",
+    "age_or_id_rule_added": "Treat as material onsite requirement change for a future CALENDAR/FEATURED event.",
+    "accessibility_rule_added": "Store silently unless it materially affects an explicitly tracked attendance action; do not infer user needs.",
+    "postponed": "Keep IDs and remove obsolete future alarms until a new date is official.",
+    "cancelled": "Keep IDs, STATUS:CANCELLED in projected VEVENT and invalidate all future attendance notices."
   },
   "reminder_profiles": {
     "MAJOR_TRAVEL_EU": ["P30D", "P7D", "P1D"],
@@ -55,31 +130,47 @@
     "VIEWING_PARTY": ["P1D", "PT2H"],
     "CONVENTION_STAND": ["P7D", "P1D"],
     "TICKET_SALE": ["PT1H"],
+    "CHECK_IN": ["PT1H"],
+    "LAST_ENTRY": ["PT2H"],
     "WAITLIST_BACK_ON_SALE": ["ON_STATE_CHANGE"]
   },
   "reminder_selection": {
-    "foreign_featured": "MAJOR_TRAVEL_EU",
+    "cross_border_featured": "MAJOR_TRAVEL_EU",
     "france_featured": "MAJOR_FRANCE",
     "paris_or_idf_calendar": "LOCAL_PARIS",
     "viewing_party": "VIEWING_PARTY",
     "convention_or_stand": "CONVENTION_STAND",
+    "check_in_exact": "CHECK_IN",
+    "last_entry_exact": "LAST_ENTRY",
     "no_backfill": true,
-    "quiet_hours": "Nonurgent notices 21:00-09:00 Europe/Paris may be deferred only if still actionable. Ticket back-on-sale/last-minute cancellation may notify immediately."
+    "quiet_hours": "Nonurgent notices 21:00-09:00 Europe/Paris may be deferred only if still actionable. Ticket back-on-sale, check-in closing soon or last-minute cancellation may notify immediately."
   },
   "ics_mapping": {
-    "policy_header": "X-FORTNITE-PHYSICAL-EVENT-POLICY:FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V1",
+    "policy_header": "X-FORTNITE-PHYSICAL-EVENT-POLICY:FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V2",
     "ledger_header": "X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json",
     "venue_registry_header": "X-FORTNITE-VENUE-REGISTRY:fortnite-venues-france.json",
+    "access_ledger_header": "X-FORTNITE-PHYSICAL-ACCESS-LEDGER:fortnite-physical-access-france.json",
+    "index_header": "X-FORTNITE-PHYSICAL-EVENT-INDEX:fortnite-physical-events-index-france.json",
     "properties": [
       "X-FORTNITE-PHYSICAL-EVENT-ID",
       "X-FORTNITE-PHYSICAL-EVENT-TYPE",
       "X-FORTNITE-VENUE-ID",
       "X-FORTNITE-LOCATION-PRECISION",
+      "X-FORTNITE-VENUE-SPACE-ID",
       "X-FORTNITE-PUBLIC-SESSION",
+      "X-FORTNITE-ACCESS-PROFILE-ID",
+      "X-FORTNITE-ADMISSION-MODE",
+      "X-FORTNITE-ACCESS-STATE",
       "X-FORTNITE-ACCESS-ACTION",
+      "X-FORTNITE-AGE-MIN",
+      "X-FORTNITE-CHECK-IN-AT",
+      "X-FORTNITE-LAST-ENTRY-AT",
+      "X-FORTNITE-ACCESSIBILITY-STATE",
+      "X-FORTNITE-TRAVEL-SCOPE",
       "X-FORTNITE-TICKET-STATUS",
       "X-FORTNITE-TICKET-PROVIDER-ID"
     ],
+    "materialization_guard": "Only verified non-UNKNOWN access/onsite fields are written to ICS. Unknown fields remain absent, not serialized as misleading defaults.",
     "header_only_rule": "Do not change SEQUENCE just to add policy headers; materialize on the next real business update."
   }
 }
