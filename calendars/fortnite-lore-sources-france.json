@@ -1,38 +1,72 @@
 {
-  "version": "FORTNITE_LORE_SOURCE_POLICY_FR_V1",
-  "updated_at": "2026-08-19T11:16:00Z",
+  "version": "FORTNITE_LORE_SOURCE_POLICY_FR_V2",
+  "updated_at": "2026-08-19T14:10:00Z",
   "inherits": "fortnite-sources-france.json",
-  "scope": "Field-level authority for Fortnite lore entities and relations",
+  "claim_graph": "fortnite-lore-graph-france.json",
+  "scope": "Field-level authority, provenance, corrections and evidence requirements for Fortnite lore claims",
   "principles": {
     "official_story_first": "Fortnite News or another Epic/Fortnite page directly publishing the story fact is primary.",
-    "field_authority": "A source may confirm only the lore field it actually states; one official page does not authorize unrelated inference.",
-    "cosmetic_not_canon": "Cosmetic descriptions, shop availability and collaboration presence do not establish main-story canon unless the official story source explicitly does so.",
-    "gameplay_not_lore": "Gameplay mechanics, NPC spawn tables, boss gameplay and map presence do not by themselves establish faction membership or narrative causation.",
-    "no_fan_wiki_as_fact": "Community wikis, videos and social posts may help discovery but never become canonical evidence in this registry."
+    "field_authority": "A source confirms only the lore field it actually states; official status alone does not authorize unrelated inference.",
+    "source_url_for_new_strong_claims": "Every new V2 OFFICIAL_EXPLICIT/OFFICIAL_CROSS_REFERENCE claim must preserve the exact official source URL used as evidence.",
+    "cosmetic_not_canon": "Cosmetic descriptions, shop availability and collaboration presence do not establish main-story canon unless an authorized story source explicitly does so.",
+    "gameplay_not_lore": "Gameplay mechanics, NPC spawn tables and boss encounters do not by themselves establish membership, alliance or causation.",
+    "no_fan_wiki_as_fact": "Community wikis/videos/social posts may help discovery only and never become canonical evidence.",
+    "correction_not_overwrite": "A later official correction creates a new claim linked by supersedes_claim_id; earlier evidence stays auditable.",
+    "scope_required_for_temporal_relationships": "Leadership, affiliation, NPC/Boss roles, opposition and event participation should carry chapter/season/event/date scope whenever the official evidence is contextual."
   },
   "authority": {
     "fortnite_news": {
-      "can_confirm": ["CHARACTER_IDENTITY_IF_EXPLICIT", "ORGANIZATION_IDENTITY_IF_EXPLICIT", "MEMBERSHIP_IF_EXPLICIT", "POI_IDENTITY_IF_EXPLICIT", "ISLAND_CHAPTER_RELATION_IF_EXPLICIT", "LORE_OBJECT_IF_EXPLICIT", "HISTORICAL_EVENT_IF_EXPLICIT", "EVENT_PARTICIPATION_IF_EXPLICIT", "CHAPTER_RELATION_IF_EXPLICIT", "REALITY_IF_EXPLICIT", "TIMELINE_IF_EXPLICIT", "NPC_ROLE_IF_EXPLICIT", "BOSS_ROLE_IF_EXPLICIT", "CANON_SCOPE_IF_EXPLICIT"],
-      "cannot_confirm": ["MEMBERSHIP_FROM_COSMETIC_ASSOCIATION", "CAUSATION_FROM_SAME_EVENT_ONLY", "NPC_ROLE_FROM_SKIN_AVAILABILITY", "MAIN_STORY_CANON_FROM_COLLAB_ONLY"]
+      "can_confirm": ["CHARACTER_IDENTITY_IF_EXPLICIT", "ORGANIZATION_IDENTITY_IF_EXPLICIT", "FACTION_IDENTITY_IF_EXPLICIT", "MEMBERSHIP_IF_EXPLICIT", "AFFILIATION_IF_EXPLICIT", "LEADERSHIP_IF_EXPLICIT", "OPPOSITION_IF_EXPLICIT", "POI_IDENTITY_IF_EXPLICIT", "ISLAND_CHAPTER_RELATION_IF_EXPLICIT", "LORE_OBJECT_IF_EXPLICIT", "HISTORICAL_EVENT_IF_EXPLICIT", "EVENT_PARTICIPATION_IF_EXPLICIT", "EVENT_ROLE_IF_EXPLICIT", "CHAPTER_RELATION_IF_EXPLICIT", "REALITY_IF_EXPLICIT", "TIMELINE_IF_EXPLICIT", "NPC_ROLE_IF_EXPLICIT", "BOSS_ROLE_IF_EXPLICIT", "LINEAGE_IF_EXPLICIT", "CAUSATION_IF_EXPLICIT", "CANON_SCOPE_IF_EXPLICIT", "OFFICIAL_CORRECTION"],
+      "cannot_confirm": ["MEMBERSHIP_FROM_COSMETIC_ASSOCIATION", "CAUSATION_FROM_SAME_EVENT_ONLY", "NPC_ROLE_FROM_SKIN_AVAILABILITY", "MAIN_STORY_CANON_FROM_COLLAB_ONLY", "PERMANENT_ROLE_FROM_SINGLE_SEASON_CONTEXT"]
     },
     "fortnite_battle_pass": {
-      "can_confirm": ["CHARACTER_OR_PASS_ASSOCIATION_IF_EXPLICIT", "CHAPTER_OR_SEASON_ASSOCIATION_IF_EXPLICIT"],
-      "cannot_confirm": ["FACTION_MEMBERSHIP_FROM_REWARD_PAGE", "MAIN_STORY_EVENT_CAUSATION", "REALITY_OR_TIMELINE_RELATION_WITHOUT_EXPLICIT_TEXT"]
+      "can_confirm": ["CHARACTER_OR_PASS_ASSOCIATION_IF_EXPLICIT", "CHAPTER_OR_SEASON_ASSOCIATION_IF_EXPLICIT", "STORY_RELATION_IF_EXPLICIT_IN_PRODUCT_COPY"],
+      "cannot_confirm": ["FACTION_MEMBERSHIP_FROM_REWARD_PAGE", "MAIN_STORY_EVENT_CAUSATION", "REALITY_OR_TIMELINE_RELATION_WITHOUT_EXPLICIT_TEXT", "PERMANENT_BOSS_OR_NPC_ROLE"]
     },
     "fortnite_competitive": {
       "can_confirm": [],
-      "cannot_confirm": ["MAIN_STORY_CANON", "CHARACTER_MEMBERSHIP", "LORE_CAUSATION", "REALITY_TIMELINE"]
+      "cannot_confirm": ["MAIN_STORY_CANON", "CHARACTER_MEMBERSHIP", "LORE_CAUSATION", "REALITY_TIMELINE", "BOSS_NPC_ROLE"]
     },
     "epic_status": {
       "can_confirm": [],
-      "cannot_confirm": ["MAIN_STORY_CANON", "LORE_RELATION", "CHARACTER_ROLE"]
+      "cannot_confirm": ["MAIN_STORY_CANON", "LORE_RELATION", "CHARACTER_ROLE", "EVENT_PARTICIPATION"]
+    },
+    "epic_fortnite_support": {
+      "can_confirm": ["TECHNICAL_OR_ACCOUNT_POLICY_ONLY"],
+      "cannot_confirm": ["MAIN_STORY_CANON_UNLESS_EXPLICITLY_CROSS_PUBLISHED_AS_STORY"]
     },
     "fortnite_uefn_docs": {
       "can_confirm": ["CREATOR_TOOL_OR_TECHNICAL_ENTITY_ONLY"],
       "cannot_confirm": ["BATTLE_ROYALE_MAIN_STORY_CANON_UNLESS_CROSS_PUBLISHED"]
     }
   },
-  "evidence_levels": ["OFFICIAL_EXPLICIT", "OFFICIAL_CROSS_REFERENCE", "CURATED_LEGACY_OFFICIAL", "DISCOVERY_ONLY", "UNKNOWN"],
-  "strong_relation_minimum": "OFFICIAL_EXPLICIT or OFFICIAL_CROSS_REFERENCE for new materialized lore facts; seeded legacy canon may remain CURATED_LEGACY_OFFICIAL until URL enrichment.",
-  "disallowed_primary_sources": ["FAN_WIKI", "YOUTUBE_CREATOR", "REDDIT", "SOCIAL_RUMOR", "LEAK", "DATAMINING", "ITEM_SHOP_ONLY", "COSMETIC_DESCRIPTION_ONLY"]
+  "evidence_levels": {
+    "OFFICIAL_EXPLICIT": {"rank": 100, "materializable": true, "requires_source_url": true},
+    "OFFICIAL_CROSS_REFERENCE": {"rank": 80, "materializable": true, "requires_source_url": true},
+    "CURATED_LEGACY_OFFICIAL": {"rank": 60, "materializable": false, "requires_source_url": false, "note": "Readable legacy seed pending URL enrichment."},
+    "DISCOVERY_ONLY": {"rank": 20, "materializable": false, "requires_source_url": false},
+    "UNKNOWN": {"rank": 0, "materializable": false, "requires_source_url": false}
+  },
+  "claim_status_policy": {
+    "ACTIVE": "Usable subject to evidence/scope.",
+    "PROVISIONAL": "Official signal not strong/final enough for strong materialization.",
+    "DISPUTED": "Conflicting official evidence unresolved; query/history only.",
+    "SUPERSEDED": "Replaced by a newer claim; history only by default.",
+    "RETRACTED": "Explicitly withdrawn/corrected by official source; history only."
+  },
+  "conflict_resolution": {
+    "field_specific": "Resolve only the conflicting predicate/scope, not the whole entity.",
+    "newer_not_automatically_better": "Publication recency alone does not supersede an older fact unless the newer source actually corrects or changes it.",
+    "different_scope_can_coexist": "Different seasons/chapters/events may legitimately carry different affiliations, roles or locations.",
+    "official_conflict": "If two equally authoritative official sources conflict and neither corrects the other, mark DISPUTED instead of choosing silently."
+  },
+  "causation_policy": {
+    "minimum": "OFFICIAL_EXPLICIT",
+    "forbidden_shortcuts": ["PRECEDES_TO_CAUSES", "CO_PRESENCE_TO_CAUSES", "OPPOSITION_TO_CAUSES", "LOCATION_TO_CAUSES"]
+  },
+  "legacy_enrichment": {
+    "policy": "CURATED_LEGACY_OFFICIAL V1 facts remain queryable; when an official URL is found, add/enrich a V2 claim rather than silently changing semantic strength.",
+    "preferred_order": ["member/leader claims", "historical-event participation", "POI/island scope", "reality/timeline", "roles"]
+  },
+  "disallowed_primary_sources": ["FAN_WIKI", "YOUTUBE_CREATOR", "REDDIT", "SOCIAL_RUMOR", "LEAK", "DATAMINING", "ITEM_SHOP_ONLY", "COSMETIC_DESCRIPTION_ONLY", "CREATOR_ISLAND_STORY_COPY"]
 }
