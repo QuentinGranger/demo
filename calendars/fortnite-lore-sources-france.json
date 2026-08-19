@@ -1,0 +1,38 @@
+{
+  "version": "FORTNITE_LORE_SOURCE_POLICY_FR_V1",
+  "updated_at": "2026-08-19T11:16:00Z",
+  "inherits": "fortnite-sources-france.json",
+  "scope": "Field-level authority for Fortnite lore entities and relations",
+  "principles": {
+    "official_story_first": "Fortnite News or another Epic/Fortnite page directly publishing the story fact is primary.",
+    "field_authority": "A source may confirm only the lore field it actually states; one official page does not authorize unrelated inference.",
+    "cosmetic_not_canon": "Cosmetic descriptions, shop availability and collaboration presence do not establish main-story canon unless the official story source explicitly does so.",
+    "gameplay_not_lore": "Gameplay mechanics, NPC spawn tables, boss gameplay and map presence do not by themselves establish faction membership or narrative causation.",
+    "no_fan_wiki_as_fact": "Community wikis, videos and social posts may help discovery but never become canonical evidence in this registry."
+  },
+  "authority": {
+    "fortnite_news": {
+      "can_confirm": ["CHARACTER_IDENTITY_IF_EXPLICIT", "ORGANIZATION_IDENTITY_IF_EXPLICIT", "MEMBERSHIP_IF_EXPLICIT", "POI_IDENTITY_IF_EXPLICIT", "ISLAND_CHAPTER_RELATION_IF_EXPLICIT", "LORE_OBJECT_IF_EXPLICIT", "HISTORICAL_EVENT_IF_EXPLICIT", "EVENT_PARTICIPATION_IF_EXPLICIT", "CHAPTER_RELATION_IF_EXPLICIT", "REALITY_IF_EXPLICIT", "TIMELINE_IF_EXPLICIT", "NPC_ROLE_IF_EXPLICIT", "BOSS_ROLE_IF_EXPLICIT", "CANON_SCOPE_IF_EXPLICIT"],
+      "cannot_confirm": ["MEMBERSHIP_FROM_COSMETIC_ASSOCIATION", "CAUSATION_FROM_SAME_EVENT_ONLY", "NPC_ROLE_FROM_SKIN_AVAILABILITY", "MAIN_STORY_CANON_FROM_COLLAB_ONLY"]
+    },
+    "fortnite_battle_pass": {
+      "can_confirm": ["CHARACTER_OR_PASS_ASSOCIATION_IF_EXPLICIT", "CHAPTER_OR_SEASON_ASSOCIATION_IF_EXPLICIT"],
+      "cannot_confirm": ["FACTION_MEMBERSHIP_FROM_REWARD_PAGE", "MAIN_STORY_EVENT_CAUSATION", "REALITY_OR_TIMELINE_RELATION_WITHOUT_EXPLICIT_TEXT"]
+    },
+    "fortnite_competitive": {
+      "can_confirm": [],
+      "cannot_confirm": ["MAIN_STORY_CANON", "CHARACTER_MEMBERSHIP", "LORE_CAUSATION", "REALITY_TIMELINE"]
+    },
+    "epic_status": {
+      "can_confirm": [],
+      "cannot_confirm": ["MAIN_STORY_CANON", "LORE_RELATION", "CHARACTER_ROLE"]
+    },
+    "fortnite_uefn_docs": {
+      "can_confirm": ["CREATOR_TOOL_OR_TECHNICAL_ENTITY_ONLY"],
+      "cannot_confirm": ["BATTLE_ROYALE_MAIN_STORY_CANON_UNLESS_CROSS_PUBLISHED"]
+    }
+  },
+  "evidence_levels": ["OFFICIAL_EXPLICIT", "OFFICIAL_CROSS_REFERENCE", "CURATED_LEGACY_OFFICIAL", "DISCOVERY_ONLY", "UNKNOWN"],
+  "strong_relation_minimum": "OFFICIAL_EXPLICIT or OFFICIAL_CROSS_REFERENCE for new materialized lore facts; seeded legacy canon may remain CURATED_LEGACY_OFFICIAL until URL enrichment.",
+  "disallowed_primary_sources": ["FAN_WIKI", "YOUTUBE_CREATOR", "REDDIT", "SOCIAL_RUMOR", "LEAK", "DATAMINING", "ITEM_SHOP_ONLY", "COSMETIC_DESCRIPTION_ONLY"]
+}
