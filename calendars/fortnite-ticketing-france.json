@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-19T21:03:30Z",
   "scope": "Fortnite physical events relevant to France and Europe",
   "physical_event_ledger": "calendars/fortnite-physical-events-france.json",
   "physical_access_ledger": "calendars/fortnite-physical-access-france.json",
@@ -66,32 +66,30 @@
     {
       "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "physical_event_id": "fortnite-physical-ewc-paris-2026",
-      "provider_id": "ewc_riyadh",
+      "provider_id": "ewc_paris",
       "source_id": "ewc_official",
-      "status": "AVAILABLE",
-      "previous_status": "PREREGISTRATION",
-      "status_origin": "DIRECT_VERIFIED_EXACT_EVENT",
+      "status": "PREREGISTRATION",
+      "previous_status": "AVAILABLE",
+      "status_origin": "DIRECT_VERIFIED_GENERAL_EWC_PARIS_SIGNUP",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "ticket_scope": "EWC26_FORTNITE_CHAMPIONSHIP",
-      "fortnite_specific_ticket_info": true,
+      "ticket_scope": "EWC_PARIS_GENERAL",
+      "fortnite_specific_ticket_info": false,
       "waiting_list_available": false,
-      "ticket_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
+      "ticket_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
       "access_profile_id": "fortnite-access-ewc-paris-2026",
-      "last_verified_at": "2026-08-19T18:12:23Z",
-      "last_changed_at": "2026-08-19T18:12:23Z",
+      "last_verified_at": "2026-08-19T21:03:30Z",
+      "last_changed_at": "2026-08-19T21:03:30Z",
       "session_states": [],
-      "category_states": [
-        {"category_key":"REGULAR_4_DAY","label":"Regular Tournament Pass — 4 jours","status":"AVAILABLE","price_sar":219,"scarcity_evidence":"UNKNOWN","confidence":"HIGH","source":"EWC exact Fortnite ticket page"},
-        {"category_key":"PREMIUM_4_DAY","label":"Premium Tournament Pass — 4 jours","status":"AVAILABLE","price_sar":471,"scarcity_evidence":"UNKNOWN","confidence":"HIGH","source":"EWC exact Fortnite ticket page","benefits":["GOODIE_BAG_WHILE_STOCKS_LAST","FAST_TRACK"]}
-      ],
+      "category_states": [],
       "history": [
-        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Historical generic EWC Paris preregistration signal; later superseded for this exact championship by the organizer ticket page."},
+        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Generic EWC Paris preregistration signal; registration is only for ticket-availability notification."},
         {"at":"2026-08-19T15:42:00Z","type":"ACCESS_SEMANTICS_LINKED","note":"Generic preregistration was represented as REGISTER_INTEREST rather than guaranteed admission."},
-        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","from_provider":"ewc_paris","to_provider":"ewc_riyadh","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"Exact organizer ticket page identifies the Reload Elite Series Championship at Boulevard City, Riyadh, not the earlier generic Paris preregistration context."},
-        {"at":"2026-08-19T18:12:23Z","type":"SALE_OPENED","from":"PREREGISTRATION","to":"AVAILABLE","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"Regular 4-day pass SAR 219 and Premium 4-day pass SAR 471 are listed as available."}
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","from_provider":"ewc_paris","to_provider":"ewc_riyadh","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"A previously followed EWC ticket page identified Boulevard City, Riyadh and exposed 219/471 SAR Tournament Pass inventory."},
+        {"at":"2026-08-19T18:12:23Z","type":"SALE_OPENED","from":"PREREGISTRATION","to":"AVAILABLE","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"Regular 4-day pass SAR 219 and Premium 4-day pass SAR 471 were listed as available in that Riyadh context."},
+        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","from_provider":"ewc_riyadh","to_provider":"ewc_paris","from":"AVAILABLE","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Current Fortnite Championship details and the EWC relocation notice place the Championship in Paris. The current EWC Paris page only says to sign up to be notified when tickets become available; the prior Riyadh prices are retained in history but are no longer active Fortnite Championship inventory."}
       ]
     }
   ]
