@@ -1,0 +1,118 @@
+{
+  "version": "FORTNITE_OFFICIAL_SOURCE_REGISTRY_FR_V1",
+  "updated_at": "2026-08-19T05:00:00Z",
+  "scope": "Fortnite — France et Europe pertinente",
+  "principles": {
+    "authority_by_field": "Une source n'est autorisée à confirmer que les champs de son périmètre.",
+    "france_guard": "Une annonce globale n'établit pas automatiquement une disponibilité ou un horaire France.",
+    "competitive_primary": "Fortnite Competitive est la source primaire pour calendrier, formats, régions, conditions et résultats compétitifs.",
+    "status_primary": "Epic Games Status est la source primaire pour incidents/maintenance réellement publiés.",
+    "no_social_only": "Un post social sert au signal ; rechercher la page officielle correspondante dès qu'elle existe."
+  },
+  "sources": [
+    {
+      "source_id": "fortnite_news",
+      "name": "Fortnite News",
+      "url": "https://www.fortnite.com/news?lang=fr",
+      "authority": "MASTER",
+      "evidence_grade": "A",
+      "territory": "GLOBAL_FR_LOCALIZED",
+      "domains": ["SEASONS", "UPDATES", "LIVE_EVENTS", "COLLABS", "MODES", "FESTIVAL", "LEGO_FORTNITE", "RELOAD", "OG"],
+      "can_confirm": ["OFFICIAL_ANNOUNCEMENT", "DATE", "TIME_IF_PUBLISHED", "MODE", "PATCH_FEATURES", "COLLAB", "EVENT_WINDOW"],
+      "cannot_confirm": ["THIRD_PARTY_TICKET_STOCK", "UNPUBLISHED_SHOP_ROTATION"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "fortnite_competitive",
+      "name": "Fortnite Competitive",
+      "url": "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+      "authority": "PRIMARY_COMPETITIVE",
+      "evidence_grade": "A",
+      "territory": "GLOBAL_REGIONAL",
+      "domains": ["FNCS", "CUPS", "RANKED_CUPS", "RELOAD", "ZERO_BUILD", "MOBILE", "PLAYSTATION", "POWER_RANKING"],
+      "can_confirm": ["TOURNAMENT_DATE", "SESSION_TIME", "REGION", "MODE", "FORMAT", "ELIGIBILITY", "RESULT", "SCHEDULE"],
+      "cannot_confirm": ["VENUE_TICKET_STOCK_UNLESS_LINKED"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "epic_status",
+      "name": "Epic Games Public Status",
+      "url": "https://status.epicgames.com/",
+      "authority": "PRIMARY_SERVICE_STATUS",
+      "evidence_grade": "A",
+      "territory": "GLOBAL",
+      "domains": ["MAINTENANCE", "INCIDENTS", "LOGIN", "MATCHMAKING", "FORTNITE_SERVICES"],
+      "can_confirm": ["INCIDENT", "MAINTENANCE_STATUS", "SERVICE_RECOVERY"],
+      "cannot_confirm": ["PATCH_CONTENT", "SEASON_DATE_UNLESS_PUBLISHED_ELSEWHERE"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "epic_fortnite_support",
+      "name": "Epic Games Support — Fortnite",
+      "url": "https://www.epicgames.com/help/fortnite-c75",
+      "authority": "PRIMARY_SUPPORT",
+      "evidence_grade": "A",
+      "territory": "GLOBAL",
+      "domains": ["PLATFORMS", "ACCOUNT", "COMPATIBILITY", "PURCHASES", "TECHNICAL"],
+      "can_confirm": ["PLATFORM_SUPPORT", "TECHNICAL_REQUIREMENT", "OFFICIAL_SUPPORT_POLICY"],
+      "cannot_confirm": ["UNANNOUNCED_CONTENT"],
+      "priority": 3,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "fortnite_uefn_docs",
+      "name": "Epic Developer Community — Fortnite / UEFN",
+      "url": "https://dev.epicgames.com/documentation/en-us/fortnite/",
+      "authority": "PRIMARY_DEVELOPER",
+      "evidence_grade": "A",
+      "territory": "GLOBAL",
+      "domains": ["UEFN", "CREATIVE", "CREATOR_TOOLS", "PUBLISHING"],
+      "can_confirm": ["TOOL_RELEASE", "CREATOR_FEATURE", "TECHNICAL_CHANGE"],
+      "cannot_confirm": ["BATTLE_ROYALE_EVENT_UNLESS_CROSS_PUBLISHED"],
+      "priority": 3,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "lotto_arena",
+      "name": "Lotto Arena Antwerpen",
+      "url": "https://www.lotto-arena.be/",
+      "authority": "VENUE_DIRECT",
+      "evidence_grade": "A",
+      "territory": "ANTWERP_BE",
+      "domains": ["FNCS_GLOBAL_2026", "VENUE", "TICKETING"],
+      "can_confirm": ["VENUE", "ADDRESS", "TICKET_STATUS", "TICKET_PACKAGE", "VENUE_TIME"],
+      "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT", "OTHER_VENUES"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "ewc_official",
+      "name": "Esports World Cup",
+      "url": "https://esportsworldcup.com/",
+      "authority": "ORGANIZER_DIRECT",
+      "evidence_grade": "A",
+      "territory": "GLOBAL",
+      "domains": ["EWC", "PARIS_2026", "FORTNITE_RELOAD"],
+      "can_confirm": ["EWC_EVENT", "VENUE_WHEN_PUBLISHED", "DATE_WHEN_PUBLISHED", "TICKETING_WHEN_PUBLISHED"],
+      "cannot_confirm": ["FNCS_RULES"],
+      "priority": 2,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "epic_games_store",
+      "name": "Epic Games Store",
+      "url": "https://store.epicgames.com/",
+      "authority": "PLATFORM_DIRECT",
+      "evidence_grade": "A",
+      "territory": "FR_EU",
+      "domains": ["FORTNITE_CLIENT", "ADDONS", "PLATFORM_AVAILABILITY"],
+      "can_confirm": ["STORE_AVAILABILITY", "PLATFORM_LISTING"],
+      "cannot_confirm": ["ITEM_SHOP_FUTURE_ROTATION"],
+      "priority": 4,
+      "status": "ACTIVE"
+    }
+  ]
+}
