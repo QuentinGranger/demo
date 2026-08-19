@@ -1,0 +1,56 @@
+{
+  "version": "FORTNITE_ICS_VALIDATION_V1",
+  "scope": "Fortnite iCalendar feeds for Apple Calendar and RFC 5545 clients",
+  "files": [
+    "calendars/fortnite-paris.ics",
+    "calendars/fortnite-updates-france.ics",
+    "calendars/fortnite-competitive-france.ics"
+  ],
+  "validator": "scripts/validate_fortnite_ics.py",
+  "workflow": ".github/workflows/validate-fortnite-calendars.yml",
+  "serialization": {
+    "charset": "UTF-8",
+    "bom": false,
+    "line_ending": "CRLF",
+    "final_crlf_required": true,
+    "content_line_max_octets": 75,
+    "fold_prefix": "SPACE",
+    "utf8_codepoint_safe_folding": true
+  },
+  "structural_checks": [
+    "VCALENDAR_BEGIN_END_BALANCED",
+    "VEVENT_BEGIN_END_BALANCED",
+    "VALARM_BEGIN_END_BALANCED",
+    "VERSION_2_0_EXACTLY_ONCE",
+    "PRODID_REQUIRED",
+    "VEVENT_UID_REQUIRED_UNIQUE",
+    "VEVENT_DTSTAMP_REQUIRED_UTC",
+    "VEVENT_DTSTART_REQUIRED",
+    "VEVENT_SUMMARY_REQUIRED",
+    "DTSTART_DTEND_VALUE_TYPE_MATCH",
+    "ALL_DAY_DTEND_EXCLUSIVE",
+    "DISPLAY_VALARM_REQUIRES_TRIGGER_ACTION_DESCRIPTION",
+    "HTTP_HTTPS_URL_VALIDITY",
+    "PROPERTY_AND_PARAMETER_SYNTAX"
+  ],
+  "fortnite_checks": [
+    "X_FORTNITE_PROPERTIES_MUST_REMAIN_VALID_CONTENT_LINES",
+    "GLOBAL_UID_SET_EQUALS_UNION_OF_SPECIALISTS",
+    "MIRRORED_UID_EVENT_CONTENT_IDENTICAL",
+    "NO_DUPLICATE_UID_WITHIN_FEED"
+  ],
+  "write_policy": {
+    "before_write": "Construct complete logical VEVENT data first, then serialize with CRLF and RFC 5545 folding. Never fold by character count; fold by UTF-8 octets without splitting a code point.",
+    "after_write": "The GitHub Actions validator must pass. A failed validation is a technical regression and must be corrected before additional calendar content changes.",
+    "sequence_rule": "Formatting-only normalization never increments VEVENT SEQUENCE. SEQUENCE changes only for real event/business-data changes.",
+    "sync_rule": "An event mirrored in global and specialist feeds must be byte-semantically identical after unfolding, including UID, DTSTAMP, LAST-MODIFIED, SEQUENCE, VALARM and X-FORTNITE fields."
+  },
+  "manual_commands": {
+    "validate": "python scripts/validate_fortnite_ics.py",
+    "normalize_then_validate": "python scripts/validate_fortnite_ics.py --fix"
+  },
+  "git_line_endings": {
+    "gitattributes_rule": "calendars/fortnite-*.ics -text",
+    "reason": "Prevent Git from silently converting CRLF serialization to LF."
+  }
+}
