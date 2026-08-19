@@ -1,0 +1,221 @@
+{
+  "version": "FORTNITE_SEASON_PASS_INTELLIGENCE_FR_V1",
+  "updated_at": "2026-08-19T10:36:00Z",
+  "scope": "Fortnite season, pass and ranked lifecycle intelligence for France/Europe",
+  "source_of_truth": "Official Fortnite/Epic product, news, competitive and status sources according to field authority.",
+  "principles": {
+    "independent_tracks": "Battle Royale season, Battle Pass, OG Pass, Festival season/pass, LEGO Pass, mini/collab passes and Ranked season are independent tracks that may overlap.",
+    "pass_end_not_season_end": "A pass end date never proves the gameplay season end or next-season launch time.",
+    "season_end_not_next_start": "A season end date never proves the next season starts immediately afterward.",
+    "rank_reset_independent": "A Ranked reset is its own lifecycle milestone and is not inferred from a season launch unless Epic explicitly links them.",
+    "no_fake_precision": "DATE_ONLY, DATE_RANGE and vague windows remain distinct from exact timestamps; never synthesize an hour.",
+    "official_only": "Leaks, datamining and inferred Battle Pass UI timers may be watch signals only unless an authorized official source confirms the field.",
+    "stable_identity": "track_id is immutable across enrichments, extensions, reschedules and corrections.",
+    "append_only_history": "Material transitions append history; current state never silently erases an earlier official value.",
+    "calendar_is_projection": "The lifecycle ledger is canonical; updates/global .ics receive only actionable milestones that pass the calendar threshold."
+  },
+  "track_types": [
+    "BR_SEASON",
+    "BATTLE_PASS",
+    "OG_PASS",
+    "FESTIVAL_SEASON",
+    "FESTIVAL_PASS",
+    "LEGO_PASS",
+    "MINI_PASS",
+    "COLLAB_PASS",
+    "RANKED_SEASON",
+    "RANKED_RESET"
+  ],
+  "states": [
+    "WATCHING",
+    "ANNOUNCED",
+    "START_SCHEDULED",
+    "ACTIVE",
+    "END_ANNOUNCED",
+    "ENDING",
+    "ENDED",
+    "NEXT_ANNOUNCED",
+    "TRANSITION_SCHEDULED",
+    "TRANSITIONING",
+    "REPLACED",
+    "POSTPONED",
+    "CANCELLED"
+  ],
+  "time_precision": ["EXACT", "DATE_ONLY", "DATE_RANGE", "WINDOW_ONLY", "UNPUBLISHED"],
+  "milestone_types": [
+    "ANNOUNCED_AT",
+    "START_AT",
+    "END_AT",
+    "LAST_EARN_AT",
+    "LAST_CLAIM_AT",
+    "RANKED_END_AT",
+    "RANK_RESET_AT",
+    "DOWNTIME_START_AT",
+    "DOWNTIME_END_AT",
+    "NEXT_START_AT"
+  ],
+  "relation_types": [
+    "PASS_FOR_SEASON",
+    "RANKED_FOR_SEASON",
+    "NEXT_TRACK",
+    "TRANSITION_DOWNTIME",
+    "COLLAB_WITHIN_SEASON",
+    "SAME_CAMPAIGN",
+    "REPLACED_BY"
+  ],
+  "schema": {
+    "required": ["track_id", "track_type", "name", "state", "milestones", "relations", "source_ids", "history"],
+    "milestone_fields": ["milestone_id", "type", "at", "date", "time_precision", "source_timezone", "source_id", "source_url", "confidence", "calendar_policy", "calendar_uid"],
+    "track_fields": ["track_id", "track_type", "mode", "chapter_id", "season_id", "name", "state", "edition_id", "collab_universe", "ranked_scope", "milestones", "relations", "source_ids", "source_urls", "calendar_group_id", "history"]
+  },
+  "calendar_policy": {
+    "INCLUDE": [
+      "exact or date-only official pass end with meaningful last-chance value",
+      "official season launch date/window",
+      "official ranked reset with actionable timing",
+      "major pass launch/end when officially dated",
+      "official transition downtime linked to a season launch"
+    ],
+    "WATCH_ONLY": [
+      "vague next-season window",
+      "pass/season with no usable date",
+      "routine cosmetic progression without deadline",
+      "ranked cycle relationship that is only inferred"
+    ],
+    "anti_bazar": "Prefer one logical lifecycle milestone per meaningful action. Do not create separate VEVENTs for announcement, teaser and every reward beat unless independently actionable."
+  },
+  "transition_rules": {
+    "WATCHING": ["ANNOUNCED", "START_SCHEDULED", "ACTIVE", "CANCELLED"],
+    "ANNOUNCED": ["START_SCHEDULED", "ACTIVE", "POSTPONED", "CANCELLED"],
+    "START_SCHEDULED": ["ACTIVE", "POSTPONED", "CANCELLED"],
+    "ACTIVE": ["END_ANNOUNCED", "NEXT_ANNOUNCED", "TRANSITION_SCHEDULED", "ENDED", "CANCELLED"],
+    "END_ANNOUNCED": ["ENDING", "NEXT_ANNOUNCED", "TRANSITION_SCHEDULED", "ENDED", "POSTPONED"],
+    "ENDING": ["ENDED", "POSTPONED"],
+    "ENDED": ["REPLACED", "NEXT_ANNOUNCED"],
+    "NEXT_ANNOUNCED": ["TRANSITION_SCHEDULED", "REPLACED"],
+    "TRANSITION_SCHEDULED": ["TRANSITIONING", "POSTPONED", "CANCELLED"],
+    "TRANSITIONING": ["REPLACED", "POSTPONED"],
+    "POSTPONED": ["ANNOUNCED", "START_SCHEDULED", "ACTIVE", "END_ANNOUNCED", "TRANSITION_SCHEDULED", "CANCELLED"],
+    "REPLACED": [],
+    "CANCELLED": []
+  },
+  "deadline_bridge": {
+    "types": ["PASS_END_AT", "LAST_EARN_AT", "LAST_CLAIM_AT", "RANKED_SEASON_END_AT", "RANK_RESET_AT"],
+    "legacy_compatibility": "Existing BATTLE_PASS_END_DATE entries remain valid; new generic pass deadlines use PASS_END_AT with pass_type metadata.",
+    "exactness": "Clock reminders require EXACT official timestamps. DATE_ONLY may create a day-level last-day notice but never a fabricated clock deadline.",
+    "dedupe_key": "track_id + milestone_type + source_value + lifecycle_version"
+  },
+  "service_bridge": {
+    "rule": "Downtime is stored canonically in FORTNITE_SERVICE_INTELLIGENCE_FR_V2 and linked here only when an authorized official source explicitly connects it to this lifecycle transition.",
+    "no_same_day_inference": "Same-day maintenance and pass/season end do not prove a transition relationship."
+  },
+  "watch_tracks": [
+    {"watch_id": "next-br-season", "track_type": "BR_SEASON", "mode": "BATTLE_ROYALE", "state": "WATCHING"},
+    {"watch_id": "next-battle-pass", "track_type": "BATTLE_PASS", "mode": "BATTLE_ROYALE", "state": "WATCHING"},
+    {"watch_id": "next-og-pass", "track_type": "OG_PASS", "mode": "FORTNITE_OG", "state": "WATCHING"},
+    {"watch_id": "next-festival-season", "track_type": "FESTIVAL_SEASON", "mode": "FORTNITE_FESTIVAL", "state": "WATCHING"},
+    {"watch_id": "next-festival-pass", "track_type": "FESTIVAL_PASS", "mode": "FORTNITE_FESTIVAL", "state": "WATCHING"},
+    {"watch_id": "next-lego-pass", "track_type": "LEGO_PASS", "mode": "LEGO_ODYSSEY", "state": "WATCHING"},
+    {"watch_id": "active-mini-collab-passes", "track_type": "MINI_PASS", "mode": null, "state": "WATCHING"},
+    {"watch_id": "next-ranked-season-reset", "track_type": "RANKED_SEASON", "mode": "BATTLE_ROYALE", "state": "WATCHING"}
+  ],
+  "tracks": [
+    {
+      "track_id": "battle-pass-c7s3-runners",
+      "track_type": "BATTLE_PASS",
+      "mode": "BATTLE_ROYALE",
+      "chapter_id": "CHAPTER_7",
+      "season_id": "C7S3",
+      "name": "Battle Pass — Runners",
+      "state": "END_ANNOUNCED",
+      "edition_id": "C7S3_RUNNERS",
+      "collab_universe": null,
+      "ranked_scope": null,
+      "calendar_group_id": "fortnite-c7s3-transition",
+      "milestones": [
+        {
+          "milestone_id": "battle-pass-c7s3-runners:end",
+          "type": "END_AT",
+          "at": null,
+          "date": "2026-08-20",
+          "time_precision": "DATE_ONLY",
+          "source_timezone": "America/New_York_DATE_ONLY",
+          "source_id": "fortnite_battle_pass",
+          "source_url": "https://www.fortnite.com/battle-pass?lang=en-US",
+          "confidence": "OFFICIAL_DATE_NO_TIME",
+          "calendar_policy": "INCLUDE",
+          "calendar_uid": "fortnite-c7s3-runners-battle-pass-end-20260820@openai"
+        }
+      ],
+      "relations": [
+        {"type": "PASS_FOR_SEASON", "target_id": "br-season-c7s3-runners", "confidence": "EXPLICIT"}
+      ],
+      "source_ids": ["fortnite_battle_pass"],
+      "source_urls": ["https://www.fortnite.com/battle-pass?lang=en-US"],
+      "history": [
+        {"at": "2026-08-19T10:36:00Z", "type": "TRACK_CREATED", "note": "Seeded from the existing official Battle Pass end date. No Battle Royale season end/start time is inferred from this pass deadline."}
+      ]
+    },
+    {
+      "track_id": "br-season-c7s3-runners",
+      "track_type": "BR_SEASON",
+      "mode": "BATTLE_ROYALE",
+      "chapter_id": "CHAPTER_7",
+      "season_id": "C7S3",
+      "name": "Battle Royale — Chapter 7 Season 3 Runners",
+      "state": "ACTIVE",
+      "edition_id": "C7S3",
+      "collab_universe": null,
+      "ranked_scope": null,
+      "calendar_group_id": "fortnite-c7s3-transition",
+      "milestones": [],
+      "relations": [
+        {"type": "NEXT_TRACK", "target_id": "watch:next-br-season", "confidence": "SIGNAL_ONLY"}
+      ],
+      "source_ids": ["fortnite_news", "fortnite_battle_pass"],
+      "source_urls": [],
+      "history": [
+        {"at": "2026-08-19T10:36:00Z", "type": "TRACK_CREATED", "note": "Active season track created without inventing its end time from the Battle Pass end date."}
+      ]
+    },
+    {
+      "track_id": "festival-season-15-lil-tecca",
+      "track_type": "FESTIVAL_SEASON",
+      "mode": "FORTNITE_FESTIVAL",
+      "chapter_id": null,
+      "season_id": null,
+      "name": "Fortnite Festival Season 15 — Lil Tecca",
+      "state": "ACTIVE",
+      "edition_id": "FESTIVAL_S15",
+      "collab_universe": "MUSIC",
+      "ranked_scope": null,
+      "calendar_group_id": "fortnite-festival-s15",
+      "milestones": [],
+      "relations": [
+        {"type": "NEXT_TRACK", "target_id": "watch:next-festival-season", "confidence": "WATCH_ONLY"}
+      ],
+      "source_ids": ["fortnite_news"],
+      "source_urls": [],
+      "history": [
+        {"at": "2026-08-19T10:36:00Z", "type": "TRACK_CREATED", "note": "Seeded from existing watchlist knowledge; no end date is materialized until officially published."}
+      ]
+    }
+  ],
+  "history_event_types": [
+    "TRACK_CREATED",
+    "TRACK_ANNOUNCED",
+    "START_SCHEDULED",
+    "TRACK_STARTED",
+    "END_ANNOUNCED",
+    "LAST_EARN_CHANGED",
+    "LAST_CLAIM_CHANGED",
+    "RANK_RESET_ANNOUNCED",
+    "NEXT_TRACK_LINKED",
+    "DOWNTIME_LINKED",
+    "TRACK_ENDED",
+    "TRACK_REPLACED",
+    "POSTPONED",
+    "CANCELLED",
+    "SOURCE_CORRECTION"
+  ]
+}
