@@ -1,0 +1,45 @@
+{
+  "version": "FORTNITE_VENUE_REGISTRY_EU_V1",
+  "updated_at": "2026-08-19T15:14:00Z",
+  "scope": "Physical Fortnite venues relevant to France and Europe",
+  "principles": {
+    "stable_venue_id": "A venue_id is immutable across events; renames become aliases/history rather than a new venue when the physical venue is the same.",
+    "address_precision": "Never invent street, postal code, entrance or GEO. Store the most precise officially verified level only.",
+    "geo_guard": "GEO requires a direct venue/organizer source or another authoritative geocoding source explicitly recorded in geo_source.",
+    "city_only_is_valid": "CITY precision is valid when the organizer has announced only the city; do not upgrade it from third-party speculation.",
+    "entrance_is_session_specific": "A special gate/entrance belongs to event access data unless the venue permanently identifies it."
+  },
+  "precision_levels": ["COUNTRY", "REGION", "CITY", "SITE", "VENUE", "BUILDING", "EXACT_ENTRANCE"],
+  "venues": [
+    {
+      "venue_id": "lotto_arena_antwerp",
+      "name": "Lotto Arena Antwerpen",
+      "aliases": ["Lotto Arena", "Lotto Arena Antwerp"],
+      "country_code": "BE",
+      "city": "Antwerpen",
+      "address": "Schijnpoortweg 119, Antwerpen, Belgique",
+      "address_precision": "BUILDING",
+      "geo": null,
+      "geo_source": null,
+      "source_id": "lotto_arena",
+      "source_url": "https://www.lotto-arena.be/",
+      "status": "ACTIVE",
+      "history": []
+    },
+    {
+      "venue_id": "ewc_paris_2026_tba",
+      "name": "Esports World Cup Paris 2026 — lieu exact à confirmer",
+      "aliases": ["EWC Paris 2026"],
+      "country_code": "FR",
+      "city": "Paris",
+      "address": "Paris, France",
+      "address_precision": "CITY",
+      "geo": null,
+      "geo_source": null,
+      "source_id": "ewc_official",
+      "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "status": "TBA_DETAIL",
+      "history": []
+    }
+  ]
+}
