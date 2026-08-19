@@ -1,0 +1,200 @@
+{
+  "version": "FORTNITE_LORE_KNOWLEDGE_GRAPH_FR_V2",
+  "updated_at": "2026-08-19T14:10:00Z",
+  "base_registry": "fortnite-lore-taxonomy-france.json",
+  "source_policy": "fortnite-lore-sources-france.json",
+  "scope": "Temporal, provenance-aware Fortnite lore claims layered over the stable V1 entity registry",
+  "principles": {
+    "claims_not_flat_tags": "Relations, roles, participation and location are stored as scoped claims with provenance rather than permanent flat tags.",
+    "as_of_queries": "A query may resolve lore as of a chapter, season, historical event or timestamp without rewriting current canon.",
+    "corrections_are_append_only": "A corrected claim supersedes the earlier claim; old evidence remains auditable.",
+    "unknown_is_valid": "Missing scope, role or relationship stays unknown instead of being filled from fandom knowledge or adjacency.",
+    "causation_is_special": "Chronology, co-presence and opposition never imply causation. CAUSES/CREATES/DESTROYS require explicit official evidence.",
+    "identity_vs_role": "Character identity is durable; NPC, Boss, ally, hostile, leader and agent roles are scoped assertions.",
+    "lineage_is_not_identity": "Island/reality transformations and successors are modeled as lineage claims, not SAME_ENTITY unless explicitly established."
+  },
+  "entity_extensions": [
+    {"id":"CHARACTER_DOCTOR_SLONE","type":"CHARACTER","label_fr":"Docteure Slone","label_en":"Doctor Slone","canon_scope":"MAIN_STORY"},
+    {"id":"CHARACTER_CUBE_QUEEN","type":"CHARACTER","label_fr":"Reine des cubes","label_en":"The Cube Queen","canon_scope":"MAIN_STORY"},
+    {"id":"ORG_THE_LAST_REALITY","type":"ORGANIZATION","label_fr":"La Dernière réalité","label_en":"The Last Reality","canon_scope":"MAIN_STORY"},
+    {"id":"FACTION_GHOST","type":"FACTION","label_fr":"Fantôme","label_en":"Ghost","canon_scope":"MAIN_STORY"},
+    {"id":"FACTION_SHADOW","type":"FACTION","label_fr":"Ombre","label_en":"Shadow","canon_scope":"MAIN_STORY"},
+    {"id":"POI_CORNY_COMPLEX","type":"POI","label_fr":"Corny Complex","label_en":"Corny Complex","canon_scope":"MAIN_STORY"},
+    {"id":"POI_THE_BRIDGE","type":"POI","label_fr":"Le Pont","label_en":"The Bridge","canon_scope":"GAMEPLAY_ONLY"},
+    {"id":"LORE_OBJECT_MOTHERSHIP","type":"LORE_OBJECT","label_fr":"Vaisseau-mère","label_en":"Mothership","canon_scope":"MAIN_STORY"},
+    {"id":"REALITY_THE_SIDEWAYS","type":"REALITY","label_fr":"Dimension parallèle","label_en":"The Sideways","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_OPERATION_SKY_FIRE","type":"HISTORICAL_EVENT","label_fr":"Opération : Feu céleste","label_en":"Operation: Sky Fire","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_RISE_OF_MIDAS","type":"HISTORICAL_EVENT","label_fr":"L'Avènement de Midas","label_en":"Rise of Midas","canon_scope":"MAIN_STORY"}
+  ],
+  "claim_types": ["RELATION","ROLE","PARTICIPATION","LOCATION","STATE","CHRONOLOGY","LINEAGE","IDENTITY"],
+  "claim_statuses": ["ACTIVE","PROVISIONAL","DISPUTED","SUPERSEDED","RETRACTED"],
+  "evidence_levels": ["OFFICIAL_EXPLICIT","OFFICIAL_CROSS_REFERENCE","CURATED_LEGACY_OFFICIAL","DISCOVERY_ONLY","UNKNOWN"],
+  "time_precision": ["EXACT","DATE_ONLY","SEASON_SCOPE","CHAPTER_SCOPE","EVENT_SCOPE","UNKNOWN"],
+  "participation_roles": ["PARTICIPANT","LEADER","AGENT","ALLY","OPPONENT","TARGET","DEFENDER","ATTACKER","CREATOR","OWNER","OBSERVER","UNKNOWN"],
+  "relation_types_v2": [
+    "MEMBER_OF","AFFILIATED_WITH","LEADS","OPPOSES","ASSOCIATED_WITH","PART_OF_ISLAND","BELONGS_TO_CHAPTER",
+    "OCCURS_IN_CHAPTER","OCCURS_IN_REALITY","OCCURS_IN_TIMELINE","INVOLVES","CENTERS_ON","LOCATED_AT",
+    "TARGETS","USES","CREATED_BY","DESTROYED_IN","TRANSFORMED_INTO","DERIVED_FROM","SPLIT_FROM","MERGED_INTO",
+    "PRECEDES","SUCCESSOR_OF","CAUSES","SAME_ENTITY_AS_LEGACY"
+  ],
+  "claim_schema": {
+    "required": ["claim_id","claim_type","source_entity","predicate","target_entity","status","canon_scope","evidence","source_id"],
+    "optional": ["source_url","validity","participation_role","confidence_note","supersedes_claim_id","observed_at"],
+    "validity_fields": ["chapter_id","season_key","historical_event_id","poi_id","valid_from","valid_to","time_precision"],
+    "materialization_rule": "Only ACTIVE claims with OFFICIAL_EXPLICIT or OFFICIAL_CROSS_REFERENCE may create new strong ICS lore facts. CURATED_LEGACY_OFFICIAL remains queryable but should be enriched before new materialization."
+  },
+  "claims": [
+    {
+      "claim_id":"lore-claim-foundation-leads-seven",
+      "claim_type":"RELATION",
+      "source_entity":"CHARACTER_THE_FOUNDATION",
+      "predicate":"LEADS",
+      "target_entity":"ORG_THE_SEVEN",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/unlock-the-foundation-leader-of-the-seven-in-the-fortnite-chapter-3-season-1-battle-pass",
+      "validity":{"chapter_id":"CHAPTER_3","season_key":"CH3S1","time_precision":"SEASON_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-slone-affiliated-io-c2s7",
+      "claim_type":"RELATION",
+      "source_entity":"CHARACTER_DOCTOR_SLONE",
+      "predicate":"AFFILIATED_WITH",
+      "target_entity":"ORG_IMAGINED_ORDER",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_CROSS_REFERENCE",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","time_precision":"SEASON_SCOPE"},
+      "confidence_note":"Official page places Slone's plan and the player's undercover IO work in the same Operation: Sky Fire context; stored as AFFILIATED_WITH rather than permanent MEMBER_OF."
+    },
+    {
+      "claim_id":"lore-claim-skyfire-involves-slone",
+      "claim_type":"PARTICIPATION",
+      "source_entity":"EVENT_OPERATION_SKY_FIRE",
+      "predicate":"INVOLVES",
+      "target_entity":"CHARACTER_DOCTOR_SLONE",
+      "participation_role":"LEADER",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","historical_event_id":"EVENT_OPERATION_SKY_FIRE","time_precision":"EVENT_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-skyfire-involves-io",
+      "claim_type":"PARTICIPATION",
+      "source_entity":"EVENT_OPERATION_SKY_FIRE",
+      "predicate":"INVOLVES",
+      "target_entity":"ORG_IMAGINED_ORDER",
+      "participation_role":"ATTACKER",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","historical_event_id":"EVENT_OPERATION_SKY_FIRE","time_precision":"EVENT_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-skyfire-targets-last-reality",
+      "claim_type":"PARTICIPATION",
+      "source_entity":"EVENT_OPERATION_SKY_FIRE",
+      "predicate":"TARGETS",
+      "target_entity":"ORG_THE_LAST_REALITY",
+      "participation_role":"OPPONENT",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","historical_event_id":"EVENT_OPERATION_SKY_FIRE","time_precision":"EVENT_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-skyfire-centers-mothership",
+      "claim_type":"PARTICIPATION",
+      "source_entity":"EVENT_OPERATION_SKY_FIRE",
+      "predicate":"CENTERS_ON",
+      "target_entity":"LORE_OBJECT_MOTHERSHIP",
+      "participation_role":"TARGET",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","historical_event_id":"EVENT_OPERATION_SKY_FIRE","time_precision":"EVENT_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-io-opposes-last-reality-c2s7",
+      "claim_type":"RELATION",
+      "source_entity":"ORG_IMAGINED_ORDER",
+      "predicate":"OPPOSES",
+      "target_entity":"ORG_THE_LAST_REALITY",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/prepare-for-the-end-of-chapter-2-season-7-in-the-finale-event-operation-sky-fire",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S7","time_precision":"SEASON_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-sideways-c2s8",
+      "claim_type":"STATE",
+      "source_entity":"REALITY_THE_SIDEWAYS",
+      "predicate":"OCCURS_IN_CHAPTER",
+      "target_entity":"CHAPTER_2",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/whats-new-in-fortnite-battle-royale-chapter-2-season-8-cubed",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S8","time_precision":"SEASON_SCOPE"}
+    },
+    {
+      "claim_id":"lore-claim-midas-associated-agency-c2s2",
+      "claim_type":"RELATION",
+      "source_entity":"CHARACTER_MIDAS",
+      "predicate":"ASSOCIATED_WITH",
+      "target_entity":"POI_THE_AGENCY",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_CROSS_REFERENCE",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/lock-in-your-chapter-2-season-2-fortnite-agency-and-maya-choices",
+      "validity":{"chapter_id":"CHAPTER_2","season_key":"CH2S2","poi_id":"POI_THE_AGENCY","time_precision":"SEASON_SCOPE"},
+      "confidence_note":"Stored as ASSOCIATED_WITH; the source does not establish a permanent Ghost/Shadow membership for Midas."
+    },
+    {
+      "claim_id":"lore-claim-rise-of-midas-involves-midas",
+      "claim_type":"PARTICIPATION",
+      "source_entity":"EVENT_RISE_OF_MIDAS",
+      "predicate":"INVOLVES",
+      "target_entity":"CHARACTER_MIDAS",
+      "participation_role":"PARTICIPANT",
+      "status":"ACTIVE",
+      "canon_scope":"MAIN_STORY",
+      "evidence":"OFFICIAL_EXPLICIT",
+      "source_id":"fortnite_news",
+      "source_url":"https://www.fortnite.com/news/fortnite-battle-royale-v29-01-rise-of-midas",
+      "validity":{"chapter_id":"CHAPTER_5","season_key":"CH5S2","historical_event_id":"EVENT_RISE_OF_MIDAS","time_precision":"EVENT_SCOPE"}
+    }
+  ],
+  "legacy_import": {
+    "registry_relations": "All V1 relations remain readable as CURATED_LEGACY_OFFICIAL claims with stable synthetic claim fingerprints; V2 claims supersede only when supersedes_claim_id is explicit.",
+    "role_assignments": "V1 role assignments, if any, are imported as scoped ROLE claims without changing their semantics.",
+    "do_not_duplicate": true
+  },
+  "contradiction_policy": {
+    "same_claim_different_value": "Do not overwrite. Add the new claim and set supersedes_claim_id only when the newer official source actually corrects/replaces the older assertion.",
+    "parallel_scopes": "Apparently conflicting claims may both remain ACTIVE if their temporal/canon scopes differ.",
+    "disputed": "Use DISPUTED only when official sources conflict and no authoritative resolution is available.",
+    "retracted": "Use RETRACTED only for an explicit official withdrawal/correction."
+  },
+  "query_dimensions": ["WHO","WHAT","WHERE","WHEN","ORGANIZATION","CHAPTER","SEASON","REALITY","TIMELINE","HISTORICAL_EVENT","ROLE","CANON_SCOPE"],
+  "history": [
+    {"at":"2026-08-19T14:10:00Z","type":"GRAPH_V2_CREATED","note":"Added temporal/provenance-aware claim layer without replacing stable V1 lore entities or relations."}
+  ]
+}
