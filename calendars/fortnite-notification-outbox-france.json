@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-08-19T21:03:30Z",
+  "updated_at": "2026-08-19T22:06:29Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -129,6 +129,15 @@
       "at": "2026-08-19T21:03:30Z",
       "reservation_id": "nrs_db008bb6fc93f0a6759dc899",
       "note": "Reserved after a fresh outbox read for the current Championship-level correction back to Paris and retraction of the Riyadh ticket inventory from active state. This reservation consumes the key even if delivery acknowledgement cannot be persisted."
+    },
+    {
+      "delivery_event_id": "nde_536b63dd8c9ff552c7e16d41",
+      "intent_id": "nti_b5266718dc152ad854dd172f",
+      "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
+      "state": "UNKNOWN_DELIVERY",
+      "at": "2026-08-19T22:06:29Z",
+      "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
+      "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
     }
   ],
   "consumed_keys": {
@@ -139,8 +148,8 @@
     },
     "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357": {
       "intent_id": "nti_b5266718dc152ad854dd172f",
-      "state": "RESERVED",
-      "last_event_id": "nde_e534e785f76fbbcc77ce6fa2"
+      "state": "UNKNOWN_DELIVERY",
+      "last_event_id": "nde_536b63dd8c9ff552c7e16d41"
     }
   },
   "group_index": {
@@ -169,6 +178,12 @@
       "type": "NOTIFICATION_RESERVED",
       "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
       "note": "One coalesced notification reserved for the current EWC Championship correction back to Paris and removal of stale Riyadh ticket inventory from active state."
+    },
+    {
+      "at": "2026-08-19T22:06:29Z",
+      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
+      "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
+      "note": "Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
     }
   ]
 }
