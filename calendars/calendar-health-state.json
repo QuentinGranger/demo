@@ -1,0 +1,37 @@
+{
+  "version": "CROSS_CALENDAR_HEALTH_STATE_FR_V1",
+  "policy": "calendar-health-policy.json",
+  "baseline_at": "2026-08-19T16:10:00Z",
+  "current_overall_state": "HEALTHY",
+  "baseline_manifest": {
+    "FORTNITE": [
+      {"path":"calendars/fortnite-paris.ics","sha":"45202efd91f0d03ce7d1eae0a39e0b8853de991e"},
+      {"path":"calendars/fortnite-updates-france.ics","sha":"8d96e6c9a0a9e036b61b58bc304969fc6156177b"},
+      {"path":"calendars/fortnite-competitive-france.ics","sha":"016beebf774be7cefd329837da1799867ab35d92"}
+    ],
+    "HARRY_POTTER": [
+      {"path":"calendars/harry-potter-paris.ics","sha":"9902b123d8d3bfb3c2ef5419c17d7aac2d9711d6"},
+      {"path":"calendars/harry-potter-releases-france.ics","sha":"1d706edcd0f1cd39b9284b215ea1af041b259107"},
+      {"path":"calendars/harry-potter-events-france-paris.ics","sha":"779bf97064638e0637ac3fcabebc66caecabbb32"}
+    ],
+    "POKEMON": [
+      {"path":"calendars/pokemon-paris.ics","sha":"f71403a12e16e5a8c37f40cc2b72b759c9e9d5f3"},
+      {"path":"calendars/pokemon-tcg-france.ics","sha":"fa0fd92ae865c51f025dc470e86c7821f9364eee"},
+      {"path":"calendars/pokemon-events-france-paris.ics","sha":"5bbe7237a48c4ee3cdd35575d730ef764c92b1e8"}
+    ]
+  },
+  "franchise_state": {
+    "FORTNITE": "HEALTHY",
+    "HARRY_POTTER": "HEALTHY",
+    "POKEMON": "HEALTHY"
+  },
+  "active_incidents": [],
+  "incident_history": [],
+  "history": [
+    {
+      "at": "2026-08-19T16:10:00Z",
+      "type": "HEALTH_BASELINE_CREATED",
+      "note": "All nine subscribed/global-specialist calendar paths existed on master when the permanent health policy was introduced. Routine checks do not rewrite this file while healthy."
+    }
+  ]
+}
