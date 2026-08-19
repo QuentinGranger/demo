@@ -1,0 +1,147 @@
+{
+  "version": "SOURCE_REGISTRY_FR_V1",
+  "updated_at": "2026-08-19T04:05:00Z",
+  "scope": "Harry Potter / Wizarding World — France, priorité Paris/Île-de-France",
+  "rules": {
+    "calendar_threshold": "Une source ne crée un VEVENT que si elle fournit une date exacte, une heure exacte, une période datée exploitable, ou une disponibilité/action réellement datée.",
+    "priority_order": [
+      "OFFICIAL_FRANCHISE",
+      "OFFICIAL_STUDIO_PLATFORM",
+      "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "OFFICIAL_ORGANIZER_TICKETING",
+      "DIRECT_RETAILER",
+      "SPECIALIST_SECONDARY"
+    ],
+    "rumors": "Rumeurs, leaks, fan accounts non sourcés et datamining sont exclus du calendrier."
+  },
+  "sources": [
+    {
+      "name": "HarryPotter.com / Wizarding World",
+      "type": "OFFICIAL_FRANCHISE",
+      "url": "https://www.harrypotter.com/news",
+      "coverage": ["Back to Hogwarts", "25e anniversaire", "films", "série HBO", "livres", "jeux", "expériences", "merchandising officiel"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Warner Bros. France",
+      "type": "OFFICIAL_STUDIO_PLATFORM",
+      "url": "https://www.warnerbros.fr/",
+      "coverage": ["Warner Bros. France", "Harry Potter", "cinéma", "expériences", "Studio Tour", "actualités WBD"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Warner Bros. Discovery Pressroom — Harry Potter",
+      "type": "OFFICIAL_STUDIO_PLATFORM",
+      "url": "https://press.wbd.com/us/property/harry-potter/media-releases",
+      "coverage": ["série HBO", "casting", "date de diffusion", "bande-annonce", "production"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "HBO Max France",
+      "type": "OFFICIAL_STUDIO_PLATFORM",
+      "url": "https://www.max.com/fr/fr",
+      "coverage": ["date de première", "disponibilité France", "streaming", "série HBO"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Gallimard Jeunesse",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://www.gallimard-jeunesse.fr/collection/papeterie-jeunesse/harry-potter.html",
+      "coverage": ["éditions françaises", "romans illustrés", "albums", "livres films", "agendas", "papeterie"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Audible France — Harry Potter",
+      "type": "DIRECT_RETAILER",
+      "url": "https://www.audible.fr/ep/harrypotter",
+      "coverage": ["livres audio français", "Full-Cast Editions", "Archives du Monde des Sorciers"],
+      "status": "ACTIVE",
+      "priority": 2
+    },
+    {
+      "name": "LEGO France — Harry Potter",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://www.lego.com/fr-fr/themes/harry-potter",
+      "coverage": ["sets", "collectors", "prix France", "promotions", "Back to Hogwarts", "événements LEGO Store"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "MinaLima",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://minalima.com/",
+      "coverage": ["éditions illustrées", "prints", "collections graphiques", "Harry Potter"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "The Noble Collection France",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://noblecollection.fr/",
+      "coverage": ["répliques", "baguettes", "collectors", "nouveautés officielles"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Cinereplicas France",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://cinereplicas.fr/collections/harry-potter",
+      "coverage": ["répliques", "collectors", "éditions limitées", "calendriers de l'Avent", "nouveautés"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Funko Europe / Loungefly",
+      "type": "OFFICIAL_PUBLISHER_MANUFACTURER",
+      "url": "https://funkoeurope.com/",
+      "coverage": ["Funko Pop", "Loungefly", "exclusivités", "coming soon", "Harry Potter"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "uGo&Play / Yellow Socks Orchestra",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.u-play.fr/cine-concerts",
+      "coverage": ["Harry Potter Film Concert Series", "tournées françaises", "dates", "villes", "billetterie"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Le Grand Rex",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.legrandrex.com/",
+      "coverage": ["projections anniversaire", "ciné-concerts", "Paris", "billetterie"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Harry Potter: The Exhibition",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://harrypotterexhibition.com/press/",
+      "coverage": ["expositions itinérantes", "nouvelles villes", "billetterie", "France/Europe"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Fnac — Harry Potter",
+      "type": "DIRECT_RETAILER",
+      "url": "https://www.fnac.com/l489657/Nouveautes-Harry-Potter/Harry-Potter",
+      "coverage": ["dates de parution France", "précommandes", "livres", "collectors", "jeux", "calendriers"],
+      "status": "ACTIVE",
+      "priority": 2
+    },
+    {
+      "name": "Réseau de salles et organisateurs français",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.u-play.fr/",
+      "coverage": ["Zéniths", "arenas", "théâtres", "cinémas", "conventions", "petits événements officiels"],
+      "status": "DISCOVERY_CONTINUOUS",
+      "priority": 2
+    }
+  ]
+}
