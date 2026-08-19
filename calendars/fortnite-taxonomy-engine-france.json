@@ -1,0 +1,57 @@
+{
+  "version":"FORTNITE_TAXONOMY_ENGINE_FR_V1",
+  "updated_at":"2026-08-19T05:02:00Z",
+  "base_registry":"fortnite-taxonomy-france.json",
+  "filter_modes": {
+    "STRICT":"DIRECT uniquement.",
+    "EXPANDED":"DIRECT + INHERITED + relations autorisées, profondeur max 2.",
+    "COMPETITIVE":"Événements portant competitive_series ou event_type TOURNAMENT/GLOBAL_CHAMPIONSHIP.",
+    "UPDATES":"SEASON_LAUNCH, PATCH_UPDATE, LIVE_EVENT, COLLAB_LAUNCH, FESTIVAL_SEASON, CREATOR_TOOL_RELEASE, PLATFORM_RELEASE.",
+    "FRANCE_RELEVANT":"France/Paris physiques + région EU + événements globaux majeurs ayant un impact direct pour un joueur français."
+  },
+  "relations": [
+    {"type":"SEASON_TO_CHAPTER","direction":"FORWARD_ONLY","allowed":true},
+    {"type":"COMPETITION_TO_MODE","direction":"FORWARD_ONLY","allowed":true},
+    {"type":"EVENT_TO_REGION","direction":"FORWARD_ONLY","allowed":true},
+    {"type":"COLLAB_TO_UNIVERSE","direction":"FORWARD_ONLY","allowed":true}
+  ],
+  "forbidden_inference": [
+    "REGION_TO_PLAYER",
+    "MODE_TO_SEASON",
+    "COLLAB_UNIVERSE_TO_SPECIFIC_SKIN",
+    "TOURNAMENT_TO_PLATFORM_UNLESS_OFFICIAL",
+    "PATCH_NUMBER_TO_CONTENT_WITHOUT_NOTES",
+    "LEAK_TO_EVENT"
+  ],
+  "inheritance": {
+    "TICKET_ONSALE":"Hérite série, mode, région et event_type parent avec basis=INHERITED.",
+    "SAME_TOURNAMENT_STAGE":"Hérite série/mode/format/région ; les horaires restent propres à chaque session.",
+    "SEASON_UPDATE":"Peut hériter chapter/season seulement si l'association est officielle."
+  },
+  "aliases": {
+    "battle royale":"BATTLE_ROYALE",
+    "br":"BATTLE_ROYALE",
+    "zero build":"ZERO_BUILD",
+    "zéro construction":"ZERO_BUILD",
+    "zb":"ZERO_BUILD",
+    "reload":"RELOAD",
+    "recharge":"RELOAD",
+    "festival":"FORTNITE_FESTIVAL",
+    "og":"FORTNITE_OG",
+    "creative":"UEFN_CREATIVE",
+    "créatif":"UEFN_CREATIVE",
+    "uefn":"UEFN_CREATIVE",
+    "save the world":"SAVE_THE_WORLD",
+    "sauver le monde":"SAVE_THE_WORLD",
+    "fncs":"FNCS",
+    "global championship":"FNCS_GLOBAL",
+    "championnat global":"FNCS_GLOBAL"
+  },
+  "ics_mapping": {
+    "policy":"X-FORTNITE-TAXONOMY-POLICY:FORTNITE_TAXONOMY_ENGINE_FR_V1",
+    "registry":"X-FORTNITE-TAXONOMY-REGISTRY:fortnite-taxonomy-france.json",
+    "engine":"X-FORTNITE-TAXONOMY-ENGINE:fortnite-taxonomy-engine-france.json",
+    "index":"X-FORTNITE-TAXONOMY-INDEX:fortnite-taxonomy-index-france.json",
+    "properties":["X-FORTNITE-MODE","X-FORTNITE-CHAPTER","X-FORTNITE-SEASON","X-FORTNITE-SERIES","X-FORTNITE-REGION","X-FORTNITE-FORMAT","X-FORTNITE-EVENT-TYPE","X-FORTNITE-PLATFORM","X-FORTNITE-COLLAB-UNIVERSE","X-FORTNITE-THEME"]
+  }
+}
