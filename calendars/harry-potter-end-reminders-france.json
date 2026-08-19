@@ -1,6 +1,6 @@
 {
   "version": "DEADLINE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T05:55:00Z",
+  "updated_at": "2026-08-19T22:41:00Z",
   "scope": "Harry Potter / Wizarding World — échéances et dernières chances France, priorité Paris/Île-de-France",
   "purpose": "Suivre la fin réelle et la dernière possibilité d'agir pour les expositions, pop-ups, expériences, spectacles et runs limités, sans confondre proximité de fin et rareté de billets.",
   "timezone": "Europe/Paris",
@@ -143,6 +143,96 @@
       "deadline_at":"2026-09-07T13:00:00+02:00",
       "deadline_certainty":"OFFICIAL_EXACT",
       "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Harry Potter Clermont-Ferrand — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Harry Potter Clermont-Ferrand — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-so-ouest-20260905@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-06",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-06T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-05T09:00:00+02:00","label":"LEGO Bièreaubeurre So Ouest — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre So Ouest — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-lille-20260905@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-06",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-06T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-05T09:00:00+02:00","label":"LEGO Bièreaubeurre Lille — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Lille — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-lyon-20260905@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-06",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-06T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-05T09:00:00+02:00","label":"LEGO Bièreaubeurre Lyon — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Lyon — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-clermont-20260905@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-06",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-06T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-05T09:00:00+02:00","label":"LEGO Bièreaubeurre Clermont-Ferrand — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Clermont-Ferrand — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-bordeaux-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Bordeaux — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Bordeaux — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-marseille-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Marseille — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Marseille — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-nice-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Nice — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Nice — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-les-halles-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Paris Les Halles — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Paris Les Halles — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-butterbeer-disneyland-paris-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Disneyland Paris — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Disneyland Paris — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
     }
   ]
 }
