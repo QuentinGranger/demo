@@ -94,13 +94,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-reload-elite-ewc-paris-20260819@openai
-DTSTAMP:20260819T181223Z
-LAST-MODIFIED:20260819T181223Z
-SEQUENCE:1
+DTSTAMP:20260819T210330Z
+LAST-MODIFIED:20260819T210330Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:BUY_TICKET
+X-FORTNITE-ACTION:REGISTER_INTEREST
 X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
 X-FORTNITE-SERIES:RELOAD_ELITE_SERIES
 X-FORTNITE-SERIES:EWC
@@ -111,49 +111,48 @@ X-FORTNITE-REGION:GLOBAL
 X-FORTNITE-THEME:ESPORTS_LIVE
 X-FORTNITE-THEME:TICKETING
 X-FORTNITE-EVIDENCE-GRADE:A
-X-FORTNITE-SOURCE-ID:ewc_official
+X-FORTNITE-SOURCE-ID:fortnite_competitive
 X-FORTNITE-CANDIDATE-ID:fortnite-reload-elite-ewc-paris-2026
 X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-ewc-paris-2026
-X-FORTNITE-VENUE-ID:ewc_boulevard_city_riyadh
-X-FORTNITE-LOCATION-PRECISION:VENUE
+X-FORTNITE-VENUE-ID:ewc_paris_2026_tba
+X-FORTNITE-LOCATION-PRECISION:CITY
 X-FORTNITE-ACCESS-PROFILE-ID:fortnite-access-ewc-paris-2026
-X-FORTNITE-ADMISSION-MODE:PAID_TICKET
-X-FORTNITE-ACCESS-STATE:TICKET_REQUIRED
-X-FORTNITE-TICKET-PROVIDER-ID:ewc_riyadh
-X-FORTNITE-TICKET-STATUS:AVAILABLE
-X-FORTNITE-TICKET-SCOPE:EWC26_FORTNITE_CHAMPIONSHIP
-X-FORTNITE-TICKET-CATEGORY;KEY=REGULAR_4_DAY;STATUS=AVAILABLE;PRICE-SAR=219:
- Regular Tournament Pass 4 jours
-X-FORTNITE-TICKET-CATEGORY;KEY=PREMIUM_4_DAY;STATUS=AVAILABLE;PRICE-SAR=471:
- Premium Tournament Pass 4 jours
+X-FORTNITE-ACCESS-STATE:INTEREST_PREREGISTRATION
+X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
+X-FORTNITE-TICKET-STATUS:PREREGISTRATION
+X-FORTNITE-TICKET-SCOPE:EWC_PARIS_GENERAL
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T181223Z
-X-FORTNITE-UPDATE-UNTIL:20260822T181223Z
-X-FORTNITE-UPDATE-REASON:LOCATION_AND_TICKETING_SOURCE_CORRECTION
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T210330Z
+X-FORTNITE-UPDATE-UNTIL:20260822T210330Z
+X-FORTNITE-UPDATE-REASON:SOURCE_CORRECTION_TO_CURRENT_CHAMPIONSHIP_PARIS
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
-SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026 
- — Riyad
-LOCATION:Boulevard City\, Riyad\, Arabie saoudite
-DESCRIPTION:Priorité : ⭐ Important. Correction de source officielle : la
-  billetterie EWC de l'événement exact place le Reload Elite Series Champi
- onship du 19 au 22 août 2026 à Boulevard City, Riyad. Plusieurs pages For
- tnite Competitive de qualification indiquent également Riyadh, Saudi Arab
- ia.\n⚠️ Une page EWC générale contient encore une mention contradictoi
- re de Paris ; pour la logistique et la billetterie, cette fiche suit les s
- ources événementielles les plus spécifiques.\nFormat : 40 duos ; Battl
- e Royale / Recharge ; dotation annoncée : 1 000 000 $ US.\n🎟️ Billets
-  disponibles : Regular Tournament Pass 4 jours — 219 SAR TTC ; Premium To
- urnament Pass 4 jours — 471 SAR TTC avec Fast Track et goodie bag dans la 
- limite des stocks.\n⚠️ Aucun horaire exact de match suffisamment fiable 
- n'est ajouté depuis les fenêtres 22:00–21:59 du site Fortnite.\nSource
-  billetterie EWC : https://www.esportsworldcup.com/en/tickets/fortnite-ft-
- at-ewc26\nSource Fortnite : https://www.fortnite.com/competitive/events/S3
- 9_ReloadEliteSeriesFinal?region=NAC&round=S39_ReloadEliteSeries1Final_NAC
-URL:https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26
+SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
+  — Paris
+LOCATION:Paris\, France
+DESCRIPTION:Priorité : ⭐ Important. Nouvelle correction officielle : la 
+ page actuelle du Reload Elite Series Championship indique explicitement qu
+ e les 40 meilleurs duos disputent le Championship à l'Esports World Cup 
+ à Paris, France, du 19 au 22 août 2026, pour 1 000 000 $ US.\nEWC confir
+ me séparément que l'événement 2026 a été relocalisé à Paris. Sa pa
+ ge Paris actuelle propose seulement de s'inscrire pour être averti lorsqu
+ e les billets seront disponibles : cette préinscription ne garantit pas l
+ 'admission.\n⚠️ Des pages régionales de qualification conservent enco
+ re un ancien texte mentionnant Riyad ; ce conflit reste dans l'historique,
+  mais les sources actuelles au niveau Championship + relocalisation EWC pi
+ lotent l'état canonique.\n🎟️ Les anciens prix Riyad 219/471 SAR ne s
+ ont donc plus présentés comme billets actifs de ce Championship.\n⚠️
+  Aucun horaire exact de match n'est ajouté depuis les fenêtres 22:00–2
+ 1:59 affichées par Fortnite, traitées comme placeholders.\nSource Fortni
+ te : https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&r
+ egion=NAC\nSource EWC relocation : https://resources.esportsworldcup.com/e
+ n/competitive-ops/articles/article\nPréinscription EWC Paris : https://ww
+ w.signup.esportsworldcup.com/EWCPARIS26
+URL:https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&reg
+ ion=NAC
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
- yale,Duos,Riyad,Arabie saoudite
+ yale,Duos,Paris,France
 END:VEVENT
 END:VCALENDAR
