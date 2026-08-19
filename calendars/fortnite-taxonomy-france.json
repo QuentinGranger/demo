@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TAXONOMY_FR_V2",
-  "updated_at": "2026-08-19T05:06:00Z",
+  "updated_at": "2026-08-19T05:15:29Z",
   "scope": "Fortnite — taxonomie sémantique France/Europe",
   "principles": {
     "stable_ids": "IDs ASCII stables ; labels FR/EN peuvent évoluer.",
@@ -27,7 +27,7 @@
     "chapters": [{"id":"CHAPTER_7","label_fr":"Chapitre 7"}],
     "seasons": [
       {"id":"C7S2_SHOWDOWN","label_fr":"Chapitre 7 Saison 2 — Rivalités","chapter":"CHAPTER_7"},
-      {"id":"C7S3","label_fr":"Chapitre 7 Saison 3","chapter":"CHAPTER_7"}
+      {"id":"C7S3","label_fr":"Chapitre 7 Saison 3 — Runners","chapter":"CHAPTER_7"}
     ],
     "competitive_series": [
       {"id":"FNCS","label_fr":"Fortnite Championship Series"},
@@ -47,7 +47,7 @@
       {"id":"SOLOS","label_fr":"Solo"},{"id":"DUOS","label_fr":"Duos"},{"id":"TRIOS","label_fr":"Trios"},{"id":"SQUADS","label_fr":"Escouades"},{"id":"TEAMS","label_fr":"Équipes"}
     ],
     "event_types": [
-      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},{"id":"PATCH_UPDATE","label_fr":"Mise à jour"},{"id":"LIVE_EVENT","label_fr":"Événement live"},{"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},{"id":"TOURNAMENT","label_fr":"Tournoi"},{"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},{"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},{"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},{"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},{"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"},{"id":"ITEM_SHOP_LAUNCH","label_fr":"Lancement boutique d'objets"}
+      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},{"id":"SEASON_END","label_fr":"Fin de saison / passe de combat"},{"id":"PATCH_UPDATE","label_fr":"Mise à jour"},{"id":"LIVE_EVENT","label_fr":"Événement live"},{"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},{"id":"TOURNAMENT","label_fr":"Tournoi"},{"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},{"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},{"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},{"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},{"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"},{"id":"ITEM_SHOP_LAUNCH","label_fr":"Lancement boutique d'objets"}
     ],
     "platforms": [
       {"id":"PC","label_fr":"PC"},{"id":"PLAYSTATION","label_fr":"PlayStation"},{"id":"XBOX","label_fr":"Xbox"},{"id":"NINTENDO","label_fr":"Nintendo"},{"id":"ANDROID","label_fr":"Android"},{"id":"IOS","label_fr":"iOS"},{"id":"CLOUD","label_fr":"Cloud gaming"}
@@ -92,6 +92,13 @@
       "formats":[{"id":"DUOS","basis":"DIRECT"}],
       "event_types":[{"id":"GLOBAL_CHAMPIONSHIP","basis":"DIRECT"}],
       "themes":[{"id":"FNCS_GLOBAL","basis":"DIRECT"},{"id":"ESPORTS_LIVE","basis":"DIRECT"},{"id":"TICKETING","basis":"DIRECT"}]
+    },
+    "fortnite-c7s3-runners-battle-pass-end-20260820@openai": {
+      "modes":[{"id":"BATTLE_ROYALE","basis":"DIRECT"}],
+      "chapters":[{"id":"CHAPTER_7","basis":"DERIVED"}],
+      "seasons":[{"id":"C7S3","basis":"DIRECT"}],
+      "event_types":[{"id":"SEASON_END","basis":"DIRECT"}],
+      "themes":[{"id":"BATTLE_PASS","basis":"DIRECT"}]
     }
   }
 }
