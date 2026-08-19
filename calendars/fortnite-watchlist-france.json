@@ -1,0 +1,54 @@
+{
+  "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
+  "updated_at": "2026-08-19T05:00:00Z",
+  "scope": "Fortnite — France et Europe pertinente",
+  "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
+  "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
+  "candidates": [
+    {
+      "candidate_id": "fortnite-next-br-season-end-summer-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Nouvelle saison Battle Royale annoncée pour la fin de l'été 2026",
+      "source_ids": ["fortnite_news", "fortnite_competitive"],
+      "known": "Epic indique qu'une nouvelle saison Battle Royale arrivera à la fin de l'été 2026.",
+      "missing_for_calendar": ["EXACT_DATE", "EXACT_TIME_OR_DOWNTIME_WINDOW", "SEASON_NAME"],
+      "promotion_rule": "Passer READY dès publication d'une date exacte officielle ou d'une maintenance de lancement explicite."
+    },
+    {
+      "candidate_id": "fortnite-fncs-solos-october-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Tournoi solo FNCS indépendant — octobre 2026",
+      "source_ids": ["fortnite_competitive"],
+      "known": "Fortnite Competitive confirme un tournoi solo FNCS indépendant en octobre 2026.",
+      "missing_for_calendar": ["EXACT_DATE", "FORMAT_DETAILS", "REGIONAL_SCHEDULE"],
+      "promotion_rule": "Passer READY dès que le calendrier officiel EU publie au moins une date exploitable."
+    },
+    {
+      "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Reload Elite Championship — Esports World Cup Paris 2026",
+      "source_ids": ["fortnite_competitive", "ewc_official"],
+      "known": "Epic a annoncé que le Reload Elite Championship aura lieu en août 2026 à l'Esports World Cup à Paris.",
+      "missing_for_calendar": ["EXACT_DATE", "VENUE", "SESSION_TIMES", "TICKET_INFO"],
+      "promotion_rule": "Passer READY uniquement avec date et lieu/session officiels suffisamment précis."
+    },
+    {
+      "candidate_id": "fortnite-next-live-event",
+      "state": "WATCHING",
+      "topic": "Prochain événement live Battle Royale",
+      "source_ids": ["fortnite_news"],
+      "known": null,
+      "missing_for_calendar": ["OFFICIAL_ANNOUNCEMENT", "DATE", "TIME"],
+      "promotion_rule": "Ne jamais créer depuis rumeur/leak ; exiger annonce Fortnite officielle."
+    },
+    {
+      "candidate_id": "fortnite-festival-season-15-end-next-season",
+      "state": "WATCHING",
+      "topic": "Fin Saison 15 Fortnite Festival / prochaine icône",
+      "source_ids": ["fortnite_news"],
+      "known": "La Saison 15 de Festival avec Lil Tecca a été annoncée le 27 juillet 2026.",
+      "missing_for_calendar": ["OFFICIAL_END_DATE_OR_NEXT_SEASON_DATE"],
+      "promotion_rule": "Créer une fiche seulement si une date de changement de saison est publiée."
+    }
+  ]
+}
