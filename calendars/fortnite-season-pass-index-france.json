@@ -1,0 +1,56 @@
+{
+  "version": "FORTNITE_SEASON_PASS_INDEX_FR_V1",
+  "generated_at": "2026-08-19T11:03:00Z",
+  "derived_from": {
+    "ledger": "fortnite-season-pass-lifecycle-france.json",
+    "ledger_version": "FORTNITE_SEASON_PASS_INTELLIGENCE_FR_V1",
+    "engine": "fortnite-season-pass-engine-france.json",
+    "engine_version": "FORTNITE_SEASON_PASS_ENGINE_FR_V2"
+  },
+  "authority": "DERIVED_ONLY_REBUILDABLE",
+  "principles": {
+    "no_authority": "This index accelerates lookup and never overrides the lifecycle ledger or engine.",
+    "unknown_not_closed": "Missing window/action data is not indexed as CLOSED/NONE by inference.",
+    "stable_ids": "Index uses canonical track_id/watch_id/calendar_uid values only."
+  },
+  "by_track_type": {
+    "BR_SEASON": ["br-season-c7s3-runners"],
+    "BATTLE_PASS": ["battle-pass-c7s3-runners"],
+    "FESTIVAL_SEASON": ["festival-season-15-lil-tecca"]
+  },
+  "by_state": {
+    "ACTIVE": ["br-season-c7s3-runners", "festival-season-15-lil-tecca"],
+    "END_ANNOUNCED": ["battle-pass-c7s3-runners"]
+  },
+  "by_mode": {
+    "BATTLE_ROYALE": ["battle-pass-c7s3-runners", "br-season-c7s3-runners"],
+    "FORTNITE_FESTIVAL": ["festival-season-15-lil-tecca"]
+  },
+  "by_closing_date": {
+    "2026-08-20": ["battle-pass-c7s3-runners"]
+  },
+  "by_completeness": {
+    "END_KNOWN": ["battle-pass-c7s3-runners"],
+    "IDENTITY_ONLY": ["br-season-c7s3-runners", "festival-season-15-lil-tecca"]
+  },
+  "by_next_action": {},
+  "by_calendar_uid": {
+    "fortnite-c7s3-runners-battle-pass-end-20260820@openai": "battle-pass-c7s3-runners"
+  },
+  "watch_ids": {
+    "BR_SEASON": ["next-br-season"],
+    "BATTLE_PASS": ["next-battle-pass"],
+    "OG_PASS": ["next-og-pass"],
+    "FESTIVAL_SEASON": ["next-festival-season"],
+    "FESTIVAL_PASS": ["next-festival-pass"],
+    "LEGO_PASS": ["next-lego-pass"],
+    "MINI_PASS": ["active-mini-collab-passes"],
+    "RANKED_SEASON": ["next-ranked-season-reset"]
+  },
+  "summary": {
+    "track_count": 3,
+    "watch_count": 8,
+    "dated_closure_count": 1,
+    "calendar_uid_count": 1
+  }
+}
