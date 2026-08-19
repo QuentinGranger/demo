@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-08-19T15:57:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
@@ -11,18 +11,38 @@
     "write_noise": "Do not commit when the logical index is unchanged.",
     "sorted_sets": true
   },
-  "subject_heads": {},
-  "by_domain": {},
-  "by_change_type": {},
-  "open_changes_by_subject": {},
-  "consumed_notification_keys": [],
+  "subject_heads": {
+    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": {"revision":1,"change_id":"chg_ceb30c82d0bcb7360d8cf0a7"},
+    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": {"revision":1,"change_id":"chg_558e71ff655403f489e782fd"},
+    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": {"revision":1,"change_id":"chg_d7bb61401fb80414535e4338"},
+    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": {"revision":1,"change_id":"chg_4d847a615cf7fd9ee9306579"}
+  },
+  "by_domain": {
+    "COMPETITIVE": ["chg_d7bb61401fb80414535e4338"],
+    "PHYSICAL_ACCESS": ["chg_558e71ff655403f489e782fd"],
+    "PHYSICAL_EVENT": ["chg_ceb30c82d0bcb7360d8cf0a7"],
+    "TICKETING": ["chg_4d847a615cf7fd9ee9306579"]
+  },
+  "by_change_type": {
+    "ACCESS_CHANGED": ["chg_558e71ff655403f489e782fd"],
+    "AVAILABILITY_CHANGED": ["chg_4d847a615cf7fd9ee9306579"],
+    "LOCATION_CHANGED": ["chg_ceb30c82d0bcb7360d8cf0a7"],
+    "SOURCE_CORRECTION": ["chg_d7bb61401fb80414535e4338"]
+  },
+  "open_changes_by_subject": {
+    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": ["chg_ceb30c82d0bcb7360d8cf0a7"],
+    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": ["chg_558e71ff655403f489e782fd"],
+    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": ["chg_d7bb61401fb80414535e4338"],
+    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": ["chg_4d847a615cf7fd9ee9306579"]
+  },
+  "consumed_notification_keys": ["ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489"],
   "unknown_delivery_keys": [],
   "pending_reconciliation": [],
   "stats": {
-    "changes": 0,
-    "subjects": 0,
-    "notification_intents": 0,
-    "consumed_notification_keys": 0,
+    "changes": 4,
+    "subjects": 4,
+    "notification_intents": 1,
+    "consumed_notification_keys": 1,
     "unknown_delivery": 0
   }
 }
