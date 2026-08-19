@@ -1,0 +1,150 @@
+{
+  "version": "FORTNITE_LORE_TAXONOMY_FR_V1",
+  "updated_at": "2026-08-19T11:12:00Z",
+  "scope": "Fortnite lore knowledge graph overlay for France/Europe calendars and future filtering",
+  "base_registry": "fortnite-taxonomy-france.json",
+  "principles": {
+    "overlay_non_breaking": "This lore graph extends the general taxonomy without replacing existing IDs or calendar assignments.",
+    "canonical_ids": "Lore entity IDs are namespaced ASCII and immutable; FR/EN labels and aliases may evolve.",
+    "facts_need_scope": "Membership, NPC/Boss roles, locations and event participation require an explicit temporal/canon scope when that scope matters.",
+    "query_not_fact": "Reverse traversal may be allowed for search/filter views but never silently materializes a new canon fact in ICS.",
+    "cosmetic_guard": "A cosmetic, collaboration or Item Shop appearance never establishes main-story canon by itself.",
+    "legacy_bridge": "Legacy base taxonomy concepts remain valid; semantically richer lore nodes are connected by explicit bridges instead of reusing an old ID for a new meaning."
+  },
+  "entity_types": [
+    "CHARACTER",
+    "ORGANIZATION",
+    "FACTION",
+    "POI",
+    "ISLAND",
+    "LORE_OBJECT",
+    "HISTORICAL_EVENT",
+    "REALITY",
+    "TIMELINE",
+    "LORE_CONCEPT",
+    "CHAPTER"
+  ],
+  "canon_scopes": ["MAIN_STORY", "COLLAB_CANON", "GAMEPLAY_ONLY", "COSMETIC_ONLY", "META", "UNKNOWN"],
+  "role_types": ["NPC", "BOSS", "QUEST_GIVER", "VENDOR", "ALLY", "HOSTILE", "NEUTRAL"],
+  "entities": [
+    {"id":"CHAPTER_1","type":"CHAPTER","label_fr":"Chapitre 1","label_en":"Chapter 1","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_2","type":"CHAPTER","label_fr":"Chapitre 2","label_en":"Chapter 2","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_3","type":"CHAPTER","label_fr":"Chapitre 3","label_en":"Chapter 3","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_4","type":"CHAPTER","label_fr":"Chapitre 4","label_en":"Chapter 4","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_5","type":"CHAPTER","label_fr":"Chapitre 5","label_en":"Chapter 5","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_6","type":"CHAPTER","label_fr":"Chapitre 6","label_en":"Chapter 6","canon_scope":"MAIN_STORY","naming":"OFFICIAL"},
+    {"id":"CHAPTER_7","type":"CHAPTER","label_fr":"Chapitre 7","label_en":"Chapter 7","canon_scope":"MAIN_STORY","naming":"OFFICIAL","base_ref":"chapters:CHAPTER_7"},
+
+    {"id":"ISLAND_CHAPTER_1","type":"ISLAND","label_fr":"Île du Chapitre 1","label_en":"Chapter 1 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_2","type":"ISLAND","label_fr":"Île du Chapitre 2","label_en":"Chapter 2 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_3","type":"ISLAND","label_fr":"Île du Chapitre 3","label_en":"Chapter 3 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_4","type":"ISLAND","label_fr":"Île du Chapitre 4","label_en":"Chapter 4 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_5","type":"ISLAND","label_fr":"Île du Chapitre 5","label_en":"Chapter 5 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_6","type":"ISLAND","label_fr":"Île du Chapitre 6","label_en":"Chapter 6 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"ISLAND_CHAPTER_7","type":"ISLAND","label_fr":"Île du Chapitre 7","label_en":"Chapter 7 Island","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+
+    {"id":"CHARACTER_JONES","type":"CHARACTER","label_fr":"Jones","label_en":"Jones","canon_scope":"MAIN_STORY","base_ref":"characters:JONES"},
+    {"id":"CHARACTER_MIDAS","type":"CHARACTER","label_fr":"Midas","label_en":"Midas","canon_scope":"MAIN_STORY","base_ref":"characters:MIDAS"},
+    {"id":"CHARACTER_THE_FOUNDATION","type":"CHARACTER","label_fr":"La Fondation","label_en":"The Foundation","canon_scope":"MAIN_STORY","base_ref":"characters:THE_FOUNDATION"},
+    {"id":"CHARACTER_HOPE","type":"CHARACTER","label_fr":"Hope","label_en":"Hope","canon_scope":"MAIN_STORY","base_ref":"characters:HOPE"},
+    {"id":"CHARACTER_ICE_KING","type":"CHARACTER","label_fr":"Le Roi des glaces","label_en":"The Ice King","canon_scope":"MAIN_STORY","base_ref":"characters:ICE_KING"},
+    {"id":"CHARACTER_PEELY","type":"CHARACTER","label_fr":"Banane / Peely","label_en":"Peely","canon_scope":"MAIN_STORY","base_ref":"characters:PEELY"},
+
+    {"id":"ORG_THE_SEVEN","type":"ORGANIZATION","label_fr":"Les Sept","label_en":"The Seven","canon_scope":"MAIN_STORY","base_ref":"factions:THE_SEVEN"},
+    {"id":"ORG_IMAGINED_ORDER","type":"ORGANIZATION","label_fr":"Ordre imaginé","label_en":"Imagined Order","canon_scope":"MAIN_STORY","base_ref":"factions:IMAGINED_ORDER"},
+
+    {"id":"LORE_OBJECT_ZERO_POINT","type":"LORE_OBJECT","label_fr":"Point Zéro","label_en":"Zero Point","canon_scope":"MAIN_STORY","legacy_ref":"lore_arcs:ZERO_POINT"},
+    {"id":"LORE_OBJECT_THE_DEVICE","type":"LORE_OBJECT","label_fr":"Le Dispositif","label_en":"The Device","canon_scope":"MAIN_STORY"},
+
+    {"id":"POI_THE_AGENCY","type":"POI","label_fr":"L'Agence","label_en":"The Agency","canon_scope":"MAIN_STORY"},
+    {"id":"POI_THE_AUTHORITY","type":"POI","label_fr":"L'Autorité","label_en":"The Authority","canon_scope":"MAIN_STORY"},
+    {"id":"POI_THE_COLLIDER","type":"POI","label_fr":"Le Collisionneur","label_en":"The Collider","canon_scope":"MAIN_STORY"},
+
+    {"id":"EVENT_THE_END_CH1","type":"HISTORICAL_EVENT","label_fr":"The End — Chapitre 1","label_en":"The End — Chapter 1","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_THE_DEVICE","type":"HISTORICAL_EVENT","label_fr":"The Device","label_en":"The Device","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_ZERO_CRISIS_FINALE","type":"HISTORICAL_EVENT","label_fr":"Zero Crisis Finale","label_en":"Zero Crisis Finale","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_COLLISION","type":"HISTORICAL_EVENT","label_fr":"Collision","label_en":"Collision","canon_scope":"MAIN_STORY"},
+    {"id":"EVENT_FRACTURE","type":"HISTORICAL_EVENT","label_fr":"Fracture","label_en":"Fracture","canon_scope":"MAIN_STORY"},
+
+    {"id":"REALITY_ZERO","type":"REALITY","label_fr":"Réalité Zéro","label_en":"Reality Zero","canon_scope":"MAIN_STORY"},
+    {"id":"TIMELINE_MAIN_STORY","type":"TIMELINE","label_fr":"Continuité principale Fortnite","label_en":"Fortnite Main Story Continuity","canon_scope":"MAIN_STORY","naming":"INTERNAL_DESCRIPTIVE"},
+    {"id":"CONCEPT_THE_LOOP","type":"LORE_CONCEPT","label_fr":"La Boucle","label_en":"The Loop","canon_scope":"MAIN_STORY"}
+  ],
+  "relation_types": [
+    "MEMBER_OF",
+    "OPPOSES",
+    "PART_OF_ISLAND",
+    "BELONGS_TO_CHAPTER",
+    "OCCURS_IN_CHAPTER",
+    "OCCURS_IN_REALITY",
+    "OCCURS_IN_TIMELINE",
+    "INVOLVES",
+    "CENTERS_ON",
+    "LOCATED_AT",
+    "PRECEDES",
+    "SUCCESSOR_OF",
+    "SAME_ENTITY_AS_LEGACY"
+  ],
+  "relations": [
+    {"source":"ISLAND_CHAPTER_1","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_1","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_2","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_2","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_3","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_3","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_4","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_4","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_5","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_5","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_6","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_6","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ISLAND_CHAPTER_7","type":"BELONGS_TO_CHAPTER","target":"CHAPTER_7","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+
+    {"source":"POI_THE_AGENCY","type":"PART_OF_ISLAND","target":"ISLAND_CHAPTER_2","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"POI_THE_AUTHORITY","type":"PART_OF_ISLAND","target":"ISLAND_CHAPTER_2","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"POI_THE_COLLIDER","type":"PART_OF_ISLAND","target":"ISLAND_CHAPTER_3","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+
+    {"source":"CHARACTER_THE_FOUNDATION","type":"MEMBER_OF","target":"ORG_THE_SEVEN","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"ORG_THE_SEVEN","type":"OPPOSES","target":"ORG_IMAGINED_ORDER","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+
+    {"source":"EVENT_THE_END_CH1","type":"OCCURS_IN_CHAPTER","target":"CHAPTER_1","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_THE_DEVICE","type":"OCCURS_IN_CHAPTER","target":"CHAPTER_2","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"OCCURS_IN_CHAPTER","target":"CHAPTER_2","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_COLLISION","type":"OCCURS_IN_CHAPTER","target":"CHAPTER_3","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_FRACTURE","type":"OCCURS_IN_CHAPTER","target":"CHAPTER_3","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+
+    {"source":"EVENT_THE_DEVICE","type":"INVOLVES","target":"CHARACTER_MIDAS","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_THE_DEVICE","type":"CENTERS_ON","target":"LORE_OBJECT_THE_DEVICE","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"INVOLVES","target":"CHARACTER_JONES","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"INVOLVES","target":"CHARACTER_THE_FOUNDATION","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"CENTERS_ON","target":"LORE_OBJECT_ZERO_POINT","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_COLLISION","type":"INVOLVES","target":"ORG_THE_SEVEN","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+    {"source":"EVENT_COLLISION","type":"INVOLVES","target":"ORG_IMAGINED_ORDER","confidence":"VERIFIED_CANON","source_id":"fortnite_news"},
+
+    {"source":"EVENT_THE_END_CH1","type":"PRECEDES","target":"EVENT_THE_DEVICE","confidence":"VERIFIED_CHRONOLOGY","source_id":"fortnite_news"},
+    {"source":"EVENT_THE_DEVICE","type":"PRECEDES","target":"EVENT_ZERO_CRISIS_FINALE","confidence":"VERIFIED_CHRONOLOGY","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"PRECEDES","target":"EVENT_COLLISION","confidence":"VERIFIED_CHRONOLOGY","source_id":"fortnite_news"},
+    {"source":"EVENT_COLLISION","type":"PRECEDES","target":"EVENT_FRACTURE","confidence":"VERIFIED_CHRONOLOGY","source_id":"fortnite_news"},
+
+    {"source":"EVENT_THE_END_CH1","type":"OCCURS_IN_TIMELINE","target":"TIMELINE_MAIN_STORY","confidence":"INTERNAL_CANON_GROUPING","source_id":"fortnite_news"},
+    {"source":"EVENT_THE_DEVICE","type":"OCCURS_IN_TIMELINE","target":"TIMELINE_MAIN_STORY","confidence":"INTERNAL_CANON_GROUPING","source_id":"fortnite_news"},
+    {"source":"EVENT_ZERO_CRISIS_FINALE","type":"OCCURS_IN_TIMELINE","target":"TIMELINE_MAIN_STORY","confidence":"INTERNAL_CANON_GROUPING","source_id":"fortnite_news"},
+    {"source":"EVENT_COLLISION","type":"OCCURS_IN_TIMELINE","target":"TIMELINE_MAIN_STORY","confidence":"INTERNAL_CANON_GROUPING","source_id":"fortnite_news"},
+    {"source":"EVENT_FRACTURE","type":"OCCURS_IN_TIMELINE","target":"TIMELINE_MAIN_STORY","confidence":"INTERNAL_CANON_GROUPING","source_id":"fortnite_news"},
+    {"source":"LORE_OBJECT_ZERO_POINT","type":"OCCURS_IN_REALITY","target":"REALITY_ZERO","confidence":"VERIFIED_CANON","source_id":"fortnite_news"}
+  ],
+  "role_assignments": [],
+  "role_assignment_schema": {
+    "required": ["assignment_id", "entity_id", "role_type", "scope", "source_id", "confidence"],
+    "scope_fields": ["chapter_id", "season_id", "historical_event_id", "poi_id", "valid_from", "valid_to"],
+    "rule": "NPC/BOSS is a temporal role, not a permanent character type. Never materialize a role without official scope/evidence."
+  },
+  "legacy_bridges": [
+    {"legacy_ref":"characters:JONES","canonical_entity":"CHARACTER_JONES"},
+    {"legacy_ref":"characters:MIDAS","canonical_entity":"CHARACTER_MIDAS"},
+    {"legacy_ref":"characters:THE_FOUNDATION","canonical_entity":"CHARACTER_THE_FOUNDATION"},
+    {"legacy_ref":"characters:HOPE","canonical_entity":"CHARACTER_HOPE"},
+    {"legacy_ref":"characters:ICE_KING","canonical_entity":"CHARACTER_ICE_KING"},
+    {"legacy_ref":"characters:PEELY","canonical_entity":"CHARACTER_PEELY"},
+    {"legacy_ref":"factions:THE_SEVEN","canonical_entity":"ORG_THE_SEVEN"},
+    {"legacy_ref":"factions:IMAGINED_ORDER","canonical_entity":"ORG_IMAGINED_ORDER"},
+    {"legacy_ref":"lore_arcs:ZERO_POINT","canonical_entity":"LORE_OBJECT_ZERO_POINT","note":"Legacy semantic bridge; Zero Point is resolved as a lore object/concept in the lore graph."},
+    {"legacy_ref":"chapters:CHAPTER_7","canonical_entity":"CHAPTER_7"}
+  ],
+  "calendar_assignments": {},
+  "history_event_types": ["ENTITY_ADDED", "ENTITY_DEPRECATED", "ALIAS_CHANGED", "RELATION_ADDED", "RELATION_REMOVED", "ROLE_ASSIGNED", "ROLE_ENDED", "CANON_SCOPE_CHANGED", "SOURCE_CORRECTION"]
+}
