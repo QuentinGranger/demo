@@ -2,6 +2,7 @@ name: Validate permanent calendar health
 
 on:
   push:
+    branches: [master]
     paths:
       - 'calendars/calendar-health-policy.json'
       - 'calendars/calendar-health-state.json'
@@ -22,16 +23,54 @@ on:
       - 'scripts/validate_calendar_health.py'
       - '.github/workflows/validate-calendar-health.yml'
   schedule:
-    - cron: '17 4 * * *'
+    - cron: '17 4,16 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
   health:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate subscribed paths, ICS integrity and watchdog heartbeat
+      - name: Validate local calendar contracts
+        if: github.event_name == 'pull_request'
         run: python scripts/validate_calendar_health.py
+      - name: Validate permanent health and live raw subscription URLs
+        if: github.event_name != 'pull_request'
+        run: |
+          sleep 5
+          python scripts/validate_calendar_health.py --online
+
+  incident-record:
+    needs: health
+    if: always() && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open one persistent incident on failure, close it on recovery
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RESULT: ${{ needs.health.result }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          ISSUE_NUMBER=$(gh issue list --repo "$REPO" --state open --search '"[Calendar Health] Incident" in:title' --json number,title --jq '.[] | select(.title == "[Calendar Health] Incident") | .number' | head -n 1)
+          if [ "$RESULT" != "success" ]; then
+            if [ -z "$ISSUE_NUMBER" ]; then
+              gh issue create --repo "$REPO" \
+                --title '[Calendar Health] Incident' \
+                --body "The permanent Fortnite / Harry Potter / Pokémon calendar health validator failed. This issue is intentionally reused until recovery to avoid duplicate incident records.\n\nWorkflow run: $RUN_URL"
+            fi
+          else
+            if [ -n "$ISSUE_NUMBER" ]; then
+              gh issue close "$ISSUE_NUMBER" --repo "$REPO" \
+                --comment "✅ Calendar health validation recovered successfully. Closing the persistent incident.\n\nRecovery run: $RUN_URL"
+            fi
+          fi
