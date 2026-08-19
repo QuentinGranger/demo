@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//OpenAI//Fortnite Calendars//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:⭐ Fortnite — Tout (France & Europe)
+X-WR-TIMEZONE:Europe/Paris
+X-FORTNITE-SOURCE-REGISTRY:fortnite-sources-france.json
+X-FORTNITE-WATCHLIST:fortnite-watchlist-france.json
+X-FORTNITE-TAXONOMY-REGISTRY:fortnite-taxonomy-france.json
+X-FORTNITE-TAXONOMY-ENGINE:fortnite-taxonomy-engine-france.json
+X-FORTNITE-TAXONOMY-INDEX:fortnite-taxonomy-index-france.json
+X-FORTNITE-TICKETING-LEDGER:fortnite-ticketing-france.json
+X-FORTNITE-TICKETING-PROVIDERS:fortnite-ticketing-providers-france.json
+X-FORTNITE-DEADLINE-LEDGER:fortnite-end-reminders-france.json
+X-FORTNITE-CHANGE-POLICY:UID_STABLE_AUDIT_V1
+X-FORTNITE-FRESHNESS-POLICY:NEW5D_UPDATE3D_V1
+BEGIN:VEVENT
+UID:fortnite-fncs-global-antwerp-20260926@openai
+DTSTAMP:20260819T050000Z
+LAST-MODIFIED:20260819T050000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:ATTEND
+X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
+X-FORTNITE-SERIES:FNCS
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-FORMAT:DUOS
+X-FORTNITE-REGION:GLOBAL
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-TICKET-PROVIDER-ID:lotto_arena
+X-FORTNITE-TICKET-STATUS:ON_SALE
+X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
+X-FORTNITE-FIRST-ADDED-AT:20260819T050000Z
+X-FORTNITE-NEW-UNTIL:20260824T050000Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260928
+SUMMARY:⭐ ✅ 🆕 🏆 Fortnite Global Championship 2026 — Anvers
+LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
+DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parties sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billets : vente officielle ouverte ; uniquement en formule 2 jours selon la Lotto Arena.\n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nHoraires détaillés : ne pas extrapoler tant que le programme Fortnite officiel n'est pas publié.\nRappels : J-30, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
+URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
+CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championship,Europe
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billets, transport et hôtel pour Anvers
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaires, billet et trajet
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et trajet vers Anvers
+END:VALARM
+END:VEVENT
+END:VCALENDAR
