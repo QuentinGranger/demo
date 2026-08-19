@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-19T05:15:29Z",
+  "updated_at": "2026-08-19T05:22:27Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -29,9 +29,15 @@
       "state": "SIGNAL_FOUND",
       "topic": "Reload Elite Championship — Esports World Cup Paris 2026",
       "source_ids": ["fortnite_competitive", "ewc_official"],
-      "known": "Epic a annoncé que le Reload Elite Championship aura lieu en août 2026 à l'Esports World Cup à Paris.",
-      "missing_for_calendar": ["EXACT_DATE", "VENUE", "SESSION_TIMES", "TICKET_INFO"],
-      "promotion_rule": "Passer READY uniquement avec date et lieu/session officiels suffisamment précis."
+      "known": "Epic confirme que le Reload Elite Championship aura lieu en août 2026 à l'Esports World Cup à Paris. La page officielle EWC Paris 2026 permet désormais de s'inscrire pour être averti lorsque les billets seront mis en vente, mais ne publie toujours pas la date précise du tournoi Fortnite ni son lieu/session.",
+      "ticket_preregistration": {
+        "status": "PREREGISTRATION",
+        "url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+        "source_id": "ewc_official",
+        "verified_at": "2026-08-19T05:22:27Z"
+      },
+      "missing_for_calendar": ["EXACT_DATE", "VENUE", "SESSION_TIMES", "FORTNITE_SPECIFIC_TICKET_INFO"],
+      "promotion_rule": "Passer READY uniquement avec date et lieu/session officiels suffisamment précis. La préinscription générale EWC Paris seule ne crée pas de VEVENT Fortnite daté."
     },
     {
       "candidate_id": "fortnite-next-live-event",
