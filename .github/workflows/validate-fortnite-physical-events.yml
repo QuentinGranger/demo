@@ -1,0 +1,35 @@
+name: Validate Fortnite physical events
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-physical-events-france.json'
+      - 'calendars/fortnite-physical-events-engine-france.json'
+      - 'calendars/fortnite-venues-france.json'
+      - 'calendars/fortnite-ticketing-france.json'
+      - 'calendars/fortnite-ticketing-providers-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'scripts/validate_fortnite_physical_events.py'
+      - '.github/workflows/validate-fortnite-physical-events.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-physical-events-france.json'
+      - 'calendars/fortnite-physical-events-engine-france.json'
+      - 'calendars/fortnite-venues-france.json'
+      - 'calendars/fortnite-ticketing-france.json'
+      - 'calendars/fortnite-ticketing-providers-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'scripts/validate_fortnite_physical_events.py'
+      - '.github/workflows/validate-fortnite-physical-events.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate physical events, venues and ticketing
+        run: python scripts/validate_fortnite_physical_events.py
