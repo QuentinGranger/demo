@@ -1,0 +1,222 @@
+{
+  "version": "TICKETING_LIFECYCLE_FR_V1",
+  "updated_at": "2026-08-19T04:33:00Z",
+  "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
+  "linked_calendars": [
+    "calendars/harry-potter-paris.ics",
+    "calendars/harry-potter-events-france-paris.ics"
+  ],
+  "policy": {
+    "canonical_key": "event_uid + ticket_provider/source_id + session_key quand une séance doit être distinguée",
+    "statuses": [
+      "NOT_ANNOUNCED",
+      "ANNOUNCED",
+      "ON_SALE",
+      "AVAILABLE",
+      "LOW_AVAILABILITY",
+      "NEARLY_SOLD_OUT",
+      "SOLD_OUT",
+      "WAITLIST",
+      "CLOSED",
+      "ENDED",
+      "CANCELLED"
+    ],
+    "material_transitions": [
+      "SALE_OPENED",
+      "LOW_AVAILABILITY",
+      "NEARLY_SOLD_OUT",
+      "SOLD_OUT",
+      "BACK_ON_SALE",
+      "NEW_SESSION_ADDED",
+      "RUN_EXTENDED",
+      "LAST_CHANCE",
+      "SALE_CLOSED",
+      "EVENT_ENDED",
+      "CANCELLED"
+    ],
+    "evidence": {
+      "A": "page billetterie/salle/organisateur directement responsable indiquant explicitement l'état",
+      "B": "billetterie partenaire officielle ou salle partenaire directement liée à l'événement",
+      "C": "agrégateur/revendeur de billets identifiable, à confirmer si possible",
+      "D": "signal de découverte uniquement ; aucune transition forte seule"
+    },
+    "no_inference": "Ne déduis jamais presque complet/complet à partir d'un plan de salle partiel, d'un message marketing vague ou d'une absence temporaire de sièges si la source ne l'établit pas suffisamment.",
+    "session_rule": "Pour un run multi-séances, conserve un état global et des états sessionnels seulement lorsqu'une séance a une disponibilité significativement différente ou devient complète/ajoutée.",
+    "extension_rule": "Une prolongation modifie le même VEVENT principal lorsque c'est la même production + ville + lieu ; étendre DTEND, SEQUENCE+1, conserver original/history et créer transition RUN_EXTENDED. Une nouvelle ville reste un VEVENT distinct.",
+    "new_session_rule": "Une nouvelle séance dans le même run enrichit le même UID et SESSION-* ; pas de nouveau VEVENT sauf si l'action de billetterie datée mérite une fiche TICKET_ONSALE séparée.",
+    "closing_rule": "CLOSED signifie vente fermée avant/au début de l'événement ; ENDED signifie événement terminé. SOLD_OUT n'est pas synonyme de CLOSED.",
+    "reopen_rule": "SOLD_OUT/CLOSED -> AVAILABLE/ON_SALE devient BACK_ON_SALE uniquement avec preuve directe ; conserve l'historique.",
+    "last_chance_rule": "LAST_CHANCE seulement si source directe annonce dernières places/dernière séance/fin de vente proche, ou si la date de fin est connue et qu'une règle de rappel de fin s'applique ; ne jamais inventer une rareté.",
+    "write_noise": "Aucun commit pour simple recheck identique. Écrire seulement sur transition matérielle, nouvelle séance, prolongation, changement de lien/prix structurel ou correction utile.",
+    "notification": "Notifier une seule fois par transition logique importante ; SALE_OPENED, NEARLY_SOLD_OUT, SOLD_OUT, BACK_ON_SALE, NEW_SESSION_ADDED, RUN_EXTENDED, LAST_CHANCE, CANCELLED. LOW_AVAILABILITY n'est notifiée que pour un événement prioritaire/Paris ou très demandé."
+  },
+  "ics_mapping": {
+    "ledger_status_property": "X-HARRYPOTTER-TICKET-STATUS",
+    "checked_property": "X-HARRYPOTTER-TICKET-CHECKED-AT",
+    "transition_property": "X-HARRYPOTTER-TICKET-LAST-TRANSITION",
+    "transition_at_property": "X-HARRYPOTTER-TICKET-LAST-TRANSITION-AT",
+    "provider_property": "X-HARRYPOTTER-TICKET-PROVIDER",
+    "session_property": "X-HARRYPOTTER-TICKET-SESSION",
+    "history_property": "X-HARRYPOTTER-TICKET-HISTORY",
+    "policy_header": "X-HARRYPOTTER-TICKETING-POLICY:TICKETING_LIFECYCLE_FR_V1",
+    "ledger_header": "X-HARRYPOTTER-TICKETING-LEDGER:harry-potter-ticketing-france.json"
+  },
+  "tracked": [
+    {
+      "event_uid": "hp-grand-rex-philosophers-stone-25th-20260830@openai",
+      "title": "Projection 25 ans — Harry Potter à l’École des Sorciers — Grand Rex",
+      "city": "Paris",
+      "provider": "Le Grand Rex",
+      "source_id": "grand-rex",
+      "ticket_url": "https://www.legrandrex.com/cinema",
+      "status": "AVAILABLE",
+      "status_origin": "ICS_VERIFIED",
+      "evidence_grade": "A",
+      "last_verified_at": "2026-08-19T03:53:20Z",
+      "price_min_eur": 10.0,
+      "price_max_eur": 10.0,
+      "session_states": [
+        {
+          "session_key": "2026-08-30T17:00-Europe-Paris-standard",
+          "status": "AVAILABLE",
+          "notes": "Billet standard indiqué disponible dans la fiche calendrier importée."
+        },
+        {
+          "session_key": "2026-08-30T17:00-Europe-Paris-vip",
+          "status": "SOLD_OUT",
+          "notes": "Format VIP indiqué complet dans la fiche calendrier importée."
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-potted-potter-paris-20261017@openai",
+      "title": "Potted Potter — Paris",
+      "city": "Paris",
+      "provider": "Théâtre du Gymnase Marie Bell",
+      "source_id": "theatre-gymnase",
+      "ticket_url": "https://theatredugymnase.com/event-pro/potted-potter",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "run_start": "2026-10-17",
+      "run_end": "2027-01-17",
+      "session_states": [],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-philosophers-stone-paris-20261104@openai",
+      "title": "Ciné-concert — Harry Potter à l'École des Sorciers — Grand Rex",
+      "city": "Paris",
+      "provider": "Le Grand Rex",
+      "source_id": "grand-rex",
+      "ticket_url": "https://www.legrandrex.com/evenement/1755",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "price_min_eur": 25.0,
+      "price_max_eur": 99.0,
+      "run_start": "2026-11-04",
+      "run_end": "2026-11-08",
+      "session_states": [
+        {"session_key": "2026-11-04T20:30-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-05T20:30-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-06T20:30-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-07T15:00-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-07T20:30-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-08T15:00-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2026-11-08T20:30-Europe-Paris", "status": "UNKNOWN"}
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-toulouse-20261228@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Toulouse",
+      "city": "Toulouse",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [{"session_key": "2026-12-28T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-bordeaux-20261229@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Bordeaux/Floirac",
+      "city": "Floirac / Bordeaux",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [{"session_key": "2026-12-29T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-nantes-20261230@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Nantes",
+      "city": "Saint-Herblain / Nantes",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [{"session_key": "2026-12-30T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-lille-20270102@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Lille",
+      "city": "Lille",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [
+        {"session_key": "2027-01-02T20:00-Europe-Paris", "status": "UNKNOWN"},
+        {"session_key": "2027-01-03T16:00-Europe-Paris", "status": "UNKNOWN"}
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-lyon-20270109@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Lyon",
+      "city": "Lyon",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [{"session_key": "2027-01-09T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-dijon-20270110@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Dijon",
+      "city": "Dijon",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "last_verified_at": null,
+      "session_states": [{"session_key": "2027-01-10T17:00-Europe-Paris", "status": "UNKNOWN"}],
+      "history": []
+    }
+  ]
+}
