@@ -1,107 +1,20 @@
 {
   "version": "FORTNITE_PHYSICAL_EVENT_INDEX_EU_V1",
-  "updated_at": "2026-08-19T15:40:00Z",
-  "derived_from": [
-    "fortnite-physical-events-france.json",
-    "fortnite-venues-france.json",
-    "fortnite-physical-access-france.json",
-    "fortnite-ticketing-france.json",
-    "fortnite-physical-events-engine-france.json"
-  ],
+  "updated_at": "2026-08-19T18:12:23Z",
+  "derived_from": ["fortnite-physical-events-france.json","fortnite-venues-france.json","fortnite-physical-access-france.json","fortnite-ticketing-france.json","fortnite-physical-events-engine-france.json"],
   "disposable": true,
-  "rules": {
-    "source_of_truth": "Physical event ledger + venue registry + access ledger + ticketing ledger + physical engine.",
-    "rebuild_on": [
-      "PHYSICAL_EVENT_CHANGE",
-      "VENUE_CHANGE",
-      "PUBLIC_SESSION_CHANGE",
-      "ACCESS_CHANGE",
-      "TICKETING_CHANGE",
-      "VISIBILITY_CHANGE",
-      "PRIMARY_ACTION_CHANGE",
-      "TRAVEL_SCOPE_CHANGE"
-    ],
-    "no_write_if_identical": true,
-    "unknown_fields_not_indexed_as_facts": true,
-    "index_never_mutates_canonical_data": true
-  },
-  "by_type": {
-    "ESPORTS_LAN": [
-      "fortnite-physical-ewc-paris-2026",
-      "fortnite-physical-fncs-global-antwerp-2026"
-    ],
-    "VIEWING_PARTY": [],
-    "CONVENTION": [],
-    "EPIC_FORTNITE_STAND": [],
-    "PARTNER_STAND": [],
-    "BRAND_ACTIVATION": [],
-    "OFFICIAL_COMMUNITY_EVENT": [],
-    "POPUP": [],
-    "MEET_AND_GREET": [],
-    "OTHER_OFFICIAL_PHYSICAL": []
-  },
-  "by_country": {
-    "BE": ["fortnite-physical-fncs-global-antwerp-2026"],
-    "FR": ["fortnite-physical-ewc-paris-2026"]
-  },
-  "by_city": {
-    "Antwerpen": ["fortnite-physical-fncs-global-antwerp-2026"],
-    "Paris": ["fortnite-physical-ewc-paris-2026"]
-  },
-  "by_visibility": {
-    "FEATURED": [
-      "fortnite-physical-ewc-paris-2026",
-      "fortnite-physical-fncs-global-antwerp-2026"
-    ],
-    "CALENDAR": [],
-    "LEDGER_ONLY": []
-  },
-  "by_operational_completeness": {
-    "IDENTITY_ONLY": [],
-    "DATE_CITY_KNOWN": ["fortnite-physical-ewc-paris-2026"],
-    "VENUE_KNOWN": [],
-    "ACCESS_PATH_KNOWN": ["fortnite-physical-fncs-global-antwerp-2026"],
-    "PUBLIC_SESSION_KNOWN": [],
-    "PUBLIC_INFO_MATURE": []
-  },
-  "by_primary_action": {
-    "BUY_TICKET": [],
-    "JOIN_WAITLIST": ["fortnite-physical-fncs-global-antwerp-2026"],
-    "REGISTER_INTEREST": ["fortnite-physical-ewc-paris-2026"],
-    "REGISTER_ATTENDANCE": [],
-    "CHECK_IN": [],
-    "ATTEND": [],
-    "WATCH": [],
-    "VISIT_STAND": [],
-    "MEET": [],
-    "FOLLOW": []
-  },
-  "by_travel_scope": {
-    "PARIS_IDF": ["fortnite-physical-ewc-paris-2026"],
-    "FRANCE_DOMESTIC": [],
-    "CROSS_BORDER_EU": ["fortnite-physical-fncs-global-antwerp-2026"],
-    "EUROPE_OTHER": [],
-    "UNKNOWN": []
-  },
-  "by_access_state": {
-    "INTEREST_PREREGISTRATION": ["fortnite-physical-ewc-paris-2026"],
-    "WAITLIST_ONLY": ["fortnite-physical-fncs-global-antwerp-2026"]
-  },
-  "by_venue": {
-    "ewc_paris_2026_tba": ["fortnite-physical-ewc-paris-2026"],
-    "lotto_arena_antwerp": ["fortnite-physical-fncs-global-antwerp-2026"]
-  },
-  "by_date": {
-    "2026-08-19": ["fortnite-physical-ewc-paris-2026"],
-    "2026-09-26": ["fortnite-physical-fncs-global-antwerp-2026"]
-  },
-  "public_sessions_by_date": {
-    "2026-09-26": ["fortnite-physical-fncs-global-antwerp-2026:fncs-antwerp-2026-day1-venue"],
-    "2026-09-27": ["fortnite-physical-fncs-global-antwerp-2026:fncs-antwerp-2026-day2-venue"]
-  },
+  "rules": {"source_of_truth":"Physical event ledger + venue registry + access ledger + ticketing ledger + physical engine.","rebuild_on":["PHYSICAL_EVENT_CHANGE","VENUE_CHANGE","PUBLIC_SESSION_CHANGE","ACCESS_CHANGE","TICKETING_CHANGE","VISIBILITY_CHANGE","PRIMARY_ACTION_CHANGE","TRAVEL_SCOPE_CHANGE"],"no_write_if_identical":true,"unknown_fields_not_indexed_as_facts":true,"index_never_mutates_canonical_data":true},
+  "by_type": {"ESPORTS_LAN":["fortnite-physical-ewc-paris-2026","fortnite-physical-fncs-global-antwerp-2026"],"VIEWING_PARTY":[],"CONVENTION":[],"EPIC_FORTNITE_STAND":[],"PARTNER_STAND":[],"BRAND_ACTIVATION":[],"OFFICIAL_COMMUNITY_EVENT":[],"POPUP":[],"MEET_AND_GREET":[],"OTHER_OFFICIAL_PHYSICAL":[]},
+  "by_country": {"BE":["fortnite-physical-fncs-global-antwerp-2026"],"SA":["fortnite-physical-ewc-paris-2026"]},
+  "by_city": {"Antwerpen":["fortnite-physical-fncs-global-antwerp-2026"],"Riyadh":["fortnite-physical-ewc-paris-2026"]},
+  "by_visibility": {"FEATURED":["fortnite-physical-ewc-paris-2026","fortnite-physical-fncs-global-antwerp-2026"],"CALENDAR":[],"LEDGER_ONLY":[]},
+  "by_operational_completeness": {"IDENTITY_ONLY":[],"DATE_CITY_KNOWN":[],"VENUE_KNOWN":[],"ACCESS_PATH_KNOWN":["fortnite-physical-ewc-paris-2026","fortnite-physical-fncs-global-antwerp-2026"],"PUBLIC_SESSION_KNOWN":[],"PUBLIC_INFO_MATURE":[]},
+  "by_primary_action": {"BUY_TICKET":["fortnite-physical-ewc-paris-2026"],"JOIN_WAITLIST":["fortnite-physical-fncs-global-antwerp-2026"],"REGISTER_INTEREST":[],"REGISTER_ATTENDANCE":[],"CHECK_IN":[],"ATTEND":[],"WATCH":[],"VISIT_STAND":[],"MEET":[],"FOLLOW":[]},
+  "by_travel_scope": {"PARIS_IDF":[],"FRANCE_DOMESTIC":[],"CROSS_BORDER_EU":["fortnite-physical-fncs-global-antwerp-2026"],"EUROPE_OTHER":[],"UNKNOWN":["fortnite-physical-ewc-paris-2026"]},
+  "by_access_state": {"TICKET_REQUIRED":["fortnite-physical-ewc-paris-2026"],"WAITLIST_ONLY":["fortnite-physical-fncs-global-antwerp-2026"]},
+  "by_venue": {"ewc_boulevard_city_riyadh":["fortnite-physical-ewc-paris-2026"],"lotto_arena_antwerp":["fortnite-physical-fncs-global-antwerp-2026"]},
+  "by_date": {"2026-08-19":["fortnite-physical-ewc-paris-2026"],"2026-09-26":["fortnite-physical-fncs-global-antwerp-2026"]},
+  "public_sessions_by_date": {"2026-09-26":["fortnite-physical-fncs-global-antwerp-2026:fncs-antwerp-2026-day1-venue"],"2026-09-27":["fortnite-physical-fncs-global-antwerp-2026:fncs-antwerp-2026-day2-venue"]},
   "planning_conflicts": [],
-  "calendar_uids": {
-    "fortnite-physical-ewc-paris-2026": "fortnite-reload-elite-ewc-paris-20260819@openai",
-    "fortnite-physical-fncs-global-antwerp-2026": "fortnite-fncs-global-antwerp-20260926@openai"
-  }
+  "calendar_uids": {"fortnite-physical-ewc-paris-2026":"fortnite-reload-elite-ewc-paris-20260819@openai","fortnite-physical-fncs-global-antwerp-2026":"fortnite-fncs-global-antwerp-20260926@openai"}
 }
