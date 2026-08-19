@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TAXONOMY_FR_V2",
-  "updated_at": "2026-08-19T06:38:00Z",
+  "updated_at": "2026-08-19T07:12:31Z",
   "scope": "Fortnite — taxonomie sémantique France/Europe",
   "principles": {
     "stable_ids": "IDs ASCII stables ; labels FR/EN peuvent évoluer.",
@@ -99,6 +99,14 @@
       "seasons":[{"id":"C7S3","basis":"DIRECT"}],
       "event_types":[{"id":"SEASON_END","basis":"DIRECT"}],
       "themes":[{"id":"BATTLE_PASS","basis":"DIRECT"}]
+    },
+    "fortnite-reload-elite-ewc-paris-20260819@openai": {
+      "modes":[{"id":"BATTLE_ROYALE","basis":"DIRECT"},{"id":"RELOAD","basis":"DIRECT"}],
+      "competitive_series":[{"id":"RELOAD_ELITE_SERIES","basis":"DIRECT"},{"id":"EWC","basis":"DIRECT"}],
+      "regions":[{"id":"GLOBAL","basis":"DIRECT"}],
+      "formats":[{"id":"DUOS","basis":"DIRECT"}],
+      "event_types":[{"id":"GLOBAL_CHAMPIONSHIP","basis":"DIRECT"}],
+      "themes":[{"id":"ESPORTS_LIVE","basis":"DIRECT"},{"id":"TICKETING","basis":"DIRECT"}]
     }
   }
 }
