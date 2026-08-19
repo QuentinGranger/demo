@@ -1,146 +1,120 @@
 {
-  "version": "FORTNITE_CHANGE_ENGINE_FR_V1",
-  "updated_at": "2026-08-19T15:49:00Z",
+  "version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+  "updated_at": "2026-08-19T15:57:00Z",
   "ledger": "fortnite-change-ledger.json",
-  "scope": "Semantic diff, notification gating, deduplication, grouping and write-idempotency rules across all Fortnite monitoring domains",
+  "outbox": "fortnite-notification-outbox-france.json",
+  "derived_index": "fortnite-change-index-france.json",
+  "scope": "Causal semantic diff, cross-domain effect collapse, notification idempotency, CAS reservation and repository-write reconciliation for all Fortnite monitoring domains",
   "principles": {
-    "canonical_before_notification": "A canonical domain ledger must reflect the new fact before the corresponding change record is reserved for notification, except when the alert itself is the primary record of an external incident and the service ledger transaction is part of the same run.",
-    "semantic_not_file_diff": "Git file SHA changes are evidence that something may have changed, never sufficient by themselves. Compute domain-specific semantic diffs.",
-    "stable_identity": "Deduplication keys use stable logical IDs, not titles, localized labels, source URLs with tracking parameters or detection timestamps.",
-    "at_most_once": "Notification reservation is persisted before emission. Any ambiguous post-reservation recovery suppresses automatic resend.",
-    "baseline_safe": "Facts present at ledger bootstrap are known history and cannot create a notification unless a new material transition occurs after baseline.",
-    "no_notification_from_derived_noise": "Pure derived/index/score/readiness/freshness/header changes remain silent unless they alter an actionable canonical decision such as projection level, access action or actual deadline."
-  },
-  "domain_subject_resolution": {
-    "SERVICE": ["service_event_id", "component_id when scoped"],
-    "SEASON_PASS": ["track_id", "milestone_id or window_id when scoped"],
-    "COMPETITIVE": ["competition_id", "phase_id", "session_id"],
-    "COMPETITIVE_DEADLINE": ["competition_id", "route_id or phase_id", "session_id", "deadline_type"],
-    "PARTICIPANT_OUTCOME": ["participant_id", "competition_id", "phase_id", "route_id"],
-    "PHYSICAL_EVENT": ["physical_event_id", "session_id or venue_space_id when scoped"],
-    "PHYSICAL_ACCESS": ["access_profile_id", "session_id when scoped"],
-    "TICKETING": ["event_uid", "provider_id", "session_key", "category_key"],
-    "LORE": ["claim_id"],
-    "WATCHLIST": ["candidate_id or watch_id"],
-    "CALENDAR_PROJECTION": ["calendar_path", "UID"]
+    "semantic_not_file_diff": "Git SHA changes only trigger inspection. User-facing changes come from canonical business facts.",
+    "causal_recurrence_safe": "Repeated legitimate lifecycle transitions are distinguished by subject revision and causal parent; simple replays converge to the existing change_id.",
+    "canonical_before_intent": "Persist the canonical fact and change record before creating a notification intent whenever possible.",
+    "outbox_before_emit": "Persist RESERVED in the outbox with Git compare-and-swap before any automated user notification.",
+    "at_most_once": "RESERVED, SENT and UNKNOWN_DELIVERY consume a notification key for automatic delivery forever unless explicit manual recovery is requested.",
+    "policy_freeze": "A change's notification disposition is frozen when accepted; later policy changes do not retroactively alert old silent changes.",
+    "derived_noise_silent": "Index/header/freshness/score/serialization-only changes never alert."
   },
   "domain_material_fields": {
-    "SERVICE": ["state", "provider_phase", "provider_impact", "timing", "component_states", "relation_type", "linked_track_or_competition"],
-    "SEASON_PASS": ["state", "milestone timing", "window timing/state", "ranked reset scope/type", "successor/handoff relation", "calendar projection"],
-    "COMPETITIVE": ["status", "session timing", "region", "ruleset", "team format", "platform", "registration", "eligibility", "prize", "qualification", "projection level/granularity"],
-    "COMPETITIVE_DEADLINE": ["lifecycle", "route state", "deadline type/time", "notice condition", "finality", "qualification target"],
-    "PARTICIPANT_OUTCOME": ["state", "result_finality", "qualification target", "next_action", "supersession"],
-    "PHYSICAL_EVENT": ["status", "visibility", "date/time", "venue_id", "public_sessions", "primary_action", "operational_completeness", "travel_scope"],
-    "PHYSICAL_ACCESS": ["admission_mode", "access_state", "effective_action", "age", "check_in", "last_entry", "reentry", "accessibility", "zone/entrance", "queue/capacity only if official"],
-    "TICKETING": ["status", "session status", "category status", "price structure", "waiting list", "scarcity evidence", "sale/open/close timing"],
-    "LORE": ["claim status", "predicate", "target", "scope", "canon_scope", "evidence finality"],
-    "WATCHLIST": ["candidate state", "new official date/window", "promotion readiness", "rejection/correction"],
-    "CALENDAR_PROJECTION": ["DTSTART", "DTEND", "STATUS", "LOCATION", "DESCRIPTION business facts", "URL", "VALARM business triggers", "X-FORTNITE business properties", "SEQUENCE-worthy business state"]
+    "SERVICE": ["state","provider_phase","provider_impact","timing","component_states","relation_type","linked_track_or_competition"],
+    "SEASON_PASS": ["state","milestone timing","window timing/state","ranked reset scope/type","successor/handoff relation","calendar projection"],
+    "COMPETITIVE": ["status","session timing","region","ruleset","team format","platform","registration","eligibility","prize","qualification","projection level/granularity"],
+    "COMPETITIVE_DEADLINE": ["lifecycle","route state","deadline type/time","notice condition","finality","qualification target"],
+    "PARTICIPANT_OUTCOME": ["state","result_finality","qualification target","next_action","supersession"],
+    "PHYSICAL_EVENT": ["status","visibility","date/time","venue_id","public_sessions","primary_action","operational_completeness","travel_scope"],
+    "PHYSICAL_ACCESS": ["admission_mode","access_state","effective_action","age","check_in","last_entry","reentry","accessibility","zone/entrance","queue/capacity only if official"],
+    "TICKETING": ["status","session/category status","price structure","waiting list","scarcity evidence","sale/open/close timing"],
+    "LORE": ["claim status","predicate","target","scope","canon_scope","evidence finality"],
+    "WATCHLIST": ["candidate state","new official date/window","promotion readiness","rejection/correction"],
+    "CALENDAR_PROJECTION": ["DTSTART","DTEND","STATUS","LOCATION","DESCRIPTION business facts","URL","VALARM business triggers","X-FORTNITE business properties","SEQUENCE-worthy state"]
   },
-  "non_material_fields": [
-    "updated_at",
-    "checked_at",
-    "last_verified_at",
-    "observed_at without a fact change",
-    "crawl timestamp",
-    "source fetch ETag alone",
-    "Git blob SHA alone",
-    "DTSTAMP",
-    "LAST-MODIFIED without business change",
-    "freshness NEW/UPDATED badge expiry",
-    "derived score without threshold/action change",
-    "derived index rebuild",
-    "serialization/whitespace/folding",
-    "source list ordering",
-    "aliases that do not change entity resolution",
-    "history append that duplicates an existing semantic history event"
-  ],
-  "materiality_rules": {
-    "IGNORE": ["recheck identical", "timestamp refresh", "index-only rebuild", "header-only metadata", "non-actionable score movement", "source URL tracking cleanup"],
-    "LEDGER_ONLY": ["new ordinary EU cup session", "lore claim/history enrichment", "watch target signal without actionable date", "minor physical/access detail with no planning impact", "service component blip not promoted"],
-    "CALENDAR": ["material VEVENT business change without notification policy eligibility", "projection promotion/demotion", "useful session/location/deadline update"],
-    "NOTIFY": ["only when the domain-specific policy independently marks the material change as user-actionable"]
+  "non_material_fields": ["updated_at","checked_at","last_verified_at","observed_at without fact change","crawl timestamp","ETag alone","Git SHA alone","DTSTAMP","LAST-MODIFIED without business change","freshness badge expiry","derived score without threshold/action change","derived index rebuild","serialization/whitespace/folding","source ordering","alias-only wording","duplicate semantic history append"],
+  "change_detection": {
+    "step_1_subject": "Resolve domain, subject_key and scope_key from stable IDs.",
+    "step_2_current_head": "Read the current subject head from the derived index or reconstruct from ledger if the index is missing/divergent.",
+    "step_3_canonical_state": "Compute material before/after state from latest canonical domain data, never from file-level diff alone.",
+    "step_4_transition": "Compute state_fingerprint and transition_fingerprint using canonical normalization V2.",
+    "step_5_replay_check": "If current canonical state already equals after-state or the same transition exists against the same causal parent, no-op.",
+    "step_6_revision": "For a real new transition increment subject_revision, point causal_parent_change_id to the current head, derive stable change_id and append exactly once.",
+    "step_7_disposition": "Freeze notification_disposition using the domain policy at detection time."
+  },
+  "recurrence_examples": {
+    "ticketing": "WAITLIST -> AVAILABLE -> WAITLIST creates two distinct WAITLIST occurrences because the second has a different causal parent/revision. Re-crawling either occurrence does not create another change.",
+    "service": "RESOLVED -> new later incident STARTED is a new causal episode, while repeated provider polling during the same STARTED state is not.",
+    "competition": "POSTPONED -> SCHEDULED(new time) are separate transitions; re-reading the same reschedule is silent.",
+    "season_pass": "An official extension and a later shortening are separate revisions even if a former date value reappears."
+  },
+  "user_effect_collapse": {
+    "purpose": "Prevent the same user-facing fact from notifying once from a domain ledger and again from its mirror/projection.",
+    "user_effect_id": "ufx_<sha256(effect_family|effect_subject|effect_state_fingerprint|causal_anchor_change_id)>",
+    "causal_anchor": "Use the earliest material domain change that caused the current user-facing effect. Mirrored PHYSICAL_ACCESS/TICKETING/CALENDAR_PROJECTION changes reference it through causal_source_change_ids when possible.",
+    "effect_families": ["EVENT_TIME","EVENT_DATE","EVENT_LOCATION","EVENT_ACCESS","TICKET_AVAILABILITY","REGISTRATION","DEADLINE","QUALIFICATION","PARTICIPANT_RESULT","SEASON_PASS_TRANSITION","SERVICE_STATE","CALENDAR_ONLY"],
+    "projection_rule": "CALENDAR_PROJECTION never creates a second notification when causal_source_change_ids point to an already eligible/notified underlying change. It may notify only for a material calendar-only effect not represented by another canonical domain change.",
+    "ticket_access_rule": "Ticketing and physical-access transitions that represent the same access-route effect should share one user_effect_id and one notification intent.",
+    "evidence_merge": "A second official source confirming the same supported effect enriches evidence but does not create another user_effect notification."
+  },
+  "notification_disposition": {
+    "BASELINE": "Pre-bootstrap known fact; never auto-notify.",
+    "SILENT_POLICY": "Material history but domain policy says silent; never becomes retroactively eligible from a policy change.",
+    "ELIGIBLE_NOW": "May enter outbox immediately after canonical/change persistence and all gates pass.",
+    "ELIGIBLE_WHEN_DUE": "Future reminder/condition. Do not create/reserve outbox intent until due and revalidated.",
+    "CONDITION_BLOCKED": "Potentially useful but current participant/access/deadline condition is false; no outbox intent.",
+    "STALE": "Out-of-order or superseded evidence; retain history when useful but never notify.",
+    "NOT_APPLICABLE": "No user notification semantics."
   },
   "notification_gate": {
-    "required_all": [
-      "material semantic delta exists",
-      "domain engine says notification-worthy",
-      "notification_key not previously consumed",
-      "change is not pre-bootstrap rediscovery",
-      "change is not stale/out-of-order evidence",
-      "quiet-hour policy does not require defer/suppress"
-    ],
-    "never_notify_for": [
-      "identical recheck",
-      "checked_at/last_verified_at only",
-      "new Git SHA with same semantics",
-      "index rebuild only",
-      "taxonomy/lore enrichment without future actionable VEVENT impact",
-      "ordinary LEDGER_ONLY competitive ingestion",
-      "provider discovery without event",
-      "source page temporarily unavailable",
-      "calendar formatting normalization",
-      "baseline migration/import"
-    ]
+    "required_all": ["accepted material change or due reminder exists","domain policy says eligible","not baseline/silent/stale","condition still true at send time","user_effect/logical notification not already consumed","quiet-hours handling still leaves it actionable"],
+    "never_notify_for": ["identical recheck","timestamp refresh","Git SHA only","index rebuild","taxonomy/lore enrichment without actionable future impact","ordinary LEDGER_ONLY cup ingestion","provider discovery without event","temporary source failure","calendar formatting normalization","bootstrap import","mirror/projection of an already-notified causal change"]
   },
-  "notification_key_rules": {
-    "include": ["domain", "stable subject_key", "stable scope_key", "notice_kind", "semantic_fingerprint", "audience_key"],
-    "exclude": ["detected_at", "checked_at", "run_id", "Git commit SHA unless the commit itself is the user-facing subject", "localized title", "temporary source URL query parameters"],
-    "audience_key_default": "USER_DEFAULT",
-    "participant_audience": "participant-specific outcomes/reminders use participant_id in audience/scope so one player's result does not suppress another's."
+  "outbox_protocol": {
+    "notification_key": "ntf_<sha256(user_effect_id-or-sorted_change_ids|notice_kind|audience_key|channel_key)>",
+    "default_audience": "USER_DEFAULT",
+    "default_channel": "CHATGPT_AUTOMATION",
+    "pre_reserve": ["coalesce related changes","freeze payload and payload_fingerprint","fresh-fetch outbox + blob SHA","check consumed_keys"],
+    "reserve": "Append intent if absent + RESERVED delivery event, then Git update using the freshly fetched SHA.",
+    "cas_conflict": "Discard stale payload, fresh-fetch, and re-evaluate. If key is now consumed, stop. If still absent and conditions remain true, a newly rebuilt CAS attempt is allowed.",
+    "emit": "Only after successful canonical RESERVED persistence.",
+    "confirm": "After emission append SENT via fresh CAS. Failure to persist SENT never permits resend because RESERVED already consumed the key.",
+    "recovery": "After 30 minutes a stale RESERVED without SENT becomes UNKNOWN_DELIVERY via append-only event and stays consumed.",
+    "manual_replay": "Never automatic. Requires explicit intervention and a distinct manual_replay_id/audit event."
   },
-  "coalescing_rules": {
+  "coalescing": {
     "window_minutes": 10,
-    "same_subject_examples": [
-      "ticket availability + new price category for same event",
-      "venue exact address + public opening time for same physical event",
-      "season start exact time + officially linked downtime announcement",
-      "competition session reschedule + corresponding deadline recalculation"
-    ],
-    "grouping_output": "One user notification may contain multiple change_ids; every member change remains separately auditable.",
-    "after_reservation": "Once a group notification is RESERVED, later changes create a new group/key only if materially distinct; never mutate the already reserved payload in a way that could cause a resend."
+    "rule": "Group related pre-reservation changes when one concise alert better represents the same user effect.",
+    "good_examples": ["exact venue + doors time","ticket return + category reopening","session reschedule + recalculated check-in/deadline","season launch exact time + explicitly linked downtime"],
+    "never_merge": ["different logical events","different participants","cancellation and later reactivation","independent ticketing events","two distinct lifecycle occurrences merely sharing a value"],
+    "freeze": "Once RESERVED, group membership and payload are immutable. Later material changes receive another logical effect/intent if eligible."
   },
-  "supersession_rules": {
-    "official_correction": "Create new change_id and supersedes_change_id. May notify once if actionably different.",
-    "postponed_then_rescheduled": "POSTPONED and later TIME_CHANGED are separate material transitions and may each have one distinct notification key.",
-    "sold_out_then_back_on_sale": "SOLD_OUT/WAITLIST and BACK_ON_SALE are distinct changes; each can notify once when policy permits.",
-    "cancelled_then_reactivated": "CANCELLED and reactivation are distinct; do not let the cancellation key suppress reactivation.",
-    "same_value_reobserved": "No new change unless new official evidence establishes a genuine new transition back to that value."
+  "planned_reminders": {
+    "rule": "Never reserve future notifications hours/days early.",
+    "states_before_due": ["DORMANT","ARMED","PLANNED","DEFERRED_QUIET_HOURS"],
+    "due_flow": "At trigger time fresh-read canonical domain state; verify version/condition/future action; build effect/key; reserve via outbox CAS; emit once.",
+    "invalidated_before_due": "No outbox intent is created, so there is nothing to retry or suppress later.",
+    "no_backfill": true
   },
-  "reservation_and_delivery": {
-    "fresh_read_before_reserve": true,
-    "reserve_before_emit": true,
-    "reservation_state": "RESERVED",
-    "terminal_dedupe_states": ["SUPPRESSED_BASELINE", "SUPPRESSED_POLICY", "RESERVED", "SENT", "UNKNOWN_DELIVERY"],
-    "unknown_delivery": "No automatic retry. Prefer a missed alert over a duplicate.",
-    "parallel_run_guard": "After computing a candidate key, re-fetch the change ledger and reserve only if no terminal receipt exists for that key.",
-    "manual_recovery": "Only explicit user/admin intervention or machine-verifiable proof that no delivery occurred may reset UNKNOWN_DELIVERY/RESERVED for retry."
+  "flap_and_source_guard": {
+    "rule": "Do not create transitions from page failures, stale caches or weaker contradictory sources.",
+    "strong_direct_transition": "A direct authoritative source can create an immediate material transition.",
+    "weak_or_ambiguous": "Keep prior state and mark observation inconclusive/ledger-only until confirmed; do not oscillate canonical state merely to match a transient weak signal.",
+    "same_effect_multi_source": "Merge evidence into the existing effect/change where semantically appropriate, never alert once per source."
   },
-  "write_dedupe": {
-    "canonical_ledger": "Write only when post-write semantic fingerprint differs from current canonical semantic fingerprint. checked_at alone never writes.",
-    "calendar": "Write only when projected VEVENT business fingerprint differs. Formatting/folding/DTSTAMP-only changes do not increment SEQUENCE.",
-    "crash_after_write": "Fresh-fetch target and recompute fingerprint before any retry; if desired semantic state is already present, record/repair write receipt and skip duplicate commit.",
-    "change_ledger_self_write": "Appending a new change/receipt is itself allowed and must not recursively create another user-facing CALENDAR_PROJECTION change."
+  "write_idempotency": {
+    "fresh_sha": "Every Git update/delete requires a fresh blob SHA for that exact path immediately before write.",
+    "canonical_ledgers": "No write for semantically identical state even if checked_at changes.",
+    "ics": "Use projected_business_fingerprint; formatting/header/DTSTAMP-only changes never increment SEQUENCE.",
+    "unknown_commit": "Fresh-fetch target and compare desired fingerprint before any retry.",
+    "change_and_outbox": "Never recursively create a user-facing change because the change ledger, outbox or derived index itself changed."
   },
-  "recovery": {
-    "restart": "Read ledger + terminal key index before processing any domain notifications.",
-    "stale_reserved_minutes": 30,
-    "stale_reserved_transition": "UNKNOWN_DELIVERY",
-    "orphan_pending": "PENDING without reservation may be safely re-evaluated against current canonical facts; if still eligible, reserve same key, otherwise suppress/cancel before send.",
-    "unknown_commit": "Inspect repository target state. Never blindly replay write or notification."
-  },
-  "index_policy": {
-    "notification_key_index": "Exact map from notification_key to receipt_id. It is an acceleration structure, but receipt records remain canonical.",
-    "rebuild": "If key index diverges from receipts, rebuild index from receipts; never delete a receipt to satisfy the index.",
-    "collision": "Any duplicate notification_key with different semantic payload is a validation failure."
+  "reconciliation": {
+    "index": "fortnite-change-index-france.json is derived. Rebuild from ledger+outbox on divergence.",
+    "outbox": "Every intent must reference existing change_ids or an explicitly identified due reminder effect. consumed_keys must be exactly derivable from RESERVED/SENT/UNKNOWN_DELIVERY events.",
+    "causal_chain": "Each subject revision >1 must point to the immediately preceding revision unless an archive checkpoint explicitly bridges it.",
+    "unknown_delivery": "Surface only for audit/diagnostics, never as a trigger to resend.",
+    "orphan_write": "If Git may have succeeded, inspect canonical target and repair write audit state rather than replaying blindly."
   },
   "ics_policy": {
-    "future_headers": [
-      "X-FORTNITE-CHANGE-LEDGER:fortnite-change-ledger.json",
-      "X-FORTNITE-CHANGE-ENGINE:fortnite-change-engine-france.json"
-    ],
-    "header_only": "Add only on next real business write; no SEQUENCE increment for headers alone.",
-    "event_properties": ["X-FORTNITE-LAST-CHANGE-ID", "X-FORTNITE-BUSINESS-FINGERPRINT"],
-    "privacy": "Never serialize notification receipt IDs, delivery state or internal reservation IDs into public ICS files."
+    "future_headers": ["X-FORTNITE-CHANGE-LEDGER:fortnite-change-ledger.json","X-FORTNITE-CHANGE-ENGINE:fortnite-change-engine-france.json"],
+    "header_only": "Add on next real business write only; no SEQUENCE increment for headers alone.",
+    "event_properties": ["X-FORTNITE-LAST-CHANGE-ID","X-FORTNITE-BUSINESS-FINGERPRINT"],
+    "privacy": "Never serialize outbox intent IDs, reservation IDs, delivery states or notification payload snapshots into public ICS."
   }
 }
