@@ -1,0 +1,25 @@
+{
+  "version":"FORTNITE_TAXONOMY_INDEX_FR_V1",
+  "updated_at":"2026-08-19T05:02:00Z",
+  "derived_from":["fortnite-taxonomy-france.json","fortnite-taxonomy-engine-france.json"],
+  "disposable":true,
+  "rules":{
+    "source_of_truth":"Le registre + moteur priment toujours.",
+    "rebuild_on":["ASSIGNMENT_CHANGE","RELATION_CHANGE","ENTITY_CHANGE"],
+    "no_write_if_identical":true
+  },
+  "strict":{
+    "mode":{"BATTLE_ROYALE":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "event_type":{"GLOBAL_CHAMPIONSHIP":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "theme":{"FNCS_GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"],"ESPORTS_LIVE":["fortnite-fncs-global-antwerp-20260926@openai"],"TICKETING":["fortnite-fncs-global-antwerp-20260926@openai"]}
+  },
+  "expanded":{
+    "mode":{"BATTLE_ROYALE":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]}
+  }
+}
