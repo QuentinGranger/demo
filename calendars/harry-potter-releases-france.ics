@@ -17,6 +17,43 @@ X-HARRYPOTTER-TERRITORY-POLICY:FR_EXACT_VERSION_V1
 X-HARRYPOTTER-RELATION-POLICY:ACTION_TO_RELEASE_V1
 X-HARRYPOTTER-COLLECTOR-POLICY:INTEREST_LIMITED_V1
 X-HARRYPOTTER-SESSION-POLICY:ONE_RUN_ONE_SEASON_V1
+X-HARRYPOTTER-SOURCE-REGISTRY:harry-potter-sources-france.json
+BEGIN:VEVENT
+UID:hp-book-luna-lovegood-fr-20260827@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:TENTATIVE
+PRIORITY:9
+X-HARRYPOTTER-PRIORITY:INFO
+X-HARRYPOTTER-REMINDER-PROFILE:RELEASE_INFO
+X-HARRYPOTTER-ACTION:BUY
+X-HARRYPOTTER-EVENT-TYPE:BOOK_RELEASE
+X-HARRYPOTTER-FORMAT:BOOK_GUIDE
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-LANGUAGE:fr-FR
+X-HARRYPOTTER-PUBLISHER:Gallimard Jeunesse
+X-HARRYPOTTER-EAN:9782075235594
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+X-HARRYPOTTER-RETAILER-OFFER;SELLER=Fnac;TYPE=NATIONAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20260827;PRICE=12.00:https://www.fnac.com/a22490395/Harry-Potter-Potter-et-compagnie-Luna-Lovegood-J-K-Rowling
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:ℹ️ 🟡 🆕 📚 Sortie livre — Potter et compagnie : Luna Lovegood
+LOCATION:France
+DESCRIPTION:Priorité : ℹ️ Info — nouvelle parution française Harry Potter intéressante sans caractère collector fort identifié.\nFiabilité : 🟡 Date de parution référencée directement par Fnac ; Gallimard Jeunesse est indiqué comme éditeur.\nÉdition : française — EAN 9782075235594.\n🛒 Offre repérée : Fnac — précommande à 12,00 € ; ce prix vendeur n'est pas traité comme prix officiel éditeur.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1.\nSource : https://www.fnac.com/a22490395/Harry-Potter-Potter-et-compagnie-Luna-Lovegood-J-K-Rowling
+URL:https://www.fnac.com/a22490395/Harry-Potter-Potter-et-compagnie-Luna-Lovegood-J-K-Rowling
+CATEGORIES:Harry Potter,Livre,France,Nouveau,Priorité Info
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:📚 Sortie demain — Potter et compagnie : Luna Lovegood
+END:VALARM
+END:VEVENT
 BEGIN:VEVENT
 UID:hp-lego-mini-hogwarts-40975-20260829@openai
 DTSTAMP:20260819T035300Z
@@ -96,6 +133,87 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🛍️ LEGO Back to Hogwarts commence demain — ouvre LEGO France et vérifie les conditions
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-book-hbp-illustrated-pinfold-fr-20261008@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:TENTATIVE
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:COLLECTOR_RELEASE
+X-HARRYPOTTER-ACTION:BUY
+X-HARRYPOTTER-EVENT-TYPE:BOOK_RELEASE
+X-HARRYPOTTER-FORMAT:ILLUSTRATED_EDITION
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-LANGUAGE:fr-FR
+X-HARRYPOTTER-PUBLISHER:Gallimard Jeunesse
+X-HARRYPOTTER-EDITION:Édition entièrement illustrée par Levi Pinfold
+X-HARRYPOTTER-EAN:9782075090445
+X-HARRYPOTTER-COLLECTOR-INTEREST:HIGH
+X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+X-HARRYPOTTER-RETAILER-OFFER;SELLER=Fnac;TYPE=NATIONAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20261008;PRICE=47.50:https://www.fnac.com/a22490400/Harry-Potter-Harry-Potter-et-le-Prince-de-Sang-Mele-J-K-Rowling
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:⭐ 🟡 🆕 📕 Sortie collector — Le Prince de Sang-Mêlé illustré par Levi Pinfold
+LOCATION:France
+DESCRIPTION:Priorité : ⭐ Important — nouvelle grande édition illustrée française à fort intérêt collection.\nFiabilité : 🟡 Date de parution référencée directement par Fnac ; Gallimard Jeunesse est indiqué comme éditeur.\nÉdition : Harry Potter et le Prince de Sang-Mêlé — édition entièrement illustrée en couleur par Levi Pinfold.\nEAN : 9782075090445.\nIntérêt collection : élevé ; caractère limité non affirmé.\n🛒 Offre repérée : Fnac — précommande à 47,50 € ; prix vendeur non traité comme MSRP officiel.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.fnac.com/a22490400/Harry-Potter-Harry-Potter-et-le-Prince-de-Sang-Mele-J-K-Rowling
+URL:https://www.fnac.com/a22490400/Harry-Potter-Harry-Potter-et-le-Prince-de-Sang-Mele-J-K-Rowling
+CATEGORIES:Harry Potter,Livre,Illustré,Collector,France,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:📕 Édition illustrée du Prince de Sang-Mêlé dans 7 jours — vérifie prix et disponibilité
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:📕 Édition illustrée du Prince de Sang-Mêlé demain — prépare ton achat
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-books-film-guides-fr-20261008@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:TENTATIVE
+PRIORITY:9
+X-HARRYPOTTER-PRIORITY:INFO
+X-HARRYPOTTER-REMINDER-PROFILE:RELEASE_INFO
+X-HARRYPOTTER-ACTION:BUY
+X-HARRYPOTTER-EVENT-TYPE:BOOK_RELEASE
+X-HARRYPOTTER-FORMAT:BOOK_COLLECTION
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-LANGUAGE:fr-FR
+X-HARRYPOTTER-PUBLISHER:Gallimard Jeunesse
+X-HARRYPOTTER-COLLECTION-ID:GALLIMARD-HP-LIVRES-FILMS-20261008
+X-HARRYPOTTER-COLLECTION-COMPLETENESS:PARTIAL
+X-HARRYPOTTER-COLLECTION-PRODUCT-COUNT:2
+X-HARRYPOTTER-COLLECTION-ITEM;STATE=TENTATIVE;EAN=9782075234740:Bienvenue sur le Chemin de Traverse — Un pop-up magique
+X-HARRYPOTTER-COLLECTION-ITEM;STATE=TENTATIVE;EAN=9782075247627:Baguettes magiques — Le guide des sorts à Poudlard
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:ℹ️ 🟡 🆕 📚 Sorties livres films — 2 nouveautés Gallimard Jeunesse
+LOCATION:France
+DESCRIPTION:Priorité : ℹ️ Info — deux nouveautés françaises de la collection liée aux films regroupées sur leur date commune.\nFiabilité : 🟡 Dates et références relevées directement chez Fnac ; Gallimard Jeunesse est indiqué comme éditeur.\n📦 Checklist produits :\n🟡 Harry Potter — Bienvenue sur le Chemin de Traverse — Un pop-up magique — EAN 9782075234740 — prix Fnac observé 29,90 €.\n🟡 Harry Potter — Baguettes magiques — Le guide des sorts à Poudlard — EAN 9782075247627 — prix Fnac observé 24,90 €.\nComplétude : partielle — uniquement les deux nouveautés clairement identifiées pour cette collection/date dans le backfill.\nLes prix ci-dessus sont des prix vendeurs observés, pas des MSRP officiels.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1.\nSource principale : https://www.fnac.com/a22490397/Harry-Potter-Harry-Potter-Bienvenue-sur-le-Chemin-de-Traverse-Un-pop-up-magique-J-K-Rowling\nSource complémentaire : https://www.fnac.com/a22490398/Harry-Potter-Harry-Potter-Baguettes-magiques-Le-guide-des-sorts-a-Poudlard-J-K-Rowling
+URL:https://www.fnac.com/a22490397/Harry-Potter-Harry-Potter-Bienvenue-sur-le-Chemin-de-Traverse-Un-pop-up-magique-J-K-Rowling
+CATEGORIES:Harry Potter,Livre,Films,France,Nouveau,Priorité Info
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:📚 Deux nouveautés livres Harry Potter sortent demain — vérifie les éditions et prix
 END:VALARM
 END:VEVENT
 END:VCALENDAR
