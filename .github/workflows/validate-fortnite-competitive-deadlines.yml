@@ -5,6 +5,7 @@ on:
     paths:
       - 'calendars/fortnite-competitive-ledger-france.json'
       - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-deadline-engine-france.json'
       - 'calendars/fortnite-competitive-participants-france.json'
       - 'calendars/fortnite-end-reminders-france.json'
       - 'scripts/validate_fortnite_competitive_deadlines.py'
@@ -13,6 +14,7 @@ on:
     paths:
       - 'calendars/fortnite-competitive-ledger-france.json'
       - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-deadline-engine-france.json'
       - 'calendars/fortnite-competitive-participants-france.json'
       - 'calendars/fortnite-end-reminders-france.json'
       - 'scripts/validate_fortnite_competitive_deadlines.py'
@@ -26,5 +28,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate competitive deadline lifecycle
+      - name: Validate competitive deadline lifecycle V3
         run: python scripts/validate_fortnite_competitive_deadlines.py
