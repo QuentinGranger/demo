@@ -2,15 +2,18 @@
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / "calendars"
 POLICY = CAL / "calendar-health-policy.json"
 STATE = CAL / "calendar-health-state.json"
+HEARTBEAT = CAL / "calendar-health-heartbeat.json"
 
 EXPECTED_POLICY = "CROSS_CALENDAR_HEALTH_POLICY_FR_V1"
 EXPECTED_STATE = "CROSS_CALENDAR_HEALTH_STATE_FR_V1"
+EXPECTED_HEARTBEAT = "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V1"
 VALID_HEALTH = {"HEALTHY", "DEGRADED", "CRITICAL"}
 VALID_INCIDENT = {"OPEN", "ESCALATED", "RECOVERED"}
 HEX40 = re.compile(r"^[0-9a-f]{40}$")
@@ -19,6 +22,15 @@ HEX40 = re.compile(r"^[0-9a-f]{40}$")
 def load_json(path):
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def parse_utc(value):
+    if not isinstance(value, str):
+        raise ValueError("timestamp is not a string")
+    dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        raise ValueError("timestamp must be timezone-aware")
+    return dt.astimezone(timezone.utc)
 
 
 def validate_ics(path, errors):
@@ -73,7 +85,7 @@ def validate_ics(path, errors):
 
 def main():
     errors = []
-    for path in (POLICY, STATE):
+    for path in (POLICY, STATE, HEARTBEAT):
         if not path.exists():
             errors.append(f"missing required file: {path.relative_to(ROOT)}")
     if errors:
@@ -83,26 +95,68 @@ def main():
 
     policy = load_json(POLICY)
     state = load_json(STATE)
+    heartbeat = load_json(HEARTBEAT)
 
     if policy.get("version") != EXPECTED_POLICY:
         errors.append(f"unexpected health policy version {policy.get('version')!r}")
     if state.get("version") != EXPECTED_STATE:
         errors.append(f"unexpected health state version {state.get('version')!r}")
+    if heartbeat.get("version") != EXPECTED_HEARTBEAT:
+        errors.append(f"unexpected health heartbeat version {heartbeat.get('version')!r}")
     if state.get("policy") != "calendar-health-policy.json":
         errors.append("health state must reference calendar-health-policy.json")
+    if heartbeat.get("policy") != "calendar-health-policy.json":
+        errors.append("health heartbeat must reference calendar-health-policy.json")
     if policy.get("repository") != "QuentinGranger/demo":
         errors.append("health policy repository must remain QuentinGranger/demo")
     if policy.get("pinned_branch") != "master":
         errors.append("health policy pinned_branch must remain master unless subscription migration is explicit")
+    if heartbeat.get("repository") != policy.get("repository"):
+        errors.append("heartbeat repository must match health policy")
+    if heartbeat.get("pinned_branch") != policy.get("pinned_branch"):
+        errors.append("heartbeat pinned_branch must match health policy")
+
+    heartbeat_policy = policy.get("heartbeat", {})
+    expected_heartbeat_path = heartbeat_policy.get("file")
+    if expected_heartbeat_path != "calendars/calendar-health-heartbeat.json":
+        errors.append("health policy heartbeat file must remain calendars/calendar-health-heartbeat.json")
+    if heartbeat_policy.get("version") != EXPECTED_HEARTBEAT:
+        errors.append("health policy heartbeat version mismatch")
+    if heartbeat.get("watchdog") != heartbeat_policy.get("watchdog_automation_title"):
+        errors.append("heartbeat watchdog title does not match policy")
+    max_age = heartbeat_policy.get("max_age_hours")
+    if not isinstance(max_age, (int, float)) or max_age <= 0:
+        errors.append("heartbeat max_age_hours must be positive")
+    else:
+        try:
+            last_watchdog = parse_utc(heartbeat.get("last_watchdog_check_at"))
+            age_hours = (datetime.now(timezone.utc) - last_watchdog).total_seconds() / 3600
+            if age_hours < -1:
+                errors.append("heartbeat last_watchdog_check_at is implausibly in the future")
+            if age_hours > max_age:
+                errors.append(f"WATCHDOG_HEARTBEAT_STALE: heartbeat age {age_hours:.1f}h exceeds {max_age}h")
+        except Exception as exc:
+            errors.append(f"invalid heartbeat last_watchdog_check_at: {exc}")
+    try:
+        parse_utc(heartbeat.get("last_deep_check_at"))
+    except Exception as exc:
+        errors.append(f"invalid heartbeat last_deep_check_at: {exc}")
 
     declared_paths = set()
     franchises = policy.get("franchises", {})
+    expected_automation_titles = set()
     for franchise, cfg in franchises.items():
         global_file = cfg.get("global_file")
         specialists = cfg.get("specialist_files", [])
         all_files = [global_file] + list(specialists)
-        if not cfg.get("main_automation_title"):
+        main_title = cfg.get("main_automation_title")
+        if not main_title:
             errors.append(f"{franchise} missing main_automation_title")
+        else:
+            expected_automation_titles.add(main_title)
+        for support in cfg.get("supporting_automations", []):
+            if support.get("title"):
+                expected_automation_titles.add(support["title"])
         if cfg.get("expected_recurrence") not in {"HOURLY", "DAILY"}:
             errors.append(f"{franchise} invalid expected_recurrence")
         if not isinstance(cfg.get("max_liveness_gap_hours"), (int, float)) or cfg.get("max_liveness_gap_hours") <= 0:
@@ -123,6 +177,24 @@ def main():
                 errors.append(f"missing subscribed/specialist file: {rel}")
             else:
                 validate_ics(local, errors)
+
+    if heartbeat.get("verified_ics_path_count") != len(declared_paths):
+        errors.append("heartbeat verified_ics_path_count does not match policy-declared ICS paths")
+    snapshot = heartbeat.get("automation_snapshot", {})
+    if set(snapshot) != expected_automation_titles:
+        missing = sorted(expected_automation_titles - set(snapshot))
+        extra = sorted(set(snapshot) - expected_automation_titles)
+        if missing:
+            errors.append(f"heartbeat automation snapshot missing: {missing}")
+        if extra:
+            errors.append(f"heartbeat automation snapshot has unexpected titles: {extra}")
+    for title, info in snapshot.items():
+        if info.get("recurrence") not in {"HOURLY", "DAILY"}:
+            errors.append(f"heartbeat automation {title} has invalid recurrence")
+        if not isinstance(info.get("enabled"), bool):
+            errors.append(f"heartbeat automation {title} enabled must be boolean")
+        if not isinstance(info.get("finite"), bool):
+            errors.append(f"heartbeat automation {title} finite must be boolean")
 
     baseline_paths = set()
     manifest = state.get("baseline_manifest", {})
@@ -147,6 +219,8 @@ def main():
 
     if state.get("current_overall_state") not in VALID_HEALTH:
         errors.append("invalid current_overall_state")
+    if heartbeat.get("overall_result") not in VALID_HEALTH:
+        errors.append("invalid heartbeat overall_result")
     franchise_state = state.get("franchise_state", {})
     if set(franchise_state) != set(franchises):
         errors.append("franchise_state keys must exactly match health-policy franchises")
@@ -187,7 +261,7 @@ def main():
         print(f"FAILED: {len(errors)} health validation error(s)")
         return 1
 
-    print(f"OK: permanent calendar health policy validated — {len(declared_paths)} ICS paths across {len(franchises)} franchises")
+    print(f"OK: permanent calendar health validated — {len(declared_paths)} ICS paths, {len(expected_automation_titles)} monitors, fresh watchdog heartbeat")
     return 0
 
 
