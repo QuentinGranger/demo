@@ -8,6 +8,7 @@ X-WR-TIMEZONE:Europe/Paris
 X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
 X-POKEMON-PRICE-POLICY:OFFICIAL_EUR_EXACT_SKU_V2
 X-POKEMON-WAVE-POLICY:ONE_EVENT_CHECKLIST_V2
+X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
 DTSTAMP:20260819T025700Z
@@ -221,7 +222,7 @@ DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
