@@ -1,0 +1,81 @@
+{
+  "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
+  "updated_at": "2026-08-19T15:57:00Z",
+  "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
+  "change_ledger": "fortnite-change-ledger.json",
+  "change_engine": "fortnite-change-engine-france.json",
+  "delivery_semantics": {
+    "guarantee": "AT_MOST_ONCE_DELIVERY_ATTEMPT",
+    "intent_guarantee": "EXACTLY_ONCE_LOGICAL_INTENT_PER_NOTIFICATION_KEY",
+    "priority": "PREFER_MISSING_OVER_DUPLICATE",
+    "rule": "The first successfully persisted RESERVED delivery event consumes the notification_key for automatic delivery. SENT confirms the attempt completed; UNKNOWN_DELIVERY remains consumed and is never automatically retried.",
+    "truth_boundary": "The repository can guarantee exactly-once logical intent and at-most-once automated delivery attempt, but it cannot prove exactly-once presentation by an external client UI.",
+    "no_early_reservation": "Future reminders stay planned in their domain ledger. Create/reserve an outbox intent only when the reminder is actually due and its conditions are still true."
+  },
+  "cas_protocol": {
+    "storage": "GitHub contents API blob SHA",
+    "fresh_read_required": true,
+    "reserve_algorithm": [
+      "Fetch the outbox and current blob SHA immediately before reservation.",
+      "If notification_key is already consumed, stop without emitting.",
+      "Append exactly one immutable intent if absent and one RESERVED delivery event.",
+      "Update this file using the freshly fetched blob SHA as compare-and-swap precondition.",
+      "If the write conflicts, discard the stale mutation, re-fetch, and re-evaluate the key from the new canonical outbox.",
+      "Only the run whose RESERVED event is visible in a successful canonical write may emit the notification."
+    ],
+    "conflict_retry": "A conflict may be retried only after a fresh read and complete re-evaluation. Never replay the old payload/write blindly.",
+    "multi_writer_rule": "Two concurrent runs computing the same notification_key converge on one consumed key because only one compare-and-swap reservation can succeed against a given blob SHA."
+  },
+  "identity": {
+    "notification_key": "ntf_<sha256(sorted_change_ids|notice_kind|audience_key|channel_key)>",
+    "intent_id": "nti_<first-24-hex-of-sha256(notification_key)>",
+    "delivery_event_id": "nde_<first-24-hex-of-sha256(intent_id|state|state_occurrence|at_or_reservation_nonce)>",
+    "reservation_id": "nrs_<random-or-collision-resistant-id-created-only-at-reservation>",
+    "group_key": "grp_<sha256(grouping_subject|sorted_change_ids|notice_kind|audience_key|channel_key)>"
+  },
+  "states": ["RESERVED", "SENT", "UNKNOWN_DELIVERY", "CANCELLED_BEFORE_SEND"],
+  "terminal_consumed_states": ["RESERVED", "SENT", "UNKNOWN_DELIVERY"],
+  "intent_schema": {
+    "required": ["intent_id", "notification_key", "change_ids", "notice_kind", "audience_key", "channel_key", "payload_fingerprint", "render_version", "created_at"],
+    "optional": ["group_key", "subject_key", "locale", "payload_snapshot", "condition_snapshot", "policy_version", "due_at"]
+  },
+  "delivery_event_schema": {
+    "required": ["delivery_event_id", "intent_id", "notification_key", "state", "at"],
+    "optional": ["reservation_id", "delivery_fingerprint", "failure_class", "note"]
+  },
+  "payload_policy": {
+    "freeze_on_reserve": true,
+    "payload_fingerprint": "SHA256 of normalized user-visible payload after coalescing and before reservation.",
+    "payload_snapshot": "Optional exact rendered text for audit. It is frozen after RESERVED and never mutated to trigger another send.",
+    "render_version": "Renderer/prompt policy version used to create the payload. A later wording-policy change never creates a new notification for an already consumed logical intent.",
+    "locale": "Store locale when material to rendering, but locale changes alone do not create a new logical notification intent."
+  },
+  "recovery": {
+    "stale_reserved_minutes": 30,
+    "stale_reserved_action": "Append UNKNOWN_DELIVERY via fresh compare-and-swap if no later SENT event exists.",
+    "automatic_retry": false,
+    "manual_replay": "Requires explicit user/admin action and a new manual_replay_id; never silently clears or reuses an old consumed key.",
+    "sent_write_failure": "If emission happened but SENT persistence failed, RESERVED is still consumed. Recovery must never resend automatically."
+  },
+  "planned_reminder_boundary": {
+    "rule": "PLANNED/DORMANT/ARMED reminders live in their canonical deadline/access/season ledgers, not in this outbox.",
+    "due_time_flow": "At due time re-check canonical condition -> build change/group -> build payload -> fresh-read outbox -> reserve via CAS -> emit once.",
+    "expired_or_invalidated": "If a planned reminder is no longer actionable before reservation, mark it expired/invalidated in its domain ledger; do not create an outbox intent."
+  },
+  "retention": {
+    "consumed_keys": "Never automatically delete a consumed notification_key while its logical subject can recur through replay/restart. Archive only with a durable tombstone preserving the exact key and terminal state.",
+    "intents_and_events": "Append-only. Never rewrite history to change RESERVED into SENT; append a SENT event instead.",
+    "compaction": "Future compaction may move old intents/events to an archive, but consumed_key_tombstones must remain queryable before any reservation."
+  },
+  "intents": [],
+  "delivery_events": [],
+  "consumed_keys": {},
+  "group_index": {},
+  "history": [
+    {
+      "at": "2026-08-19T15:57:00Z",
+      "type": "OUTBOX_CREATED",
+      "note": "Created as the transactional reservation boundary for restart-safe at-most-once Fortnite notifications. Existing pre-bootstrap facts remain silent through the change-ledger baseline."
+    }
+  ]
+}
