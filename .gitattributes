@@ -1,0 +1,2 @@
+# Preserve exact iCalendar bytes; RFC 5545 feeds are serialized with CRLF.
+calendars/fortnite-*.ics -text
