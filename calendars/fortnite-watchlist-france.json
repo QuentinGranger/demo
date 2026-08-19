@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-19T07:12:31Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -27,19 +27,23 @@
     {
       "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
       "state": "CALENDAR_ADDED",
-      "topic": "Reload Elite Series Championship — Esports World Cup Paris 2026",
+      "topic": "Reload Elite Series Championship — Esports World Cup 2026",
       "source_ids": ["fortnite_competitive", "ewc_official"],
-      "known": "Fortnite Competitive confirme le Reload Elite Series Championship à l'Esports World Cup à Paris, avec les 40 meilleurs duos mondiaux, une dotation de 1 000 000 $ et une période officielle de compétition indiquée du 19 au 22 août 2026. EWC Paris propose encore seulement une préinscription générale pour être averti lorsque les billets seront disponibles.",
-      "missing_for_calendar": ["EXACT_VENUE", "RELIABLE_MATCH_SESSION_TIMES", "FORTNITE_SPECIFIC_TICKET_INFO"],
-      "promotion_rule": "Déjà promu : la période officielle 19–22 août 2026 et Paris, France rendent l'événement suffisamment actionnable. Enrichir le même UID si le lieu exact, des horaires fiables ou une billetterie Fortnite spécifique sont publiés.",
+      "known": "Correction officielle : la billetterie EWC de l'événement exact place le Reload Elite Series Championship du 19 au 22 août 2026 à Boulevard City, Riyadh, et propose des passes 4 jours à 219 SAR (Regular) et 471 SAR (Premium). Plusieurs pages Fortnite Competitive de qualification indiquent aussi Riyadh, Saudi Arabia. Une page EWC générale contient encore une mention contradictoire de Paris ; cette contradiction reste auditée, mais les sources événementielles les plus spécifiques sont utilisées pour la logistique et la billetterie.",
+      "missing_for_calendar": ["RELIABLE_MATCH_SESSION_TIMES", "DETAILED_ONSITE_ACCESS_RULES"],
+      "promotion_rule": "Déjà promu : conserver le même UID stable et enrichir/corriger la même fiche. Les identifiants techniques historiques contenant 'paris' ne sont pas recréés lors de cette correction de source.",
       "related_calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "promoted_at": "2026-08-19T07:12:31Z",
-      "ticket_preregistration": {
-        "status": "PREREGISTRATION",
-        "scope": "EWC_PARIS_GENERAL",
-        "url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "ticketing": {
+        "status": "AVAILABLE",
+        "scope": "EWC26_FORTNITE_CHAMPIONSHIP",
+        "url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
         "source_id": "ewc_official",
-        "verified_at": "2026-08-19T07:12:31Z"
+        "verified_at": "2026-08-19T18:12:23Z",
+        "categories": [
+          {"key":"REGULAR_4_DAY","price_sar":219,"status":"AVAILABLE"},
+          {"key":"PREMIUM_4_DAY","price_sar":471,"status":"AVAILABLE"}
+        ]
       }
     },
     {
