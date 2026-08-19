@@ -17,9 +17,9 @@ X-FORTNITE-CHANGE-POLICY:UID_STABLE_AUDIT_V1
 X-FORTNITE-FRESHNESS-POLICY:NEW5D_UPDATE3D_V1
 BEGIN:VEVENT
 UID:fortnite-fncs-global-antwerp-20260926@openai
-DTSTAMP:20260819T051529Z
-LAST-MODIFIED:20260819T051529Z
-SEQUENCE:1
+DTSTAMP:20260819T052227Z
+LAST-MODIFIED:20260819T052227Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
@@ -32,22 +32,25 @@ X-FORTNITE-REGION:GLOBAL
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
 X-FORTNITE-TICKET-PROVIDER-ID:lotto_arena
-X-FORTNITE-TICKET-STATUS:ON_SALE
+X-FORTNITE-TICKET-STATUS:WAITLIST
 X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
-X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILABLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-TICKET-WAITLIST:YES
+X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=WAITLIST:Billet standard 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=WAITLIST;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-AGE-RESTRICTION:16+
 X-FORTNITE-VENUE-TIME-1:20260926T140000
 X-FORTNITE-VENUE-TIME-2:20260927T183000
 X-FORTNITE-VENUE-TIME-STATUS:VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE
 X-FORTNITE-FIRST-ADDED-AT:20260819T050000Z
 X-FORTNITE-NEW-UNTIL:20260824T050000Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T051529Z
-X-FORTNITE-UPDATE-UNTIL:20260822T051529Z
-X-FORTNITE-UPDATE-REASON:TICKETING_AND_VENUE_TIME
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T052227Z
+X-FORTNITE-UPDATE-UNTIL:20260822T052227Z
+X-FORTNITE-UPDATE-REASON:TICKETING_WAITLIST
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260928
 SUMMARY:⭐ ✅ 🆕 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
-DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parties sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billets : vente officielle ouverte ; uniquement en formule 2 jours selon la Lotto Arena. Une waiting list est également proposée.\n✨ Nouvelle catégorie directe : Ultimate Live Experience Package 2 jours à 324,70 € (meilleures places disponibles, 4 objets de merchandising, photo avec le trophée, session de dédicaces/rencontre sous conditions, entrée et lounge privés).\n🕒 La page Lotto Arena affiche 14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées comme HORAIRES SALLE ; la même page indique encore « Timing to follow », donc elles ne sont pas présentées comme horaires officiels des parties FNCS.\n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nRappels : J-30, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
+DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parties sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LIST pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la liste d'attente officielle précise que des billets peuvent redevenir disponibles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Experience Package : prix affiché 324,70 € ; son bouton d'achat renvoie au même flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketmaster indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche 14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées comme horaires salle ; la même page indique encore « Timing to follow », donc elles ne sont pas présentées comme horaires officiels des parties FNCS.\n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nRappels : J-30, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1\nListe d'attente : https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
 CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championship,Europe
 BEGIN:VALARM
