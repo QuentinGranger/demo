@@ -1,0 +1,27 @@
+{
+  "version":"FORTNITE_TICKETING_INTELLIGENCE_FR_V1",
+  "updated_at":"2026-08-19T05:03:00Z",
+  "scope":"Fortnite events relevant to France/Europe",
+  "states":["NOT_ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
+  "transitions":["PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_TICKET_CATEGORY","SALE_CLOSED","CANCELLED"],
+  "scarcity_guard":"LOW/NEARLY_SOLD_OUT/SOLD_OUT exigent preuve directe ; une catégorie épuisée ne rend pas l'événement global complet.",
+  "entries":[
+    {
+      "event_uid":"fortnite-fncs-global-antwerp-20260926@openai",
+      "provider_id":"lotto_arena",
+      "source_id":"lotto_arena",
+      "status":"ON_SALE",
+      "previous_status":"PREREGISTRATION",
+      "evidence_grade":"A",
+      "confidence":"HIGH",
+      "package":"2_DAY_COMBO",
+      "single_day_available":false,
+      "waiting_list_available":true,
+      "ticket_url":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
+      "last_verified_at":"2026-08-19T05:03:00Z",
+      "history":[
+        {"at":"2026-08-19T05:03:00Z","type":"SALE_OPENED","to":"ON_SALE","source":"Lotto Arena event page"}
+      ]
+    }
+  ]
+}
