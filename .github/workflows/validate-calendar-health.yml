@@ -1,0 +1,37 @@
+name: Validate permanent calendar health
+
+on:
+  push:
+    paths:
+      - 'calendars/calendar-health-policy.json'
+      - 'calendars/calendar-health-state.json'
+      - 'calendars/fortnite-*.ics'
+      - 'calendars/harry-potter-*.ics'
+      - 'calendars/pokemon-*.ics'
+      - 'scripts/validate_calendar_health.py'
+      - '.github/workflows/validate-calendar-health.yml'
+  pull_request:
+    paths:
+      - 'calendars/calendar-health-policy.json'
+      - 'calendars/calendar-health-state.json'
+      - 'calendars/fortnite-*.ics'
+      - 'calendars/harry-potter-*.ics'
+      - 'calendars/pokemon-*.ics'
+      - 'scripts/validate_calendar_health.py'
+      - '.github/workflows/validate-calendar-health.yml'
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate subscribed calendar paths and ICS integrity
+        run: python scripts/validate_calendar_health.py
