@@ -18,6 +18,49 @@ X-HARRYPOTTER-RELATION-POLICY:ACTION_TO_RELEASE_V1
 X-HARRYPOTTER-COLLECTOR-POLICY:INTEREST_LIMITED_V1
 X-HARRYPOTTER-SESSION-POLICY:ONE_RUN_ONE_SEASON_V1
 BEGIN:VEVENT
+UID:hp-grand-rex-philosophers-stone-25th-20260830@openai
+DTSTAMP:20260819T035320Z
+LAST-MODIFIED:20260819T035320Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:ANNIVERSARY_SCREENING
+X-HARRYPOTTER-FORMAT:CINEMA_SPECIAL
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T035320Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T035320Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;TZID=Europe/Paris:20260830T170000
+DTEND;TZID=Europe/Paris:20260830T194400
+SUMMARY:⭐ ✅ 🆕 🎬 Projection 25 ans — Harry Potter à l’École des Sorciers — Grand Rex
+LOCATION;ALTREP="https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris":Le Grand Rex\, 1 boulevard Poissonnière\, 75002 Paris\, France
+X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris
+X-HARRYPOTTER-TICKET-URL:https://www.legrandrex.com/cinema
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-TICKET-CHECKED-AT:20260819T035320Z
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:10.00
+X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:10.00
+DESCRIPTION:Priorité : ⭐ Important — séance anniversaire unique et très pertinente à Paris.\nFiabilité : ✅ Confirmé directement par Le Grand Rex.\nType : 🎬 projection spéciale cinéma — 25e anniversaire du premier film.\nSéance : dimanche 30 août 2026 à 17h00, Grande Salle / Grand Large, VOST-FR, placement libre.\n✨ Bonus : 12 minutes de contenu exclusif annoncées à l'issue du film.\nDurée calendrier estimée à partir du film (2h32) + bonus annoncé (12 min) ; vérifier l'heure de fin sur place.\n📍 Adresse : Le Grand Rex — 1 boulevard Poissonnière, 75002 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris\n🎟️ Billet standard : tarif unique 10 € ; le format VIP de la même séance est indiqué complet par Le Grand Rex.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.legrandrex.com/cinema
+URL:https://www.legrandrex.com/cinema
+CATEGORIES:Harry Potter,Événement,Paris,Cinéma,25e anniversaire,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎬 Projection Harry Potter 25 ans dans 7 jours — vérifie ton billet au Grand Rex
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎬 Projection Harry Potter 25 ans demain à 17h — prépare billet et trajet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:hp-potted-potter-paris-20261017@openai
 DTSTAMP:20260819T035300Z
 LAST-MODIFIED:20260819T035300Z
