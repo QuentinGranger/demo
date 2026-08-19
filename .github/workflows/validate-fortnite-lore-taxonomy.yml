@@ -1,0 +1,34 @@
+name: Validate Fortnite lore taxonomy
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-taxonomy-france.json'
+      - 'calendars/fortnite-taxonomy-engine-france.json'
+      - 'calendars/fortnite-lore-taxonomy-france.json'
+      - 'calendars/fortnite-lore-engine-france.json'
+      - 'calendars/fortnite-lore-index-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'scripts/validate_fortnite_lore_taxonomy.py'
+      - '.github/workflows/validate-fortnite-lore-taxonomy.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-taxonomy-france.json'
+      - 'calendars/fortnite-taxonomy-engine-france.json'
+      - 'calendars/fortnite-lore-taxonomy-france.json'
+      - 'calendars/fortnite-lore-engine-france.json'
+      - 'calendars/fortnite-lore-index-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'scripts/validate_fortnite_lore_taxonomy.py'
+      - '.github/workflows/validate-fortnite-lore-taxonomy.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate lore graph and indexes
+        run: python scripts/validate_fortnite_lore_taxonomy.py
