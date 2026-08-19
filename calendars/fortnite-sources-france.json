@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_OFFICIAL_SOURCE_REGISTRY_FR_V1",
-  "updated_at": "2026-08-19T05:00:00Z",
+  "updated_at": "2026-08-19T05:15:29Z",
   "scope": "Fortnite — France et Europe pertinente",
   "principles": {
     "authority_by_field": "Une source n'est autorisée à confirmer que les champs de son périmètre.",
@@ -20,6 +20,19 @@
       "domains": ["SEASONS", "UPDATES", "LIVE_EVENTS", "COLLABS", "MODES", "FESTIVAL", "LEGO_FORTNITE", "RELOAD", "OG"],
       "can_confirm": ["OFFICIAL_ANNOUNCEMENT", "DATE", "TIME_IF_PUBLISHED", "MODE", "PATCH_FEATURES", "COLLAB", "EVENT_WINDOW"],
       "cannot_confirm": ["THIRD_PARTY_TICKET_STOCK", "UNPUBLISHED_SHOP_ROTATION"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "fortnite_battle_pass",
+      "name": "Fortnite Battle Pass",
+      "url": "https://www.fortnite.com/battle-pass?lang=en-US",
+      "authority": "PRIMARY_PRODUCT_PAGE",
+      "evidence_grade": "A",
+      "territory": "GLOBAL_DATE_SOURCE",
+      "domains": ["BATTLE_PASS", "SEASON_IDENTITY", "BATTLE_PASS_END_DATE"],
+      "can_confirm": ["CHAPTER", "SEASON", "SEASON_NAME", "BATTLE_PASS_END_DATE", "SOURCE_TIMEZONE_IF_PUBLISHED"],
+      "cannot_confirm": ["NEXT_SEASON_START_TIME", "FRANCE_LOCAL_TIME_WITHOUT_EXPLICIT_TIME"],
       "priority": 1,
       "status": "ACTIVE"
     },
