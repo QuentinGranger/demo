@@ -6,12 +6,12 @@ METHOD:PUBLISH
 X-WR-CALNAME:⚡ Pokémon — Événements France & Paris
 X-WR-TIMEZONE:Europe/Paris
 X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
-X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_V1
+X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -20,20 +20,25 @@ X-POKEMON-ACTION:INFO
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20270104
 SUMMARY:ℹ️ ✅ 🎪 Convention / événement — Admirez-les tous !
-LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe":Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
 GEO:48.86507;2.34186
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=50;X-TITLE=Musée en Herbe:geo:48.86507,2.34186
+X-POKEMON-LOCATION-PRECISION:BUILDING
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.86507,2.34186
 X-POKEMON-TICKET-URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
 X-POKEMON-TICKET-STATUS:AVAILABLE
-DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\n📍 Adresse : Musée en Herbe — 23 rue de l'Arbre-Sec, 75001 Paris, France.\n🎟️ Billetterie : page officielle de l'exposition avec liens de réservation par période — https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\n📍 Adresse : Musée en Herbe — 23 rue de l'Arbre-Sec, 75001 Paris, France.\n📌 Précision GEO : bâtiment.\n🗺️ Plans : https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.86507,2.34186\n🎟️ Billetterie : page officielle de l'exposition avec liens de réservation par période — https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
 URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 END:VEVENT
 BEGIN:VEVENT
 UID:9d0d150f-a5be-407d-812e-4465301f3d7c@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -42,11 +47,16 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
 SUMMARY:ℹ️ 🟡 🎪 Convention — Breizh TCG
-LOCATION:Parc des Expositions de Saint-Brieuc\, rue Pierre de Coubertin\, 22000 Saint-Brieuc\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc":Parc des Expositions de Saint-Brieuc\, rue Pierre de Coubertin\, 22000 Saint-Brieuc\, France
 GEO:48.50174;-2.76358
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Parc des Expositions de Saint-Brieuc:geo:48.50174,-2.76358
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.50174,-2.76358
 X-POKEMON-TICKET-STATUS:NOT_PUBLISHED
-DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\n📍 Adresse : Parc des Expositions de Saint-Brieuc — rue Pierre de Coubertin, 22000 Saint-Brieuc, France.\n🎟️ Billetterie : entrée annoncée payante, mais aucun lien direct suffisamment fiable n'est encore publié dans les sources suivies.\nRappels : J-1 uniquement — événement secondaire.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:UNKNOWN
+DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\n📍 Adresse : Parc des Expositions de Saint-Brieuc — rue Pierre de Coubertin, 22000 Saint-Brieuc, France.\n📌 Précision GEO : enceinte du parc des expositions ; entrée exacte non affirmée.\n🗺️ Plans : https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.50174,-2.76358\n🎟️ Billetterie : entrée annoncée payante, mais aucun lien direct suffisamment fiable n'est encore publié dans les sources suivies.\nRappels : J-1 uniquement — événement secondaire.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
 URL:https://kyoriyu.fr/pages/evenements-tcg-france
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
@@ -57,9 +67,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -68,12 +78,17 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:ℹ️ 🟡 🎪 Convention — Lille Card Show
-LOCATION:B'Twin Village\, 4 rue du Professeur Langevin\, 59000 Lille\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village":B'Twin Village\, 4 rue du Professeur Langevin\, 59000 Lille\, France
 GEO:50.62012;3.08449
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=B'Twin Village:geo:50.62012,3.08449
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=50.62012,3.08449
 X-POKEMON-TICKET-URL:https://lillecardshow.fr/infos-pratiques/
 X-POKEMON-TICKET-STATUS:FREE_OPTIONAL_EARLY_ACCESS
-DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\n📍 Adresse : B'Twin Village — 4 rue du Professeur Langevin, 59000 Lille, France (entrée 3).\n🎟️ Billetterie : entrée générale gratuite ; Early Access / pass éventuels via la page officielle — https://lillecardshow.fr/infos-pratiques/\nRappels : J-1 uniquement — présence Pokémon encore à confirmer.\nSource : https://lillecardshow.fr/
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:FREE
+DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\n📍 Adresse : B'Twin Village — 4 rue du Professeur Langevin, 59000 Lille, France (entrée 3).\n📌 Précision GEO : site B'Twin Village ; l'indication « entrée 3 » reste dans l'adresse humaine.\n🗺️ Plans : https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=50.62012,3.08449\n🎟️ Billetterie : entrée générale gratuite ; Early Access / pass éventuels via la page officielle — https://lillecardshow.fr/infos-pratiques/\nRappels : J-1 uniquement — présence Pokémon encore à confirmer.\nSource : https://lillecardshow.fr/
 URL:https://lillecardshow.fr/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
@@ -84,9 +99,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -95,12 +110,17 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
 SUMMARY:⭐ ✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
-LOCATION:Palais des Expositions de Nice\, Parvis de l'Europe\, 06000 Nice\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice":Palais des Expositions de Nice\, Parvis de l'Europe\, 06000 Nice\, France
 GEO:43.70889;7.28278
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=Palais des Expositions de Nice:geo:43.70889,7.28278
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=43.70889,7.28278
 X-POKEMON-TICKET-URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 X-POKEMON-TICKET-STATUS:REGISTRATION_EVENT_PAGE
-DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur nécessitant une planification.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\n📍 Adresse : Palais des Expositions de Nice — Parvis de l'Europe, 06000 Nice, France.\n🎟️ Inscription / informations participants : page officielle Play! Pokémon — https://championships.pokemon.com/fr-fr/events/regionals/2027/nice\nRappels : J-7 et J-1 — vérifier inscription, transport et horaires.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:REGISTRATION
+DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur nécessitant une planification.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\n📍 Adresse : Palais des Expositions de Nice — Parvis de l'Europe, 06000 Nice, France.\n📌 Précision GEO : enceinte du Palais des Expositions ; entrée/hall exact à privilégier si l'organisateur le précise plus tard.\n🗺️ Plans : https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=43.70889,7.28278\n🎟️ Inscription / informations participants : page officielle Play! Pokémon — https://championships.pokemon.com/fr-fr/events/regionals/2027/nice\nRappels : J-7 et J-1 — vérifier inscription, transport et horaires.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Important
 BEGIN:VALARM
@@ -116,9 +136,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -127,12 +147,17 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261026
 SUMMARY:⭐ ✅ 🎪 Convention — Paris Games Week + Gala TCG
-LOCATION:Paris Expo Porte de Versailles\, 1 place de la Porte de Versailles\, 75015 Paris\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles":Paris Expo Porte de Versailles\, 1 place de la Porte de Versailles\, 75015 Paris\, France
 GEO:48.83246;2.28785
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Paris Expo Porte de Versailles:geo:48.83246,2.28785
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.83246,2.28785
 X-POKEMON-TICKET-URL:https://www.parisgamesweek.com/fr/billetterie
 X-POKEMON-TICKET-STATUS:AVAILABLE
-DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à Paris, mais sans exclusivité limitée identifiée.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\n📍 Adresse : Paris Expo Porte de Versailles — 1 place de la Porte de Versailles, 75015 Paris, France.\n🎟️ Billetterie officielle : https://www.parisgamesweek.com/fr/billetterie\nRappels : J-7 et J-1 — vérifier billet, horaires et accès.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à Paris, mais sans exclusivité limitée identifiée.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\n📍 Adresse : Paris Expo Porte de Versailles — 1 place de la Porte de Versailles, 75015 Paris, France.\n📌 Précision GEO : parc des expositions ; le hall exact sera ajouté s'il est publié.\n🗺️ Plans : https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.83246,2.28785\n🎟️ Billetterie officielle : https://www.parisgamesweek.com/fr/billetterie\nRappels : J-7 et J-1 — vérifier billet, horaires et accès.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
 URL:https://www.parisgamesweek.com/fr/espaces/gala-tcg
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
@@ -148,9 +173,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9639e861-d366-45a3-bcf5-6816a7d78bf0@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -159,12 +184,17 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:⭐ ✅ 🎪 Convention — Le Royaume du TCG
-LOCATION:Paris Nord Villepinte — Hall 3\, ZAC Paris Nord 2\, 93420 Villepinte\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte":Paris Nord Villepinte — Hall 3\, ZAC Paris Nord 2\, 93420 Villepinte\, France
 GEO:48.97046;2.52131
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord Villepinte:geo:48.97046,2.52131
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.97046,2.52131
 X-POKEMON-TICKET-URL:https://www.royaumedutcg.com/billetterie
 X-POKEMON-TICKET-STATUS:AVAILABLE
-DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte présence Pokémon et déplacement à anticiper.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\n📍 Adresse : Paris Nord Villepinte — Hall 3, ZAC Paris Nord 2, 93420 Villepinte, France.\n🎟️ Billetterie officielle : https://www.royaumedutcg.com/billetterie\nRappels : J-7 et J-1 — vérifier billet, transport et horaires.\nSource : https://www.royaumedutcg.com/
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte présence Pokémon et déplacement à anticiper.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\n📍 Adresse : Paris Nord Villepinte — Hall 3, ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; Hall 3 est connu mais la coordonnée représente le site, pas une porte spécifique.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://www.royaumedutcg.com/billetterie\nRappels : J-7 et J-1 — vérifier billet, transport et horaires.\nSource : https://www.royaumedutcg.com/
 URL:https://www.royaumedutcg.com/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
@@ -203,9 +233,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:57771081-d189-4102-a78d-68758413cbc7@openai
-DTSTAMP:20260819T030300Z
-LAST-MODIFIED:20260819T030300Z
-SEQUENCE:7
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -214,12 +244,17 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20270708
 DTEND;VALUE=DATE:20270712
 SUMMARY:ℹ️ 🟡 🎪 Convention — Japan Expo Paris 2027
-LOCATION:Paris Nord Villepinte\, ZAC Paris Nord 2\, 93420 Villepinte\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte":Paris Nord Villepinte\, ZAC Paris Nord 2\, 93420 Villepinte\, France
 GEO:48.97046;2.52131
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord Villepinte:geo:48.97046,2.52131
+X-POKEMON-LOCATION-PRECISION:VENUE
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.97046,2.52131
 X-POKEMON-TICKET-URL:https://ticket.japan-expo.com/fr
 X-POKEMON-TICKET-STATUS:PORTAL_AVAILABLE_2027_NOT_PUBLISHED
-DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles, mais la présence Pokémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositions Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n🎟️ Billetterie officielle : https://ticket.japan-expo.com/fr — portail actif, billets spécifiques 2027 pas encore publiés au moment de la vérification.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/fr
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:TICKET_NOT_YET_RELEASED
+DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles, mais la présence Pokémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositions Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; hall/entrée 2027 non encore précisé.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://ticket.japan-expo.com/fr — portail actif, billets spécifiques 2027 pas encore publiés au moment de la vérification.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/fr
 URL:https://paris.japan-expo.com/fr
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
