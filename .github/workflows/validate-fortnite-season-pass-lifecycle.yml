@@ -1,0 +1,26 @@
+name: Validate Fortnite season and pass lifecycle
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-season-pass-lifecycle-france.json'
+      - 'calendars/fortnite-season-pass-engine-france.json'
+      - 'scripts/validate_fortnite_season_pass_lifecycle.py'
+      - '.github/workflows/validate-fortnite-season-pass-lifecycle.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-season-pass-lifecycle-france.json'
+      - 'calendars/fortnite-season-pass-engine-france.json'
+      - 'scripts/validate_fortnite_season_pass_lifecycle.py'
+      - '.github/workflows/validate-fortnite-season-pass-lifecycle.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate season/pass lifecycle
+        run: python scripts/validate_fortnite_season_pass_lifecycle.py
