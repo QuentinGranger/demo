@@ -5,168 +5,178 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:⭐ Pokémon — Tout (France & Paris)
 X-WR-TIMEZONE:Europe/Paris
+X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_ONGOING_INFO
+X-POKEMON-ACTION:INFO
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20270104
 SUMMARY:ℹ️ ✅ 🎪 Convention / événement — Admirez-les tous !
 LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris
-DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
+DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
 URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Admirez-les tous !
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
-DTSTAMP:20260819T023700Z
-LAST-MODIFIED:20260819T023700Z
-SEQUENCE:6
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
 SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Pokébox Méga Forces
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — produit standard, sans urgence particulière identifiée.\nFiabilité : 🟡 À confirmer. Sortie française référencée pour les Pokébox Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex.\nSource : https://www.pokecardex.com/forums/viewtopic.php?t=49894
+DESCRIPTION:Priorité : ℹ️ Info — produit standard, sans urgence particulière identifiée.\nFiabilité : 🟡 À confirmer. Sortie française référencée pour les Pokébox Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://www.pokecardex.com/forums/viewtopic.php?t=49894
 URL:https://www.pokecardex.com/forums/viewtopic.php?t=49894
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Pokébox Méga Forces
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie prix et stock : Pokébox Méga Forces
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Pokébox Méga Forces
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Pokébox Méga Forces
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-etb-30ans-20260906@openai
-DTSTAMP:20260819T023700Z
-LAST-MODIFIED:20260819T023700Z
-SEQUENCE:6
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
 X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 DTSTART;VALUE=DATE:20260906
 DTEND;VALUE=DATE:20260907
 SUMMARY:🔥 ✅ 🔔 Précommande — ETB 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🔥 Précommande ETB 30 ans
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : ETB 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🔥 Précommande ETB 30 ans
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : ETB 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:7
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-etb-30ans-20260906@openai
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire, mais pas une ouverture limitée à heure fixe.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire, mais pas une ouverture limitée à heure fixe.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ 30e Anniversaire
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : 30e Anniversaire
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ 30e Anniversaire
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : 30e Anniversaire
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-bundle-30ans-20260919@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
 X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
 SUMMARY:⭐ ✅ 🔔 Précommande — Bundle 6 boosters 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
+DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 URL:https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Précommande Bundle 30 ans
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : Bundle 6 boosters 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Précommande Bundle 30 ans
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Bundle 6 boosters 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-classeur-30ans-20260920@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:PREORDER_INFO
+X-POKEMON-ACTION:PREORDER
 X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:ℹ️ ✅ 🔔 Précommande — Coffret Classeur 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
+DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-1 uniquement — précommande informative.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🔔 Précommande Coffret Classeur 30 ans
+DESCRIPTION:🔔 Précommande demain — vérifie si elle t'intéresse : Coffret Classeur 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:7
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-bundle-30ans-20260919@openai
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-classeur-30ans-20260920@openai
@@ -174,288 +184,310 @@ DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Vague 30 ans d'octobre
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Vague 30 ans d'octobre
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Vague 30 ans d'octobre
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Vague 30 ans d'octobre
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_INFO
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:ℹ️ 🟡 🎪 Convention — Lille Card Show
 LOCATION:Lille\, France
-DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\nSource : https://lillecardshow.fr/
+DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\nRappels : J-1 uniquement — présence Pokémon encore à confirmer.\nSource : https://lillecardshow.fr/
 URL:https://lillecardshow.fr/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Lille Card Show
+DESCRIPTION:🎪 Événement demain — vérifie la présence Pokémon et les horaires : Lille Card Show
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9d0d150f-a5be-407d-812e-4465301f3d7c@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_INFO
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
 SUMMARY:ℹ️ 🟡 🎪 Convention — Breizh TCG
 LOCATION:Saint-Brieuc\, France
-DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
+DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\nRappels : J-1 uniquement — événement secondaire.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
 URL:https://kyoriyu.fr/pages/evenements-tcg-france
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Breizh TCG
+DESCRIPTION:🎪 Événement demain — vérifie horaires et accès : Breizh TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-premium-30ans-20261004@openai
-DTSTAMP:20260819T023700Z
-LAST-MODIFIED:20260819T023700Z
-SEQUENCE:6
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
 X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
 RELATED-TO;RELTYPE=PARENT:pokemon-30th-premium-wave-20261106@openai
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🔥 Précommande vague premium 30 ans
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : Vague premium 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🔥 Précommande vague premium 30 ans
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Vague premium 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:EVENT_IMPORTANT
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
 SUMMARY:⭐ ✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
 LOCATION:Palais des Expositions\, Nice\, France
-DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur nécessitant une planification.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
+DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur nécessitant une planification.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\nRappels : J-7 et J-1 — vérifier inscription, transport et horaires.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Régionaux Pokémon Nice
+DESCRIPTION:🏆 Régionaux dans 7 jours — vérifie inscription, transport et horaires : Nice
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Régionaux Pokémon Nice
+DESCRIPTION:🏆 Régionaux demain — prépare ton déplacement : Nice
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:EVENT_IMPORTANT
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261026
 SUMMARY:⭐ ✅ 🎪 Convention — Paris Games Week + Gala TCG
 LOCATION:Paris Expo Porte de Versailles\, Paris
-DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à Paris, mais sans exclusivité limitée identifiée.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
+DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à Paris, mais sans exclusivité limitée identifiée.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\nRappels : J-7 et J-1 — vérifier billet, horaires et accès.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
 URL:https://www.parisgamesweek.com/fr/espaces/gala-tcg
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Paris Games Week + Gala TCG
+DESCRIPTION:🎪 Événement dans 7 jours — vérifie billet, horaires et accès : Paris Games Week + Gala TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Paris Games Week + Gala TCG
+DESCRIPTION:🎪 Événement demain — prépare billet et trajet : Paris Games Week + Gala TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260819T023700Z
-LAST-MODIFIED:20260819T023700Z
-SEQUENCE:6
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — decks standards, sans urgence ou exclusivité identifiée.\nFiabilité : 🟡 À confirmer. Date du 30 octobre 2026 actuellement référencée pour les Decks Combat Mentali-ex et Noctali-ex.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
+DESCRIPTION:Priorité : ℹ️ Info — decks standards, sans urgence ou exclusivité identifiée.\nFiabilité : 🟡 À confirmer. Date du 30 octobre 2026 actuellement référencée pour les Decks Combat Mentali-ex et Noctali-ex.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 URL:https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🃏 Decks Mentali-ex & Noctali-ex
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie prix et stock : Decks Mentali-ex & Noctali-ex
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🃏 Decks Mentali-ex & Noctali-ex
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Decks Mentali-ex & Noctali-ex
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06)\, boosters/display et ETB.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
+DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06)\, boosters/display et ETB.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
 URL:https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Règne Delta (ME06)
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Règne Delta (ME06)
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Règne Delta (ME06)
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Règne Delta (ME06)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-30th-premium-wave-20261106@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:7
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-premium-30ans-20261004@openai
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — gros coffrets premium, mais priorité critique volontairement bloquée tant que la date reste seulement 🟡.\nFiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée au 6 novembre 2026.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — gros coffrets premium, mais priorité critique volontairement bloquée tant que la date reste seulement 🟡.\nFiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée au 6 novembre 2026.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Coffrets premium 30 ans
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Coffrets premium 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Coffrets premium 30 ans
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Coffrets premium 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9639e861-d366-45a3-bcf5-6816a7d78bf0@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:EVENT_IMPORTANT
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:⭐ ✅ 🎪 Convention — Le Royaume du TCG
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte présence Pokémon et déplacement à anticiper.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\nSource : https://www.royaumedutcg.com/
+DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte présence Pokémon et déplacement à anticiper.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\nRappels : J-7 et J-1 — vérifier billet, transport et horaires.\nSource : https://www.royaumedutcg.com/
 URL:https://www.royaumedutcg.com/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : ⭐ Le Royaume du TCG
+DESCRIPTION:🎪 Salon dans 7 jours — vérifie billet, transport et horaires : Le Royaume du TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : ⭐ Le Royaume du TCG
+DESCRIPTION:🎪 Salon demain — prépare billet et trajet : Le Royaume du TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ed9346e9-9a83-4be1-9376-4f0d7ef4c34f@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_INFO
+X-POKEMON-ACTION:INFO
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:ℹ️ ✅ 🎪 Événement — Pokémon Day 2027
 LOCATION:France / en ligne
-DESCRIPTION:Priorité : ℹ️ Info — date repère officielle, mais programmation française/parisienne encore inconnue. La priorité pourra être relevée si une grosse activation est annoncée.\nFiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.\nSource : https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
+DESCRIPTION:Priorité : ℹ️ Info — date repère officielle, mais programmation française/parisienne encore inconnue. La priorité pourra être relevée si une grosse activation est annoncée.\nFiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.\nRappels : J-1 uniquement tant qu'aucune activation française majeure n'est annoncée.\nSource : https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
 URL:https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
 CATEGORIES:Pokémon,Événement,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : Pokémon Day 2027
+DESCRIPTION:ℹ️ Pokémon Day demain — vérifie si une programmation française a été annoncée
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:57771081-d189-4102-a78d-68758413cbc7@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_INFO
+X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20270708
 DTEND;VALUE=DATE:20270712
 SUMMARY:ℹ️ 🟡 🎪 Convention — Japan Expo Paris 2027
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\nSource : https://paris.japan-expo.com/en
+DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/en
 URL:https://paris.japan-expo.com/en
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Japan Expo Paris 2027
+DESCRIPTION:🎪 Japan Expo demain — vérifie si Pokémon a confirmé sa présence
 END:VALARM
 END:VEVENT
 END:VCALENDAR
