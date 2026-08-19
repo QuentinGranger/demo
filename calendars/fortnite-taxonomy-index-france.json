@@ -1,6 +1,6 @@
 {
   "version":"FORTNITE_TAXONOMY_INDEX_FR_V1",
-  "updated_at":"2026-08-19T05:02:00Z",
+  "updated_at":"2026-08-19T05:15:29Z",
   "derived_from":["fortnite-taxonomy-france.json","fortnite-taxonomy-engine-france.json"],
   "disposable":true,
   "rules":{
@@ -9,15 +9,18 @@
     "no_write_if_identical":true
   },
   "strict":{
-    "mode":{"BATTLE_ROYALE":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "mode":{"BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai"]},
+    "season":{"C7S3":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
     "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
     "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
     "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "event_type":{"GLOBAL_CHAMPIONSHIP":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "theme":{"FNCS_GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"],"ESPORTS_LIVE":["fortnite-fncs-global-antwerp-20260926@openai"],"TICKETING":["fortnite-fncs-global-antwerp-20260926@openai"]}
+    "event_type":{"SEASON_END":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],"GLOBAL_CHAMPIONSHIP":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "theme":{"BATTLE_PASS":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],"FNCS_GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"],"ESPORTS_LIVE":["fortnite-fncs-global-antwerp-20260926@openai"],"TICKETING":["fortnite-fncs-global-antwerp-20260926@openai"]}
   },
   "expanded":{
-    "mode":{"BATTLE_ROYALE":["fortnite-fncs-global-antwerp-20260926@openai"]},
+    "mode":{"BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai"]},
+    "chapter":{"CHAPTER_7":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
+    "season":{"C7S3":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
     "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
     "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
     "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]}
