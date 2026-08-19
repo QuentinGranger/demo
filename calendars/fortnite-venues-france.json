@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_VENUE_REGISTRY_EU_V2",
-  "updated_at": "2026-08-19T15:31:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Physical Fortnite venues, subspaces and verified onsite location metadata relevant to France and Europe",
   "principles": {
     "stable_venue_id": "A venue_id is immutable across events; renames become aliases/history rather than a new venue when the physical venue is the same.",
@@ -32,14 +32,7 @@
       "status": "ACTIVE",
       "spaces": [],
       "entry_points": [],
-      "accessibility": {
-        "state": "UNKNOWN",
-        "accessible_entrance_id": null,
-        "companion_policy": "UNKNOWN",
-        "accessible_seating": "UNKNOWN",
-        "details": [],
-        "source_url": null
-      },
+      "accessibility": {"state":"UNKNOWN","accessible_entrance_id":null,"companion_policy":"UNKNOWN","accessible_seating":"UNKNOWN","details":[],"source_url":null},
       "official_transport_notes": [],
       "official_parking_notes": [],
       "history": []
@@ -57,20 +50,34 @@
       "geo_source": null,
       "source_id": "ewc_official",
       "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
-      "status": "TBA_DETAIL",
+      "status": "HISTORICAL_SIGNAL",
       "spaces": [],
       "entry_points": [],
-      "accessibility": {
-        "state": "UNKNOWN",
-        "accessible_entrance_id": null,
-        "companion_policy": "UNKNOWN",
-        "accessible_seating": "UNKNOWN",
-        "details": [],
-        "source_url": null
-      },
+      "accessibility": {"state":"UNKNOWN","accessible_entrance_id":null,"companion_policy":"UNKNOWN","accessible_seating":"UNKNOWN","details":[],"source_url":null},
       "official_transport_notes": [],
       "official_parking_notes": [],
-      "history": []
+      "history": [{"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","note":"The exact EWC Fortnite ticket page places the championship at Boulevard City, Riyadh. This Paris record is retained only as historical evidence of the earlier conflicting preregistration source."}]
+    },
+    {
+      "venue_id": "ewc_boulevard_city_riyadh",
+      "name": "Boulevard City",
+      "aliases": ["Boulevard City Riyadh"],
+      "country_code": "SA",
+      "city": "Riyadh",
+      "timezone": "Asia/Riyadh",
+      "address": "Boulevard City, Riyadh, Saudi Arabia",
+      "address_precision": "VENUE",
+      "geo": null,
+      "geo_source": null,
+      "source_id": "ewc_official",
+      "source_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
+      "status": "ACTIVE",
+      "spaces": [],
+      "entry_points": [],
+      "accessibility": {"state":"UNKNOWN","accessible_entrance_id":null,"companion_policy":"UNKNOWN","accessible_seating":"UNKNOWN","details":[],"source_url":null},
+      "official_transport_notes": [],
+      "official_parking_notes": [],
+      "history": [{"at":"2026-08-19T18:12:23Z","type":"VENUE_CONFIRMED","note":"Exact EWC ticket page identifies Boulevard City, Riyadh for the Reload Elite Series Championship, Aug 19–22, 2026."}]
     }
   ]
 }
