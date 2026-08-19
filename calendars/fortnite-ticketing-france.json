@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T15:42:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Fortnite physical events relevant to France and Europe",
   "physical_event_ledger": "calendars/fortnite-physical-events-france.json",
   "physical_access_ledger": "calendars/fortnite-physical-access-france.json",
@@ -9,19 +9,8 @@
     "canonical_key": "event_uid + provider_id + session_key/category_key when granular tracking is useful",
     "states": ["NOT_ANNOUNCED","ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
     "material_transitions": ["SALE_ANNOUNCED","PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_SESSION_ADDED","SESSION_REMOVED","NEW_TICKET_CATEGORY","CATEGORY_STATUS_CHANGED","PRICE_STRUCTURE_CHANGED","SALE_CLOSED","EVENT_ENDED","CANCELLED"],
-    "scarcity_evidence": {
-      "EXPLICIT_TEXT": "Direct source explicitly says low availability, nearly sold out or sold out.",
-      "OFFICIAL_SESSION_DISABLED": "The exact session is explicitly unavailable/sold out on official ticketing.",
-      "CATEGORY_SOLD_OUT": "A precise category is sold out but the event/session may still have other inventory.",
-      "WAITLIST_OFFERED": "Official waiting list is offered.",
-      "SEATMAP_STRONG_SIGNAL": "Official seat-map signal; never enough alone for a strong global SOLD_OUT claim unless provider semantics are unambiguous.",
-      "UNKNOWN": "No scarcity proof; do not infer."
-    },
-    "confidence": {
-      "HIGH": "Direct organizer/venue/ticketing source and exact event/session/category state.",
-      "MEDIUM": "Official source but incomplete granularity or event-wide scope.",
-      "LOW": "Useful signal only; cannot trigger strong scarcity transition."
-    },
+    "scarcity_evidence": {"EXPLICIT_TEXT":"Direct source explicitly says low availability, nearly sold out or sold out.","OFFICIAL_SESSION_DISABLED":"The exact session is explicitly unavailable/sold out on official ticketing.","CATEGORY_SOLD_OUT":"A precise category is sold out but the event/session may still have other inventory.","WAITLIST_OFFERED":"Official waiting list is offered.","SEATMAP_STRONG_SIGNAL":"Official seat-map signal; never enough alone for a strong global SOLD_OUT claim unless provider semantics are unambiguous.","UNKNOWN":"No scarcity proof; do not infer."},
+    "confidence": {"HIGH":"Direct organizer/venue/ticketing source and exact event/session/category state.","MEDIUM":"Official source but incomplete granularity or event-wide scope.","LOW":"Useful signal only; cannot trigger strong scarcity transition."},
     "inventory_not_admission": "Ticket inventory describes the ticket product only. Admission requirements, age, ID, check-in, re-entry, accessibility and last-entry are canonical in fortnite-physical-access-france.json.",
     "preregistration_semantics": "PREREGISTRATION is not assumed to grant admission. The access ledger decides whether it is REGISTER_INTEREST or real attendance registration.",
     "global_vs_session": "One SOLD_OUT session never makes a multi-session event globally SOLD_OUT while another known session is AVAILABLE/ON_SALE.",
@@ -30,39 +19,13 @@
     "new_session_rule": "Same physical event/run + new public session keeps event_uid and physical_event_id; add session state and update calendar only when the new session changes attendance planning.",
     "price_rule": "Track direct published min/max/category prices. A missing cheaper category is not automatically a general price rise.",
     "capacity_rule": "Ticket inventory count or venue capacity is stored only when the exact provider explicitly publishes it. Never derive remaining places from a seat map or venue capacity.",
-    "check_strategy": {
-      "HOT": "Event <=14 days, France/Paris priority, WAITLIST/SOLD_OUT, imminent sale or newly announced access: check each useful hourly run.",
-      "WARM": "15–60 days: at most every 6h unless a recent material signal exists.",
-      "COLD": ">60 days: at most daily unless sale/venue/session announcement is expected.",
-      "LONG_RUN": "Long convention/activation: daily overall, intensify around final days, special sessions or ticket transitions."
-    },
+    "check_strategy": {"HOT":"Event <=14 days, France/Paris priority, WAITLIST/SOLD_OUT, imminent sale or newly announced access: check each useful hourly run.","WARM":"15–60 days: at most every 6h unless a recent material signal exists.","COLD":">60 days: at most daily unless sale/venue/session announcement is expected.","LONG_RUN":"Long convention/activation: daily overall, intensify around final days, special sessions or ticket transitions."},
     "write_noise": "No commit for identical recheck, checked_at alone, category reorder or unchanged price/status.",
     "notification_dedupe": "event_uid + transition_type + session_key + category_key + new_status",
     "event_end": "Normal EVENT_ENDED is silent unless an anomaly or actionable extension/cancellation occurred."
   },
-  "ics_mapping": {
-    "policy_header": "X-FORTNITE-TICKETING-POLICY:FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
-    "ledger_header": "X-FORTNITE-TICKETING-LEDGER:fortnite-ticketing-france.json",
-    "physical_ledger_header": "X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json",
-    "access_ledger_header": "X-FORTNITE-PHYSICAL-ACCESS-LEDGER:fortnite-physical-access-france.json",
-    "status": "X-FORTNITE-TICKET-STATUS",
-    "provider_id": "X-FORTNITE-TICKET-PROVIDER-ID",
-    "checked": "X-FORTNITE-TICKET-CHECKED-AT",
-    "transition": "X-FORTNITE-TICKET-LAST-TRANSITION",
-    "confidence": "X-FORTNITE-TICKET-CONFIDENCE",
-    "scarcity_evidence": "X-FORTNITE-TICKET-SCARCITY-EVIDENCE",
-    "session": "X-FORTNITE-TICKET-SESSION",
-    "category": "X-FORTNITE-TICKET-CATEGORY"
-  },
-  "notification_policy": {
-    "always": ["SALE_OPENED","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_SESSION_ADDED","CANCELLED"],
-    "conditional": {
-      "LOW_AVAILABILITY": "Notify only for FEATURED/important event, France/Paris priority, near date or explicit strong evidence.",
-      "PRICE_STRUCTURE_CHANGED": "Notify only when materially actionable.",
-      "SALE_CLOSED": "Silent unless early/unexpected or access-impacting."
-    },
-    "silent": ["EVENT_ENDED","IDENTICAL_RECHECK","TIMESTAMP_REFRESH","CATEGORY_REORDER"]
-  },
+  "ics_mapping": {"policy_header":"X-FORTNITE-TICKETING-POLICY:FORTNITE_TICKETING_INTELLIGENCE_FR_V2","ledger_header":"X-FORTNITE-TICKETING-LEDGER:fortnite-ticketing-france.json","physical_ledger_header":"X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json","access_ledger_header":"X-FORTNITE-PHYSICAL-ACCESS-LEDGER:fortnite-physical-access-france.json","status":"X-FORTNITE-TICKET-STATUS","provider_id":"X-FORTNITE-TICKET-PROVIDER-ID","checked":"X-FORTNITE-TICKET-CHECKED-AT","transition":"X-FORTNITE-TICKET-LAST-TRANSITION","confidence":"X-FORTNITE-TICKET-CONFIDENCE","scarcity_evidence":"X-FORTNITE-TICKET-SCARCITY-EVIDENCE","session":"X-FORTNITE-TICKET-SESSION","category":"X-FORTNITE-TICKET-CATEGORY"},
+  "notification_policy": {"always":["SALE_OPENED","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_SESSION_ADDED","CANCELLED"],"conditional":{"LOW_AVAILABILITY":"Notify only for FEATURED/important event, France/Paris priority, near date or explicit strong evidence.","PRICE_STRUCTURE_CHANGED":"Notify only when materially actionable.","SALE_CLOSED":"Silent unless early/unexpected or access-impacting."},"silent":["EVENT_ENDED","IDENTICAL_RECHECK","TIMESTAMP_REFRESH","CATEGORY_REORDER"]},
   "entries": [
     {
       "event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
@@ -103,26 +66,32 @@
     {
       "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "physical_event_id": "fortnite-physical-ewc-paris-2026",
-      "provider_id": "ewc_paris",
+      "provider_id": "ewc_riyadh",
       "source_id": "ewc_official",
-      "status": "PREREGISTRATION",
-      "status_origin": "DIRECT_VERIFIED",
+      "status": "AVAILABLE",
+      "previous_status": "PREREGISTRATION",
+      "status_origin": "DIRECT_VERIFIED_EXACT_EVENT",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "ticket_scope": "EWC_PARIS_GENERAL",
-      "fortnite_specific_ticket_info": false,
+      "ticket_scope": "EWC26_FORTNITE_CHAMPIONSHIP",
+      "fortnite_specific_ticket_info": true,
       "waiting_list_available": false,
-      "ticket_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "ticket_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
       "access_profile_id": "fortnite-access-ewc-paris-2026",
-      "last_verified_at": "2026-08-19T07:12:31Z",
-      "last_changed_at": "2026-08-19T07:12:31Z",
+      "last_verified_at": "2026-08-19T18:12:23Z",
+      "last_changed_at": "2026-08-19T18:12:23Z",
       "session_states": [],
-      "category_states": [],
+      "category_states": [
+        {"category_key":"REGULAR_4_DAY","label":"Regular Tournament Pass — 4 jours","status":"AVAILABLE","price_sar":219,"scarcity_evidence":"UNKNOWN","confidence":"HIGH","source":"EWC exact Fortnite ticket page"},
+        {"category_key":"PREMIUM_4_DAY","label":"Premium Tournament Pass — 4 jours","status":"AVAILABLE","price_sar":471,"scarcity_evidence":"UNKNOWN","confidence":"HIGH","source":"EWC exact Fortnite ticket page","benefits":["GOODIE_BAG_WHILE_STOCKS_LAST","FAST_TRACK"]}
+      ],
       "history": [
-        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"General EWC Paris preregistration to be notified when tickets become available; no Fortnite-specific ticket product published."},
-        {"at":"2026-08-19T15:42:00Z","type":"ACCESS_SEMANTICS_LINKED","note":"Preregistration remains ticketing PREREGISTRATION but maps to REGISTER_INTEREST in the physical access layer, not guaranteed admission."}
+        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Historical generic EWC Paris preregistration signal; later superseded for this exact championship by the organizer ticket page."},
+        {"at":"2026-08-19T15:42:00Z","type":"ACCESS_SEMANTICS_LINKED","note":"Generic preregistration was represented as REGISTER_INTEREST rather than guaranteed admission."},
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","from_provider":"ewc_paris","to_provider":"ewc_riyadh","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"Exact organizer ticket page identifies the Reload Elite Series Championship at Boulevard City, Riyadh, not the earlier generic Paris preregistration context."},
+        {"at":"2026-08-19T18:12:23Z","type":"SALE_OPENED","from":"PREREGISTRATION","to":"AVAILABLE","source":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","confidence":"HIGH","note":"Regular 4-day pass SAR 219 and Premium 4-day pass SAR 471 are listed as available."}
       ]
     }
   ]
