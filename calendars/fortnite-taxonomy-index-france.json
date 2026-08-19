@@ -1,28 +1,46 @@
 {
   "version":"FORTNITE_TAXONOMY_INDEX_FR_V1",
-  "updated_at":"2026-08-19T05:15:29Z",
+  "updated_at":"2026-08-19T07:12:31Z",
   "derived_from":["fortnite-taxonomy-france.json","fortnite-taxonomy-engine-france.json"],
   "disposable":true,
-  "rules":{
-    "source_of_truth":"Le registre + moteur priment toujours.",
-    "rebuild_on":["ASSIGNMENT_CHANGE","RELATION_CHANGE","ENTITY_CHANGE"],
-    "no_write_if_identical":true
-  },
+  "rules":{"source_of_truth":"Le registre + moteur priment toujours.","rebuild_on":["ASSIGNMENT_CHANGE","RELATION_CHANGE","ENTITY_CHANGE"],"no_write_if_identical":true},
   "strict":{
-    "mode":{"BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai"]},
+    "mode":{
+      "BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"],
+      "RELOAD":["fortnite-reload-elite-ewc-paris-20260819@openai"]
+    },
     "season":{"C7S3":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
-    "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "event_type":{"SEASON_END":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],"GLOBAL_CHAMPIONSHIP":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "theme":{"BATTLE_PASS":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],"FNCS_GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"],"ESPORTS_LIVE":["fortnite-fncs-global-antwerp-20260926@openai"],"TICKETING":["fortnite-fncs-global-antwerp-20260926@openai"]}
+    "competitive_series":{
+      "EWC":["fortnite-reload-elite-ewc-paris-20260819@openai"],
+      "FNCS":["fortnite-fncs-global-antwerp-20260926@openai"],
+      "RELOAD_ELITE_SERIES":["fortnite-reload-elite-ewc-paris-20260819@openai"]
+    },
+    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]},
+    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]},
+    "event_type":{
+      "SEASON_END":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],
+      "GLOBAL_CHAMPIONSHIP":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]
+    },
+    "theme":{
+      "BATTLE_PASS":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"],
+      "FNCS_GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"],
+      "ESPORTS_LIVE":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"],
+      "TICKETING":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]
+    }
   },
   "expanded":{
-    "mode":{"BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai"]},
+    "mode":{
+      "BATTLE_ROYALE":["fortnite-c7s3-runners-battle-pass-end-20260820@openai","fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"],
+      "RELOAD":["fortnite-reload-elite-ewc-paris-20260819@openai"]
+    },
     "chapter":{"CHAPTER_7":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
     "season":{"C7S3":["fortnite-c7s3-runners-battle-pass-end-20260820@openai"]},
-    "competitive_series":{"FNCS":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai"]},
-    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai"]}
+    "competitive_series":{
+      "EWC":["fortnite-reload-elite-ewc-paris-20260819@openai"],
+      "FNCS":["fortnite-fncs-global-antwerp-20260926@openai"],
+      "RELOAD_ELITE_SERIES":["fortnite-reload-elite-ewc-paris-20260819@openai"]
+    },
+    "region":{"GLOBAL":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]},
+    "format":{"DUOS":["fortnite-fncs-global-antwerp-20260926@openai","fortnite-reload-elite-ewc-paris-20260819@openai"]}
   }
 }
