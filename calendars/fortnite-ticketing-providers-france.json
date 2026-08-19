@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TICKETING_PROVIDER_REGISTRY_FR_V2",
-  "updated_at": "2026-08-19T15:44:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Official organizers, venues and ticketing partners for Fortnite physical events in France and Europe",
   "provider_types": ["VENUE_DIRECT","ORGANIZER_DIRECT","OFFICIAL_TICKETING_PARTNER","OFFICIAL_EVENT_PARTNER","REGISTRATION_PLATFORM"],
   "principles": {
@@ -18,12 +18,7 @@
       "type": "VENUE_DIRECT",
       "website": "https://www.lotto-arena.be/",
       "territory": "ANTWERP_BE",
-      "can_confirm": [
-        "VENUE","ADDRESS","ACCESSIBILITY_IF_PUBLISHED","EVENT_ACCESS","PUBLIC_SESSION","VENUE_TIME",
-        "AGE_RULE_IF_PUBLISHED","ID_REQUIREMENT_IF_PUBLISHED","CHECK_IN_IF_PUBLISHED","LAST_ENTRY_IF_PUBLISHED",
-        "REENTRY_IF_PUBLISHED","SECURITY_OR_BAG_RULE_IF_PUBLISHED","QUEUE_RULE_IF_PUBLISHED","VENUE_SPACE_IF_PUBLISHED",
-        "TICKET_STATUS","TICKET_PACKAGE","TICKET_CATEGORY","TICKET_PRICE","WAITING_LIST"
-      ],
+      "can_confirm": ["VENUE","ADDRESS","ACCESSIBILITY_IF_PUBLISHED","EVENT_ACCESS","PUBLIC_SESSION","VENUE_TIME","AGE_RULE_IF_PUBLISHED","ID_REQUIREMENT_IF_PUBLISHED","CHECK_IN_IF_PUBLISHED","LAST_ENTRY_IF_PUBLISHED","REENTRY_IF_PUBLISHED","SECURITY_OR_BAG_RULE_IF_PUBLISHED","QUEUE_RULE_IF_PUBLISHED","VENUE_SPACE_IF_PUBLISHED","TICKET_STATUS","TICKET_PACKAGE","TICKET_CATEGORY","TICKET_PRICE","WAITING_LIST"],
       "cannot_confirm": ["FNCS_FORMAT","GLOBAL_COMPETITIVE_RULES","MATCH_START_FROM_VENUE_OPEN_TIME","EVENT_CAPACITY_FROM_VENUE_CAPACITY"],
       "supports": {"sessions":true,"categories":true,"seatmap":true,"waiting_list":true,"geo":false,"onsite_rules":true,"accessibility":true},
       "status": "ACTIVE"
@@ -34,28 +29,31 @@
       "type": "OFFICIAL_TICKETING_PARTNER",
       "website": "https://www.ticketmaster.be/",
       "territory": "BE",
-      "can_confirm": [
-        "TICKET_AVAILABILITY_FOR_LISTED_EVENT","PRICE_AT_CHECKOUT","SESSION_STATUS","CATEGORY_STATUS","WAITING_LIST",
-        "AGE_RULE_IF_EXPLICIT_ON_EVENT_LISTING","NAMED_TICKET_OR_TRANSFER_RULE_IF_EXPLICIT"
-      ],
+      "can_confirm": ["TICKET_AVAILABILITY_FOR_LISTED_EVENT","PRICE_AT_CHECKOUT","SESSION_STATUS","CATEGORY_STATUS","WAITING_LIST","AGE_RULE_IF_EXPLICIT_ON_EVENT_LISTING","NAMED_TICKET_OR_TRANSFER_RULE_IF_EXPLICIT"],
       "cannot_confirm": ["FORTNITE_COMPETITIVE_SCHEDULE","EVENT_LORE","UNLISTED_SESSION_STATUS","VENUE_ONSITE_RULE_NOT_PUBLISHED_ON_TICKET_LISTING"],
       "supports": {"sessions":true,"categories":true,"seatmap":true,"waiting_list":true,"geo":false,"onsite_rules":false,"accessibility":false},
       "status": "ACTIVE"
     },
     {
       "provider_id": "ewc_paris",
-      "name": "Esports World Cup Paris 2026",
-      "type": "ORGANIZER_DIRECT",
+      "name": "Esports World Cup Paris 2026 preregistration",
+      "type": "REGISTRATION_PLATFORM",
       "website": "https://www.signup.esportsworldcup.com/EWCPARIS26",
       "territory": "PARIS_FR",
-      "can_confirm": [
-        "EVENT_EXISTENCE","TICKET_PREREGISTRATION","VENUE_NAME_WHEN_PUBLISHED","ADDRESS_WHEN_PUBLISHED",
-        "PUBLIC_SESSION_WHEN_PUBLISHED","EVENT_ACCESS_WHEN_PUBLISHED","TICKET_STATUS_WHEN_PUBLISHED",
-        "AGE_RULE_IF_PUBLISHED","ID_REQUIREMENT_IF_PUBLISHED","CHECK_IN_IF_PUBLISHED","LAST_ENTRY_IF_PUBLISHED",
-        "REENTRY_IF_PUBLISHED","ACCESSIBILITY_IF_PUBLISHED","VENUE_SPACE_IF_PUBLISHED"
-      ],
-      "cannot_confirm": ["FORTNITE_EVENT_DATE_UNTIL_PUBLISHED_FOR_FORTNITE","FORTNITE_MATCH_TIME_FROM_GENERIC_EWC_WINDOW","ADMISSION_FROM_GENERIC_NOTIFY_ME_FORM"],
-      "supports": {"sessions":true,"categories":true,"seatmap":false,"waiting_list":false,"geo":false,"onsite_rules":true,"accessibility":true},
+      "can_confirm": ["TICKET_PREREGISTRATION"],
+      "cannot_confirm": ["FORTNITE_EVENT_LOCATION","FORTNITE_EVENT_TICKET_AVAILABILITY","FORTNITE_MATCH_TIME","ADMISSION_FROM_GENERIC_NOTIFY_ME_FORM"],
+      "supports": {"sessions":false,"categories":false,"seatmap":false,"waiting_list":false,"geo":false,"onsite_rules":false,"accessibility":false},
+      "status": "HISTORICAL_SIGNAL"
+    },
+    {
+      "provider_id": "ewc_riyadh",
+      "name": "Esports World Cup — Reload Elite Series Championship at EWC 26",
+      "type": "ORGANIZER_DIRECT",
+      "website": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
+      "territory": "RIYADH_SA",
+      "can_confirm": ["EVENT_EXISTENCE","VENUE","EVENT_DATE","TICKET_STATUS","TICKET_CATEGORY","TICKET_PRICE","EVENT_ACCESS_WHEN_PUBLISHED","AGE_RULE_IF_PUBLISHED","ID_REQUIREMENT_IF_PUBLISHED","CHECK_IN_IF_PUBLISHED","LAST_ENTRY_IF_PUBLISHED","REENTRY_IF_PUBLISHED","ACCESSIBILITY_IF_PUBLISHED","VENUE_SPACE_IF_PUBLISHED"],
+      "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT_BEYOND_PUBLISHED_EVENT_COPY","UNPUBLISHED_MATCH_TIME","UNPUBLISHED_ONSITE_RULE"],
+      "supports": {"sessions":false,"categories":true,"seatmap":false,"waiting_list":false,"geo":false,"onsite_rules":true,"accessibility":true},
       "status": "ACTIVE"
     }
   ],
