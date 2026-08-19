@@ -28,9 +28,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T023700Z
+LAST-MODIFIED:20260819T023700Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -42,6 +42,11 @@ DESCRIPTION:Priorité : ℹ️ Info — produit standard, sans urgence particuli
 URL:https://www.pokecardex.com/forums/viewtopic.php?t=49894
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
 BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Rappel dans 7 jours : 🃏 Pokébox Méga Forces
+END:VALARM
+BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:Rappel demain : 🃏 Pokébox Méga Forces
@@ -49,9 +54,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-etb-30ans-20260906@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:5
+DTSTAMP:20260819T023700Z
+LAST-MODIFIED:20260819T023700Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -64,11 +69,6 @@ LOCATION:En ligne — France
 DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
-BEGIN:VALARM
-TRIGGER:-P30D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 30 jours : 🔥 Précommande ETB 30 ans
-END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -232,9 +232,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-premium-30ans-20261004@openai
-DTSTAMP:20260819T023400Z
-LAST-MODIFIED:20260819T023400Z
-SEQUENCE:5
+DTSTAMP:20260819T023700Z
+LAST-MODIFIED:20260819T023700Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -247,11 +247,6 @@ LOCATION:En ligne — France
 DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
-BEGIN:VALARM
-TRIGGER:-P30D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 30 jours : 🔥 Précommande vague premium 30 ans
-END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -317,9 +312,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260819T022700Z
-LAST-MODIFIED:20260819T022700Z
-SEQUENCE:5
+DTSTAMP:20260819T023700Z
+LAST-MODIFIED:20260819T023700Z
+SEQUENCE:6
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -330,6 +325,11 @@ LOCATION:France
 DESCRIPTION:Priorité : ℹ️ Info — decks standards, sans urgence ou exclusivité identifiée.\nFiabilité : 🟡 À confirmer. Date du 30 octobre 2026 actuellement référencée pour les Decks Combat Mentali-ex et Noctali-ex.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 URL:https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Rappel dans 7 jours : 🃏 Decks Mentali-ex & Noctali-ex
+END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
