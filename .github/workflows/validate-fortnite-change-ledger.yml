@@ -5,12 +5,16 @@ on:
     paths:
       - 'calendars/fortnite-change-ledger.json'
       - 'calendars/fortnite-change-engine-france.json'
+      - 'calendars/fortnite-notification-outbox-france.json'
+      - 'calendars/fortnite-change-index-france.json'
       - 'scripts/validate_fortnite_change_ledger.py'
       - '.github/workflows/validate-fortnite-change-ledger.yml'
   pull_request:
     paths:
       - 'calendars/fortnite-change-ledger.json'
       - 'calendars/fortnite-change-engine-france.json'
+      - 'calendars/fortnite-notification-outbox-france.json'
+      - 'calendars/fortnite-change-index-france.json'
       - 'scripts/validate_fortnite_change_ledger.py'
       - '.github/workflows/validate-fortnite-change-ledger.yml'
   workflow_dispatch:
@@ -23,5 +27,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate change ledger and notification dedupe
+      - name: Validate causal change ledger, outbox and dedupe index
         run: python scripts/validate_fortnite_change_ledger.py
