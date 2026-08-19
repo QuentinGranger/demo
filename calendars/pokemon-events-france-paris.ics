@@ -7,22 +7,17 @@ X-WR-CALNAME:⚡ Pokémon — Événements France & Paris
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20260818
 DTEND;VALUE=DATE:20270104
-SUMMARY:✅ 🎪 Convention / événement — Admirez-les tous !
+SUMMARY:ℹ️ ✅ 🎪 Convention / événement — Admirez-les tous !
 LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris
-DESCRIPTION:Fiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
+DESCRIPTION:Priorité : ℹ️ Info.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
 URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
-CATEGORIES:Pokémon,Événement,Convention
-BEGIN:VALARM
-TRIGGER:-P7D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Admirez-les tous !
-END:VALARM
+CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
@@ -31,22 +26,17 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9d0d150f-a5be-407d-812e-4465301f3d7c@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:TENTATIVE
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
-SUMMARY:🟡 🎪 Convention — Breizh TCG
+SUMMARY:ℹ️ 🟡 🎪 Convention — Breizh TCG
 LOCATION:Saint-Brieuc\, France
-DESCRIPTION:Fiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
+DESCRIPTION:Priorité : ℹ️ Info.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
 URL:https://kyoriyu.fr/pages/evenements-tcg-france
-CATEGORIES:Pokémon,Événement,Convention
-BEGIN:VALARM
-TRIGGER:-P7D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Breizh TCG
-END:VALARM
+CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
@@ -55,22 +45,17 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:TENTATIVE
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-SUMMARY:🟡 🎪 Convention — Lille Card Show
+SUMMARY:ℹ️ 🟡 🎪 Convention — Lille Card Show
 LOCATION:Lille\, France
-DESCRIPTION:Fiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\nSource : https://lillecardshow.fr/
+DESCRIPTION:Priorité : ℹ️ Info.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\nSource : https://lillecardshow.fr/
 URL:https://lillecardshow.fr/
-CATEGORIES:Pokémon,Événement,Convention
-BEGIN:VALARM
-TRIGGER:-P7D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Lille Card Show
-END:VALARM
+CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
@@ -79,118 +64,113 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
-SUMMARY:✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
+SUMMARY:⭐ ✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
 LOCATION:Palais des Expositions\, Nice\, France
-DESCRIPTION:Fiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
+DESCRIPTION:Priorité : ⭐ Important.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
-CATEGORIES:Pokémon,Play! Pokémon,Compétition
+CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🏆 Régionaux Pokémon Nice
+DESCRIPTION:Rappel dans 7 jours : ⭐ Régionaux Pokémon Nice
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🏆 Régionaux Pokémon Nice
+DESCRIPTION:Rappel demain : ⭐ Régionaux Pokémon Nice
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261026
-SUMMARY:✅ 🎪 Convention — Paris Games Week + Gala TCG
+SUMMARY:⭐ ✅ 🎪 Convention — Paris Games Week + Gala TCG
 LOCATION:Paris Expo Porte de Versailles\, Paris
-DESCRIPTION:Fiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
+DESCRIPTION:Priorité : ⭐ Important.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
 URL:https://www.parisgamesweek.com/fr/espaces/gala-tcg
-CATEGORIES:Pokémon,Événement,Convention
+CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Paris Games Week + Gala TCG
+DESCRIPTION:Rappel dans 7 jours : ⭐ Paris Games Week + Gala TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Paris Games Week + Gala TCG
+DESCRIPTION:Rappel demain : ⭐ Paris Games Week + Gala TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9639e861-d366-45a3-bcf5-6816a7d78bf0@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
-SUMMARY:✅ 🎪 Convention — Le Royaume du TCG
+SUMMARY:⭐ ✅ 🎪 Convention — Le Royaume du TCG
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Fiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\nSource : https://www.royaumedutcg.com/
+DESCRIPTION:Priorité : ⭐ Important.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\nSource : https://www.royaumedutcg.com/
 URL:https://www.royaumedutcg.com/
-CATEGORIES:Pokémon,Événement,Convention
+CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Le Royaume du TCG
+DESCRIPTION:Rappel dans 7 jours : ⭐ Le Royaume du TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : 🎪 Le Royaume du TCG
+DESCRIPTION:Rappel demain : ⭐ Le Royaume du TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ed9346e9-9a83-4be1-9376-4f0d7ef4c34f@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
-SUMMARY:✅ 🎪 Événement — Pokémon Day 2027
+SUMMARY:⭐ ✅ 🎪 Événement — Pokémon Day 2027
 LOCATION:France / en ligne
-DESCRIPTION:Fiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.\nSource : https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
+DESCRIPTION:Priorité : ⭐ Important.\nFiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.\nSource : https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
 URL:https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
-CATEGORIES:Pokémon,Événement
+CATEGORIES:Pokémon,Événement,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : Pokémon Day 2027
+DESCRIPTION:Rappel dans 7 jours : ⭐ Pokémon Day 2027
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Rappel demain : Pokémon Day 2027
+DESCRIPTION:Rappel demain : ⭐ Pokémon Day 2027
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:57771081-d189-4102-a78d-68758413cbc7@openai
-DTSTAMP:20260818T212100Z
-LAST-MODIFIED:20260818T212100Z
-SEQUENCE:3
+DTSTAMP:20260819T022100Z
+LAST-MODIFIED:20260819T022100Z
+SEQUENCE:4
 STATUS:TENTATIVE
 DTSTART;VALUE=DATE:20270708
 DTEND;VALUE=DATE:20270712
-SUMMARY:🟡 🎪 Convention — Japan Expo Paris 2027
+SUMMARY:ℹ️ 🟡 🎪 Convention — Japan Expo Paris 2027
 LOCATION:Paris Nord Villepinte\, 93420 Villepinte
-DESCRIPTION:Fiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\nSource : https://paris.japan-expo.com/en
+DESCRIPTION:Priorité : ℹ️ Info.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\nSource : https://paris.japan-expo.com/en
 URL:https://paris.japan-expo.com/en
-CATEGORIES:Pokémon,Événement,Convention
-BEGIN:VALARM
-TRIGGER:-P7D
-ACTION:DISPLAY
-DESCRIPTION:Rappel dans 7 jours : 🎪 Japan Expo Paris 2027
-END:VALARM
+CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
