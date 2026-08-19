@@ -1,6 +1,6 @@
 {
   "version":"FORTNITE_TICKETING_INTELLIGENCE_FR_V1",
-  "updated_at":"2026-08-19T05:22:27Z",
+  "updated_at":"2026-08-19T07:12:31Z",
   "scope":"Fortnite events relevant to France/Europe",
   "states":["NOT_ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
   "transitions":["PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_TICKET_CATEGORY","SALE_CLOSED","CANCELLED"],
@@ -32,6 +32,24 @@
         {"at":"2026-08-19T05:03:00Z","type":"SALE_OPENED","to":"ON_SALE","source":"Lotto Arena event page"},
         {"at":"2026-08-19T05:15:29Z","type":"NEW_TICKET_CATEGORY","category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","to":"AVAILABLE","price_eur":324.70,"source":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1","confidence":"HIGH"},
         {"at":"2026-08-19T05:22:27Z","type":"WAITLIST_OPENED","from":"ON_SALE","to":"WAITLIST","source":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be","confidence":"HIGH","note":"Ticketmaster affiche WAITING LIST ; ne pas interpréter comme SOLD_OUT. La page de liste d'attente précise que des billets peuvent redevenir disponibles."}
+      ]
+    },
+    {
+      "event_uid":"fortnite-reload-elite-ewc-paris-20260819@openai",
+      "provider_id":"ewc_paris",
+      "source_id":"ewc_official",
+      "status":"PREREGISTRATION",
+      "evidence_grade":"A",
+      "confidence":"HIGH",
+      "scarcity_evidence":"UNKNOWN",
+      "ticket_scope":"EWC_PARIS_GENERAL",
+      "fortnite_specific_ticket_info":false,
+      "waiting_list_available":false,
+      "ticket_url":"https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "last_verified_at":"2026-08-19T07:12:31Z",
+      "last_changed_at":"2026-08-19T07:12:31Z",
+      "history":[
+        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Préinscription générale EWC Paris pour être averti lorsque les billets seront disponibles ; aucune billetterie Fortnite spécifique publiée."}
       ]
     }
   ]
