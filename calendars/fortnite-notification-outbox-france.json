@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-19T19:02:07Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -71,7 +71,7 @@
     {
       "intent_id": "nti_ed0b51ad60241c9af0b03ee3",
       "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
-      "change_ids": ["chg_4d847a615cf7fd9ee9306579","chg_558e71ff655403f489e782fd","chg_ceb30c82d0bcb7360d8cf0a7","chg_d7bb61401fb80414535e4338"],
+      "change_ids": ["chg_4d847a615cf7fd9ee9306579", "chg_558e71ff655403f489e782fd", "chg_ceb30c82d0bcb7360d8cf0a7", "chg_d7bb61401fb80414535e4338"],
       "notice_kind": "EWC_LOCATION_CORRECTION_AND_TICKETS_AVAILABLE",
       "audience_key": "user",
       "channel_key": "chat",
@@ -81,7 +81,7 @@
       "subject_key": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "locale": "fr-FR",
       "payload_snapshot": "Correction importante : le Reload Elite Series Championship EWC 2026 est à Boulevard City, Riyad, et les billets sont disponibles à 219 SAR (Regular) et 471 SAR (Premium).",
-      "condition_snapshot": {"ticket_status":"AVAILABLE","venue":"Boulevard City","city":"Riyadh","event_live":true},
+      "condition_snapshot": {"ticket_status": "AVAILABLE", "venue": "Boulevard City", "city": "Riyadh", "event_live": true},
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
     }
   ],
@@ -94,10 +94,23 @@
       "at": "2026-08-19T18:12:23Z",
       "reservation_id": "nrs_87294a99c6ad6bf0226bd234",
       "note": "Reserved after fresh outbox read and exact EWC event-source correction. This reservation consumes the key even if final delivery acknowledgement cannot be persisted."
+    },
+    {
+      "delivery_event_id": "nde_ceb4c92a3df245c168b61717",
+      "intent_id": "nti_ed0b51ad60241c9af0b03ee3",
+      "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
+      "state": "UNKNOWN_DELIVERY",
+      "at": "2026-08-19T19:02:07Z",
+      "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
+      "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
     }
   ],
   "consumed_keys": {
-    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {"intent_id":"nti_ed0b51ad60241c9af0b03ee3","state":"RESERVED","last_event_id":"nde_95e876d4f72128dc579ed06f"}
+    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {
+      "intent_id": "nti_ed0b51ad60241c9af0b03ee3",
+      "state": "UNKNOWN_DELIVERY",
+      "last_event_id": "nde_ceb4c92a3df245c168b61717"
+    }
   },
   "group_index": {},
   "history": [
@@ -111,6 +124,12 @@
       "type": "NOTIFICATION_RESERVED",
       "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
       "note": "One coalesced notification reserved for the EWC location correction and live ticket availability."
+    },
+    {
+      "at": "2026-08-19T19:02:07Z",
+      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
+      "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
+      "note": "Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
     }
   ]
 }
