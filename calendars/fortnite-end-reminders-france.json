@@ -1,25 +1,31 @@
 {
   "version":"FORTNITE_DEADLINE_INTELLIGENCE_FR_V1",
-  "updated_at":"2026-08-19T09:35:00Z",
+  "updated_at":"2026-08-19T09:41:32Z",
   "scope":"Fortnite — échéances de fin, billetterie, compétitif et événements limités",
   "principles":{
     "deadline_not_end_only":"La vraie échéance peut être fin de vente, dernière session, inscription, check-in, qualification ou dernière date publique.",
     "no_scarcity_inference":"Fin prochaine ne signifie jamais dernières places.",
     "extension_recalculates":"Toute prolongation ou nouvelle session finale recalcule les notices.",
     "quiet_hours":"Notices non urgentes entre 21:00 et 09:00 Europe/Paris sont différées vers 09:00.",
-    "competitive_bridge":"Les deadlines compétitives exactes proviennent de fortnite-competitive-ledger-france.json ; une petite cup peut rester absente du .ics tout en ayant une deadline actionnable dans ce ledger."
+    "competitive_bridge":"Les timestamps canoniques viennent du ledger compétitif V1 ; le moteur compétitif V2 détermine la sémantique qualification/actionnabilité. Une petite cup peut rester absente du .ics tout en ayant une deadline actionnable."
   },
   "linked_ledgers":{
-    "competitive_intelligence":"fortnite-competitive-ledger-france.json"
+    "competitive_intelligence":"fortnite-competitive-ledger-france.json",
+    "competitive_engine":"fortnite-competitive-engine-france.json",
+    "competitive_index":"fortnite-competitive-index-france.json"
   },
   "deadline_types":["LAST_TICKET_SALE_AT","LAST_PUBLIC_SESSION_AT","LAST_PUBLIC_DATE","LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT","BATTLE_PASS_END_DATE"],
   "competitive_deadline_policy":{
-    "source_of_truth":"FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
+    "canonical_data_source":"FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
+    "semantic_engine":"FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "exact_only":true,
     "allowed_types":["LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT"],
-    "hidden_session_allowed":"Une compétition/session LEDGER_ONLY peut générer une deadline si l'action utilisateur est concrète et l'heure est officiellement publiée.",
-    "dedupe_key":"competition_id + phase_id + deadline_type + deadline_at",
-    "no_guess":"Ne jamais déduire une fermeture d'inscription depuis l'heure de début de tournoi sauf règle officielle explicite."
+    "hidden_session_allowed":"Une compétition/session LEDGER_ONLY peut générer une deadline si l'action est concrète et l'heure officiellement publiée.",
+    "last_qualifier_rule":"LAST_QUALIFIER_AT correspond à la dernière session officielle qui alimente réellement une target via un edge QUALIFIES_TO/FEEDS_INTO suffisamment confirmé ; ce n'est pas la fin générique de la compétition.",
+    "graph_confidence_required":["EXPLICIT","STRONG_OFFICIAL_CROSS_REFERENCE"],
+    "session_start_rule":"SESSION_START_AT peut servir de source de rappel compétitif mais n'est pas un deadline_type de fin.",
+    "dedupe_key":"competition_id + phase_id + session_id-or-null + deadline_type + deadline_at",
+    "no_guess":"Ne jamais déduire fermeture d'inscription, check-in ou qualification depuis l'heure de début/fin générique sans règle officielle."
   },
   "entries":[
     {
