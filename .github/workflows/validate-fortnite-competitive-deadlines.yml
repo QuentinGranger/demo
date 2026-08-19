@@ -1,0 +1,30 @@
+name: Validate Fortnite competitive deadlines
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-competitive-ledger-france.json'
+      - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-participants-france.json'
+      - 'calendars/fortnite-end-reminders-france.json'
+      - 'scripts/validate_fortnite_competitive_deadlines.py'
+      - '.github/workflows/validate-fortnite-competitive-deadlines.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-competitive-ledger-france.json'
+      - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-participants-france.json'
+      - 'calendars/fortnite-end-reminders-france.json'
+      - 'scripts/validate_fortnite_competitive_deadlines.py'
+      - '.github/workflows/validate-fortnite-competitive-deadlines.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate competitive deadline lifecycle
+        run: python scripts/validate_fortnite_competitive_deadlines.py
