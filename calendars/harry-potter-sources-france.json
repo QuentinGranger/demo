@@ -1,6 +1,6 @@
 {
   "version": "SOURCE_REGISTRY_FR_V1",
-  "updated_at": "2026-08-19T04:05:00Z",
+  "updated_at": "2026-08-19T04:10:00Z",
   "scope": "Harry Potter / Wizarding World — France, priorité Paris/Île-de-France",
   "rules": {
     "calendar_threshold": "Une source ne crée un VEVENT que si elle fournit une date exacte, une heure exacte, une période datée exploitable, ou une disponibilité/action réellement datée.",
@@ -10,9 +10,11 @@
       "OFFICIAL_PUBLISHER_MANUFACTURER",
       "OFFICIAL_ORGANIZER_TICKETING",
       "DIRECT_RETAILER",
+      "DISCOVERY_ONLY",
       "SPECIALIST_SECONDARY"
     ],
-    "rumors": "Rumeurs, leaks, fan accounts non sourcés et datamining sont exclus du calendrier."
+    "rumors": "Rumeurs, leaks, fan accounts non sourcés et datamining sont exclus du calendrier.",
+    "discovery_rule": "Une source DISCOVERY_ONLY peut signaler un candidat mais ne suffit pas seule pour un événement si une source directement responsable peut être retrouvée."
   },
   "sources": [
     {
@@ -20,6 +22,22 @@
       "type": "OFFICIAL_FRANCHISE",
       "url": "https://www.harrypotter.com/news",
       "coverage": ["Back to Hogwarts", "25e anniversaire", "films", "série HBO", "livres", "jeux", "expériences", "merchandising officiel"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "HarryPotter.com — Games",
+      "type": "OFFICIAL_FRANCHISE",
+      "url": "https://www.harrypotter.com/games",
+      "coverage": ["Portkey Games", "jeux vidéo", "mises à jour", "nouveaux jeux Wizarding World"],
+      "status": "ACTIVE",
+      "priority": 1
+    },
+    {
+      "name": "Warner Bros. Games",
+      "type": "OFFICIAL_STUDIO_PLATFORM",
+      "url": "https://warnerbrosgames.com/",
+      "coverage": ["jeux Harry Potter", "Portkey Games", "dates de sortie", "plateformes", "précommandes"],
       "status": "ACTIVE",
       "priority": 1
     },
@@ -128,6 +146,30 @@
       "priority": 1
     },
     {
+      "name": "Pathé France",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.pathe.fr/",
+      "coverage": ["ressorties cinéma", "séances anniversaire", "marathons", "avant-premières"],
+      "status": "ACTIVE",
+      "priority": 2
+    },
+    {
+      "name": "UGC France",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.ugc.fr/",
+      "coverage": ["ressorties cinéma", "séances spéciales", "marathons", "avant-premières"],
+      "status": "ACTIVE",
+      "priority": 2
+    },
+    {
+      "name": "CGR Cinémas",
+      "type": "OFFICIAL_ORGANIZER_TICKETING",
+      "url": "https://www.cgrcinemas.fr/",
+      "coverage": ["ressorties cinéma", "séances spéciales", "événements Harry Potter régionaux"],
+      "status": "ACTIVE",
+      "priority": 2
+    },
+    {
       "name": "Fnac — Harry Potter",
       "type": "DIRECT_RETAILER",
       "url": "https://www.fnac.com/l489657/Nouveautes-Harry-Potter/Harry-Potter",
@@ -136,12 +178,20 @@
       "priority": 2
     },
     {
-      "name": "Réseau de salles et organisateurs français",
-      "type": "OFFICIAL_ORGANIZER_TICKETING",
-      "url": "https://www.u-play.fr/",
-      "coverage": ["Zéniths", "arenas", "théâtres", "cinémas", "conventions", "petits événements officiels"],
+      "name": "Fnac Spectacles",
+      "type": "DISCOVERY_ONLY",
+      "url": "https://www.fnacspectacles.com/",
+      "coverage": ["spectacles", "concerts", "ciné-concerts", "conventions", "petits événements français"],
       "status": "DISCOVERY_CONTINUOUS",
-      "priority": 2
+      "priority": 3
+    },
+    {
+      "name": "Réseau de salles et organisateurs français",
+      "type": "DISCOVERY_ONLY",
+      "url": "https://www.u-play.fr/",
+      "coverage": ["Zéniths", "arenas", "théâtres", "cinémas", "conventions", "petits événements officiels", "événements régionaux"],
+      "status": "DISCOVERY_CONTINUOUS",
+      "priority": 3
     }
   ]
 }
