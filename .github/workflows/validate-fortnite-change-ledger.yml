@@ -1,0 +1,27 @@
+name: Validate Fortnite change ledger
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-change-ledger.json'
+      - 'calendars/fortnite-change-engine-france.json'
+      - 'scripts/validate_fortnite_change_ledger.py'
+      - '.github/workflows/validate-fortnite-change-ledger.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-change-ledger.json'
+      - 'calendars/fortnite-change-engine-france.json'
+      - 'scripts/validate_fortnite_change_ledger.py'
+      - '.github/workflows/validate-fortnite-change-ledger.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate change ledger and notification dedupe
+        run: python scripts/validate_fortnite_change_ledger.py
