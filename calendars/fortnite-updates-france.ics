@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//OpenAI//Fortnite Calendars//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:🎮 Fortnite — Saisons, mises à jour & collabs
+X-WR-TIMEZONE:Europe/Paris
+X-FORTNITE-SOURCE-REGISTRY:fortnite-sources-france.json
+X-FORTNITE-WATCHLIST:fortnite-watchlist-france.json
+X-FORTNITE-TAXONOMY-REGISTRY:fortnite-taxonomy-france.json
+X-FORTNITE-TAXONOMY-ENGINE:fortnite-taxonomy-engine-france.json
+X-FORTNITE-TAXONOMY-INDEX:fortnite-taxonomy-index-france.json
+X-FORTNITE-CHANGE-POLICY:UID_STABLE_AUDIT_V1
+X-FORTNITE-FRESHNESS-POLICY:NEW5D_UPDATE3D_V1
+END:VCALENDAR
