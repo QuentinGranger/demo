@@ -1,0 +1,43 @@
+name: One-off Pokémon ICS fix 2026-08-19
+
+on:
+  push:
+    paths:
+      - '.github/workflows/oneoff-pokemon-20260819-fix.yml'
+      - 'scripts/oneoff_pokemon_20260819_fix.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply escaping correction
+        run: python scripts/oneoff_pokemon_20260819_fix.py
+      - name: Validate permanent calendar health
+        run: python scripts/validate_calendar_health.py
+      - name: Reject bare continuation lines in changed Pokémon events
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          bad_prefixes = ('Fiabilité :','📦','🛒','✨ Mise','Rappels :','Source officielle','Source date','🎁','📍 France','🆕 Ajouté','Source :')
+          for fn in ['calendars/pokemon-tcg-france.ics','calendars/pokemon-events-france-paris.ics','calendars/pokemon-paris.ics']:
+              for i,line in enumerate(Path(fn).read_text(encoding='utf-8').splitlines(),1):
+                  if line.startswith(bad_prefixes):
+                      raise SystemExit(f'{fn}:{i}: bare DESCRIPTION continuation: {line}')
+          print('OK: DESCRIPTION escapes preserved')
+          PY
+      - name: Commit calendars and remove one-off files
+        run: |
+          git config user.name 'OpenAI Calendar Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm scripts/oneoff_pokemon_20260819_fix.py .github/workflows/oneoff-pokemon-20260819-fix.yml
+          git add calendars/pokemon-paris.ics calendars/pokemon-tcg-france.ics calendars/pokemon-events-france-paris.ics
+          git commit -m 'fix: preserve Pokémon ICS description escaping'
+          git push
