@@ -1,21 +1,60 @@
 {
-  "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V1",
+  "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_watchdog_check_at": "2026-08-19T16:10:00Z",
+  "last_observer_check_at": "2026-08-19T16:54:00Z",
   "last_deep_check_at": "2026-08-19T16:10:00Z",
   "heartbeat_max_age_hours": 30,
-  "watchdog": "Calendriers Fortnite France & Europe",
+  "observer_title": "MANUAL_POLICY_MIGRATION",
+  "migration_bootstrap": true,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
   "repository_reachable": true,
   "pinned_branch_reachable": true,
   "verified_ics_path_count": 9,
+  "healthy_observer_count": 2,
+  "minimum_required_observers": 2,
   "automation_snapshot": {
-    "Calendriers Fortnite France & Europe": {"enabled": true, "recurrence": "HOURLY", "finite": false, "liveness": "HEALTHY"},
-    "Calendriers Harry Potter France & Paris": {"enabled": true, "recurrence": "DAILY", "finite": false, "liveness": "HEALTHY"},
-    "Billetterie Harry Potter France": {"enabled": true, "recurrence": "HOURLY", "finite": false, "liveness": "HEALTHY"},
-    "Calendriers Pokémon France & Paris": {"enabled": true, "recurrence": "DAILY", "finite": false, "liveness": "FIRST_RUN_NOT_YET_OVERDUE"}
+    "Calendriers Fortnite France & Europe": {
+      "enabled": true,
+      "expected_recurrence": "HOURLY",
+      "observed_recurrence": "HOURLY",
+      "finite": false,
+      "timezone": "Europe/Paris",
+      "last_run_time": "2026-08-19T15:03:04.437017Z",
+      "updated_at": "2026-08-19T16:19:13.271140Z",
+      "liveness": "HEALTHY"
+    },
+    "Calendriers Harry Potter France & Paris": {
+      "enabled": true,
+      "expected_recurrence": "DAILY",
+      "observed_recurrence": "DAILY",
+      "finite": false,
+      "timezone": "Europe/Paris",
+      "last_run_time": "2026-08-19T03:56:17.666954Z",
+      "updated_at": "2026-08-19T04:57:27.468637Z",
+      "liveness": "HEALTHY"
+    },
+    "Billetterie Harry Potter France": {
+      "enabled": true,
+      "expected_recurrence": "HOURLY",
+      "observed_recurrence": "HOURLY",
+      "finite": false,
+      "timezone": "Europe/Paris",
+      "last_run_time": "2026-08-19T15:42:08.820266Z",
+      "updated_at": "2026-08-19T15:42:31.305595Z",
+      "liveness": "HEALTHY"
+    },
+    "Calendriers Pokémon France & Paris": {
+      "enabled": true,
+      "expected_recurrence": "DAILY",
+      "observed_recurrence": "DAILY",
+      "finite": false,
+      "timezone": "Europe/Paris",
+      "last_run_time": null,
+      "updated_at": "2026-08-19T03:34:32.049825Z",
+      "liveness": "FIRST_RUN_NOT_YET_OVERDUE"
+    }
   },
   "overall_result": "HEALTHY",
-  "note": "This file is a low-frequency proof of watchdog life, not a source of calendar facts. The watchdog updates it at most once per day after a successful cross-calendar health check; incident state remains in calendar-health-state.json."
+  "note": "V2 heartbeat stores a per-monitor liveness snapshot. Any declared hourly observer may refresh it after a successful cross-check; GitHub Actions validates both heartbeat age and the individual monitor snapshot."
 }
