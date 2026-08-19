@@ -4,12 +4,16 @@ on:
   push:
     paths:
       - 'calendars/fortnite-*.ics'
+      - 'calendars/fortnite-ics-validation.json'
       - 'scripts/validate_fortnite_ics.py'
+      - '.gitattributes'
       - '.github/workflows/validate-fortnite-calendars.yml'
   pull_request:
     paths:
       - 'calendars/fortnite-*.ics'
+      - 'calendars/fortnite-ics-validation.json'
       - 'scripts/validate_fortnite_ics.py'
+      - '.gitattributes'
       - '.github/workflows/validate-fortnite-calendars.yml'
   workflow_dispatch:
 
@@ -28,5 +32,5 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate RFC 5545 and mirrored Fortnite feeds
+      - name: Validate RFC 5545, Apple serialization and mirrored Fortnite feeds
         run: python scripts/validate_fortnite_ics.py
