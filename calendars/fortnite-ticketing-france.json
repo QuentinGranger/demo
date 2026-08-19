@@ -1,8 +1,9 @@
 {
   "version": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T15:18:00Z",
+  "updated_at": "2026-08-19T15:42:00Z",
   "scope": "Fortnite physical events relevant to France and Europe",
   "physical_event_ledger": "calendars/fortnite-physical-events-france.json",
+  "physical_access_ledger": "calendars/fortnite-physical-access-france.json",
   "venue_registry": "calendars/fortnite-venues-france.json",
   "policy": {
     "canonical_key": "event_uid + provider_id + session_key/category_key when granular tracking is useful",
@@ -21,11 +22,14 @@
       "MEDIUM": "Official source but incomplete granularity or event-wide scope.",
       "LOW": "Useful signal only; cannot trigger strong scarcity transition."
     },
+    "inventory_not_admission": "Ticket inventory describes the ticket product only. Admission requirements, age, ID, check-in, re-entry, accessibility and last-entry are canonical in fortnite-physical-access-france.json.",
+    "preregistration_semantics": "PREREGISTRATION is not assumed to grant admission. The access ledger decides whether it is REGISTER_INTEREST or real attendance registration.",
     "global_vs_session": "One SOLD_OUT session never makes a multi-session event globally SOLD_OUT while another known session is AVAILABLE/ON_SALE.",
     "category_rule": "VIP/premium/2-day package sold out never means the entire event is sold out. Keep category_states separate.",
     "waiting_list_rule": "WAITLIST is not automatically SOLD_OUT. Preserve WAITLIST as its own state and notify on BACK_ON_SALE if direct inventory returns.",
     "new_session_rule": "Same physical event/run + new public session keeps event_uid and physical_event_id; add session state and update calendar only when the new session changes attendance planning.",
     "price_rule": "Track direct published min/max/category prices. A missing cheaper category is not automatically a general price rise.",
+    "capacity_rule": "Ticket inventory count or venue capacity is stored only when the exact provider explicitly publishes it. Never derive remaining places from a seat map or venue capacity.",
     "check_strategy": {
       "HOT": "Event <=14 days, France/Paris priority, WAITLIST/SOLD_OUT, imminent sale or newly announced access: check each useful hourly run.",
       "WARM": "15–60 days: at most every 6h unless a recent material signal exists.",
@@ -40,6 +44,7 @@
     "policy_header": "X-FORTNITE-TICKETING-POLICY:FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
     "ledger_header": "X-FORTNITE-TICKETING-LEDGER:fortnite-ticketing-france.json",
     "physical_ledger_header": "X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json",
+    "access_ledger_header": "X-FORTNITE-PHYSICAL-ACCESS-LEDGER:fortnite-physical-access-france.json",
     "status": "X-FORTNITE-TICKET-STATUS",
     "provider_id": "X-FORTNITE-TICKET-PROVIDER-ID",
     "checked": "X-FORTNITE-TICKET-CHECKED-AT",
@@ -78,6 +83,7 @@
       "ticketmaster_url": "https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be",
       "waiting_list_url": "https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be",
       "age_restriction": "16+",
+      "access_profile_id": "fortnite-access-fncs-global-antwerp-2026",
       "last_verified_at": "2026-08-19T05:22:27Z",
       "last_changed_at": "2026-08-19T05:22:27Z",
       "session_states": [
@@ -109,12 +115,14 @@
       "fortnite_specific_ticket_info": false,
       "waiting_list_available": false,
       "ticket_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "access_profile_id": "fortnite-access-ewc-paris-2026",
       "last_verified_at": "2026-08-19T07:12:31Z",
       "last_changed_at": "2026-08-19T07:12:31Z",
       "session_states": [],
       "category_states": [],
       "history": [
-        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"General EWC Paris preregistration to be notified when tickets become available; no Fortnite-specific ticket product published."}
+        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"General EWC Paris preregistration to be notified when tickets become available; no Fortnite-specific ticket product published."},
+        {"at":"2026-08-19T15:42:00Z","type":"ACCESS_SEMANTICS_LINKED","note":"Preregistration remains ticketing PREREGISTRATION but maps to REGISTER_INTEREST in the physical access layer, not guaranteed admission."}
       ]
     }
   ]
