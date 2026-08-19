@@ -1,0 +1,198 @@
+{
+  "version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
+  "updated_at": "2026-08-19T09:41:32Z",
+  "scope": "Fortnite competitive intelligence overlay for exhaustive EU ingestion, qualification graph and selective calendar projection.",
+  "base_ledger": "fortnite-competitive-ledger-france.json",
+  "base_ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
+  "derived_index": "fortnite-competitive-index-france.json",
+  "principles": {
+    "non_breaking_overlay": "Keep all existing competition_id, phase_id, session_id and calendar_uid values from the V1 ledger. V2 adds policy and derived intelligence without rewriting unchanged history.",
+    "ledger_complete_calendar_quiet": "Ingest all sufficiently identified official EU sessions while keeping the visible calendar selective and action-oriented.",
+    "explainable_projection": "Every CALENDAR/FEATURED decision must store explicit reasons; scores are internal aids, not official Epic importance labels.",
+    "qualification_is_graph": "Advancement is represented by directed evidence-backed edges; timing coincidence never creates qualification.",
+    "field_provenance": "Material fields may carry their own source/evidence so a correction can replace one field without downgrading the whole competition.",
+    "derived_rebuildable": "Scores, indexes, conflicts and effective eligibility are rebuildable and never override canonical ledger data."
+  },
+  "identity_v2": {
+    "levels": ["series_id", "edition_id", "competition_id", "phase_id", "session_id"],
+    "series_id": "Recurring circuit/family such as FNCS, CASH_CUP or VICTORY_CUP.",
+    "edition_id": "Officially distinguishable season/year/edition only; never synthesize from date alone.",
+    "competition_id": "One logical tournament instance.",
+    "phase_id": "One logical advancement stage.",
+    "session_id": "One scheduled play window; rescheduling changes timing, not identity.",
+    "alias_policy": "Title/translation/slug changes are aliases/history, never new identity by themselves.",
+    "replacement_policy": "Real replacement uses REPLACED_BY; postponement keeps the same logical identity and schedule history."
+  },
+  "enums": {
+    "registration_state": ["NOT_PUBLISHED", "ANNOUNCED", "OPEN", "CLOSED", "CANCELLED"],
+    "projection_level": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
+    "projection_granularity": ["COMPETITION", "PHASE", "SESSION_ACTION"],
+    "action_type": ["PLAY", "REGISTER", "CHECK_IN", "WATCH", "ATTEND", "FOLLOW"],
+    "graph_node_type": ["COMPETITION", "PHASE", "SESSION", "EXTERNAL_TARGET"],
+    "graph_edge_type": ["QUALIFIES_TO", "FEEDS_INTO", "REQUIRES", "SAME_SERIES_NEXT_INSTANCE", "POSTPONED_TO", "REPLACED_BY"],
+    "edge_confidence": ["EXPLICIT", "STRONG_OFFICIAL_CROSS_REFERENCE", "UNKNOWN"],
+    "schedule_presence": ["PRESENT", "MISSING_ONCE", "MISSING_REPEATEDLY", "REMOVED_CONFIRMED"],
+    "projection_override": ["AUTO", "FORCE_LEDGER_ONLY", "FORCE_CALENDAR", "FORCE_FEATURED"]
+  },
+  "series_policy": {
+    "known_families": {
+      "FNCS": "CALENDAR",
+      "RELOAD_ELITE_SERIES": "CALENDAR",
+      "CASH_CUP": "LEDGER_ONLY",
+      "VICTORY_CUP": "LEDGER_ONLY",
+      "RANKED_CUP": "LEDGER_ONLY",
+      "PERFORMANCE_EVALUATION": "LEDGER_ONLY",
+      "PLATFORM_CUP": "LEDGER_ONLY",
+      "MOBILE_SERIES": "LEDGER_ONLY",
+      "TEST_CUP": "LEDGER_ONLY"
+    },
+    "recurrence": "Repeated cups get distinct competition_id values but may share series_id/edition_id when officially appropriate.",
+    "anti_merge": "Same title on a different date is not automatically the same competition."
+  },
+  "field_provenance": {
+    "shape": ["value", "source_id", "source_url", "confidence", "observed_at", "source_field"],
+    "material_fields": ["start_at", "end_at", "registration.closes_at", "eligibility", "prize_pool", "qualification", "status"],
+    "resolution": "Use the most field-authoritative official evidence and preserve the previous value in history.",
+    "no_noise": "observed_at alone never causes a commit."
+  },
+  "qualification_graph": {
+    "edge_required": ["edge_id", "from", "to", "type", "confidence", "source_id", "source_url"],
+    "edge_optional": ["slots", "criteria", "rank_range", "points_threshold", "region", "team_format", "notes"],
+    "rules": [
+      "QUALIFIES_TO/FEEDS_INTO are directional and never inferred in reverse.",
+      "UNKNOWN edges cannot drive projection, deadline or notification decisions.",
+      "Targets must resolve to a known node or sourced EXTERNAL_TARGET.",
+      "Advancement cycles are invalid; SAME_SERIES_NEXT_INSTANCE is exempt.",
+      "Global prize data never proves regional qualification slots.",
+      "Global schedule graph never claims a specific player/team qualified without a participant-specific evidence layer."
+    ],
+    "validation": ["NO_ADVANCEMENT_CYCLE", "TARGET_EXISTS_OR_EXTERNAL", "REGION_COMPATIBLE_OR_EXPLICIT_GLOBAL", "SLOTS_NONNEGATIVE_IF_KNOWN"]
+  },
+  "registration_lifecycle": {
+    "states": ["NOT_PUBLISHED", "ANNOUNCED", "OPEN", "CLOSED", "CANCELLED"],
+    "fields": ["opens_at", "closes_at", "check_in_at", "method", "url", "required", "source_id", "source_url", "confidence"],
+    "rules": [
+      "Never use session start as registration close unless official rules explicitly say so.",
+      "Check-in is distinct from registration and can have its own deadline.",
+      "Phase/session registration overrides competition defaults only inside that scope.",
+      "Unknown registration data stays unknown."
+    ]
+  },
+  "schedule_revision": {
+    "fields": ["schedule_revision", "schedule_fingerprint", "last_material_schedule_change_at"],
+    "fingerprint": ["competition_id", "phase_id", "session_id", "status", "start_at", "end_at", "region", "ruleset", "team_format", "platform_scope"],
+    "rules": [
+      "Increment only for material schedule changes.",
+      "Translation, checked_at and source fetch timestamps do not change revision.",
+      "Rescheduled session keeps session_id and records previous timing.",
+      "Never silently delete a session missing from one crawl."
+    ],
+    "missing_guard": {
+      "first_absence": "MISSING_ONCE: retain prior state silently.",
+      "repeated_absence": "MISSING_REPEATEDLY: investigate event page.",
+      "confirmed_removal": "REMOVED_CONFIRMED only with direct or persistently unambiguous official evidence."
+    }
+  },
+  "projection_engine": {
+    "score_range": [0, 100],
+    "score_is_internal": true,
+    "thresholds": {"CALENDAR": 45, "FEATURED": 75},
+    "positive_signals": {
+      "TOP_TIER_FNCS_GLOBAL": 40,
+      "OFFICIAL_LAN_FR_EU": 30,
+      "MAJOR_QUALIFICATION_CONSEQUENCE": 25,
+      "ACTIONABLE_REGISTRATION_OR_CHECKIN": 15,
+      "PLATFORM_OPPORTUNITY": 10,
+      "MAJOR_PRIZE_250K_USD_EQUIV": 20,
+      "LARGE_PRIZE_50K_USD_EQUIV": 10
+    },
+    "negative_signals": {
+      "TEST_OR_PERFORMANCE": -35,
+      "ROUTINE_RANKED_OR_VICTORY": -25,
+      "REDUNDANT_SIBLING_SESSION": -15,
+      "PAST_COMPLETED_NO_FUTURE_ACTION": -20
+    },
+    "hard_rules": [
+      "Official FNCS Global Championship or equivalent top-tier global championship => FEATURED.",
+      "Official Fortnite LAN/in-person event in France => FEATURED unless cancelled.",
+      "UNKNOWN/DATE_ONLY session time cannot become an exact timed SESSION_ACTION VEVENT.",
+      "Routine test/performance sessions stay LEDGER_ONLY unless a separate hard promotion reason exists.",
+      "Already projected POSTPONED/CANCELLED events keep their UID for continuity."
+    ],
+    "override_fields": ["projection_override", "projection_override_reason", "projection_override_source_id"],
+    "explainability_fields": ["projection_score", "projection_signals", "projection_level", "projection_granularity", "projection_reason"],
+    "currency_rule": "Prize thresholds are ranking aids only; convert only with trusted contemporaneous FX data, otherwise omit prize-score."
+  },
+  "projection_granularity": {
+    "default": "COMPETITION",
+    "COMPETITION": "One VEVENT for a logical tournament/run with nested sessions.",
+    "PHASE": "Use when phases have materially separate dates/actions and one card would hide planning value.",
+    "SESSION_ACTION": "Use only for a distinct registration/check-in/qualifier/final action with reliable timing.",
+    "anti_bazar": "Never create one VEVENT per game/match."
+  },
+  "actionability": {
+    "priority": ["REGISTER", "CHECK_IN", "ATTEND", "PLAY", "WATCH", "FOLLOW"],
+    "PLAY": "Playable EU session with reliable time and applicable eligibility.",
+    "REGISTER": "Registration opening/closing action.",
+    "CHECK_IN": "Official check-in action.",
+    "WATCH": "Major competitive event worth following live.",
+    "ATTEND": "Physical event with venue/date logistics.",
+    "FOLLOW": "Important competition without a direct play/attendance action.",
+    "one_card_rule": "A VEVENT can expose one primary action and secondary actions; do not duplicate cards just for action labels."
+  },
+  "conflict_detection": {
+    "scope": "EU sessions with EXACT start/end.",
+    "overlap": "Intervals intersect.",
+    "turnaround_minutes": 15,
+    "conflict_set_key": "<date>:<region>:<ruleset-or-mixed>",
+    "surface_rule": "Persist all conflicts; surface only if at least two conflicting items are CALENDAR/FEATURED or otherwise explicitly actioned.",
+    "no_choice": "Never decide which tournament should be played."
+  },
+  "eligibility_inheritance": {
+    "order": ["session_override", "phase_override", "competition_default", "series_rule_if_explicit"],
+    "rules": [
+      "Only inherit fields explicitly declared applicable to children.",
+      "Never inherit region/platform restrictions from a sibling or another region.",
+      "Unknown child eligibility remains UNKNOWN.",
+      "effective_eligibility is derived; canonical evidence stays at its source level."
+    ]
+  },
+  "deadline_bridge_v2": {
+    "types": ["LAST_REGISTRATION_AT", "LAST_CHECK_IN_AT", "LAST_QUALIFIER_AT", "SESSION_START_AT"],
+    "rules": [
+      "Registration/check-in deadlines can be exported even for LEDGER_ONLY competitions when actionable.",
+      "LAST_QUALIFIER_AT is the last official qualifying session feeding a target, not generic event end.",
+      "SESSION_START_AT is a reminder source, not an end deadline."
+    ],
+    "dedupe_key": "competition_id + phase_id + session_id-or-null + deadline_type + deadline_at"
+  },
+  "result_policy": {
+    "calendar_effect": "Results alone never change DTSTART/DTEND or create a VEVENT.",
+    "qualification_effect": "Results can satisfy an advancement edge only in a participant-specific layer; the global graph remains structural.",
+    "notify": "Only major results or results that materially determine the next projected stage."
+  },
+  "index_contract": {
+    "path": "calendars/fortnite-competitive-index-france.json",
+    "derived_only": true,
+    "facets": ["visibility", "status", "region", "series_id", "competition_class", "ruleset", "team_format", "platform_scope", "date", "action", "deadline_type"],
+    "session_indexes": ["by_exact_date", "by_start_at", "by_conflict_set"],
+    "rebuild_triggers": ["COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "SESSION_ADDED", "SESSION_TIME_CHANGED", "SESSION_CANCELLED", "REGISTRATION_CHANGED", "ELIGIBILITY_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "CALENDAR_PROMOTED", "CALENDAR_DEMOTED", "SOURCE_CORRECTION"],
+    "validation": ["NO_UNKNOWN_COMPETITION_ID", "NO_UNKNOWN_SESSION_ID", "SORTED_DEDUPED_LISTS", "BASE_LEDGER_SHA_MATCH_IF_RECORDED"],
+    "authority": "Index never overrides ledger/engine; rebuild if inconsistent."
+  },
+  "notification_policy_v2": {
+    "notify": ["new FEATURED competition", "promotion caused by major qualification/actionable registration", "registration/check-in deadline added or changed", "time change/postponement/cancellation of projected session", "new final/LCQ/global advancement stage", "major eligibility change", "actionable prize/qualification structure change"],
+    "silent": ["new routine LEDGER_ONLY cup", "simple recheck", "result without future consequence", "score change without level/action change", "identical index rebuild"],
+    "dedupe_key": "competition_id + phase_id + session_id-or-null + transition_type + material_fingerprint",
+    "batch_window_minutes": 10
+  },
+  "ics_mapping_v2": {
+    "headers": ["X-FORTNITE-COMPETITIVE-LEDGER:fortnite-competitive-ledger-france.json", "X-FORTNITE-COMPETITIVE-ENGINE:fortnite-competitive-engine-france.json", "X-FORTNITE-COMPETITIVE-INDEX:fortnite-competitive-index-france.json", "X-FORTNITE-COMPETITIVE-POLICY:FORTNITE_COMPETITIVE_ENGINE_EU_V2"],
+    "properties": ["X-FORTNITE-COMPETITION-ID", "X-FORTNITE-PHASE-ID", "X-FORTNITE-PROJECTION-LEVEL", "X-FORTNITE-PROJECTION-GRANULARITY", "X-FORTNITE-ACTION", "X-FORTNITE-REGION", "X-FORTNITE-RULESET", "X-FORTNITE-FORMAT", "X-FORTNITE-PLATFORM", "X-FORTNITE-REGISTRATION-STATE", "X-FORTNITE-QUALIFIES-TO"],
+    "sequence_rule": "Technical V2 metadata alone never increments SEQUENCE; inject on the next real business write."
+  },
+  "migration": {
+    "mode": "OVERLAY_NON_BREAKING",
+    "rules": ["Never rename existing IDs.", "Existing visibility is initial projection_level until V2 evaluation.", "Existing calendar_uid remains stable.", "Existing history stays append-only.", "Derived V2 fields need not be materialized on unchanged historical entries."]
+  }
+}
