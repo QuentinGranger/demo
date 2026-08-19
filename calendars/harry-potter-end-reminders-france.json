@@ -1,0 +1,108 @@
+{
+  "version": "END_REMINDER_POLICY_FR_V1",
+  "updated_at": "2026-08-19T04:42:00Z",
+  "scope": "Harry Potter / Wizarding World — rappels de fin France, priorité Paris/Île-de-France",
+  "purpose": "Ajouter des rappels avant la fin des expositions, pop-ups, expériences, spectacles et runs limités, sans confondre fin prochaine et rareté de billets.",
+  "principles": {
+    "start_vs_end": "Les rappels de fin sont indépendants des rappels de début.",
+    "scarcity_guard": "ENDING_SOON/LAST_SHOW ne signifie jamais LOW_AVAILABILITY/NEARLY_SOLD_OUT. Le texte 'dernières places' exige une preuve directe de billetterie.",
+    "uid_stability": "Une prolongation conserve le même UID et recalcule toutes les échéances de fin sur la nouvelle date.",
+    "no_past_alarm": "Ne jamais ajouter d'alarme déjà passée.",
+    "dedupe": "Clé anti-spam = event_uid + end_date + notice_type + trigger_date.",
+    "cancelled": "Annulation => supprimer/désactiver les rappels de fin futurs.",
+    "sold_out": "SOLD_OUT global => supprimer les rappels génériques orientés achat, sauf WAITLIST/BACK_ON_SALE ou information de dernière représentation utile.",
+    "ended": "ENDED => aucune alerte de fin supplémentaire.",
+    "extension": "RUN_EXTENDED => invalider les anciennes échéances de fin non encore envoyées et recalculer sur la nouvelle last_public_date.",
+    "language": "Sans preuve de rareté, utiliser 'fin prochaine', 'dernière semaine', 'derniers jours', 'dernier week-end' ou 'dernière journée' — jamais 'dernières places'."
+  },
+  "eligible_event_types": [
+    "EXHIBITION",
+    "POPUP",
+    "EXPERIENCE",
+    "THEATRE",
+    "CINE_CONCERT",
+    "CONCERT",
+    "CONVENTION",
+    "RETAIL_LAUNCH",
+    "SCREENING_SPECIAL",
+    "ANNIVERSARY_SCREENING"
+  ],
+  "profiles": {
+    "LONG_RUN": {
+      "criteria": "durée publique >= 30 jours",
+      "notices": [
+        {"type": "ENDING_SOON", "days_before_last_public_date": 14, "label": "Plus que 2 semaines"},
+        {"type": "FINAL_DAYS", "days_before_last_public_date": 3, "label": "Derniers jours"}
+      ]
+    },
+    "MEDIUM_RUN": {
+      "criteria": "durée publique 8 à 29 jours",
+      "notices": [
+        {"type": "ENDING_SOON", "days_before_last_public_date": 7, "label": "Dernière semaine"},
+        {"type": "FINAL_DAYS", "days_before_last_public_date": 2, "label": "Derniers jours"}
+      ]
+    },
+    "SHORT_RUN": {
+      "criteria": "durée publique 2 à 7 jours",
+      "notices": [
+        {"type": "LAST_DAY", "days_before_last_public_date": 0, "label": "Dernière journée aujourd'hui"}
+      ]
+    },
+    "SINGLE_DAY": {
+      "criteria": "1 seule journée",
+      "notices": [],
+      "reason": "Le rappel de début suffit ; éviter une alerte de fin redondante."
+    },
+    "CRITICAL_LIMITED": {
+      "criteria": "pop-up/activation très limitée ou priorité CRITICAL avec au moins 2 jours publics",
+      "notices": [
+        {"type": "LAST_CHANCE_WINDOW", "days_before_last_public_date": 1, "label": "Dernière chance demain"},
+        {"type": "LAST_DAY", "days_before_last_public_date": 0, "label": "Dernière journée aujourd'hui"}
+      ],
+      "rule": "Utiliser ce profil à la place de SHORT/MEDIUM seulement si l'action est réellement limitée et encore possible."
+    }
+  },
+  "ticketing_interaction": {
+    "LOW_AVAILABILITY": "Peut coexister avec une alerte de fin, mais les deux notions restent distinctes.",
+    "NEARLY_SOLD_OUT": "La notification peut combiner 'fin prochaine' + 'presque complet' uniquement si les deux sont prouvés séparément.",
+    "SOLD_OUT": "Ne pas envoyer une alerte générique 'réserve avant la fin'. Conserver éventuellement LAST_SHOW informatif ou WAITLIST si utile.",
+    "BACK_ON_SALE": "Réactive les rappels de fin encore futurs si l'événement n'est pas terminé.",
+    "WAITLIST": "Une alerte de fin peut mentionner la liste d'attente si elle existe officiellement."
+  },
+  "ics_policy": {
+    "header": "X-HARRYPOTTER-END-REMINDER-POLICY:END_REMINDER_POLICY_FR_V1",
+    "profile_property": "X-HARRYPOTTER-END-REMINDER-PROFILE",
+    "last_public_date_property": "X-HARRYPOTTER-LAST-PUBLIC-DATE",
+    "notice_state_property": "X-HARRYPOTTER-END-NOTICE-STATE",
+    "recommended_valarm": "Quand le VEVENT est réellement modifié pour une raison métier, ajouter les VALARM de fin éligibles. Pour les all-day runs dont DTEND est exclusif, calculer les déclencheurs à partir de LAST-PUBLIC-DATE plutôt que de supposer que DTEND est inclusif.",
+    "sequence_rule": "L'ajout d'une politique/en-tête seul ne doit pas augmenter SEQUENCE. L'ajout d'un nouveau rappel de fin à une fiche existante peut être appliqué lors de la prochaine modification métier de cette fiche, ou immédiatement si une échéance utile approche."
+  },
+  "current_profiles": [
+    {
+      "event_uid": "hp-potted-potter-paris-20261017@openai",
+      "profile": "LONG_RUN",
+      "last_public_date": "2027-01-17",
+      "planned_notices": [
+        {"type": "ENDING_SOON", "trigger_date": "2027-01-03", "label": "Potted Potter — plus que 2 semaines à Paris"},
+        {"type": "FINAL_DAYS", "trigger_date": "2027-01-14", "label": "Potted Potter — derniers jours à Paris"}
+      ]
+    },
+    {
+      "event_uid": "hp-cine-concert-philosophers-stone-paris-20261104@openai",
+      "profile": "SHORT_RUN",
+      "last_public_date": "2026-11-08",
+      "planned_notices": [
+        {"type": "LAST_DAY", "trigger_date": "2026-11-08", "label": "Ciné-concert Harry Potter — dernière journée au Grand Rex"}
+      ]
+    },
+    {
+      "event_uid": "hp-lego-store-hogwarts-express-paris-20260906@openai",
+      "profile": "CRITICAL_LIMITED",
+      "last_public_date": "2026-09-07",
+      "planned_notices": [
+        {"type": "LAST_CHANCE_WINDOW", "trigger_date": "2026-09-06", "label": "LEGO Harry Potter So Ouest — dernière session demain"},
+        {"type": "LAST_DAY", "trigger_date": "2026-09-07", "label": "LEGO Harry Potter So Ouest — dernière session aujourd'hui"}
+      ]
+    }
+  ]
+}
