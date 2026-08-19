@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-19T09:35:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -18,12 +18,7 @@
     "phase_id_pattern": "<competition_id>:<phase-key>",
     "session_id_pattern": "<phase_id>:<region>:<YYYYMMDDTHHMM>:<round-or-slot>",
     "calendar_uid_policy": "Only projected logical events get a VEVENT UID. Hidden sessions keep stable ledger IDs without creating calendar UIDs.",
-    "dedupe_order": [
-      "same official session/event id",
-      "same official event URL + region + exact start",
-      "same competition_id + phase + region + exact start + format + round label",
-      "otherwise keep separate until evidence supports merge"
-    ]
+    "dedupe_order": ["same official session/event id","same official event URL + region + exact start","same competition_id + phase + region + exact start + format + round label","otherwise keep separate until evidence supports merge"]
   },
   "enums": {
     "competition_status": ["ANNOUNCED", "REGISTRATION_OPEN", "SCHEDULED", "LIVE", "COMPLETED", "POSTPONED", "CANCELLED"],
@@ -41,47 +36,19 @@
   },
   "schema": {
     "competition_required": ["competition_id", "name", "competition_class", "status", "regions", "visibility", "source_ids", "phases", "history"],
-    "competition_fields": [
-      "official_event_id", "official_event_slug", "series_id", "season_id", "name", "competition_class", "status", "regions", "ruleset", "team_format", "platform_scope", "physical_event", "venue", "date_window", "registration", "eligibility", "prize_pool", "qualification", "visibility", "calendar_uid", "source_ids", "source_urls", "phases", "history"
-    ],
-    "phase_fields": [
-      "phase_id", "name", "phase_type", "order", "status", "registration", "eligibility_override", "qualification_override", "sessions"
-    ],
-    "session_fields": [
-      "session_id", "official_session_id", "name", "session_number", "round_number", "round_label", "status", "region", "ruleset", "team_format", "platform_scope", "start_at", "end_at", "source_timezone", "display_timezone", "time_precision", "registration_deadline_at", "check_in_at", "max_matches", "qualification", "prize", "source_url", "visibility", "calendar_uid", "related_service_event_ids"
-    ],
+    "competition_fields": ["official_event_id", "official_event_slug", "series_id", "season_id", "name", "competition_class", "status", "regions", "ruleset", "team_format", "platform_scope", "physical_event", "venue", "date_window", "registration", "eligibility", "prize_pool", "qualification", "visibility", "calendar_uid", "source_ids", "source_urls", "phases", "history"],
+    "phase_fields": ["phase_id", "name", "phase_type", "order", "status", "registration", "eligibility_override", "qualification_override", "sessions"],
+    "session_fields": ["session_id", "official_session_id", "name", "session_number", "round_number", "round_label", "status", "region", "ruleset", "team_format", "platform_scope", "start_at", "end_at", "source_timezone", "display_timezone", "time_precision", "registration_deadline_at", "check_in_at", "max_matches", "qualification", "prize", "source_url", "visibility", "calendar_uid", "related_service_event_ids"],
     "registration_fields": ["opens_at", "closes_at", "check_in_at", "method", "url", "required", "source_id", "confidence"],
     "eligibility_fields": ["status", "minimum_rank", "account_level", "age_min", "two_factor_required", "region_lock", "platform_requirements", "team_requirements", "other_rules", "rules_url"],
     "prize_fields": ["currency", "total_amount", "region_amount", "session_amount", "distribution", "source_id", "confidence"],
     "qualification_fields": ["type", "from_phase", "to_phase", "slots", "criteria", "tie_break", "source_id", "confidence"]
   },
   "calendar_projection_policy": {
-    "FEATURED": [
-      "FNCS finals/major championship/global championship",
-      "Reload Elite Championship / EWC or equivalent top-tier event",
-      "major official LAN or in-person event in France/Europe",
-      "session with major qualification consequence or user planning value"
-    ],
-    "CALENDAR": [
-      "important EU qualifier/final",
-      "large cash event with meaningful qualification or platform specificity",
-      "registration opening/closing deadline when action is required"
-    ],
-    "LEDGER_ONLY": [
-      "ordinary ranked cups",
-      "routine victory cups",
-      "performance evaluations",
-      "test cups",
-      "repetitive low-stakes sessions unless specifically requested"
-    ],
-    "promotion_signals": [
-      "major prize pool",
-      "qualification to FNCS/global/LAN",
-      "France/Europe physical attendance",
-      "registration deadline",
-      "platform-specific opportunity relevant to the user",
-      "officially elevated tournament status"
-    ],
+    "FEATURED": ["FNCS finals/major championship/global championship","Reload Elite Championship / EWC or equivalent top-tier event","major official LAN or in-person event in France/Europe","session with major qualification consequence or user planning value"],
+    "CALENDAR": ["important EU qualifier/final","large cash event with meaningful qualification or platform specificity","registration opening/closing deadline when action is required"],
+    "LEDGER_ONLY": ["ordinary ranked cups","routine victory cups","performance evaluations","test cups","repetitive low-stakes sessions unless specifically requested"],
+    "promotion_signals": ["major prize pool","qualification to FNCS/global/LAN","France/Europe physical attendance","registration deadline","platform-specific opportunity relevant to the user","officially elevated tournament status"],
     "anti_bazar": "Never create one VEVENT per match/game. Normally project one logical competition phase/run, while retaining every underlying session in the ledger."
   },
   "timezone_policy": {
@@ -90,23 +57,9 @@
     "dst_guard": "Use actual timezone rules for the event date; never apply a fixed UTC offset across DST changes.",
     "ambiguous_time": "If the official page exposes a suspicious 24-hour placeholder/window instead of a reliable session time, store time_precision as DATE_ONLY/DATE_RANGE and do not create an exact calendar time."
   },
-  "deadline_bridge": {
-    "types": ["LAST_REGISTRATION_AT", "LAST_CHECK_IN_AT", "LAST_QUALIFIER_AT"],
-    "rule": "Only exact, officially supported deadlines are exported to the deadline ledger. A tournament may remain LEDGER_ONLY while its registration deadline becomes independently actionable.",
-    "dedupe_key": "competition_id + phase_id + deadline_type + deadline_at"
-  },
-  "history_event_types": [
-    "COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "SESSION_ADDED", "SESSION_TIME_CHANGED", "SESSION_CANCELLED", "SESSION_COMPLETED", "REGISTRATION_OPENED", "REGISTRATION_CHANGED", "ELIGIBILITY_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "CALENDAR_PROMOTED", "CALENDAR_DEMOTED", "SOURCE_CORRECTION"
-  ],
-  "ingestion_policy": {
-    "scope": "EU official schedule plus GLOBAL majors relevant to EU/France",
-    "all_eu_sessions": true,
-    "small_cups_ingested": true,
-    "small_cups_calendar_default": false,
-    "official_schedule_url": "https://www.fortnite.com/competitive/schedule?lang=fr&region=EU",
-    "event_pages": "Use official event-specific pages when they provide richer phase, eligibility, prize or qualification details.",
-    "write_policy": "Do not commit a pure recheck. Write only new/changed competitions, phases, sessions, rules, deadlines, prize/qualification data or projection changes."
-  },
+  "deadline_bridge": {"types":["LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT"],"rule":"Only exact, officially supported deadlines are exported to the deadline ledger. A tournament may remain LEDGER_ONLY while its registration deadline becomes independently actionable.","dedupe_key":"competition_id + phase_id + deadline_type + deadline_at"},
+  "history_event_types": ["COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "SESSION_ADDED", "SESSION_TIME_CHANGED", "SESSION_CANCELLED", "SESSION_COMPLETED", "REGISTRATION_OPENED", "REGISTRATION_CHANGED", "ELIGIBILITY_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "CALENDAR_PROMOTED", "CALENDAR_DEMOTED", "SOURCE_CORRECTION"],
+  "ingestion_policy": {"scope":"EU official schedule plus GLOBAL majors relevant to EU/France","all_eu_sessions":true,"small_cups_ingested":true,"small_cups_calendar_default":false,"official_schedule_url":"https://www.fortnite.com/competitive/schedule?lang=fr&region=EU","event_pages":"Use official event-specific pages when they provide richer phase, eligibility, prize or qualification details.","write_policy":"Do not commit a pure recheck. Write only new/changed competitions, phases, sessions, rules, deadlines, prize/qualification data or projection changes."},
   "competitions": [
     {
       "competition_id": "fncs-global-2026-antwerp",
@@ -122,57 +75,18 @@
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": true,
-      "venue": {
-        "name": "Lotto Arena",
-        "city": "Antwerpen",
-        "country": "Belgium",
-        "address": "Schijnpoortweg 119, Antwerpen, Belgium"
-      },
-      "date_window": {
-        "start_date": "2026-09-26",
-        "end_date": "2026-09-27",
-        "time_precision": "DATE_RANGE"
-      },
+      "venue": {"name":"Lotto Arena","city":"Antwerpen","country":"Belgium","address":"Schijnpoortweg 119, Antwerpen, Belgium"},
+      "date_window": {"start_date":"2026-09-26","end_date":"2026-09-27","time_precision":"DATE_RANGE"},
       "registration": null,
-      "eligibility": {"status": "UNKNOWN"},
-      "prize_pool": {
-        "currency": "USD",
-        "total_amount": 2000000,
-        "region_amount": null,
-        "session_amount": null,
-        "distribution": null,
-        "source_id": "fortnite_competitive",
-        "confidence": "OFFICIAL"
-      },
+      "eligibility": {"status":"UNKNOWN"},
+      "prize_pool": {"currency":"USD","total_amount":2000000,"region_amount":null,"session_amount":null,"distribution":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
       "qualification": null,
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-fncs-global-antwerp-20260926@openai",
-      "source_ids": ["fortnite_competitive", "lotto_arena"],
-      "source_urls": [
-        "https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr",
-        "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"
-      ],
-      "phases": [
-        {
-          "phase_id": "fncs-global-2026-antwerp:championship",
-          "name": "Global Championship",
-          "phase_type": "CHAMPIONSHIP",
-          "order": 1,
-          "status": "SCHEDULED",
-          "registration": null,
-          "eligibility_override": null,
-          "qualification_override": null,
-          "sessions": [],
-          "schedule_completeness": "DATES_ONLY",
-          "venue_time_hints": [
-            {"at": "2026-09-26T14:00:00+02:00", "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"},
-            {"at": "2026-09-27T18:30:00+02:00", "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"}
-          ]
-        }
-      ],
-      "history": [
-        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."}
-      ]
+      "source_ids": ["fortnite_competitive","lotto_arena"],
+      "source_urls": ["https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr","https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"],
+      "phases": [{"phase_id":"fncs-global-2026-antwerp:championship","name":"Global Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATES_ONLY","venue_time_hints":[{"at":"2026-09-26T14:00:00+02:00","status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"},{"at":"2026-09-27T18:30:00+02:00","status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"}]}],
+      "history": [{"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."}]
     },
     {
       "competition_id": "reload-elite-ewc-paris-2026",
@@ -180,7 +94,7 @@
       "official_event_slug": "EWCParis",
       "series_id": "RELOAD_ELITE_SERIES",
       "season_id": null,
-      "name": "Reload Elite Series Championship — EWC Paris 2026",
+      "name": "Reload Elite Series Championship — EWC 2026 — Riyad",
       "competition_class": "RELOAD_ELITE",
       "status": "LIVE",
       "regions": ["GLOBAL"],
@@ -188,47 +102,20 @@
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": true,
-      "venue": {"name": null, "city": "Paris", "country": "France", "address": null},
-      "date_window": {
-        "start_date": "2026-08-19",
-        "end_date": "2026-08-22",
-        "time_precision": "DATE_RANGE"
-      },
+      "venue": {"name":"Boulevard City","city":"Riyadh","country":"Saudi Arabia","address":null},
+      "date_window": {"start_date":"2026-08-19","end_date":"2026-08-22","time_precision":"DATE_RANGE"},
       "registration": null,
-      "eligibility": {"status": "UNKNOWN"},
-      "prize_pool": {
-        "currency": "USD",
-        "total_amount": 1000000,
-        "region_amount": null,
-        "session_amount": null,
-        "distribution": null,
-        "source_id": "fortnite_competitive",
-        "confidence": "OFFICIAL"
-      },
+      "eligibility": {"status":"UNKNOWN"},
+      "prize_pool": {"currency":"USD","total_amount":1000000,"region_amount":null,"session_amount":null,"distribution":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
       "qualification": null,
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "source_ids": ["fortnite_competitive", "ewc_official"],
-      "source_urls": [
-        "https://www.fortnite.com/competitive/events/EWCParis?region=EU",
-        "https://www.signup.esportsworldcup.com/EWCPARIS26"
-      ],
-      "phases": [
-        {
-          "phase_id": "reload-elite-ewc-paris-2026:championship",
-          "name": "Championship",
-          "phase_type": "CHAMPIONSHIP",
-          "order": 1,
-          "status": "LIVE",
-          "registration": null,
-          "eligibility_override": null,
-          "qualification_override": null,
-          "sessions": [],
-          "schedule_completeness": "DATE_RANGE_ONLY"
-        }
-      ],
+      "source_ids": ["fortnite_competitive","ewc_official"],
+      "source_urls": ["https://www.fortnite.com/competitive/events/S39_ReloadEliteSeriesFinal?region=NAC&round=S39_ReloadEliteSeries1Final_NAC","https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26"],
+      "phases": [{"phase_id":"reload-elite-ewc-paris-2026:championship","name":"Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"LIVE","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATE_RANGE_ONLY"}],
       "history": [
-        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."}
+        {"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."},
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","source_id":"ewc_official","note":"Exact EWC ticket page identifies Boulevard City, Riyadh. Multiple Fortnite Competitive qualifier pages also explicitly say the Championship is at EWC in Riyadh, Saudi Arabia. A broader EWC rules paragraph still says Paris; the conflict is preserved in audit while exact event logistics follow the specific ticket page."}
       ]
     },
     {
@@ -246,11 +133,11 @@
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": false,
       "venue": null,
-      "date_window": {"start_date": "2026-08-03", "end_date": "2026-08-14", "time_precision": "DATE_RANGE"},
+      "date_window": {"start_date":"2026-08-03","end_date":"2026-08-14","time_precision":"DATE_RANGE"},
       "registration": null,
-      "eligibility": {"status": "UNKNOWN"},
+      "eligibility": {"status":"UNKNOWN"},
       "prize_pool": null,
-      "qualification": {"type": "ADVANCEMENT", "from_phase": "LCQ", "to_phase": "GLOBAL_CHAMPIONSHIP", "slots": null, "criteria": null, "tie_break": null, "source_id": "fortnite_competitive", "confidence": "PARTIAL"},
+      "qualification": {"type":"ADVANCEMENT","from_phase":"LCQ","to_phase":"GLOBAL_CHAMPIONSHIP","slots":null,"criteria":null,"tie_break":null,"source_id":"fortnite_competitive","confidence":"PARTIAL"},
       "visibility": "LEDGER_ONLY",
       "calendar_uid": null,
       "source_ids": ["fortnite_competitive"],
@@ -275,17 +162,8 @@
           "schedule_completeness": "PARTIAL_SEE_OFFICIAL_SCHEDULE"
         }
       ],
-      "history": [
-        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."}
-      ]
+      "history": [{"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."}]
     }
   ],
-  "watch_targets": [
-    {
-      "watch_id": "fncs-solo-october-2026",
-      "related_candidate_id": "fortnite-fncs-solos-october-2026",
-      "state": "WATCHING",
-      "promotion_rule": "Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."
-    }
-  ]
+  "watch_targets": [{"watch_id":"fncs-solo-october-2026","related_candidate_id":"fortnite-fncs-solos-october-2026","state":"WATCHING","promotion_rule":"Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."}]
 }
