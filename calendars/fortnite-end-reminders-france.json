@@ -1,0 +1,25 @@
+{
+  "version":"FORTNITE_DEADLINE_INTELLIGENCE_FR_V1",
+  "updated_at":"2026-08-19T05:04:00Z",
+  "scope":"Fortnite — échéances de fin, billetterie et événements limités",
+  "principles":{
+    "deadline_not_end_only":"La vraie échéance peut être fin de vente, dernière session ou dernière date publique.",
+    "no_scarcity_inference":"Fin prochaine ne signifie jamais dernières places.",
+    "extension_recalculates":"Toute prolongation ou nouvelle session finale recalcule les notices.",
+    "quiet_hours":"Notices non urgentes entre 21:00 et 09:00 Europe/Paris sont différées vers 09:00."
+  },
+  "deadline_types":["LAST_TICKET_SALE_AT","LAST_PUBLIC_SESSION_AT","LAST_PUBLIC_DATE","LAST_REGISTRATION_AT","LAST_QUALIFIER_AT"],
+  "entries":[
+    {
+      "event_uid":"fortnite-fncs-global-antwerp-20260926@openai",
+      "profile":"SHORT_RUN",
+      "deadline_version":1,
+      "last_public_date":"2026-09-27",
+      "deadline_type":"LAST_PUBLIC_DATE",
+      "deadline_certainty":"OFFICIAL_DATE",
+      "planned_notices":[
+        {"type":"LAST_DAY","trigger_at":"2026-09-27T09:00:00+02:00","label":"FNCS Global Championship — deuxième et dernière journée à Anvers","state":"PLANNED"}
+      ]
+    }
+  ]
+}
