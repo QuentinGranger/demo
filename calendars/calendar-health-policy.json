@@ -1,6 +1,6 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_POLICY_FR_V1",
-  "updated_at": "2026-08-19T16:10:00Z",
+  "updated_at": "2026-08-19T16:18:00Z",
   "scope": "Permanent health monitoring for subscribed Fortnite, Harry Potter and Pokemon calendars in QuentinGranger/demo",
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -9,9 +9,10 @@
     "no_expiry": "Recurring monitor schedules must not contain RRULE UNTIL or COUNT unless explicitly requested by the user.",
     "no_news_is_not_failure": "A calendar may legitimately receive no Git commit for a long period. Health is based on automation liveness, repository/path availability and ICS integrity, not on file modification frequency alone.",
     "incident_only_writes": "Routine healthy checks do not update calendar-health-state.json. Persist only OPEN/ESCALATED/RECOVERED incident transitions or a deliberate policy migration.",
+    "low_frequency_heartbeat": "calendar-health-heartbeat.json is the only routine health write and is refreshed at most once per 24 hours after a successful watchdog check. It exists so the independent GitHub Actions check can detect if the ChatGPT watchdog itself stopped running.",
     "respect_manual_control": "Never silently re-enable an automation the user deliberately disabled. Detect and report disabled/finite/stale monitoring instead.",
     "same_path_repair": "If a subscribed ICS is damaged or deleted and can be deterministically repaired from canonical ledgers without inventing facts, restore the same master-branch path rather than creating a replacement URL.",
-    "cross_watch": "The three main franchise monitors should check one another's liveness so a stopped monitor can be detected by a different still-running monitor."
+    "cross_watch": "The Fortnite hourly monitor is the primary cross-franchise watchdog and checks the liveness of Fortnite, Harry Potter and Pokemon monitors. GitHub Actions independently checks file integrity and watchdog heartbeat age."
   },
   "health_states": ["HEALTHY", "DEGRADED", "CRITICAL"],
   "incident_states": ["OPEN", "ESCALATED", "RECOVERED"],
@@ -26,7 +27,8 @@
     "AUTOMATION_STALE",
     "AUTOMATION_FIRST_RUN_OVERDUE",
     "SPECIALIST_FILE_MISSING",
-    "FRANCHISE_VALIDATION_FAILED"
+    "FRANCHISE_VALIDATION_FAILED",
+    "WATCHDOG_HEARTBEAT_STALE"
   ],
   "incident_key_rule": "health|franchise|incident_code|stable_subject",
   "notification_policy": {
@@ -43,6 +45,15 @@
     "first_run_rule": "If last_run_time is null, do not fail before the first recurrence that should occur after the automation's latest update/create time plus the cadence grace window.",
     "finite_rule": "A recurring health-critical monitor is finite if its RRULE contains UNTIL or COUNT.",
     "enabled_rule": "is_enabled must remain true unless the user intentionally changes it."
+  },
+  "heartbeat": {
+    "file": "calendars/calendar-health-heartbeat.json",
+    "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V1",
+    "watchdog_automation_title": "Calendriers Fortnite France & Europe",
+    "refresh_interval_hours": 24,
+    "max_age_hours": 30,
+    "write_rule": "Refresh only after a successful cross-calendar health check and only when the previous heartbeat is at least 24 hours old. A heartbeat-only update is allowed and is intentionally separate from calendar content/history.",
+    "external_check": "The scheduled GitHub Actions validator must fail when the heartbeat is older than max_age_hours, so a stopped ChatGPT watchdog is detectable independently of the watchdog itself."
   },
   "ics_checks": {
     "required": [
@@ -100,7 +111,7 @@
     }
   },
   "run_protocol": [
-    "Read calendar-health-policy.json and calendar-health-state.json.",
+    "Read calendar-health-policy.json, calendar-health-state.json and calendar-health-heartbeat.json.",
     "Verify repository and pinned master branch availability.",
     "Verify all subscribed global paths and franchise specialist paths still exist.",
     "Run generic ICS structural checks and available franchise validators.",
@@ -109,6 +120,7 @@
     "For each new incident, fresh-fetch calendar-health-state.json, append OPEN through compare-and-swap, and notify once.",
     "While the same incident remains OPEN, stay silent.",
     "When the exact incident clears, append RECOVERED and notify once that monitoring is healthy again.",
-    "Never create a separate recurring automation solely for this health check when the existing franchise monitors can perform it."
+    "After a successful cross-calendar check, refresh calendar-health-heartbeat.json only if at least 24 hours old, using a fresh GitHub blob SHA.",
+    "Never create a separate recurring ChatGPT automation solely for this health check when the existing franchise monitors can perform it."
   ]
 }
