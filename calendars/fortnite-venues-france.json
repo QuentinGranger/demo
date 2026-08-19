@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_VENUE_REGISTRY_EU_V2",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-19T21:03:30Z",
   "scope": "Physical Fortnite venues, subspaces and verified onsite location metadata relevant to France and Europe",
   "principles": {
     "stable_venue_id": "A venue_id is immutable across events; renames become aliases/history rather than a new venue when the physical venue is the same.",
@@ -50,13 +50,16 @@
       "geo_source": null,
       "source_id": "ewc_official",
       "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
-      "status": "HISTORICAL_SIGNAL",
+      "status": "ACTIVE",
       "spaces": [],
       "entry_points": [],
       "accessibility": {"state":"UNKNOWN","accessible_entrance_id":null,"companion_policy":"UNKNOWN","accessible_seating":"UNKNOWN","details":[],"source_url":null},
       "official_transport_notes": [],
       "official_parking_notes": [],
-      "history": [{"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","note":"The exact EWC Fortnite ticket page places the championship at Boulevard City, Riyadh. This Paris record is retained only as historical evidence of the earlier conflicting preregistration source."}]
+      "history": [
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","note":"A previously followed EWC Fortnite ticket page appeared to place the championship at Boulevard City, Riyadh; this record was temporarily retained as historical-only."},
+        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","note":"Current Fortnite Championship details explicitly say Paris, France, and the EWC Resource Center states the 2026 event was relocated to Paris. Paris is restored as the active city-level venue state; no exact building is asserted."}
+      ]
     },
     {
       "venue_id": "ewc_boulevard_city_riyadh",
@@ -71,13 +74,16 @@
       "geo_source": null,
       "source_id": "ewc_official",
       "source_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
-      "status": "ACTIVE",
+      "status": "HISTORICAL_SIGNAL",
       "spaces": [],
       "entry_points": [],
       "accessibility": {"state":"UNKNOWN","accessible_entrance_id":null,"companion_policy":"UNKNOWN","accessible_seating":"UNKNOWN","details":[],"source_url":null},
       "official_transport_notes": [],
       "official_parking_notes": [],
-      "history": [{"at":"2026-08-19T18:12:23Z","type":"VENUE_CONFIRMED","note":"Exact EWC ticket page identifies Boulevard City, Riyadh for the Reload Elite Series Championship, Aug 19–22, 2026."}]
+      "history": [
+        {"at":"2026-08-19T18:12:23Z","type":"VENUE_CONFIRMED","note":"A previously followed EWC ticket page identified Boulevard City, Riyadh for the Reload Elite Series Championship."},
+        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","note":"Current exact Fortnite Championship copy says Paris, France, and current EWC relocation material says Paris. Boulevard City is retained only as conflicting historical evidence, not the active championship venue."}
+      ]
     }
   ]
 }
