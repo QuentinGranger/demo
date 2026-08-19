@@ -1,0 +1,112 @@
+{
+  "version": "FORTNITE_TAXONOMY_FR_V1",
+  "updated_at": "2026-08-19T05:02:00Z",
+  "scope": "Fortnite — taxonomie sémantique France/Europe",
+  "principles": {
+    "stable_ids": "IDs ASCII stables ; labels FR/EN peuvent évoluer.",
+    "strict": "STRICT = facettes explicitement liées à l'événement.",
+    "expanded": "EXPANDED = DIRECT + héritage + relations autorisées.",
+    "no_guess": "Ne jamais déduire une saison, plateforme ou collab depuis un simple visuel ou une rumeur.",
+    "no_title_clutter": "Les facettes restent hors du SUMMARY."
+  },
+  "facets": {
+    "modes": [
+      {"id":"BATTLE_ROYALE","label_fr":"Battle Royale"},
+      {"id":"ZERO_BUILD","label_fr":"Zéro construction"},
+      {"id":"RELOAD","label_fr":"Recharge"},
+      {"id":"FORTNITE_OG","label_fr":"Fortnite OG"},
+      {"id":"FORTNITE_FESTIVAL","label_fr":"Fortnite Festival"},
+      {"id":"LEGO_ODYSSEY","label_fr":"LEGO Fortnite Odyssey"},
+      {"id":"LEGO_BRICK_LIFE","label_fr":"LEGO Fortnite Brick Life"},
+      {"id":"ROCKET_RACING","label_fr":"Rocket Racing"},
+      {"id":"SAVE_THE_WORLD","label_fr":"Sauver le monde"},
+      {"id":"UEFN_CREATIVE","label_fr":"UEFN / Créatif"},
+      {"id":"ARENAS","label_fr":"Arènes"}
+    ],
+    "chapters": [
+      {"id":"CHAPTER_7","label_fr":"Chapitre 7"}
+    ],
+    "seasons": [
+      {"id":"C7S2_SHOWDOWN","label_fr":"Chapitre 7 Saison 2 — Rivalités","chapter":"CHAPTER_7"},
+      {"id":"C7S3","label_fr":"Chapitre 7 Saison 3","chapter":"CHAPTER_7"}
+    ],
+    "competitive_series": [
+      {"id":"FNCS","label_fr":"Fortnite Championship Series"},
+      {"id":"RELOAD_ELITE_SERIES","label_fr":"Reload Elite Series"},
+      {"id":"VICTORY_CUP","label_fr":"Coupe Victoire"},
+      {"id":"RANKED_CUP","label_fr":"Coupe classée"},
+      {"id":"CASH_CUP","label_fr":"Cash Cup"},
+      {"id":"PLAYSTATION_CUP","label_fr":"PlayStation Cup"},
+      {"id":"MOBILE_SERIES","label_fr":"Série mobile"},
+      {"id":"PERFORMANCE_EVALUATION","label_fr":"Évaluation des performances"},
+      {"id":"EWC","label_fr":"Esports World Cup"}
+    ],
+    "regions": [
+      {"id":"EU","label_fr":"Europe"},
+      {"id":"GLOBAL","label_fr":"Monde"},
+      {"id":"NAC","label_fr":"Amérique du Nord - Centre"},
+      {"id":"NAW","label_fr":"Amérique du Nord - Ouest"},
+      {"id":"BR","label_fr":"Brésil"},
+      {"id":"ASIA","label_fr":"Asie"},
+      {"id":"OCE","label_fr":"Océanie"},
+      {"id":"ME","label_fr":"Moyen-Orient"}
+    ],
+    "formats": [
+      {"id":"SOLOS","label_fr":"Solo"},
+      {"id":"DUOS","label_fr":"Duos"},
+      {"id":"SQUADS","label_fr":"Escouades"},
+      {"id":"TEAMS","label_fr":"Équipes"}
+    ],
+    "event_types": [
+      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},
+      {"id":"PATCH_UPDATE","label_fr":"Mise à jour"},
+      {"id":"LIVE_EVENT","label_fr":"Événement live"},
+      {"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},
+      {"id":"TOURNAMENT","label_fr":"Tournoi"},
+      {"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},
+      {"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},
+      {"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},
+      {"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},
+      {"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"}
+    ],
+    "platforms": [
+      {"id":"PC","label_fr":"PC"},
+      {"id":"PLAYSTATION","label_fr":"PlayStation"},
+      {"id":"XBOX","label_fr":"Xbox"},
+      {"id":"NINTENDO","label_fr":"Nintendo"},
+      {"id":"ANDROID","label_fr":"Android"},
+      {"id":"IOS","label_fr":"iOS"},
+      {"id":"CLOUD","label_fr":"Cloud gaming"}
+    ],
+    "collab_universes": [
+      {"id":"DC","label_fr":"DC"},
+      {"id":"MARVEL","label_fr":"Marvel"},
+      {"id":"STAR_WARS","label_fr":"Star Wars"},
+      {"id":"OVERWATCH","label_fr":"Overwatch"},
+      {"id":"MUSIC","label_fr":"Musique / artistes"},
+      {"id":"SPORTS","label_fr":"Sport"},
+      {"id":"ANIME","label_fr":"Anime / manga"},
+      {"id":"GAMING","label_fr":"Jeux vidéo"}
+    ],
+    "themes": [
+      {"id":"FNCS_GLOBAL","label_fr":"FNCS Global Championship"},
+      {"id":"RANKED","label_fr":"Classé"},
+      {"id":"ESPORTS_LIVE","label_fr":"Esport en présentiel"},
+      {"id":"TICKETING","label_fr":"Billetterie"},
+      {"id":"NEW_SEASON","label_fr":"Nouvelle saison"},
+      {"id":"DOWNTIME","label_fr":"Maintenance / indisponibilité"},
+      {"id":"COSMETICS","label_fr":"Cosmétiques"},
+      {"id":"CREATOR_ECOSYSTEM","label_fr":"Écosystème créateur"}
+    ]
+  },
+  "assignments": {
+    "fortnite-fncs-global-antwerp-20260926@openai": {
+      "modes":[{"id":"BATTLE_ROYALE","basis":"DIRECT"}],
+      "competitive_series":[{"id":"FNCS","basis":"DIRECT"}],
+      "regions":[{"id":"GLOBAL","basis":"DIRECT"}],
+      "formats":[{"id":"DUOS","basis":"DIRECT"}],
+      "event_types":[{"id":"GLOBAL_CHAMPIONSHIP","basis":"DIRECT"}],
+      "themes":[{"id":"FNCS_GLOBAL","basis":"DIRECT"},{"id":"ESPORTS_LIVE","basis":"DIRECT"},{"id":"TICKETING","basis":"DIRECT"}]
+    }
+  }
+}
