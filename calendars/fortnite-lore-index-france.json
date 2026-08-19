@@ -1,87 +1,92 @@
 {
-  "version": "FORTNITE_LORE_INDEX_FR_V1",
-  "updated_at": "2026-08-19T11:14:00Z",
-  "derived_from": ["fortnite-lore-taxonomy-france.json", "fortnite-lore-engine-france.json"],
+  "version": "FORTNITE_LORE_INDEX_FR_V2",
+  "updated_at": "2026-08-19T14:10:00Z",
+  "derived_from": ["fortnite-lore-taxonomy-france.json", "fortnite-lore-graph-france.json", "fortnite-lore-engine-france.json"],
   "disposable": true,
   "rules": {
-    "source_of_truth": "Lore registry + lore engine only.",
-    "rebuild_on": ["ENTITY_CHANGE", "ALIAS_CHANGE", "RELATION_CHANGE", "ROLE_CHANGE", "CALENDAR_ASSIGNMENT_CHANGE"],
+    "source_of_truth": "V1 lore registry + V2 claim graph + V2 engine.",
+    "rebuild_on": ["ENTITY_CHANGE", "ALIAS_CHANGE", "RELATION_CHANGE", "CLAIM_CHANGE", "CLAIM_STATUS_CHANGE", "ROLE_CHANGE", "CALENDAR_ASSIGNMENT_CHANGE"],
     "no_write_if_identical": true,
-    "query_only_expansion_never_becomes_canonical": true
+    "query_only_expansion_never_becomes_canonical": true,
+    "superseded_claims_not_current": true
   },
   "by_type": {
-    "CHARACTER": ["CHARACTER_HOPE", "CHARACTER_ICE_KING", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_PEELY", "CHARACTER_THE_FOUNDATION"],
-    "ORGANIZATION": ["ORG_IMAGINED_ORDER", "ORG_THE_SEVEN"],
-    "FACTION": [],
-    "POI": ["POI_THE_AGENCY", "POI_THE_AUTHORITY", "POI_THE_COLLIDER"],
+    "CHARACTER": ["CHARACTER_CUBE_QUEEN", "CHARACTER_DOCTOR_SLONE", "CHARACTER_HOPE", "CHARACTER_ICE_KING", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_PEELY", "CHARACTER_THE_FOUNDATION"],
+    "ORGANIZATION": ["ORG_IMAGINED_ORDER", "ORG_THE_LAST_REALITY", "ORG_THE_SEVEN"],
+    "FACTION": ["FACTION_GHOST", "FACTION_SHADOW"],
+    "POI": ["POI_CORNY_COMPLEX", "POI_THE_AGENCY", "POI_THE_AUTHORITY", "POI_THE_BRIDGE", "POI_THE_COLLIDER"],
     "ISLAND": ["ISLAND_CHAPTER_1", "ISLAND_CHAPTER_2", "ISLAND_CHAPTER_3", "ISLAND_CHAPTER_4", "ISLAND_CHAPTER_5", "ISLAND_CHAPTER_6", "ISLAND_CHAPTER_7"],
-    "LORE_OBJECT": ["LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT"],
-    "HISTORICAL_EVENT": ["EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_THE_DEVICE", "EVENT_THE_END_CH1", "EVENT_ZERO_CRISIS_FINALE"],
-    "REALITY": ["REALITY_ZERO"],
+    "LORE_OBJECT": ["LORE_OBJECT_MOTHERSHIP", "LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT"],
+    "HISTORICAL_EVENT": ["EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_OPERATION_SKY_FIRE", "EVENT_RISE_OF_MIDAS", "EVENT_THE_DEVICE", "EVENT_THE_END_CH1", "EVENT_ZERO_CRISIS_FINALE"],
+    "REALITY": ["REALITY_THE_SIDEWAYS", "REALITY_ZERO"],
     "TIMELINE": ["TIMELINE_MAIN_STORY"],
     "LORE_CONCEPT": ["CONCEPT_THE_LOOP"],
     "CHAPTER": ["CHAPTER_1", "CHAPTER_2", "CHAPTER_3", "CHAPTER_4", "CHAPTER_5", "CHAPTER_6", "CHAPTER_7"]
   },
   "alias_lookup": {
-    "jones": "CHARACTER_JONES",
-    "midas": "CHARACTER_MIDAS",
-    "the foundation": "CHARACTER_THE_FOUNDATION",
-    "la fondation": "CHARACTER_THE_FOUNDATION",
-    "the seven": "ORG_THE_SEVEN",
-    "les sept": "ORG_THE_SEVEN",
-    "seven": "ORG_THE_SEVEN",
-    "imagined order": "ORG_IMAGINED_ORDER",
-    "ordre imaginé": "ORG_IMAGINED_ORDER",
-    "io": "ORG_IMAGINED_ORDER",
-    "zero point": "LORE_OBJECT_ZERO_POINT",
-    "point zéro": "LORE_OBJECT_ZERO_POINT",
-    "chapter 2": "CHAPTER_2",
-    "chapitre 2": "CHAPTER_2",
-    "chapter 7": "CHAPTER_7",
-    "chapitre 7": "CHAPTER_7",
-    "the agency": "POI_THE_AGENCY",
-    "l'agence": "POI_THE_AGENCY",
-    "the authority": "POI_THE_AUTHORITY",
-    "l'autorité": "POI_THE_AUTHORITY",
-    "the collider": "POI_THE_COLLIDER",
-    "collisionneur": "POI_THE_COLLIDER",
-    "reality zero": "REALITY_ZERO",
-    "réalité zéro": "REALITY_ZERO",
-    "the loop": "CONCEPT_THE_LOOP",
-    "la boucle": "CONCEPT_THE_LOOP"
+    "jones":"CHARACTER_JONES", "midas":"CHARACTER_MIDAS", "foundation":"CHARACTER_THE_FOUNDATION", "the foundation":"CHARACTER_THE_FOUNDATION", "la fondation":"CHARACTER_THE_FOUNDATION",
+    "doctor slone":"CHARACTER_DOCTOR_SLONE", "dr slone":"CHARACTER_DOCTOR_SLONE", "docteure slone":"CHARACTER_DOCTOR_SLONE", "slone":"CHARACTER_DOCTOR_SLONE",
+    "cube queen":"CHARACTER_CUBE_QUEEN", "reine des cubes":"CHARACTER_CUBE_QUEEN",
+    "the seven":"ORG_THE_SEVEN", "les sept":"ORG_THE_SEVEN", "seven":"ORG_THE_SEVEN",
+    "imagined order":"ORG_IMAGINED_ORDER", "ordre imaginé":"ORG_IMAGINED_ORDER", "io":"ORG_IMAGINED_ORDER",
+    "the last reality":"ORG_THE_LAST_REALITY", "last reality":"ORG_THE_LAST_REALITY", "la dernière réalité":"ORG_THE_LAST_REALITY",
+    "ghost":"FACTION_GHOST", "fantôme":"FACTION_GHOST", "shadow":"FACTION_SHADOW", "ombre":"FACTION_SHADOW",
+    "zero point":"LORE_OBJECT_ZERO_POINT", "point zéro":"LORE_OBJECT_ZERO_POINT", "mothership":"LORE_OBJECT_MOTHERSHIP", "vaisseau-mère":"LORE_OBJECT_MOTHERSHIP",
+    "the agency":"POI_THE_AGENCY", "l'agence":"POI_THE_AGENCY", "the authority":"POI_THE_AUTHORITY", "l'autorité":"POI_THE_AUTHORITY", "the collider":"POI_THE_COLLIDER", "corny complex":"POI_CORNY_COMPLEX",
+    "reality zero":"REALITY_ZERO", "réalité zéro":"REALITY_ZERO", "the sideways":"REALITY_THE_SIDEWAYS", "sideways":"REALITY_THE_SIDEWAYS", "dimension parallèle":"REALITY_THE_SIDEWAYS",
+    "the loop":"CONCEPT_THE_LOOP", "la boucle":"CONCEPT_THE_LOOP", "operation sky fire":"EVENT_OPERATION_SKY_FIRE", "opération feu céleste":"EVENT_OPERATION_SKY_FIRE", "rise of midas":"EVENT_RISE_OF_MIDAS", "avènement de midas":"EVENT_RISE_OF_MIDAS",
+    "chapter 1":"CHAPTER_1", "chapitre 1":"CHAPTER_1", "chapter 2":"CHAPTER_2", "chapitre 2":"CHAPTER_2", "chapter 3":"CHAPTER_3", "chapitre 3":"CHAPTER_3", "chapter 4":"CHAPTER_4", "chapitre 4":"CHAPTER_4", "chapter 5":"CHAPTER_5", "chapitre 5":"CHAPTER_5", "chapter 6":"CHAPTER_6", "chapitre 6":"CHAPTER_6", "chapter 7":"CHAPTER_7", "chapitre 7":"CHAPTER_7"
   },
   "chapter_view": {
     "CHAPTER_1": ["CHAPTER_1", "EVENT_THE_END_CH1", "ISLAND_CHAPTER_1"],
-    "CHAPTER_2": ["CHAPTER_2", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_THE_FOUNDATION", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "ISLAND_CHAPTER_2", "LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT", "POI_THE_AGENCY", "POI_THE_AUTHORITY"],
-    "CHAPTER_3": ["CHAPTER_3", "EVENT_COLLISION", "EVENT_FRACTURE", "ISLAND_CHAPTER_3", "ORG_IMAGINED_ORDER", "ORG_THE_SEVEN", "POI_THE_COLLIDER"],
+    "CHAPTER_2": ["CHAPTER_2", "CHARACTER_DOCTOR_SLONE", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_THE_FOUNDATION", "EVENT_OPERATION_SKY_FIRE", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "FACTION_GHOST", "FACTION_SHADOW", "ISLAND_CHAPTER_2", "LORE_OBJECT_MOTHERSHIP", "LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT", "ORG_IMAGINED_ORDER", "ORG_THE_LAST_REALITY", "POI_CORNY_COMPLEX", "POI_THE_AGENCY", "POI_THE_AUTHORITY", "REALITY_THE_SIDEWAYS"],
+    "CHAPTER_3": ["CHAPTER_3", "CHARACTER_THE_FOUNDATION", "EVENT_COLLISION", "EVENT_FRACTURE", "ISLAND_CHAPTER_3", "ORG_IMAGINED_ORDER", "ORG_THE_SEVEN", "POI_THE_COLLIDER"],
     "CHAPTER_4": ["CHAPTER_4", "ISLAND_CHAPTER_4"],
-    "CHAPTER_5": ["CHAPTER_5", "ISLAND_CHAPTER_5"],
+    "CHAPTER_5": ["CHAPTER_5", "CHARACTER_MIDAS", "EVENT_RISE_OF_MIDAS", "ISLAND_CHAPTER_5"],
     "CHAPTER_6": ["CHAPTER_6", "ISLAND_CHAPTER_6"],
     "CHAPTER_7": ["CHAPTER_7", "ISLAND_CHAPTER_7"]
   },
   "entity_view": {
     "CHARACTER_JONES": ["EVENT_ZERO_CRISIS_FINALE", "LORE_OBJECT_ZERO_POINT"],
-    "CHARACTER_MIDAS": ["EVENT_THE_DEVICE", "LORE_OBJECT_THE_DEVICE"],
+    "CHARACTER_MIDAS": ["EVENT_RISE_OF_MIDAS", "EVENT_THE_DEVICE", "LORE_OBJECT_THE_DEVICE", "POI_THE_AGENCY"],
     "CHARACTER_THE_FOUNDATION": ["EVENT_ZERO_CRISIS_FINALE", "ORG_THE_SEVEN"],
+    "CHARACTER_DOCTOR_SLONE": ["EVENT_OPERATION_SKY_FIRE", "ORG_IMAGINED_ORDER"],
     "ORG_THE_SEVEN": ["CHARACTER_THE_FOUNDATION", "EVENT_COLLISION", "ORG_IMAGINED_ORDER"],
-    "ORG_IMAGINED_ORDER": ["EVENT_COLLISION", "ORG_THE_SEVEN"],
-    "LORE_OBJECT_ZERO_POINT": ["EVENT_ZERO_CRISIS_FINALE", "REALITY_ZERO"]
+    "ORG_IMAGINED_ORDER": ["CHARACTER_DOCTOR_SLONE", "EVENT_COLLISION", "EVENT_OPERATION_SKY_FIRE", "ORG_THE_LAST_REALITY", "ORG_THE_SEVEN"],
+    "ORG_THE_LAST_REALITY": ["EVENT_OPERATION_SKY_FIRE", "LORE_OBJECT_MOTHERSHIP", "ORG_IMAGINED_ORDER"],
+    "LORE_OBJECT_ZERO_POINT": ["EVENT_ZERO_CRISIS_FINALE", "REALITY_ZERO"],
+    "REALITY_THE_SIDEWAYS": ["CHAPTER_2"]
+  },
+  "organization_view": {
+    "ORG_THE_SEVEN": ["CHARACTER_THE_FOUNDATION", "EVENT_COLLISION", "ORG_IMAGINED_ORDER"],
+    "ORG_IMAGINED_ORDER": ["CHARACTER_DOCTOR_SLONE", "EVENT_COLLISION", "EVENT_OPERATION_SKY_FIRE", "ORG_THE_LAST_REALITY", "ORG_THE_SEVEN"],
+    "ORG_THE_LAST_REALITY": ["EVENT_OPERATION_SKY_FIRE", "LORE_OBJECT_MOTHERSHIP", "ORG_IMAGINED_ORDER"]
+  },
+  "reality_view": {
+    "REALITY_ZERO": ["LORE_OBJECT_ZERO_POINT"],
+    "REALITY_THE_SIDEWAYS": ["CHAPTER_2"]
   },
   "timeline_view": {
-    "TIMELINE_MAIN_STORY": ["EVENT_THE_END_CH1", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "EVENT_COLLISION", "EVENT_FRACTURE"]
+    "TIMELINE_MAIN_STORY": ["EVENT_THE_END_CH1", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "EVENT_OPERATION_SKY_FIRE", "EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_RISE_OF_MIDAS"]
+  },
+  "claims_by_entity": {
+    "CHARACTER_THE_FOUNDATION": ["lore-claim-foundation-leads-seven"],
+    "CHARACTER_DOCTOR_SLONE": ["lore-claim-slone-affiliated-io-c2s7", "lore-claim-skyfire-involves-slone"],
+    "ORG_IMAGINED_ORDER": ["lore-claim-slone-affiliated-io-c2s7", "lore-claim-skyfire-involves-io", "lore-claim-io-opposes-last-reality-c2s7"],
+    "ORG_THE_LAST_REALITY": ["lore-claim-skyfire-targets-last-reality", "lore-claim-io-opposes-last-reality-c2s7"],
+    "EVENT_OPERATION_SKY_FIRE": ["lore-claim-skyfire-involves-slone", "lore-claim-skyfire-involves-io", "lore-claim-skyfire-targets-last-reality", "lore-claim-skyfire-centers-mothership"],
+    "LORE_OBJECT_MOTHERSHIP": ["lore-claim-skyfire-centers-mothership"],
+    "REALITY_THE_SIDEWAYS": ["lore-claim-sideways-c2s8"],
+    "CHARACTER_MIDAS": ["lore-claim-midas-associated-agency-c2s2", "lore-claim-rise-of-midas-involves-midas"],
+    "POI_THE_AGENCY": ["lore-claim-midas-associated-agency-c2s2"],
+    "EVENT_RISE_OF_MIDAS": ["lore-claim-rise-of-midas-involves-midas"]
+  },
+  "claims_by_status": {
+    "ACTIVE": ["lore-claim-foundation-leads-seven", "lore-claim-io-opposes-last-reality-c2s7", "lore-claim-midas-associated-agency-c2s2", "lore-claim-rise-of-midas-involves-midas", "lore-claim-sideways-c2s8", "lore-claim-skyfire-centers-mothership", "lore-claim-skyfire-involves-io", "lore-claim-skyfire-involves-slone", "lore-claim-skyfire-targets-last-reality", "lore-claim-slone-affiliated-io-c2s7"],
+    "PROVISIONAL": [], "DISPUTED": [], "SUPERSEDED": [], "RETRACTED": []
   },
   "legacy_lookup": {
-    "characters:JONES": "CHARACTER_JONES",
-    "characters:MIDAS": "CHARACTER_MIDAS",
-    "characters:THE_FOUNDATION": "CHARACTER_THE_FOUNDATION",
-    "factions:THE_SEVEN": "ORG_THE_SEVEN",
-    "factions:IMAGINED_ORDER": "ORG_IMAGINED_ORDER",
-    "lore_arcs:ZERO_POINT": "LORE_OBJECT_ZERO_POINT",
-    "chapters:CHAPTER_7": "CHAPTER_7"
+    "characters:JONES":"CHARACTER_JONES", "characters:MIDAS":"CHARACTER_MIDAS", "characters:THE_FOUNDATION":"CHARACTER_THE_FOUNDATION", "factions:THE_SEVEN":"ORG_THE_SEVEN", "factions:IMAGINED_ORDER":"ORG_IMAGINED_ORDER", "lore_arcs:ZERO_POINT":"LORE_OBJECT_ZERO_POINT", "chapters:CHAPTER_7":"CHAPTER_7"
   },
-  "calendar": {
-    "strict": {},
-    "expanded": {},
-    "canon_only": {}
-  }
+  "calendar": {"strict": {}, "expanded": {}, "canon_only": {}}
 }
