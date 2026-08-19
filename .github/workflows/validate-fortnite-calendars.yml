@@ -1,0 +1,32 @@
+name: Validate Fortnite calendars
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-*.ics'
+      - 'scripts/validate_fortnite_ics.py'
+      - '.github/workflows/validate-fortnite-calendars.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-*.ics'
+      - 'scripts/validate_fortnite_ics.py'
+      - '.github/workflows/validate-fortnite-calendars.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate RFC 5545 and mirrored Fortnite feeds
+        run: python scripts/validate_fortnite_ics.py
