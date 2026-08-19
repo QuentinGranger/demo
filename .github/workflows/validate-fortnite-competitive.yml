@@ -1,0 +1,40 @@
+name: Validate Fortnite competitive model
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-competitive-ledger-france.json'
+      - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-index-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'calendars/fortnite-end-reminders-france.json'
+      - 'scripts/validate_fortnite_competitive.py'
+      - '.github/workflows/validate-fortnite-competitive.yml'
+  pull_request:
+    paths:
+      - 'calendars/fortnite-competitive-ledger-france.json'
+      - 'calendars/fortnite-competitive-engine-france.json'
+      - 'calendars/fortnite-competitive-index-france.json'
+      - 'calendars/fortnite-sources-france.json'
+      - 'calendars/fortnite-end-reminders-france.json'
+      - 'scripts/validate_fortnite_competitive.py'
+      - '.github/workflows/validate-fortnite-competitive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate competitive ledger, engine and index
+        run: python scripts/validate_fortnite_competitive.py
