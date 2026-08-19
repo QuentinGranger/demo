@@ -1,0 +1,70 @@
+{
+  "version": "WIZARDING_TAXONOMY_INDEX_FR_V1",
+  "generated_at": "2026-08-19T04:52:00Z",
+  "base_taxonomy": "calendars/harry-potter-taxonomy-france.json",
+  "engine": "calendars/harry-potter-taxonomy-engine-france.json",
+  "source_taxonomy_version": "WIZARDING_TAXONOMY_FR_V1+ENGINE_FR_V2",
+  "disposable": true,
+  "purpose": "Index inversé dérivé pour résoudre rapidement facet/id -> event_uid sans rescanner toutes les affectations.",
+  "strict": {
+    "character": {
+      "LUNA_LOVEGOOD": ["hp-book-luna-lovegood-fr-20260827@openai"]
+    },
+    "place": {
+      "HOGWARTS": ["hp-lego-mini-hogwarts-40975-20260829@openai", "hp-lego-back-to-hogwarts-fr-20260901@openai", "hp-books-film-guides-fr-20261008@openai", "hp-back-to-hogwarts-showcase-20260901@openai"],
+      "DIAGON_ALLEY": ["hp-books-film-guides-fr-20261008@openai"],
+      "HOGWARTS_EXPRESS": ["hp-lego-store-hogwarts-express-paris-20260906@openai", "hp-lego-store-hogwarts-express-lille-20260906@openai", "hp-lego-store-hogwarts-express-lyon-20260906@openai", "hp-lego-store-hogwarts-express-clermont-20260906@openai"]
+    },
+    "work": {
+      "HP1_PHILOSOPHERS_STONE": ["hp-grand-rex-philosophers-stone-25th-20260830@openai", "hp-cine-concert-philosophers-stone-paris-20261104@openai"],
+      "HP6_HALF_BLOOD_PRINCE": ["hp-book-hbp-illustrated-pinfold-fr-20261008@openai", "hp-cine-concert-hbp-toulouse-20261228@openai", "hp-cine-concert-hbp-bordeaux-20261229@openai", "hp-cine-concert-hbp-nantes-20261230@openai", "hp-cine-concert-hbp-lille-20270102@openai", "hp-cine-concert-hbp-lyon-20270109@openai", "hp-cine-concert-hbp-dijon-20270110@openai"]
+    },
+    "theme": {
+      "BACK_TO_HOGWARTS": ["hp-lego-back-to-hogwarts-fr-20260901@openai", "hp-back-to-hogwarts-showcase-20260901@openai", "hp-lego-store-hogwarts-express-paris-20260906@openai", "hp-lego-store-hogwarts-express-lille-20260906@openai", "hp-lego-store-hogwarts-express-lyon-20260906@openai", "hp-lego-store-hogwarts-express-clermont-20260906@openai"],
+      "COLLECTING": ["hp-lego-mini-hogwarts-40975-20260829@openai", "hp-lego-back-to-hogwarts-fr-20260901@openai", "hp-book-hbp-illustrated-pinfold-fr-20261008@openai"],
+      "ANNIVERSARY": ["hp-grand-rex-philosophers-stone-25th-20260830@openai", "hp-cine-concert-philosophers-stone-paris-20261104@openai"],
+      "FILM_MUSIC": ["hp-cine-concert-philosophers-stone-paris-20261104@openai", "hp-cine-concert-hbp-toulouse-20261228@openai", "hp-cine-concert-hbp-bordeaux-20261229@openai", "hp-cine-concert-hbp-nantes-20261230@openai", "hp-cine-concert-hbp-lille-20270102@openai", "hp-cine-concert-hbp-lyon-20270109@openai", "hp-cine-concert-hbp-dijon-20270110@openai"],
+      "ILLUSTRATION": ["hp-book-hbp-illustrated-pinfold-fr-20261008@openai"],
+      "WANDS": ["hp-books-film-guides-fr-20261008@openai"],
+      "SPELLS": ["hp-books-film-guides-fr-20261008@openai"],
+      "HOGWARTS_EXPRESS": ["hp-lego-store-hogwarts-express-paris-20260906@openai", "hp-lego-store-hogwarts-express-lille-20260906@openai", "hp-lego-store-hogwarts-express-lyon-20260906@openai", "hp-lego-store-hogwarts-express-clermont-20260906@openai"]
+    },
+    "artifact": {
+      "WAND": ["hp-books-film-guides-fr-20261008@openai"]
+    },
+    "subfranchise": {
+      "HP_MAIN": ["hp-book-hbp-illustrated-pinfold-fr-20261008@openai", "hp-grand-rex-philosophers-stone-25th-20260830@openai", "hp-cine-concert-philosophers-stone-paris-20261104@openai", "hp-cine-concert-hbp-toulouse-20261228@openai", "hp-cine-concert-hbp-bordeaux-20261229@openai", "hp-cine-concert-hbp-nantes-20261230@openai", "hp-cine-concert-hbp-lille-20270102@openai", "hp-cine-concert-hbp-lyon-20270109@openai", "hp-cine-concert-hbp-dijon-20270110@openai"],
+      "WIZARDING_WORLD_META": ["hp-back-to-hogwarts-showcase-20260901@openai"],
+      "LICENSED_LIVE": ["hp-potted-potter-paris-20261017@openai"]
+    }
+  },
+  "expanded_additions": {
+    "house": {
+      "RAVENCLAW": ["hp-book-luna-lovegood-fr-20260827@openai"]
+    },
+    "era": {
+      "HARRY_HOGWARTS_Y1": ["hp-grand-rex-philosophers-stone-25th-20260830@openai", "hp-cine-concert-philosophers-stone-paris-20261104@openai"],
+      "HARRY_HOGWARTS_Y6": ["hp-book-hbp-illustrated-pinfold-fr-20261008@openai", "hp-cine-concert-hbp-toulouse-20261228@openai", "hp-cine-concert-hbp-bordeaux-20261229@openai", "hp-cine-concert-hbp-nantes-20261230@openai", "hp-cine-concert-hbp-lille-20270102@openai", "hp-cine-concert-hbp-lyon-20270109@openai", "hp-cine-concert-hbp-dijon-20270110@openai"]
+    },
+    "subfranchise": {
+      "HP_MAIN": ["hp-book-luna-lovegood-fr-20260827@openai", "hp-lego-mini-hogwarts-40975-20260829@openai", "hp-lego-back-to-hogwarts-fr-20260901@openai", "hp-books-film-guides-fr-20261008@openai", "hp-lego-store-hogwarts-express-paris-20260906@openai", "hp-lego-store-hogwarts-express-lille-20260906@openai", "hp-lego-store-hogwarts-express-lyon-20260906@openai", "hp-lego-store-hogwarts-express-clermont-20260906@openai", "hp-potted-potter-paris-20261017@openai"]
+    }
+  },
+  "inheritance_groups": {
+    "LEGO_BTH_HOGWARTS_EXPRESS_2026": {
+      "root_uid": "hp-lego-store-hogwarts-express-paris-20260906@openai",
+      "members": ["hp-lego-store-hogwarts-express-lille-20260906@openai", "hp-lego-store-hogwarts-express-lyon-20260906@openai", "hp-lego-store-hogwarts-express-clermont-20260906@openai"]
+    },
+    "HBP_CINE_CONCERT_FR_TOUR": {
+      "root_uid": "hp-cine-concert-hbp-toulouse-20261228@openai",
+      "members": ["hp-cine-concert-hbp-bordeaux-20261229@openai", "hp-cine-concert-hbp-nantes-20261230@openai", "hp-cine-concert-hbp-lille-20270102@openai", "hp-cine-concert-hbp-lyon-20270109@openai", "hp-cine-concert-hbp-dijon-20270110@openai"]
+    }
+  },
+  "validation": {
+    "source_of_truth": "Le registre + moteur ; cet index peut être supprimé et reconstruit.",
+    "orphan_uid_policy": "Supprimer de l'index un UID absent des calendriers et non conservé comme historique annulé.",
+    "unknown_entity_policy": "Ne jamais indexer un ID absent du registre base+extensions.",
+    "dedupe": "Chaque liste d'UID est triée et dédupliquée.",
+    "commit_rule": "Ne pas réécrire l'index si le contenu logique est identique."
+  }
+}
