@@ -1,0 +1,87 @@
+{
+  "version": "FORTNITE_LORE_INDEX_FR_V1",
+  "updated_at": "2026-08-19T11:14:00Z",
+  "derived_from": ["fortnite-lore-taxonomy-france.json", "fortnite-lore-engine-france.json"],
+  "disposable": true,
+  "rules": {
+    "source_of_truth": "Lore registry + lore engine only.",
+    "rebuild_on": ["ENTITY_CHANGE", "ALIAS_CHANGE", "RELATION_CHANGE", "ROLE_CHANGE", "CALENDAR_ASSIGNMENT_CHANGE"],
+    "no_write_if_identical": true,
+    "query_only_expansion_never_becomes_canonical": true
+  },
+  "by_type": {
+    "CHARACTER": ["CHARACTER_HOPE", "CHARACTER_ICE_KING", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_PEELY", "CHARACTER_THE_FOUNDATION"],
+    "ORGANIZATION": ["ORG_IMAGINED_ORDER", "ORG_THE_SEVEN"],
+    "FACTION": [],
+    "POI": ["POI_THE_AGENCY", "POI_THE_AUTHORITY", "POI_THE_COLLIDER"],
+    "ISLAND": ["ISLAND_CHAPTER_1", "ISLAND_CHAPTER_2", "ISLAND_CHAPTER_3", "ISLAND_CHAPTER_4", "ISLAND_CHAPTER_5", "ISLAND_CHAPTER_6", "ISLAND_CHAPTER_7"],
+    "LORE_OBJECT": ["LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT"],
+    "HISTORICAL_EVENT": ["EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_THE_DEVICE", "EVENT_THE_END_CH1", "EVENT_ZERO_CRISIS_FINALE"],
+    "REALITY": ["REALITY_ZERO"],
+    "TIMELINE": ["TIMELINE_MAIN_STORY"],
+    "LORE_CONCEPT": ["CONCEPT_THE_LOOP"],
+    "CHAPTER": ["CHAPTER_1", "CHAPTER_2", "CHAPTER_3", "CHAPTER_4", "CHAPTER_5", "CHAPTER_6", "CHAPTER_7"]
+  },
+  "alias_lookup": {
+    "jones": "CHARACTER_JONES",
+    "midas": "CHARACTER_MIDAS",
+    "the foundation": "CHARACTER_THE_FOUNDATION",
+    "la fondation": "CHARACTER_THE_FOUNDATION",
+    "the seven": "ORG_THE_SEVEN",
+    "les sept": "ORG_THE_SEVEN",
+    "seven": "ORG_THE_SEVEN",
+    "imagined order": "ORG_IMAGINED_ORDER",
+    "ordre imaginé": "ORG_IMAGINED_ORDER",
+    "io": "ORG_IMAGINED_ORDER",
+    "zero point": "LORE_OBJECT_ZERO_POINT",
+    "point zéro": "LORE_OBJECT_ZERO_POINT",
+    "chapter 2": "CHAPTER_2",
+    "chapitre 2": "CHAPTER_2",
+    "chapter 7": "CHAPTER_7",
+    "chapitre 7": "CHAPTER_7",
+    "the agency": "POI_THE_AGENCY",
+    "l'agence": "POI_THE_AGENCY",
+    "the authority": "POI_THE_AUTHORITY",
+    "l'autorité": "POI_THE_AUTHORITY",
+    "the collider": "POI_THE_COLLIDER",
+    "collisionneur": "POI_THE_COLLIDER",
+    "reality zero": "REALITY_ZERO",
+    "réalité zéro": "REALITY_ZERO",
+    "the loop": "CONCEPT_THE_LOOP",
+    "la boucle": "CONCEPT_THE_LOOP"
+  },
+  "chapter_view": {
+    "CHAPTER_1": ["CHAPTER_1", "EVENT_THE_END_CH1", "ISLAND_CHAPTER_1"],
+    "CHAPTER_2": ["CHAPTER_2", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_THE_FOUNDATION", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "ISLAND_CHAPTER_2", "LORE_OBJECT_THE_DEVICE", "LORE_OBJECT_ZERO_POINT", "POI_THE_AGENCY", "POI_THE_AUTHORITY"],
+    "CHAPTER_3": ["CHAPTER_3", "EVENT_COLLISION", "EVENT_FRACTURE", "ISLAND_CHAPTER_3", "ORG_IMAGINED_ORDER", "ORG_THE_SEVEN", "POI_THE_COLLIDER"],
+    "CHAPTER_4": ["CHAPTER_4", "ISLAND_CHAPTER_4"],
+    "CHAPTER_5": ["CHAPTER_5", "ISLAND_CHAPTER_5"],
+    "CHAPTER_6": ["CHAPTER_6", "ISLAND_CHAPTER_6"],
+    "CHAPTER_7": ["CHAPTER_7", "ISLAND_CHAPTER_7"]
+  },
+  "entity_view": {
+    "CHARACTER_JONES": ["EVENT_ZERO_CRISIS_FINALE", "LORE_OBJECT_ZERO_POINT"],
+    "CHARACTER_MIDAS": ["EVENT_THE_DEVICE", "LORE_OBJECT_THE_DEVICE"],
+    "CHARACTER_THE_FOUNDATION": ["EVENT_ZERO_CRISIS_FINALE", "ORG_THE_SEVEN"],
+    "ORG_THE_SEVEN": ["CHARACTER_THE_FOUNDATION", "EVENT_COLLISION", "ORG_IMAGINED_ORDER"],
+    "ORG_IMAGINED_ORDER": ["EVENT_COLLISION", "ORG_THE_SEVEN"],
+    "LORE_OBJECT_ZERO_POINT": ["EVENT_ZERO_CRISIS_FINALE", "REALITY_ZERO"]
+  },
+  "timeline_view": {
+    "TIMELINE_MAIN_STORY": ["EVENT_THE_END_CH1", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "EVENT_COLLISION", "EVENT_FRACTURE"]
+  },
+  "legacy_lookup": {
+    "characters:JONES": "CHARACTER_JONES",
+    "characters:MIDAS": "CHARACTER_MIDAS",
+    "characters:THE_FOUNDATION": "CHARACTER_THE_FOUNDATION",
+    "factions:THE_SEVEN": "ORG_THE_SEVEN",
+    "factions:IMAGINED_ORDER": "ORG_IMAGINED_ORDER",
+    "lore_arcs:ZERO_POINT": "LORE_OBJECT_ZERO_POINT",
+    "chapters:CHAPTER_7": "CHAPTER_7"
+  },
+  "calendar": {
+    "strict": {},
+    "expanded": {},
+    "canon_only": {}
+  }
+}
