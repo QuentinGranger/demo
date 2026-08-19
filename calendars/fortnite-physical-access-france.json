@@ -1,0 +1,121 @@
+{
+  "version": "FORTNITE_PHYSICAL_ACCESS_INTELLIGENCE_EU_V1",
+  "updated_at": "2026-08-19T15:28:00Z",
+  "scope": "Public admission, registration, check-in and onsite access rules for official Fortnite physical events in France and Europe",
+  "physical_event_ledger": "fortnite-physical-events-france.json",
+  "venue_registry": "fortnite-venues-france.json",
+  "ticketing_ledger": "fortnite-ticketing-france.json",
+  "provider_registry": "fortnite-ticketing-providers-france.json",
+  "principles": {
+    "ticket_is_not_admission": "A ticketing or preregistration state does not by itself prove that a person may enter a venue/session. Admission requirements are tracked separately.",
+    "preregistration_is_interest_only_unless_explicit": "A generic preregistration/notify-me form is not treated as attendance registration and never guarantees admission unless the organizer explicitly says so.",
+    "unknown_stays_unknown": "Age, ID, named-ticket, guardian, re-entry, accessibility, queue, bag and check-in rules remain UNKNOWN until a direct authorized source publishes them.",
+    "session_scope": "Access rules may differ by day, session, zone or ticket category. A rule at one scope never propagates globally unless the source explicitly makes it event-wide.",
+    "onsite_rules_are_not_scarcity": "Security, queue, age or accessibility rules never imply ticket scarcity/capacity.",
+    "capacity_guard": "Capacity, quota and remaining inventory are stored only if explicitly published for the exact scope; never infer from venue size or a seat map.",
+    "append_only_history": "Material access changes are appended to history; corrections do not silently erase previous official instructions."
+  },
+  "admission_modes": [
+    "FREE_WALK_IN",
+    "FREE_REGISTRATION",
+    "PAID_TICKET",
+    "WAITLIST",
+    "INVITE_ONLY",
+    "ACCREDITATION",
+    "MIXED",
+    "UNKNOWN"
+  ],
+  "access_states": [
+    "UNKNOWN",
+    "ANNOUNCED",
+    "INTEREST_PREREGISTRATION",
+    "REGISTRATION_REQUIRED",
+    "TICKET_REQUIRED",
+    "WAITLIST_ONLY",
+    "OPEN_ACCESS",
+    "INVITE_ONLY",
+    "ACCREDITATION_ONLY",
+    "CLOSED",
+    "ENDED",
+    "CANCELLED"
+  ],
+  "credential_types": [
+    "DIGITAL_TICKET",
+    "PRINTED_TICKET",
+    "QR_CODE",
+    "REGISTRATION_CONFIRMATION",
+    "PHOTO_ID",
+    "WRISTBAND",
+    "ACCREDITATION_BADGE",
+    "INVITATION",
+    "UNKNOWN"
+  ],
+  "requirement_states": ["CONFIRMED", "NOT_REQUIRED", "UNKNOWN"],
+  "entries": [
+    {
+      "access_profile_id": "fortnite-access-fncs-global-antwerp-2026",
+      "physical_event_id": "fortnite-physical-fncs-global-antwerp-2026",
+      "event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "access_state": "WAITLIST_ONLY",
+      "admission_mode": "WAITLIST",
+      "ticketing_event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "provider_id": "lotto_arena",
+      "source_id": "lotto_arena",
+      "source_url": "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
+      "admission_guarantee": "REQUIRES_VALID_TICKET",
+      "interest_preregistration_only": false,
+      "age_rule": {
+        "state": "CONFIRMED",
+        "minimum_age": 16,
+        "guardian_rule": "UNKNOWN",
+        "source_url": "https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be"
+      },
+      "identity_requirement": {"state": "UNKNOWN", "credential": "PHOTO_ID"},
+      "named_ticket": {"state": "UNKNOWN"},
+      "ticket_transferability": {"state": "UNKNOWN"},
+      "reentry": {"state": "UNKNOWN"},
+      "security_check": {"state": "UNKNOWN"},
+      "bag_policy": {"state": "UNKNOWN"},
+      "accessibility": {"state": "UNKNOWN", "details": []},
+      "queue": {"state": "UNKNOWN", "virtual_queue": "UNKNOWN", "published_wait_time_minutes": null},
+      "capacity": {"state": "UNKNOWN", "value": null},
+      "check_in_windows": [],
+      "last_entry_windows": [],
+      "session_overrides": [],
+      "history": []
+    },
+    {
+      "access_profile_id": "fortnite-access-ewc-paris-2026",
+      "physical_event_id": "fortnite-physical-ewc-paris-2026",
+      "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "access_state": "INTEREST_PREREGISTRATION",
+      "admission_mode": "UNKNOWN",
+      "ticketing_event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "provider_id": "ewc_paris",
+      "source_id": "ewc_official",
+      "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "admission_guarantee": "NOT_ESTABLISHED",
+      "interest_preregistration_only": true,
+      "age_rule": {"state": "UNKNOWN", "minimum_age": null, "guardian_rule": "UNKNOWN"},
+      "identity_requirement": {"state": "UNKNOWN", "credential": "PHOTO_ID"},
+      "named_ticket": {"state": "UNKNOWN"},
+      "ticket_transferability": {"state": "UNKNOWN"},
+      "reentry": {"state": "UNKNOWN"},
+      "security_check": {"state": "UNKNOWN"},
+      "bag_policy": {"state": "UNKNOWN"},
+      "accessibility": {"state": "UNKNOWN", "details": []},
+      "queue": {"state": "UNKNOWN", "virtual_queue": "UNKNOWN", "published_wait_time_minutes": null},
+      "capacity": {"state": "UNKNOWN", "value": null},
+      "check_in_windows": [],
+      "last_entry_windows": [],
+      "session_overrides": [],
+      "history": [
+        {
+          "at": "2026-08-19T15:28:00Z",
+          "type": "ACCESS_INTERPRETATION_SEEDED",
+          "note": "Generic EWC Paris preregistration is tracked as interest/notification registration only; it is not proof of admission or a Fortnite-specific ticket."
+        }
+      ]
+    }
+  ]
+}
