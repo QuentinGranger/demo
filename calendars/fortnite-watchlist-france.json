@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-19T05:00:00Z",
+  "updated_at": "2026-08-19T05:15:29Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -9,10 +9,11 @@
       "candidate_id": "fortnite-next-br-season-end-summer-2026",
       "state": "SIGNAL_FOUND",
       "topic": "Nouvelle saison Battle Royale annoncée pour la fin de l'été 2026",
-      "source_ids": ["fortnite_news", "fortnite_competitive"],
-      "known": "Epic indique qu'une nouvelle saison Battle Royale arrivera à la fin de l'été 2026.",
-      "missing_for_calendar": ["EXACT_DATE", "EXACT_TIME_OR_DOWNTIME_WINDOW", "SEASON_NAME"],
-      "promotion_rule": "Passer READY dès publication d'une date exacte officielle ou d'une maintenance de lancement explicite."
+      "source_ids": ["fortnite_news", "fortnite_competitive", "fortnite_battle_pass"],
+      "known": "Le Passe de combat Runners du Chapitre 7 Saison 3 se termine le 20 août 2026 en heure de l'Est selon la page officielle Battle Pass. Epic avait annoncé une nouvelle saison Battle Royale pour la fin de l'été, mais aucune date/heure officielle de lancement suffisamment précise n'est encore publiée.",
+      "missing_for_calendar": ["NEXT_SEASON_EXACT_DATE", "NEXT_SEASON_EXACT_TIME_OR_DOWNTIME_WINDOW", "NEXT_SEASON_NAME"],
+      "promotion_rule": "Passer READY pour le lancement suivant dès publication d'une date exacte officielle ou d'une maintenance de lancement explicite.",
+      "related_calendar_uid": "fortnite-c7s3-runners-battle-pass-end-20260820@openai"
     },
     {
       "candidate_id": "fortnite-fncs-solos-october-2026",
