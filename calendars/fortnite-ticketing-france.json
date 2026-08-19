@@ -1,6 +1,6 @@
 {
   "version":"FORTNITE_TICKETING_INTELLIGENCE_FR_V1",
-  "updated_at":"2026-08-19T05:15:29Z",
+  "updated_at":"2026-08-19T05:22:27Z",
   "scope":"Fortnite events relevant to France/Europe",
   "states":["NOT_ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
   "transitions":["PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_TICKET_CATEGORY","SALE_CLOSED","CANCELLED"],
@@ -10,23 +10,28 @@
       "event_uid":"fortnite-fncs-global-antwerp-20260926@openai",
       "provider_id":"lotto_arena",
       "source_id":"lotto_arena",
-      "status":"ON_SALE",
+      "status":"WAITLIST",
       "previous_status":"ON_SALE",
       "evidence_grade":"A",
       "confidence":"HIGH",
+      "scarcity_evidence":"WAITLIST_OFFERED",
       "package":"2_DAY_COMBO",
       "single_day_available":false,
       "waiting_list_available":true,
       "ticket_url":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
-      "last_verified_at":"2026-08-19T05:15:29Z",
-      "last_changed_at":"2026-08-19T05:15:29Z",
+      "ticketmaster_url":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be",
+      "waiting_list_url":"https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be",
+      "age_restriction":"16+",
+      "last_verified_at":"2026-08-19T05:22:27Z",
+      "last_changed_at":"2026-08-19T05:22:27Z",
       "category_states":[
-        {"category_key":"STANDARD_2_DAY","label":"Billet standard 2 jours","status":"AVAILABLE","price_eur":null,"source":"Lotto Arena / Ticketmaster link"},
-        {"category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","label":"Ultimate Live Experience Package 2 jours","status":"AVAILABLE","price_eur":324.70,"source":"Lotto Arena direct"}
+        {"category_key":"STANDARD_2_DAY","label":"Billet standard 2 jours","status":"WAITLIST","price_eur":null,"source":"Ticketmaster Belgium direct"},
+        {"category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","label":"Ultimate Live Experience Package 2 jours","status":"WAITLIST","price_eur":324.70,"source":"Lotto Arena listing + same Ticketmaster purchase flow currently on waiting list"}
       ],
       "history":[
         {"at":"2026-08-19T05:03:00Z","type":"SALE_OPENED","to":"ON_SALE","source":"Lotto Arena event page"},
-        {"at":"2026-08-19T05:15:29Z","type":"NEW_TICKET_CATEGORY","category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","to":"AVAILABLE","price_eur":324.70,"source":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1","confidence":"HIGH"}
+        {"at":"2026-08-19T05:15:29Z","type":"NEW_TICKET_CATEGORY","category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","to":"AVAILABLE","price_eur":324.70,"source":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1","confidence":"HIGH"},
+        {"at":"2026-08-19T05:22:27Z","type":"WAITLIST_OPENED","from":"ON_SALE","to":"WAITLIST","source":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be","confidence":"HIGH","note":"Ticketmaster affiche WAITING LIST ; ne pas interpréter comme SOLD_OUT. La page de liste d'attente précise que des billets peuvent redevenir disponibles."}
       ]
     }
   ]
