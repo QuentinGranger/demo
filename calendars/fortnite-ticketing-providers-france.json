@@ -1,0 +1,36 @@
+{
+  "version":"FORTNITE_TICKETING_PROVIDER_REGISTRY_FR_V1",
+  "updated_at":"2026-08-19T05:03:00Z",
+  "providers":[
+    {
+      "provider_id":"lotto_arena",
+      "name":"Lotto Arena Antwerpen",
+      "type":"VENUE_DIRECT",
+      "website":"https://www.lotto-arena.be/",
+      "territory":"ANTWERP_BE",
+      "can_confirm":["VENUE","ADDRESS","TICKET_STATUS","TICKET_PACKAGE","VENUE_TIME","WAITING_LIST"],
+      "cannot_confirm":["FNCS_FORMAT","GLOBAL_COMPETITIVE_RULES"],
+      "status":"ACTIVE"
+    },
+    {
+      "provider_id":"ticketmaster_be",
+      "name":"Ticketmaster Belgium",
+      "type":"OFFICIAL_TICKETING_PARTNER",
+      "website":"https://www.ticketmaster.be/",
+      "territory":"BE",
+      "can_confirm":["TICKET_AVAILABILITY_FOR_LISTED_EVENT","PRICE_AT_CHECKOUT","CATEGORY_STATUS"],
+      "cannot_confirm":["FORTNITE_COMPETITIVE_SCHEDULE"],
+      "status":"ACTIVE"
+    },
+    {
+      "provider_id":"ewc_paris",
+      "name":"Esports World Cup Paris 2026",
+      "type":"ORGANIZER_DIRECT",
+      "website":"https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "territory":"PARIS_FR",
+      "can_confirm":["TICKET_PREREGISTRATION","VENUE_DATE_WHEN_PUBLISHED","EVENT_ACCESS_WHEN_PUBLISHED"],
+      "cannot_confirm":["FORTNITE_EVENT_DATE_UNTIL_PUBLISHED"],
+      "status":"ACTIVE"
+    }
+  ]
+}
