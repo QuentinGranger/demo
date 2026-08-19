@@ -28,18 +28,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-etb-30ans-20260906@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:4
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 DTSTART;VALUE=DATE:20260906
 DTEND;VALUE=DATE:20260907
 SUMMARY:🔥 ✅ 🔔 Précommande — ETB 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -60,18 +61,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:6
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:7
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-etb-30ans-20260906@openai
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire, mais pas une ouverture limitée à heure fixe.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire, mais pas une ouverture limitée à heure fixe.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
@@ -87,18 +89,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-bundle-30ans-20260919@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:4
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
 SUMMARY:⭐ ✅ 🔔 Précommande — Bundle 6 boosters 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
+DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 URL:https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Important
 BEGIN:VALARM
@@ -114,18 +117,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-classeur-30ans-20260920@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:4
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:ℹ️ ✅ 🔔 Précommande — Coffret Classeur 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
+DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Info
 BEGIN:VALARM
@@ -136,19 +140,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:6
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:7
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-bundle-30ans-20260919@openai
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-classeur-30ans-20260920@openai
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
@@ -164,18 +169,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:preorder-guizette-premium-30ans-20261004@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:4
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
 RELATED-TO;RELTYPE=PARENT:pokemon-30th-premium-wave-20261106@openai
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -243,18 +249,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-30th-premium-wave-20261106@openai
-DTSTAMP:20260819T023000Z
-LAST-MODIFIED:20260819T023000Z
-SEQUENCE:6
+DTSTAMP:20260819T023400Z
+LAST-MODIFIED:20260819T023400Z
+SEQUENCE:7
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-premium-30ans-20261004@openai
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — gros coffrets premium, mais priorité critique volontairement bloquée tant que la date reste seulement 🟡.\nFiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée au 6 novembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — gros coffrets premium, mais priorité critique volontairement bloquée tant que la date reste seulement 🟡.\nFiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée au 6 novembre 2026.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
 BEGIN:VALARM
