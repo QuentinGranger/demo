@@ -1,16 +1,76 @@
 {
-  "version": "FORTNITE_SEASON_PASS_ENGINE_FR_V1",
-  "updated_at": "2026-08-19T10:36:00Z",
+  "version": "FORTNITE_SEASON_PASS_ENGINE_FR_V2",
+  "updated_at": "2026-08-19T11:02:00Z",
   "base_ledger": "fortnite-season-pass-lifecycle-france.json",
-  "base_version": "FORTNITE_SEASON_PASS_INTELLIGENCE_FR_V1",
-  "scope": "Policy engine for Fortnite season/pass/ranked lifecycle, calendar projection and transition linking",
+  "base_versions_supported": ["FORTNITE_SEASON_PASS_INTELLIGENCE_FR_V1", "FORTNITE_SEASON_PASS_INTELLIGENCE_FR_V2"],
+  "derived_index": "fortnite-season-pass-index-france.json",
+  "scope": "Policy engine for Fortnite season, pass, entitlement-window and ranked lifecycle intelligence for France/Europe",
   "principles": {
-    "facts_vs_policy": "The lifecycle ledger stores observed facts/state; this engine defines inference, projection, reminder and linking rules.",
-    "parallel_clocks": "Battle Royale, OG, Festival, LEGO, collab/minipass and Ranked clocks run independently unless an official relation joins them.",
-    "no_boundary_inference": "END_AT on one track never becomes START_AT on another track by arithmetic or adjacency.",
-    "no_ui_timer_inference": "Client/UI timers are not authoritative unless captured through an official authorized source policy.",
-    "stable_calendar": "Lifecycle enrichment preserves existing calendar UIDs; separate logical milestones get separate UIDs only when independently actionable.",
-    "quiet_calendar": "Store more lifecycle facts than are projected into Apple Calendar."
+    "facts_vs_policy": "The lifecycle ledger stores canonical observed facts. This engine defines derived state, actionability, projection, reminders and graph rules.",
+    "independent_tracks": "BR, OG, Festival, LEGO, passes, collaborations and Ranked run on independent clocks unless an official relation explicitly joins them.",
+    "window_semantics": "Purchase, progression, quests, reward claiming and ranked play are separate windows. Closing one window never closes the others by inference.",
+    "grace_period_first_class": "A pass may stop progression while reward claiming remains open. Represent this as CLAIM_ONLY instead of ENDED.",
+    "no_boundary_inference": "END_AT, SEASON_END_AT, NEXT_START_AT and RANK_RESET_AT never copy across tracks by adjacency or arithmetic.",
+    "field_provenance": "Every material time/window/relationship may carry its own source and evidence so one corrected field does not rewrite unrelated facts.",
+    "stable_identity": "track_id, milestone_id, window_id and calendar_uid remain stable across extensions, reschedules and official corrections.",
+    "quiet_calendar": "Persist more facts than are projected into Apple Calendar; projection is action-driven rather than data-driven.",
+    "derived_rebuildable": "next_action, closure_state, completeness, projection and indexes are derived and never override canonical evidence."
+  },
+  "track_model_v2": {
+    "identity_levels": ["family_id", "edition_id", "track_id"],
+    "family_examples": ["BATTLE_PASS", "FORTNITE_OG_PASS", "FESTIVAL_PASS", "LEGO_PASS", "RANKED_BR"],
+    "optional_fields": ["family_id", "parent_track_id", "campaign_id", "track_version", "closure_state", "next_action", "windows", "completeness"],
+    "track_version_rule": "Increment only when a material canonical track fact changes. Derived-only recomputation does not increment track_version.",
+    "aliases_rule": "Marketing-name or localization changes become aliases/history unless Epic identifies a genuinely different product/season."
+  },
+  "window_model": {
+    "window_types": [
+      "PURCHASE",
+      "PREMIUM_UPGRADE",
+      "PROGRESSION",
+      "QUEST_COMPLETION",
+      "REWARD_CLAIM",
+      "BONUS_REWARD_CLAIM",
+      "RANKED_PLAY",
+      "RANKED_PLACEMENT",
+      "EVENT_ACCESS"
+    ],
+    "window_states": ["UNKNOWN", "ANNOUNCED", "NOT_STARTED", "OPEN", "CLOSING", "CLOSED", "EXTENDED", "CANCELLED"],
+    "window_required": ["window_id", "window_type", "state"],
+    "window_optional": ["opens_at", "opens_date", "closes_at", "closes_date", "time_precision", "source_timezone", "source_id", "source_url", "confidence", "scope", "supersedes_window_version"],
+    "rules": [
+      "A track may have zero or multiple windows; absence means UNKNOWN, not CLOSED.",
+      "PURCHASE close never proves PROGRESSION close.",
+      "PROGRESSION close never proves REWARD_CLAIM close.",
+      "QUEST_COMPLETION may close before, with or after general progression only when officially published.",
+      "BONUS_REWARD_CLAIM is distinct from base REWARD_CLAIM if Epic publishes a separate grace period.",
+      "OPEN/CLOSED states with no published clock may be stored without inventing opens_at/closes_at.",
+      "Extension keeps window_id and appends previous timing/history."
+    ]
+  },
+  "closure_engine": {
+    "states": ["UNKNOWN", "PRELAUNCH", "FULLY_OPEN", "CLOSING", "PROGRESSION_CLOSED", "CLAIM_ONLY", "PURCHASE_CLOSED_BUT_PLAYABLE", "FULLY_CLOSED", "TRANSITIONING", "CANCELLED"],
+    "rules": {
+      "FULLY_OPEN": "At least one main progression/play window is OPEN and no material closure state dominates.",
+      "PURCHASE_CLOSED_BUT_PLAYABLE": "Purchase is CLOSED while progression/play remains OPEN.",
+      "PROGRESSION_CLOSED": "Progression/play is CLOSED and claim state is unknown or not independently open.",
+      "CLAIM_ONLY": "Progression/play is CLOSED but an official reward-claim window remains OPEN/future.",
+      "FULLY_CLOSED": "All officially known action windows are CLOSED and no successor transition action remains on this track.",
+      "TRANSITIONING": "Official downtime/successor handoff is currently active.",
+      "no_unknown_collapse": "UNKNOWN claim/purchase state cannot be converted to CLOSED just because progression ended."
+    }
+  },
+  "next_action_engine": {
+    "priority": ["CLAIM_REWARDS", "FINISH_QUESTS", "EARN_PROGRESS", "BUY_OR_UPGRADE", "PLAY_RANKED", "PREPARE_FOR_RESET", "WAIT_FOR_DOWNTIME", "START_NEXT_TRACK", "WAIT_FOR_ANNOUNCEMENT", "NONE"],
+    "CLAIM_REWARDS": "Official claim window is open/closing and progression is closed or claim deadline is the nearest material action.",
+    "FINISH_QUESTS": "Quest-completion deadline is the nearest active actionable window.",
+    "EARN_PROGRESS": "Progression window is active with an official future close or the track is explicitly active.",
+    "BUY_OR_UPGRADE": "Purchase/premium-upgrade window is actionable and user can still benefit before progression closes.",
+    "PLAY_RANKED": "Ranked play window is active with no more urgent reset action.",
+    "PREPARE_FOR_RESET": "Official reset is scheduled and future.",
+    "WAIT_FOR_DOWNTIME": "Official transition downtime is the next known action.",
+    "START_NEXT_TRACK": "Successor is officially scheduled/active and is the next action.",
+    "no_user_entitlement_assumption": "Do not infer whether the user owns a pass or has completed rewards unless a future explicit user-state layer provides that fact."
   },
   "source_authority": {
     "BR_SEASON": ["fortnite_news", "fortnite_battle_pass"],
@@ -26,92 +86,143 @@
     "DOWNTIME": ["epic_status"]
   },
   "field_rules": {
-    "season_identity": "Requires Fortnite News/Battle Pass explicit season/chapter identity.",
-    "pass_identity": "Requires official pass/product/news naming; do not create from cosmetic bundles alone.",
-    "start_at": "Requires official date/time or explicit availability window. Announcement publication time is not start time.",
-    "end_at": "Requires official end date/time. A date-only source remains DATE_ONLY.",
-    "last_earn_at": "Separate from pass end and only stored when Epic explicitly distinguishes last time to earn progression/rewards.",
-    "last_claim_at": "Separate from last earn/end; never assume unclaimed rewards disappear at END_AT without official evidence.",
-    "rank_reset_at": "Requires explicit Ranked reset statement/date. Season launch alone cannot create it.",
-    "next_start_at": "Requires direct official next-track launch date/time or an explicitly linked service transition window.",
-    "downtime_relation": "Epic Status confirms downtime timing; Fortnite content source must establish lifecycle relation unless Epic itself states it explicitly."
+    "season_identity": "Requires explicit official season/chapter identity.",
+    "pass_identity": "Requires official pass/product/news naming; cosmetic bundles alone do not create pass tracks.",
+    "start_at": "Requires official date/time or explicitly usable availability window. Announcement publication time is not start time.",
+    "end_at": "Requires official end date/time. DATE_ONLY stays date-only.",
+    "purchase_window": "Only materialize when an official source explicitly distinguishes purchase/upgrade availability.",
+    "progression_window": "Only materialize earn/progression close when official wording establishes it; generic pass END_AT is not automatically progression close.",
+    "quest_window": "Quest deadline must be published for the quest/campaign scope; do not inherit from pass end by default.",
+    "claim_window": "Never infer claim cutoff from END_AT or progression cutoff.",
+    "rank_reset_at": "Requires explicit Ranked reset statement/date for the applicable scope.",
+    "next_start_at": "Requires direct official successor launch date/time; transition downtime may support but cannot replace content identity evidence.",
+    "downtime_relation": "Epic Status confirms service timing; lifecycle linkage needs explicit Epic/Fortnite relation."
   },
-  "track_profiles": {
-    "BR_SEASON": {"calendar_start": "INCLUDE", "calendar_end": "INCLUDE_IF_OFFICIAL", "default_reminders": ["D-1"], "next_link": true},
-    "BATTLE_PASS": {"calendar_start": "INCLUDE_IF_MAJOR", "calendar_end": "INCLUDE", "default_reminders": ["D-7", "D-1"], "last_day_date_only": true},
-    "OG_PASS": {"calendar_start": "INCLUDE_IF_OFFICIAL", "calendar_end": "INCLUDE", "default_reminders": ["D-1"]},
-    "FESTIVAL_SEASON": {"calendar_start": "INCLUDE", "calendar_end": "INCLUDE", "default_reminders": ["D-1"]},
-    "FESTIVAL_PASS": {"calendar_start": "INCLUDE_IF_OFFICIAL", "calendar_end": "INCLUDE", "default_reminders": ["D-1"]},
-    "LEGO_PASS": {"calendar_start": "INCLUDE_IF_OFFICIAL", "calendar_end": "INCLUDE", "default_reminders": ["D-1"]},
-    "MINI_PASS": {"calendar_start": "INCLUDE_IF_MAJOR", "calendar_end": "INCLUDE", "default_reminders": ["D-3", "D-1"]},
-    "COLLAB_PASS": {"calendar_start": "INCLUDE_IF_MAJOR", "calendar_end": "INCLUDE", "default_reminders": ["D-3", "D-1"]},
-    "RANKED_SEASON": {"calendar_start": "INCLUDE_IF_OFFICIAL", "calendar_end": "INCLUDE_IF_OFFICIAL", "default_reminders": ["D-1"]},
-    "RANKED_RESET": {"calendar_start": "INCLUDE", "calendar_end": "NONE", "default_reminders": ["H-1_IF_EXACT"]}
+  "time_semantics": {
+    "precisions": ["EXACT", "DATE_ONLY", "DATE_RANGE", "WINDOW_ONLY", "UNPUBLISHED"],
+    "exact": "Store timezone-aware ISO-8601 and preserve source_timezone.",
+    "date_only": "Represents a source calendar date, not 00:00 local time.",
+    "date_range": "Represents an official bounded range without invented intra-day times.",
+    "window_only": "A broad official window remains watch/ledger unless the window itself is useful for planning.",
+    "dst": "Convert Europe/Paris using real timezone rules for the target date; never fixed UTC offsets.",
+    "source_date_guard": "If a product page says a date in a source timezone but no hour, keep source_timezone-qualified DATE_ONLY."
   },
-  "transition_graph": {
-    "allowed_edges": ["PASS_FOR_SEASON", "RANKED_FOR_SEASON", "NEXT_TRACK", "TRANSITION_DOWNTIME", "COLLAB_WITHIN_SEASON", "SAME_CAMPAIGN", "REPLACED_BY"],
+  "transition_graph_v2": {
+    "allowed_edges": ["PASS_FOR_SEASON", "RANKED_FOR_SEASON", "NEXT_TRACK", "TRANSITION_DOWNTIME", "COLLAB_WITHIN_SEASON", "SAME_CAMPAIGN", "REPLACED_BY", "SHARES_WINDOW_WITH", "SUCCESSOR_OF"],
+    "edge_fields": ["type", "target_id", "confidence", "source_id", "source_url", "observed_at"],
+    "confidence": ["EXPLICIT", "STRONG_OFFICIAL_CROSS_REFERENCE", "SIGNAL_ONLY", "UNKNOWN"],
     "rules": [
-      "PASS_FOR_SEASON does not imply identical start/end timestamps.",
-      "RANKED_FOR_SEASON does not imply a reset at season start/end.",
-      "NEXT_TRACK may exist with unknown NEXT_START_AT.",
-      "TRANSITION_DOWNTIME requires an official service_event_id and explicit lifecycle relation.",
-      "REPLACED_BY means the successor is actually active/officially replacing the prior track, not merely announced."
+      "PASS_FOR_SEASON does not imply equal start/end times.",
+      "RANKED_FOR_SEASON does not imply reset at season boundary.",
+      "NEXT_TRACK/SUCCESSOR_OF may exist with unknown start time.",
+      "TRANSITION_DOWNTIME requires official service_event_id and lifecycle relation.",
+      "REPLACED_BY requires actual official replacement/activation, not announcement only.",
+      "SHARES_WINDOW_WITH can reduce duplicate reminders but never merges track identities.",
+      "SIGNAL_ONLY/UNKNOWN edges cannot create timestamps, calendar events or strong reminders."
     ]
   },
-  "calendar_projection": {
-    "milestone_event_types": {
-      "START_AT": "PASS_START_OR_SEASON_LAUNCH",
-      "END_AT": "PASS_END_OR_SEASON_END",
-      "RANK_RESET_AT": "RANK_RESET",
-      "DOWNTIME_START_AT": "SERVICE_DOWNTIME",
-      "NEXT_START_AT": "SEASON_LAUNCH_OR_PASS_START"
-    },
-    "date_only": "DATE_ONLY pass/season end may be all-day only if the source truly expresses a calendar date; description must say exact hour is unpublished.",
-    "exact": "EXACT milestones use timezone-aware DTSTART and appropriate reminder profile.",
-    "window_only": "WINDOW_ONLY stays ledger/watchlist unless the window itself is the official event period and useful to plan.",
-    "grouping": "Related end/downtime/start milestones share calendar_group_id/RELATED-TO where useful but remain distinct logical events.",
-    "anti_duplicate": "A successor launch already represented by a season event is never duplicated as a pass event unless the pass starts at a materially different time/action."
+  "handoff_engine": {
+    "stages": ["PREDECESSOR_CLOSING", "GAP_UNKNOWN", "DOWNTIME_SCHEDULED", "DOWNTIME_ACTIVE", "SUCCESSOR_SCHEDULED", "SUCCESSOR_ACTIVE", "HANDOFF_COMPLETE"],
+    "rules": [
+      "A predecessor may end before, during or after successor availability; do not force contiguity.",
+      "GAP_UNKNOWN is valid and preferable to inventing a start time.",
+      "Downtime and content launch remain separate logical events even when linked.",
+      "HANDOFF_COMPLETE requires successor ACTIVE or explicit replacement evidence."
+    ]
   },
-  "reminder_policy": {
+  "ranked_policy_v2": {
+    "ranked_scopes": ["BATTLE_ROYALE", "ZERO_BUILD", "RELOAD", "FORTNITE_OG", "GLOBAL_SHARED", "UNKNOWN"],
+    "reset_types": ["FULL_RESET", "PLACEMENT_RESET", "PARTIAL_RESET", "RULES_CHANGE", "NO_RESET", "UNKNOWN"],
+    "split_fields": ["ranked_scope", "split_id", "reset_type", "placement_required", "rules_url"],
+    "rules": [
+      "Separate scope tracks when Epic publishes different cycles or reset behavior.",
+      "A reset for one scope never propagates to another without explicit global wording.",
+      "NO_RESET requires explicit official evidence; absence of reset announcement remains UNKNOWN.",
+      "Ordinary Ranked Cups stay in the competitive ledger, not this lifecycle ledger."
+    ]
+  },
+  "calendar_projection_v2": {
+    "levels": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
+    "default_by_track": {
+      "BR_SEASON": "FEATURED",
+      "BATTLE_PASS": "CALENDAR",
+      "OG_PASS": "CALENDAR",
+      "FESTIVAL_SEASON": "CALENDAR",
+      "FESTIVAL_PASS": "CALENDAR",
+      "LEGO_PASS": "CALENDAR",
+      "MINI_PASS": "CALENDAR",
+      "COLLAB_PASS": "CALENDAR",
+      "RANKED_SEASON": "LEDGER_ONLY",
+      "RANKED_RESET": "CALENDAR"
+    },
+    "action_events": ["START_AT", "END_AT", "LAST_EARN_AT", "LAST_CLAIM_AT", "RANK_RESET_AT", "NEXT_START_AT"],
+    "window_close_events": ["PURCHASE", "PROGRESSION", "QUEST_COMPLETION", "REWARD_CLAIM", "BONUS_REWARD_CLAIM", "RANKED_PLAY"],
+    "anti_bazar": [
+      "Do not create a VEVENT per reward page, teaser or cosmetic item.",
+      "If several officially distinct windows close at the same timestamp, prefer one logical VEVENT with X-FORTNITE-CLOSING-WINDOWS rather than duplicate cards.",
+      "If progression and claim close at different times, keep separate actionable milestones.",
+      "A successor launch already represented by a season event is not duplicated as a pass event unless timing/action materially differs."
+    ],
+    "grouping": "Related pass end, downtime and successor launch may share calendar_group_id/RELATED-TO while remaining distinct UIDs."
+  },
+  "reminder_policy_v2": {
     "date_only_pass_end": ["D-7_09_LOCAL", "D-1_09_LOCAL", "LAST_DAY_09_LOCAL"],
     "exact_pass_end": ["D-7", "D-1", "H-2"],
+    "progression_close": ["D-3", "D-1", "H-2_IF_EXACT"],
+    "claim_close": ["D-1", "H-2_IF_EXACT"],
+    "quest_close": ["D-1", "H-2_IF_EXACT"],
     "major_season_launch": ["D-1", "H-1_IF_EXACT"],
     "festival_or_og_launch": ["D-1"],
     "mini_collab_end": ["D-3", "D-1"],
     "rank_reset": ["H-1_IF_EXACT"],
+    "semantic_coalescing": "When multiple closure milestones share the exact same effective timestamp, coalesce reminders into one notice listing all closing windows unless one is materially more urgent.",
+    "min_spacing_hours": 3,
     "no_past_reminders": true,
-    "extension": "When END_AT moves later, increment lifecycle_version, invalidate old future notices and recalculate without creating a new UID.",
-    "shortening": "When END_AT moves earlier officially, replace future notices immediately and notify only if materially actionable."
+    "extension": "Keep IDs, increment canonical version, invalidate obsolete future notices and recalculate.",
+    "shortening": "Replace future notices immediately and notify only when the earlier deadline is materially actionable."
   },
-  "ranked_policy": {
-    "tracks": "Ranked Battle Royale/Zero Build/Reload may be separate ranked_scope values if Epic publishes separate cycles.",
-    "reset_types": ["FULL_RESET", "PLACEMENT_RESET", "PARTIAL_RESET", "RULES_CHANGE", "UNKNOWN"],
-    "no_mode_spread": "A reset stated for one mode does not automatically apply to other Ranked modes.",
-    "competitive_calendar_guard": "Ranked reset can appear in updates/global; ordinary Ranked cups remain governed by the competitive ledger."
+  "deadline_bridge_v2": {
+    "deadline_types": ["PASS_END_AT", "PASS_PURCHASE_CLOSE_AT", "PASS_PROGRESSION_END_AT", "QUEST_END_AT", "PASS_CLAIM_END_AT", "BONUS_CLAIM_END_AT", "RANKED_SEASON_END_AT", "RANK_RESET_AT"],
+    "legacy": "BATTLE_PASS_END_DATE remains accepted for the existing Runners event.",
+    "dedupe_key": "track_id + window_id-or-milestone_id + deadline_type + source_value + track_version",
+    "coalesce_key": "track_id + effective_close_timestamp",
+    "calendar_deadline_sync": "Matching lifecycle/calendar facts share track_id, window/milestone identity and source precision."
   },
-  "pass_policy": {
-    "pass_types": ["BATTLE_PASS", "OG_PASS", "FESTIVAL_PASS", "LEGO_PASS", "MINI_PASS", "COLLAB_PASS"],
-    "reward_claim_guard": "Do not infer LAST_CLAIM_AT from END_AT.",
-    "purchase_guard": "Availability/purchase deadline and progression deadline may differ; store separately when official.",
-    "replacement_guard": "A new pass does not automatically end the old pass unless the official lifecycle says so."
+  "completeness_engine": {
+    "levels": ["IDENTITY_ONLY", "START_KNOWN", "END_KNOWN", "WINDOWS_PARTIAL", "WINDOWS_COMPLETE", "HANDOFF_PARTIAL", "HANDOFF_COMPLETE"],
+    "rule": "Completeness describes known lifecycle evidence, not product quality or user progress.",
+    "no_false_complete": "END_KNOWN does not become WINDOWS_COMPLETE when purchase/progression/claim semantics are unpublished."
   },
-  "watchlist_bridge": {
-    "rule": "Use existing candidate queue for vague public announcements; use lifecycle watch_tracks for permanent category monitoring.",
-    "promotion": "When an exact/usable milestone appears, create/update the track first, then project to calendar if policy allows, then resolve/update the candidate.",
-    "no_duplicate_watch": "A category watch target does not require one candidate per day/recheck."
+  "index_contract": {
+    "path": "calendars/fortnite-season-pass-index-france.json",
+    "derived_only": true,
+    "facets": ["track_type", "state", "closure_state", "mode", "season_id", "family_id", "campaign_id", "ranked_scope", "next_action", "calendar_policy", "closing_date"],
+    "indexes": ["by_track_type", "by_state", "by_mode", "by_closing_date", "by_next_action", "watch_ids", "calendar_uids"],
+    "rebuild_triggers": ["TRACK_CREATED", "TRACK_STATE_CHANGED", "MILESTONE_ADDED", "MILESTONE_CHANGED", "WINDOW_ADDED", "WINDOW_CHANGED", "RELATION_CHANGED", "SOURCE_CORRECTION"],
+    "authority": "Index is rebuildable and never overrides the ledger/engine."
   },
-  "deadline_bridge": {
-    "deadline_types": ["PASS_END_AT", "LAST_EARN_AT", "LAST_CLAIM_AT", "RANKED_SEASON_END_AT", "RANK_RESET_AT"],
-    "legacy": "BATTLE_PASS_END_DATE remains accepted for existing Runners entry; future generic pass deadlines should use PASS_END_AT + pass_type.",
-    "calendar_deadline_sync": "A lifecycle deadline and matching VEVENT must share track_id/milestone_id and source precision."
+  "correction_policy": {
+    "material_correction": "Preserve previous official value in history and increment relevant track/window/milestone version.",
+    "same_fact": "Re-observing the same official value does not create history or a commit.",
+    "supersession": "When Epic explicitly replaces one track/product with another, use REPLACED_BY/SUCCESSOR_OF and keep both identities.",
+    "cancellation": "Cancelled milestones remain in history; projected VEVENT uses STATUS:CANCELLED rather than deletion."
   },
-  "notification_policy": {
-    "notify": ["new exact season/pass launch", "official pass end", "official ranked reset", "transition downtime linked to launch", "official extension/shortening", "postponed/cancelled lifecycle milestone"],
-    "silent": ["new watch track", "vague next-season signal", "same date recheck", "taxonomy-only enrichment", "successor relation with no actionable time"],
-    "dedupe_key": "track_id + milestone_id + state_transition + material_fingerprint"
+  "notification_policy_v2": {
+    "notify": ["new exact/date-only actionable season or pass launch/end", "new progression/claim/quest deadline", "official Ranked reset", "official grace period discovered", "transition downtime linked to launch", "official extension/shortening", "postponed/cancelled lifecycle milestone", "successor launch becomes exact"],
+    "silent": ["new category watch", "vague successor signal", "same fact recheck", "derived closure/next-action recomputation only", "index rebuild with same logical content", "relation with no actionable timing"],
+    "dedupe_key": "track_id + material_transition + window-or-milestone-id + material_fingerprint"
   },
-  "history_policy": {
-    "material_events": ["TRACK_CREATED", "TRACK_ANNOUNCED", "START_SCHEDULED", "TRACK_STARTED", "END_ANNOUNCED", "LAST_EARN_CHANGED", "LAST_CLAIM_CHANGED", "RANK_RESET_ANNOUNCED", "NEXT_TRACK_LINKED", "DOWNTIME_LINKED", "TRACK_ENDED", "TRACK_REPLACED", "POSTPONED", "CANCELLED", "SOURCE_CORRECTION"],
-    "anti_noise": "checked_at/observed_at alone never append history or trigger a commit."
+  "history_policy_v2": {
+    "material_events": ["TRACK_CREATED", "TRACK_ANNOUNCED", "TRACK_STATE_CHANGED", "START_SCHEDULED", "TRACK_STARTED", "END_ANNOUNCED", "MILESTONE_ADDED", "MILESTONE_CHANGED", "WINDOW_ADDED", "WINDOW_OPENED", "WINDOW_CLOSING", "WINDOW_CLOSED", "WINDOW_EXTENDED", "GRACE_PERIOD_DISCOVERED", "RANK_RESET_ANNOUNCED", "NEXT_TRACK_LINKED", "DOWNTIME_LINKED", "TRACK_ENDED", "TRACK_REPLACED", "POSTPONED", "CANCELLED", "SOURCE_CORRECTION"],
+    "anti_noise": "checked_at/observed_at or derived-only state changes never append history by themselves."
+  },
+  "migration": {
+    "mode": "NON_BREAKING_V2_OVER_V1_LEDGER",
+    "rules": [
+      "Keep all existing track_id, milestone_id and calendar_uid values.",
+      "Existing END_AT facts stay canonical and do not automatically generate windows.",
+      "Materialize windows/closure_state/next_action into the ledger only when a real business fact changes or a new official window is discovered.",
+      "Technical V2 metadata alone never increments ICS SEQUENCE."
+    ]
   }
 }
