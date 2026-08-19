@@ -1,0 +1,161 @@
+{
+  "version": "FORTNITE_SERVICE_EVENTS_FR_V1",
+  "updated_at": "2026-08-19T06:35:00Z",
+  "scope": "Fortnite service maintenance, downtime and incidents relevant to France/Europe",
+  "source_of_truth": "Epic Games Public Status for service state; Fortnite News/official product sources only for linkage to season, patch or live-event context.",
+  "source_ids": ["epic_status", "fortnite_news"],
+  "principles": {
+    "service_state_separate_from_content": "Epic Status confirms service availability and maintenance state; it does not by itself confirm patch content, season identity or gameplay features.",
+    "stable_service_event_id": "One logical maintenance/incident keeps one immutable service_event_id across all state changes.",
+    "stable_calendar_uid": "If a service event becomes calendar-worthy, it keeps one VEVENT UID across announcement, start, extension, recovery and resolution.",
+    "no_calendar_for_every_incident": "Unplanned incidents are persisted in this ledger but do not automatically create VEVENTs unless they become materially useful for planning.",
+    "no_end_time_invention": "Never invent expected or actual recovery time. Unknown end remains null.",
+    "relation_requires_evidence": "Link downtime to a season, patch, live event or tournament only when an official source explicitly establishes the relationship.",
+    "europe_paris_display": "Published timestamps may be stored in source timezone/UTC but any actionable calendar time for the user is rendered with an explicit timezone and converted reliably to Europe/Paris."
+  },
+  "kinds": [
+    "SCHEDULED_MAINTENANCE",
+    "UNPLANNED_INCIDENT",
+    "SERVICE_DEGRADATION",
+    "EMERGENCY_MAINTENANCE"
+  ],
+  "states": [
+    "DOWNTIME_ANNOUNCED",
+    "STARTED",
+    "EXTENDED",
+    "RECOVERING",
+    "RESOLVED",
+    "CANCELLED"
+  ],
+  "canonical_transition_rules": {
+    "DOWNTIME_ANNOUNCED": ["STARTED", "CANCELLED"],
+    "STARTED": ["EXTENDED", "RECOVERING", "RESOLVED"],
+    "EXTENDED": ["EXTENDED", "RECOVERING", "RESOLVED"],
+    "RECOVERING": ["EXTENDED", "RESOLVED"],
+    "RESOLVED": [],
+    "CANCELLED": []
+  },
+  "impact_levels": ["MINOR", "PARTIAL", "MAJOR", "TOTAL"],
+  "affected_service_ids": [
+    "FORTNITE_GAME_SERVICES",
+    "LOGIN",
+    "MATCHMAKING",
+    "PARTIES_FRIENDS",
+    "VOICE_CHAT",
+    "ITEM_SHOP",
+    "PURCHASES",
+    "STATS_LEADERBOARDS",
+    "CREATIVE_UEFN",
+    "COMPETITIVE",
+    "WEBSITE_API"
+  ],
+  "relation_types": [
+    "SEASON_LAUNCH",
+    "PATCH_DEPLOYMENT",
+    "LIVE_EVENT_PREP",
+    "COMPETITIVE_MAINTENANCE",
+    "PLATFORM_MAINTENANCE",
+    "UNRELATED_OR_UNKNOWN"
+  ],
+  "entry_schema": {
+    "required": [
+      "service_event_id",
+      "kind",
+      "state",
+      "source_id",
+      "source_url",
+      "first_seen_at",
+      "last_changed_at",
+      "affected_services",
+      "history"
+    ],
+    "identity": ["service_event_id", "epic_incident_id", "calendar_uid"],
+    "timing": [
+      "announced_at",
+      "scheduled_start_at",
+      "actual_start_at",
+      "expected_end_at",
+      "recovery_started_at",
+      "actual_end_at",
+      "source_timezone"
+    ],
+    "impact": ["impact_level", "affected_services", "affected_regions", "affected_platforms"],
+    "linkage": [
+      "relation_type",
+      "related_event_uid",
+      "related_candidate_id",
+      "group_id",
+      "patch_version",
+      "season_id",
+      "relation_source_id",
+      "relation_source_url"
+    ],
+    "audit": ["previous_state", "evidence_grade", "confidence", "last_verified_at", "history"]
+  },
+  "calendar_policy": {
+    "target_feeds": ["calendars/fortnite-updates-france.ics", "calendars/fortnite-paris.ics"],
+    "scheduled_maintenance": "Create/update a VEVENT when an official maintenance start date/time or clearly actionable maintenance window is published.",
+    "unplanned_incident": "Do not create a VEVENT by default. Promote only if the incident becomes long-running/material enough that a calendar object provides planning value, or if an official recovery/maintenance window is published.",
+    "uid_pattern": "fortnite-service-<stable-service-event-id>@openai",
+    "event_type": "SERVICE_DOWNTIME",
+    "same_uid_on_transition": true,
+    "sequence_rule": "Increment SEQUENCE only when the VEVENT's business data changes. Ledger-only state verification does not increment it.",
+    "summary_language": {
+      "DOWNTIME_ANNOUNCED": "Maintenance Fortnite planifiée",
+      "STARTED": "Maintenance Fortnite en cours",
+      "EXTENDED": "Maintenance Fortnite prolongée",
+      "RECOVERING": "Services Fortnite en rétablissement",
+      "RESOLVED": "Maintenance Fortnite terminée",
+      "CANCELLED": "Maintenance Fortnite annulée"
+    },
+    "ics_properties": [
+      "X-FORTNITE-SERVICE-EVENT-ID",
+      "X-FORTNITE-SERVICE-KIND",
+      "X-FORTNITE-SERVICE-STATE",
+      "X-FORTNITE-SERVICE-IMPACT",
+      "X-FORTNITE-AFFECTED-SERVICE",
+      "X-FORTNITE-SERVICE-SOURCE-ID",
+      "X-FORTNITE-SERVICE-RELATION-TYPE",
+      "X-FORTNITE-PATCH-VERSION",
+      "X-FORTNITE-SEASON"
+    ],
+    "dtend_policy": "Use DTEND only when an official expected end/window is explicitly published. Never infer a maintenance duration.",
+    "resolved_policy": "Keep the same UID. Do not delete a resolved maintenance event; remove future alarms and mark service state RESOLVED."
+  },
+  "notification_policy": {
+    "DOWNTIME_ANNOUNCED": "Notify once when an actionable scheduled start/window is newly published, especially for a season launch, major patch or live event.",
+    "STARTED": "Notify once for major/total impact or high-interest linked season/live event; otherwise ledger/ICS update may remain silent.",
+    "EXTENDED": "Notify when the official expected recovery/window is materially extended, or when an announced duration becomes materially longer. Never infer extension merely because service is still unavailable.",
+    "RECOVERING": "Usually silent unless a prolonged major outage is materially improving and the update is useful.",
+    "RESOLVED": "Notify once after major/total or prolonged downtime; routine scheduled maintenance resolution may remain silent.",
+    "CANCELLED": "Notify if a previously actionable scheduled maintenance was cancelled or moved.",
+    "dedupe_key": "service_event_id + state + material_timing_hash"
+  },
+  "relation_policy": {
+    "season_launch": "Epic Status alone may confirm the maintenance, but season_id/related_event_uid require Fortnite News/Battle Pass/other authorized official evidence that this downtime deploys that season.",
+    "patch": "patch_version requires an official patch/update reference; never infer a version number from timing alone.",
+    "live_event": "Link to a live event only when official communication associates the downtime with that event.",
+    "competitive": "Do not treat ordinary tournament matchmaking issues as a planned competitive maintenance unless Fortnite Competitive/Epic Status explicitly establishes it."
+  },
+  "history_event_schema": [
+    "at",
+    "transition",
+    "from",
+    "to",
+    "source_id",
+    "source_url",
+    "expected_end_at",
+    "impact_level",
+    "note"
+  ],
+  "entries": [],
+  "watch_targets": [
+    {
+      "watch_id": "fortnite-next-br-season-launch-downtime",
+      "related_candidate_id": "fortnite-next-br-season-end-summer-2026",
+      "state": "WATCHING",
+      "source_ids": ["epic_status", "fortnite_news", "fortnite_battle_pass"],
+      "promotion_rule": "Create a service entry only when Epic publishes an actual maintenance/incident record or an official actionable downtime window. Link it to the next season only if official content evidence establishes that relation."
+    }
+  ]
+}
