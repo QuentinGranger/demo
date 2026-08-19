@@ -1,13 +1,14 @@
 {
-  "version": "FORTNITE_TAXONOMY_FR_V1",
-  "updated_at": "2026-08-19T05:02:00Z",
+  "version": "FORTNITE_TAXONOMY_FR_V2",
+  "updated_at": "2026-08-19T05:06:00Z",
   "scope": "Fortnite — taxonomie sémantique France/Europe",
   "principles": {
     "stable_ids": "IDs ASCII stables ; labels FR/EN peuvent évoluer.",
     "strict": "STRICT = facettes explicitement liées à l'événement.",
     "expanded": "EXPANDED = DIRECT + héritage + relations autorisées.",
-    "no_guess": "Ne jamais déduire une saison, plateforme ou collab depuis un simple visuel ou une rumeur.",
-    "no_title_clutter": "Les facettes restent hors du SUMMARY."
+    "no_guess": "Ne jamais déduire saison, plateforme, personnage ou collab depuis un visuel, une rumeur ou du datamining.",
+    "no_title_clutter": "Les facettes restent hors du SUMMARY.",
+    "lore_guard": "Une apparition cosmétique/collab ne devient pas automatiquement un fait de lore canonique Fortnite."
   },
   "facets": {
     "modes": [
@@ -23,9 +24,7 @@
       {"id":"UEFN_CREATIVE","label_fr":"UEFN / Créatif"},
       {"id":"ARENAS","label_fr":"Arènes"}
     ],
-    "chapters": [
-      {"id":"CHAPTER_7","label_fr":"Chapitre 7"}
-    ],
+    "chapters": [{"id":"CHAPTER_7","label_fr":"Chapitre 7"}],
     "seasons": [
       {"id":"C7S2_SHOWDOWN","label_fr":"Chapitre 7 Saison 2 — Rivalités","chapter":"CHAPTER_7"},
       {"id":"C7S3","label_fr":"Chapitre 7 Saison 3","chapter":"CHAPTER_7"}
@@ -42,62 +41,48 @@
       {"id":"EWC","label_fr":"Esports World Cup"}
     ],
     "regions": [
-      {"id":"EU","label_fr":"Europe"},
-      {"id":"GLOBAL","label_fr":"Monde"},
-      {"id":"NAC","label_fr":"Amérique du Nord - Centre"},
-      {"id":"NAW","label_fr":"Amérique du Nord - Ouest"},
-      {"id":"BR","label_fr":"Brésil"},
-      {"id":"ASIA","label_fr":"Asie"},
-      {"id":"OCE","label_fr":"Océanie"},
-      {"id":"ME","label_fr":"Moyen-Orient"}
+      {"id":"EU","label_fr":"Europe"},{"id":"GLOBAL","label_fr":"Monde"},{"id":"NAC","label_fr":"Amérique du Nord - Centre"},{"id":"NAW","label_fr":"Amérique du Nord - Ouest"},{"id":"BR","label_fr":"Brésil"},{"id":"ASIA","label_fr":"Asie"},{"id":"OCE","label_fr":"Océanie"},{"id":"ME","label_fr":"Moyen-Orient"}
     ],
     "formats": [
-      {"id":"SOLOS","label_fr":"Solo"},
-      {"id":"DUOS","label_fr":"Duos"},
-      {"id":"SQUADS","label_fr":"Escouades"},
-      {"id":"TEAMS","label_fr":"Équipes"}
+      {"id":"SOLOS","label_fr":"Solo"},{"id":"DUOS","label_fr":"Duos"},{"id":"TRIOS","label_fr":"Trios"},{"id":"SQUADS","label_fr":"Escouades"},{"id":"TEAMS","label_fr":"Équipes"}
     ],
     "event_types": [
-      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},
-      {"id":"PATCH_UPDATE","label_fr":"Mise à jour"},
-      {"id":"LIVE_EVENT","label_fr":"Événement live"},
-      {"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},
-      {"id":"TOURNAMENT","label_fr":"Tournoi"},
-      {"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},
-      {"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},
-      {"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},
-      {"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},
-      {"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"}
+      {"id":"SEASON_LAUNCH","label_fr":"Lancement de saison"},{"id":"PATCH_UPDATE","label_fr":"Mise à jour"},{"id":"LIVE_EVENT","label_fr":"Événement live"},{"id":"COLLAB_LAUNCH","label_fr":"Lancement de collaboration"},{"id":"TOURNAMENT","label_fr":"Tournoi"},{"id":"GLOBAL_CHAMPIONSHIP","label_fr":"Championnat global"},{"id":"TICKET_ONSALE","label_fr":"Ouverture billetterie"},{"id":"FESTIVAL_SEASON","label_fr":"Saison Festival"},{"id":"CREATOR_TOOL_RELEASE","label_fr":"Sortie outil créateur"},{"id":"PLATFORM_RELEASE","label_fr":"Disponibilité plateforme"},{"id":"ITEM_SHOP_LAUNCH","label_fr":"Lancement boutique d'objets"}
     ],
     "platforms": [
-      {"id":"PC","label_fr":"PC"},
-      {"id":"PLAYSTATION","label_fr":"PlayStation"},
-      {"id":"XBOX","label_fr":"Xbox"},
-      {"id":"NINTENDO","label_fr":"Nintendo"},
-      {"id":"ANDROID","label_fr":"Android"},
-      {"id":"IOS","label_fr":"iOS"},
-      {"id":"CLOUD","label_fr":"Cloud gaming"}
+      {"id":"PC","label_fr":"PC"},{"id":"PLAYSTATION","label_fr":"PlayStation"},{"id":"XBOX","label_fr":"Xbox"},{"id":"NINTENDO","label_fr":"Nintendo"},{"id":"ANDROID","label_fr":"Android"},{"id":"IOS","label_fr":"iOS"},{"id":"CLOUD","label_fr":"Cloud gaming"}
     ],
     "collab_universes": [
-      {"id":"DC","label_fr":"DC"},
-      {"id":"MARVEL","label_fr":"Marvel"},
-      {"id":"STAR_WARS","label_fr":"Star Wars"},
-      {"id":"OVERWATCH","label_fr":"Overwatch"},
-      {"id":"MUSIC","label_fr":"Musique / artistes"},
-      {"id":"SPORTS","label_fr":"Sport"},
-      {"id":"ANIME","label_fr":"Anime / manga"},
-      {"id":"GAMING","label_fr":"Jeux vidéo"}
+      {"id":"DC","label_fr":"DC"},{"id":"MARVEL","label_fr":"Marvel"},{"id":"STAR_WARS","label_fr":"Star Wars"},{"id":"OVERWATCH","label_fr":"Overwatch"},{"id":"MUSIC","label_fr":"Musique / artistes"},{"id":"SPORTS","label_fr":"Sport"},{"id":"ANIME","label_fr":"Anime / manga"},{"id":"GAMING","label_fr":"Jeux vidéo"}
+    ],
+    "characters": [
+      {"id":"JONES","label_fr":"Jones"},
+      {"id":"HOPE","label_fr":"Hope"},
+      {"id":"THE_FOUNDATION","label_fr":"La Fondation","faction":"THE_SEVEN"},
+      {"id":"ICE_KING","label_fr":"Le Roi des glaces"},
+      {"id":"MIDAS","label_fr":"Midas"},
+      {"id":"PEELY","label_fr":"Banane / Peely"}
+    ],
+    "factions": [
+      {"id":"THE_SEVEN","label_fr":"Les Sept"},
+      {"id":"IMAGINED_ORDER","label_fr":"Ordre imaginé"},
+      {"id":"SHOWDOWN_FOUNDATION_SIDE","label_fr":"Camp de la Fondation"},
+      {"id":"SHOWDOWN_ICE_KING_SIDE","label_fr":"Camp du Roi des glaces"}
+    ],
+    "lore_arcs": [
+      {"id":"SHOWDOWN_RIVALRIES","label_fr":"Rivalités / Showdown","season":"C7S2_SHOWDOWN"},
+      {"id":"ZERO_POINT","label_fr":"Point Zéro"},
+      {"id":"SEVEN_VS_IO","label_fr":"Les Sept contre l'Ordre imaginé"}
     ],
     "themes": [
-      {"id":"FNCS_GLOBAL","label_fr":"FNCS Global Championship"},
-      {"id":"RANKED","label_fr":"Classé"},
-      {"id":"ESPORTS_LIVE","label_fr":"Esport en présentiel"},
-      {"id":"TICKETING","label_fr":"Billetterie"},
-      {"id":"NEW_SEASON","label_fr":"Nouvelle saison"},
-      {"id":"DOWNTIME","label_fr":"Maintenance / indisponibilité"},
-      {"id":"COSMETICS","label_fr":"Cosmétiques"},
-      {"id":"CREATOR_ECOSYSTEM","label_fr":"Écosystème créateur"}
+      {"id":"FNCS_GLOBAL","label_fr":"FNCS Global Championship"},{"id":"RANKED","label_fr":"Classé"},{"id":"ESPORTS_LIVE","label_fr":"Esport en présentiel"},{"id":"TICKETING","label_fr":"Billetterie"},{"id":"NEW_SEASON","label_fr":"Nouvelle saison"},{"id":"DOWNTIME","label_fr":"Maintenance / indisponibilité"},{"id":"COSMETICS","label_fr":"Cosmétiques"},{"id":"CREATOR_ECOSYSTEM","label_fr":"Écosystème créateur"},{"id":"LORE","label_fr":"Lore"},{"id":"LIVE_STORY","label_fr":"Événement narratif live"},{"id":"BATTLE_PASS","label_fr":"Passe de combat"},{"id":"RANK_RESET","label_fr":"Réinitialisation classée"}
     ]
+  },
+  "derived_relations": {
+    "season_to_chapter":"Une saison peut apporter son chapitre en EXPANDED.",
+    "character_to_faction":"Un personnage peut apporter sa faction seulement si la relation est explicitement vérifiée.",
+    "lore_arc_to_season":"Un arc narratif peut apporter sa saison si explicitement défini.",
+    "no_reverse":"Une faction ne permet jamais d'inférer un personnage ; une saison ne permet jamais d'inférer une collab ou un événement."
   },
   "assignments": {
     "fortnite-fncs-global-antwerp-20260926@openai": {
