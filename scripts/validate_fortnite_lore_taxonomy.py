@@ -10,6 +10,7 @@ LORE = CAL / "fortnite-lore-taxonomy-france.json"
 ENGINE = CAL / "fortnite-lore-engine-france.json"
 INDEX = CAL / "fortnite-lore-index-france.json"
 SOURCES = CAL / "fortnite-sources-france.json"
+LORE_SOURCES = CAL / "fortnite-lore-sources-france.json"
 
 ALLOWED_TYPES = {"CHARACTER","ORGANIZATION","FACTION","POI","ISLAND","LORE_OBJECT","HISTORICAL_EVENT","REALITY","TIMELINE","LORE_CONCEPT","CHAPTER"}
 ALLOWED_CANON = {"MAIN_STORY","COLLAB_CANON","GAMEPLAY_ONLY","COSMETIC_ONLY","META","UNKNOWN"}
@@ -61,7 +62,7 @@ def cycle_nodes(edges):
 
 def main():
     errors = []
-    for p in (BASE, LORE, ENGINE, INDEX, SOURCES):
+    for p in (BASE, LORE, ENGINE, INDEX, SOURCES, LORE_SOURCES):
         if not p.exists():
             errors.append(f"missing required file: {p.relative_to(ROOT)}")
     if errors:
@@ -69,19 +70,33 @@ def main():
             print(f"ERROR: {e}")
         return 1
 
-    base, lore, engine, index, sources = map(load, (BASE, LORE, ENGINE, INDEX, SOURCES))
+    base = load(BASE)
+    lore = load(LORE)
+    engine = load(ENGINE)
+    index = load(INDEX)
+    sources = load(SOURCES)
+    lore_sources = load(LORE_SOURCES)
+
     if lore.get("version") != "FORTNITE_LORE_TAXONOMY_FR_V1":
         errors.append("unexpected lore taxonomy version")
     if engine.get("version") != "FORTNITE_LORE_ENGINE_FR_V1":
         errors.append("unexpected lore engine version")
     if index.get("version") != "FORTNITE_LORE_INDEX_FR_V1":
         errors.append("unexpected lore index version")
+    if lore_sources.get("version") != "FORTNITE_LORE_SOURCE_POLICY_FR_V1":
+        errors.append("unexpected lore source policy version")
+    if lore_sources.get("inherits") != SOURCES.name:
+        errors.append("lore source policy inherits wrong registry")
     if lore.get("base_registry") != BASE.name or engine.get("base_registry") != BASE.name:
         errors.append("base registry mismatch")
     if engine.get("lore_registry") != LORE.name:
         errors.append("lore engine registry mismatch")
 
     source_ids = {s.get("source_id") for s in sources.get("sources", []) if s.get("source_id")}
+    for source_id in lore_sources.get("authority", {}).keys():
+        if source_id not in source_ids:
+            errors.append(f"lore source policy references unknown source_id: {source_id}")
+
     bref = base_refs(base)
     entities = {}
     for e in lore.get("entities", []):
@@ -150,8 +165,7 @@ def main():
         if bridge.get("canonical_entity") not in entities:
             errors.append(f"legacy bridge references unknown lore id: {bridge.get('canonical_entity')}")
 
-    aliases = engine.get("aliases", {})
-    for alias, target in aliases.items():
+    for alias, target in engine.get("aliases", {}).items():
         if target not in entities:
             errors.append(f"alias {alias!r} points to unknown entity {target}")
 
@@ -176,9 +190,9 @@ def main():
                 if eid not in entities:
                     errors.append(f"index {section}/{key} references unknown entity {eid}")
 
-    forbidden_materialization = set(engine.get("materialization", {}).get("query_only_relations", [])) & set(engine.get("materialization", {}).get("allowed_forward_relations", []))
-    if forbidden_materialization:
-        errors.append("relations cannot be both query-only and materializable: " + ",".join(sorted(forbidden_materialization)))
+    overlap = set(engine.get("materialization", {}).get("query_only_relations", [])) & set(engine.get("materialization", {}).get("allowed_forward_relations", []))
+    if overlap:
+        errors.append("relations cannot be both query-only and materializable: " + ",".join(sorted(overlap)))
 
     if errors:
         for e in errors:
