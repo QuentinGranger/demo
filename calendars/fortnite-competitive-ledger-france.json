@@ -1,0 +1,291 @@
+{
+  "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
+  "updated_at": "2026-08-19T09:35:00Z",
+  "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
+  "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
+  "principles": {
+    "exhaustive_ledger_selective_calendar": "Ingest every sufficiently identified official EU competitive session into this ledger, including low-priority cups, but project only useful sessions/events into the visible calendar.",
+    "official_schedule_primary": "Fortnite Competitive schedule is primary for EU date/time, round/session labels, region, mode and team format when published.",
+    "no_guessing": "Unknown eligibility, registration deadlines, prize money, qualification slots, match count or platform restrictions remain null until directly supported.",
+    "stable_identity": "Competition, phase and session identities stay stable across title wording changes, reschedules and metadata enrichment.",
+    "region_exact": "EU data never inherits another region's time, eligibility, prize or qualification rule unless an official rule explicitly says it is global/shared.",
+    "calendar_is_projection": "fortnite-competitive-france.ics is a curated view of this ledger, not the source of truth.",
+    "deadline_bridge": "Exact registration/qualification deadlines may feed FORTNITE_DEADLINE_INTELLIGENCE_FR_V1 without forcing the underlying small cup into the visible calendar.",
+    "service_bridge": "Competitive sessions may reference FORTNITE_SERVICE_INTELLIGENCE_FR_V2 for officially linked outages/maintenance, but service state never changes tournament status without competitive evidence."
+  },
+  "identity": {
+    "competition_id_priority": ["official_event_id", "official_event_slug", "stable_normalized_series_season_region"],
+    "phase_id_pattern": "<competition_id>:<phase-key>",
+    "session_id_pattern": "<phase_id>:<region>:<YYYYMMDDTHHMM>:<round-or-slot>",
+    "calendar_uid_policy": "Only projected logical events get a VEVENT UID. Hidden sessions keep stable ledger IDs without creating calendar UIDs.",
+    "dedupe_order": [
+      "same official session/event id",
+      "same official event URL + region + exact start",
+      "same competition_id + phase + region + exact start + format + round label",
+      "otherwise keep separate until evidence supports merge"
+    ]
+  },
+  "enums": {
+    "competition_status": ["ANNOUNCED", "REGISTRATION_OPEN", "SCHEDULED", "LIVE", "COMPLETED", "POSTPONED", "CANCELLED"],
+    "session_status": ["ANNOUNCED", "SCHEDULED", "LIVE", "COMPLETED", "POSTPONED", "CANCELLED"],
+    "visibility": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
+    "competition_class": ["FNCS", "RELOAD_ELITE", "CASH_CUP", "VICTORY_CUP", "RANKED_CUP", "PERFORMANCE_EVALUATION", "MOBILE_SERIES", "PLATFORM_CUP", "TEST_CUP", "THIRD_PARTY_OFFICIAL", "OTHER"],
+    "phase_type": ["OPEN", "QUALIFIER", "PLAY_IN", "GROUP_STAGE", "ROUND", "HEAT", "SEMIFINAL", "FINAL", "LCQ", "GRAND_FINAL", "CHAMPIONSHIP", "OTHER"],
+    "region": ["EU", "GLOBAL", "NAC", "NAW", "BR", "ASIA", "OCE", "ME"],
+    "ruleset": ["BUILD", "ZERO_BUILD", "RELOAD", "MIXED", "UNKNOWN"],
+    "team_format": ["SOLOS", "DUOS", "TRIOS", "SQUADS", "TEAMS", "UNKNOWN"],
+    "platform_scope": ["ALL_SUPPORTED", "PC", "PLAYSTATION", "XBOX", "NINTENDO", "MOBILE", "CONSOLE", "UNKNOWN"],
+    "eligibility_status": ["VERIFIED", "PARTIAL", "UNKNOWN"],
+    "qualification_type": ["POINTS_THRESHOLD", "PLACEMENT", "TOP_N", "SERIES_POINTS", "ADVANCEMENT", "INVITE", "UNKNOWN"],
+    "time_precision": ["EXACT", "DATE_ONLY", "DATE_RANGE", "UNPUBLISHED"]
+  },
+  "schema": {
+    "competition_required": ["competition_id", "name", "competition_class", "status", "regions", "visibility", "source_ids", "phases", "history"],
+    "competition_fields": [
+      "official_event_id", "official_event_slug", "series_id", "season_id", "name", "competition_class", "status", "regions", "ruleset", "team_format", "platform_scope", "physical_event", "venue", "date_window", "registration", "eligibility", "prize_pool", "qualification", "visibility", "calendar_uid", "source_ids", "source_urls", "phases", "history"
+    ],
+    "phase_fields": [
+      "phase_id", "name", "phase_type", "order", "status", "registration", "eligibility_override", "qualification_override", "sessions"
+    ],
+    "session_fields": [
+      "session_id", "official_session_id", "name", "session_number", "round_number", "round_label", "status", "region", "ruleset", "team_format", "platform_scope", "start_at", "end_at", "source_timezone", "display_timezone", "time_precision", "registration_deadline_at", "check_in_at", "max_matches", "qualification", "prize", "source_url", "visibility", "calendar_uid", "related_service_event_ids"
+    ],
+    "registration_fields": ["opens_at", "closes_at", "check_in_at", "method", "url", "required", "source_id", "confidence"],
+    "eligibility_fields": ["status", "minimum_rank", "account_level", "age_min", "two_factor_required", "region_lock", "platform_requirements", "team_requirements", "other_rules", "rules_url"],
+    "prize_fields": ["currency", "total_amount", "region_amount", "session_amount", "distribution", "source_id", "confidence"],
+    "qualification_fields": ["type", "from_phase", "to_phase", "slots", "criteria", "tie_break", "source_id", "confidence"]
+  },
+  "calendar_projection_policy": {
+    "FEATURED": [
+      "FNCS finals/major championship/global championship",
+      "Reload Elite Championship / EWC or equivalent top-tier event",
+      "major official LAN or in-person event in France/Europe",
+      "session with major qualification consequence or user planning value"
+    ],
+    "CALENDAR": [
+      "important EU qualifier/final",
+      "large cash event with meaningful qualification or platform specificity",
+      "registration opening/closing deadline when action is required"
+    ],
+    "LEDGER_ONLY": [
+      "ordinary ranked cups",
+      "routine victory cups",
+      "performance evaluations",
+      "test cups",
+      "repetitive low-stakes sessions unless specifically requested"
+    ],
+    "promotion_signals": [
+      "major prize pool",
+      "qualification to FNCS/global/LAN",
+      "France/Europe physical attendance",
+      "registration deadline",
+      "platform-specific opportunity relevant to the user",
+      "officially elevated tournament status"
+    ],
+    "anti_bazar": "Never create one VEVENT per match/game. Normally project one logical competition phase/run, while retaining every underlying session in the ledger."
+  },
+  "timezone_policy": {
+    "canonical_storage": "Store source timestamp with explicit source timezone when known and an ISO-8601 UTC-normalized equivalent when safely convertible.",
+    "eu_display": "Display actionable EU sessions in Europe/Paris.",
+    "dst_guard": "Use actual timezone rules for the event date; never apply a fixed UTC offset across DST changes.",
+    "ambiguous_time": "If the official page exposes a suspicious 24-hour placeholder/window instead of a reliable session time, store time_precision as DATE_ONLY/DATE_RANGE and do not create an exact calendar time."
+  },
+  "deadline_bridge": {
+    "types": ["LAST_REGISTRATION_AT", "LAST_CHECK_IN_AT", "LAST_QUALIFIER_AT"],
+    "rule": "Only exact, officially supported deadlines are exported to the deadline ledger. A tournament may remain LEDGER_ONLY while its registration deadline becomes independently actionable.",
+    "dedupe_key": "competition_id + phase_id + deadline_type + deadline_at"
+  },
+  "history_event_types": [
+    "COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "SESSION_ADDED", "SESSION_TIME_CHANGED", "SESSION_CANCELLED", "SESSION_COMPLETED", "REGISTRATION_OPENED", "REGISTRATION_CHANGED", "ELIGIBILITY_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "CALENDAR_PROMOTED", "CALENDAR_DEMOTED", "SOURCE_CORRECTION"
+  ],
+  "ingestion_policy": {
+    "scope": "EU official schedule plus GLOBAL majors relevant to EU/France",
+    "all_eu_sessions": true,
+    "small_cups_ingested": true,
+    "small_cups_calendar_default": false,
+    "official_schedule_url": "https://www.fortnite.com/competitive/schedule?lang=fr&region=EU",
+    "event_pages": "Use official event-specific pages when they provide richer phase, eligibility, prize or qualification details.",
+    "write_policy": "Do not commit a pure recheck. Write only new/changed competitions, phases, sessions, rules, deadlines, prize/qualification data or projection changes."
+  },
+  "competitions": [
+    {
+      "competition_id": "fncs-global-2026-antwerp",
+      "official_event_id": null,
+      "official_event_slug": "fncs-2026-overview",
+      "series_id": "FNCS",
+      "season_id": null,
+      "name": "Fortnite Global Championship 2026 — Anvers",
+      "competition_class": "FNCS",
+      "status": "SCHEDULED",
+      "regions": ["GLOBAL"],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": true,
+      "venue": {
+        "name": "Lotto Arena",
+        "city": "Antwerpen",
+        "country": "Belgium",
+        "address": "Schijnpoortweg 119, Antwerpen, Belgium"
+      },
+      "date_window": {
+        "start_date": "2026-09-26",
+        "end_date": "2026-09-27",
+        "time_precision": "DATE_RANGE"
+      },
+      "registration": null,
+      "eligibility": {"status": "UNKNOWN"},
+      "prize_pool": {
+        "currency": "USD",
+        "total_amount": 2000000,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
+      "qualification": null,
+      "visibility": "FEATURED",
+      "calendar_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "source_ids": ["fortnite_competitive", "lotto_arena"],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr",
+        "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-global-2026-antwerp:championship",
+          "name": "Global Championship",
+          "phase_type": "CHAMPIONSHIP",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [],
+          "schedule_completeness": "DATES_ONLY",
+          "venue_time_hints": [
+            {"at": "2026-09-26T14:00:00+02:00", "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"},
+            {"at": "2026-09-27T18:30:00+02:00", "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"}
+          ]
+        }
+      ],
+      "history": [
+        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."}
+      ]
+    },
+    {
+      "competition_id": "reload-elite-ewc-paris-2026",
+      "official_event_id": "EWCParis",
+      "official_event_slug": "EWCParis",
+      "series_id": "RELOAD_ELITE_SERIES",
+      "season_id": null,
+      "name": "Reload Elite Series Championship — EWC Paris 2026",
+      "competition_class": "RELOAD_ELITE",
+      "status": "LIVE",
+      "regions": ["GLOBAL"],
+      "ruleset": "RELOAD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": true,
+      "venue": {"name": null, "city": "Paris", "country": "France", "address": null},
+      "date_window": {
+        "start_date": "2026-08-19",
+        "end_date": "2026-08-22",
+        "time_precision": "DATE_RANGE"
+      },
+      "registration": null,
+      "eligibility": {"status": "UNKNOWN"},
+      "prize_pool": {
+        "currency": "USD",
+        "total_amount": 1000000,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
+      "qualification": null,
+      "visibility": "FEATURED",
+      "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "source_ids": ["fortnite_competitive", "ewc_official"],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/EWCParis?region=EU",
+        "https://www.signup.esportsworldcup.com/EWCPARIS26"
+      ],
+      "phases": [
+        {
+          "phase_id": "reload-elite-ewc-paris-2026:championship",
+          "name": "Championship",
+          "phase_type": "CHAMPIONSHIP",
+          "order": 1,
+          "status": "LIVE",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [],
+          "schedule_completeness": "DATE_RANGE_ONLY"
+        }
+      ],
+      "history": [
+        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."}
+      ]
+    },
+    {
+      "competition_id": "fncs-global-last-chance-eu-2026",
+      "official_event_id": "S36_FNCSMajor3_LCQ",
+      "official_event_slug": "S36_FNCSMajor3_LCQ",
+      "series_id": "FNCS",
+      "season_id": null,
+      "name": "Championnat global FNCS — Dernière chance EU",
+      "competition_class": "FNCS",
+      "status": "COMPLETED",
+      "regions": ["EU"],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {"start_date": "2026-08-03", "end_date": "2026-08-14", "time_precision": "DATE_RANGE"},
+      "registration": null,
+      "eligibility": {"status": "UNKNOWN"},
+      "prize_pool": null,
+      "qualification": {"type": "ADVANCEMENT", "from_phase": "LCQ", "to_phase": "GLOBAL_CHAMPIONSHIP", "slots": null, "criteria": null, "tie_break": null, "source_id": "fortnite_competitive", "confidence": "PARTIAL"},
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": ["fortnite_competitive"],
+      "source_urls": ["https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU"],
+      "phases": [
+        {
+          "phase_id": "fncs-global-last-chance-eu-2026:lcq",
+          "name": "Dernière chance",
+          "phase_type": "LCQ",
+          "order": 1,
+          "status": "COMPLETED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1","official_session_id":null,"name":"Session 2 - Manche 1","session_number":2,"round_number":1,"round_label":"Session 2 - Manche 1","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-03T17:00:00+02:00","end_at":"2026-08-03T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
+            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2","official_session_id":null,"name":"Session 2 - Manche 2","session_number":2,"round_number":2,"round_label":"Session 2 - Manche 2","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-04T17:00:00+02:00","end_at":"2026-08-04T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
+            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3","official_session_id":null,"name":"Session 2 - Manche 3","session_number":2,"round_number":3,"round_label":"Session 2 - Manche 3","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-05T17:00:00+02:00","end_at":"2026-08-05T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
+            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1","official_session_id":null,"name":"Session 3 - Manche 1","session_number":3,"round_number":1,"round_label":"Session 3 - Manche 1","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-07T17:00:00+02:00","end_at":"2026-08-07T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
+            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2","official_session_id":null,"name":"Session 3 - Manche 2","session_number":3,"round_number":2,"round_label":"Session 3 - Manche 2","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-08T17:00:00+02:00","end_at":"2026-08-08T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]}
+          ],
+          "schedule_completeness": "PARTIAL_SEE_OFFICIAL_SCHEDULE"
+        }
+      ],
+      "history": [
+        {"at": "2026-08-19T09:35:00Z", "type": "COMPETITION_CREATED", "source_id": "fortnite_competitive", "note": "Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."}
+      ]
+    }
+  ],
+  "watch_targets": [
+    {
+      "watch_id": "fncs-solo-october-2026",
+      "related_candidate_id": "fortnite-fncs-solos-october-2026",
+      "state": "WATCHING",
+      "promotion_rule": "Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."
+    }
+  ]
+}
