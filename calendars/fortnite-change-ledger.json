@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
-  "updated_at": "2026-08-19T15:57:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
   "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
   "notification_outbox": "fortnite-notification-outbox-france.json",
@@ -33,9 +33,7 @@
   "materiality_levels": ["IGNORE","LEDGER_ONLY","CALENDAR","NOTIFY"],
   "change_states": ["OPEN","SUPERSEDED","ARCHIVED"],
   "notification_dispositions": ["BASELINE","SILENT_POLICY","ELIGIBLE_NOW","ELIGIBLE_WHEN_DUE","CONDITION_BLOCKED","STALE","NOT_APPLICABLE"],
-  "change_type_registry": [
-    "ENTITY_CREATED","ENTITY_CORRECTED","STATUS_CHANGED","TIME_CHANGED","DATE_CHANGED","LOCATION_CHANGED","ACCESS_CHANGED","AVAILABILITY_CHANGED","REGISTRATION_CHANGED","DEADLINE_CHANGED","SESSION_ADDED","SESSION_CHANGED","SESSION_CANCELLED","QUALIFICATION_CHANGED","PARTICIPANT_OUTCOME_CHANGED","PRICE_CHANGED","RELATION_CHANGED","MAINTENANCE_CHANGED","POSTPONED","CANCELLED","REACTIVATED","BACK_ON_SALE","WAITLIST_OPENED","CALENDAR_PROMOTED","CALENDAR_DEMOTED","CALENDAR_EVENT_CHANGED","SOURCE_CORRECTION","OTHER_MATERIAL"
-  ],
+  "change_type_registry": ["ENTITY_CREATED","ENTITY_CORRECTED","STATUS_CHANGED","TIME_CHANGED","DATE_CHANGED","LOCATION_CHANGED","ACCESS_CHANGED","AVAILABILITY_CHANGED","REGISTRATION_CHANGED","DEADLINE_CHANGED","SESSION_ADDED","SESSION_CHANGED","SESSION_CANCELLED","QUALIFICATION_CHANGED","PARTICIPANT_OUTCOME_CHANGED","PRICE_CHANGED","RELATION_CHANGED","MAINTENANCE_CHANGED","POSTPONED","CANCELLED","REACTIVATED","BACK_ON_SALE","WAITLIST_OPENED","CALENDAR_PROMOTED","CALENDAR_DEMOTED","CALENDAR_EVENT_CHANGED","SOURCE_CORRECTION","OTHER_MATERIAL"],
   "causal_identity": {
     "problem_solved": "A pure before/after fingerprint would incorrectly suppress a legitimate repeated transition such as SOLD_OUT -> AVAILABLE -> SOLD_OUT. V2 chains each occurrence to the previous accepted change for the same subject/scope.",
     "subject_scope_key": "sub_<sha256(domain|subject_key|scope_key)>",
@@ -49,30 +47,10 @@
   },
   "semantic_normalization": {
     "algorithm": "SHA256_CANONICAL_JSON_V2",
-    "rules": [
-      "sort object keys recursively",
-      "sort set-like arrays by stable ID/value",
-      "preserve ordered arrays only when order has business meaning",
-      "normalize equivalent timezone-aware instants to RFC3339 UTC for hashing while retaining source timezone in domain ledgers",
-      "normalize URLs by removing non-identity tracking parameters only",
-      "distinguish null from UNKNOWN when domain semantics require it",
-      "normalize localized titles/aliases out of identity when a stable ID exists"
-    ],
+    "rules": ["sort object keys recursively","sort set-like arrays by stable ID/value","preserve ordered arrays only when order has business meaning","normalize equivalent timezone-aware instants to RFC3339 UTC for hashing while retaining source timezone in domain ledgers","normalize URLs by removing non-identity tracking parameters only","distinguish null from UNKNOWN when domain semantics require it","normalize localized titles/aliases out of identity when a stable ID exists"],
     "ignored_by_default": ["updated_at","checked_at","last_verified_at","fetched_at","crawl timestamps","Git blob SHA alone","DTSTAMP","LAST-MODIFIED without business change","freshness badge expiry","internal score without threshold/action change","derived index ordering","serialization whitespace","JSON key order","ICS folding"]
   },
-  "subject_resolution": {
-    "SERVICE": "service_event_id + optional component_id",
-    "SEASON_PASS": "track_id + optional milestone_id/window_id/ranked_scope",
-    "COMPETITIVE": "competition_id + optional phase_id/session_id",
-    "COMPETITIVE_DEADLINE": "competition_id + route_id/phase_id + optional session_id + deadline_type",
-    "PARTICIPANT_OUTCOME": "participant_id + competition_id + phase_id/route_id",
-    "PHYSICAL_EVENT": "physical_event_id + optional public_session_id/venue_space_id",
-    "PHYSICAL_ACCESS": "access_profile_id + optional session_id/rule_type",
-    "TICKETING": "event_uid + provider_id + optional session_key/category_key",
-    "LORE": "claim_id",
-    "WATCHLIST": "candidate_id/watch_id",
-    "CALENDAR_PROJECTION": "calendar_path + UID"
-  },
+  "subject_resolution": {"SERVICE":"service_event_id + optional component_id","SEASON_PASS":"track_id + optional milestone_id/window_id/ranked_scope","COMPETITIVE":"competition_id + optional phase_id/session_id","COMPETITIVE_DEADLINE":"competition_id + route_id/phase_id + optional session_id + deadline_type","PARTICIPANT_OUTCOME":"participant_id + competition_id + phase_id/route_id","PHYSICAL_EVENT":"physical_event_id + optional public_session_id/venue_space_id","PHYSICAL_ACCESS":"access_profile_id + optional session_id/rule_type","TICKETING":"event_uid + provider_id + optional session_key/category_key","LORE":"claim_id","WATCHLIST":"candidate_id/watch_id","CALENDAR_PROJECTION":"calendar_path + UID"},
   "change_acceptance": {
     "fresh_canonical_read": "Before accepting a change, read the latest canonical domain state and the latest subject head/index. A Git SHA difference alone is never enough.",
     "out_of_order_guard": "Older/stale source data cannot move the canonical subject backward unless it is an explicit official correction or genuine later transition.",
@@ -106,20 +84,19 @@
     "archives": "Future archives must preserve change_id, subject revision chain, consumed notification keys and hash/checkpoint metadata.",
     "no_time_based_forgetting": "Never allow a notification duplicate merely because an old receipt/change aged out."
   },
-  "record_schema": {
-    "required": ["change_id","domain","subject_scope_key","subject_key","subject_revision","causal_parent_change_id","change_type","materiality","state_fingerprint","transition_fingerprint","detected_at","source_refs","notification_disposition"],
-    "optional": ["scope_key","material_before","material_after","material_evidence_state","supersedes_change_id","projection_targets","history_ref","causal_source_change_ids","policy_version","notes"]
-  },
-  "changes": [],
+  "record_schema": {"required":["change_id","domain","subject_scope_key","subject_key","subject_revision","causal_parent_change_id","change_type","materiality","state_fingerprint","transition_fingerprint","detected_at","source_refs","notification_disposition"],"optional":["scope_key","material_before","material_after","material_evidence_state","supersedes_change_id","projection_targets","history_ref","causal_source_change_ids","policy_version","notes"]},
+  "changes": [
+    {"change_id":"chg_d7bb61401fb80414535e4338","domain":"COMPETITIVE","subject_scope_key":"sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86","subject_key":"reload-elite-ewc-paris-2026","subject_revision":1,"causal_parent_change_id":null,"change_type":"SOURCE_CORRECTION","materiality":"NOTIFY","state_fingerprint":"a524455578923fc07677b83255043fc7105fb519e491f1f2debfba85c0e6aebc","transition_fingerprint":"13d020ad4215d3673b031ef3d9f79e1732b1a559125efec656703e14025495e2","detected_at":"2026-08-19T18:12:23Z","source_refs":["https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","https://www.fortnite.com/competitive/events/S39_ReloadEliteSeriesFinal?region=NAC&round=S39_ReloadEliteSeries1Final_NAC"],"notification_disposition":"ELIGIBLE_NOW","scope_key":null,"material_before":{"city":"Paris","country":"France","venue":null},"material_after":{"city":"Riyadh","country":"Saudi Arabia","venue":"Boulevard City"},"material_evidence_state":"OFFICIAL_EXACT_EVENT_SOURCE","causal_source_change_ids":[]},
+    {"change_id":"chg_4d847a615cf7fd9ee9306579","domain":"TICKETING","subject_scope_key":"sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45","subject_key":"fortnite-reload-elite-ewc-paris-20260819@openai","subject_revision":1,"causal_parent_change_id":null,"change_type":"AVAILABILITY_CHANGED","materiality":"NOTIFY","state_fingerprint":"02785bf5e0f10be95813e553e8513093867709724ced617b1d4db53728c31743","transition_fingerprint":"b058d533ff086ee71f93b9ee6100ffdebc63082881a0e824921beccaf8931b14","detected_at":"2026-08-19T18:12:23Z","source_refs":["https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26"],"notification_disposition":"ELIGIBLE_NOW","scope_key":"ewc_riyadh","material_before":{"status":"PREREGISTRATION","provider_id":"ewc_paris","ticket_scope":"EWC_PARIS_GENERAL"},"material_after":{"status":"AVAILABLE","provider_id":"ewc_riyadh","ticket_scope":"EWC26_FORTNITE_CHAMPIONSHIP","regular_pass_sar":219,"premium_pass_sar":471},"material_evidence_state":"OFFICIAL_EXACT_EVENT_SOURCE","causal_source_change_ids":["chg_d7bb61401fb80414535e4338"]},
+    {"change_id":"chg_ceb30c82d0bcb7360d8cf0a7","domain":"PHYSICAL_EVENT","subject_scope_key":"sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1","subject_key":"fortnite-physical-ewc-paris-2026","subject_revision":1,"causal_parent_change_id":null,"change_type":"LOCATION_CHANGED","materiality":"CALENDAR","state_fingerprint":"070cfc641de0c3e3e1ec07486def258f8e76d0e89d9c7949e30d79f1381e219a","transition_fingerprint":"947190403a53daf4c5c9acb03a0d31490e12790b1bd35ceade4c2e22745f62b4","detected_at":"2026-08-19T18:12:23Z","source_refs":["https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26"],"notification_disposition":"NOT_APPLICABLE","scope_key":null,"material_before":{"city":"Paris","country_code":"FR","venue_id":"ewc_paris_2026_tba","primary_action":"REGISTER_INTEREST"},"material_after":{"city":"Riyadh","country_code":"SA","venue_id":"ewc_boulevard_city_riyadh","primary_action":"BUY_TICKET"},"material_evidence_state":"OFFICIAL_EXACT_EVENT_SOURCE","causal_source_change_ids":["chg_d7bb61401fb80414535e4338","chg_4d847a615cf7fd9ee9306579"]},
+    {"change_id":"chg_558e71ff655403f489e782fd","domain":"PHYSICAL_ACCESS","subject_scope_key":"sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269","subject_key":"fortnite-access-ewc-paris-2026","subject_revision":1,"causal_parent_change_id":null,"change_type":"ACCESS_CHANGED","materiality":"CALENDAR","state_fingerprint":"83c25141311f8ce88584452510f09912c68a23a20c95c1c85eca4ee2dcc46c61","transition_fingerprint":"b51a2f91ea05446ba0c4d9c05133c79812785e0852430624011beb7d5d12ebc9","detected_at":"2026-08-19T18:12:23Z","source_refs":["https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26"],"notification_disposition":"NOT_APPLICABLE","scope_key":null,"material_before":{"access_state":"INTEREST_PREREGISTRATION","admission_mode":"UNKNOWN","interest_preregistration_only":true},"material_after":{"access_state":"TICKET_REQUIRED","admission_mode":"PAID_TICKET","interest_preregistration_only":false},"material_evidence_state":"OFFICIAL_EXACT_EVENT_SOURCE","causal_source_change_ids":["chg_4d847a615cf7fd9ee9306579"]}
+  ],
   "calendar_write_receipts": [],
   "ledger_write_receipts": [],
-  "legacy_v1_notification_fields": {
-    "notification_receipts": [],
-    "notification_key_index": {},
-    "status": "DEPRECATED_EMPTY_OUTBOX_IS_CANONICAL"
-  },
+  "legacy_v1_notification_fields": {"notification_receipts":[],"notification_key_index":{},"status":"DEPRECATED_EMPTY_OUTBOX_IS_CANONICAL"},
   "history": [
     {"at":"2026-08-19T15:49:00Z","type":"BOOTSTRAP_BASELINE_CREATED","note":"Existing canonical Fortnite state imported as silent baseline."},
-    {"at":"2026-08-19T15:57:00Z","type":"CHANGE_LEDGER_V2_MIGRATION","note":"Added causal subject revisions, recurrence-safe change identity, policy-freeze semantics, CAS write rules and a separate transactional notification outbox."}
+    {"at":"2026-08-19T15:57:00Z","type":"CHANGE_LEDGER_V2_MIGRATION","note":"Added causal subject revisions, recurrence-safe change identity, policy-freeze semantics, CAS write rules and a separate transactional notification outbox."},
+    {"at":"2026-08-19T18:12:23Z","type":"MATERIAL_SOURCE_CORRECTION","note":"Exact EWC ticketing and multiple Fortnite Competitive qualifier pages corrected the Reload Elite Series Championship logistics from Paris preregistration to Boulevard City, Riyadh with live ticket inventory."}
   ]
 }
