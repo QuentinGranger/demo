@@ -1,15 +1,20 @@
 {
-  "version": "FORTNITE_VENUE_REGISTRY_EU_V1",
-  "updated_at": "2026-08-19T15:14:00Z",
-  "scope": "Physical Fortnite venues relevant to France and Europe",
+  "version": "FORTNITE_VENUE_REGISTRY_EU_V2",
+  "updated_at": "2026-08-19T15:31:00Z",
+  "scope": "Physical Fortnite venues, subspaces and verified onsite location metadata relevant to France and Europe",
   "principles": {
     "stable_venue_id": "A venue_id is immutable across events; renames become aliases/history rather than a new venue when the physical venue is the same.",
     "address_precision": "Never invent street, postal code, entrance or GEO. Store the most precise officially verified level only.",
     "geo_guard": "GEO requires a direct venue/organizer source or another authoritative geocoding source explicitly recorded in geo_source.",
     "city_only_is_valid": "CITY precision is valid when the organizer has announced only the city; do not upgrade it from third-party speculation.",
-    "entrance_is_session_specific": "A special gate/entrance belongs to event access data unless the venue permanently identifies it."
+    "subspace_guard": "Hall, stand, zone, stage, gate and entrance IDs exist only after a direct organizer/venue source identifies them. Never infer a hall from a convention floor plan unless it is explicitly tied to Fortnite.",
+    "entrance_is_event_scoped_by_default": "A special gate/entrance belongs to event access data unless the venue permanently identifies it.",
+    "accessibility_unknown_by_default": "PMR/accessibility, companion access, lifts, accessible entrances and seating remain UNKNOWN until a venue/organizer publishes them for the applicable event/venue scope.",
+    "transport_is_advisory_not_canonical": "Transport/parking details may be stored when officially published but never change the canonical venue identity or location precision.",
+    "timezone_is_operational": "Venue timezone is stored as an IANA timezone for session normalization; it is operational metadata, not proof of an event start time."
   },
   "precision_levels": ["COUNTRY", "REGION", "CITY", "SITE", "VENUE", "BUILDING", "EXACT_ENTRANCE"],
+  "space_types": ["SITE", "HALL", "ARENA_BOWL", "STAGE", "STAND", "ZONE", "LOUNGE", "CHECK_IN_AREA", "QUEUE_AREA", "ENTRANCE", "EXIT", "OTHER"],
   "venues": [
     {
       "venue_id": "lotto_arena_antwerp",
@@ -17,6 +22,7 @@
       "aliases": ["Lotto Arena", "Lotto Arena Antwerp"],
       "country_code": "BE",
       "city": "Antwerpen",
+      "timezone": "Europe/Brussels",
       "address": "Schijnpoortweg 119, Antwerpen, Belgique",
       "address_precision": "BUILDING",
       "geo": null,
@@ -24,6 +30,18 @@
       "source_id": "lotto_arena",
       "source_url": "https://www.lotto-arena.be/",
       "status": "ACTIVE",
+      "spaces": [],
+      "entry_points": [],
+      "accessibility": {
+        "state": "UNKNOWN",
+        "accessible_entrance_id": null,
+        "companion_policy": "UNKNOWN",
+        "accessible_seating": "UNKNOWN",
+        "details": [],
+        "source_url": null
+      },
+      "official_transport_notes": [],
+      "official_parking_notes": [],
       "history": []
     },
     {
@@ -32,6 +50,7 @@
       "aliases": ["EWC Paris 2026"],
       "country_code": "FR",
       "city": "Paris",
+      "timezone": "Europe/Paris",
       "address": "Paris, France",
       "address_precision": "CITY",
       "geo": null,
@@ -39,6 +58,18 @@
       "source_id": "ewc_official",
       "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
       "status": "TBA_DETAIL",
+      "spaces": [],
+      "entry_points": [],
+      "accessibility": {
+        "state": "UNKNOWN",
+        "accessible_entrance_id": null,
+        "companion_policy": "UNKNOWN",
+        "accessible_seating": "UNKNOWN",
+        "details": [],
+        "source_url": null
+      },
+      "official_transport_notes": [],
+      "official_parking_notes": [],
       "history": []
     }
   ]
