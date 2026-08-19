@@ -1,0 +1,85 @@
+{
+  "version": "FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V1",
+  "updated_at": "2026-08-19T15:22:00Z",
+  "ledger": "fortnite-physical-events-france.json",
+  "venue_registry": "fortnite-venues-france.json",
+  "ticketing_ledger": "fortnite-ticketing-france.json",
+  "ticketing_provider_registry": "fortnite-ticketing-providers-france.json",
+  "scope": "Projection, travel planning, location and availability rules for official Fortnite physical events in France and Europe",
+  "relevance": {
+    "FEATURED": ["major Fortnite LAN in France/Europe", "FNCS Global/major final", "major official Epic/Fortnite activation in France", "major EWC/Red Bull/partner event with direct Fortnite program"],
+    "CALENDAR": ["official viewing party", "convention with confirmed Fortnite/Epic stand", "official partner activation", "official community event with date/location/action"],
+    "LEDGER_ONLY": ["incomplete physical signal", "minor partner presence without useful schedule", "city/date announcement with no actionable public access yet"]
+  },
+  "actions": {
+    "BUY_TICKET": "Direct ticket inventory is available/onsale.",
+    "JOIN_WAITLIST": "Official waiting list is the best current access route.",
+    "REGISTER": "Official preregistration/registration exists but admission inventory is not yet available.",
+    "CHECK_IN": "A separate check-in is explicitly required.",
+    "ATTEND": "Access is already secured/free or no registration action is required.",
+    "VISIT_STAND": "Convention/stand has an actionable public schedule/location.",
+    "WATCH": "Viewing party or spectator session is the primary action.",
+    "FOLLOW": "Physical event is confirmed but no public action is yet available."
+  },
+  "location_policy": {
+    "LOCATION": "Use venue registry address at best verified precision.",
+    "GEO": "Materialize only when venue registry has verified numeric latitude/longitude and geo_source.",
+    "structured_location": "X-APPLE-STRUCTURED-LOCATION may be added only when address/GEO are verified and the ICS validator accepts the folded property.",
+    "maps": "Directions/maps links may be stored only from a direct venue/organizer or a deterministic map query based on an already verified address; never use a map result to upgrade canonical address precision.",
+    "venue_change": "Same logical event changing venue keeps event UID/physical_event_id, records previous venue in history and increments VEVENT SEQUENCE only if the projected LOCATION changes."
+  },
+  "ticketing_bridge": {
+    "source_of_truth": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
+    "global_status": "Derive event access only from ticketing event-level state after considering session/category exceptions.",
+    "priority_order": ["BUY_TICKET", "JOIN_WAITLIST", "REGISTER", "CHECK_IN", "ATTEND", "FOLLOW"],
+    "guards": [
+      "VIP_SOLD_OUT_DOES_NOT_MEAN_EVENT_SOLD_OUT",
+      "ONE_SESSION_SOLD_OUT_DOES_NOT_MEAN_RUN_SOLD_OUT",
+      "WAITLIST_IS_NOT_SOLD_OUT",
+      "PREREGISTRATION_IS_NOT_ON_SALE",
+      "PAGE_EXISTS_IS_NOT_INVENTORY",
+      "SEATMAP_SIGNAL_ALONE_IS_NOT_GLOBAL_SCARCITY"
+    ]
+  },
+  "session_policy": {
+    "public_session_id_stable": true,
+    "venue_open_time_not_match_time": true,
+    "same_run_new_session": "Keep same physical_event_id and normally same event_uid; add session and update description/alarms only if actionably useful.",
+    "session_removed": "Require direct evidence or persistent unambiguous removal; a transient page failure does not remove a session.",
+    "session_statuses": ["ANNOUNCED","AVAILABLE","WAITLIST","SOLD_OUT","CLOSED","ENDED","CANCELLED","UNKNOWN"]
+  },
+  "reminder_profiles": {
+    "MAJOR_TRAVEL_EU": ["P30D", "P7D", "P1D"],
+    "MAJOR_FRANCE": ["P14D", "P7D", "P1D"],
+    "LOCAL_PARIS": ["P7D", "P1D", "PT2H"],
+    "VIEWING_PARTY": ["P1D", "PT2H"],
+    "CONVENTION_STAND": ["P7D", "P1D"],
+    "TICKET_SALE": ["PT1H"],
+    "WAITLIST_BACK_ON_SALE": ["ON_STATE_CHANGE"]
+  },
+  "reminder_selection": {
+    "foreign_featured": "MAJOR_TRAVEL_EU",
+    "france_featured": "MAJOR_FRANCE",
+    "paris_or_idf_calendar": "LOCAL_PARIS",
+    "viewing_party": "VIEWING_PARTY",
+    "convention_or_stand": "CONVENTION_STAND",
+    "no_backfill": true,
+    "quiet_hours": "Nonurgent notices 21:00-09:00 Europe/Paris may be deferred only if still actionable. Ticket back-on-sale/last-minute cancellation may notify immediately."
+  },
+  "ics_mapping": {
+    "policy_header": "X-FORTNITE-PHYSICAL-EVENT-POLICY:FORTNITE_PHYSICAL_EVENT_ENGINE_EU_V1",
+    "ledger_header": "X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json",
+    "venue_registry_header": "X-FORTNITE-VENUE-REGISTRY:fortnite-venues-france.json",
+    "properties": [
+      "X-FORTNITE-PHYSICAL-EVENT-ID",
+      "X-FORTNITE-PHYSICAL-EVENT-TYPE",
+      "X-FORTNITE-VENUE-ID",
+      "X-FORTNITE-LOCATION-PRECISION",
+      "X-FORTNITE-PUBLIC-SESSION",
+      "X-FORTNITE-ACCESS-ACTION",
+      "X-FORTNITE-TICKET-STATUS",
+      "X-FORTNITE-TICKET-PROVIDER-ID"
+    ],
+    "header_only_rule": "Do not change SEQUENCE just to add policy headers; materialize on the next real business update."
+  }
+}
