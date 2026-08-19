@@ -6,6 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:⭐ Pokémon — Tout (France & Paris)
 X-WR-TIMEZONE:Europe/Paris
 X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
+X-POKEMON-PRICE-POLICY:OFFICIAL_EUR_EXACT_SKU_V2
+X-POKEMON-WAVE-POLICY:ONE_EVENT_CHECKLIST_V1
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
 DTSTAMP:20260819T024000Z
@@ -26,30 +28,33 @@ CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:7
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
+X-POKEMON-WAVE-ID:TCG-MEGA-FORCES-20260828
+X-POKEMON-WAVE-PRODUCT-COUNT:3
+X-POKEMON-WAVE-PRODUCTS:Pokébox Méga-Zeraora-ex|Pokébox Méga-Darkrai-ex|Pokébox Méga-Dracolosse-ex
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
-SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Pokébox Méga Forces
+SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Vague Pokébox Méga Forces
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — produit standard, sans urgence particulière identifiée.\nFiabilité : 🟡 À confirmer. Sortie française référencée pour les Pokébox Méga-Zeraora-ex\, Méga-Darkrai-ex ou Méga-Dracolosse-ex.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://www.pokecardex.com/forums/viewtopic.php?t=49894
+DESCRIPTION:Priorité : ℹ️ Info — produits standards regroupés dans une seule vague.\nFiabilité : 🟡 À confirmer. Sortie française référencée pour les Pokébox Méga-Zeraora-ex\, Méga-Darkrai-ex et Méga-Dracolosse-ex.\n📦 Checklist produits :\n✅ Pokébox Méga-Zeraora-ex\n✅ Pokébox Méga-Darkrai-ex\n✅ Pokébox Méga-Dracolosse-ex\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://www.pokecardex.com/forums/viewtopic.php?t=49894
 URL:https://www.pokecardex.com/forums/viewtopic.php?t=49894
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🃏 Sortie dans 7 jours — vérifie prix et stock : Pokébox Méga Forces
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie prix et stock : Vague Pokébox Méga Forces
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🃏 Sortie demain — prépare ton achat : Pokébox Méga Forces
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Vague Pokébox Méga Forces
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -84,23 +89,26 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:8
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:9
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
+X-POKEMON-WAVE-ID:TCG-30TH-LAUNCH-20260916
+X-POKEMON-WAVE-PRODUCT-COUNT:2
+X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|ETB 30 ans
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-etb-30ans-20260906@openai
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire, mais pas une ouverture limitée à heure fixe.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon. Sortie mondiale simultanée de l'extension JCC Pokémon 30e Anniversaire et vague de lancement associée.\n📦 Checklist produits :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -169,24 +177,27 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:8
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:9
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
+X-POKEMON-WAVE-ID:TCG-30TH-WAVE-20261002
+X-POKEMON-WAVE-PRODUCT-COUNT:4
+X-POKEMON-WAVE-PRODUCTS:Bundle 6 boosters|Coffret Classeur|Mini-Tins|Autres produits associés
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-bundle-30ans-20260919@openai
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-classeur-30ans-20260920@openai
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Vague française 30e Anniversaire : Bundle\, Collection Classeur\, mini-boîtes et produits associés.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 Annoncé par distributeur / sources spécialisées. Les produits partageant cette date sont regroupés dans un seul événement.\n📦 Checklist produits :\n✅ Bundle 6 boosters\n✅ Coffret Classeur\n✅ Mini-Tins\n🟡 Autres produits associés — détail à confirmer\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -260,7 +271,7 @@ DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -332,21 +343,24 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:7
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:8
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
+X-POKEMON-WAVE-ID:TCG-DECKS-ESPEON-UMBREON-20261030
+X-POKEMON-WAVE-PRODUCT-COUNT:2
+X-POKEMON-WAVE-PRODUCTS:Deck Combat Mentali-ex|Deck Combat Noctali-ex
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
-SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Decks Mentali-ex & Noctali-ex
+SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Vague Decks Mentali-ex & Noctali-ex
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — decks standards, sans urgence ou exclusivité identifiée.\nFiabilité : 🟡 À confirmer. Date du 30 octobre 2026 actuellement référencée pour les Decks Combat Mentali-ex et Noctali-ex.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
+DESCRIPTION:Priorité : ℹ️ Info — deux decks standards regroupés sur leur date commune.\nFiabilité : 🟡 À confirmer. Date du 30 octobre 2026 actuellement référencée pour les Decks Combat Mentali-ex et Noctali-ex.\n📦 Checklist produits :\n✅ Deck Combat Mentali-ex\n✅ Deck Combat Noctali-ex\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 URL:https://lorenzone.fr/products/deck-combat-30eme-anniversaire
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Info
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -360,21 +374,24 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:6
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:7
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
+X-POKEMON-WAVE-ID:TCG-ME06-20261106
+X-POKEMON-WAVE-PRODUCT-COUNT:3
+X-POKEMON-WAVE-PRODUCTS:Boosters|Display|ETB
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06)\, boosters/display et ETB.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
+DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur. Sortie française référencée au 6 novembre 2026 pour Méga-Évolution : Règne Delta (ME06).\n📦 Checklist produits :\n✅ Boosters\n✅ Display\n✅ ETB\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
 URL:https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -388,32 +405,35 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-30th-premium-wave-20261106@openai
-DTSTAMP:20260819T024000Z
-LAST-MODIFIED:20260819T024000Z
-SEQUENCE:8
+DTSTAMP:20260819T025300Z
+LAST-MODIFIED:20260819T025300Z
+SEQUENCE:9
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
+X-POKEMON-WAVE-ID:TCG-30TH-PREMIUM-20261106
+X-POKEMON-WAVE-PRODUCT-COUNT:4
+X-POKEMON-WAVE-PRODUCTS:UPC Journée Mentali-ex|UPC Soirée Noctali-ex|Coffret figurine Mew|Coffret figurine Mewtwo
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-premium-30ans-20261004@openai
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:⭐ 🟡 🃏 Sortie JCC — Coffrets premium 30 ans
+SUMMARY:⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — gros coffrets premium, mais priorité critique volontairement bloquée tant que la date reste seulement 🟡.\nFiabilité : 🟡 À confirmer. Vague premium 30e Anniversaire actuellement référencée au 6 novembre 2026.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague de produits premium anniversaire regroupée dans un seul événement.\nFiabilité : 🟡 À confirmer pour la date de sortie globale. Les produits ci-dessous sont identifiés via les sources liées à la vague ; la fiabilité globale reste 🟡.\n📦 Checklist produits :\n✅ UPC Journée Mentali-ex\n✅ UPC Soirée Noctali-ex\n✅ Coffret figurine Mew\n✅ Coffret figurine Mewtwo\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
-CATEGORIES:Pokémon,TCG,Sortie JCC,Priorité Important
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Coffrets premium 30 ans
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Vague premium 30 ans
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🃏 Sortie demain — prépare ton achat : Coffrets premium 30 ans
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Vague premium 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
