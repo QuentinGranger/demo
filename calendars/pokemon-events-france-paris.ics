@@ -264,4 +264,31 @@ ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-worlds-celebration-stores-20260821@openai
+DTSTAMP:20260819T185408Z
+LAST-MODIFIED:20260819T185408Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-FIRST-ADDED-AT:20260819T185408Z
+X-POKEMON-NEW-UNTIL:20260824T185408Z
+X-POKEMON-FRESHNESS:NEW
+X-POKEMON-BADGE:NEW
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260831
+SUMMARY:🔥 ✅ 🆕 🏆 Play! Pokémon — Célébration des Mondiaux 2026 + promo Pikachu
+LOCATION:Play! Pokémon Stores participants — France
+DESCRIPTION:Priorité : 🔥 Critique — événement officiel imminent avec récompense promotionnelle distribuée dans la limite des stocks disponibles.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Du 21 au 30 août 2026, les Play! Pokémon Stores participants organisent des tournois « Célébration des Mondiaux 2026 ».\n🎁 Participation : carte promo Pikachu Mondiaux 2026 dans la limite des stocks disponibles et selon l'ordre d'arrivée ; les personnes en tête des catégories junior, senior et master dans chaque magasin peuvent recevoir la version estampillée « WINNER ». Des accessoires commémoratifs sont aussi annoncés pour les vainqueurs.\n📍 France : rechercher le magasin et la séance exacte dans le Localisateur d'évènements Play! Pokémon en utilisant le nom « Célébration des Mondiaux 2026 ». Aucun magasin parisien précis n'est affirmé tant qu'une fiche locale officielle n'a pas été vérifiée.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 uniquement ; le rappel J-7 est déjà passé au moment de l'ajout.\nSource : https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
+URL:https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
+CATEGORIES:Pokémon,Play! Pokémon,Événement,Promo,Championnat du Monde,Priorité Critique,Nouveau
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🏆 Célébration des Mondiaux demain — trouve ton Play! Pokémon Store et vérifie la promo Pikachu
+END:VALARM
+END:VEVENT
 END:VCALENDAR
