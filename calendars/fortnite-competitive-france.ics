@@ -92,4 +92,53 @@ DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et tra
  jet vers Anvers
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-reload-elite-ewc-paris-20260819@openai
+DTSTAMP:20260819T071231Z
+LAST-MODIFIED:20260819T071231Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:FOLLOW
+X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
+X-FORTNITE-SERIES:RELOAD_ELITE_SERIES
+X-FORTNITE-SERIES:EWC
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-MODE:RELOAD
+X-FORTNITE-FORMAT:DUOS
+X-FORTNITE-REGION:GLOBAL
+X-FORTNITE-THEME:ESPORTS_LIVE
+X-FORTNITE-THEME:TICKETING
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-CANDIDATE-ID:fortnite-reload-elite-ewc-paris-2026
+X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
+X-FORTNITE-TICKET-STATUS:PREREGISTRATION
+X-FORTNITE-TICKET-SCOPE:EWC_PARIS_GENERAL
+X-FORTNITE-TIME-PRECISION:DATE_RANGE
+X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
+X-FORTNITE-NEW-UNTIL:20260824T071231Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260823
+SUMMARY:⭐ ✅ 🆕 🏆 Reload Elite Series Championship — EWC Paris 20
+ 26
+LOCATION:Paris\, France
+DESCRIPTION:Priorité : ⭐ Important. Fortnite Competitive confirme que le
+ s 40 meilleurs duos mondiaux disputent le Reload Elite Series Championship
+  à l'Esports World Cup à Paris.\nPériode officielle exploitable : du 19
+  au 22 août 2026.\nFormat : Duos ; Battle Royale / Recharge ; dotation an
+ noncée : 1 000 000 $ US.\n⚠️ Les cartes de sessions du site affichent
+  des fenêtres 22:00–21:59 qui ressemblent à des journées de session ;
+  elles ne sont pas utilisées ici comme horaires fiables de matchs.\n🎟
+ ️ EWC Paris propose actuellement une préinscription générale pour êt
+ re averti lorsque les billets seront disponibles. Ce n'est pas encore une 
+ billetterie Fortnite spécifique et aucun lieu exact n'est publié dans le
+ s sources vérifiées.\nSource Fortnite : https://www.fortnite.com/competi
+ tive/events/EWCParis?region=EU\nPréinscription EWC Paris : https://www.si
+ gnup.esportsworldcup.com/EWCPARIS26
+URL:https://www.fortnite.com/competitive/events/EWCParis?region=EU
+CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
+ yale,Duos,Paris
+END:VEVENT
 END:VCALENDAR
