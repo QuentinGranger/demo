@@ -1,11 +1,8 @@
 {
   "version": "FORTNITE_PHYSICAL_EVENTS_EU_V2",
-  "updated_at": "2026-08-19T15:34:00Z",
+  "updated_at": "2026-08-19T18:12:23Z",
   "scope": "Official Fortnite physical events relevant to France and Europe, including public operations and attendance planning",
-  "linked_calendars": [
-    "calendars/fortnite-competitive-france.ics",
-    "calendars/fortnite-paris.ics"
-  ],
+  "linked_calendars": ["calendars/fortnite-competitive-france.ics","calendars/fortnite-paris.ics"],
   "venue_registry": "calendars/fortnite-venues-france.json",
   "access_ledger": "calendars/fortnite-physical-access-france.json",
   "ticketing_ledger": "calendars/fortnite-ticketing-france.json",
@@ -13,42 +10,11 @@
   "engine": "calendars/fortnite-physical-events-engine-france.json",
   "index": "calendars/fortnite-physical-events-index-france.json",
   "source_registry": "calendars/fortnite-sources-france.json",
-  "event_types": [
-    "ESPORTS_LAN",
-    "VIEWING_PARTY",
-    "CONVENTION",
-    "EPIC_FORTNITE_STAND",
-    "PARTNER_STAND",
-    "BRAND_ACTIVATION",
-    "OFFICIAL_COMMUNITY_EVENT",
-    "POPUP",
-    "MEET_AND_GREET",
-    "OTHER_OFFICIAL_PHYSICAL"
-  ],
-  "statuses": [
-    "DISCOVERED",
-    "ANNOUNCED",
-    "VENUE_TBA",
-    "VENUE_CONFIRMED",
-    "ACCESS_ANNOUNCED",
-    "REGISTRATION_OPEN",
-    "TICKETS_ON_SALE",
-    "READY_FOR_PUBLIC",
-    "ACTIVE",
-    "ENDED",
-    "POSTPONED",
-    "CANCELLED"
-  ],
-  "visibility_levels": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
-  "operational_completeness": [
-    "IDENTITY_ONLY",
-    "DATE_CITY_KNOWN",
-    "VENUE_KNOWN",
-    "ACCESS_PATH_KNOWN",
-    "PUBLIC_SESSION_KNOWN",
-    "PUBLIC_INFO_MATURE"
-  ],
-  "travel_scopes": ["PARIS_IDF", "FRANCE_DOMESTIC", "CROSS_BORDER_EU", "EUROPE_OTHER", "UNKNOWN"],
+  "event_types": ["ESPORTS_LAN","VIEWING_PARTY","CONVENTION","EPIC_FORTNITE_STAND","PARTNER_STAND","BRAND_ACTIVATION","OFFICIAL_COMMUNITY_EVENT","POPUP","MEET_AND_GREET","OTHER_OFFICIAL_PHYSICAL"],
+  "statuses": ["DISCOVERED","ANNOUNCED","VENUE_TBA","VENUE_CONFIRMED","ACCESS_ANNOUNCED","REGISTRATION_OPEN","TICKETS_ON_SALE","READY_FOR_PUBLIC","ACTIVE","ENDED","POSTPONED","CANCELLED"],
+  "visibility_levels": ["LEDGER_ONLY","CALENDAR","FEATURED"],
+  "operational_completeness": ["IDENTITY_ONLY","DATE_CITY_KNOWN","VENUE_KNOWN","ACCESS_PATH_KNOWN","PUBLIC_SESSION_KNOWN","PUBLIC_INFO_MATURE"],
+  "travel_scopes": ["PARIS_IDF","FRANCE_DOMESTIC","CROSS_BORDER_EU","EUROPE_OTHER","UNKNOWN"],
   "policy": {
     "official_only": "Physical event existence requires Epic/Fortnite, direct organizer/venue or officially identified partner evidence. Fan meetups and unofficial viewing parties remain discovery-only and never enter the canonical ledger as confirmed.",
     "canonical_identity": "physical_event_id is stable for the same logical event/run. A new city or genuinely separate activation receives a new ID. Additional sessions or zones at the same event do not create a new physical_event_id.",
@@ -66,18 +32,7 @@
     "history": "Append-only for venue changes, new sessions/zones, access changes, ticketing bridge transitions, postponement/cancellation and organizer corrections.",
     "anti_noise": "No write for a simple recheck, derived readiness score or refreshed timestamp without a material change."
   },
-  "action_types": [
-    "ATTEND",
-    "REGISTER_INTEREST",
-    "REGISTER_ATTENDANCE",
-    "BUY_TICKET",
-    "JOIN_WAITLIST",
-    "CHECK_IN",
-    "WATCH",
-    "VISIT_STAND",
-    "MEET",
-    "FOLLOW"
-  ],
+  "action_types": ["ATTEND","REGISTER_INTEREST","REGISTER_ATTENDANCE","BUY_TICKET","JOIN_WAITLIST","CHECK_IN","WATCH","VISIT_STAND","MEET","FOLLOW"],
   "entries": [
     {
       "physical_event_id": "fortnite-physical-fncs-global-antwerp-2026",
@@ -102,78 +57,45 @@
       "current_ticket_state": "WAITLIST",
       "current_admission_state": "WAITLIST_ONLY",
       "primary_action": "JOIN_WAITLIST",
-      "organizer_roles": [
-        {"source_id":"fortnite_competitive","role":"COMPETITIVE_ORGANIZER"},
-        {"source_id":"lotto_arena","role":"VENUE_OPERATOR"}
-      ],
-      "competition_links": [
-        {"competition_id": "fortnite-fncs-global-championship-2026", "relation": "HOSTS_COMPETITION"}
-      ],
+      "organizer_roles": [{"source_id":"fortnite_competitive","role":"COMPETITIVE_ORGANIZER"},{"source_id":"lotto_arena","role":"VENUE_OPERATOR"}],
+      "competition_links": [{"competition_id":"fortnite-fncs-global-championship-2026","relation":"HOSTS_COMPETITION"}],
       "public_sessions": [
-        {
-          "session_id": "fncs-antwerp-2026-day1-venue",
-          "session_type": "VENUE_TIME",
-          "label": "Jour 1 — horaire salle",
-          "start_at": "2026-09-26T14:00:00+02:00",
-          "end_at": null,
-          "time_status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE",
-          "status": "ANNOUNCED",
-          "venue_space_id": null,
-          "access_profile_id": "fortnite-access-fncs-global-antwerp-2026",
-          "access_scope": "EVENT_TICKET"
-        },
-        {
-          "session_id": "fncs-antwerp-2026-day2-venue",
-          "session_type": "VENUE_TIME",
-          "label": "Jour 2 — horaire salle",
-          "start_at": "2026-09-27T18:30:00+02:00",
-          "end_at": null,
-          "time_status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE",
-          "status": "ANNOUNCED",
-          "venue_space_id": null,
-          "access_profile_id": "fortnite-access-fncs-global-antwerp-2026",
-          "access_scope": "EVENT_TICKET"
-        }
+        {"session_id":"fncs-antwerp-2026-day1-venue","session_type":"VENUE_TIME","label":"Jour 1 — horaire salle","start_at":"2026-09-26T14:00:00+02:00","end_at":null,"time_status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE","status":"ANNOUNCED","venue_space_id":null,"access_profile_id":"fortnite-access-fncs-global-antwerp-2026","access_scope":"EVENT_TICKET"},
+        {"session_id":"fncs-antwerp-2026-day2-venue","session_type":"VENUE_TIME","label":"Jour 2 — horaire salle","start_at":"2026-09-27T18:30:00+02:00","end_at":null,"time_status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE","status":"ANNOUNCED","venue_space_id":null,"access_profile_id":"fortnite-access-fncs-global-antwerp-2026","access_scope":"EVENT_TICKET"}
       ],
       "history": []
     },
     {
       "physical_event_id": "fortnite-physical-ewc-paris-2026",
       "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "title": "Reload Elite Series Championship — EWC Paris 2026",
+      "title": "Reload Elite Series Championship — EWC 2026 — Riyad",
       "event_type": "ESPORTS_LAN",
-      "status": "VENUE_TBA",
+      "status": "VENUE_CONFIRMED",
       "visibility": "FEATURED",
-      "operational_completeness": "DATE_CITY_KNOWN",
-      "travel_scope": "PARIS_IDF",
-      "country_code": "FR",
-      "city": "Paris",
-      "venue_id": "ewc_paris_2026_tba",
+      "operational_completeness": "ACCESS_PATH_KNOWN",
+      "travel_scope": "UNKNOWN",
+      "country_code": "SA",
+      "city": "Riyadh",
+      "venue_id": "ewc_boulevard_city_riyadh",
       "access_profile_id": "fortnite-access-ewc-paris-2026",
       "start_date": "2026-08-19",
       "end_date": "2026-08-22",
       "time_precision": "DATE_RANGE",
       "organizer_source_id": "ewc_official",
       "competitive_source_id": "fortnite_competitive",
-      "official_url": "https://www.fortnite.com/competitive/events/EWCParis?region=EU",
+      "official_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
       "ticketing_event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "current_ticket_state": "PREREGISTRATION",
-      "current_admission_state": "INTEREST_PREREGISTRATION",
-      "primary_action": "REGISTER_INTEREST",
-      "organizer_roles": [
-        {"source_id":"ewc_official","role":"EVENT_ORGANIZER"},
-        {"source_id":"fortnite_competitive","role":"COMPETITIVE_PUBLISHER"}
-      ],
-      "competition_links": [
-        {"competition_id": "fortnite-reload-elite-ewc-paris-2026", "relation": "HOSTS_COMPETITION"}
-      ],
+      "current_ticket_state": "AVAILABLE",
+      "current_admission_state": "TICKET_REQUIRED",
+      "primary_action": "BUY_TICKET",
+      "organizer_roles": [{"source_id":"ewc_official","role":"EVENT_ORGANIZER"},{"source_id":"fortnite_competitive","role":"COMPETITIVE_PUBLISHER"}],
+      "competition_links": [{"competition_id":"reload-elite-ewc-paris-2026","relation":"HOSTS_COMPETITION"}],
       "public_sessions": [],
       "history": [
-        {
-          "at": "2026-08-19T15:34:00Z",
-          "type": "ACCESS_MODEL_REFINED",
-          "note": "Generic EWC preregistration is now represented as REGISTER_INTEREST and does not imply attendance registration or admission."
-        }
+        {"at":"2026-08-19T15:34:00Z","type":"ACCESS_MODEL_REFINED","note":"Generic EWC preregistration was represented as REGISTER_INTEREST and did not imply admission."},
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","note":"The exact organizer ticket page places the championship at Boulevard City, Riyadh, Aug 19–22. Multiple Fortnite Competitive qualifying pages also state Riyadh, Saudi Arabia; a broader EWC rules paragraph still says Paris, so that contradiction remains documented rather than silently erased."},
+        {"at":"2026-08-19T18:12:23Z","type":"VENUE_CHANGE","from":"ewc_paris_2026_tba","to":"ewc_boulevard_city_riyadh"},
+        {"at":"2026-08-19T18:12:23Z","type":"ACCESS_CHANGE","from":"REGISTER_INTEREST","to":"BUY_TICKET"}
       ]
     }
   ],
