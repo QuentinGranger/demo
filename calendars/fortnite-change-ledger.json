@@ -1,18 +1,18 @@
 {
-  "version": "FORTNITE_CHANGE_LEDGER_FR_V1",
-  "updated_at": "2026-08-19T15:49:00Z",
-  "scope": "Cross-ledger material change, calendar-write and notification deduplication for Fortnite France/Europe",
-  "purpose": "Persist exactly which semantic changes have already been observed, projected and/or notified so hourly monitoring remains restart-safe and does not repeat alerts.",
-  "delivery_semantics": {
-    "notification_guarantee": "AT_MOST_ONCE_PREFER_MISSING_OVER_DUPLICATE",
-    "rule": "A notification_key is permanently consumed as soon as its receipt enters RESERVED. SENT confirms delivery attempt completion, but RESERVED/UNKNOWN_DELIVERY are also dedupe terminal for automatic resend.",
-    "crash_policy": "If execution crashes after reservation and delivery cannot be proven, transition to UNKNOWN_DELIVERY on recovery and do not automatically resend. Manual recovery or explicit proof of non-delivery is required to reuse the same logical alert.",
-    "reason": "Avoid duplicate user notifications across restarts, retries, partial failures and repeated crawls even at the cost of a rare missed alert."
+  "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
+  "updated_at": "2026-08-19T15:57:00Z",
+  "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
+  "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
+  "notification_outbox": "fortnite-notification-outbox-france.json",
+  "derived_index": "fortnite-change-index-france.json",
+  "delivery_boundary": {
+    "rule": "This ledger records what changed. Notification reservation/delivery state is canonical only in fortnite-notification-outbox-france.json.",
+    "guarantee": "EXACTLY_ONCE_LOGICAL_CHANGE_IDENTITY + AT_MOST_ONCE_AUTOMATED_NOTIFICATION_ATTEMPT",
+    "important_limit": "Exactly-once presentation in an external client UI cannot be proven by the repository; RESERVED is therefore treated conservatively as consumed."
   },
   "bootstrap": {
     "baseline_at": "2026-08-19T15:49:00Z",
-    "policy": "All semantic state already present in the baseline manifest is treated as known and must not generate a new notification merely because the change ledger is new, the monitor restarts, or the same facts are rediscovered. Only a material semantic delta after baseline may create a new change_id/notification_key.",
-    "baseline_notification_state": "SUPPRESSED_BASELINE",
+    "policy": "All semantic state already present in this manifest is known history. A restart, parser rewrite or rediscovery of these facts must not create a new change or notification.",
     "manifest": [
       {"path":"calendars/fortnite-service-events-france.json","sha":"edfb848c85dbbed9063548b48dcf83960dbffc7c"},
       {"path":"calendars/fortnite-season-pass-lifecycle-france.json","sha":"b46e484af8d94487d0409f48060a49fc6808b2c9"},
@@ -29,169 +29,97 @@
       {"path":"calendars/fortnite-competitive-france.ics","sha":"016beebf774be7cefd329837da1799867ab35d92"}
     ]
   },
-  "domains": [
-    "SERVICE",
-    "SEASON_PASS",
-    "COMPETITIVE",
-    "COMPETITIVE_DEADLINE",
-    "PARTICIPANT_OUTCOME",
-    "PHYSICAL_EVENT",
-    "PHYSICAL_ACCESS",
-    "TICKETING",
-    "LORE",
-    "WATCHLIST",
-    "CALENDAR_PROJECTION"
-  ],
-  "materiality_levels": ["IGNORE", "LEDGER_ONLY", "CALENDAR", "NOTIFY"],
-  "change_states": ["OPEN", "SUPERSEDED", "ARCHIVED"],
-  "receipt_states": [
-    "SUPPRESSED_BASELINE",
-    "SUPPRESSED_POLICY",
-    "PENDING",
-    "RESERVED",
-    "SENT",
-    "UNKNOWN_DELIVERY",
-    "CANCELLED_BEFORE_SEND"
-  ],
-  "write_receipt_states": ["PLANNED", "COMMITTED", "SKIPPED_IDENTICAL", "FAILED_BEFORE_COMMIT", "UNKNOWN_COMMIT_STATE"],
+  "domains": ["SERVICE","SEASON_PASS","COMPETITIVE","COMPETITIVE_DEADLINE","PARTICIPANT_OUTCOME","PHYSICAL_EVENT","PHYSICAL_ACCESS","TICKETING","LORE","WATCHLIST","CALENDAR_PROJECTION"],
+  "materiality_levels": ["IGNORE","LEDGER_ONLY","CALENDAR","NOTIFY"],
+  "change_states": ["OPEN","SUPERSEDED","ARCHIVED"],
+  "notification_dispositions": ["BASELINE","SILENT_POLICY","ELIGIBLE_NOW","ELIGIBLE_WHEN_DUE","CONDITION_BLOCKED","STALE","NOT_APPLICABLE"],
   "change_type_registry": [
-    "ENTITY_CREATED",
-    "ENTITY_CORRECTED",
-    "STATUS_CHANGED",
-    "TIME_CHANGED",
-    "DATE_CHANGED",
-    "LOCATION_CHANGED",
-    "ACCESS_CHANGED",
-    "AVAILABILITY_CHANGED",
-    "REGISTRATION_CHANGED",
-    "DEADLINE_CHANGED",
-    "SESSION_ADDED",
-    "SESSION_CHANGED",
-    "SESSION_CANCELLED",
-    "QUALIFICATION_CHANGED",
-    "PARTICIPANT_OUTCOME_CHANGED",
-    "PRICE_CHANGED",
-    "RELATION_CHANGED",
-    "MAINTENANCE_CHANGED",
-    "POSTPONED",
-    "CANCELLED",
-    "BACK_ON_SALE",
-    "WAITLIST_OPENED",
-    "CALENDAR_PROMOTED",
-    "CALENDAR_DEMOTED",
-    "CALENDAR_EVENT_CHANGED",
-    "SOURCE_CORRECTION",
-    "OTHER_MATERIAL"
+    "ENTITY_CREATED","ENTITY_CORRECTED","STATUS_CHANGED","TIME_CHANGED","DATE_CHANGED","LOCATION_CHANGED","ACCESS_CHANGED","AVAILABILITY_CHANGED","REGISTRATION_CHANGED","DEADLINE_CHANGED","SESSION_ADDED","SESSION_CHANGED","SESSION_CANCELLED","QUALIFICATION_CHANGED","PARTICIPANT_OUTCOME_CHANGED","PRICE_CHANGED","RELATION_CHANGED","MAINTENANCE_CHANGED","POSTPONED","CANCELLED","REACTIVATED","BACK_ON_SALE","WAITLIST_OPENED","CALENDAR_PROMOTED","CALENDAR_DEMOTED","CALENDAR_EVENT_CHANGED","SOURCE_CORRECTION","OTHER_MATERIAL"
   ],
-  "semantic_fingerprint_policy": {
-    "algorithm": "SHA256_CANONICAL_JSON_V1",
-    "canonical_payload": [
-      "domain",
-      "subject_key",
-      "scope_key",
-      "change_type",
-      "material_before",
-      "material_after",
-      "material_evidence_state"
-    ],
-    "normalization": [
+  "causal_identity": {
+    "problem_solved": "A pure before/after fingerprint would incorrectly suppress a legitimate repeated transition such as SOLD_OUT -> AVAILABLE -> SOLD_OUT. V2 chains each occurrence to the previous accepted change for the same subject/scope.",
+    "subject_scope_key": "sub_<sha256(domain|subject_key|scope_key)>",
+    "subject_revision": "Monotonic integer per subject_scope_key. Revision increments only for an accepted material semantic transition.",
+    "causal_parent_change_id": "Previous accepted change_id for the same subject_scope_key, or null for the first post-bootstrap change.",
+    "state_fingerprint": "SHA256 canonical JSON of the material canonical state after the change.",
+    "transition_fingerprint": "SHA256 canonical JSON of change_type + material_before + material_after + material_evidence_state.",
+    "change_id": "chg_<first-24-hex-of-sha256(domain|subject_key|scope_key|subject_revision|causal_parent_change_id|transition_fingerprint)>>",
+    "replay_rule": "Reprocessing the same transition against the same causal parent must reproduce the same revision/change_id and therefore no-op.",
+    "real_recurrence_rule": "If the same before/after transition genuinely recurs later, its causal parent/revision differs, so it receives a distinct change_id and may notify once again."
+  },
+  "semantic_normalization": {
+    "algorithm": "SHA256_CANONICAL_JSON_V2",
+    "rules": [
       "sort object keys recursively",
-      "sort set-like arrays by stable ID/value before hashing",
+      "sort set-like arrays by stable ID/value",
       "preserve ordered arrays only when order has business meaning",
-      "normalize equivalent timezone-aware instants to RFC3339 UTC for hashing while retaining source timezone in the canonical ledger",
-      "normalize null and UNKNOWN distinctly when domain semantics distinguish them",
-      "strip URL tracking parameters only when they are not identity-bearing"
+      "normalize equivalent timezone-aware instants to RFC3339 UTC for hashing while retaining source timezone in domain ledgers",
+      "normalize URLs by removing non-identity tracking parameters only",
+      "distinguish null from UNKNOWN when domain semantics require it",
+      "normalize localized titles/aliases out of identity when a stable ID exists"
     ],
-    "ignored_by_default": [
-      "updated_at",
-      "checked_at",
-      "last_verified_at",
-      "fetched_at",
-      "observed_at_when_no_fact_changed",
-      "DTSTAMP",
-      "LAST-MODIFIED_when_business_data_unchanged",
-      "freshness_badges",
-      "internal_projection_score_without_level_change",
-      "derived_index_ordering",
-      "serialization_whitespace",
-      "JSON_key_order",
-      "ICS_line_folding"
-    ],
-    "evidence_rule": "A source/evidence change is material only when it changes authority, confidence, official finality, territory applicability or the supported business fact. Merely re-fetching the same source is not material."
+    "ignored_by_default": ["updated_at","checked_at","last_verified_at","fetched_at","crawl timestamps","Git blob SHA alone","DTSTAMP","LAST-MODIFIED without business change","freshness badge expiry","internal score without threshold/action change","derived index ordering","serialization whitespace","JSON key order","ICS folding"]
   },
-  "key_policy": {
-    "subject_key": "Use the most stable logical ID available: service_event_id, track_id/milestone_id, competition_id/phase_id/session_id, participant_id+route_id, physical_event_id/access_profile_id, event_uid+provider/session/category, lore claim_id, candidate_id or calendar UID.",
-    "scope_key": "Optional stable sub-scope such as phase/session/category/window/component/participant/route. Never use crawl timestamp as scope.",
-    "change_id": "chg_<first-24-hex-of-sha256(domain|subject_key|scope_key|change_type|semantic_fingerprint)>",
-    "notification_key": "ntf_<sha256(domain|subject_key|scope_key|notice_kind|semantic_fingerprint|audience_key)>",
-    "notification_group_key": "grp_<sha256(grouping_subject|coalescing_window_bucket|sorted_change_ids)>",
+  "subject_resolution": {
+    "SERVICE": "service_event_id + optional component_id",
+    "SEASON_PASS": "track_id + optional milestone_id/window_id/ranked_scope",
+    "COMPETITIVE": "competition_id + optional phase_id/session_id",
+    "COMPETITIVE_DEADLINE": "competition_id + route_id/phase_id + optional session_id + deadline_type",
+    "PARTICIPANT_OUTCOME": "participant_id + competition_id + phase_id/route_id",
+    "PHYSICAL_EVENT": "physical_event_id + optional public_session_id/venue_space_id",
+    "PHYSICAL_ACCESS": "access_profile_id + optional session_id/rule_type",
+    "TICKETING": "event_uid + provider_id + optional session_key/category_key",
+    "LORE": "claim_id",
+    "WATCHLIST": "candidate_id/watch_id",
+    "CALENDAR_PROJECTION": "calendar_path + UID"
+  },
+  "change_acceptance": {
+    "fresh_canonical_read": "Before accepting a change, read the latest canonical domain state and the latest subject head/index. A Git SHA difference alone is never enough.",
+    "out_of_order_guard": "Older/stale source data cannot move the canonical subject backward unless it is an explicit official correction or genuine later transition.",
+    "evidence_upgrade": "Evidence-only changes are material only if authority/confidence/finality/territory changes the supported business meaning or resolves a prior ambiguity.",
+    "policy_freeze": "notification_disposition is recorded when the change is accepted. A later notification policy update does not retroactively alert old SILENT_POLICY/BASELINE changes unless explicitly requested as a manual replay."
+  },
+  "notification_linkage": {
+    "outbox_source_of_truth": "fortnite-notification-outbox-france.json",
+    "notification_key": "Derived from sorted change_ids + notice_kind + audience_key + channel_key. It intentionally uses change occurrence identity, not only state fingerprints.",
+    "coalescing": "Related changes may share one notification intent, but each change remains individually auditable.",
+    "planned_boundary": "Future reminders are not notification intents until due. ELIGIBLE_WHEN_DUE remains in the domain reminder ledger/change disposition until its trigger time and conditions are revalidated.",
+    "payload_freeze": "Payload wording/version never changes notification identity after reservation."
+  },
+  "repository_write_idempotency": {
+    "ledger_write_key": "wrt_<sha256(target_path|logical_subject|post_write_state_fingerprint)>",
     "calendar_write_key": "cal_<sha256(calendar_path|uid|projected_business_fingerprint)>",
-    "ledger_write_key": "wrt_<sha256(target_path|logical_subject|post_write_semantic_fingerprint)>"
+    "cas_rule": "Use fresh blob SHA for every write. On conflict, discard stale mutation, re-fetch and recompute. Never retry a stale full-file payload.",
+    "unknown_commit_state": "Fresh-fetch target and compare desired semantic fingerprint. If already present, record recovery and skip duplicate commit.",
+    "sequence_rule": "ICS SEQUENCE changes only when projected business state changes, never for headers, folding, DTSTAMP refresh or change-index maintenance."
   },
-  "notification_protocol": {
-    "eligibility": "Domain-specific engines decide whether a change is worth notifying. This ledger never upgrades a silent change into an alert by itself.",
-    "steps": [
-      "1_DETECT: compute semantic fingerprint from canonical pre/post facts.",
-      "2_DEDUPE_CHANGE: if identical change_id or semantic fingerprint for same subject/scope already exists, stop; no new change, commit or notification.",
-      "3_APPEND_CHANGE: append immutable change record before any user notification.",
-      "4_BUILD_NOTIFICATION_KEY: derive stable key without timestamps that are not part of the business fact.",
-      "5_CHECK_RECEIPTS: if key exists in SUPPRESSED_BASELINE, SUPPRESSED_POLICY, RESERVED, SENT or UNKNOWN_DELIVERY, do not notify again.",
-      "6_RESERVE: append/update a notification receipt to RESERVED and persist it BEFORE emitting the user-visible notification.",
-      "7_EMIT_ONCE: emit at most one notification for the reserved key/group.",
-      "8_CONFIRM: after emission, transition receipt RESERVED -> SENT with sent_at and delivery_fingerprint when possible.",
-      "9_RECOVERY: stale RESERVED without proof becomes UNKNOWN_DELIVERY, never automatic resend."
-    ],
-    "reservation": {
-      "required_before_emit": true,
-      "reservation_ttl_minutes": 30,
-      "expired_reserved_policy": "UNKNOWN_DELIVERY_NO_AUTO_RETRY",
-      "same_key_parallel_runs": "Only the first persisted reservation wins; subsequent runs suppress themselves after fresh-reading the ledger."
-    },
-    "coalescing": {
-      "window_minutes": 10,
-      "rule": "Before reservation, multiple materially related changes for the same logical subject may be grouped into one notification_group_key. Preserve all member change_ids in the receipt.",
-      "do_not_merge": ["unrelated subjects", "different participant outcomes", "a cancellation with a later reactivation", "different ticketing events merely occurring near each other"]
-    }
-  },
-  "restart_and_retry_policy": {
-    "fresh_read_required": "Every run must fresh-read fortnite-change-ledger.json immediately before reserving a notification or recording a write receipt.",
-    "idempotency": "Reprocessing the same official page, Git commit, ledger history event or calendar projection must converge to the same change_id/notification_key.",
-    "out_of_order": "If an older fact arrives after a newer canonical state, store it only if domain history requires it; do not emit a stale notification unless a domain engine explicitly classifies it as an actionable official correction.",
-    "clock_independence": "Detection time is audit metadata and never part of the semantic dedupe fingerprint unless the official business fact itself is a timestamp change."
-  },
-  "calendar_and_commit_dedupe": {
-    "rule": "Notification dedupe and repository-write dedupe are separate. A change may require a calendar commit but no alert, or an alert but no calendar change.",
-    "calendar_projection": "Before writing an ICS VEVENT, compute projected_business_fingerprint excluding DTSTAMP, LAST-MODIFIED, folding and badge expiry. If calendar_write_key is already COMMITTED or current VEVENT fingerprint is identical, skip the write and do not increment SEQUENCE.",
-    "ledger_write": "Before rewriting a canonical ledger for a fact already represented identically, compare semantic fingerprint; unchanged facts produce no Git write even if checked_at changed.",
-    "unknown_commit_state": "If a process crashes after Git write may have succeeded, fresh-fetch the target file and compare semantic fingerprint before retrying. Never retry blindly."
-  },
-  "correction_and_supersession": {
-    "rule": "A genuine official correction is a new semantic change and may notify once even if the same subject was notified earlier.",
-    "supersedes": "Use supersedes_change_id when the new change explicitly corrects/replaces an earlier material fact. Never delete the prior record or receipt.",
-    "reversion": "A later return to an earlier value is still a new change only when supported by a new official transition/evidence, not when caused by stale source ordering."
+  "audit_and_reconciliation": {
+    "append_only_changes": true,
+    "subject_heads": "Derived in fortnite-change-index-france.json; rebuild from changes if divergent.",
+    "orphan_change": "A change whose domain target no longer resolves is retained for audit and flagged for reconciliation, not deleted.",
+    "outbox_reconciliation": "Every outbox intent must reference existing change_ids. Every consumed key must be derivable from outbox delivery events.",
+    "calendar_reconciliation": "A CALENDAR_PROJECTION change may reference the source domain change_ids that caused it to prevent duplicate user alerts for the same underlying fact."
   },
   "retention": {
-    "change_records": "Keep active/recent change records in this ledger. Older records may later move to an archive file without losing notification dedupe keys.",
-    "notification_keys": "Never discard a consumed notification_key solely because it is old. If archival is introduced, persist exact dedupe tombstones permanently or for the full useful lifetime of the logical subject.",
-    "write_keys": "Calendar/ledger write receipts may be compacted after the underlying canonical file has moved beyond the old semantic state, but notification keys remain stronger retention data."
+    "changes": "Append-only in the active ledger until archive policy is introduced.",
+    "notification_keys": "Permanent dedupe tombstones live in the outbox or future archive and must be queryable before reservation.",
+    "archives": "Future archives must preserve change_id, subject revision chain, consumed notification keys and hash/checkpoint metadata.",
+    "no_time_based_forgetting": "Never allow a notification duplicate merely because an old receipt/change aged out."
   },
-  "records_schema": {
-    "change_required": ["change_id", "domain", "subject_key", "change_type", "materiality", "semantic_fingerprint", "detected_at", "source_refs"],
-    "change_optional": ["scope_key", "material_before", "material_after", "material_evidence_state", "supersedes_change_id", "projection_targets", "notification_candidate", "history_ref"],
-    "notification_receipt_required": ["receipt_id", "notification_key", "state", "change_ids", "notice_kind", "audience_key", "created_at"],
-    "notification_receipt_optional": ["notification_group_key", "reserved_at", "reservation_id", "sent_at", "delivery_fingerprint", "suppression_reason", "unknown_delivery_at"],
-    "write_receipt_required": ["write_key", "target_path", "state", "semantic_fingerprint", "created_at"]
+  "record_schema": {
+    "required": ["change_id","domain","subject_scope_key","subject_key","subject_revision","causal_parent_change_id","change_type","materiality","state_fingerprint","transition_fingerprint","detected_at","source_refs","notification_disposition"],
+    "optional": ["scope_key","material_before","material_after","material_evidence_state","supersedes_change_id","projection_targets","history_ref","causal_source_change_ids","policy_version","notes"]
   },
   "changes": [],
-  "notification_receipts": [],
-  "notification_key_index": {},
   "calendar_write_receipts": [],
   "ledger_write_receipts": [],
+  "legacy_v1_notification_fields": {
+    "notification_receipts": [],
+    "notification_key_index": {},
+    "status": "DEPRECATED_EMPTY_OUTBOX_IS_CANONICAL"
+  },
   "history": [
-    {
-      "at": "2026-08-19T15:49:00Z",
-      "type": "BOOTSTRAP_BASELINE_CREATED",
-      "note": "Existing Fortnite canonical ledgers and calendar projections were imported as silent baseline state. No pre-bootstrap fact should generate an alert solely because this dedupe ledger was introduced."
-    }
+    {"at":"2026-08-19T15:49:00Z","type":"BOOTSTRAP_BASELINE_CREATED","note":"Existing canonical Fortnite state imported as silent baseline."},
+    {"at":"2026-08-19T15:57:00Z","type":"CHANGE_LEDGER_V2_MIGRATION","note":"Added causal subject revisions, recurrence-safe change identity, policy-freeze semantics, CAS write rules and a separate transactional notification outbox."}
   ]
 }
