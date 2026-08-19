@@ -1,0 +1,142 @@
+{
+  "version": "WIZARDING_TAXONOMY_ENGINE_FR_V2",
+  "updated_at": "2026-08-19T04:52:00Z",
+  "base_registry": "calendars/harry-potter-taxonomy-france.json",
+  "base_version": "WIZARDING_TAXONOMY_FR_V1",
+  "purpose": "Étendre la taxonomie Harry Potter avec normalisation multilingue, relations typées, filtres composables, héritage contrôlé et index inversé, sans casser les IDs V1 ni alourdir les titres.",
+  "compatibility": {
+    "strategy": "OVERLAY_NON_BREAKING",
+    "stable_ids": true,
+    "rule": "Tout ID V1 reste valide. Le moteur V2 ajoute des métadonnées/règles et de nouveaux IDs ; il ne réinterprète jamais silencieusement un ancien ID.",
+    "deprecation": "Un ID obsolète est conservé avec status=DEPRECATED et replaced_by ; jamais réutilisé pour un autre concept."
+  },
+  "assignment_contract": {
+    "key": "event_uid",
+    "basis": ["DIRECT", "INHERITED", "DERIVED", "UMBRELLA"],
+    "confidence": ["EXPLICIT", "RELATION_VERIFIED", "INHERITED_VERIFIED", "AMBIGUOUS"],
+    "required_for_direct": "Le titre, la description produit/événement ou une source responsable doit viser explicitement l'entité.",
+    "ambiguous_policy": "AMBIGUOUS n'est pas indexé en STRICT et n'est pas matérialisé dans les propriétés ICS.",
+    "provenance_fields": ["source_id", "source_url", "matched_text", "inherited_from", "relation_type"]
+  },
+  "normalization": {
+    "search_casefold": true,
+    "accent_insensitive": true,
+    "punctuation_insensitive": true,
+    "aliases_search_only": true,
+    "canonical_output": "Toujours retourner l'ID canonique et le label FR du registre, jamais l'alias saisi.",
+    "aliases": {
+      "HOGWARTS": ["Poudlard", "Hogwarts", "Hogwarts School", "École de sorcellerie Poudlard"],
+      "SLYTHERIN": ["Serpentard", "Slytherin"],
+      "RAVENCLAW": ["Serdaigle", "Ravenclaw"],
+      "HUFFLEPUFF": ["Poufsouffle", "Hufflepuff"],
+      "GRYFFINDOR": ["Gryffondor", "Gryffindor"],
+      "SEVERUS_SNAPE": ["Severus Rogue", "Rogue", "Severus Snape", "Snape"],
+      "DRACO_MALFOY": ["Drago Malefoy", "Draco Malfoy", "Draco"],
+      "VOLDEMORT": ["Voldemort", "Lord Voldemort", "Tom Jedusor", "Tom Riddle"],
+      "NEWT_SCAMANDER": ["Norbert Dragonneau", "Norbert", "Newt Scamander", "Newt"],
+      "PLATFORM_9_3_4": ["Voie 9¾", "Quai 9 3/4", "Platform 9¾", "Platform Nine and Three-Quarters"]
+    }
+  },
+  "filter_modes": {
+    "STRICT": {
+      "include_basis": ["DIRECT"],
+      "relation_depth": 0,
+      "use_case": "Je veux uniquement ce qui est explicitement consacré à cette entité."
+    },
+    "EXPANDED": {
+      "include_basis": ["DIRECT", "INHERITED", "DERIVED", "UMBRELLA"],
+      "relation_depth_max": 2,
+      "allowed_relations": ["PART_OF", "HAS_HOUSE", "HAS_ERA", "BELONGS_TO_SUBFRANCHISE", "THEMATIC_EQUIVALENT"],
+      "use_case": "Je veux aussi les relations vérifiées, sans associations lointaines."
+    },
+    "CANON_ONLY": {
+      "allowed_canon_scope": ["CORE_STORY", "SCREEN_ADAPTATION", "GAME_UNIVERSE", "STAGE_ADAPTATION"],
+      "exclude_scope": ["LICENSED_MERCH", "LICENSED_EXPERIENCE", "LICENSED_PARODY", "FRANCHISE_META"]
+    },
+    "COLLECTOR": {
+      "combine_with_event_fields": ["X-HARRYPOTTER-COLLECTOR-INTEREST", "X-HARRYPOTTER-LIMITED"],
+      "preferred_themes": ["COLLECTING", "FILM_PROPS", "ILLUSTRATION", "HOUSE_MERCH"],
+      "rule": "Un tag sémantique ne remplace jamais la preuve collector/limited du VEVENT."
+    }
+  },
+  "relation_types": {
+    "PART_OF": {"direction": "FORWARD", "max_depth": 2, "reverse_inference": false},
+    "HAS_HOUSE": {"direction": "CHARACTER_TO_HOUSE", "max_depth": 1, "reverse_inference": false},
+    "HAS_ERA": {"direction": "WORK_TO_ERA", "max_depth": 1, "reverse_inference": false},
+    "BELONGS_TO_SUBFRANCHISE": {"direction": "WORK_OR_CHARACTER_TO_SUBFRANCHISE", "max_depth": 1, "reverse_inference": false},
+    "THEMATIC_EQUIVALENT": {"direction": "BIDIRECTIONAL_FILTER_ONLY", "max_depth": 1, "reverse_inference": false}
+  },
+  "hard_prohibitions": [
+    "HOUSE_TO_CHARACTER",
+    "PLACE_TO_WORK",
+    "THEME_TO_CHARACTER",
+    "ARTIFACT_TO_WORK_WITHOUT_EXPLICIT_RULE",
+    "LICENSED_PRODUCT_TO_CANON_FACT",
+    "MARKETING_COPY_TO_CHARACTER_RELATION"
+  ],
+  "extensions": {
+    "works": [
+      {"id": "HOGWARTS_LEGACY_GAME", "label_fr": "Hogwarts Legacy", "label_en": "Hogwarts Legacy", "subfranchise": "HOGWARTS_LEGACY", "era": "HOGWARTS_1800S"},
+      {"id": "QUIDDITCH_CHAMPIONS_GAME", "label_fr": "Harry Potter : Champions de Quidditch", "label_en": "Harry Potter: Quidditch Champions", "subfranchise": "QUIDDITCH_CHAMPIONS"},
+      {"id": "CURSED_CHILD_PLAY", "label_fr": "Harry Potter et l'Enfant maudit", "label_en": "Harry Potter and the Cursed Child", "subfranchise": "CURSED_CHILD", "era": "POST_HOGWARTS"}
+    ],
+    "places": [
+      {"id": "GRYFFINDOR_COMMON_ROOM", "label_fr": "Salle commune de Gryffondor", "label_en": "Gryffindor Common Room", "parent": "HOGWARTS", "house": "GRYFFINDOR"},
+      {"id": "SLYTHERIN_COMMON_ROOM", "label_fr": "Salle commune de Serpentard", "label_en": "Slytherin Common Room", "parent": "HOGWARTS", "house": "SLYTHERIN"},
+      {"id": "RAVENCLAW_COMMON_ROOM", "label_fr": "Salle commune de Serdaigle", "label_en": "Ravenclaw Common Room", "parent": "HOGWARTS", "house": "RAVENCLAW"},
+      {"id": "HUFFLEPUFF_COMMON_ROOM", "label_fr": "Salle commune de Poufsouffle", "label_en": "Hufflepuff Common Room", "parent": "HOGWARTS", "house": "HUFFLEPUFF"},
+      {"id": "CHAMBER_OF_SECRETS", "label_fr": "Chambre des Secrets", "label_en": "Chamber of Secrets", "parent": "HOGWARTS"},
+      {"id": "ROOM_OF_REQUIREMENT", "label_fr": "Salle sur Demande", "label_en": "Room of Requirement", "parent": "HOGWARTS"},
+      {"id": "ASTRONOMY_TOWER", "label_fr": "Tour d'Astronomie", "label_en": "Astronomy Tower", "parent": "HOGWARTS"}
+    ],
+    "characters": [
+      {"id": "REMUS_LUPIN", "label_fr": "Remus Lupin", "label_en": "Remus Lupin", "house": "GRYFFINDOR"},
+      {"id": "TINA_GOLDSTEIN", "label_fr": "Tina Goldstein", "label_en": "Tina Goldstein", "subfranchise": "FANTASTIC_BEASTS"},
+      {"id": "JACOB_KOWALSKI", "label_fr": "Jacob Kowalski", "label_en": "Jacob Kowalski", "subfranchise": "FANTASTIC_BEASTS"},
+      {"id": "QUEENIE_GOLDSTEIN", "label_fr": "Queenie Goldstein", "label_en": "Queenie Goldstein", "subfranchise": "FANTASTIC_BEASTS"}
+    ],
+    "themes": [
+      {"id": "HALLOWEEN", "label_fr": "Halloween", "label_en": "Halloween"},
+      {"id": "HOUSE_MERCH", "label_fr": "Maisons de Poudlard", "label_en": "Hogwarts houses merchandise"},
+      {"id": "BOOKS", "label_fr": "Livres", "label_en": "Books"},
+      {"id": "GAMES", "label_fr": "Jeux vidéo", "label_en": "Video games"},
+      {"id": "LIVE_PERFORMANCE", "label_fr": "Spectacle vivant", "label_en": "Live performance"}
+    ],
+    "artifacts": [
+      {"id": "ELDER_WAND", "label_fr": "Baguette de Sureau", "label_en": "Elder Wand", "parent": "WAND"},
+      {"id": "INVISIBILITY_CLOAK", "label_fr": "Cape d'invisibilité", "label_en": "Invisibility Cloak"},
+      {"id": "HOGWARTS_LETTER", "label_fr": "Lettre de Poudlard", "label_en": "Hogwarts acceptance letter"}
+    ]
+  },
+  "inheritance_rules": {
+    "TICKET_ONSALE": "Hérite du parent événement avec basis=INHERITED.",
+    "PREORDER_OPEN": "Hérite du parent sortie/produit avec basis=INHERITED.",
+    "SAME_TOUR": "Même œuvre/sous-franchise/thèmes ; ne jamais hériter d'un lieu fictif ou personnage propre à une étape si non central au tour.",
+    "SAME_CAMPAIGN": "Même campagne/thèmes centraux ; les attributs géographiques réels restent propres à chaque UID.",
+    "RUN_EXTENSION": "Le même UID conserve son assignment ; aucune nouvelle classification n'est créée uniquement à cause de la prolongation."
+  },
+  "search_profiles": {
+    "HOUSE": {"default_mode": "EXPANDED", "facets": ["house"], "example": "Serdaigle inclut Luna en EXPANDED mais pas en STRICT si le produit n'est pas explicitement Serdaigle."},
+    "CHARACTER": {"default_mode": "STRICT", "facets": ["character"]},
+    "PLACE": {"default_mode": "EXPANDED", "facets": ["place"], "example": "Poudlard peut inclure Grande Salle et salles communes en EXPANDED."},
+    "WORK": {"default_mode": "STRICT", "facets": ["work"]},
+    "SUBFRANCHISE": {"default_mode": "EXPANDED", "facets": ["subfranchise"]},
+    "COLLECTOR": {"default_mode": "EXPANDED", "facets": ["theme", "artifact", "house", "place"]}
+  },
+  "index": {
+    "path": "calendars/harry-potter-taxonomy-index-france.json",
+    "type": "DERIVED_REVERSE_INDEX",
+    "source_of_truth": ["calendars/harry-potter-taxonomy-france.json", "calendars/harry-potter-taxonomy-engine-france.json"],
+    "regenerate_on": ["ASSIGNMENT_ADD", "ASSIGNMENT_REMOVE", "ASSIGNMENT_CHANGE", "RELATION_CHANGE", "INHERITANCE_CHANGE", "ENTITY_DEPRECATION"],
+    "do_not_commit_when_unchanged": true,
+    "disposable": true,
+    "validation": "Tout UID indexé doit exister dans assignments ou être résolu par inherit_from ; tout ID de facette doit exister dans base+extensions."
+  },
+  "ics_v2": {
+    "policy_header": "X-HARRYPOTTER-TAXONOMY-POLICY:WIZARDING_TAXONOMY_FR_V2",
+    "engine_header": "X-HARRYPOTTER-TAXONOMY-ENGINE:harry-potter-taxonomy-engine-france.json",
+    "index_header": "X-HARRYPOTTER-TAXONOMY-INDEX:harry-potter-taxonomy-index-france.json",
+    "version_property": "X-HARRYPOTTER-TAXONOMY-VERSION:WIZARDING_TAXONOMY_FR_V2",
+    "sequence_rule": "Aucune hausse de SEQUENCE pour taxonomie seule ; injecter les propriétés lors d'une prochaine vraie modification métier."
+  }
+}
