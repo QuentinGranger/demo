@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_PHYSICAL_ACCESS_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-19T21:03:30Z",
   "scope": "Public admission, registration, check-in and onsite access rules for official Fortnite physical events in France and Europe",
   "physical_event_ledger": "fortnite-physical-events-france.json",
   "venue_registry": "fortnite-venues-france.json",
@@ -51,14 +51,14 @@
       "access_profile_id": "fortnite-access-ewc-paris-2026",
       "physical_event_id": "fortnite-physical-ewc-paris-2026",
       "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "access_state": "TICKET_REQUIRED",
-      "admission_mode": "PAID_TICKET",
+      "access_state": "INTEREST_PREREGISTRATION",
+      "admission_mode": "UNKNOWN",
       "ticketing_event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "provider_id": "ewc_riyadh",
+      "provider_id": "ewc_paris",
       "source_id": "ewc_official",
-      "source_url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
-      "admission_guarantee": "REQUIRES_VALID_TICKET",
-      "interest_preregistration_only": false,
+      "source_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "admission_guarantee": "NOT_ESTABLISHED",
+      "interest_preregistration_only": true,
       "age_rule": {"state":"UNKNOWN","minimum_age":null,"guardian_rule":"UNKNOWN"},
       "identity_requirement": {"state":"UNKNOWN","credential":"PHOTO_ID"},
       "named_ticket": {"state":"UNKNOWN"},
@@ -74,7 +74,8 @@
       "session_overrides": [],
       "history": [
         {"at":"2026-08-19T15:28:00Z","type":"ACCESS_INTERPRETATION_SEEDED","note":"Generic EWC Paris preregistration was tracked as interest/notification registration only; it was not proof of admission or a Fortnite-specific ticket."},
-        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","from":"INTEREST_PREREGISTRATION","to":"TICKET_REQUIRED","source_url":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","note":"Exact EWC championship page now exposes paid Tournament Pass inventory for Boulevard City, Riyadh. Unknown onsite requirements remain UNKNOWN."}
+        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","from":"INTEREST_PREREGISTRATION","to":"TICKET_REQUIRED","source_url":"https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26","note":"A previously followed EWC ticket page exposed paid Tournament Pass inventory for Boulevard City, Riyadh."},
+        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","from":"TICKET_REQUIRED","to":"INTEREST_PREREGISTRATION","source_url":"https://www.signup.esportsworldcup.com/EWCPARIS26","note":"Current Fortnite Championship details and EWC relocation material place the event in Paris. The current EWC Paris form only offers notification preregistration, so paid admission is no longer asserted and onsite requirements remain UNKNOWN."}
       ]
     }
   ]
