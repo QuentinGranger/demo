@@ -1,0 +1,114 @@
+{
+  "version": "CROSS_CALENDAR_HEALTH_POLICY_FR_V1",
+  "updated_at": "2026-08-19T16:10:00Z",
+  "scope": "Permanent health monitoring for subscribed Fortnite, Harry Potter and Pokemon calendars in QuentinGranger/demo",
+  "repository": "QuentinGranger/demo",
+  "pinned_branch": "master",
+  "principles": {
+    "subscription_path_stability": "A subscribed .ics path on the pinned master branch is a public compatibility contract. Never rename/remove it silently. If an internal migration is needed, keep the old path as a valid compatibility mirror unless the user explicitly accepts a subscription URL change.",
+    "no_expiry": "Recurring monitor schedules must not contain RRULE UNTIL or COUNT unless explicitly requested by the user.",
+    "no_news_is_not_failure": "A calendar may legitimately receive no Git commit for a long period. Health is based on automation liveness, repository/path availability and ICS integrity, not on file modification frequency alone.",
+    "incident_only_writes": "Routine healthy checks do not update calendar-health-state.json. Persist only OPEN/ESCALATED/RECOVERED incident transitions or a deliberate policy migration.",
+    "respect_manual_control": "Never silently re-enable an automation the user deliberately disabled. Detect and report disabled/finite/stale monitoring instead.",
+    "same_path_repair": "If a subscribed ICS is damaged or deleted and can be deterministically repaired from canonical ledgers without inventing facts, restore the same master-branch path rather than creating a replacement URL.",
+    "cross_watch": "The three main franchise monitors should check one another's liveness so a stopped monitor can be detected by a different still-running monitor."
+  },
+  "health_states": ["HEALTHY", "DEGRADED", "CRITICAL"],
+  "incident_states": ["OPEN", "ESCALATED", "RECOVERED"],
+  "incident_codes": [
+    "REPOSITORY_UNREACHABLE",
+    "PINNED_BRANCH_UNREACHABLE",
+    "SUBSCRIBED_FILE_MISSING",
+    "ICS_STRUCTURALLY_INVALID",
+    "SUBSCRIPTION_PATH_CHANGED",
+    "AUTOMATION_DISABLED",
+    "AUTOMATION_FINITE",
+    "AUTOMATION_STALE",
+    "AUTOMATION_FIRST_RUN_OVERDUE",
+    "SPECIALIST_FILE_MISSING",
+    "FRANCHISE_VALIDATION_FAILED"
+  ],
+  "incident_key_rule": "health|franchise|incident_code|stable_subject",
+  "notification_policy": {
+    "open_once": true,
+    "repeat_while_same_incident_open": false,
+    "notify_on_escalation": true,
+    "notify_on_recovery": true,
+    "coalesce_window_minutes": 10,
+    "health_checks_themselves_are_silent_when_healthy": true
+  },
+  "automation_liveness": {
+    "hourly_max_gap_hours": 3,
+    "daily_max_gap_hours": 36,
+    "first_run_rule": "If last_run_time is null, do not fail before the first recurrence that should occur after the automation's latest update/create time plus the cadence grace window.",
+    "finite_rule": "A recurring health-critical monitor is finite if its RRULE contains UNTIL or COUNT.",
+    "enabled_rule": "is_enabled must remain true unless the user intentionally changes it."
+  },
+  "ics_checks": {
+    "required": [
+      "path exists on master",
+      "UTF-8 readable",
+      "starts with BEGIN:VCALENDAR",
+      "contains VERSION:2.0",
+      "ends with END:VCALENDAR",
+      "balanced BEGIN/END component nesting",
+      "no duplicate VEVENT UID within one file"
+    ],
+    "franchise_specific_validation": "Run the franchise's existing stricter validator whenever one exists. Generic health validation does not replace domain-specific validation.",
+    "raw_subscription_contract": "raw.githubusercontent.com/QuentinGranger/demo/master/<path> must continue to map to the same subscribed path. Do not silently migrate to a different branch or filename."
+  },
+  "franchises": {
+    "FORTNITE": {
+      "main_automation_title": "Calendriers Fortnite France & Europe",
+      "expected_recurrence": "HOURLY",
+      "max_liveness_gap_hours": 3,
+      "global_file": "calendars/fortnite-paris.ics",
+      "specialist_files": [
+        "calendars/fortnite-updates-france.ics",
+        "calendars/fortnite-competitive-france.ics"
+      ],
+      "global_raw_url": "https://raw.githubusercontent.com/QuentinGranger/demo/master/calendars/fortnite-paris.ics"
+    },
+    "HARRY_POTTER": {
+      "main_automation_title": "Calendriers Harry Potter France & Paris",
+      "expected_recurrence": "DAILY",
+      "max_liveness_gap_hours": 36,
+      "supporting_automations": [
+        {
+          "title": "Billetterie Harry Potter France",
+          "expected_recurrence": "HOURLY",
+          "max_liveness_gap_hours": 3
+        }
+      ],
+      "global_file": "calendars/harry-potter-paris.ics",
+      "specialist_files": [
+        "calendars/harry-potter-releases-france.ics",
+        "calendars/harry-potter-events-france-paris.ics"
+      ],
+      "global_raw_url": "https://raw.githubusercontent.com/QuentinGranger/demo/master/calendars/harry-potter-paris.ics"
+    },
+    "POKEMON": {
+      "main_automation_title": "Calendriers Pokémon France & Paris",
+      "expected_recurrence": "DAILY",
+      "max_liveness_gap_hours": 36,
+      "global_file": "calendars/pokemon-paris.ics",
+      "specialist_files": [
+        "calendars/pokemon-tcg-france.ics",
+        "calendars/pokemon-events-france-paris.ics"
+      ],
+      "global_raw_url": "https://raw.githubusercontent.com/QuentinGranger/demo/master/calendars/pokemon-paris.ics"
+    }
+  },
+  "run_protocol": [
+    "Read calendar-health-policy.json and calendar-health-state.json.",
+    "Verify repository and pinned master branch availability.",
+    "Verify all subscribed global paths and franchise specialist paths still exist.",
+    "Run generic ICS structural checks and available franchise validators.",
+    "Use automations state to verify the three main monitors and declared supporting monitors are enabled, recurring without UNTIL/COUNT, and not stale beyond policy thresholds.",
+    "Do not classify an unchanged calendar file as stale if its monitor is healthy and no material source change was found.",
+    "For each new incident, fresh-fetch calendar-health-state.json, append OPEN through compare-and-swap, and notify once.",
+    "While the same incident remains OPEN, stay silent.",
+    "When the exact incident clears, append RECOVERED and notify once that monitoring is healthy again.",
+    "Never create a separate recurring automation solely for this health check when the existing franchise monitors can perform it."
+  ]
+}
