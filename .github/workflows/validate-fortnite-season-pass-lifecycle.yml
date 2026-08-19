@@ -5,12 +5,14 @@ on:
     paths:
       - 'calendars/fortnite-season-pass-lifecycle-france.json'
       - 'calendars/fortnite-season-pass-engine-france.json'
+      - 'calendars/fortnite-season-pass-index-france.json'
       - 'scripts/validate_fortnite_season_pass_lifecycle.py'
       - '.github/workflows/validate-fortnite-season-pass-lifecycle.yml'
   pull_request:
     paths:
       - 'calendars/fortnite-season-pass-lifecycle-france.json'
       - 'calendars/fortnite-season-pass-engine-france.json'
+      - 'calendars/fortnite-season-pass-index-france.json'
       - 'scripts/validate_fortnite_season_pass_lifecycle.py'
       - '.github/workflows/validate-fortnite-season-pass-lifecycle.yml'
 
@@ -22,5 +24,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate season/pass lifecycle
+      - name: Validate season/pass lifecycle V2
         run: python scripts/validate_fortnite_season_pass_lifecycle.py
