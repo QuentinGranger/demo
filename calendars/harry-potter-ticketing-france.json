@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T04:44:00Z",
+  "updated_at": "2026-08-19T05:55:00Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -104,19 +104,20 @@
       "provider": "Théâtre du Gymnase Marie Bell",
       "provider_id": "theatre-gymnase",
       "source_id": "theatre-gymnase",
-      "ticket_url": "https://theatredugymnase.com/event-pro/potted-potter",
+      "ticket_url": "https://billetterie-jmd.tickandlive.com/evenement/potted-potter-1?idwl=28",
       "status": "ON_SALE",
-      "status_origin": "IMPORTED_FROM_ICS",
+      "status_origin": "DIRECT_VERIFIED",
       "evidence_grade": "A",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "LONG_RUN",
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19T05:55:00Z",
       "last_changed_at": null,
       "run_start": "2026-10-17",
       "run_end": "2027-01-17",
       "session_catalog_mode": "SPARSE_ONLY",
       "session_states": [],
+      "verification_notes": "La saison 2 est confirmée par le Théâtre du Gymnase et le site officiel Potted Potter : 17 octobre 2026–17 janvier 2027, réservations ouvertes. L'ancienne page event-pro du théâtre affiche encore la saison précédente et n'est plus utilisée comme URL de billetterie courante.",
       "history": []
     },
     {
