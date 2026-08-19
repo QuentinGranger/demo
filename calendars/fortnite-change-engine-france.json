@@ -1,0 +1,146 @@
+{
+  "version": "FORTNITE_CHANGE_ENGINE_FR_V1",
+  "updated_at": "2026-08-19T15:49:00Z",
+  "ledger": "fortnite-change-ledger.json",
+  "scope": "Semantic diff, notification gating, deduplication, grouping and write-idempotency rules across all Fortnite monitoring domains",
+  "principles": {
+    "canonical_before_notification": "A canonical domain ledger must reflect the new fact before the corresponding change record is reserved for notification, except when the alert itself is the primary record of an external incident and the service ledger transaction is part of the same run.",
+    "semantic_not_file_diff": "Git file SHA changes are evidence that something may have changed, never sufficient by themselves. Compute domain-specific semantic diffs.",
+    "stable_identity": "Deduplication keys use stable logical IDs, not titles, localized labels, source URLs with tracking parameters or detection timestamps.",
+    "at_most_once": "Notification reservation is persisted before emission. Any ambiguous post-reservation recovery suppresses automatic resend.",
+    "baseline_safe": "Facts present at ledger bootstrap are known history and cannot create a notification unless a new material transition occurs after baseline.",
+    "no_notification_from_derived_noise": "Pure derived/index/score/readiness/freshness/header changes remain silent unless they alter an actionable canonical decision such as projection level, access action or actual deadline."
+  },
+  "domain_subject_resolution": {
+    "SERVICE": ["service_event_id", "component_id when scoped"],
+    "SEASON_PASS": ["track_id", "milestone_id or window_id when scoped"],
+    "COMPETITIVE": ["competition_id", "phase_id", "session_id"],
+    "COMPETITIVE_DEADLINE": ["competition_id", "route_id or phase_id", "session_id", "deadline_type"],
+    "PARTICIPANT_OUTCOME": ["participant_id", "competition_id", "phase_id", "route_id"],
+    "PHYSICAL_EVENT": ["physical_event_id", "session_id or venue_space_id when scoped"],
+    "PHYSICAL_ACCESS": ["access_profile_id", "session_id when scoped"],
+    "TICKETING": ["event_uid", "provider_id", "session_key", "category_key"],
+    "LORE": ["claim_id"],
+    "WATCHLIST": ["candidate_id or watch_id"],
+    "CALENDAR_PROJECTION": ["calendar_path", "UID"]
+  },
+  "domain_material_fields": {
+    "SERVICE": ["state", "provider_phase", "provider_impact", "timing", "component_states", "relation_type", "linked_track_or_competition"],
+    "SEASON_PASS": ["state", "milestone timing", "window timing/state", "ranked reset scope/type", "successor/handoff relation", "calendar projection"],
+    "COMPETITIVE": ["status", "session timing", "region", "ruleset", "team format", "platform", "registration", "eligibility", "prize", "qualification", "projection level/granularity"],
+    "COMPETITIVE_DEADLINE": ["lifecycle", "route state", "deadline type/time", "notice condition", "finality", "qualification target"],
+    "PARTICIPANT_OUTCOME": ["state", "result_finality", "qualification target", "next_action", "supersession"],
+    "PHYSICAL_EVENT": ["status", "visibility", "date/time", "venue_id", "public_sessions", "primary_action", "operational_completeness", "travel_scope"],
+    "PHYSICAL_ACCESS": ["admission_mode", "access_state", "effective_action", "age", "check_in", "last_entry", "reentry", "accessibility", "zone/entrance", "queue/capacity only if official"],
+    "TICKETING": ["status", "session status", "category status", "price structure", "waiting list", "scarcity evidence", "sale/open/close timing"],
+    "LORE": ["claim status", "predicate", "target", "scope", "canon_scope", "evidence finality"],
+    "WATCHLIST": ["candidate state", "new official date/window", "promotion readiness", "rejection/correction"],
+    "CALENDAR_PROJECTION": ["DTSTART", "DTEND", "STATUS", "LOCATION", "DESCRIPTION business facts", "URL", "VALARM business triggers", "X-FORTNITE business properties", "SEQUENCE-worthy business state"]
+  },
+  "non_material_fields": [
+    "updated_at",
+    "checked_at",
+    "last_verified_at",
+    "observed_at without a fact change",
+    "crawl timestamp",
+    "source fetch ETag alone",
+    "Git blob SHA alone",
+    "DTSTAMP",
+    "LAST-MODIFIED without business change",
+    "freshness NEW/UPDATED badge expiry",
+    "derived score without threshold/action change",
+    "derived index rebuild",
+    "serialization/whitespace/folding",
+    "source list ordering",
+    "aliases that do not change entity resolution",
+    "history append that duplicates an existing semantic history event"
+  ],
+  "materiality_rules": {
+    "IGNORE": ["recheck identical", "timestamp refresh", "index-only rebuild", "header-only metadata", "non-actionable score movement", "source URL tracking cleanup"],
+    "LEDGER_ONLY": ["new ordinary EU cup session", "lore claim/history enrichment", "watch target signal without actionable date", "minor physical/access detail with no planning impact", "service component blip not promoted"],
+    "CALENDAR": ["material VEVENT business change without notification policy eligibility", "projection promotion/demotion", "useful session/location/deadline update"],
+    "NOTIFY": ["only when the domain-specific policy independently marks the material change as user-actionable"]
+  },
+  "notification_gate": {
+    "required_all": [
+      "material semantic delta exists",
+      "domain engine says notification-worthy",
+      "notification_key not previously consumed",
+      "change is not pre-bootstrap rediscovery",
+      "change is not stale/out-of-order evidence",
+      "quiet-hour policy does not require defer/suppress"
+    ],
+    "never_notify_for": [
+      "identical recheck",
+      "checked_at/last_verified_at only",
+      "new Git SHA with same semantics",
+      "index rebuild only",
+      "taxonomy/lore enrichment without future actionable VEVENT impact",
+      "ordinary LEDGER_ONLY competitive ingestion",
+      "provider discovery without event",
+      "source page temporarily unavailable",
+      "calendar formatting normalization",
+      "baseline migration/import"
+    ]
+  },
+  "notification_key_rules": {
+    "include": ["domain", "stable subject_key", "stable scope_key", "notice_kind", "semantic_fingerprint", "audience_key"],
+    "exclude": ["detected_at", "checked_at", "run_id", "Git commit SHA unless the commit itself is the user-facing subject", "localized title", "temporary source URL query parameters"],
+    "audience_key_default": "USER_DEFAULT",
+    "participant_audience": "participant-specific outcomes/reminders use participant_id in audience/scope so one player's result does not suppress another's."
+  },
+  "coalescing_rules": {
+    "window_minutes": 10,
+    "same_subject_examples": [
+      "ticket availability + new price category for same event",
+      "venue exact address + public opening time for same physical event",
+      "season start exact time + officially linked downtime announcement",
+      "competition session reschedule + corresponding deadline recalculation"
+    ],
+    "grouping_output": "One user notification may contain multiple change_ids; every member change remains separately auditable.",
+    "after_reservation": "Once a group notification is RESERVED, later changes create a new group/key only if materially distinct; never mutate the already reserved payload in a way that could cause a resend."
+  },
+  "supersession_rules": {
+    "official_correction": "Create new change_id and supersedes_change_id. May notify once if actionably different.",
+    "postponed_then_rescheduled": "POSTPONED and later TIME_CHANGED are separate material transitions and may each have one distinct notification key.",
+    "sold_out_then_back_on_sale": "SOLD_OUT/WAITLIST and BACK_ON_SALE are distinct changes; each can notify once when policy permits.",
+    "cancelled_then_reactivated": "CANCELLED and reactivation are distinct; do not let the cancellation key suppress reactivation.",
+    "same_value_reobserved": "No new change unless new official evidence establishes a genuine new transition back to that value."
+  },
+  "reservation_and_delivery": {
+    "fresh_read_before_reserve": true,
+    "reserve_before_emit": true,
+    "reservation_state": "RESERVED",
+    "terminal_dedupe_states": ["SUPPRESSED_BASELINE", "SUPPRESSED_POLICY", "RESERVED", "SENT", "UNKNOWN_DELIVERY"],
+    "unknown_delivery": "No automatic retry. Prefer a missed alert over a duplicate.",
+    "parallel_run_guard": "After computing a candidate key, re-fetch the change ledger and reserve only if no terminal receipt exists for that key.",
+    "manual_recovery": "Only explicit user/admin intervention or machine-verifiable proof that no delivery occurred may reset UNKNOWN_DELIVERY/RESERVED for retry."
+  },
+  "write_dedupe": {
+    "canonical_ledger": "Write only when post-write semantic fingerprint differs from current canonical semantic fingerprint. checked_at alone never writes.",
+    "calendar": "Write only when projected VEVENT business fingerprint differs. Formatting/folding/DTSTAMP-only changes do not increment SEQUENCE.",
+    "crash_after_write": "Fresh-fetch target and recompute fingerprint before any retry; if desired semantic state is already present, record/repair write receipt and skip duplicate commit.",
+    "change_ledger_self_write": "Appending a new change/receipt is itself allowed and must not recursively create another user-facing CALENDAR_PROJECTION change."
+  },
+  "recovery": {
+    "restart": "Read ledger + terminal key index before processing any domain notifications.",
+    "stale_reserved_minutes": 30,
+    "stale_reserved_transition": "UNKNOWN_DELIVERY",
+    "orphan_pending": "PENDING without reservation may be safely re-evaluated against current canonical facts; if still eligible, reserve same key, otherwise suppress/cancel before send.",
+    "unknown_commit": "Inspect repository target state. Never blindly replay write or notification."
+  },
+  "index_policy": {
+    "notification_key_index": "Exact map from notification_key to receipt_id. It is an acceleration structure, but receipt records remain canonical.",
+    "rebuild": "If key index diverges from receipts, rebuild index from receipts; never delete a receipt to satisfy the index.",
+    "collision": "Any duplicate notification_key with different semantic payload is a validation failure."
+  },
+  "ics_policy": {
+    "future_headers": [
+      "X-FORTNITE-CHANGE-LEDGER:fortnite-change-ledger.json",
+      "X-FORTNITE-CHANGE-ENGINE:fortnite-change-engine-france.json"
+    ],
+    "header_only": "Add only on next real business write; no SEQUENCE increment for headers alone.",
+    "event_properties": ["X-FORTNITE-LAST-CHANGE-ID", "X-FORTNITE-BUSINESS-FINGERPRINT"],
+    "privacy": "Never serialize notification receipt IDs, delivery state or internal reservation IDs into public ICS files."
+  }
+}
