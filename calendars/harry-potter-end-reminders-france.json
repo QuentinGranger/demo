@@ -1,6 +1,6 @@
 {
   "version": "DEADLINE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T04:46:00Z",
+  "updated_at": "2026-08-19T05:55:00Z",
   "scope": "Harry Potter / Wizarding World — échéances et dernières chances France, priorité Paris/Île-de-France",
   "purpose": "Suivre la fin réelle et la dernière possibilité d'agir pour les expositions, pop-ups, expériences, spectacles et runs limités, sans confondre proximité de fin et rareté de billets.",
   "timezone": "Europe/Paris",
@@ -35,149 +35,114 @@
     "INFERRED_FROM_DTEND": "Déduite uniquement de DTEND ; ne suffit pas seule pour une alerte finale forte si la sémantique est ambiguë.",
     "UNKNOWN": "Aucune fin fiable ; ne pas planifier d'alerte de fin."
   },
-  "eligible_event_types": [
-    "EXHIBITION",
-    "POPUP",
-    "EXPERIENCE",
-    "THEATRE",
-    "CINE_CONCERT",
-    "CONCERT",
-    "CONVENTION",
-    "RETAIL_LAUNCH",
-    "SCREENING_SPECIAL",
-    "ANNIVERSARY_SCREENING"
-  ],
+  "eligible_event_types": ["EXHIBITION","POPUP","EXPERIENCE","THEATRE","CINE_CONCERT","CONCERT","CONVENTION","RETAIL_LAUNCH","SCREENING_SPECIAL","ANNIVERSARY_SCREENING"],
   "profiles": {
-    "LONG_RUN": {
-      "criteria": "durée publique >= 30 jours",
-      "notices": [
-        {"type": "ENDING_SOON", "days_before_last_public_date": 14, "default_local_time": "09:00", "label": "Plus que 2 semaines"},
-        {"type": "LAST_PRACTICAL_WEEKEND", "rule": "si des sessions week-end existent et qu'un dernier week-end utile peut être déterminé", "default_local_time": "09:00", "label": "Dernier week-end à venir"},
-        {"type": "FINAL_DAYS", "days_before_last_public_date": 3, "default_local_time": "09:00", "label": "Derniers jours"}
-      ]
-    },
-    "MEDIUM_RUN": {
-      "criteria": "durée publique 8 à 29 jours",
-      "notices": [
-        {"type": "ENDING_SOON", "days_before_last_public_date": 7, "default_local_time": "09:00", "label": "Dernière semaine"},
-        {"type": "FINAL_DAYS", "days_before_last_public_date": 2, "default_local_time": "09:00", "label": "Derniers jours"}
-      ]
-    },
-    "SHORT_RUN": {
-      "criteria": "durée publique 2 à 7 jours",
-      "notices": [
-        {"type": "LAST_DAY", "days_before_last_public_date": 0, "default_local_time": "09:00", "label": "Dernière journée aujourd'hui"}
-      ]
-    },
-    "SINGLE_DAY": {
-      "criteria": "1 seule journée",
-      "notices": [],
-      "reason": "Le rappel de début suffit ; éviter une alerte de fin redondante, sauf clôture de vente distincte et réellement actionnable."
-    },
-    "CRITICAL_LIMITED": {
-      "criteria": "pop-up/activation très limitée ou priorité CRITICAL avec au moins 2 jours publics",
-      "notices": [
-        {"type": "LAST_CHANCE_WINDOW", "days_before_last_public_date": 1, "default_local_time": "09:00", "label": "Dernière chance demain"},
-        {"type": "LAST_DAY", "days_before_last_public_date": 0, "default_local_time": "09:00", "label": "Dernière journée aujourd'hui"}
-      ],
-      "rule": "Utiliser ce profil à la place de SHORT/MEDIUM seulement si l'action est réellement limitée et encore possible."
-    }
+    "LONG_RUN": {"criteria":"durée publique >= 30 jours","notices":[{"type":"ENDING_SOON","days_before_last_public_date":14,"default_local_time":"09:00","label":"Plus que 2 semaines"},{"type":"LAST_PRACTICAL_WEEKEND","rule":"si des sessions week-end existent et qu'un dernier week-end utile peut être déterminé","default_local_time":"09:00","label":"Dernier week-end à venir"},{"type":"FINAL_DAYS","days_before_last_public_date":3,"default_local_time":"09:00","label":"Derniers jours"}]},
+    "MEDIUM_RUN": {"criteria":"durée publique 8 à 29 jours","notices":[{"type":"ENDING_SOON","days_before_last_public_date":7,"default_local_time":"09:00","label":"Dernière semaine"},{"type":"FINAL_DAYS","days_before_last_public_date":2,"default_local_time":"09:00","label":"Derniers jours"}]},
+    "SHORT_RUN": {"criteria":"durée publique 2 à 7 jours","notices":[{"type":"LAST_DAY","days_before_last_public_date":0,"default_local_time":"09:00","label":"Dernière journée aujourd'hui"}]},
+    "SINGLE_DAY": {"criteria":"1 seule journée","notices":[],"reason":"Le rappel de début suffit ; éviter une alerte de fin redondante, sauf clôture de vente distincte et réellement actionnable."},
+    "CRITICAL_LIMITED": {"criteria":"pop-up/activation très limitée ou priorité CRITICAL avec au moins 2 jours publics","notices":[{"type":"LAST_CHANCE_WINDOW","days_before_last_public_date":1,"default_local_time":"09:00","label":"Dernière chance demain"},{"type":"LAST_DAY","days_before_last_public_date":0,"default_local_time":"09:00","label":"Dernière journée aujourd'hui"}],"rule":"Utiliser ce profil à la place de SHORT/MEDIUM seulement si l'action est réellement limitée et encore possible."}
   },
-  "deadline_precedence": [
-    "LAST_TICKET_SALE_AT",
-    "LAST_RESERVABLE_SESSION_AT",
-    "LAST_ENTRY_AT",
-    "LAST_PUBLIC_SESSION_AT",
-    "LAST_FREE_ACCESS_AT",
-    "LAST_PUBLIC_DATE"
-  ],
+  "deadline_precedence": ["LAST_TICKET_SALE_AT","LAST_RESERVABLE_SESSION_AT","LAST_ENTRY_AT","LAST_PUBLIC_SESSION_AT","LAST_FREE_ACCESS_AT","LAST_PUBLIC_DATE"],
   "actionability_rules": {
-    "sale_closes_early": "Si LAST_TICKET_SALE_AT précède la dernière représentation, ajouter une alerte de réservation avant cette clôture ; ne pas attendre la fin du run.",
-    "last_entry": "Pour exposition/expérience, si LAST_ENTRY_AT est publié, l'alerte du dernier jour doit mentionner l'heure de dernière entrée plutôt que l'heure de fermeture générale.",
-    "last_session": "Pour spectacle/ciné-concert, privilégier la dernière séance publique exacte lorsqu'elle est publiée.",
-    "last_weekend": "Créer LAST_PRACTICAL_WEEKEND seulement si le planning officiel confirme des sessions le samedi/dimanche ou si le run est accessible le week-end. Ne pas déduire qu'un lieu est ouvert le week-end.",
-    "travel_planning": "Pour une échéance hors Paris/IDF ou nécessitant manifestement un déplacement interrégional, l'alerte la plus précoce du profil peut être avancée jusqu'à J-21 pour LONG_RUN ou J-10 pour MEDIUM_RUN si cela améliore réellement la planification ; ne pas multiplier les alertes.",
-    "past_deadline": "Si la réservation ferme avant la date de l'alerte générique, supprimer l'appel à réserver et reformuler en information de dernière représentation seulement si utile."
+    "sale_closes_early":"Si LAST_TICKET_SALE_AT précède la dernière représentation, ajouter une alerte de réservation avant cette clôture ; ne pas attendre la fin du run.",
+    "last_entry":"Pour exposition/expérience, si LAST_ENTRY_AT est publié, l'alerte du dernier jour doit mentionner l'heure de dernière entrée plutôt que l'heure de fermeture générale.",
+    "last_session":"Pour spectacle/ciné-concert, privilégier la dernière séance publique exacte lorsqu'elle est publiée.",
+    "last_weekend":"Créer LAST_PRACTICAL_WEEKEND seulement si le planning officiel confirme des sessions le samedi/dimanche ou si le run est accessible le week-end. Ne pas déduire qu'un lieu est ouvert le week-end.",
+    "travel_planning":"Pour une échéance hors Paris/IDF ou nécessitant manifestement un déplacement interrégional, l'alerte la plus précoce du profil peut être avancée jusqu'à J-21 pour LONG_RUN ou J-10 pour MEDIUM_RUN si cela améliore réellement la planification ; ne pas multiplier les alertes.",
+    "past_deadline":"Si la réservation ferme avant la date de l'alerte générique, supprimer l'appel à réserver et reformuler en information de dernière représentation seulement si utile."
   },
   "ticketing_interaction": {
-    "LOW_AVAILABILITY": "Peut coexister avec une alerte de fin, mais les deux notions restent distinctes.",
-    "NEARLY_SOLD_OUT": "La notification peut combiner 'fin prochaine' + 'presque complet' uniquement si les deux sont prouvés séparément.",
-    "SOLD_OUT": "Ne pas envoyer une alerte générique 'réserve avant la fin'. Conserver éventuellement LAST_SHOW informatif ou WAITLIST si utile.",
-    "BACK_ON_SALE": "Réactive les rappels encore futurs si l'événement n'est pas terminé.",
-    "WAITLIST": "Une alerte de fin peut mentionner la liste d'attente si elle existe officiellement.",
-    "CLOSED": "Si la vente est fermée mais l'événement n'est pas commencé/terminé, supprimer tout CTA de réservation.",
-    "CANCELLED": "Désactiver immédiatement toutes les échéances de fin."
+    "LOW_AVAILABILITY":"Peut coexister avec une alerte de fin, mais les deux notions restent distinctes.",
+    "NEARLY_SOLD_OUT":"La notification peut combiner 'fin prochaine' + 'presque complet' uniquement si les deux sont prouvés séparément.",
+    "SOLD_OUT":"Ne pas envoyer une alerte générique 'réserve avant la fin'. Conserver éventuellement LAST_SHOW informatif ou WAITLIST si utile.",
+    "BACK_ON_SALE":"Réactive les rappels encore futurs si l'événement n'est pas terminé.",
+    "WAITLIST":"Une alerte de fin peut mentionner la liste d'attente si elle existe officiellement.",
+    "CLOSED":"Si la vente est fermée mais l'événement n'est pas commencé/terminé, supprimer tout CTA de réservation.",
+    "CANCELLED":"Désactiver immédiatement toutes les échéances de fin."
   },
-  "notification_priority": {
-    "INFO": "Fin prochaine sans urgence commerciale.",
-    "IMPORTANT": "Derniers jours / dernier week-end d'un événement important.",
-    "CRITICAL": "Dernière journée d'une activation très limitée encore accessible, fermeture de réservation imminente ou dernière entrée proche."
-  },
-  "quiet_hours": {
-    "start_local": "21:00",
-    "end_local": "09:00",
-    "defer_non_urgent_to": "09:00",
-    "urgent_override_if_deadline_within_hours": 6
-  },
+  "notification_priority": {"INFO":"Fin prochaine sans urgence commerciale.","IMPORTANT":"Derniers jours / dernier week-end d'un événement important.","CRITICAL":"Dernière journée d'une activation très limitée encore accessible, fermeture de réservation imminente ou dernière entrée proche."},
+  "quiet_hours": {"start_local":"21:00","end_local":"09:00","defer_non_urgent_to":"09:00","urgent_override_if_deadline_within_hours":6},
   "ics_policy": {
-    "header": "X-HARRYPOTTER-END-REMINDER-POLICY:DEADLINE_INTELLIGENCE_FR_V2",
-    "profile_property": "X-HARRYPOTTER-END-REMINDER-PROFILE",
-    "last_public_date_property": "X-HARRYPOTTER-LAST-PUBLIC-DATE",
-    "deadline_type_property": "X-HARRYPOTTER-DEADLINE-TYPE",
-    "deadline_at_property": "X-HARRYPOTTER-DEADLINE-AT",
-    "deadline_certainty_property": "X-HARRYPOTTER-DEADLINE-CERTAINTY",
-    "deadline_version_property": "X-HARRYPOTTER-DEADLINE-VERSION",
-    "notice_state_property": "X-HARRYPOTTER-END-NOTICE-STATE",
-    "recommended_valarm": "Quand le VEVENT est réellement modifié pour une raison métier, ajouter les VALARM de fin éligibles encore futures. Pour les all-day runs, calculer depuis LAST-PUBLIC-DATE/DEADLINE-AT et non depuis DTEND supposé inclusif.",
-    "sequence_rule": "L'ajout d'une politique/en-tête seul ne doit pas augmenter SEQUENCE. Une vraie modification d'échéance/rappel peut accompagner la prochaine mise à jour métier, ou être appliquée immédiatement si une alerte utile serait autrement perdue."
+    "header":"X-HARRYPOTTER-END-REMINDER-POLICY:DEADLINE_INTELLIGENCE_FR_V2",
+    "profile_property":"X-HARRYPOTTER-END-REMINDER-PROFILE",
+    "last_public_date_property":"X-HARRYPOTTER-LAST-PUBLIC-DATE",
+    "deadline_type_property":"X-HARRYPOTTER-DEADLINE-TYPE",
+    "deadline_at_property":"X-HARRYPOTTER-DEADLINE-AT",
+    "deadline_certainty_property":"X-HARRYPOTTER-DEADLINE-CERTAINTY",
+    "deadline_version_property":"X-HARRYPOTTER-DEADLINE-VERSION",
+    "notice_state_property":"X-HARRYPOTTER-END-NOTICE-STATE",
+    "recommended_valarm":"Quand le VEVENT est réellement modifié pour une raison métier, ajouter les VALARM de fin éligibles encore futures. Pour les all-day runs, calculer depuis LAST-PUBLIC-DATE/DEADLINE-AT et non depuis DTEND supposé inclusif.",
+    "sequence_rule":"L'ajout d'une politique/en-tête seul ne doit pas augmenter SEQUENCE. Une vraie modification d'échéance/rappel peut accompagner la prochaine mise à jour métier, ou être appliquée immédiatement si une alerte utile serait autrement perdue."
   },
   "recalculation": {
-    "on_extension": "deadline_version +1 ; conserver previous_last_public_date ; annuler les notices futures liées à l'ancienne version ; recalculer.",
-    "on_new_session": "Si la nouvelle séance devient la dernière séance du run, recalculer LAST_PUBLIC_SESSION_AT et les notices.",
-    "on_ticket_close_change": "Si la clôture de vente devient plus précoce, créer/remplacer l'alerte de réservation ; ne pas conserver une ancienne deadline devenue fausse.",
-    "on_cancel": "Désactiver toutes les planned_notices futures.",
-    "on_back_on_sale": "Réactiver seulement les notices encore futures et pertinentes.",
-    "on_end": "Marquer les notices restantes EXPIRED_SILENT."
+    "on_extension":"deadline_version +1 ; conserver previous_last_public_date ; annuler les notices futures liées à l'ancienne version ; recalculer.",
+    "on_new_session":"Si la nouvelle séance devient la dernière séance du run, recalculer LAST_PUBLIC_SESSION_AT et les notices.",
+    "on_ticket_close_change":"Si la clôture de vente devient plus précoce, créer/remplacer l'alerte de réservation ; ne pas conserver une ancienne deadline devenue fausse.",
+    "on_cancel":"Désactiver toutes les planned_notices futures.",
+    "on_back_on_sale":"Réactiver seulement les notices encore futures et pertinentes.",
+    "on_end":"Marquer les notices restantes EXPIRED_SILENT."
   },
   "current_profiles": [
     {
-      "event_uid": "hp-potted-potter-paris-20261017@openai",
-      "profile": "LONG_RUN",
-      "deadline_version": 1,
-      "last_public_date": "2027-01-17",
-      "deadline_type": "LAST_PUBLIC_DATE",
-      "deadline_certainty": "OFFICIAL_EXACT",
-      "last_practical_weekend": {"start": "2027-01-16", "end": "2027-01-17", "basis": "planning officiel avec représentations le week-end"},
-      "planned_notices": [
-        {"type": "ENDING_SOON", "trigger_at": "2027-01-03T09:00:00+01:00", "label": "Potted Potter — plus que 2 semaines à Paris", "state": "PLANNED"},
-        {"type": "LAST_PRACTICAL_WEEKEND", "trigger_at": "2027-01-10T09:00:00+01:00", "label": "Potted Potter — dernier week-end dans une semaine", "state": "PLANNED"},
-        {"type": "FINAL_DAYS", "trigger_at": "2027-01-14T09:00:00+01:00", "label": "Potted Potter — derniers jours à Paris", "state": "PLANNED"}
-      ]
+      "event_uid":"hp-potted-potter-paris-20261017@openai",
+      "profile":"LONG_RUN",
+      "deadline_version":1,
+      "last_public_date":"2027-01-17",
+      "deadline_type":"LAST_PUBLIC_DATE",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "last_practical_weekend":{"start":"2027-01-16","end":"2027-01-17","basis":"planning officiel avec représentations le week-end"},
+      "planned_notices":[{"type":"ENDING_SOON","trigger_at":"2027-01-03T09:00:00+01:00","label":"Potted Potter — plus que 2 semaines à Paris","state":"PLANNED"},{"type":"LAST_PRACTICAL_WEEKEND","trigger_at":"2027-01-10T09:00:00+01:00","label":"Potted Potter — dernier week-end dans une semaine","state":"PLANNED"},{"type":"FINAL_DAYS","trigger_at":"2027-01-14T09:00:00+01:00","label":"Potted Potter — derniers jours à Paris","state":"PLANNED"}]
     },
     {
-      "event_uid": "hp-cine-concert-philosophers-stone-paris-20261104@openai",
-      "profile": "SHORT_RUN",
-      "deadline_version": 1,
-      "last_public_date": "2026-11-08",
-      "deadline_type": "LAST_PUBLIC_SESSION_AT",
-      "deadline_at": "2026-11-08T20:30:00+01:00",
-      "deadline_certainty": "OFFICIAL_EXACT",
-      "planned_notices": [
-        {"type": "LAST_DAY", "trigger_at": "2026-11-08T09:00:00+01:00", "label": "Ciné-concert Harry Potter — dernière journée au Grand Rex", "state": "PLANNED"}
-      ]
+      "event_uid":"hp-cine-concert-philosophers-stone-paris-20261104@openai",
+      "profile":"SHORT_RUN",
+      "deadline_version":1,
+      "last_public_date":"2026-11-08",
+      "deadline_type":"LAST_PUBLIC_SESSION_AT",
+      "deadline_at":"2026-11-08T20:30:00+01:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_DAY","trigger_at":"2026-11-08T09:00:00+01:00","label":"Ciné-concert Harry Potter — dernière journée au Grand Rex","state":"PLANNED"}]
     },
     {
-      "event_uid": "hp-lego-store-hogwarts-express-paris-20260906@openai",
-      "profile": "CRITICAL_LIMITED",
-      "deadline_version": 1,
-      "last_public_date": "2026-09-07",
-      "deadline_type": "LAST_FREE_ACCESS_AT",
-      "deadline_at": "2026-09-07T13:00:00+02:00",
-      "deadline_certainty": "OFFICIAL_EXACT",
-      "planned_notices": [
-        {"type": "LAST_CHANCE_WINDOW", "trigger_at": "2026-09-06T09:00:00+02:00", "label": "LEGO Harry Potter So Ouest — dernière session demain", "state": "PLANNED"},
-        {"type": "LAST_DAY", "trigger_at": "2026-09-07T09:00:00+02:00", "label": "LEGO Harry Potter So Ouest — dernière session aujourd'hui, 11h–13h", "state": "PLANNED"}
-      ]
+      "event_uid":"hp-lego-store-hogwarts-express-paris-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Harry Potter So Ouest — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Harry Potter So Ouest — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-hogwarts-express-lille-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Harry Potter Lille — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Harry Potter Lille — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-hogwarts-express-lyon-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Harry Potter Lyon — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Harry Potter Lyon — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-lego-store-hogwarts-express-clermont-20260906@openai",
+      "profile":"CRITICAL_LIMITED",
+      "deadline_version":1,
+      "last_public_date":"2026-09-07",
+      "deadline_type":"LAST_FREE_ACCESS_AT",
+      "deadline_at":"2026-09-07T13:00:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Harry Potter Clermont-Ferrand — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Harry Potter Clermont-Ferrand — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
     }
   ]
 }
