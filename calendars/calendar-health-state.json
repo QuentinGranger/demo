@@ -1,8 +1,10 @@
 {
-  "version": "CROSS_CALENDAR_HEALTH_STATE_FR_V1",
+  "version": "CROSS_CALENDAR_HEALTH_STATE_FR_V2",
   "policy": "calendar-health-policy.json",
   "baseline_at": "2026-08-19T16:10:00Z",
+  "last_policy_migration_at": "2026-08-19T16:54:00Z",
   "current_overall_state": "HEALTHY",
+  "redundancy_state": "HEALTHY",
   "baseline_manifest": {
     "FORTNITE": [
       {"path":"calendars/fortnite-paris.ics","sha":"45202efd91f0d03ce7d1eae0a39e0b8853de991e"},
@@ -25,13 +27,22 @@
     "HARRY_POTTER": "HEALTHY",
     "POKEMON": "HEALTHY"
   },
+  "observer_state": {
+    "Calendriers Fortnite France & Europe": "HEALTHY",
+    "Billetterie Harry Potter France": "HEALTHY"
+  },
   "active_incidents": [],
   "incident_history": [],
   "history": [
     {
       "at": "2026-08-19T16:10:00Z",
       "type": "HEALTH_BASELINE_CREATED",
-      "note": "All nine subscribed/global-specialist calendar paths existed on master when the permanent health policy was introduced. Routine checks do not rewrite this file while healthy."
+      "note": "All nine subscribed/global-specialist calendar paths existed on master when permanent health monitoring was introduced."
+    },
+    {
+      "at": "2026-08-19T16:54:00Z",
+      "type": "HEALTH_POLICY_V2_MIGRATION",
+      "note": "Health monitoring migrated from one primary watchdog to two hourly cross-observers plus independent GitHub Actions validation. Existing healthy state and incident history were preserved."
     }
   ]
 }
