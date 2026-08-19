@@ -1,0 +1,208 @@
+{
+  "version": "FORTNITE_COMPETITIVE_DEADLINE_ENGINE_EU_V3",
+  "updated_at": "2026-08-19T09:56:00Z",
+  "scope": "Fortnite competitive registration, qualification-route, participant-outcome and final reminder intelligence for EU/France",
+  "state_ledger": "fortnite-end-reminders-france.json",
+  "competitive_ledger": "fortnite-competitive-ledger-france.json",
+  "competitive_engine": "fortnite-competitive-engine-france.json",
+  "participant_ledger": "fortnite-competitive-participants-france.json",
+  "principles": {
+    "policy_state_separation": "This engine defines rules; persistent observed state remains in ledgers. Changing policy never rewrites historical facts.",
+    "route_aware": "Qualification is modeled as one or more routes/attempts toward a target; losing one route never implies elimination if another official route remains.",
+    "conditional_notices": "Participant reminders are armed only when their evidence-backed conditions are true at execution time.",
+    "result_finality": "Provisional standings and final official qualification results are distinct; provisional data cannot permanently eliminate a participant.",
+    "no_absence_inference": "Missing pages, missing names or one failed crawl never prove non-qualification.",
+    "no_backfill": "When a condition becomes true late, only future notices are armed; past reminders are never recreated.",
+    "global_vs_participant": "Global event reminders and participant-specific play/registration reminders are independent."
+  },
+  "route_model": {
+    "route_types": ["PRIMARY_QUALIFIER", "SECONDARY_QUALIFIER", "LCQ", "SERIES_POINTS", "INVITE", "DIRECT_FINAL", "OTHER"],
+    "route_states": ["UNKNOWN", "ANNOUNCED", "REGISTRATION_PENDING", "REGISTRATION_OPEN", "REGISTERED", "CHECK_IN_PENDING", "READY", "LIVE", "RESULT_PENDING", "ADVANCED", "FAILED_ROUTE", "QUALIFIED_TARGET", "CLOSED", "CANCELLED"],
+    "route_required": ["route_id", "competition_id", "target_id", "route_type", "state", "source_id"],
+    "route_optional": ["phase_ids", "session_ids", "registration", "check_in", "qualification_edge_ids", "attempt_number", "max_attempts", "opens_at", "closes_at", "last_qualifier_at", "result_finality", "source_url"],
+    "rules": [
+      "FAILED_ROUTE is path-scoped, never event-scoped elimination by itself.",
+      "A participant is ELIMINATED_EVENT only when every officially available route to the tracked target is closed/failed/cancelled and the result evidence is final enough.",
+      "LCQ remains active independently of a failed primary qualifier when officially available.",
+      "INVITE/DIRECT_FINAL routes can skip registration and qualifiers only with official evidence.",
+      "Unknown future routes are never invented merely because a circuit historically had an LCQ."
+    ]
+  },
+  "lifecycle_model": {
+    "global_states": [
+      "DISCOVERED",
+      "REGISTRATION_ANNOUNCED",
+      "REGISTRATION_OPEN",
+      "REGISTRATION_CLOSED",
+      "QUALIFIER_SCHEDULED",
+      "QUALIFIER_LIVE",
+      "QUALIFIER_COMPLETE",
+      "RESULT_PROVISIONAL",
+      "QUALIFICATION_PENDING",
+      "QUALIFICATION_RESOLVED",
+      "FINAL_SCHEDULED",
+      "FINAL_LIVE",
+      "FINAL_COMPLETE",
+      "POSTPONED",
+      "CANCELLED"
+    ],
+    "result_finality": ["UNKNOWN", "PROVISIONAL", "FINAL_OFFICIAL", "CORRECTED_FINAL"],
+    "rules": [
+      "RESULT_PROVISIONAL can follow qualifier completion when standings are published but not yet sufficiently final to resolve advancement.",
+      "QUALIFICATION_PENDING means the play phase is over but advancement cannot yet be safely determined.",
+      "QUALIFICATION_RESOLVED requires official final/explicit advancement evidence or mathematically complete final standings plus a verified qualification rule.",
+      "An official correction after resolution increments lifecycle_version and preserves superseded result history."
+    ]
+  },
+  "participant_model": {
+    "states": ["UNKNOWN", "PENDING", "ACTIVE", "ADVANCED", "QUALIFIED", "ELIMINATED_PATH", "ELIMINATED_EVENT", "WITHDRAWN", "DISQUALIFIED"],
+    "result_finality": ["UNKNOWN", "PROVISIONAL", "FINAL_OFFICIAL", "CORRECTED_FINAL"],
+    "next_actions": ["NONE", "REGISTER", "CHECK_IN", "PLAY_QUALIFIER", "WAIT_RESULT", "PLAY_NEXT_ROUND", "PLAY_LCQ", "PLAY_FINAL", "WATCH_FINAL", "ATTEND_FINAL"],
+    "rules": [
+      "QUALIFIED means the participant is confirmed into the referenced target, not merely advanced to another qualifier round.",
+      "ADVANCED is used for progression to a non-final downstream phase.",
+      "ELIMINATED_PATH means one qualification route ended unsuccessfully but another route may remain.",
+      "ELIMINATED_EVENT means no official route remains to the tracked target and strong final evidence supports non-qualification.",
+      "Provisional standings may set PENDING/ACTIVE but never irreversible ELIMINATED_EVENT.",
+      "Roster outcomes are scoped to the exact official roster; do not transfer a duo outcome to a different duo containing one same player."
+    ]
+  },
+  "deadline_types": [
+    "LAST_REGISTRATION_AT",
+    "LAST_CHECK_IN_AT",
+    "LAST_QUALIFIER_AT",
+    "FINAL_REGISTRATION_AT",
+    "FINAL_CHECK_IN_AT",
+    "LAST_FINAL_SESSION_AT"
+  ],
+  "milestone_types": [
+    "REGISTRATION_OPENS_AT",
+    "QUALIFIER_START_AT",
+    "RESULT_PROVISIONAL_AT",
+    "QUALIFICATION_RESOLVED_AT",
+    "FINAL_SCHEDULED_AT",
+    "FINAL_START_AT",
+    "FINAL_RESULT_AT"
+  ],
+  "notice_state_machine": {
+    "states": ["DORMANT", "ARMED", "PLANNED", "DEFERRED_QUIET_HOURS", "SENT", "SUPPRESSED_CONDITION", "INVALIDATED", "EXPIRED_SILENT"],
+    "rules": [
+      "DORMANT holds a known future reminder whose participant condition is not yet true.",
+      "ARMED means all conditions are currently satisfied and a future trigger can be scheduled.",
+      "SUPPRESSED_CONDITION is reversible while the trigger remains future and conditions may become true again.",
+      "INVALIDATED is permanent for the referenced version/timing and requires a new version to re-arm.",
+      "SENT never sends again for the same dedupe key."
+    ]
+  },
+  "conditional_notice_rules": {
+    "REGISTER": {
+      "arm_if": ["route.state in ANNOUNCED|REGISTRATION_PENDING|REGISTRATION_OPEN", "participant.state not in QUALIFIED|ELIMINATED_EVENT|WITHDRAWN|DISQUALIFIED"],
+      "suppress_if": ["participant already registered for this route", "registration cancelled", "route closed"]
+    },
+    "CHECK_IN": {
+      "arm_if": ["participant registered for route", "official check-in exists", "route active"],
+      "suppress_if": ["participant not registered", "route cancelled", "participant eliminated_event"]
+    },
+    "PLAY_QUALIFIER": {
+      "arm_if": ["participant route state READY|LIVE", "session exact or officially usable", "participant not qualified target already"],
+      "suppress_if": ["route failed/closed/cancelled", "participant withdrawn/disqualified"]
+    },
+    "PLAY_LCQ": {
+      "arm_if": ["LCQ route officially exists", "participant remains eligible", "participant not already qualified target", "LCQ timing official"],
+      "suppress_if": ["participant qualified via another route", "LCQ route unavailable", "participant eliminated_event"]
+    },
+    "PLAY_FINAL": {
+      "arm_if": ["participant.state QUALIFIED", "qualification_target matches final target", "future final timing official"],
+      "suppress_if": ["qualification corrected away", "final postponed without new timing", "participant withdrawn/disqualified"]
+    }
+  },
+  "notice_profiles": {
+    "REGISTRATION_OPENS_AT": {"FEATURED": ["H-1", "AT_OPEN"], "CALENDAR": ["AT_OPEN"], "LEDGER_ONLY": []},
+    "LAST_REGISTRATION_AT": {"more_than_24h": ["D-1", "H-2"], "within_24h": ["H-2"]},
+    "LAST_CHECK_IN_AT": {"default": ["H-1"]},
+    "QUALIFIER_START_AT": {"FEATURED": ["H-1"], "CALENDAR": ["H-1"], "LEDGER_ONLY": []},
+    "LAST_QUALIFIER_AT": {"tracked_target": ["H-1"], "untracked": []},
+    "QUALIFICATION_RESOLVED_AT": {"default": ["ON_STATE_CHANGE"]},
+    "FINAL_START_AT": {"FEATURED": ["D-1", "H-1"], "CALENDAR": ["H-1"], "LEDGER_ONLY": []}
+  },
+  "multi_attempt_policy": {
+    "attempt_identity": "route_id + attempt_number",
+    "rules": [
+      "Each officially distinct qualifier opportunity is a separate attempt under a route or a separate route when it feeds differently.",
+      "Failing attempt 1 does not suppress attempt 2 if attempt 2 is officially still available.",
+      "LAST_QUALIFIER_AT for a target is the latest still-valid official session among all active routes feeding that target.",
+      "Once QUALIFIED_TARGET is confirmed, remaining play reminders for alternative qualification routes are suppressed, not deleted."
+    ]
+  },
+  "result_and_correction_policy": {
+    "provisional": "Provisional standings can update rank/points and set WAIT_RESULT/PENDING but cannot permanently eliminate or qualify unless the source explicitly marks advancement as final.",
+    "final": "Final official standings plus a verified advancement rule can derive QUALIFIED/ELIMINATED_PATH/ELIMINATED_EVENT.",
+    "appeal_or_admin_pending": "If Epic/organizer indicates review, adjudication or unresolved tiebreak, keep result_finality PROVISIONAL and participant state PENDING.",
+    "correction": "A later official correction creates a new outcome with supersedes_outcome_id; old reminders are invalidated and future reminders recalculated.",
+    "no_delete": "Never delete superseded outcomes or lifecycle transitions."
+  },
+  "next_action_engine": {
+    "priority": ["CHECK_IN", "REGISTER", "PLAY_FINAL", "PLAY_NEXT_ROUND", "PLAY_LCQ", "PLAY_QUALIFIER", "WAIT_RESULT", "WATCH_FINAL", "ATTEND_FINAL", "NONE"],
+    "rules": [
+      "Return one primary next_action and optional secondary_actions.",
+      "A deadline already missed is never returned as next_action.",
+      "If participant is QUALIFIED, alternative qualifier actions disappear and the final becomes next_action when scheduled.",
+      "If one route failed but LCQ remains official, next_action may become PLAY_LCQ rather than ELIMINATED_EVENT.",
+      "If qualifier ended and result is not final, next_action is WAIT_RESULT."
+    ]
+  },
+  "quiet_hours": {
+    "timezone": "Europe/Paris",
+    "start": "21:00",
+    "end": "09:00",
+    "urgent_exceptions": ["deadline < 3h", "check-in < 2h", "qualifier/final start < 2h", "official last-minute reschedule/cancellation"],
+    "rule": "Defer only when the delayed notice remains actionable."
+  },
+  "dedupe": {
+    "notice_key": "competition_id + route_id-or-phase_id + session_id-or-null + participant_id-or-global + type + trigger_at + lifecycle_version + route_version",
+    "outcome_key": "participant_id + competition_id + phase_id + route_id-or-null + state + target_id-or-null + result_fingerprint",
+    "correction": "Corrected outcomes use a new fingerprint and supersedes_outcome_id; the old key remains historical."
+  },
+  "invalidation": {
+    "registration_extended": "Invalidate future notices tied to the old closes_at; increment route/lifecycle version and recalculate.",
+    "reschedule": "Keep IDs, invalidate notices tied to old timing and recalculate against the new official timing.",
+    "route_failed": "Suppress only notices for that route unless no other route remains.",
+    "qualified_elsewhere": "Suppress unused alternative qualifier/LCQ play notices; retain global watch/attend notices.",
+    "eliminated_event": "Invalidate participant PLAY/REGISTER/CHECK_IN downstream notices, preserve global WATCH/ATTEND.",
+    "postponed": "Invalidate timing-dependent notices until a new official time is known.",
+    "cancelled": "Invalidate all future notices in scope.",
+    "completed": "Expire remaining unsent notices silently."
+  },
+  "validation": {
+    "rules": [
+      "Every route competition_id/phase_id/session_id resolves to canonical competitive ledger objects.",
+      "Every strong participant outcome has admissible official evidence and a finality compatible with the state.",
+      "ELIMINATED_EVENT is invalid while an official active route to the same target remains.",
+      "QUALIFIED requires a target_id unless the official result itself names the target implicitly and the graph resolves it uniquely.",
+      "No notice trigger may be created in the past.",
+      "No conditional participant notice may be ARMED without a tracked participant entry."
+    ]
+  },
+  "history_events": [
+    "ROUTE_ADDED",
+    "ROUTE_STATE_CHANGED",
+    "ATTEMPT_ADDED",
+    "REGISTRATION_STATE_CHANGED",
+    "CHECK_IN_CHANGED",
+    "QUALIFIER_STARTED",
+    "QUALIFIER_COMPLETED",
+    "RESULT_PROVISIONAL",
+    "RESULT_FINALIZED",
+    "QUALIFICATION_RESOLVED",
+    "PARTICIPANT_ADVANCED",
+    "PARTICIPANT_QUALIFIED",
+    "PARTICIPANT_ELIMINATED_PATH",
+    "PARTICIPANT_ELIMINATED_EVENT",
+    "FINAL_SCHEDULED",
+    "NOTICE_ARMED",
+    "NOTICE_SUPPRESSED",
+    "NOTICE_INVALIDATED",
+    "NOTICE_SENT",
+    "RESULT_CORRECTED"
+  ]
+}
