@@ -6,6 +6,7 @@ on:
       - 'calendars/fortnite-taxonomy-france.json'
       - 'calendars/fortnite-taxonomy-engine-france.json'
       - 'calendars/fortnite-lore-taxonomy-france.json'
+      - 'calendars/fortnite-lore-graph-france.json'
       - 'calendars/fortnite-lore-engine-france.json'
       - 'calendars/fortnite-lore-index-france.json'
       - 'calendars/fortnite-lore-sources-france.json'
@@ -17,6 +18,7 @@ on:
       - 'calendars/fortnite-taxonomy-france.json'
       - 'calendars/fortnite-taxonomy-engine-france.json'
       - 'calendars/fortnite-lore-taxonomy-france.json'
+      - 'calendars/fortnite-lore-graph-france.json'
       - 'calendars/fortnite-lore-engine-france.json'
       - 'calendars/fortnite-lore-index-france.json'
       - 'calendars/fortnite-lore-sources-france.json'
@@ -32,5 +34,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate lore graph and indexes
+      - name: Validate lore knowledge graph V2
         run: python scripts/validate_fortnite_lore_taxonomy.py
