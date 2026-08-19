@@ -8,7 +8,8 @@
     "rebuild_on": ["ENTITY_CHANGE", "ALIAS_CHANGE", "RELATION_CHANGE", "CLAIM_CHANGE", "CLAIM_STATUS_CHANGE", "ROLE_CHANGE", "CALENDAR_ASSIGNMENT_CHANGE"],
     "no_write_if_identical": true,
     "query_only_expansion_never_becomes_canonical": true,
-    "superseded_claims_not_current": true
+    "superseded_claims_not_current": true,
+    "chronology_is_separate": "Index sets are sorted for determinism; chronology_order preserves narrative order."
   },
   "by_type": {
     "CHARACTER": ["CHARACTER_CUBE_QUEEN", "CHARACTER_DOCTOR_SLONE", "CHARACTER_HOPE", "CHARACTER_ICE_KING", "CHARACTER_JONES", "CHARACTER_MIDAS", "CHARACTER_PEELY", "CHARACTER_THE_FOUNDATION"],
@@ -67,14 +68,17 @@
     "REALITY_THE_SIDEWAYS": ["CHAPTER_2"]
   },
   "timeline_view": {
+    "TIMELINE_MAIN_STORY": ["EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_OPERATION_SKY_FIRE", "EVENT_RISE_OF_MIDAS", "EVENT_THE_DEVICE", "EVENT_THE_END_CH1", "EVENT_ZERO_CRISIS_FINALE"]
+  },
+  "chronology_order": {
     "TIMELINE_MAIN_STORY": ["EVENT_THE_END_CH1", "EVENT_THE_DEVICE", "EVENT_ZERO_CRISIS_FINALE", "EVENT_OPERATION_SKY_FIRE", "EVENT_COLLISION", "EVENT_FRACTURE", "EVENT_RISE_OF_MIDAS"]
   },
   "claims_by_entity": {
     "CHARACTER_THE_FOUNDATION": ["lore-claim-foundation-leads-seven"],
-    "CHARACTER_DOCTOR_SLONE": ["lore-claim-slone-affiliated-io-c2s7", "lore-claim-skyfire-involves-slone"],
-    "ORG_IMAGINED_ORDER": ["lore-claim-slone-affiliated-io-c2s7", "lore-claim-skyfire-involves-io", "lore-claim-io-opposes-last-reality-c2s7"],
-    "ORG_THE_LAST_REALITY": ["lore-claim-skyfire-targets-last-reality", "lore-claim-io-opposes-last-reality-c2s7"],
-    "EVENT_OPERATION_SKY_FIRE": ["lore-claim-skyfire-involves-slone", "lore-claim-skyfire-involves-io", "lore-claim-skyfire-targets-last-reality", "lore-claim-skyfire-centers-mothership"],
+    "CHARACTER_DOCTOR_SLONE": ["lore-claim-skyfire-involves-slone", "lore-claim-slone-affiliated-io-c2s7"],
+    "ORG_IMAGINED_ORDER": ["lore-claim-io-opposes-last-reality-c2s7", "lore-claim-skyfire-involves-io", "lore-claim-slone-affiliated-io-c2s7"],
+    "ORG_THE_LAST_REALITY": ["lore-claim-io-opposes-last-reality-c2s7", "lore-claim-skyfire-targets-last-reality"],
+    "EVENT_OPERATION_SKY_FIRE": ["lore-claim-skyfire-centers-mothership", "lore-claim-skyfire-involves-io", "lore-claim-skyfire-involves-slone", "lore-claim-skyfire-targets-last-reality"],
     "LORE_OBJECT_MOTHERSHIP": ["lore-claim-skyfire-centers-mothership"],
     "REALITY_THE_SIDEWAYS": ["lore-claim-sideways-c2s8"],
     "CHARACTER_MIDAS": ["lore-claim-midas-associated-agency-c2s2", "lore-claim-rise-of-midas-involves-midas"],
