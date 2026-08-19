@@ -1,0 +1,132 @@
+{
+  "version": "FORTNITE_PHYSICAL_EVENTS_EU_V1",
+  "updated_at": "2026-08-19T15:16:00Z",
+  "scope": "Official Fortnite physical events relevant to France and Europe",
+  "linked_calendars": [
+    "calendars/fortnite-competitive-france.ics",
+    "calendars/fortnite-paris.ics"
+  ],
+  "venue_registry": "calendars/fortnite-venues-france.json",
+  "ticketing_ledger": "calendars/fortnite-ticketing-france.json",
+  "ticketing_providers": "calendars/fortnite-ticketing-providers-france.json",
+  "source_registry": "calendars/fortnite-sources-france.json",
+  "event_types": [
+    "ESPORTS_LAN",
+    "VIEWING_PARTY",
+    "CONVENTION",
+    "EPIC_FORTNITE_STAND",
+    "PARTNER_STAND",
+    "BRAND_ACTIVATION",
+    "OFFICIAL_COMMUNITY_EVENT",
+    "POPUP",
+    "MEET_AND_GREET",
+    "OTHER_OFFICIAL_PHYSICAL"
+  ],
+  "statuses": [
+    "DISCOVERED",
+    "ANNOUNCED",
+    "VENUE_TBA",
+    "VENUE_CONFIRMED",
+    "ACCESS_ANNOUNCED",
+    "REGISTRATION_OPEN",
+    "TICKETS_ON_SALE",
+    "ACTIVE",
+    "ENDED",
+    "POSTPONED",
+    "CANCELLED"
+  ],
+  "visibility_levels": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
+  "policy": {
+    "official_only": "Physical event existence requires Epic/Fortnite, direct organizer/venue or officially identified partner evidence. Fan meetups and unofficial viewing parties remain discovery-only and never enter the canonical ledger as confirmed.",
+    "canonical_identity": "physical_event_id is stable for the same logical event/run. A new city or genuinely separate activation receives a new ID. Additional sessions at the same event do not create a new physical_event_id.",
+    "venue_resolution": "Use venue_id whenever a canonical venue exists. CITY-only records remain valid until an official venue is published. Never infer an exact building from a city announcement.",
+    "session_model": "Store public sessions separately from tournament matches. Opening hours, viewing slots, meet-and-greets and stand sessions can have session_id/status/access independently.",
+    "ticketing_bridge": "Ticket availability is sourced from fortnite-ticketing-france.json. The physical-event ledger may summarize current_access_state but never overrides a newer ticketing entry.",
+    "competitive_bridge": "A LAN may link competition_id/phase_id/session_id but physical attendance and competitive scheduling stay separate. Venue opening time is never automatically match start time.",
+    "calendar_projection": "FEATURED for official LANs and major France/Europe activations; CALENDAR for useful viewing parties, conventions, partner activations and official stands with actionable time/location; LEDGER_ONLY for low-value or incomplete physical signals.",
+    "address_and_geo": "Calendar LOCATION uses the best verified venue/address. GEO only if verified. Do not fabricate map coordinates or a postal address.",
+    "availability_guard": "AVAILABLE/LOW/NEARLY/SOLD_OUT must come from the ticketing ledger at the appropriate global/session/category scope. A sold-out VIP category never makes the full event sold out.",
+    "history": "Append-only for venue changes, new sessions, access changes, ticketing bridge transitions, postponement/cancellation and organizer corrections.",
+    "anti_noise": "No write for a simple recheck or refreshed timestamp without a material change."
+  },
+  "action_types": ["ATTEND", "REGISTER", "BUY_TICKET", "JOIN_WAITLIST", "CHECK_IN", "WATCH", "VISIT_STAND", "MEET", "FOLLOW"],
+  "entries": [
+    {
+      "physical_event_id": "fortnite-physical-fncs-global-antwerp-2026",
+      "event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "title": "Fortnite Global Championship 2026 — Anvers",
+      "event_type": "ESPORTS_LAN",
+      "status": "VENUE_CONFIRMED",
+      "visibility": "FEATURED",
+      "country_code": "BE",
+      "city": "Antwerpen",
+      "venue_id": "lotto_arena_antwerp",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "time_precision": "DATE_RANGE",
+      "organizer_source_id": "fortnite_competitive",
+      "venue_source_id": "lotto_arena",
+      "official_url": "https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr",
+      "ticketing_event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "current_access_state": "WAITLIST",
+      "primary_action": "JOIN_WAITLIST",
+      "competition_links": [
+        {"competition_id": "fortnite-fncs-global-championship-2026", "relation": "HOSTS_COMPETITION"}
+      ],
+      "public_sessions": [
+        {
+          "session_id": "fncs-antwerp-2026-day1-venue",
+          "label": "Jour 1 — horaire salle",
+          "start_at": "2026-09-26T14:00:00+02:00",
+          "end_at": null,
+          "time_status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE",
+          "status": "ANNOUNCED",
+          "access_scope": "EVENT_TICKET"
+        },
+        {
+          "session_id": "fncs-antwerp-2026-day2-venue",
+          "label": "Jour 2 — horaire salle",
+          "start_at": "2026-09-27T18:30:00+02:00",
+          "end_at": null,
+          "time_status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE",
+          "status": "ANNOUNCED",
+          "access_scope": "EVENT_TICKET"
+        }
+      ],
+      "history": []
+    },
+    {
+      "physical_event_id": "fortnite-physical-ewc-paris-2026",
+      "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "title": "Reload Elite Series Championship — EWC Paris 2026",
+      "event_type": "ESPORTS_LAN",
+      "status": "VENUE_TBA",
+      "visibility": "FEATURED",
+      "country_code": "FR",
+      "city": "Paris",
+      "venue_id": "ewc_paris_2026_tba",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-22",
+      "time_precision": "DATE_RANGE",
+      "organizer_source_id": "ewc_official",
+      "competitive_source_id": "fortnite_competitive",
+      "official_url": "https://www.fortnite.com/competitive/events/EWCParis?region=EU",
+      "ticketing_event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "current_access_state": "PREREGISTRATION",
+      "primary_action": "REGISTER",
+      "competition_links": [
+        {"competition_id": "fortnite-reload-elite-ewc-paris-2026", "relation": "HOSTS_COMPETITION"}
+      ],
+      "public_sessions": [],
+      "history": []
+    }
+  ],
+  "watch_categories": [
+    {"watch_id":"fortnite-physical-france-lans","types":["ESPORTS_LAN"],"territory":"FR","priority":"HIGH"},
+    {"watch_id":"fortnite-physical-eu-lans","types":["ESPORTS_LAN"],"territory":"EU","priority":"HIGH"},
+    {"watch_id":"fortnite-viewing-parties-fr-eu","types":["VIEWING_PARTY"],"territory":"FR_EU","priority":"MEDIUM"},
+    {"watch_id":"fortnite-conventions-stands-fr-eu","types":["CONVENTION","EPIC_FORTNITE_STAND","PARTNER_STAND"],"territory":"FR_EU","priority":"MEDIUM"},
+    {"watch_id":"fortnite-partner-brand-events-fr-eu","types":["BRAND_ACTIVATION","OFFICIAL_COMMUNITY_EVENT","POPUP","MEET_AND_GREET"],"territory":"FR_EU","priority":"MEDIUM"},
+    {"watch_id":"fortnite-red-bull-official-events-fr-eu","types":["BRAND_ACTIVATION","ESPORTS_LAN","VIEWING_PARTY"],"partner_hint":"RED_BULL","territory":"FR_EU","priority":"HIGH"}
+  ]
+}
