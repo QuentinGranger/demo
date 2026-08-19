@@ -1,0 +1,244 @@
+{
+  "version": "WIZARDING_TAXONOMY_FR_V1",
+  "updated_at": "2026-08-19T04:49:00Z",
+  "scope": "Harry Potter / Wizarding World — taxonomie sémantique pour calendriers France",
+  "purpose": "Permettre des filtres futurs par sous-franchise, œuvre, maison, personnage, lieu, époque et thème sans alourdir les SUMMARY des VEVENT.",
+  "principles": {
+    "stable_ids": "Tous les tags utilisent des IDs canoniques stables en ASCII ; les labels FR peuvent évoluer sans casser les filtres.",
+    "no_title_clutter": "Les tags n'ont pas à apparaître dans SUMMARY. Ils vivent dans ce registre et, lors d'une vraie mise à jour métier, dans des propriétés X-HARRYPOTTER-*.",
+    "direct_vs_derived": "DIRECT = explicitement centré sur l'entité ; DERIVED = relation canonique utile au filtre élargi ; UMBRELLA = appartenance générale à la franchise.",
+    "strict_filter": "STRICT utilise seulement les tags DIRECT.",
+    "expanded_filter": "EXPANDED utilise DIRECT + DERIVED + relations de l'ontologie.",
+    "canon_guard": "Ne jamais transformer une association marketing/licenciée en fait canonique. Potted Potter, expériences et produits dérivés gardent un canon_scope distinct.",
+    "unknown_over_guess": "Si une relation est ambiguë ou purement esthétique, ne pas taguer plutôt que deviner.",
+    "uid_link": "Les affectations sont indexées par event_uid et restent stables lorsque la date ou la billetterie change.",
+    "inheritance": "Un VEVENT TICKET_ONSALE/PREORDER_OPEN lié à un parent peut hériter les tags sémantiques du parent avec basis=INHERITED, sans inventer de nouveaux tags."
+  },
+  "ics_mapping": {
+    "policy_header": "X-HARRYPOTTER-TAXONOMY-POLICY:WIZARDING_TAXONOMY_FR_V1",
+    "registry_header": "X-HARRYPOTTER-TAXONOMY-REGISTRY:harry-potter-taxonomy-france.json",
+    "properties": {
+      "subfranchise": "X-HARRYPOTTER-SUBFRANCHISE",
+      "work": "X-HARRYPOTTER-WORK",
+      "house": "X-HARRYPOTTER-HOUSE",
+      "character": "X-HARRYPOTTER-CHARACTER",
+      "place": "X-HARRYPOTTER-PLACE",
+      "era": "X-HARRYPOTTER-ERA",
+      "theme": "X-HARRYPOTTER-THEME",
+      "artifact": "X-HARRYPOTTER-ARTIFACT",
+      "canon_scope": "X-HARRYPOTTER-CANON-SCOPE",
+      "tag_basis": "X-HARRYPOTTER-TAG-BASIS"
+    },
+    "repeatable": ["X-HARRYPOTTER-WORK", "X-HARRYPOTTER-HOUSE", "X-HARRYPOTTER-CHARACTER", "X-HARRYPOTTER-PLACE", "X-HARRYPOTTER-THEME", "X-HARRYPOTTER-ARTIFACT"],
+    "sequence_rule": "Ne jamais augmenter SEQUENCE uniquement pour ajouter le header ou des tags techniques ; les injecter lors d'une prochaine modification métier, ou immédiatement si un nouveau flux filtré en dépend."
+  },
+  "facets": {
+    "subfranchises": [
+      {"id": "HP_MAIN", "label_fr": "Harry Potter — saga principale"},
+      {"id": "FANTASTIC_BEASTS", "label_fr": "Les Animaux fantastiques"},
+      {"id": "HOGWARTS_LEGACY", "label_fr": "Hogwarts Legacy"},
+      {"id": "QUIDDITCH_CHAMPIONS", "label_fr": "Quidditch Champions"},
+      {"id": "CURSED_CHILD", "label_fr": "Harry Potter et l'Enfant maudit"},
+      {"id": "HBO_SERIES", "label_fr": "Série HBO Harry Potter"},
+      {"id": "WIZARDING_WORLD_META", "label_fr": "Wizarding World / franchise générale"},
+      {"id": "LICENSED_LIVE", "label_fr": "Spectacles et expériences sous licence"}
+    ],
+    "works": [
+      {"id": "HP1_PHILOSOPHERS_STONE", "label_fr": "Harry Potter à l'École des Sorciers", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y1"},
+      {"id": "HP2_CHAMBER_OF_SECRETS", "label_fr": "Harry Potter et la Chambre des Secrets", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y2"},
+      {"id": "HP3_PRISONER_OF_AZKABAN", "label_fr": "Harry Potter et le Prisonnier d'Azkaban", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y3"},
+      {"id": "HP4_GOBLET_OF_FIRE", "label_fr": "Harry Potter et la Coupe de Feu", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y4"},
+      {"id": "HP5_ORDER_OF_PHOENIX", "label_fr": "Harry Potter et l'Ordre du Phénix", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y5"},
+      {"id": "HP6_HALF_BLOOD_PRINCE", "label_fr": "Harry Potter et le Prince de Sang-Mêlé", "subfranchise": "HP_MAIN", "era": "HARRY_HOGWARTS_Y6"},
+      {"id": "HP7_DEATHLY_HALLOWS", "label_fr": "Harry Potter et les Reliques de la Mort", "subfranchise": "HP_MAIN", "era": "SECOND_WIZARDING_WAR"},
+      {"id": "FB1_FANTASTIC_BEASTS", "label_fr": "Les Animaux fantastiques", "subfranchise": "FANTASTIC_BEASTS", "era": "GLOBAL_WIZARDING_1920S"},
+      {"id": "FB2_CRIMES_OF_GRINDELWALD", "label_fr": "Les Crimes de Grindelwald", "subfranchise": "FANTASTIC_BEASTS", "era": "GLOBAL_WIZARDING_1920S"},
+      {"id": "FB3_SECRETS_OF_DUMBLEDORE", "label_fr": "Les Secrets de Dumbledore", "subfranchise": "FANTASTIC_BEASTS", "era": "GLOBAL_WIZARDING_1930S"}
+    ],
+    "houses": [
+      {"id": "GRYFFINDOR", "label_fr": "Gryffondor"},
+      {"id": "SLYTHERIN", "label_fr": "Serpentard"},
+      {"id": "RAVENCLAW", "label_fr": "Serdaigle"},
+      {"id": "HUFFLEPUFF", "label_fr": "Poufsouffle"},
+      {"id": "HOUSE_NEUTRAL", "label_fr": "Toutes maisons / neutre"}
+    ],
+    "places": [
+      {"id": "HOGWARTS", "label_fr": "Poudlard"},
+      {"id": "GREAT_HALL", "label_fr": "Grande Salle", "parent": "HOGWARTS"},
+      {"id": "DIAGON_ALLEY", "label_fr": "Chemin de Traverse"},
+      {"id": "KNOCKTURN_ALLEY", "label_fr": "Allée des Embrumes"},
+      {"id": "HOGSMEADE", "label_fr": "Pré-au-Lard"},
+      {"id": "PLATFORM_9_3_4", "label_fr": "Voie 9¾"},
+      {"id": "HOGWARTS_EXPRESS", "label_fr": "Poudlard Express"},
+      {"id": "FORBIDDEN_FOREST", "label_fr": "Forêt interdite"},
+      {"id": "MINISTRY_OF_MAGIC_UK", "label_fr": "Ministère de la Magie britannique"},
+      {"id": "GRINGOTTS", "label_fr": "Gringotts"},
+      {"id": "AZKABAN", "label_fr": "Azkaban"},
+      {"id": "PRIVET_DRIVE", "label_fr": "Privet Drive"},
+      {"id": "THE_BURROW", "label_fr": "Le Terrier"},
+      {"id": "BEAUXBATONS", "label_fr": "Beauxbâtons"},
+      {"id": "DURMSTRANG", "label_fr": "Durmstrang"},
+      {"id": "MACUSA", "label_fr": "MACUSA"}
+    ],
+    "characters": [
+      {"id": "HARRY_POTTER", "label_fr": "Harry Potter", "house": "GRYFFINDOR"},
+      {"id": "HERMIONE_GRANGER", "label_fr": "Hermione Granger", "house": "GRYFFINDOR"},
+      {"id": "RON_WEASLEY", "label_fr": "Ron Weasley", "house": "GRYFFINDOR"},
+      {"id": "LUNA_LOVEGOOD", "label_fr": "Luna Lovegood", "house": "RAVENCLAW"},
+      {"id": "NEVILLE_LONGBOTTOM", "label_fr": "Neville Londubat", "house": "GRYFFINDOR"},
+      {"id": "DRACO_MALFOY", "label_fr": "Drago Malefoy", "house": "SLYTHERIN"},
+      {"id": "ALBUS_DUMBLEDORE", "label_fr": "Albus Dumbledore", "house": "GRYFFINDOR"},
+      {"id": "SEVERUS_SNAPE", "label_fr": "Severus Rogue", "house": "SLYTHERIN"},
+      {"id": "RUBEUS_HAGRID", "label_fr": "Rubeus Hagrid", "house": "GRYFFINDOR"},
+      {"id": "SIRIUS_BLACK", "label_fr": "Sirius Black", "house": "GRYFFINDOR"},
+      {"id": "VOLDEMORT", "label_fr": "Voldemort", "house": "SLYTHERIN"},
+      {"id": "DOBBY", "label_fr": "Dobby"},
+      {"id": "GINNY_WEASLEY", "label_fr": "Ginny Weasley", "house": "GRYFFINDOR"},
+      {"id": "MINERVA_MCGONAGALL", "label_fr": "Minerva McGonagall", "house": "GRYFFINDOR"},
+      {"id": "CEDRIC_DIGGORY", "label_fr": "Cedric Diggory", "house": "HUFFLEPUFF"},
+      {"id": "NEWT_SCAMANDER", "label_fr": "Norbert Dragonneau", "subfranchise": "FANTASTIC_BEASTS", "house": "HUFFLEPUFF"},
+      {"id": "GELLERT_GRINDELWALD", "label_fr": "Gellert Grindelwald", "subfranchise": "FANTASTIC_BEASTS"}
+    ],
+    "eras": [
+      {"id": "FOUNDERS_ERA", "label_fr": "Époque des fondateurs"},
+      {"id": "GLOBAL_WIZARDING_1920S", "label_fr": "Monde magique — années 1920"},
+      {"id": "GLOBAL_WIZARDING_1930S", "label_fr": "Monde magique — années 1930"},
+      {"id": "MARAUDERS_ERA", "label_fr": "Époque des Maraudeurs"},
+      {"id": "HARRY_HOGWARTS_Y1", "label_fr": "Harry à Poudlard — 1re année"},
+      {"id": "HARRY_HOGWARTS_Y2", "label_fr": "Harry à Poudlard — 2e année"},
+      {"id": "HARRY_HOGWARTS_Y3", "label_fr": "Harry à Poudlard — 3e année"},
+      {"id": "HARRY_HOGWARTS_Y4", "label_fr": "Harry à Poudlard — 4e année"},
+      {"id": "HARRY_HOGWARTS_Y5", "label_fr": "Harry à Poudlard — 5e année"},
+      {"id": "HARRY_HOGWARTS_Y6", "label_fr": "Harry à Poudlard — 6e année"},
+      {"id": "SECOND_WIZARDING_WAR", "label_fr": "Seconde guerre des sorciers"},
+      {"id": "POST_HOGWARTS", "label_fr": "Après Poudlard"},
+      {"id": "HOGWARTS_1800S", "label_fr": "Poudlard — XIXe siècle"}
+    ],
+    "themes": [
+      {"id": "BACK_TO_HOGWARTS", "label_fr": "Back to Hogwarts / rentrée à Poudlard"},
+      {"id": "ANNIVERSARY", "label_fr": "Anniversaire"},
+      {"id": "QUIDDITCH", "label_fr": "Quidditch"},
+      {"id": "SPELLS", "label_fr": "Sortilèges"},
+      {"id": "WANDS", "label_fr": "Baguettes"},
+      {"id": "POTIONS", "label_fr": "Potions"},
+      {"id": "DARK_ARTS", "label_fr": "Forces du Mal"},
+      {"id": "MAGICAL_CREATURES", "label_fr": "Créatures magiques"},
+      {"id": "HOGWARTS_SCHOOL", "label_fr": "Vie à Poudlard"},
+      {"id": "HOGWARTS_EXPRESS", "label_fr": "Poudlard Express"},
+      {"id": "CHRISTMAS", "label_fr": "Noël"},
+      {"id": "COLLECTING", "label_fr": "Collection"},
+      {"id": "FILM_MUSIC", "label_fr": "Musique des films"},
+      {"id": "FILM_PROPS", "label_fr": "Accessoires et objets des films"},
+      {"id": "ILLUSTRATION", "label_fr": "Illustration"}
+    ],
+    "artifacts": [
+      {"id": "WAND", "label_fr": "Baguette magique"},
+      {"id": "SORTING_HAT", "label_fr": "Choixpeau magique"},
+      {"id": "MARAUDERS_MAP", "label_fr": "Carte du Maraudeur"},
+      {"id": "TIME_TURNER", "label_fr": "Retourneur de Temps"},
+      {"id": "DEATHLY_HALLOWS", "label_fr": "Reliques de la Mort"},
+      {"id": "HORCRUX", "label_fr": "Horcruxe"},
+      {"id": "GOLDEN_SNITCH", "label_fr": "Vif d'or"},
+      {"id": "PHILOSOPHERS_STONE", "label_fr": "Pierre philosophale"}
+    ],
+    "canon_scopes": [
+      {"id": "CORE_STORY", "label_fr": "Récit principal"},
+      {"id": "SCREEN_ADAPTATION", "label_fr": "Adaptation écran"},
+      {"id": "GAME_UNIVERSE", "label_fr": "Univers jeu vidéo"},
+      {"id": "STAGE_ADAPTATION", "label_fr": "Adaptation scénique"},
+      {"id": "LICENSED_EXPERIENCE", "label_fr": "Expérience / événement sous licence"},
+      {"id": "LICENSED_MERCH", "label_fr": "Produit dérivé sous licence"},
+      {"id": "LICENSED_PARODY", "label_fr": "Parodie / spectacle sous licence"},
+      {"id": "FRANCHISE_META", "label_fr": "Actualité/campagne de franchise"}
+    ]
+  },
+  "derived_relations": {
+    "character_to_house": "En mode EXPANDED, le house du profil personnage peut être inclus comme facette dérivée, sans créer un tag DIRECT de maison.",
+    "work_to_era": "En mode EXPANDED, une œuvre peut apporter son era canonique.",
+    "place_parent": "Un tag direct GREAT_HALL peut aussi matcher HOGWARTS en mode EXPANDED.",
+    "subfranchise_from_work": "Une œuvre apporte sa subfranchise en mode EXPANDED.",
+    "no_reverse_inference": "Une maison ne doit jamais faire deviner un personnage ; un lieu ne doit jamais faire deviner une œuvre précise."
+  },
+  "assignments": {
+    "hp-book-luna-lovegood-fr-20260827@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "UMBRELLA"}],
+      "characters": [{"id": "LUNA_LOVEGOOD", "basis": "DIRECT"}],
+      "canon_scope": "LICENSED_MERCH",
+      "derived": [{"facet": "house", "id": "RAVENCLAW", "via": "LUNA_LOVEGOOD"}]
+    },
+    "hp-lego-mini-hogwarts-40975-20260829@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "UMBRELLA"}],
+      "places": [{"id": "HOGWARTS", "basis": "DIRECT"}],
+      "themes": [{"id": "COLLECTING", "basis": "DIRECT"}],
+      "canon_scope": "LICENSED_MERCH"
+    },
+    "hp-lego-back-to-hogwarts-fr-20260901@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "UMBRELLA"}],
+      "places": [{"id": "HOGWARTS", "basis": "DIRECT"}],
+      "themes": [{"id": "BACK_TO_HOGWARTS", "basis": "DIRECT"}, {"id": "COLLECTING", "basis": "DIRECT"}],
+      "canon_scope": "LICENSED_MERCH"
+    },
+    "hp-book-hbp-illustrated-pinfold-fr-20261008@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "DIRECT"}],
+      "works": [{"id": "HP6_HALF_BLOOD_PRINCE", "basis": "DIRECT"}],
+      "themes": [{"id": "ILLUSTRATION", "basis": "DIRECT"}, {"id": "COLLECTING", "basis": "DIRECT"}],
+      "canon_scope": "CORE_STORY"
+    },
+    "hp-books-film-guides-fr-20261008@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "UMBRELLA"}],
+      "places": [{"id": "DIAGON_ALLEY", "basis": "DIRECT"}, {"id": "HOGWARTS", "basis": "DIRECT"}],
+      "themes": [{"id": "WANDS", "basis": "DIRECT"}, {"id": "SPELLS", "basis": "DIRECT"}],
+      "artifacts": [{"id": "WAND", "basis": "DIRECT"}],
+      "canon_scope": "LICENSED_MERCH"
+    },
+    "hp-grand-rex-philosophers-stone-25th-20260830@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "DIRECT"}],
+      "works": [{"id": "HP1_PHILOSOPHERS_STONE", "basis": "DIRECT"}],
+      "themes": [{"id": "ANNIVERSARY", "basis": "DIRECT"}],
+      "canon_scope": "SCREEN_ADAPTATION"
+    },
+    "hp-back-to-hogwarts-showcase-20260901@openai": {
+      "subfranchise": [{"id": "WIZARDING_WORLD_META", "basis": "DIRECT"}],
+      "places": [{"id": "HOGWARTS", "basis": "DIRECT"}],
+      "themes": [{"id": "BACK_TO_HOGWARTS", "basis": "DIRECT"}],
+      "canon_scope": "FRANCHISE_META"
+    },
+    "hp-lego-store-hogwarts-express-paris-20260906@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "UMBRELLA"}],
+      "places": [{"id": "HOGWARTS_EXPRESS", "basis": "DIRECT"}],
+      "themes": [{"id": "HOGWARTS_EXPRESS", "basis": "DIRECT"}, {"id": "BACK_TO_HOGWARTS", "basis": "DIRECT"}],
+      "canon_scope": "LICENSED_EXPERIENCE"
+    },
+    "hp-lego-store-hogwarts-express-lille-20260906@openai": {"inherit_from": "hp-lego-store-hogwarts-express-paris-20260906@openai", "basis": "SAME_CAMPAIGN"},
+    "hp-lego-store-hogwarts-express-lyon-20260906@openai": {"inherit_from": "hp-lego-store-hogwarts-express-paris-20260906@openai", "basis": "SAME_CAMPAIGN"},
+    "hp-lego-store-hogwarts-express-clermont-20260906@openai": {"inherit_from": "hp-lego-store-hogwarts-express-paris-20260906@openai", "basis": "SAME_CAMPAIGN"},
+    "hp-potted-potter-paris-20261017@openai": {
+      "subfranchise": [{"id": "LICENSED_LIVE", "basis": "DIRECT"}, {"id": "HP_MAIN", "basis": "DERIVED"}],
+      "canon_scope": "LICENSED_PARODY"
+    },
+    "hp-cine-concert-philosophers-stone-paris-20261104@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "DIRECT"}],
+      "works": [{"id": "HP1_PHILOSOPHERS_STONE", "basis": "DIRECT"}],
+      "themes": [{"id": "FILM_MUSIC", "basis": "DIRECT"}, {"id": "ANNIVERSARY", "basis": "DIRECT"}],
+      "canon_scope": "SCREEN_ADAPTATION"
+    },
+    "hp-cine-concert-hbp-toulouse-20261228@openai": {
+      "subfranchise": [{"id": "HP_MAIN", "basis": "DIRECT"}],
+      "works": [{"id": "HP6_HALF_BLOOD_PRINCE", "basis": "DIRECT"}],
+      "themes": [{"id": "FILM_MUSIC", "basis": "DIRECT"}],
+      "canon_scope": "SCREEN_ADAPTATION"
+    },
+    "hp-cine-concert-hbp-bordeaux-20261229@openai": {"inherit_from": "hp-cine-concert-hbp-toulouse-20261228@openai", "basis": "SAME_TOUR"},
+    "hp-cine-concert-hbp-nantes-20261230@openai": {"inherit_from": "hp-cine-concert-hbp-toulouse-20261228@openai", "basis": "SAME_TOUR"},
+    "hp-cine-concert-hbp-lille-20270102@openai": {"inherit_from": "hp-cine-concert-hbp-toulouse-20261228@openai", "basis": "SAME_TOUR"},
+    "hp-cine-concert-hbp-lyon-20270109@openai": {"inherit_from": "hp-cine-concert-hbp-toulouse-20261228@openai", "basis": "SAME_TOUR"},
+    "hp-cine-concert-hbp-dijon-20270110@openai": {"inherit_from": "hp-cine-concert-hbp-toulouse-20261228@openai", "basis": "SAME_TOUR"}
+  },
+  "filter_examples": {
+    "strict_ravenclaw": "Retourne les événements avec house DIRECT=RAVENCLAW ; le livre Luna n'apparaît pas sauf si l'édition est explicitement Serdaigle.",
+    "expanded_ravenclaw": "Retourne house DIRECT=RAVENCLAW + personnages DIRECT dont house=RAVENCLAW ; le livre Luna apparaît.",
+    "hogwarts": "STRICT = événements/produits explicitement centrés Poudlard ; EXPANDED peut inclure sous-lieux comme Grande Salle.",
+    "half_blood_prince": "Filtre work=HP6_HALF_BLOOD_PRINCE : édition illustrée + toutes les étapes du ciné-concert du film 6.",
+    "fantastic_beasts": "Filtre subfranchise=FANTASTIC_BEASTS sans mélanger les événements Harry Potter principaux."
+  }
+}
