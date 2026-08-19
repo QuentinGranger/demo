@@ -1,65 +1,69 @@
 {
-  "version": "TICKETING_LIFECYCLE_FR_V1",
-  "updated_at": "2026-08-19T04:33:00Z",
+  "version": "TICKETING_INTELLIGENCE_FR_V2",
+  "updated_at": "2026-08-19T04:44:00Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
     "calendars/harry-potter-events-france-paris.ics"
   ],
+  "source_registry": "calendars/harry-potter-sources-france.json",
   "policy": {
-    "canonical_key": "event_uid + ticket_provider/source_id + session_key quand une séance doit être distinguée",
-    "statuses": [
-      "NOT_ANNOUNCED",
-      "ANNOUNCED",
-      "ON_SALE",
-      "AVAILABLE",
-      "LOW_AVAILABILITY",
-      "NEARLY_SOLD_OUT",
-      "SOLD_OUT",
-      "WAITLIST",
-      "CLOSED",
-      "ENDED",
-      "CANCELLED"
-    ],
-    "material_transitions": [
-      "SALE_OPENED",
-      "LOW_AVAILABILITY",
-      "NEARLY_SOLD_OUT",
-      "SOLD_OUT",
-      "BACK_ON_SALE",
-      "NEW_SESSION_ADDED",
-      "RUN_EXTENDED",
-      "LAST_CHANCE",
-      "SALE_CLOSED",
-      "EVENT_ENDED",
-      "CANCELLED"
-    ],
-    "evidence": {
-      "A": "page billetterie/salle/organisateur directement responsable indiquant explicitement l'état",
-      "B": "billetterie partenaire officielle ou salle partenaire directement liée à l'événement",
-      "C": "agrégateur/revendeur de billets identifiable, à confirmer si possible",
-      "D": "signal de découverte uniquement ; aucune transition forte seule"
+    "canonical_key": "event_uid + provider_id + session_key/category_key lorsque la granularité est utile",
+    "statuses": ["NOT_ANNOUNCED","ANNOUNCED","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
+    "material_transitions": ["SALE_ANNOUNCED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","NEW_SESSION_ADDED","SESSION_REMOVED","RUN_EXTENDED","LAST_SHOW","LAST_CHANCE","PRICE_STRUCTURE_CHANGED","SALE_CLOSED","EVENT_ENDED","CANCELLED"],
+    "scarcity_evidence": {
+      "EXPLICIT_TEXT": "La source directe dit explicitement dernières places, presque complet ou complet.",
+      "OFFICIAL_SESSION_DISABLED": "La séance exacte est explicitement indisponible/épuisée sur la billetterie officielle.",
+      "CATEGORY_SOLD_OUT": "Une catégorie précise est épuisée mais pas nécessairement la séance entière.",
+      "WAITLIST_OFFERED": "Une liste d'attente officielle est proposée.",
+      "SEATMAP_STRONG_SIGNAL": "Signal de plan de salle officiel suffisamment robuste, à utiliser avec prudence et jamais seul pour NEARLY_SOLD_OUT sauf seuil explicitement fiable.",
+      "UNKNOWN": "Pas de preuve de rareté ; ne pas inférer."
     },
-    "no_inference": "Ne déduis jamais presque complet/complet à partir d'un plan de salle partiel, d'un message marketing vague ou d'une absence temporaire de sièges si la source ne l'établit pas suffisamment.",
-    "session_rule": "Pour un run multi-séances, conserve un état global et des états sessionnels seulement lorsqu'une séance a une disponibilité significativement différente ou devient complète/ajoutée.",
-    "extension_rule": "Une prolongation modifie le même VEVENT principal lorsque c'est la même production + ville + lieu ; étendre DTEND, SEQUENCE+1, conserver original/history et créer transition RUN_EXTENDED. Une nouvelle ville reste un VEVENT distinct.",
-    "new_session_rule": "Une nouvelle séance dans le même run enrichit le même UID et SESSION-* ; pas de nouveau VEVENT sauf si l'action de billetterie datée mérite une fiche TICKET_ONSALE séparée.",
-    "closing_rule": "CLOSED signifie vente fermée avant/au début de l'événement ; ENDED signifie événement terminé. SOLD_OUT n'est pas synonyme de CLOSED.",
-    "reopen_rule": "SOLD_OUT/CLOSED -> AVAILABLE/ON_SALE devient BACK_ON_SALE uniquement avec preuve directe ; conserve l'historique.",
-    "last_chance_rule": "LAST_CHANCE seulement si source directe annonce dernières places/dernière séance/fin de vente proche, ou si la date de fin est connue et qu'une règle de rappel de fin s'applique ; ne jamais inventer une rareté.",
-    "write_noise": "Aucun commit pour simple recheck identique. Écrire seulement sur transition matérielle, nouvelle séance, prolongation, changement de lien/prix structurel ou correction utile.",
-    "notification": "Notifier une seule fois par transition logique importante ; SALE_OPENED, NEARLY_SOLD_OUT, SOLD_OUT, BACK_ON_SALE, NEW_SESSION_ADDED, RUN_EXTENDED, LAST_CHANCE, CANCELLED. LOW_AVAILABILITY n'est notifiée que pour un événement prioritaire/Paris ou très demandé."
+    "confidence": {
+      "HIGH": "Source A directe + état explicite pour la séance/catégorie exacte.",
+      "MEDIUM": "Source officielle/partenaire mais granularité imparfaite.",
+      "LOW": "Signal utile mais insuffisant pour une transition forte ; aucune alerte de rareté."
+    },
+    "global_vs_session": "L'état global d'un run est dérivé seulement des séances connues : une séance SOLD_OUT ne rend pas le run SOLD_OUT si une autre séance reste AVAILABLE/ON_SALE.",
+    "category_rule": "VIP/Premium/Catégorie 1 épuisée ne signifie jamais événement complet. Conserver category_states séparément quand utile.",
+    "new_session_rule": "Même production + ville + lieu + run : nouvelle séance => même UID principal, SESSION-* enrichi, SEQUENCE+1 et transition NEW_SESSION_ADDED.",
+    "extension_rule": "Même production + ville + lieu prolongée : même UID principal, DTEND étendu, historique conservé, RUN_EXTENDED. Nouvelle ville/lieu => nouvel UID logique.",
+    "reopen_rule": "SOLD_OUT/CLOSED -> AVAILABLE/ON_SALE = BACK_ON_SALE seulement avec preuve directe de places remises en vente, jauge libérée ou nouvelle séance.",
+    "last_chance_rule": "LAST_CHANCE exige soit une annonce directe, soit une fin de run certaine proche ; dans ce deuxième cas parler de fin prochaine, jamais de rareté des billets.",
+    "price_rule": "Suivre structure de prix/min/max/catégories si publiée directement. Une variation liée à une catégorie qui disparaît n'est pas automatiquement une hausse générale.",
+    "write_noise": "Aucun commit pour recheck identique. Écrire uniquement transition matérielle, séance/catégorie ajoutée ou retirée, prolongation, changement structurel de prix/lien/provider ou correction métier.",
+    "notification_dedupe": "event_uid + transition_type + session_key + category_key + new_status",
+    "event_end": "EVENT_ENDED est une maintenance silencieuse sauf anomalie ; ne jamais notifier la simple fin normale.",
+    "check_strategy": {
+      "HOT": "événement <=14 jours, SOLD_OUT/WAITLIST, nouvelle vente attendue, Paris/IDF critique : vérifier à chaque exécution horaire si utile",
+      "WARM": "15 à 60 jours : vérifier au plus toutes les 6 heures sauf signal récent",
+      "COLD": ">60 jours : vérifier au plus quotidiennement sauf annonce/signal entrant",
+      "LONG_RUN": "run long comme Potted Potter : surveiller quotidiennement globalement, puis augmenter autour des dernières semaines et des séances spéciales"
+    }
   },
   "ics_mapping": {
-    "ledger_status_property": "X-HARRYPOTTER-TICKET-STATUS",
-    "checked_property": "X-HARRYPOTTER-TICKET-CHECKED-AT",
-    "transition_property": "X-HARRYPOTTER-TICKET-LAST-TRANSITION",
-    "transition_at_property": "X-HARRYPOTTER-TICKET-LAST-TRANSITION-AT",
-    "provider_property": "X-HARRYPOTTER-TICKET-PROVIDER",
-    "session_property": "X-HARRYPOTTER-TICKET-SESSION",
-    "history_property": "X-HARRYPOTTER-TICKET-HISTORY",
-    "policy_header": "X-HARRYPOTTER-TICKETING-POLICY:TICKETING_LIFECYCLE_FR_V1",
-    "ledger_header": "X-HARRYPOTTER-TICKETING-LEDGER:harry-potter-ticketing-france.json"
+    "policy_header": "X-HARRYPOTTER-TICKETING-POLICY:TICKETING_INTELLIGENCE_FR_V2",
+    "ledger_header": "X-HARRYPOTTER-TICKETING-LEDGER:harry-potter-ticketing-france.json",
+    "status": "X-HARRYPOTTER-TICKET-STATUS",
+    "provider": "X-HARRYPOTTER-TICKET-PROVIDER",
+    "provider_id": "X-HARRYPOTTER-TICKET-PROVIDER-ID",
+    "checked": "X-HARRYPOTTER-TICKET-CHECKED-AT",
+    "transition": "X-HARRYPOTTER-TICKET-LAST-TRANSITION",
+    "transition_at": "X-HARRYPOTTER-TICKET-LAST-TRANSITION-AT",
+    "confidence": "X-HARRYPOTTER-TICKET-CONFIDENCE",
+    "scarcity_evidence": "X-HARRYPOTTER-TICKET-SCARCITY-EVIDENCE",
+    "session": "X-HARRYPOTTER-TICKET-SESSION",
+    "category": "X-HARRYPOTTER-TICKET-CATEGORY",
+    "history": "X-HARRYPOTTER-TICKET-HISTORY"
+  },
+  "notification_policy": {
+    "always": ["SALE_OPENED","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","NEW_SESSION_ADDED","RUN_EXTENDED","LAST_CHANCE","CANCELLED"],
+    "conditional": {
+      "LOW_AVAILABILITY": "notifier seulement pour 🔥/⭐ très demandé, Paris/IDF, séance proche ou preuve explicite forte",
+      "PRICE_STRUCTURE_CHANGED": "notifier seulement si changement important/actionnable, pas une micro-variation de catégorie",
+      "SALE_CLOSED": "silencieux sauf fermeture anticipée ou impact pratique"
+    },
+    "silent": ["EVENT_ENDED","recheck_identique","timestamp_refresh","category_reorder"]
   },
   "tracked": [
     {
@@ -67,24 +71,28 @@
       "title": "Projection 25 ans — Harry Potter à l’École des Sorciers — Grand Rex",
       "city": "Paris",
       "provider": "Le Grand Rex",
+      "provider_id": "grand-rex",
       "source_id": "grand-rex",
       "ticket_url": "https://www.legrandrex.com/cinema",
       "status": "AVAILABLE",
       "status_origin": "ICS_VERIFIED",
       "evidence_grade": "A",
+      "confidence": "HIGH",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "HOT",
       "last_verified_at": "2026-08-19T03:53:20Z",
+      "last_changed_at": null,
       "price_min_eur": 10.0,
       "price_max_eur": 10.0,
       "session_states": [
         {
-          "session_key": "2026-08-30T17:00-Europe-Paris-standard",
+          "session_key": "2026-08-30T17:00-Europe-Paris",
           "status": "AVAILABLE",
-          "notes": "Billet standard indiqué disponible dans la fiche calendrier importée."
-        },
-        {
-          "session_key": "2026-08-30T17:00-Europe-Paris-vip",
-          "status": "SOLD_OUT",
-          "notes": "Format VIP indiqué complet dans la fiche calendrier importée."
+          "confidence": "HIGH",
+          "category_states": [
+            {"category_key":"standard","status":"AVAILABLE","scarcity_evidence":"UNKNOWN"},
+            {"category_key":"vip","status":"SOLD_OUT","scarcity_evidence":"CATEGORY_SOLD_OUT","notes":"VIP complet ne rend pas la séance globale complète."}
+          ]
         }
       ],
       "history": []
@@ -94,14 +102,20 @@
       "title": "Potted Potter — Paris",
       "city": "Paris",
       "provider": "Théâtre du Gymnase Marie Bell",
+      "provider_id": "theatre-gymnase",
       "source_id": "theatre-gymnase",
       "ticket_url": "https://theatredugymnase.com/event-pro/potted-potter",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "LONG_RUN",
       "last_verified_at": null,
+      "last_changed_at": null,
       "run_start": "2026-10-17",
       "run_end": "2027-01-17",
+      "session_catalog_mode": "SPARSE_ONLY",
       "session_states": [],
       "history": []
     },
@@ -110,24 +124,29 @@
       "title": "Ciné-concert — Harry Potter à l'École des Sorciers — Grand Rex",
       "city": "Paris",
       "provider": "Le Grand Rex",
+      "provider_id": "grand-rex",
       "source_id": "grand-rex",
       "ticket_url": "https://www.legrandrex.com/evenement/1755",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
+      "last_changed_at": null,
       "price_min_eur": 25.0,
       "price_max_eur": 99.0,
       "run_start": "2026-11-04",
       "run_end": "2026-11-08",
       "session_states": [
-        {"session_key": "2026-11-04T20:30-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-05T20:30-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-06T20:30-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-07T15:00-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-07T20:30-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-08T15:00-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2026-11-08T20:30-Europe-Paris", "status": "UNKNOWN"}
+        {"session_key":"2026-11-04T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-05T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-06T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-07T15:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-07T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-08T15:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2026-11-08T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}
       ],
       "history": []
     },
@@ -136,13 +155,18 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Toulouse",
       "city": "Toulouse",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
-      "session_states": [{"session_key": "2026-12-28T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "last_changed_at": null,
+      "session_states": [{"session_key":"2026-12-28T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],
       "history": []
     },
     {
@@ -150,13 +174,18 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Bordeaux/Floirac",
       "city": "Floirac / Bordeaux",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
-      "session_states": [{"session_key": "2026-12-29T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "last_changed_at": null,
+      "session_states": [{"session_key":"2026-12-29T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],
       "history": []
     },
     {
@@ -164,13 +193,18 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Nantes",
       "city": "Saint-Herblain / Nantes",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
-      "session_states": [{"session_key": "2026-12-30T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "last_changed_at": null,
+      "session_states": [{"session_key":"2026-12-30T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],
       "history": []
     },
     {
@@ -178,15 +212,20 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Lille",
       "city": "Lille",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
+      "last_changed_at": null,
       "session_states": [
-        {"session_key": "2027-01-02T20:00-Europe-Paris", "status": "UNKNOWN"},
-        {"session_key": "2027-01-03T16:00-Europe-Paris", "status": "UNKNOWN"}
+        {"session_key":"2027-01-02T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
+        {"session_key":"2027-01-03T16:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}
       ],
       "history": []
     },
@@ -195,13 +234,18 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Lyon",
       "city": "Lyon",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
-      "session_states": [{"session_key": "2027-01-09T20:00-Europe-Paris", "status": "UNKNOWN"}],
+      "last_changed_at": null,
+      "session_states": [{"session_key":"2027-01-09T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],
       "history": []
     },
     {
@@ -209,13 +253,18 @@
       "title": "Le Prince de Sang-Mêlé en ciné-concert — Dijon",
       "city": "Dijon",
       "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
       "source_id": "ugoplay",
       "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
       "status": "ON_SALE",
       "status_origin": "IMPORTED_FROM_ICS",
       "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
       "last_verified_at": null,
-      "session_states": [{"session_key": "2027-01-10T17:00-Europe-Paris", "status": "UNKNOWN"}],
+      "last_changed_at": null,
+      "session_states": [{"session_key":"2027-01-10T17:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],
       "history": []
     }
   ]
