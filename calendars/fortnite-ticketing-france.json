@@ -1,55 +1,120 @@
 {
-  "version":"FORTNITE_TICKETING_INTELLIGENCE_FR_V1",
-  "updated_at":"2026-08-19T07:12:31Z",
-  "scope":"Fortnite events relevant to France/Europe",
-  "states":["NOT_ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
-  "transitions":["PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_TICKET_CATEGORY","SALE_CLOSED","CANCELLED"],
-  "scarcity_guard":"LOW/NEARLY_SOLD_OUT/SOLD_OUT exigent preuve directe ; une catégorie épuisée ne rend pas l'événement global complet.",
-  "entries":[
+  "version": "FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
+  "updated_at": "2026-08-19T15:18:00Z",
+  "scope": "Fortnite physical events relevant to France and Europe",
+  "physical_event_ledger": "calendars/fortnite-physical-events-france.json",
+  "venue_registry": "calendars/fortnite-venues-france.json",
+  "policy": {
+    "canonical_key": "event_uid + provider_id + session_key/category_key when granular tracking is useful",
+    "states": ["NOT_ANNOUNCED","ANNOUNCED","PREREGISTRATION","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
+    "material_transitions": ["SALE_ANNOUNCED","PREREG_OPENED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_SESSION_ADDED","SESSION_REMOVED","NEW_TICKET_CATEGORY","CATEGORY_STATUS_CHANGED","PRICE_STRUCTURE_CHANGED","SALE_CLOSED","EVENT_ENDED","CANCELLED"],
+    "scarcity_evidence": {
+      "EXPLICIT_TEXT": "Direct source explicitly says low availability, nearly sold out or sold out.",
+      "OFFICIAL_SESSION_DISABLED": "The exact session is explicitly unavailable/sold out on official ticketing.",
+      "CATEGORY_SOLD_OUT": "A precise category is sold out but the event/session may still have other inventory.",
+      "WAITLIST_OFFERED": "Official waiting list is offered.",
+      "SEATMAP_STRONG_SIGNAL": "Official seat-map signal; never enough alone for a strong global SOLD_OUT claim unless provider semantics are unambiguous.",
+      "UNKNOWN": "No scarcity proof; do not infer."
+    },
+    "confidence": {
+      "HIGH": "Direct organizer/venue/ticketing source and exact event/session/category state.",
+      "MEDIUM": "Official source but incomplete granularity or event-wide scope.",
+      "LOW": "Useful signal only; cannot trigger strong scarcity transition."
+    },
+    "global_vs_session": "One SOLD_OUT session never makes a multi-session event globally SOLD_OUT while another known session is AVAILABLE/ON_SALE.",
+    "category_rule": "VIP/premium/2-day package sold out never means the entire event is sold out. Keep category_states separate.",
+    "waiting_list_rule": "WAITLIST is not automatically SOLD_OUT. Preserve WAITLIST as its own state and notify on BACK_ON_SALE if direct inventory returns.",
+    "new_session_rule": "Same physical event/run + new public session keeps event_uid and physical_event_id; add session state and update calendar only when the new session changes attendance planning.",
+    "price_rule": "Track direct published min/max/category prices. A missing cheaper category is not automatically a general price rise.",
+    "check_strategy": {
+      "HOT": "Event <=14 days, France/Paris priority, WAITLIST/SOLD_OUT, imminent sale or newly announced access: check each useful hourly run.",
+      "WARM": "15–60 days: at most every 6h unless a recent material signal exists.",
+      "COLD": ">60 days: at most daily unless sale/venue/session announcement is expected.",
+      "LONG_RUN": "Long convention/activation: daily overall, intensify around final days, special sessions or ticket transitions."
+    },
+    "write_noise": "No commit for identical recheck, checked_at alone, category reorder or unchanged price/status.",
+    "notification_dedupe": "event_uid + transition_type + session_key + category_key + new_status",
+    "event_end": "Normal EVENT_ENDED is silent unless an anomaly or actionable extension/cancellation occurred."
+  },
+  "ics_mapping": {
+    "policy_header": "X-FORTNITE-TICKETING-POLICY:FORTNITE_TICKETING_INTELLIGENCE_FR_V2",
+    "ledger_header": "X-FORTNITE-TICKETING-LEDGER:fortnite-ticketing-france.json",
+    "physical_ledger_header": "X-FORTNITE-PHYSICAL-EVENT-LEDGER:fortnite-physical-events-france.json",
+    "status": "X-FORTNITE-TICKET-STATUS",
+    "provider_id": "X-FORTNITE-TICKET-PROVIDER-ID",
+    "checked": "X-FORTNITE-TICKET-CHECKED-AT",
+    "transition": "X-FORTNITE-TICKET-LAST-TRANSITION",
+    "confidence": "X-FORTNITE-TICKET-CONFIDENCE",
+    "scarcity_evidence": "X-FORTNITE-TICKET-SCARCITY-EVIDENCE",
+    "session": "X-FORTNITE-TICKET-SESSION",
+    "category": "X-FORTNITE-TICKET-CATEGORY"
+  },
+  "notification_policy": {
+    "always": ["SALE_OPENED","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","WAITLIST_OPENED","NEW_SESSION_ADDED","CANCELLED"],
+    "conditional": {
+      "LOW_AVAILABILITY": "Notify only for FEATURED/important event, France/Paris priority, near date or explicit strong evidence.",
+      "PRICE_STRUCTURE_CHANGED": "Notify only when materially actionable.",
+      "SALE_CLOSED": "Silent unless early/unexpected or access-impacting."
+    },
+    "silent": ["EVENT_ENDED","IDENTICAL_RECHECK","TIMESTAMP_REFRESH","CATEGORY_REORDER"]
+  },
+  "entries": [
     {
-      "event_uid":"fortnite-fncs-global-antwerp-20260926@openai",
-      "provider_id":"lotto_arena",
-      "source_id":"lotto_arena",
-      "status":"WAITLIST",
-      "previous_status":"ON_SALE",
-      "evidence_grade":"A",
-      "confidence":"HIGH",
-      "scarcity_evidence":"WAITLIST_OFFERED",
-      "package":"2_DAY_COMBO",
-      "single_day_available":false,
-      "waiting_list_available":true,
-      "ticket_url":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
-      "ticketmaster_url":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be",
-      "waiting_list_url":"https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be",
-      "age_restriction":"16+",
-      "last_verified_at":"2026-08-19T05:22:27Z",
-      "last_changed_at":"2026-08-19T05:22:27Z",
-      "category_states":[
-        {"category_key":"STANDARD_2_DAY","label":"Billet standard 2 jours","status":"WAITLIST","price_eur":null,"source":"Ticketmaster Belgium direct"},
-        {"category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","label":"Ultimate Live Experience Package 2 jours","status":"WAITLIST","price_eur":324.70,"source":"Lotto Arena listing + same Ticketmaster purchase flow currently on waiting list"}
+      "event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "physical_event_id": "fortnite-physical-fncs-global-antwerp-2026",
+      "provider_id": "lotto_arena",
+      "source_id": "lotto_arena",
+      "status": "WAITLIST",
+      "previous_status": "ON_SALE",
+      "status_origin": "DIRECT_VERIFIED",
+      "evidence_grade": "A",
+      "confidence": "HIGH",
+      "scarcity_evidence": "WAITLIST_OFFERED",
+      "check_tier": "WARM",
+      "package": "2_DAY_COMBO",
+      "single_day_available": false,
+      "waiting_list_available": true,
+      "ticket_url": "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
+      "ticketmaster_url": "https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be",
+      "waiting_list_url": "https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be",
+      "age_restriction": "16+",
+      "last_verified_at": "2026-08-19T05:22:27Z",
+      "last_changed_at": "2026-08-19T05:22:27Z",
+      "session_states": [
+        {"session_key":"2026-09-26-day1","status":"WAITLIST","confidence":"MEDIUM","scarcity_evidence":"WAITLIST_OFFERED","category_states":[]},
+        {"session_key":"2026-09-27-day2","status":"WAITLIST","confidence":"MEDIUM","scarcity_evidence":"WAITLIST_OFFERED","category_states":[]}
       ],
-      "history":[
+      "category_states": [
+        {"category_key":"STANDARD_2_DAY","label":"Billet standard 2 jours","status":"WAITLIST","price_eur":null,"scarcity_evidence":"WAITLIST_OFFERED","confidence":"HIGH","source":"Ticketmaster Belgium direct"},
+        {"category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","label":"Ultimate Live Experience Package 2 jours","status":"WAITLIST","price_eur":324.70,"scarcity_evidence":"WAITLIST_OFFERED","confidence":"HIGH","source":"Lotto Arena listing + same Ticketmaster purchase flow currently on waiting list"}
+      ],
+      "history": [
         {"at":"2026-08-19T05:03:00Z","type":"SALE_OPENED","to":"ON_SALE","source":"Lotto Arena event page"},
         {"at":"2026-08-19T05:15:29Z","type":"NEW_TICKET_CATEGORY","category_key":"ULTIMATE_LIVE_EXPERIENCE_2_DAY","to":"AVAILABLE","price_eur":324.70,"source":"https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1","confidence":"HIGH"},
-        {"at":"2026-08-19T05:22:27Z","type":"WAITLIST_OPENED","from":"ON_SALE","to":"WAITLIST","source":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be","confidence":"HIGH","note":"Ticketmaster affiche WAITING LIST ; ne pas interpréter comme SOLD_OUT. La page de liste d'attente précise que des billets peuvent redevenir disponibles."}
+        {"at":"2026-08-19T05:22:27Z","type":"WAITLIST_OPENED","from":"ON_SALE","to":"WAITLIST","source":"https://www.ticketmaster.be/event/451606713?brand=laa&language=en-be","confidence":"HIGH","note":"Ticketmaster displays WAITING LIST; keep distinct from SOLD_OUT because the official waiting-list flow says tickets may become available again."}
       ]
     },
     {
-      "event_uid":"fortnite-reload-elite-ewc-paris-20260819@openai",
-      "provider_id":"ewc_paris",
-      "source_id":"ewc_official",
-      "status":"PREREGISTRATION",
-      "evidence_grade":"A",
-      "confidence":"HIGH",
-      "scarcity_evidence":"UNKNOWN",
-      "ticket_scope":"EWC_PARIS_GENERAL",
-      "fortnite_specific_ticket_info":false,
-      "waiting_list_available":false,
-      "ticket_url":"https://www.signup.esportsworldcup.com/EWCPARIS26",
-      "last_verified_at":"2026-08-19T07:12:31Z",
-      "last_changed_at":"2026-08-19T07:12:31Z",
-      "history":[
-        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"Préinscription générale EWC Paris pour être averti lorsque les billets seront disponibles ; aucune billetterie Fortnite spécifique publiée."}
+      "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "physical_event_id": "fortnite-physical-ewc-paris-2026",
+      "provider_id": "ewc_paris",
+      "source_id": "ewc_official",
+      "status": "PREREGISTRATION",
+      "status_origin": "DIRECT_VERIFIED",
+      "evidence_grade": "A",
+      "confidence": "HIGH",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "HOT",
+      "ticket_scope": "EWC_PARIS_GENERAL",
+      "fortnite_specific_ticket_info": false,
+      "waiting_list_available": false,
+      "ticket_url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+      "last_verified_at": "2026-08-19T07:12:31Z",
+      "last_changed_at": "2026-08-19T07:12:31Z",
+      "session_states": [],
+      "category_states": [],
+      "history": [
+        {"at":"2026-08-19T05:22:27Z","type":"PREREG_OPENED","to":"PREREGISTRATION","source":"https://www.signup.esportsworldcup.com/EWCPARIS26","confidence":"HIGH","note":"General EWC Paris preregistration to be notified when tickets become available; no Fortnite-specific ticket product published."}
       ]
     }
   ]
