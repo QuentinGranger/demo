@@ -10,6 +10,39 @@ X-FORTNITE-WATCHLIST:fortnite-watchlist-france.json
 X-FORTNITE-TAXONOMY-REGISTRY:fortnite-taxonomy-france.json
 X-FORTNITE-TAXONOMY-ENGINE:fortnite-taxonomy-engine-france.json
 X-FORTNITE-TAXONOMY-INDEX:fortnite-taxonomy-index-france.json
+X-FORTNITE-DEADLINE-LEDGER:fortnite-end-reminders-france.json
 X-FORTNITE-CHANGE-POLICY:UID_STABLE_AUDIT_V1
 X-FORTNITE-FRESHNESS-POLICY:NEW5D_UPDATE3D_V1
+BEGIN:VEVENT
+UID:fortnite-c7s3-runners-battle-pass-end-20260820@openai
+DTSTAMP:20260819T051529Z
+LAST-MODIFIED:20260819T051529Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:COMPLETE
+X-FORTNITE-EVENT-TYPE:SEASON_END
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-CHAPTER:CHAPTER_7
+X-FORTNITE-SEASON:C7S3
+X-FORTNITE-THEME:BATTLE_PASS
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_battle_pass
+X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-TIME-PRECISION:DATE_ONLY
+X-FORTNITE-FIRST-ADDED-AT:20260819T051529Z
+X-FORTNITE-NEW-UNTIL:20260824T051529Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 3 : Runners
+DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affichée pour gagner les récompenses du Passe de combat Runners.\nEpic indique que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026 en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas convertir cette date en heure française ni déduire l'heure de maintenance ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale annoncée pour la fin de l'été reste en watchlist tant que sa date/heure de lancement n'est pas officiellement publiée.\nSource : https://www.fortnite.com/battle-pass?lang=en-US
+URL:https://www.fortnite.com/battle-pass?lang=en-US
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de combat
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date officielle ET — termine tes récompenses
+END:VALARM
+END:VEVENT
 END:VCALENDAR
