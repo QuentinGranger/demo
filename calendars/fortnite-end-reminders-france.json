@@ -1,67 +1,257 @@
 {
-  "version":"FORTNITE_DEADLINE_INTELLIGENCE_FR_V1",
-  "updated_at":"2026-08-19T09:41:32Z",
-  "scope":"Fortnite — échéances de fin, billetterie, compétitif et événements limités",
-  "principles":{
-    "deadline_not_end_only":"La vraie échéance peut être fin de vente, dernière session, inscription, check-in, qualification ou dernière date publique.",
-    "no_scarcity_inference":"Fin prochaine ne signifie jamais dernières places.",
-    "extension_recalculates":"Toute prolongation ou nouvelle session finale recalcule les notices.",
-    "quiet_hours":"Notices non urgentes entre 21:00 et 09:00 Europe/Paris sont différées vers 09:00.",
-    "competitive_bridge":"Les timestamps canoniques viennent du ledger compétitif V1 ; le moteur compétitif V2 détermine la sémantique qualification/actionnabilité. Une petite cup peut rester absente du .ics tout en ayant une deadline actionnable."
+  "version": "FORTNITE_DEADLINE_INTELLIGENCE_FR_V2",
+  "updated_at": "2026-08-19T09:50:00Z",
+  "scope": "Fortnite — échéances de fin, billetterie, compétitif, qualification et événements limités",
+  "principles": {
+    "deadline_not_end_only": "Une échéance peut être ouverture/fermeture d'inscription, check-in, dernière session qualificative, vente, dernière session publique ou fin de passe.",
+    "milestone_not_deadline": "Une ouverture d'inscription, un résultat de qualification ou le début d'une finale sont des milestones actionnables séparés des deadlines dures.",
+    "no_scarcity_inference": "Fin prochaine ne signifie jamais dernières places.",
+    "extension_recalculates": "Toute prolongation, nouvelle session finale, reprogrammation ou changement de graphe de qualification recalcule les notices concernées.",
+    "quiet_hours": "Notices non urgentes entre 21:00 et 09:00 Europe/Paris sont différées vers 09:00 ; une échéance compétitive proche peut rester urgente si le report rendrait l'information inutile.",
+    "competitive_bridge": "Les timestamps canoniques viennent du ledger compétitif ; le moteur compétitif détermine la sémantique de qualification/actionnabilité ; les résultats participant sont séparés dans fortnite-competitive-participants-france.json.",
+    "participant_separation": "QUALIFICATION_RESOLVED au niveau d'une phase ne signifie jamais qu'un joueur/duo précis est QUALIFIED ou ELIMINATED sans preuve participant spécifique."
   },
-  "linked_ledgers":{
-    "competitive_intelligence":"fortnite-competitive-ledger-france.json",
-    "competitive_engine":"fortnite-competitive-engine-france.json",
-    "competitive_index":"fortnite-competitive-index-france.json"
+  "linked_ledgers": {
+    "competitive_intelligence": "fortnite-competitive-ledger-france.json",
+    "competitive_engine": "fortnite-competitive-engine-france.json",
+    "competitive_index": "fortnite-competitive-index-france.json",
+    "competitive_participants": "fortnite-competitive-participants-france.json"
   },
-  "deadline_types":["LAST_TICKET_SALE_AT","LAST_PUBLIC_SESSION_AT","LAST_PUBLIC_DATE","LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT","BATTLE_PASS_END_DATE"],
-  "competitive_deadline_policy":{
-    "canonical_data_source":"FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "semantic_engine":"FORTNITE_COMPETITIVE_ENGINE_EU_V2",
-    "exact_only":true,
-    "allowed_types":["LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT"],
-    "hidden_session_allowed":"Une compétition/session LEDGER_ONLY peut générer une deadline si l'action est concrète et l'heure officiellement publiée.",
-    "last_qualifier_rule":"LAST_QUALIFIER_AT correspond à la dernière session officielle qui alimente réellement une target via un edge QUALIFIES_TO/FEEDS_INTO suffisamment confirmé ; ce n'est pas la fin générique de la compétition.",
-    "graph_confidence_required":["EXPLICIT","STRONG_OFFICIAL_CROSS_REFERENCE"],
-    "session_start_rule":"SESSION_START_AT peut servir de source de rappel compétitif mais n'est pas un deadline_type de fin.",
-    "dedupe_key":"competition_id + phase_id + session_id-or-null + deadline_type + deadline_at",
-    "no_guess":"Ne jamais déduire fermeture d'inscription, check-in ou qualification depuis l'heure de début/fin générique sans règle officielle."
+  "deadline_types": [
+    "LAST_TICKET_SALE_AT",
+    "LAST_PUBLIC_SESSION_AT",
+    "LAST_PUBLIC_DATE",
+    "LAST_REGISTRATION_AT",
+    "LAST_CHECK_IN_AT",
+    "LAST_QUALIFIER_AT",
+    "FINAL_REGISTRATION_AT",
+    "FINAL_CHECK_IN_AT",
+    "LAST_FINAL_SESSION_AT",
+    "BATTLE_PASS_END_DATE"
+  ],
+  "milestone_types": [
+    "REGISTRATION_OPENS_AT",
+    "QUALIFIER_START_AT",
+    "QUALIFICATION_RESOLVED_AT",
+    "FINAL_SCHEDULED_AT",
+    "FINAL_START_AT",
+    "FINAL_RESULT_AT"
+  ],
+  "competitive_lifecycle_states": [
+    "DISCOVERED",
+    "REGISTRATION_ANNOUNCED",
+    "REGISTRATION_OPEN",
+    "REGISTRATION_CLOSED",
+    "QUALIFIER_SCHEDULED",
+    "QUALIFIER_LIVE",
+    "QUALIFIER_COMPLETE",
+    "QUALIFICATION_PENDING",
+    "QUALIFICATION_RESOLVED",
+    "FINAL_SCHEDULED",
+    "FINAL_LIVE",
+    "FINAL_COMPLETE",
+    "POSTPONED",
+    "CANCELLED"
+  ],
+  "competitive_transition_rules": {
+    "DISCOVERED": ["REGISTRATION_ANNOUNCED", "REGISTRATION_OPEN", "QUALIFIER_SCHEDULED", "FINAL_SCHEDULED", "POSTPONED", "CANCELLED"],
+    "REGISTRATION_ANNOUNCED": ["REGISTRATION_OPEN", "REGISTRATION_CLOSED", "POSTPONED", "CANCELLED"],
+    "REGISTRATION_OPEN": ["REGISTRATION_CLOSED", "QUALIFIER_SCHEDULED", "POSTPONED", "CANCELLED"],
+    "REGISTRATION_CLOSED": ["QUALIFIER_SCHEDULED", "QUALIFIER_LIVE", "POSTPONED", "CANCELLED"],
+    "QUALIFIER_SCHEDULED": ["QUALIFIER_LIVE", "POSTPONED", "CANCELLED"],
+    "QUALIFIER_LIVE": ["QUALIFIER_COMPLETE", "POSTPONED", "CANCELLED"],
+    "QUALIFIER_COMPLETE": ["QUALIFICATION_PENDING", "QUALIFICATION_RESOLVED", "FINAL_SCHEDULED"],
+    "QUALIFICATION_PENDING": ["QUALIFICATION_RESOLVED", "POSTPONED", "CANCELLED"],
+    "QUALIFICATION_RESOLVED": ["FINAL_SCHEDULED", "FINAL_LIVE", "FINAL_COMPLETE"],
+    "FINAL_SCHEDULED": ["FINAL_LIVE", "POSTPONED", "CANCELLED"],
+    "FINAL_LIVE": ["FINAL_COMPLETE", "POSTPONED", "CANCELLED"],
+    "FINAL_COMPLETE": [],
+    "POSTPONED": ["REGISTRATION_ANNOUNCED", "REGISTRATION_OPEN", "QUALIFIER_SCHEDULED", "FINAL_SCHEDULED", "CANCELLED"],
+    "CANCELLED": []
   },
-  "entries":[
+  "competitive_lifecycle_policy": {
+    "skip_allowed": "Un tournoi sur invitation ou directement placé en finale peut sauter registration/qualifier uniquement si les données officielles l'établissent ; ne pas créer d'étapes fictives.",
+    "registration_open": "REGISTRATION_OPEN seulement avec opens_at/état officiel ou preuve explicite que les inscriptions sont ouvertes.",
+    "registration_closed": "REGISTRATION_CLOSED seulement avec closes_at passé et règle officielle fiable, ou état officiel fermé ; ne pas déduire depuis le début du tournoi.",
+    "qualifier_complete": "QUALIFIER_COMPLETE exige toutes les sessions qualificatives pertinentes terminées/confirmées ; une session manquante ou déplacée garde l'état non résolu.",
+    "qualification_pending": "Utiliser lorsque le qualifier est terminé mais que les résultats/advancements officiels nécessaires ne permettent pas encore de résoudre la qualification.",
+    "qualification_resolved": "La structure globale de qualification est résolue quand les résultats/standings officiels et le graphe permettent de déterminer les avancées de la phase ; cela reste distinct des outcomes individuels.",
+    "final_scheduled": "FINAL_SCHEDULED exige une cible finale connue et une date/fenêtre officielle exploitable.",
+    "postponement": "POSTPONED garde competition_id/phase_id/session_id et invalide les notices futures obsolètes jusqu'à nouvelle date."
+  },
+  "competitive_deadline_policy": {
+    "canonical_data_source": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
+    "semantic_engine": "FORTNITE_COMPETITIVE_ENGINE_EU_V2+",
+    "participant_source": "FORTNITE_COMPETITIVE_PARTICIPANT_OUTCOMES_EU_V1",
+    "exact_only_for_clock_deadlines": true,
+    "allowed_deadline_types": ["LAST_REGISTRATION_AT", "LAST_CHECK_IN_AT", "LAST_QUALIFIER_AT", "FINAL_REGISTRATION_AT", "FINAL_CHECK_IN_AT", "LAST_FINAL_SESSION_AT"],
+    "allowed_milestones": ["REGISTRATION_OPENS_AT", "QUALIFIER_START_AT", "QUALIFICATION_RESOLVED_AT", "FINAL_SCHEDULED_AT", "FINAL_START_AT", "FINAL_RESULT_AT"],
+    "hidden_session_allowed": "Une compétition/session LEDGER_ONLY peut générer une deadline ou milestone si l'action est concrète et la donnée officiellement publiée.",
+    "last_qualifier_rule": "LAST_QUALIFIER_AT est la dernière session officielle qui alimente réellement une target via QUALIFIES_TO/FEEDS_INTO suffisamment confirmé ; ce n'est pas la fin générique de la compétition.",
+    "qualification_resolution_rule": "QUALIFICATION_RESOLVED_AT est un événement d'état déclenché par résultat officiel ; ne pas inventer une heure de publication de résultats. Il peut être timestampé à observed_at quand la résolution est constatée.",
+    "final_rule": "Une qualification officielle peut activer les rappels participant de la finale ; elle ne recrée jamais le VEVENT global de finale et ne modifie pas son UID.",
+    "graph_confidence_required": ["EXPLICIT", "STRONG_OFFICIAL_CROSS_REFERENCE"],
+    "dedupe_key": "competition_id + phase_id + session_id-or-null + participant_id-or-global + type + at + lifecycle_version",
+    "no_guess": "Ne jamais déduire fermeture d'inscription, check-in, qualification ou finale depuis une simple proximité horaire, l'absence d'un joueur ou un écran incomplet."
+  },
+  "participant_outcome_policy": {
+    "states": ["UNKNOWN", "PENDING", "QUALIFIED", "ELIMINATED", "WITHDRAWN", "DISQUALIFIED"],
+    "qualified": "Exige résultat/liste officielle explicite ou standings finaux officiels + règle de qualification vérifiée donnant une conclusion non ambiguë.",
+    "eliminated": "Exige résultat officiel explicite ou standings finaux officiels + règle vérifiée plaçant sans ambiguïté le participant hors des places qualificatives.",
+    "absence_never_elimination": "Absence d'une page, d'une finale, d'un article ou d'un crawl n'est jamais une preuve de non-qualification.",
+    "on_qualified": "Conserver l'outcome, résoudre la target du graphe et activer seulement les reminders futurs participant-spécifiques de la finale.",
+    "on_eliminated": "Invalider seulement les reminders participant-spécifiques PLAY/REGISTER pour les étapes downstream ; conserver les reminders globaux WATCH/ATTEND.",
+    "correction": "Une correction officielle peut remplacer QUALIFIED <-> ELIMINATED avec historique et notification de correction ; jamais écraser silencieusement."
+  },
+  "competitive_notice_profiles": {
+    "REGISTRATION_OPENS_AT": {
+      "default": ["AT_OPEN"],
+      "featured_exact": ["H-1", "AT_OPEN"],
+      "rule": "Ne pas notifier une simple ouverture si aucune action d'inscription n'est réellement requise."
+    },
+    "LAST_REGISTRATION_AT": {
+      "more_than_24h": ["D-1", "H-2"],
+      "within_24h": ["H-2"],
+      "rule": "Éviter deux notices séparées à moins de 3h ; conserver la plus utile."
+    },
+    "LAST_CHECK_IN_AT": {
+      "default": ["H-1"],
+      "rule": "Check-in distinct de registration ; aucune alerte si check-in non officiel/UNKNOWN."
+    },
+    "LAST_QUALIFIER_AT": {
+      "default": ["H-1"],
+      "rule": "Seulement si cette session nourrit réellement une target importante ou suivie."
+    },
+    "QUALIFICATION_RESOLVED_AT": {
+      "default": ["ON_STATE_CHANGE"],
+      "rule": "Pas de rappel pré-programmé sans heure officielle de résultat ; notifier au changement de state utile."
+    },
+    "FINAL_START_AT": {
+      "FEATURED": ["D-1", "H-1"],
+      "CALENDAR": ["H-1"],
+      "LEDGER_ONLY": [],
+      "rule": "Pour participant QUALIFIED, activer uniquement les triggers encore futurs ; ne jamais backfiller un D-1 déjà passé."
+    }
+  },
+  "invalidation_rules": {
+    "registration_extended": "Increment lifecycle_version/deadline_version, invalider les futures notices basées sur l'ancienne fermeture, recalculer.",
+    "session_rescheduled": "Invalider QUALIFIER_START/LAST_QUALIFIER/FINAL_START notices liées à l'ancien timing et recalculer avec le même session_id.",
+    "qualification_target_changed": "Invalider les reminders downstream participant/global devenus faux et recalculer depuis le nouveau graphe officiel.",
+    "participant_eliminated": "Invalider participant-specific downstream PLAY/REGISTER/CHECK_IN notices seulement.",
+    "cancelled": "Invalider toutes les notices futures de la compétition/phase concernée ; conserver historique.",
+    "completed": "Toute notice future restante devient EXPIRED_SILENT sauf correction officielle."
+  },
+  "competitive_history_event_types": [
+    "LIFECYCLE_CREATED",
+    "REGISTRATION_ANNOUNCED",
+    "REGISTRATION_OPENED",
+    "REGISTRATION_CLOSED",
+    "QUALIFIER_SCHEDULED",
+    "QUALIFIER_STARTED",
+    "QUALIFIER_COMPLETED",
+    "QUALIFICATION_PENDING",
+    "QUALIFICATION_RESOLVED",
+    "FINAL_SCHEDULED",
+    "FINAL_STARTED",
+    "FINAL_COMPLETED",
+    "DEADLINE_ADDED",
+    "DEADLINE_CHANGED",
+    "DEADLINE_INVALIDATED",
+    "MILESTONE_ADDED",
+    "PARTICIPANT_OUTCOME_LINKED",
+    "POSTPONED",
+    "CANCELLED",
+    "SOURCE_CORRECTION"
+  ],
+  "competitive_lifecycles": [
     {
-      "event_uid":"fortnite-c7s3-runners-battle-pass-end-20260820@openai",
-      "profile":"SINGLE_DAY_DEADLINE",
-      "deadline_version":1,
-      "last_public_date":"2026-08-20",
-      "deadline_type":"BATTLE_PASS_END_DATE",
-      "deadline_at":null,
-      "deadline_source_timezone":"America/New_York_DATE_ONLY",
-      "deadline_certainty":"OFFICIAL_DATE_NO_TIME",
-      "planned_notices":[
-        {"type":"LAST_DAY_SOURCE_DATE","trigger_at":"2026-08-20T09:00:00+02:00","label":"Fortnite Runners — le Passe de combat se termine aujourd'hui selon la date officielle ET ; heure exacte non publiée","state":"PLANNED"}
+      "competition_id": "fncs-global-2026-antwerp",
+      "lifecycle_state": "FINAL_SCHEDULED",
+      "lifecycle_version": 1,
+      "registration_state": "NOT_PUBLISHED",
+      "qualifier_state": "NOT_APPLICABLE",
+      "qualification_state": "NOT_APPLICABLE",
+      "final_state": "SCHEDULED",
+      "final_phase_id": "fncs-global-2026-antwerp:championship",
+      "deadline_refs": [],
+      "milestone_refs": [],
+      "participant_tracking_enabled": false,
+      "source_id": "fortnite_competitive",
+      "history": [
+        {"at": "2026-08-19T09:50:00Z", "type": "LIFECYCLE_CREATED", "note": "Global Championship already exists as a directly scheduled championship; no registration/qualifier steps are invented."}
       ]
     },
     {
-      "event_uid":"fortnite-reload-elite-ewc-paris-20260819@openai",
-      "profile":"SHORT_RUN",
-      "deadline_version":1,
-      "last_public_date":"2026-08-22",
-      "deadline_type":"LAST_PUBLIC_DATE",
-      "deadline_at":null,
-      "deadline_certainty":"OFFICIAL_DATE_RANGE_NO_SESSION_TIME",
-      "planned_notices":[
-        {"type":"LAST_DAY","trigger_at":"2026-08-22T09:00:00+02:00","label":"Reload Elite Series Championship — dernière journée officielle à Paris aujourd'hui ; horaire final fiable non publié","state":"PLANNED"}
+      "competition_id": "reload-elite-ewc-paris-2026",
+      "lifecycle_state": "FINAL_LIVE",
+      "lifecycle_version": 1,
+      "registration_state": "NOT_PUBLISHED",
+      "qualifier_state": "NOT_APPLICABLE",
+      "qualification_state": "NOT_APPLICABLE",
+      "final_state": "LIVE",
+      "final_phase_id": "reload-elite-ewc-paris-2026:championship",
+      "deadline_refs": [],
+      "milestone_refs": [],
+      "participant_tracking_enabled": false,
+      "source_id": "fortnite_competitive",
+      "history": [
+        {"at": "2026-08-19T09:50:00Z", "type": "LIFECYCLE_CREATED", "note": "Championship run is live in the canonical competitive ledger; exact match-time milestones remain unavailable because only a date range is trusted."}
       ]
     },
     {
-      "event_uid":"fortnite-fncs-global-antwerp-20260926@openai",
-      "profile":"SHORT_RUN",
-      "deadline_version":1,
-      "last_public_date":"2026-09-27",
-      "deadline_type":"LAST_PUBLIC_DATE",
-      "deadline_certainty":"OFFICIAL_DATE",
-      "planned_notices":[
-        {"type":"LAST_DAY","trigger_at":"2026-09-27T09:00:00+02:00","label":"FNCS Global Championship — deuxième et dernière journée à Anvers","state":"PLANNED"}
+      "competition_id": "fncs-global-last-chance-eu-2026",
+      "lifecycle_state": "QUALIFIER_COMPLETE",
+      "lifecycle_version": 1,
+      "registration_state": "NOT_PUBLISHED",
+      "qualifier_state": "COMPLETE",
+      "qualification_state": "PARTIAL_STRUCTURE_ONLY",
+      "final_state": "UNRESOLVED_TARGET",
+      "final_phase_id": null,
+      "deadline_refs": [],
+      "milestone_refs": [],
+      "participant_tracking_enabled": false,
+      "source_id": "fortnite_competitive",
+      "history": [
+        {"at": "2026-08-19T09:50:00Z", "type": "LIFECYCLE_CREATED", "note": "Historical LCQ sessions are complete; target/participant advancement is not upgraded beyond the evidence already stored in the canonical ledger."}
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "event_uid": "fortnite-c7s3-runners-battle-pass-end-20260820@openai",
+      "profile": "SINGLE_DAY_DEADLINE",
+      "deadline_version": 1,
+      "last_public_date": "2026-08-20",
+      "deadline_type": "BATTLE_PASS_END_DATE",
+      "deadline_at": null,
+      "deadline_source_timezone": "America/New_York_DATE_ONLY",
+      "deadline_certainty": "OFFICIAL_DATE_NO_TIME",
+      "planned_notices": [
+        {"type": "LAST_DAY_SOURCE_DATE", "trigger_at": "2026-08-20T09:00:00+02:00", "label": "Fortnite Runners — le Passe de combat se termine aujourd'hui selon la date officielle ET ; heure exacte non publiée", "state": "PLANNED"}
+      ]
+    },
+    {
+      "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "profile": "SHORT_RUN",
+      "deadline_version": 1,
+      "last_public_date": "2026-08-22",
+      "deadline_type": "LAST_PUBLIC_DATE",
+      "deadline_at": null,
+      "deadline_certainty": "OFFICIAL_DATE_RANGE_NO_SESSION_TIME",
+      "planned_notices": [
+        {"type": "LAST_DAY", "trigger_at": "2026-08-22T09:00:00+02:00", "label": "Reload Elite Series Championship — dernière journée officielle à Paris aujourd'hui ; horaire final fiable non publié", "state": "PLANNED"}
+      ]
+    },
+    {
+      "event_uid": "fortnite-fncs-global-antwerp-20260926@openai",
+      "profile": "SHORT_RUN",
+      "deadline_version": 1,
+      "last_public_date": "2026-09-27",
+      "deadline_type": "LAST_PUBLIC_DATE",
+      "deadline_at": null,
+      "deadline_certainty": "OFFICIAL_DATE",
+      "planned_notices": [
+        {"type": "LAST_DAY", "trigger_at": "2026-09-27T09:00:00+02:00", "label": "FNCS Global Championship — deuxième et dernière journée à Anvers", "state": "PLANNED"}
       ]
     }
   ]
