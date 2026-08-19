@@ -37,14 +37,25 @@ X-FORTNITE-FIRST-ADDED-AT:20260819T051529Z
 X-FORTNITE-NEW-UNTIL:20260824T051529Z
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260821
-SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 3 : Runners
-DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affichée pour gagner les récompenses du Passe de combat Runners.\nEpic indique que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026 en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas convertir cette date en heure française ni déduire l'heure de maintenance ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale annoncée pour la fin de l'été reste en watchlist tant que sa date/heure de lancement n'est pas officiellement publiée.\nSource : https://www.fortnite.com/battle-pass?lang=en-US
+SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 3 : R
+ unners
+DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affich
+ ée pour gagner les récompenses du Passe de combat Runners.\nEpic indique
+  que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026
+  en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas co
+ nvertir cette date en heure française ni déduire l'heure de maintenance 
+ ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale a
+ nnoncée pour la fin de l'été reste en watchlist tant que sa date/heure 
+ de lancement n'est pas officiellement publiée.\nSource : https://www.fort
+ nite.com/battle-pass?lang=en-US
 URL:https://www.fortnite.com/battle-pass?lang=en-US
-CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de combat
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de comb
+ at
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date officielle ET — termine tes récompenses
+DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date 
+ officielle ET — termine tes récompenses
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -67,8 +78,10 @@ X-FORTNITE-TICKET-PROVIDER-ID:lotto_arena
 X-FORTNITE-TICKET-STATUS:WAITLIST
 X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
 X-FORTNITE-TICKET-WAITLIST:YES
-X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=WAITLIST:Billet standard 2 jours
-X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=WAITLIST;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=WAITLIST:Billet standa
+ rd 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=WAITLI
+ ST;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
 X-FORTNITE-AGE-RESTRICTION:16+
 X-FORTNITE-VENUE-TIME-1:20260926T140000
 X-FORTNITE-VENUE-TIME-2:20260927T183000
@@ -82,23 +95,44 @@ DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260928
 SUMMARY:⭐ ✅ 🆕 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
-DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parties sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LIST pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la liste d'attente officielle précise que des billets peuvent redevenir disponibles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Experience Package : prix affiché 324,70 € ; son bouton d'achat renvoie au même flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketmaster indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche 14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées comme horaires salle ; la même page indique encore « Timing to follow », donc elles ne sont pas présentées comme horaires officiels des parties FNCS.\n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nRappels : J-30, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1\nListe d'attente : https://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be
+DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en 
+ présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parti
+ es sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competit
+ ive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LIST
+  pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la lis
+ te d'attente officielle précise que des billets peuvent redevenir disponi
+ bles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Exper
+ ience Package : prix affiché 324,70 € ; son bouton d'achat renvoie au m
+ ême flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketmaster
+  indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche 14h
+ 00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées comme 
+ horaires salle ; la même page indique encore « Timing to follow », donc
+  elles ne sont pas présentées comme horaires officiels des parties FNCS.
+ \n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nRappels : J-30,
+  J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-
+ 2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/f
+ ortnite-global-championship-2026-c1ed5ce1\nListe d'attente : https://www.t
+ mnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
-CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championship,Europe
+CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
+ p,Europe
 BEGIN:VALARM
 TRIGGER:-P30D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billets, transport et hôtel pour Anvers
+DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billet
+ s, transport et hôtel pour Anvers
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaires, billet et trajet
+DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaire
+ s, billet et trajet
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et trajet vers Anvers
+DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et tra
+ jet vers Anvers
 END:VALARM
 END:VEVENT
 END:VCALENDAR
