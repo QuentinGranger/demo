@@ -1,6 +1,6 @@
 {
   "version":"FORTNITE_TICKETING_PROVIDER_REGISTRY_FR_V1",
-  "updated_at":"2026-08-19T05:03:00Z",
+  "updated_at":"2026-08-19T05:15:29Z",
   "providers":[
     {
       "provider_id":"lotto_arena",
@@ -8,7 +8,7 @@
       "type":"VENUE_DIRECT",
       "website":"https://www.lotto-arena.be/",
       "territory":"ANTWERP_BE",
-      "can_confirm":["VENUE","ADDRESS","TICKET_STATUS","TICKET_PACKAGE","VENUE_TIME","WAITING_LIST"],
+      "can_confirm":["VENUE","ADDRESS","TICKET_STATUS","TICKET_PACKAGE","TICKET_CATEGORY","TICKET_PRICE","VENUE_TIME","WAITING_LIST"],
       "cannot_confirm":["FNCS_FORMAT","GLOBAL_COMPETITIVE_RULES"],
       "status":"ACTIVE"
     },
