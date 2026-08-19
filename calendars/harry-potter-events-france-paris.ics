@@ -17,11 +17,12 @@ X-HARRYPOTTER-TERRITORY-POLICY:FR_EXACT_VERSION_V1
 X-HARRYPOTTER-RELATION-POLICY:ACTION_TO_RELEASE_V1
 X-HARRYPOTTER-COLLECTOR-POLICY:INTEREST_LIMITED_V1
 X-HARRYPOTTER-SESSION-POLICY:ONE_RUN_ONE_SEASON_V1
+X-HARRYPOTTER-SOURCE-REGISTRY:harry-potter-sources-france.json
 BEGIN:VEVENT
 UID:hp-grand-rex-philosophers-stone-25th-20260830@openai
-DTSTAMP:20260819T035320Z
-LAST-MODIFIED:20260819T035320Z
-SEQUENCE:0
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
@@ -30,6 +31,7 @@ X-HARRYPOTTER-ACTION:ATTEND
 X-HARRYPOTTER-EVENT-TYPE:ANNIVERSARY_SCREENING
 X-HARRYPOTTER-FORMAT:CINEMA_SPECIAL
 X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-END-TIME-STATUS:ESTIMATED
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T035320Z
 X-HARRYPOTTER-NEW-UNTIL:20260824T035320Z
 X-HARRYPOTTER-FRESHNESS:NEW
@@ -46,7 +48,7 @@ X-HARRYPOTTER-TICKET-CHECKED-AT:20260819T035320Z
 X-HARRYPOTTER-ACCESS-MODE:TICKET
 X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:10.00
 X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:10.00
-DESCRIPTION:Priorité : ⭐ Important — séance anniversaire unique et très pertinente à Paris.\nFiabilité : ✅ Confirmé directement par Le Grand Rex.\nType : 🎬 projection spéciale cinéma — 25e anniversaire du premier film.\nSéance : dimanche 30 août 2026 à 17h00, Grande Salle / Grand Large, VOST-FR, placement libre.\n✨ Bonus : 12 minutes de contenu exclusif annoncées à l'issue du film.\nDurée calendrier estimée à partir du film (2h32) + bonus annoncé (12 min) ; vérifier l'heure de fin sur place.\n📍 Adresse : Le Grand Rex — 1 boulevard Poissonnière, 75002 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris\n🎟️ Billet standard : tarif unique 10 € ; le format VIP de la même séance est indiqué complet par Le Grand Rex.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.legrandrex.com/cinema
+DESCRIPTION:Priorité : ⭐ Important — séance anniversaire unique et très pertinente à Paris.\nFiabilité : ✅ Confirmé directement par Le Grand Rex.\nType : 🎬 projection spéciale cinéma — 25e anniversaire du premier film.\nSéance : dimanche 30 août 2026 à 17h00, Grande Salle / Grand Large, VOST-FR, placement libre.\n✨ Bonus : 12 minutes de contenu exclusif annoncées à l'issue du film.\nHeure de fin 19h44 : ESTIMÉE à partir de la durée du film + bonus ; elle n'est pas présentée comme une heure officielle publiée.\n📍 Adresse : Le Grand Rex — 1 boulevard Poissonnière, 75002 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris\n🎟️ Billet standard : tarif unique 10 € ; le format VIP de la même séance est indiqué complet par Le Grand Rex.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.legrandrex.com/cinema
 URL:https://www.legrandrex.com/cinema
 CATEGORIES:Harry Potter,Événement,Paris,Cinéma,25e anniversaire,Nouveau,Priorité Important
 BEGIN:VALARM
@@ -58,6 +60,212 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎬 Projection Harry Potter 25 ans demain à 17h — prépare billet et trajet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-back-to-hogwarts-showcase-20260901@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:MEDIA_IMPORTANT
+X-HARRYPOTTER-ACTION:WATCH
+X-HARRYPOTTER-EVENT-TYPE:MEDIA_PREMIERE
+X-HARRYPOTTER-FORMAT:ONLINE_SHOWCASE
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:⭐ ✅ 🆕 📡 Back to Hogwarts Showcase 2026
+LOCATION:En ligne — HarryPotter.com / YouTube / TikTok
+DESCRIPTION:Priorité : ⭐ Important — rendez-vous officiel Back to Hogwarts avec annonces et célébration de la franchise.\nFiabilité : ✅ Confirmé par HarryPotter.com.\nDate : 1er septembre 2026. Aucune heure exacte suffisamment fiable n'est stockée tant qu'elle n'est pas publiée officiellement.\nDiffusion annoncée sur les canaux officiels Harry Potter, notamment YouTube et TikTok.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 ; H-1 uniquement si une heure officielle apparaît plus tard.\nSource : https://www.harrypotter.com/news/how-to-celebrate-back-to-hogwarts-2026
+URL:https://www.harrypotter.com/news/how-to-celebrate-back-to-hogwarts-2026
+CATEGORIES:Harry Potter,Back to Hogwarts,En ligne,Showcase,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:📡 Back to Hogwarts Showcase demain — vérifie l'heure officielle et la diffusion
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-lego-store-hogwarts-express-paris-20260906@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-HARRYPOTTER-PRIORITY:CRITICAL
+X-HARRYPOTTER-REMINDER-PROFILE:PARIS_LIMITED
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:RETAIL_LAUNCH
+X-HARRYPOTTER-FORMAT:LEGO_STORE_ACTIVITY
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:LEGO-BTH-HOGWARTS-EXPRESS-20260906
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:YES
+X-HARRYPOTTER-SESSION-TIME-1:20260906T160000-180000
+X-HARRYPOTTER-SESSION-TIME-2:20260907T110000-130000
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260908
+SUMMARY:🔥 ✅ 🆕 🧱 LEGO Store — Construis le Poudlard Express — Paris So Ouest
+LOCATION;ALTREP="https://maps.apple.com/?q=LEGO%20Store%20So%20Ouest%2C%2021%20rue%20d%27Alsace%2C%2092300%20Levallois-Perret":LEGO Store So Ouest\, Centre Commercial So Ouest\, 21 rue d'Alsace\, 92300 Levallois-Perret\, France
+X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=LEGO%20Store%20So%20Ouest%2C%2021%20rue%20d%27Alsace%2C%2092300%20Levallois-Perret
+X-HARRYPOTTER-TICKET-STATUS:FREE_LIMITED_FIRST_COME
+X-HARRYPOTTER-ACCESS-MODE:FREE
+DESCRIPTION:Priorité : 🔥 Critique — animation LEGO Harry Potter gratuite et limitée en Île-de-France, premier arrivé premier servi.\nFiabilité : ✅ Confirmé par LEGO France.\nActivité : construire un Poudlard Express et repartir avec la construction.\nSessions : dimanche 6 septembre 16h–18h ; lundi 7 septembre 11h–13h.\n⚠️ Quantités limitées chaque jour ; premier arrivé, premier servi ; conditions magasin applicables.\n📍 Adresse : LEGO Store So Ouest — Centre Commercial So Ouest, 21 rue d'Alsace, 92300 Levallois-Perret.\n🗺️ Plans : https://maps.apple.com/?q=LEGO%20Store%20So%20Ouest%2C%2021%20rue%20d%27Alsace%2C%2092300%20Levallois-Perret\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 ; pas de H-1 car la fiche regroupe deux sessions.\nSource : https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+URL:https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+CATEGORIES:Harry Potter,LEGO,Événement,Paris,Île-de-France,Limité,Nouveau,Priorité Critique
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🧱 LEGO Harry Potter So Ouest dans 7 jours — quantités limitées, vérifie les horaires
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Animation LEGO Harry Potter demain à So Ouest — premier arrivé, premier servi
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-lego-store-hogwarts-express-lille-20260906@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:RETAIL_LAUNCH
+X-HARRYPOTTER-FORMAT:LEGO_STORE_ACTIVITY
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:LEGO-BTH-HOGWARTS-EXPRESS-20260906
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:YES
+X-HARRYPOTTER-SESSION-TIME-1:20260906T160000-180000
+X-HARRYPOTTER-SESSION-TIME-2:20260907T110000-130000
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260908
+SUMMARY:⭐ ✅ 🆕 🧱 LEGO Store — Construis le Poudlard Express — Lille
+LOCATION;ALTREP="https://maps.apple.com/?q=LEGO%20Store%20Euralille%2C%20100%20Avenue%20Willy%20Brandt%2C%2059800%20Lille":LEGO Store Euralille\, Centre Commercial Euralille\, 100 Avenue Willy Brandt\, 59800 Lille\, France
+X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=LEGO%20Store%20Euralille%2C%20100%20Avenue%20Willy%20Brandt%2C%2059800%20Lille
+X-HARRYPOTTER-TICKET-STATUS:FREE_LIMITED_FIRST_COME
+X-HARRYPOTTER-ACCESS-MODE:FREE
+DESCRIPTION:Priorité : ⭐ Important — animation LEGO Harry Potter gratuite et limitée.\nFiabilité : ✅ Confirmé par LEGO France.\nActivité : construire un Poudlard Express et repartir avec la construction.\nSessions : dimanche 6 septembre 16h–18h ; lundi 7 septembre 11h–13h.\n⚠️ Quantités limitées chaque jour ; premier arrivé, premier servi.\n📍 Adresse : LEGO Store Euralille — Centre Commercial Euralille, 100 Avenue Willy Brandt, 59800 Lille.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+URL:https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+CATEGORIES:Harry Potter,LEGO,Événement,Lille,Limité,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🧱 LEGO Harry Potter Lille dans 7 jours — vérifie horaires et disponibilité
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Animation LEGO Harry Potter demain à Lille — quantités limitées
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-lego-store-hogwarts-express-lyon-20260906@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:RETAIL_LAUNCH
+X-HARRYPOTTER-FORMAT:LEGO_STORE_ACTIVITY
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:LEGO-BTH-HOGWARTS-EXPRESS-20260906
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:YES
+X-HARRYPOTTER-SESSION-TIME-1:20260906T160000-180000
+X-HARRYPOTTER-SESSION-TIME-2:20260907T110000-130000
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260908
+SUMMARY:⭐ ✅ 🆕 🧱 LEGO Store — Construis le Poudlard Express — Lyon
+LOCATION;ALTREP="https://maps.apple.com/?q=LEGO%20Store%20La%20Part-Dieu%2C%2017%20Rue%20du%20Docteur%20Bouchut%2C%2069003%20Lyon":LEGO Store La Part-Dieu\, Centre commercial La Part-Dieu\, 17 Rue du Docteur Bouchut\, 69003 Lyon\, France
+X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=LEGO%20Store%20La%20Part-Dieu%2C%2017%20Rue%20du%20Docteur%20Bouchut%2C%2069003%20Lyon
+X-HARRYPOTTER-TICKET-STATUS:FREE_LIMITED_FIRST_COME
+X-HARRYPOTTER-ACCESS-MODE:FREE
+DESCRIPTION:Priorité : ⭐ Important — animation LEGO Harry Potter gratuite et limitée.\nFiabilité : ✅ Confirmé par LEGO France.\nActivité : construire un Poudlard Express et repartir avec la construction.\nSessions : dimanche 6 septembre 16h–18h ; lundi 7 septembre 11h–13h.\n⚠️ Quantités limitées chaque jour ; premier arrivé, premier servi.\n📍 Adresse : LEGO Store La Part-Dieu — 17 Rue du Docteur Bouchut, 69003 Lyon.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+URL:https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+CATEGORIES:Harry Potter,LEGO,Événement,Lyon,Limité,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🧱 LEGO Harry Potter Lyon dans 7 jours — vérifie horaires et disponibilité
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Animation LEGO Harry Potter demain à Lyon — quantités limitées
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-lego-store-hogwarts-express-clermont-20260906@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:RETAIL_LAUNCH
+X-HARRYPOTTER-FORMAT:LEGO_STORE_ACTIVITY
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:LEGO-BTH-HOGWARTS-EXPRESS-20260906
+X-HARRYPOTTER-COLLECTOR-INTEREST:MEDIUM
+X-HARRYPOTTER-LIMITED:YES
+X-HARRYPOTTER-SESSION-TIME-1:20260906T160000-180000
+X-HARRYPOTTER-SESSION-TIME-2:20260907T110000-130000
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260908
+SUMMARY:⭐ ✅ 🆕 🧱 LEGO Store — Construis le Poudlard Express — Clermont-Ferrand
+LOCATION;ALTREP="https://maps.apple.com/?q=LEGO%20Store%20Carr%C3%A9%20Jaude%2C%202%20rue%20Giscard%20de%20la%20Tour%20Fondue%2C%2063000%20Clermont-Ferrand":LEGO Store Carré Jaude\, Centre Commercial Carré Jaude\, 2 rue Giscard de la Tour Fondue\, 63000 Clermont-Ferrand\, France
+X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=LEGO%20Store%20Carr%C3%A9%20Jaude%2C%202%20rue%20Giscard%20de%20la%20Tour%20Fondue%2C%2063000%20Clermont-Ferrand
+X-HARRYPOTTER-TICKET-STATUS:FREE_LIMITED_FIRST_COME
+X-HARRYPOTTER-ACCESS-MODE:FREE
+DESCRIPTION:Priorité : ⭐ Important — animation LEGO Harry Potter gratuite et limitée.\nFiabilité : ✅ Confirmé par LEGO France.\nActivité : construire un Poudlard Express et repartir avec la construction.\nSessions : dimanche 6 septembre 16h–18h ; lundi 7 septembre 11h–13h.\n⚠️ Quantités limitées chaque jour ; premier arrivé, premier servi.\n📍 Adresse : LEGO Store Carré Jaude — 2 rue Giscard de la Tour Fondue, 63000 Clermont-Ferrand.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+URL:https://www.lego.com/fr-fr/stores/events/build-a-hogwarts-express-and-take-it-home-with-you
+CATEGORIES:Harry Potter,LEGO,Événement,Clermont-Ferrand,Limité,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🧱 LEGO Harry Potter Clermont-Ferrand dans 7 jours — vérifie horaires et disponibilité
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Animation LEGO Harry Potter demain à Clermont-Ferrand — quantités limitées
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -144,6 +352,267 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎼 Ciné-concert Harry Potter demain — prépare billet et trajet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-toulouse-20261228@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-SESSION-TIME:20:00
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Toulouse
+LOCATION;ALTREP="https://maps.apple.com/?q=Z%C3%A9nith%20Toulouse%20M%C3%A9tropole%2C%2011%20avenue%20Raymond%20Badiou%2C%2031300%20Toulouse":Zénith Toulouse Métropole\, 11 avenue Raymond Badiou\, 31300 Toulouse\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Z%C3%A9nith%20Toulouse%20M%C3%A9tropole%2C%2011%20avenue%20Raymond%20Badiou%2C%2031300%20Toulouse
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle de Harry Potter et le Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nDate : 28 décembre 2026 — séance annoncée à 20h00. L'heure de fin n'est pas affirmée.\n📍 Adresse : Zénith Toulouse Métropole — 11 avenue Raymond Badiou, 31300 Toulouse.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Toulouse,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Toulouse dans 7 jours — vérifie billet et trajet
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Toulouse demain à 20h — prépare billet et trajet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-bordeaux-20261229@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-SESSION-TIME:20:00
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Bordeaux/Floirac
+LOCATION;ALTREP="https://maps.apple.com/?q=Ark%C3%A9a%20Arena%2C%2048-50%20avenue%20Jean%20Alfons%C3%A9a%2C%2033270%20Floirac":Arkéa Arena\, 48-50 avenue Jean Alfonséa\, 33270 Floirac\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Ark%C3%A9a%20Arena%2C%2048-50%20avenue%20Jean%20Alfons%C3%A9a%2C%2033270%20Floirac
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle du Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nDate : 29 décembre 2026 — séance annoncée à 20h00.\n📍 Adresse : Arkéa Arena — 48-50 avenue Jean Alfonséa, 33270 Floirac.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Bordeaux,Floirac,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Bordeaux/Floirac dans 7 jours
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Bordeaux/Floirac demain à 20h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-nantes-20261230@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-SESSION-TIME:20:00
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Nantes
+LOCATION;ALTREP="https://maps.apple.com/?q=Z%C3%A9nith%20Nantes%20M%C3%A9tropole%2C%202%20Boulevard%20du%20Z%C3%A9nith%2C%2044800%20Saint-Herblain":Zénith Nantes Métropole\, 2 Boulevard du Zénith\, 44800 Saint-Herblain\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Z%C3%A9nith%20Nantes%20M%C3%A9tropole%2C%202%20Boulevard%20du%20Z%C3%A9nith%2C%2044800%20Saint-Herblain
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle du Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nDate : 30 décembre 2026 — séance annoncée à 20h00.\n📍 Adresse : Zénith Nantes Métropole — 2 Boulevard du Zénith, 44800 Saint-Herblain.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Nantes,Saint-Herblain,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Nantes dans 7 jours
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Nantes demain à 20h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-lille-20270102@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-RUN-MODE:DATE_RANGE
+X-HARRYPOTTER-SESSION-MODE:ONE_RUN_NOT_EACH_SHOW
+X-HARRYPOTTER-SESSION-TIME-1:20270102T200000
+X-HARRYPOTTER-SESSION-TIME-2:20270103T160000
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270104
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Lille
+LOCATION;ALTREP="https://maps.apple.com/?q=Z%C3%A9nith%20de%20Lille%2C%201%20boulevard%20des%20Cit%C3%A9s%20Unies%2C%2059777%20Lille":Zénith de Lille\, 1 boulevard des Cités Unies\, 59777 Lille\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Z%C3%A9nith%20de%20Lille%2C%201%20boulevard%20des%20Cit%C3%A9s%20Unies%2C%2059777%20Lille
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle du Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nSéances : 2 janvier 2027 à 20h00 ; 3 janvier 2027 à 16h00. Une seule fiche regroupe les deux séances lilloises.\n📍 Adresse : Zénith de Lille — 1 boulevard des Cités Unies, 59777 Lille.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant la première séance.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Lille,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Lille dans 7 jours
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Lille demain — première séance à 20h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-lyon-20270109@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-SESSION-TIME:20:00
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Lyon
+LOCATION;ALTREP="https://maps.apple.com/?q=Halle%20Tony%20Garnier%2C%2020%20place%20Docteurs%20Charles%20et%20Christophe%20M%C3%A9rieux%2C%2069007%20Lyon":Halle Tony Garnier\, 20 place Docteurs Charles et Christophe Mérieux\, 69007 Lyon\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Halle%20Tony%20Garnier%2C%2020%20place%20Docteurs%20Charles%20et%20Christophe%20M%C3%A9rieux%2C%2069007%20Lyon
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle du Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nDate : 9 janvier 2027 — séance annoncée à 20h00.\n📍 Adresse : Halle Tony Garnier — 20 place Docteurs Charles et Christophe Mérieux, 69007 Lyon.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Lyon,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Lyon dans 7 jours
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Lyon demain à 20h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cine-concert-hbp-dijon-20270110@openai
+DTSTAMP:20260819T040500Z
+LAST-MODIFIED:20260819T040500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-GROUP-ID:HP-HBP-CINECONCERT-FR-2026-27
+X-HARRYPOTTER-SESSION-TIME:17:00
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
+X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:⭐ ✅ 🆕 🎼 Ciné-concert — Le Prince de Sang-Mêlé — Dijon
+LOCATION;ALTREP="https://maps.apple.com/?q=Z%C3%A9nith%20de%20Dijon%2C%20Rue%20de%20Colchide%2C%2021000%20Dijon":Zénith de Dijon\, Parc de la Toison d'Or — Rue de Colchide\, 21000 Dijon\, France
+X-HARRYPOTTER-LOCATION-PRECISION:VENUE
+X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Z%C3%A9nith%20de%20Dijon%2C%20Rue%20de%20Colchide%2C%2021000%20Dijon
+X-HARRYPOTTER-TICKET-URL:https://www.u-play.fr/harrypottercineconcert6
+X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ⭐ Important — étape française officielle du Prince de Sang-Mêlé en ciné-concert.\nFiabilité : ✅ Confirmé par uGo&Play / Yellow Socks Orchestra.\nDate : 10 janvier 2027 — séance annoncée à 17h00.\n📍 Adresse : Zénith de Dijon — Parc de la Toison d'Or, Rue de Colchide, 21000 Dijon.\n🎟️ Billetterie / détails : https://www.u-play.fr/harrypottercineconcert6\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1.\nSource : https://www.u-play.fr/harrypottercineconcert6
+URL:https://www.u-play.fr/harrypottercineconcert6
+CATEGORIES:Harry Potter,Ciné-concert,Dijon,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Prince de Sang-Mêlé à Dijon dans 7 jours
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎼 Ciné-concert Harry Potter à Dijon demain à 17h
 END:VALARM
 END:VEVENT
 END:VCALENDAR
