@@ -5,24 +5,33 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:⚡ Harry Potter — Événements France & Paris
 X-WR-TIMEZONE:Europe/Paris
-X-HARRYPOTTER-REMINDER-POLICY:TYPE_FIRST_V1
+X-HARRYPOTTER-REMINDER-POLICY:TYPE_FIRST_V2
 X-HARRYPOTTER-PRICE-POLICY:OFFICIAL_EUR_EXACT_SKU_V1
 X-HARRYPOTTER-COLLECTION-POLICY:ONE_EVENT_CHECKLIST_V1
 X-HARRYPOTTER-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-HARRYPOTTER-CHANGE-POLICY:UID_STABLE_AUDIT_V2
 X-HARRYPOTTER-FRESHNESS-POLICY:NEW5D_UPDATE3D_V3
 X-HARRYPOTTER-RETAILER-POLICY:RETAILER_WATCH_ALL_FR_V2
+X-HARRYPOTTER-TAXONOMY-POLICY:ACTIONABLE_FRANCHISE_V2
+X-HARRYPOTTER-TERRITORY-POLICY:FR_EXACT_VERSION_V1
+X-HARRYPOTTER-RELATION-POLICY:ACTION_TO_RELEASE_V1
+X-HARRYPOTTER-COLLECTOR-POLICY:INTEREST_LIMITED_V1
+X-HARRYPOTTER-SESSION-POLICY:ONE_RUN_ONE_SEASON_V1
 BEGIN:VEVENT
 UID:hp-potted-potter-paris-20261017@openai
-DTSTAMP:20260819T034700Z
-LAST-MODIFIED:20260819T034700Z
-SEQUENCE:0
+DTSTAMP:20260819T035300Z
+LAST-MODIFIED:20260819T035300Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
-X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
 X-HARRYPOTTER-ACTION:ATTEND
 X-HARRYPOTTER-EVENT-TYPE:THEATRE
+X-HARRYPOTTER-FORMAT:LIVE_THEATRE
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-RUN-MODE:DATE_RANGE
+X-HARRYPOTTER-SESSION-MODE:ONE_RUN_NOT_EACH_SHOW
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T034700Z
 X-HARRYPOTTER-NEW-UNTIL:20260824T034700Z
 X-HARRYPOTTER-FRESHNESS:NEW
@@ -36,7 +45,7 @@ X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnas
 X-HARRYPOTTER-TICKET-URL:https://theatredugymnase.com/event-pro/potted-potter
 X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
 X-HARRYPOTTER-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ⭐ Important — longue série de représentations Harry Potter à Paris.\nFiabilité : ✅ Confirmé par le Théâtre du Gymnase Marie Bell.\nPériode : du 17 octobre 2026 au 17 janvier 2027. Horaires variables selon les jours ; vérifier la séance avant réservation.\n📍 Adresse : Théâtre du Gymnase Marie Bell — 38 boulevard de Bonne Nouvelle, 75010 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris\n🎟️ Billetterie : https://theatredugymnase.com/event-pro/potted-potter\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant le début de la série.\nSource : https://theatredugymnase.com/
+DESCRIPTION:Priorité : ⭐ Important — longue série de représentations Harry Potter à Paris.\nFiabilité : ✅ Confirmé par le Théâtre du Gymnase Marie Bell.\nType : 🎭 spectacle vivant — une seule fiche pour toute la période, pas un événement par représentation.\nPériode : du 17 octobre 2026 au 17 janvier 2027. Horaires variables selon les jours ; vérifier la séance avant réservation.\n📍 Adresse : Théâtre du Gymnase Marie Bell — 38 boulevard de Bonne Nouvelle, 75010 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris\n🎟️ Billetterie : https://theatredugymnase.com/event-pro/potted-potter\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant le début de la série.\nSource : https://theatredugymnase.com/
 URL:https://theatredugymnase.com/
 CATEGORIES:Harry Potter,Événement,Paris,Théâtre,Nouveau,Priorité Important
 BEGIN:VALARM
@@ -52,15 +61,19 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:hp-cine-concert-philosophers-stone-paris-20261104@openai
-DTSTAMP:20260819T034700Z
-LAST-MODIFIED:20260819T034700Z
-SEQUENCE:0
+DTSTAMP:20260819T035300Z
+LAST-MODIFIED:20260819T035300Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
-X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:LIVE_RUN_IMPORTANT
 X-HARRYPOTTER-ACTION:ATTEND
 X-HARRYPOTTER-EVENT-TYPE:CINE_CONCERT
+X-HARRYPOTTER-FORMAT:CINE_CONCERT
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-RUN-MODE:DATE_RANGE
+X-HARRYPOTTER-SESSION-MODE:ONE_RUN_NOT_EACH_SHOW
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T034700Z
 X-HARRYPOTTER-NEW-UNTIL:20260824T034700Z
 X-HARRYPOTTER-FRESHNESS:NEW
@@ -76,7 +89,7 @@ X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
 X-HARRYPOTTER-ACCESS-MODE:TICKET
 X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:25.00
 X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:99.00
-DESCRIPTION:Priorité : ⭐ Important — ciné-concert officiel majeur à Paris pour les 25 ans du premier film.\nFiabilité : ✅ Confirmé directement par Le Grand Rex.\nSéances : 4, 5 et 6 novembre à 20h30 ; 7 et 8 novembre à 15h et 20h30.\n📍 Adresse : Le Grand Rex — 1 boulevard Poissonnière, 75002 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris\n🎟️ Billetterie : 25 € à 99 € — https://www.legrandrex.com/evenement/1755\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant la première séance.\nSource : https://www.legrandrex.com/evenement/1755
+DESCRIPTION:Priorité : ⭐ Important — ciné-concert officiel majeur à Paris pour les 25 ans du premier film.\nFiabilité : ✅ Confirmé directement par Le Grand Rex.\nType : 🎼 ciné-concert — une seule fiche pour la série de séances, pas un événement par séance.\nSéances : 4, 5 et 6 novembre à 20h30 ; 7 et 8 novembre à 15h et 20h30.\n📍 Adresse : Le Grand Rex — 1 boulevard Poissonnière, 75002 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Le%20Grand%20Rex%2C%201%20boulevard%20Poissonni%C3%A8re%2C%2075002%20Paris\n🎟️ Billetterie : 25 € à 99 € — https://www.legrandrex.com/evenement/1755\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant la première séance.\nSource : https://www.legrandrex.com/evenement/1755
 URL:https://www.legrandrex.com/evenement/1755
 CATEGORIES:Harry Potter,Événement,Paris,Ciné-concert,Nouveau,Priorité Important
 BEGIN:VALARM
