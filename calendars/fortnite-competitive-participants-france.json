@@ -1,42 +1,99 @@
 {
-  "version": "FORTNITE_COMPETITIVE_PARTICIPANT_OUTCOMES_EU_V1",
-  "updated_at": "2026-08-19T09:50:00Z",
-  "scope": "Participant/team-specific Fortnite competitive qualification outcomes for EU/global events relevant to France",
+  "version": "FORTNITE_COMPETITIVE_PARTICIPANT_OUTCOMES_EU_V2",
+  "updated_at": "2026-08-19T09:56:00Z",
+  "scope": "Participant/team-specific Fortnite competitive qualification outcomes, active routes and conditional next actions for EU/global events relevant to France",
   "source_of_truth": "Official Fortnite Competitive results/standings and explicitly authorized organizer results only.",
+  "deadline_engine": "fortnite-competitive-deadline-engine-france.json",
   "principles": {
-    "separate_from_global_lifecycle": "A qualifier can be globally complete while a participant outcome remains UNKNOWN until official participant-specific evidence is available.",
-    "no_absence_inference": "Absence from one result page, one final lobby, one article or one crawl never proves ELIMINATED.",
+    "separate_from_global_lifecycle": "A qualifier can be globally complete while a participant outcome remains UNKNOWN/PENDING until participant-specific evidence is sufficient.",
+    "route_aware": "Outcomes are scoped to a qualification route/phase. Failing one route does not mean event elimination when another official route remains.",
+    "no_absence_inference": "Absence from one result page, final lobby, article or crawl never proves elimination.",
     "stable_participant_id": "A tracked player/team keeps one participant_id; display-name changes become aliases.",
-    "team_result_scope": "A DUOS/TRIOS/SQUADS result belongs to the exact roster/team identity used by the official result source; do not silently transfer it to a player in a different roster.",
-    "official_result_required": "QUALIFIED, ELIMINATED, DISQUALIFIED and WITHDRAWN require explicit official evidence or a mathematically complete official standings result whose qualification rule is itself verified."
+    "team_result_scope": "DUO/TRIO/SQUAD outcomes belong to the exact official roster identity; never transfer them to a different roster containing one same player.",
+    "result_finality": "Provisional standings may update rank/points and PENDING state, but irreversible qualification/elimination requires final-enough official evidence.",
+    "conditional_final_bridge": "Final play reminders are activated only when the participant is officially qualified to that target and the final has usable future timing."
   },
   "participant_types": ["PLAYER", "DUO", "TRIO", "SQUAD", "TEAM"],
-  "outcome_states": ["UNKNOWN", "PENDING", "QUALIFIED", "ELIMINATED", "WITHDRAWN", "DISQUALIFIED"],
+  "outcome_states": ["UNKNOWN", "PENDING", "ACTIVE", "ADVANCED", "QUALIFIED", "ELIMINATED_PATH", "ELIMINATED_EVENT", "WITHDRAWN", "DISQUALIFIED"],
+  "result_finality": ["UNKNOWN", "PROVISIONAL", "FINAL_OFFICIAL", "CORRECTED_FINAL"],
   "evidence_levels": ["OFFICIAL_EXPLICIT", "OFFICIAL_STANDINGS_DERIVED", "UNKNOWN"],
+  "next_actions": ["NONE", "REGISTER", "CHECK_IN", "PLAY_QUALIFIER", "WAIT_RESULT", "PLAY_NEXT_ROUND", "PLAY_LCQ", "PLAY_FINAL", "WATCH_FINAL", "ATTEND_FINAL"],
   "entry_schema": {
-    "required": ["participant_id", "participant_type", "display_name", "aliases", "outcomes", "history"],
-    "outcome_required": ["competition_id", "phase_id", "state", "evidence_level", "source_id", "source_url", "observed_at"],
-    "optional": ["session_id", "rank", "points", "qualification_target", "qualification_slots", "roster", "reason", "supersedes_outcome_id"]
+    "required": ["participant_id", "participant_type", "display_name", "aliases", "tracked", "active_routes", "outcomes", "next_action", "history"],
+    "route_required": ["route_id", "competition_id", "target_id", "state"],
+    "outcome_required": ["outcome_id", "competition_id", "phase_id", "state", "result_finality", "evidence_level", "source_id", "source_url", "observed_at"],
+    "optional": ["route_id", "session_id", "rank", "points", "qualification_target", "qualification_slots", "roster", "reason", "result_fingerprint", "supersedes_outcome_id", "secondary_actions"]
   },
   "resolution_rules": {
-    "QUALIFIED": "Requires explicit official qualified list/result, or OFFICIAL_STANDINGS_DERIVED where the final official ranking and verified advancement rule unambiguously place the participant inside the qualifying range.",
-    "ELIMINATED": "Requires explicit elimination/non-advancement, or OFFICIAL_STANDINGS_DERIVED where the final official ranking and verified advancement rule unambiguously place the participant outside the qualifying range after the phase is final.",
-    "PENDING": "Use while a participant has played/entered a qualifying phase but final official advancement result is not yet determinable.",
+    "ADVANCED": "Officially progressed to another non-final phase/round. This is not yet QUALIFIED to the tracked final target.",
+    "QUALIFIED": "Requires explicit official qualified result/list or final official standings plus a verified advancement rule unambiguously placing the participant in the target.",
+    "ELIMINATED_PATH": "One route or attempt is conclusively failed, but at least one other official route to the same target may remain available.",
+    "ELIMINATED_EVENT": "Requires final official evidence that the participant failed all applicable official routes to the tracked target; invalid if any active route remains.",
+    "PENDING": "Participant played/entered but advancement cannot yet be safely determined, including provisional standings/review/tiebreak situations.",
+    "ACTIVE": "Participant is still eligible/in progress on the route before a final outcome is known.",
     "WITHDRAWN": "Official withdrawal/forfeit only.",
     "DISQUALIFIED": "Official disqualification only.",
     "UNKNOWN": "Default when participant-specific evidence is insufficient."
   },
-  "finale_bridge": {
-    "on_qualified": "If qualification_target resolves to a known future phase/competition with official timing, enable participant-specific FINAL reminders without changing the global final VEVENT UID.",
-    "on_eliminated": "Suppress only participant-specific PLAY/REGISTER reminders downstream; preserve global WATCH/ATTEND reminders for the final.",
-    "on_pending": "Do not create a final PLAY reminder yet.",
-    "same_result_no_repeat": "An identical participant outcome never re-notifies."
+  "route_rules": {
+    "active_route_states": ["ANNOUNCED", "REGISTRATION_PENDING", "REGISTRATION_OPEN", "REGISTERED", "CHECK_IN_PENDING", "READY", "LIVE", "RESULT_PENDING"],
+    "failed_route_states": ["FAILED_ROUTE", "CLOSED", "CANCELLED"],
+    "qualified_route_state": "QUALIFIED_TARGET",
+    "lcq_guard": "Never produce ELIMINATED_EVENT while a sourced LCQ/secondary route remains active and the participant remains eligible.",
+    "unknown_future_route": "Do not keep a participant artificially alive because a historical circuit usually had an LCQ; the route must be officially present."
   },
-  "history_event_types": ["PARTICIPANT_ADDED", "ALIAS_ADDED", "OUTCOME_PENDING", "OUTCOME_QUALIFIED", "OUTCOME_ELIMINATED", "OUTCOME_WITHDRAWN", "OUTCOME_DISQUALIFIED", "OUTCOME_CORRECTED", "ROSTER_CHANGED"],
+  "result_policy": {
+    "provisional": "PROVISIONAL can update rank/points and state PENDING/ACTIVE only. It cannot permanently set ELIMINATED_EVENT unless Epic explicitly states a final disqualification/withdrawal.",
+    "final_derived": "OFFICIAL_STANDINGS_DERIVED requires final official standings and a verified qualification rule whose slots/criteria make the conclusion unambiguous.",
+    "correction": "A corrected official result creates a new outcome with result_finality CORRECTED_FINAL and supersedes_outcome_id. Never mutate the old outcome in place.",
+    "result_fingerprint": "Hash/logical fingerprint should include source result identity + rank/points + qualification rule/version + route/target. Identical result never re-notifies."
+  },
+  "next_action_policy": {
+    "priority": ["CHECK_IN", "REGISTER", "PLAY_FINAL", "PLAY_NEXT_ROUND", "PLAY_LCQ", "PLAY_QUALIFIER", "WAIT_RESULT", "WATCH_FINAL", "ATTEND_FINAL", "NONE"],
+    "rules": [
+      "If QUALIFIED and final timing is official/future, next_action becomes PLAY_FINAL when participation is relevant.",
+      "If primary route failed but official LCQ remains active, next_action can become PLAY_LCQ rather than elimination.",
+      "If qualifier ended and result finality is not FINAL_OFFICIAL/CORRECTED_FINAL, next_action is WAIT_RESULT.",
+      "Past or expired actions are never returned as next_action.",
+      "secondary_actions may retain WATCH_FINAL/ATTEND_FINAL independently of play qualification."
+    ]
+  },
+  "finale_bridge": {
+    "on_qualified": "Resolve qualification_target, suppress unused alternative qualifier reminders, and arm only future participant-specific final reminders. Do not recreate or re-UID the global final VEVENT.",
+    "on_eliminated_path": "Suppress reminders for that route only; recalculate next_action from remaining official routes.",
+    "on_eliminated_event": "Invalidate participant PLAY/REGISTER/CHECK_IN downstream reminders; preserve global WATCH/ATTEND reminders.",
+    "on_pending": "Do not arm final PLAY reminders yet; WAIT_RESULT may be the next action.",
+    "on_correction": "Recalculate route states, next_action and future reminders from the corrected final outcome; preserve history."
+  },
+  "history_event_types": [
+    "PARTICIPANT_ADDED",
+    "ALIAS_ADDED",
+    "ROSTER_CHANGED",
+    "ROUTE_ADDED",
+    "ROUTE_STATE_CHANGED",
+    "OUTCOME_PENDING",
+    "OUTCOME_ACTIVE",
+    "OUTCOME_ADVANCED",
+    "OUTCOME_QUALIFIED",
+    "OUTCOME_ELIMINATED_PATH",
+    "OUTCOME_ELIMINATED_EVENT",
+    "OUTCOME_WITHDRAWN",
+    "OUTCOME_DISQUALIFIED",
+    "OUTCOME_CORRECTED",
+    "NEXT_ACTION_CHANGED"
+  ],
   "notification_policy": {
-    "notify": ["QUALIFIED to a tracked important target", "ELIMINATED from a tracked important path", "DISQUALIFIED", "WITHDRAWN", "official correction that changes qualification state"],
-    "silent": ["UNKNOWN", "unchanged PENDING", "alias-only change", "result recheck without state change"],
-    "dedupe_key": "participant_id + competition_id + phase_id + state + qualification_target + result_fingerprint"
+    "notify": [
+      "QUALIFIED to tracked important target",
+      "ADVANCED to important next round",
+      "ELIMINATED_PATH when it changes next action to a sourced LCQ/other route",
+      "ELIMINATED_EVENT from tracked important path",
+      "DISQUALIFIED",
+      "WITHDRAWN",
+      "official correction changing qualification state or next final action"
+    ],
+    "silent": ["UNKNOWN", "unchanged PENDING", "alias-only change", "result recheck without state/next-action change", "route metadata enrichment without action impact"],
+    "dedupe_key": "participant_id + competition_id + phase_id + route_id-or-null + state + qualification_target + result_fingerprint"
   },
   "tracked_participants": [],
   "entries": []
