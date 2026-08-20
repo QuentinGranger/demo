@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-20T07:08:53Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -8,12 +8,12 @@
     {
       "candidate_id": "fortnite-next-br-season-end-summer-2026",
       "state": "SIGNAL_FOUND",
-      "topic": "Nouvelle saison Battle Royale annoncée pour la fin de l'été 2026",
-      "source_ids": ["fortnite_news", "fortnite_competitive", "fortnite_battle_pass"],
-      "known": "Le Passe de combat Runners du Chapitre 7 Saison 3 se termine le 20 août 2026 en heure de l'Est selon la page officielle Battle Pass. Epic avait annoncé une nouvelle saison Battle Royale pour la fin de l'été, mais aucune date/heure officielle de lancement suffisamment précise n'est encore publiée.",
-      "missing_for_calendar": ["NEXT_SEASON_EXACT_DATE", "NEXT_SEASON_EXACT_TIME_OR_DOWNTIME_WINDOW", "NEXT_SEASON_NAME"],
-      "promotion_rule": "Passer READY pour le lancement suivant dès publication d'une date exacte officielle ou d'une maintenance de lancement explicite.",
-      "related_calendar_uid": "fortnite-c7s3-runners-battle-pass-end-20260820@openai"
+      "topic": "Chapitre 7 Saison 4 — Override / heure de lancement jouable",
+      "source_ids": ["fortnite_news", "fortnite_battle_pass", "epic_status"],
+      "known": "Fortnite News identifie officiellement Chapter 7 Season 4: Override le 20 août 2026. La page Battle Pass identifie également Override / Chapter 7 Season 4 et affiche le Passe de combat comme disponible, avec une fin le 1er novembre 2026 en heure de l'Est. Epic Status confirme séparément la maintenance v42.00 du 20 août, mais aucune source autorisée lue ne relie explicitement son heure de fin à l'heure de lancement jouable de C7S4.",
+      "missing_for_calendar": ["NEXT_SEASON_PLAYABLE_START_EXACT_TIME_OR_EXPLICIT_LAUNCH_WINDOW"],
+      "promotion_rule": "L'identité C7S4 Override et les échéances explicitement publiées sont déjà matérialisées dans le lifecycle/calendrier. Conserver cette watch pour l'heure de lancement jouable seulement ; ne jamais la déduire de la maintenance ou de la disponibilité du Battle Pass.",
+      "related_calendar_uid": "fortnite-c7s4-override-battle-pass-end-20261101@openai"
     },
     {
       "candidate_id": "fortnite-fncs-solos-october-2026",
@@ -27,23 +27,21 @@
     {
       "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
       "state": "CALENDAR_ADDED",
-      "topic": "Reload Elite Series Championship — Esports World Cup 2026",
+      "topic": "Reload Elite Series Championship — Esports World Cup 2026 — Paris",
       "source_ids": ["fortnite_competitive", "ewc_official"],
-      "known": "Correction officielle : la billetterie EWC de l'événement exact place le Reload Elite Series Championship du 19 au 22 août 2026 à Boulevard City, Riyadh, et propose des passes 4 jours à 219 SAR (Regular) et 471 SAR (Premium). Plusieurs pages Fortnite Competitive de qualification indiquent aussi Riyadh, Saudi Arabia. Une page EWC générale contient encore une mention contradictoire de Paris ; cette contradiction reste auditée, mais les sources événementielles les plus spécifiques sont utilisées pour la logistique et la billetterie.",
-      "missing_for_calendar": ["RELIABLE_MATCH_SESSION_TIMES", "DETAILED_ONSITE_ACCESS_RULES"],
-      "promotion_rule": "Déjà promu : conserver le même UID stable et enrichir/corriger la même fiche. Les identifiants techniques historiques contenant 'paris' ne sont pas recréés lors de cette correction de source.",
+      "known": "État canonique actuel : Reload Elite Series Championship à Paris du 19 au 22 août 2026. Le registre physique identifie Paris Expo Porte de Versailles comme site EWC 2026, sans hall/stage/entrée Fortnite spécifique publié. La page EWC Paris suivie ne confirme actuellement qu'une préinscription d'intérêt ; les anciens billets Riyad 219/471 SAR sont conservés uniquement comme historique de source contradictoire et ne sont plus traités comme inventaire actif du Championship de Paris.",
+      "missing_for_calendar": ["RELIABLE_MATCH_SESSION_TIMES", "FORTNITE_SPECIFIC_HALL_STAGE_OR_ENTRANCE", "DETAILED_ONSITE_ACCESS_RULES", "FORTNITE_SPECIFIC_TICKET_ONSALE_IF_PUBLISHED"],
+      "promotion_rule": "Déjà promu : conserver le même UID stable et enrichir/corriger la même fiche selon les ledgers physical/access/ticketing. Les identifiants techniques historiques contenant 'paris' restent stables.",
       "related_calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "promoted_at": "2026-08-19T07:12:31Z",
       "ticketing": {
-        "status": "AVAILABLE",
-        "scope": "EWC26_FORTNITE_CHAMPIONSHIP",
-        "url": "https://www.esportsworldcup.com/en/tickets/fortnite-ft-at-ewc26",
+        "status": "PREREGISTRATION",
+        "scope": "EWC_PARIS_GENERAL",
+        "url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
         "source_id": "ewc_official",
-        "verified_at": "2026-08-19T18:12:23Z",
-        "categories": [
-          {"key":"REGULAR_4_DAY","price_sar":219,"status":"AVAILABLE"},
-          {"key":"PREMIUM_4_DAY","price_sar":471,"status":"AVAILABLE"}
-        ]
+        "verified_at": "2026-08-19T21:03:30Z",
+        "fortnite_specific_ticket_info": false,
+        "categories": []
       }
     },
     {
