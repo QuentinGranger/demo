@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-08-19T22:06:29Z",
+  "updated_at": "2026-08-20T04:07:38Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -100,6 +100,24 @@
       "payload_snapshot": "Nouvelle correction officielle : le Reload Elite Series Championship 2026 est à Paris, France (19–22 août). La billetterie Riyad/219–471 SAR n’est plus traitée comme active pour ce Championship ; EWC Paris ne confirme actuellement qu’une préinscription pour être averti lorsque les billets seront disponibles.",
       "condition_snapshot": {"ticket_status":"PREREGISTRATION","venue_precision":"CITY","city":"Paris","event_live":true},
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
+    },
+    {
+      "intent_id": "nti_388d1d8e43a4a86038196741",
+      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
+      "change_ids": ["chg_7fb18e60334eb95f298ab0d4"],
+      "notice_kind": "FORTNITE_V42_DOWNTIME_IMMINENT",
+      "audience_key": "user",
+      "channel_key": "chat",
+      "payload_fingerprint": "372eabc1c65a82e5786070866f680ded2f91152c0cc47c441d301d41352d8136",
+      "render_version": "FORTNITE_ALERT_FR_V1",
+      "created_at": "2026-08-20T04:07:38Z",
+      "group_key": "grp_d2f999bbbf03504ba9e62bb788f731cc9115cd4eba08e410bf55925ab589601c",
+      "subject_key": "epic-fortnite-v42-00-20260820",
+      "locale": "fr-FR",
+      "payload_snapshot": "Maintenance Fortnite v42.00 aujourd’hui : le matchmaking sera désactivé à 07h30 (heure de Paris), puis la maintenance est prévue de 08h00 à 13h00. Epic indique une fenêtre officielle de 06:00 à 11:00 UTC.",
+      "condition_snapshot": {"service_state":"DOWNTIME_ANNOUNCED","provider_phase":"SCHEDULED","scheduled_start_at":"2026-08-20T06:00:00Z","expected_end_at":"2026-08-20T11:00:00Z","matchmaking_disabled_at":"2026-08-20T05:30:00Z","patch_version":"42.00","within_urgent_window":true},
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+      "due_at": "2026-08-20T04:00:00Z"
     }
   ],
   "delivery_events": [
@@ -138,6 +156,15 @@
       "at": "2026-08-19T22:06:29Z",
       "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
       "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
+    },
+    {
+      "delivery_event_id": "nde_5d6874b5748cd1e3cde167d3",
+      "intent_id": "nti_388d1d8e43a4a86038196741",
+      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
+      "state": "RESERVED",
+      "at": "2026-08-20T04:07:38Z",
+      "reservation_id": "nrs_3404b3a87a1aaffa557e75e0",
+      "note": "Reserved only after the previously planned maintenance notice became due inside the policy's <2h urgent window. This reservation consumes the key even if final delivery acknowledgement cannot be persisted."
     }
   ],
   "consumed_keys": {
@@ -150,10 +177,16 @@
       "intent_id": "nti_b5266718dc152ad854dd172f",
       "state": "UNKNOWN_DELIVERY",
       "last_event_id": "nde_536b63dd8c9ff552c7e16d41"
+    },
+    "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a": {
+      "intent_id": "nti_388d1d8e43a4a86038196741",
+      "state": "RESERVED",
+      "last_event_id": "nde_5d6874b5748cd1e3cde167d3"
     }
   },
   "group_index": {
-    "grp_880c7fd2fd54d26da925e16f9518fa9c6ebf5af3e10ee6f71896bd9cb4f98bc0": "nti_b5266718dc152ad854dd172f"
+    "grp_880c7fd2fd54d26da925e16f9518fa9c6ebf5af3e10ee6f71896bd9cb4f98bc0": "nti_b5266718dc152ad854dd172f",
+    "grp_d2f999bbbf03504ba9e62bb788f731cc9115cd4eba08e410bf55925ab589601c": "nti_388d1d8e43a4a86038196741"
   },
   "history": [
     {
@@ -184,6 +217,12 @@
       "type": "NOTIFICATION_DELIVERY_UNKNOWN",
       "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
       "note": "Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
+    },
+    {
+      "at": "2026-08-20T04:07:38Z",
+      "type": "NOTIFICATION_RESERVED",
+      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
+      "note": "Previously planned v42.00 downtime notice became due inside the urgent window and was reserved exactly once after a fresh outbox read."
     }
   ]
 }
