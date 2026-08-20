@@ -154,20 +154,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-service-v42-00-20260820@openai
-DTSTAMP:20260820T060011Z
-LAST-MODIFIED:20260820T060011Z
-SEQUENCE:1
+DTSTAMP:20260820T113100Z
+LAST-MODIFIED:20260820T113100Z
+SEQUENCE:2
 STATUS:CONFIRMED
-PRIORITY:5
-X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:WAIT_UPDATE
+PRIORITY:9
+X-FORTNITE-PRIORITY:INFO
+X-FORTNITE-ACTION:PLAY
 X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
 X-FORTNITE-SERVICE-EVENT-ID:epic-fortnite-v42-00-20260820
 X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
-X-FORTNITE-SERVICE-STATE:STARTED
-X-FORTNITE-SERVICE-PROVIDER-PHASE:UNKNOWN
+X-FORTNITE-SERVICE-STATE:RESOLVED
+X-FORTNITE-SERVICE-PROVIDER-PHASE:RESOLVED
 X-FORTNITE-SERVICE-IMPACT:UNSPECIFIED
-X-FORTNITE-SERVICE-ACTIONABILITY:HIGH
+X-FORTNITE-SERVICE-ACTIONABILITY:NONE
 X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,
  Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
 X-FORTNITE-SERVICE-SOURCE-ID:epic_status
@@ -175,23 +175,21 @@ X-FORTNITE-SERVICE-RELATION-TYPE:PATCH_DEPLOYMENT
 X-FORTNITE-PATCH-VERSION:42.00
 X-FORTNITE-MATCHMAKING-DISABLED-AT:20260820T073000
 X-FORTNITE-ACTUAL-START-AT:20260820T080011
+X-FORTNITE-ACTUAL-END-AT:20260820T133100
 X-FORTNITE-TIME-PRECISION:EXACT
 X-FORTNITE-FIRST-ADDED-AT:20260820T001202Z
 X-FORTNITE-NEW-UNTIL:20260825T001202Z
 DTSTART;TZID=Europe/Paris:20260820T080000
-DTEND;TZID=Europe/Paris:20260820T130000
-SUMMARY:⭐ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — en cours
-DESCRIPTION:Priorité : ⭐ Important — maintenance v42.00 officiellement
-  en cours depuis 08:00 heure de Paris.\nEpic Status a marqué la maintenan
- ce « in progress » à 06:00:11 UTC \; Game Services\, Login\, Parties/Fr
- iends/Messaging\, Voice Chat\, Matchmaking\, Stats/Leaderboards\, Item Sho
- p et Fortnite Crew sont sous maintenance\, ainsi que les matchmakings LEGO
-  Fortnite\, Fortnite Festival et Rocket Racing.\nLa fenêtre officielle re
- ste 08:00–13:00 heure de Paris \; aucune prolongation n'est déduite tan
- t qu'Epic ne la publie pas.\nAucun lien avec une nouvelle saison Battle Ro
- yale n'est affirmé ici : Epic Status confirme explicitement la v42.00\, m
- ais pas un season_id.\nSource : https://status.epicgames.com/incidents/b0j
- f1mxvlc2l
+DTEND;TZID=Europe/Paris:20260820T133100
+SUMMARY:ℹ️ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — terminée
+DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite 
+ v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 ao
+ ût 2026 à 11:31 UTC, soit 13:31 heure de Paris.\nFortnite, Game Services
+ , Login, Matchmaking, groupes/amis, chat vocal, stats/classements, boutiqu
+ e et Fortnite Crew sont actuellement opérationnels sur Epic Status.\nLa f
+ enêtre prévue se terminait à 13:00 à Paris ; l’heure 13:31 est l’h
+ eure de fin réellement publiée, pas une estimation.\nSource : https://st
+ atus.epicgames.com/incidents/b0jf1mxvlc2l
 URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT

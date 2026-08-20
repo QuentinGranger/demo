@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-08-20T07:08:53Z",
+  "updated_at": "2026-08-20T11:31:00Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
@@ -12,38 +12,120 @@
     "sorted_sets": true
   },
   "subject_heads": {
-    "sub_039be9a01711af0392cbacc24f7770194fb93e44c8672b55b88802a522b44718": {"revision":1,"change_id":"chg_78c3ab21d46e26a806366022"},
-    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": {"revision":3,"change_id":"chg_bebfe9f0ccd788dca4e9fff6"},
-    "sub_49995fb9a5a0495facb1f423316b294f8ad0410bd53d8fc0349a6a5a983baa25": {"revision":1,"change_id":"chg_dab1f0de401485e121b950c6"},
-    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": {"revision":2,"change_id":"chg_459f96bf21d0fddf1172fdb4"},
-    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": {"revision":2,"change_id":"chg_3126f15110f19dd7bd7f2fdd"},
-    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": {"revision":2,"change_id":"chg_751fca9c2d49858bf37af262"},
-    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": {"revision":2,"change_id":"chg_3082b9de725bc335d4cbdd2e"}
+    "sub_039be9a01711af0392cbacc24f7770194fb93e44c8672b55b88802a522b44718": {
+      "revision": 1,
+      "change_id": "chg_78c3ab21d46e26a806366022"
+    },
+    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": {
+      "revision": 3,
+      "change_id": "chg_bebfe9f0ccd788dca4e9fff6"
+    },
+    "sub_49995fb9a5a0495facb1f423316b294f8ad0410bd53d8fc0349a6a5a983baa25": {
+      "revision": 1,
+      "change_id": "chg_dab1f0de401485e121b950c6"
+    },
+    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": {
+      "revision": 2,
+      "change_id": "chg_459f96bf21d0fddf1172fdb4"
+    },
+    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": {
+      "revision": 2,
+      "change_id": "chg_3126f15110f19dd7bd7f2fdd"
+    },
+    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": {
+      "revision": 2,
+      "change_id": "chg_751fca9c2d49858bf37af262"
+    },
+    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": {
+      "revision": 3,
+      "change_id": "chg_23b8c49c86198e24be5fad57"
+    }
   },
   "by_domain": {
-    "COMPETITIVE": ["chg_3126f15110f19dd7bd7f2fdd","chg_d7bb61401fb80414535e4338"],
-    "PHYSICAL_ACCESS": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
-    "PHYSICAL_EVENT": ["chg_bebfe9f0ccd788dca4e9fff6","chg_ceb30c82d0bcb7360d8cf0a7","chg_e780bd0438e6866893b6797b"],
-    "SEASON_PASS": ["chg_78c3ab21d46e26a806366022","chg_dab1f0de401485e121b950c6"],
-    "SERVICE": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"],
-    "TICKETING": ["chg_4d847a615cf7fd9ee9306579","chg_751fca9c2d49858bf37af262"]
+    "COMPETITIVE": [
+      "chg_3126f15110f19dd7bd7f2fdd",
+      "chg_d7bb61401fb80414535e4338"
+    ],
+    "PHYSICAL_ACCESS": [
+      "chg_459f96bf21d0fddf1172fdb4",
+      "chg_558e71ff655403f489e782fd"
+    ],
+    "PHYSICAL_EVENT": [
+      "chg_bebfe9f0ccd788dca4e9fff6",
+      "chg_ceb30c82d0bcb7360d8cf0a7",
+      "chg_e780bd0438e6866893b6797b"
+    ],
+    "SEASON_PASS": [
+      "chg_78c3ab21d46e26a806366022",
+      "chg_dab1f0de401485e121b950c6"
+    ],
+    "SERVICE": [
+      "chg_23b8c49c86198e24be5fad57",
+      "chg_3082b9de725bc335d4cbdd2e",
+      "chg_7fb18e60334eb95f298ab0d4"
+    ],
+    "TICKETING": [
+      "chg_4d847a615cf7fd9ee9306579",
+      "chg_751fca9c2d49858bf37af262"
+    ]
   },
   "by_change_type": {
-    "ACCESS_CHANGED": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
-    "AVAILABILITY_CHANGED": ["chg_4d847a615cf7fd9ee9306579"],
-    "ENTITY_CREATED": ["chg_78c3ab21d46e26a806366022","chg_dab1f0de401485e121b950c6"],
-    "LOCATION_CHANGED": ["chg_bebfe9f0ccd788dca4e9fff6","chg_ceb30c82d0bcb7360d8cf0a7","chg_e780bd0438e6866893b6797b"],
-    "MAINTENANCE_CHANGED": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"],
-    "SOURCE_CORRECTION": ["chg_3126f15110f19dd7bd7f2fdd","chg_751fca9c2d49858bf37af262","chg_d7bb61401fb80414535e4338"]
+    "ACCESS_CHANGED": [
+      "chg_459f96bf21d0fddf1172fdb4",
+      "chg_558e71ff655403f489e782fd"
+    ],
+    "AVAILABILITY_CHANGED": [
+      "chg_4d847a615cf7fd9ee9306579"
+    ],
+    "ENTITY_CREATED": [
+      "chg_78c3ab21d46e26a806366022",
+      "chg_dab1f0de401485e121b950c6"
+    ],
+    "LOCATION_CHANGED": [
+      "chg_bebfe9f0ccd788dca4e9fff6",
+      "chg_ceb30c82d0bcb7360d8cf0a7",
+      "chg_e780bd0438e6866893b6797b"
+    ],
+    "MAINTENANCE_CHANGED": [
+      "chg_23b8c49c86198e24be5fad57",
+      "chg_3082b9de725bc335d4cbdd2e",
+      "chg_7fb18e60334eb95f298ab0d4"
+    ],
+    "SOURCE_CORRECTION": [
+      "chg_3126f15110f19dd7bd7f2fdd",
+      "chg_751fca9c2d49858bf37af262",
+      "chg_d7bb61401fb80414535e4338"
+    ]
   },
   "open_changes_by_subject": {
-    "sub_039be9a01711af0392cbacc24f7770194fb93e44c8672b55b88802a522b44718": ["chg_78c3ab21d46e26a806366022"],
-    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": ["chg_bebfe9f0ccd788dca4e9fff6","chg_ceb30c82d0bcb7360d8cf0a7","chg_e780bd0438e6866893b6797b"],
-    "sub_49995fb9a5a0495facb1f423316b294f8ad0410bd53d8fc0349a6a5a983baa25": ["chg_dab1f0de401485e121b950c6"],
-    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
-    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": ["chg_3126f15110f19dd7bd7f2fdd","chg_d7bb61401fb80414535e4338"],
-    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": ["chg_4d847a615cf7fd9ee9306579","chg_751fca9c2d49858bf37af262"],
-    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"]
+    "sub_039be9a01711af0392cbacc24f7770194fb93e44c8672b55b88802a522b44718": [
+      "chg_78c3ab21d46e26a806366022"
+    ],
+    "sub_1f18ba49a713cd3edfd50d2ecba96bb4f462c2176d6c4719904fac3efb9d23e1": [
+      "chg_bebfe9f0ccd788dca4e9fff6",
+      "chg_ceb30c82d0bcb7360d8cf0a7",
+      "chg_e780bd0438e6866893b6797b"
+    ],
+    "sub_49995fb9a5a0495facb1f423316b294f8ad0410bd53d8fc0349a6a5a983baa25": [
+      "chg_dab1f0de401485e121b950c6"
+    ],
+    "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": [
+      "chg_459f96bf21d0fddf1172fdb4",
+      "chg_558e71ff655403f489e782fd"
+    ],
+    "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": [
+      "chg_3126f15110f19dd7bd7f2fdd",
+      "chg_d7bb61401fb80414535e4338"
+    ],
+    "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": [
+      "chg_4d847a615cf7fd9ee9306579",
+      "chg_751fca9c2d49858bf37af262"
+    ],
+    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": [
+      "chg_23b8c49c86198e24be5fad57",
+      "chg_3082b9de725bc335d4cbdd2e",
+      "chg_7fb18e60334eb95f298ab0d4"
+    ]
   },
   "consumed_notification_keys": [
     "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
@@ -58,7 +140,7 @@
   ],
   "pending_reconciliation": [],
   "stats": {
-    "changes": 13,
+    "changes": 14,
     "subjects": 7,
     "notification_intents": 4,
     "consumed_notification_keys": 4,

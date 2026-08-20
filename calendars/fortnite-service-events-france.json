@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_SERVICE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-20T06:00:11Z",
+  "updated_at": "2026-08-20T11:31:00Z",
   "scope": "Fortnite service maintenance, downtime, degradation and incidents relevant to France/Europe",
   "source_of_truth": {
     "service_state": "Epic Games Public Status",
@@ -18,14 +18,48 @@
     "anti_noise": "Routine component blips and short incidents stay ledger-only unless they become actionable or materially disruptive.",
     "europe_paris_display": "Store source timestamps with original offset/UTC when known; render actionable user times explicitly in Europe/Paris."
   },
-  "kinds": ["SCHEDULED_MAINTENANCE","UNPLANNED_INCIDENT","SERVICE_DEGRADATION","EMERGENCY_MAINTENANCE"],
-  "canonical_states": ["DOWNTIME_ANNOUNCED","STARTED","EXTENDED","RECOVERING","RESOLVED","CANCELLED"],
-  "provider_phases": ["SCHEDULED","INVESTIGATING","IDENTIFIED","MONITORING","RESOLVED","CANCELLED","UNKNOWN"],
+  "kinds": [
+    "SCHEDULED_MAINTENANCE",
+    "UNPLANNED_INCIDENT",
+    "SERVICE_DEGRADATION",
+    "EMERGENCY_MAINTENANCE"
+  ],
+  "canonical_states": [
+    "DOWNTIME_ANNOUNCED",
+    "STARTED",
+    "EXTENDED",
+    "RECOVERING",
+    "RESOLVED",
+    "CANCELLED"
+  ],
+  "provider_phases": [
+    "SCHEDULED",
+    "INVESTIGATING",
+    "IDENTIFIED",
+    "MONITORING",
+    "RESOLVED",
+    "CANCELLED",
+    "UNKNOWN"
+  ],
   "canonical_transition_rules": {
-    "DOWNTIME_ANNOUNCED": ["STARTED","CANCELLED"],
-    "STARTED": ["EXTENDED","RECOVERING","RESOLVED"],
-    "EXTENDED": ["EXTENDED","RECOVERING","RESOLVED"],
-    "RECOVERING": ["EXTENDED","RESOLVED"],
+    "DOWNTIME_ANNOUNCED": [
+      "STARTED",
+      "CANCELLED"
+    ],
+    "STARTED": [
+      "EXTENDED",
+      "RECOVERING",
+      "RESOLVED"
+    ],
+    "EXTENDED": [
+      "EXTENDED",
+      "RECOVERING",
+      "RESOLVED"
+    ],
+    "RECOVERING": [
+      "EXTENDED",
+      "RESOLVED"
+    ],
     "RESOLVED": [],
     "CANCELLED": []
   },
@@ -38,88 +72,334 @@
     "CANCELLED": "CANCELLED",
     "UNKNOWN": "KEEP_CURRENT_STATE"
   },
-  "component_statuses": ["OPERATIONAL","UNDER_MAINTENANCE","DEGRADED_PERFORMANCE","PARTIAL_OUTAGE","MAJOR_OUTAGE","UNKNOWN"],
+  "component_statuses": [
+    "OPERATIONAL",
+    "UNDER_MAINTENANCE",
+    "DEGRADED_PERFORMANCE",
+    "PARTIAL_OUTAGE",
+    "MAJOR_OUTAGE",
+    "UNKNOWN"
+  ],
   "component_catalog": {
-    "FORTNITE_GAME_SERVICES": {"group":"GAMEPLAY","label_fr":"Services de jeu Fortnite","criticality":"CORE"},
-    "LOGIN": {"group":"ACCOUNT","label_fr":"Connexion","criticality":"CORE"},
-    "MATCHMAKING": {"group":"GAMEPLAY","label_fr":"Matchmaking","criticality":"CORE"},
-    "PARTIES_FRIENDS": {"group":"SOCIAL","label_fr":"Groupes et amis","criticality":"HIGH"},
-    "VOICE_CHAT": {"group":"SOCIAL","label_fr":"Chat vocal","criticality":"MEDIUM"},
-    "ITEM_SHOP": {"group":"COMMERCE","label_fr":"Boutique d'objets","criticality":"MEDIUM"},
-    "PURCHASES": {"group":"COMMERCE","label_fr":"Achats / paiements","criticality":"HIGH"},
-    "STATS_LEADERBOARDS": {"group":"GAMEPLAY","label_fr":"Stats et classements","criticality":"LOW"},
-    "CREATIVE_UEFN": {"group":"CREATOR","label_fr":"Créatif / UEFN","criticality":"HIGH"},
-    "COMPETITIVE": {"group":"COMPETITIVE","label_fr":"Services compétitifs","criticality":"HIGH"},
-    "WEBSITE_API": {"group":"WEB","label_fr":"Sites et API Fortnite","criticality":"LOW"}
+    "FORTNITE_GAME_SERVICES": {
+      "group": "GAMEPLAY",
+      "label_fr": "Services de jeu Fortnite",
+      "criticality": "CORE"
+    },
+    "LOGIN": {
+      "group": "ACCOUNT",
+      "label_fr": "Connexion",
+      "criticality": "CORE"
+    },
+    "MATCHMAKING": {
+      "group": "GAMEPLAY",
+      "label_fr": "Matchmaking",
+      "criticality": "CORE"
+    },
+    "PARTIES_FRIENDS": {
+      "group": "SOCIAL",
+      "label_fr": "Groupes et amis",
+      "criticality": "HIGH"
+    },
+    "VOICE_CHAT": {
+      "group": "SOCIAL",
+      "label_fr": "Chat vocal",
+      "criticality": "MEDIUM"
+    },
+    "ITEM_SHOP": {
+      "group": "COMMERCE",
+      "label_fr": "Boutique d'objets",
+      "criticality": "MEDIUM"
+    },
+    "PURCHASES": {
+      "group": "COMMERCE",
+      "label_fr": "Achats / paiements",
+      "criticality": "HIGH"
+    },
+    "STATS_LEADERBOARDS": {
+      "group": "GAMEPLAY",
+      "label_fr": "Stats et classements",
+      "criticality": "LOW"
+    },
+    "CREATIVE_UEFN": {
+      "group": "CREATOR",
+      "label_fr": "Créatif / UEFN",
+      "criticality": "HIGH"
+    },
+    "COMPETITIVE": {
+      "group": "COMPETITIVE",
+      "label_fr": "Services compétitifs",
+      "criticality": "HIGH"
+    },
+    "WEBSITE_API": {
+      "group": "WEB",
+      "label_fr": "Sites et API Fortnite",
+      "criticality": "LOW"
+    }
   },
-  "component_groups": ["GAMEPLAY","ACCOUNT","SOCIAL","COMMERCE","CREATOR","COMPETITIVE","WEB"],
-  "official_impact_levels": ["MINOR","PARTIAL","MAJOR","TOTAL","UNSPECIFIED"],
+  "component_groups": [
+    "GAMEPLAY",
+    "ACCOUNT",
+    "SOCIAL",
+    "COMMERCE",
+    "CREATOR",
+    "COMPETITIVE",
+    "WEB"
+  ],
+  "official_impact_levels": [
+    "MINOR",
+    "PARTIAL",
+    "MAJOR",
+    "TOTAL",
+    "UNSPECIFIED"
+  ],
   "identity_policy": {
     "primary_key": "service_event_id",
     "preferred_external_key": "epic_incident_id",
-    "dedupe_order": ["exact epic_incident_id","exact canonical_source_url incident identifier","same kind + overlapping official time window + materially same affected component set","manual review required"],
-    "fingerprint_fields": ["kind","scheduled_start_at_or_actual_start_at","sorted_affected_component_ids","epic_incident_id"],
+    "dedupe_order": [
+      "exact epic_incident_id",
+      "exact canonical_source_url incident identifier",
+      "same kind + overlapping official time window + materially same affected component set",
+      "manual review required"
+    ],
+    "fingerprint_fields": [
+      "kind",
+      "scheduled_start_at_or_actual_start_at",
+      "sorted_affected_component_ids",
+      "epic_incident_id"
+    ],
     "alias_ids": "Store prior/external aliases; never create a second event merely because Epic changes the incident title or URL slug.",
     "split_merge_guard": "One Epic incident affecting many components remains one service event. Distinct Epic incident records remain separate unless Epic explicitly merges them."
   },
   "timing_model": {
-    "fields": ["announced_at","scheduled_start_at","actual_start_at","expected_end_at","expected_end_updated_at","recovery_started_at","actual_end_at","source_timezone"],
-    "precision": ["EXACT","WINDOW","DATE_ONLY","UNKNOWN"],
+    "fields": [
+      "announced_at",
+      "scheduled_start_at",
+      "actual_start_at",
+      "expected_end_at",
+      "expected_end_updated_at",
+      "recovery_started_at",
+      "actual_end_at",
+      "source_timezone"
+    ],
+    "precision": [
+      "EXACT",
+      "WINDOW",
+      "DATE_ONLY",
+      "UNKNOWN"
+    ],
     "expected_end_rule": "expected_end_at may be stored only when an authorized source explicitly publishes or updates it.",
     "extension_rule": "EXTENDED requires explicit official extension/window change. Passage of time alone is never evidence.",
-    "duration_metrics": ["announcement_lead_seconds","actual_downtime_seconds","recovery_phase_seconds"]
+    "duration_metrics": [
+      "announcement_lead_seconds",
+      "actual_downtime_seconds",
+      "recovery_phase_seconds"
+    ]
   },
   "component_snapshot_schema": {
-    "required": ["component_id","status"],
-    "optional": ["provider_component_name","impact_note","source_id","source_url","observed_at"],
+    "required": [
+      "component_id",
+      "status"
+    ],
+    "optional": [
+      "provider_component_name",
+      "impact_note",
+      "source_id",
+      "source_url",
+      "observed_at"
+    ],
     "rule": "A global canonical state never erases per-component differences."
   },
   "internal_triage": {
-    "actionability_levels": ["NONE","LOW","MEDIUM","HIGH","CRITICAL"],
-    "score_range": [0,100],
+    "actionability_levels": [
+      "NONE",
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL"
+    ],
+    "score_range": [
+      0,
+      100
+    ],
     "score_is_official": false,
-    "inputs": ["kind","provider_impact","component criticality","number of core components affected","scheduled vs unplanned","known duration/window","proximity to linked season/live/competitive event","France/EU relevance"],
-    "example_rules": ["LOGIN or MATCHMAKING MAJOR_OUTAGE materially increases actionability.","A WEBSITE_API-only degradation remains low unless it blocks a directly relevant action.","A scheduled season-launch downtime with exact start may be highly actionable even before impact begins."]
+    "inputs": [
+      "kind",
+      "provider_impact",
+      "component criticality",
+      "number of core components affected",
+      "scheduled vs unplanned",
+      "known duration/window",
+      "proximity to linked season/live/competitive event",
+      "France/EU relevance"
+    ],
+    "example_rules": [
+      "LOGIN or MATCHMAKING MAJOR_OUTAGE materially increases actionability.",
+      "A WEBSITE_API-only degradation remains low unless it blocks a directly relevant action.",
+      "A scheduled season-launch downtime with exact start may be highly actionable even before impact begins."
+    ]
   },
-  "relation_types": ["SEASON_LAUNCH","PATCH_DEPLOYMENT","LIVE_EVENT_PREP","COMPETITIVE_MAINTENANCE","PLATFORM_MAINTENANCE","UNRELATED_OR_UNKNOWN"],
+  "relation_types": [
+    "SEASON_LAUNCH",
+    "PATCH_DEPLOYMENT",
+    "LIVE_EVENT_PREP",
+    "COMPETITIVE_MAINTENANCE",
+    "PLATFORM_MAINTENANCE",
+    "UNRELATED_OR_UNKNOWN"
+  ],
   "relation_policy": {
     "season_launch": "Epic Status confirms service facts; season_id/related_event_uid require an authorized Fortnite content source explicitly tying the downtime to that season.",
     "patch": "patch_version requires an official patch/update reference; timing coincidence is insufficient.",
     "live_event": "Link only when official communication associates downtime with the live event.",
     "competitive": "Link only when Fortnite Competitive/Epic Status explicitly establishes tournament-related maintenance or service impact.",
-    "relation_confidence": ["EXPLICIT","STRONG_OFFICIAL_CROSS_REFERENCE","UNKNOWN"]
+    "relation_confidence": [
+      "EXPLICIT",
+      "STRONG_OFFICIAL_CROSS_REFERENCE",
+      "UNKNOWN"
+    ]
   },
   "entry_schema": {
-    "required": ["service_event_id","kind","state","source_id","canonical_source_url","first_seen_at","last_changed_at","component_states","history"],
-    "identity": ["service_event_id","epic_incident_id","external_alias_ids","calendar_uid","fingerprint"],
-    "provider_state": ["provider_phase","provider_impact","provider_title","provider_message_hash"],
-    "timing": ["announced_at","scheduled_start_at","actual_start_at","expected_end_at","expected_end_updated_at","recovery_started_at","actual_end_at","source_timezone","timing_precision"],
-    "impact": ["component_states","affected_regions","affected_platforms","internal_actionability","internal_priority_score"],
-    "linkage": ["relation_type","relation_confidence","related_event_uid","related_candidate_id","group_id","patch_version","season_id","relation_source_id","relation_source_url"],
-    "calendar_projection": ["calendar_status","calendar_promoted_at","calendar_last_synced_at","calendar_uid"],
-    "audit": ["previous_state","evidence_grade","confidence","last_verified_at","extension_count","notified_transition_keys","history"]
+    "required": [
+      "service_event_id",
+      "kind",
+      "state",
+      "source_id",
+      "canonical_source_url",
+      "first_seen_at",
+      "last_changed_at",
+      "component_states",
+      "history"
+    ],
+    "identity": [
+      "service_event_id",
+      "epic_incident_id",
+      "external_alias_ids",
+      "calendar_uid",
+      "fingerprint"
+    ],
+    "provider_state": [
+      "provider_phase",
+      "provider_impact",
+      "provider_title",
+      "provider_message_hash"
+    ],
+    "timing": [
+      "announced_at",
+      "scheduled_start_at",
+      "actual_start_at",
+      "expected_end_at",
+      "expected_end_updated_at",
+      "recovery_started_at",
+      "actual_end_at",
+      "source_timezone",
+      "timing_precision"
+    ],
+    "impact": [
+      "component_states",
+      "affected_regions",
+      "affected_platforms",
+      "internal_actionability",
+      "internal_priority_score"
+    ],
+    "linkage": [
+      "relation_type",
+      "relation_confidence",
+      "related_event_uid",
+      "related_candidate_id",
+      "group_id",
+      "patch_version",
+      "season_id",
+      "relation_source_id",
+      "relation_source_url"
+    ],
+    "calendar_projection": [
+      "calendar_status",
+      "calendar_promoted_at",
+      "calendar_last_synced_at",
+      "calendar_uid"
+    ],
+    "audit": [
+      "previous_state",
+      "evidence_grade",
+      "confidence",
+      "last_verified_at",
+      "extension_count",
+      "notified_transition_keys",
+      "history"
+    ]
   },
   "history_event_schema": {
-    "required": ["at","event_type","source_id","source_url"],
-    "event_types": ["CREATED","STATE_TRANSITION","PROVIDER_PHASE_CHANGED","TIMING_CHANGED","COMPONENT_STATUS_CHANGED","IMPACT_CHANGED","RELATION_ADDED","RELATION_CHANGED","CALENDAR_PROMOTED","CALENDAR_UPDATED","NOTIFICATION_SENT","CORRECTION"],
-    "optional": ["from","to","component_id","old_value","new_value","expected_end_at","note","change_hash"]
+    "required": [
+      "at",
+      "event_type",
+      "source_id",
+      "source_url"
+    ],
+    "event_types": [
+      "CREATED",
+      "STATE_TRANSITION",
+      "PROVIDER_PHASE_CHANGED",
+      "TIMING_CHANGED",
+      "COMPONENT_STATUS_CHANGED",
+      "IMPACT_CHANGED",
+      "RELATION_ADDED",
+      "RELATION_CHANGED",
+      "CALENDAR_PROMOTED",
+      "CALENDAR_UPDATED",
+      "NOTIFICATION_SENT",
+      "CORRECTION"
+    ],
+    "optional": [
+      "from",
+      "to",
+      "component_id",
+      "old_value",
+      "new_value",
+      "expected_end_at",
+      "note",
+      "change_hash"
+    ]
   },
   "calendar_policy": {
-    "target_feeds": ["calendars/fortnite-updates-france.ics","calendars/fortnite-paris.ics"],
+    "target_feeds": [
+      "calendars/fortnite-updates-france.ics",
+      "calendars/fortnite-paris.ics"
+    ],
     "scheduled_maintenance": "Promote when official start/date/time or actionable window is published.",
     "unplanned_incident": "Ledger-only by default. Promote only when a published recovery/maintenance window exists, impact is MAJOR/TOTAL and prolonged enough that calendar visibility adds planning value, or the incident materially threatens a linked high-priority Fortnite event.",
-    "do_not_promote": ["brief component-only blip","resolved incident with no remaining planning value","status-page wording change with no business impact"],
+    "do_not_promote": [
+      "brief component-only blip",
+      "resolved incident with no remaining planning value",
+      "status-page wording change with no business impact"
+    ],
     "uid_pattern": "fortnite-service-<stable-service-event-id>@openai",
     "event_type": "SERVICE_DOWNTIME",
     "same_uid_on_transition": true,
     "dtstart_policy": "Use official scheduled start for planned maintenance; for promoted unplanned incidents use official actual start only if known precisely.",
     "dtend_policy": "Use only official expected end/window. Never infer duration.",
     "resolved_policy": "Keep same UID and audit history; remove future alarms. Do not delete merely because resolved.",
-    "ics_properties": ["X-FORTNITE-SERVICE-EVENT-ID","X-FORTNITE-SERVICE-KIND","X-FORTNITE-SERVICE-STATE","X-FORTNITE-SERVICE-PROVIDER-PHASE","X-FORTNITE-SERVICE-IMPACT","X-FORTNITE-SERVICE-ACTIONABILITY","X-FORTNITE-AFFECTED-SERVICE","X-FORTNITE-SERVICE-SOURCE-ID","X-FORTNITE-SERVICE-RELATION-TYPE","X-FORTNITE-PATCH-VERSION","X-FORTNITE-SEASON"],
+    "ics_properties": [
+      "X-FORTNITE-SERVICE-EVENT-ID",
+      "X-FORTNITE-SERVICE-KIND",
+      "X-FORTNITE-SERVICE-STATE",
+      "X-FORTNITE-SERVICE-PROVIDER-PHASE",
+      "X-FORTNITE-SERVICE-IMPACT",
+      "X-FORTNITE-SERVICE-ACTIONABILITY",
+      "X-FORTNITE-AFFECTED-SERVICE",
+      "X-FORTNITE-SERVICE-SOURCE-ID",
+      "X-FORTNITE-SERVICE-RELATION-TYPE",
+      "X-FORTNITE-PATCH-VERSION",
+      "X-FORTNITE-SEASON"
+    ],
     "sequence_rule": "Increment only when the projected VEVENT business data changes. Ledger-only verification, internal score changes or serialization-only maintenance do not increment SEQUENCE."
   },
   "notification_policy": {
-    "quiet_hours": {"timezone":"Europe/Paris","start":"23:00","end":"08:00","urgent_exception":"TOTAL/MAJOR unplanned outage, linked live event/competition at immediate risk, or scheduled downtime starting within 2 hours."},
+    "quiet_hours": {
+      "timezone": "Europe/Paris",
+      "start": "23:00",
+      "end": "08:00",
+      "urgent_exception": "TOTAL/MAJOR unplanned outage, linked live event/competition at immediate risk, or scheduled downtime starting within 2 hours."
+    },
     "DOWNTIME_ANNOUNCED": "Notify once when an actionable scheduled start/window is newly published, especially for season launch, major patch or live event.",
     "STARTED": "Notify for MAJOR/TOTAL, core LOGIN/MATCHMAKING impact, or a linked high-priority event; otherwise update silently.",
     "EXTENDED": "Notify once per materially new official extension/window update. Never infer from elapsed time.",
@@ -137,8 +417,23 @@
     "component_failure": "One failed component does not imply TOTAL unless provider evidence supports total service impact.",
     "title_change": "Provider title edits do not create a new service event."
   },
-  "retention_policy": {"resolved_active_days":30,"archive_after_days":30,"delete_history":false,"archive_rule":"Resolved/cancelled records may later move to a service archive while preserving service_event_id, metrics, relations and full material history. Never recycle IDs."},
-  "metrics_policy": {"compute_only_when_inputs_known":true,"metrics":["announcement_lead_seconds","actual_downtime_seconds","recovery_phase_seconds","extension_count","affected_core_component_count"],"no_fake_precision":"Do not compute durations from DATE_ONLY or unknown timestamps."},
+  "retention_policy": {
+    "resolved_active_days": 30,
+    "archive_after_days": 30,
+    "delete_history": false,
+    "archive_rule": "Resolved/cancelled records may later move to a service archive while preserving service_event_id, metrics, relations and full material history. Never recycle IDs."
+  },
+  "metrics_policy": {
+    "compute_only_when_inputs_known": true,
+    "metrics": [
+      "announcement_lead_seconds",
+      "actual_downtime_seconds",
+      "recovery_phase_seconds",
+      "extension_count",
+      "affected_core_component_count"
+    ],
+    "no_fake_precision": "Do not compute durations from DATE_ONLY or unknown timestamps."
+  },
   "entries": [
     {
       "service_event_id": "epic-fortnite-v42-00-20260820",
@@ -147,12 +442,12 @@
       "calendar_uid": "fortnite-service-v42-00-20260820@openai",
       "fingerprint": "epic:b0jf1mxvlc2l",
       "kind": "SCHEDULED_MAINTENANCE",
-      "state": "STARTED",
+      "state": "RESOLVED",
       "source_id": "epic_status",
       "canonical_source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
       "first_seen_at": "2026-08-20T00:12:02Z",
-      "last_changed_at": "2026-08-20T06:00:11Z",
-      "provider_phase": "UNKNOWN",
+      "last_changed_at": "2026-08-20T11:31:00Z",
+      "provider_phase": "RESOLVED",
       "provider_impact": "UNSPECIFIED",
       "provider_title": "Fortnite: Downtime for v42.00 Update",
       "provider_message_hash": null,
@@ -162,23 +457,74 @@
       "expected_end_at": "2026-08-20T11:00:00Z",
       "expected_end_updated_at": "2026-08-19T22:30:00Z",
       "recovery_started_at": null,
-      "actual_end_at": null,
+      "actual_end_at": "2026-08-20T11:31:00Z",
       "source_timezone": "UTC",
       "timing_precision": "EXACT",
       "matchmaking_disabled_at": "2026-08-20T05:30:00Z",
       "component_states": [
-        {"component_id":"FORTNITE_GAME_SERVICES","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"LOGIN","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"PARTIES_FRIENDS","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"VOICE_CHAT","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"MATCHMAKING","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress; matchmaking was scheduled to be disabled at 05:30 UTC.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"STATS_LEADERBOARDS","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"},
-        {"component_id":"ITEM_SHOP","status":"UNDER_MAINTENANCE","impact_note":"Epic Status reports scheduled maintenance in progress.","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","observed_at":"2026-08-20T06:00:11Z"}
+        {
+          "component_id": "FORTNITE_GAME_SERVICES",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "LOGIN",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "PARTIES_FRIENDS",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "VOICE_CHAT",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "MATCHMAKING",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "STATS_LEADERBOARDS",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        },
+        {
+          "component_id": "ITEM_SHOP",
+          "status": "OPERATIONAL",
+          "impact_note": "Epic Status reports the scheduled v42.00 maintenance completed; Fortnite components are operational.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "observed_at": "2026-08-20T11:31:00Z"
+        }
       ],
-      "affected_regions": ["GLOBAL"],
+      "affected_regions": [
+        "GLOBAL"
+      ],
       "affected_platforms": [],
-      "internal_actionability": "HIGH",
-      "internal_priority_score": 85,
+      "internal_actionability": "NONE",
+      "internal_priority_score": 0,
       "relation_type": "PATCH_DEPLOYMENT",
       "relation_confidence": "EXPLICIT",
       "related_event_uid": null,
@@ -191,24 +537,101 @@
       "calendar_status": "PROMOTED",
       "calendar_promoted_at": "2026-08-20T00:12:02Z",
       "calendar_last_synced_at": "2026-08-20T06:00:11Z",
-      "previous_state": "DOWNTIME_ANNOUNCED",
+      "previous_state": "STARTED",
       "evidence_grade": "A",
       "confidence": "OFFICIAL_EXACT",
-      "last_verified_at": "2026-08-20T06:00:11Z",
+      "last_verified_at": "2026-08-20T11:31:00Z",
       "extension_count": 0,
       "notified_transition_keys": [],
       "history": [
-        {"at":"2026-08-20T00:12:02Z","event_type":"CREATED","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","note":"Epic scheduled Fortnite v42.00 downtime for 06:00–11:00 UTC and announced matchmaking disablement 30 minutes before start."},
-        {"at":"2026-08-20T00:12:02Z","event_type":"RELATION_ADDED","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","note":"PATCH_DEPLOYMENT v42.00 is explicit in the Epic Status title; no season_id is inferred."},
-        {"at":"2026-08-20T00:12:02Z","event_type":"CALENDAR_PROMOTED","source_id":"epic_status","source_url":"https://status.epicgames.com/incidents/b0jf1mxvlc2l","note":"Exact actionable downtime window projected to updates and global calendars."},
-        {"at":"2026-08-20T06:00:11Z","event_type":"STATE_TRANSITION","source_id":"epic_status","source_url":"https://status.epicgames.com/api/v2/scheduled-maintenances.json","from":"DOWNTIME_ANNOUNCED","to":"STARTED","note":"Epic Status marked v42.00 maintenance in progress at 06:00:11 UTC; mapped Fortnite core components are under maintenance. The published 11:00 UTC expected end remains unchanged and is not treated as an extension."},
-        {"at":"2026-08-20T06:00:11Z","event_type":"CALENDAR_UPDATED","source_id":"epic_status","source_url":"https://status.epicgames.com/api/v2/scheduled-maintenances.json","note":"Projected service state changed from announced to in progress while retaining the same UID and maintenance window."}
+        {
+          "at": "2026-08-20T00:12:02Z",
+          "event_type": "CREATED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "note": "Epic scheduled Fortnite v42.00 downtime for 06:00–11:00 UTC and announced matchmaking disablement 30 minutes before start."
+        },
+        {
+          "at": "2026-08-20T00:12:02Z",
+          "event_type": "RELATION_ADDED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "note": "PATCH_DEPLOYMENT v42.00 is explicit in the Epic Status title; no season_id is inferred."
+        },
+        {
+          "at": "2026-08-20T00:12:02Z",
+          "event_type": "CALENDAR_PROMOTED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "note": "Exact actionable downtime window projected to updates and global calendars."
+        },
+        {
+          "at": "2026-08-20T06:00:11Z",
+          "event_type": "STATE_TRANSITION",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/api/v2/scheduled-maintenances.json",
+          "from": "DOWNTIME_ANNOUNCED",
+          "to": "STARTED",
+          "note": "Epic Status marked v42.00 maintenance in progress at 06:00:11 UTC; mapped Fortnite core components are under maintenance. The published 11:00 UTC expected end remains unchanged and is not treated as an extension."
+        },
+        {
+          "at": "2026-08-20T06:00:11Z",
+          "event_type": "CALENDAR_UPDATED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/api/v2/scheduled-maintenances.json",
+          "note": "Projected service state changed from announced to in progress while retaining the same UID and maintenance window."
+        },
+        {
+          "at": "2026-08-20T11:31:00Z",
+          "event_type": "STATE_TRANSITION",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "from": "STARTED",
+          "to": "RESOLVED",
+          "note": "Epic Status marked Fortnite v42.00 scheduled maintenance completed at 11:31 UTC."
+        },
+        {
+          "at": "2026-08-20T11:31:00Z",
+          "event_type": "TIMING_CHANGED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/b0jf1mxvlc2l",
+          "old_value": null,
+          "new_value": "2026-08-20T11:31:00Z",
+          "note": "Official actual completion time recorded."
+        }
       ]
     }
   ],
   "watch_targets": [
-    {"watch_id":"fortnite-next-br-season-launch-downtime","related_candidate_id":"fortnite-next-br-season-end-summer-2026","state":"WATCHING","source_ids":["epic_status","fortnite_news","fortnite_battle_pass"],"promotion_rule":"Create a service entry only when Epic publishes an actual maintenance/incident record or actionable downtime window. Link it to the next season only with official content evidence."},
-    {"watch_id":"fortnite-live-event-service-risk","related_candidate_id":"fortnite-next-live-event","state":"WATCHING","source_ids":["epic_status","fortnite_news"],"promotion_rule":"When an official live event is dated, watch for service maintenance or incidents that officially affect its availability; keep service and live-event UIDs distinct."},
-    {"watch_id":"fortnite-competitive-major-service-risk","state":"WATCHING","source_ids":["epic_status","fortnite_competitive"],"promotion_rule":"Track official service incidents that materially affect a major EU/global competitive session; do not infer competitive linkage from generic matchmaking issues without official cross-reference."}
+    {
+      "watch_id": "fortnite-next-br-season-launch-downtime",
+      "related_candidate_id": "fortnite-next-br-season-end-summer-2026",
+      "state": "WATCHING",
+      "source_ids": [
+        "epic_status",
+        "fortnite_news",
+        "fortnite_battle_pass"
+      ],
+      "promotion_rule": "Create a service entry only when Epic publishes an actual maintenance/incident record or actionable downtime window. Link it to the next season only with official content evidence."
+    },
+    {
+      "watch_id": "fortnite-live-event-service-risk",
+      "related_candidate_id": "fortnite-next-live-event",
+      "state": "WATCHING",
+      "source_ids": [
+        "epic_status",
+        "fortnite_news"
+      ],
+      "promotion_rule": "When an official live event is dated, watch for service maintenance or incidents that officially affect its availability; keep service and live-event UIDs distinct."
+    },
+    {
+      "watch_id": "fortnite-competitive-major-service-risk",
+      "state": "WATCHING",
+      "source_ids": [
+        "epic_status",
+        "fortnite_competitive"
+      ],
+      "promotion_rule": "Track official service incidents that materially affect a major EU/global competitive session; do not infer competitive linkage from generic matchmaking issues without official cross-reference."
+    }
   ]
 }
