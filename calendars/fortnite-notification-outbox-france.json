@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-08-20T04:07:38Z",
+  "updated_at": "2026-08-20T06:10:17Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -165,6 +165,15 @@
       "at": "2026-08-20T04:07:38Z",
       "reservation_id": "nrs_3404b3a87a1aaffa557e75e0",
       "note": "Reserved only after the previously planned maintenance notice became due inside the policy's <2h urgent window. This reservation consumes the key even if final delivery acknowledgement cannot be persisted."
+    },
+    {
+      "delivery_event_id": "nde_e66f3a64e273688b0d98c133",
+      "intent_id": "nti_388d1d8e43a4a86038196741",
+      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
+      "state": "UNKNOWN_DELIVERY",
+      "at": "2026-08-20T06:10:17Z",
+      "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
+      "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
     }
   ],
   "consumed_keys": {
@@ -180,8 +189,8 @@
     },
     "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a": {
       "intent_id": "nti_388d1d8e43a4a86038196741",
-      "state": "RESERVED",
-      "last_event_id": "nde_5d6874b5748cd1e3cde167d3"
+      "state": "UNKNOWN_DELIVERY",
+      "last_event_id": "nde_e66f3a64e273688b0d98c133"
     }
   },
   "group_index": {
@@ -223,6 +232,12 @@
       "type": "NOTIFICATION_RESERVED",
       "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
       "note": "Previously planned v42.00 downtime notice became due inside the urgent window and was reserved exactly once after a fresh outbox read."
+    },
+    {
+      "at": "2026-08-20T06:10:17Z",
+      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
+      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
+      "note": "Stale v42.00 maintenance reservation reconciled to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
     }
   ]
 }
