@@ -57,6 +57,102 @@ DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:fortnite-c7s4-override-launch-bonus-20260828@openai
+DTSTAMP:20260820T070853Z
+LAST-MODIFIED:20260820T070853Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:BUY_PASS
+X-FORTNITE-EVENT-TYPE:PASS_BONUS_DEADLINE
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-CHAPTER:CHAPTER_7
+X-FORTNITE-SEASON:C7S4
+X-FORTNITE-THEME:BATTLE_PASS
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_news
+X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-FIRST-ADDED-AT:20260820T070853Z
+X-FORTNITE-NEW-UNTIL:20260825T070853Z
+DTSTART;TZID=Europe/Paris:20260828T055900
+DTEND;TZID=Europe/Paris:20260828T060000
+SUMMARY:⭐ ✅ 🆕 🎁 Bonus lancement Passe Override — dernière limi
+ te
+DESCRIPTION:Priorité : ⭐ Important — limite officielle du bonus de lan
+ cement du Passe de combat Override.\nFortnite indique qu’obtenir le Pass
+ e avant le 27 août à 23:59 ET donne la tenue Infiltrator Grace Crowne et
+  ses accessoires. Cette échéance correspond au 28 août à 05:59 heure d
+ e Paris.\n⚠️ Cette heure concerne uniquement l’éligibilité à ce b
+ onus de lancement : elle ne constitue ni la fermeture générale d’achat
+  du Passe\, ni la fin de progression\, ni la fin du Passe.\nSource : https
+ ://www.fortnite.com/news/fortnite-override-break-the-rules-change-the-game
+URL:https://www.fortnite.com/news/fortnite-override-break-the-rules-change-
+ the-game
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de com
+ bat,Bonus
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎁 Bonus de lancement Override : plus que 24 h pour obtenir l
+ e Passe avant la limite
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:🎁 Bonus de lancement Override : limite dans 2 h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-c7s4-override-battle-pass-end-20261101@openai
+DTSTAMP:20260820T070853Z
+LAST-MODIFIED:20260820T070853Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:COMPLETE
+X-FORTNITE-EVENT-TYPE:PASS_END
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-CHAPTER:CHAPTER_7
+X-FORTNITE-SEASON:C7S4
+X-FORTNITE-THEME:BATTLE_PASS
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_battle_pass
+X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-TIME-PRECISION:DATE_ONLY
+X-FORTNITE-FIRST-ADDED-AT:20260820T070853Z
+X-FORTNITE-NEW-UNTIL:20260825T070853Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 4 : O
+ verride
+DESCRIPTION:Priorité : ⭐ Important — la page officielle Battle Pass in
+ dique que le Passe Override du Chapitre 7 Saison 4 se termine le 1er novem
+ bre 2026 en heure de l’Est.\nLe Passe est affiché comme disponible pour
+  800 V-Bucks.\n⚠️ Aucune heure exacte de fin n’est publiée : cette 
+ date reste DATE_ONLY et n’est pas convertie en heure française. Elle ne
+  prouve pas non plus l’heure de fin de la saison Battle Royale\, un rese
+ t Ranked ou le lancement d’une saison suivante.\nSource : https://www.fo
+ rtnite.com/battle-pass?lang=en-US
+URL:https://www.fortnite.com/battle-pass?lang=en-US
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de com
+ bat
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Le Passe de combat Override se termine dans 7 jours selon l
+ a date officielle ET
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Le Passe de combat Override se termine demain selon la date
+  officielle ET
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:fortnite-service-v42-00-20260820@openai
 DTSTAMP:20260820T060011Z
 LAST-MODIFIED:20260820T060011Z
@@ -85,16 +181,17 @@ X-FORTNITE-NEW-UNTIL:20260825T001202Z
 DTSTART;TZID=Europe/Paris:20260820T080000
 DTEND;TZID=Europe/Paris:20260820T130000
 SUMMARY:⭐ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — en cours
-DESCRIPTION:Priorité : ⭐ Important — maintenance v42.00 officiellement 
- en cours depuis 08:00 heure de Paris.\nEpic Status a marqué la maintenance
-  « in progress » à 06:00:11 UTC ; Game Services, Login, Parties/Friends/
- Messaging, Voice Chat, Matchmaking, Stats/Leaderboards, Item Shop et Fortn
- ite Crew sont sous maintenance, ainsi que les matchmakings LEGO Fortnite, 
- Fortnite Festival et Rocket Racing.\nLa fenêtre officielle reste 08:00–
- 13:00 heure de Paris ; aucune prolongation n'est déduite tant qu'Epic ne la
-  publie pas.\nAucun lien avec une nouvelle saison Battle Royale n'est affir
- mé ici : Epic Status confirme explicitement la v42.00, mais pas un season_
- id.\nSource : https://status.epicgames.com/incidents/b0jf1mxvlc2l
+DESCRIPTION:Priorité : ⭐ Important — maintenance v42.00 officiellement
+  en cours depuis 08:00 heure de Paris.\nEpic Status a marqué la maintenan
+ ce « in progress » à 06:00:11 UTC \; Game Services\, Login\, Parties/Fr
+ iends/Messaging\, Voice Chat\, Matchmaking\, Stats/Leaderboards\, Item Sho
+ p et Fortnite Crew sont sous maintenance\, ainsi que les matchmakings LEGO
+  Fortnite\, Fortnite Festival et Rocket Racing.\nLa fenêtre officielle re
+ ste 08:00–13:00 heure de Paris \; aucune prolongation n'est déduite tan
+ t qu'Epic ne la publie pas.\nAucun lien avec une nouvelle saison Battle Ro
+ yale n'est affirmé ici : Epic Status confirme explicitement la v42.00\, m
+ ais pas un season_id.\nSource : https://status.epicgames.com/incidents/b0j
+ f1mxvlc2l
 URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
