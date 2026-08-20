@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-08-20T06:00:11Z",
+  "updated_at": "2026-08-20T06:10:17Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
@@ -45,6 +45,7 @@
     "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357"
   ],
   "unknown_delivery_keys": [
+    "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
     "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
     "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357"
   ],
@@ -54,6 +55,6 @@
     "subjects": 5,
     "notification_intents": 3,
     "consumed_notification_keys": 3,
-    "unknown_delivery": 2
+    "unknown_delivery": 3
   }
 }
