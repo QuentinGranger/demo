@@ -53,23 +53,24 @@ DTEND;VALUE=DATE:20260928
 SUMMARY:⭐ ✅ 🆕 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
 DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en 
- présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos, 12 parti
- es sur deux jours, 2 000 000 $ de dotation annoncée par Fortnite Competit
- ive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LIST
-  pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la lis
- te d'attente officielle précise que des billets peuvent redevenir disponi
- bles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Exper
- ience Package : prix affiché 324,70 € ; son bouton d'achat renvoie au m
- ême flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketmaster
-  indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche 14h
- 00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées comme 
- horaires salle ; la même page indique encore « Timing to follow », donc
-  elles ne sont pas présentées comme horaires officiels des parties FNCS.
- \n📍 Lotto Arena, Schijnpoortweg 119, Anvers, Belgique.\nRappels : J-30,
-  J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competitive/fncs-
- 2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/en/event/f
- ortnite-global-championship-2026-c1ed5ce1\nListe d'attente : https://www.t
- mnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&market=be
+ présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 part
+ ies sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Compet
+ itive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LI
+ ST pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la l
+ iste d'attente officielle précise que des billets peuvent redevenir dispo
+ nibles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Exp
+ erience Package : prix affiché 324\,70 € \; son bouton d'achat renvoie 
+ au même flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketma
+ ster indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche
+  14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées co
+ mme horaires salle \; la même page indique encore « Timing to follow »\
+ , donc elles ne sont pas présentées comme horaires officiels des parties
+  FNCS.\n📍 Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique.\nRappel
+ s : J-30\, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competi
+ tive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/
+ en/event/fortnite-global-championship-2026-c1ed5ce1\nListe d'attente : htt
+ ps://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&
+ market=be
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
 CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
  p,Europe
@@ -94,9 +95,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-reload-elite-ewc-paris-20260819@openai
-DTSTAMP:20260819T210330Z
-LAST-MODIFIED:20260819T210330Z
-SEQUENCE:2
+DTSTAMP:20260820T070853Z
+LAST-MODIFIED:20260820T070853Z
+SEQUENCE:3
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
@@ -114,8 +115,8 @@ X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
 X-FORTNITE-CANDIDATE-ID:fortnite-reload-elite-ewc-paris-2026
 X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-ewc-paris-2026
-X-FORTNITE-VENUE-ID:ewc_paris_2026_tba
-X-FORTNITE-LOCATION-PRECISION:CITY
+X-FORTNITE-VENUE-ID:ewc_paris_expo_porte_de_versailles
+X-FORTNITE-LOCATION-PRECISION:VENUE
 X-FORTNITE-ACCESS-PROFILE-ID:fortnite-access-ewc-paris-2026
 X-FORTNITE-ACCESS-STATE:INTEREST_PREREGISTRATION
 X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
@@ -124,32 +125,29 @@ X-FORTNITE-TICKET-SCOPE:EWC_PARIS_GENERAL
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T210330Z
-X-FORTNITE-UPDATE-UNTIL:20260822T210330Z
-X-FORTNITE-UPDATE-REASON:SOURCE_CORRECTION_TO_CURRENT_CHAMPIONSHIP_PARIS
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260820T051836Z
+X-FORTNITE-UPDATE-UNTIL:20260823T051836Z
+X-FORTNITE-UPDATE-REASON:VENUE_CONFIRMED_PARIS_EXPO
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
 SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
   — Paris
-LOCATION:Paris\, France
-DESCRIPTION:Priorité : ⭐ Important. Nouvelle correction officielle : la 
- page actuelle du Reload Elite Series Championship indique explicitement qu
- e les 40 meilleurs duos disputent le Championship à l'Esports World Cup 
- à Paris, France, du 19 au 22 août 2026, pour 1 000 000 $ US.\nEWC confir
- me séparément que l'événement 2026 a été relocalisé à Paris. Sa pa
- ge Paris actuelle propose seulement de s'inscrire pour être averti lorsqu
- e les billets seront disponibles : cette préinscription ne garantit pas l
- 'admission.\n⚠️ Des pages régionales de qualification conservent enco
- re un ancien texte mentionnant Riyad ; ce conflit reste dans l'historique,
-  mais les sources actuelles au niveau Championship + relocalisation EWC pi
- lotent l'état canonique.\n🎟️ Les anciens prix Riyad 219/471 SAR ne s
- ont donc plus présentés comme billets actifs de ce Championship.\n⚠️
-  Aucun horaire exact de match n'est ajouté depuis les fenêtres 22:00–2
- 1:59 affichées par Fortnite, traitées comme placeholders.\nSource Fortni
- te : https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&r
- egion=NAC\nSource EWC relocation : https://resources.esportsworldcup.com/e
- n/competitive-ops/articles/article\nPréinscription EWC Paris : https://ww
- w.signup.esportsworldcup.com/EWCPARIS26
+LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
+ \, 75015 Paris\, France
+DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
+ réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
+ août 2026\, pour 1 000 000 $ US.\n📍 Le registre physique EWC confirme 
+ désormais Paris Expo Porte de Versailles\, 1 Place de la Porte de Versail
+ les\, 75015 Paris comme site EWC 2026. Aucun hall\, stage ou point d'entr
+ ée Fortnite spécifique n'est affirmé tant qu'il n'est pas publié.\n
+ 🎟️ La page Paris suivie propose seulement une préinscription pour ê
+ tre averti lorsque les billets seront disponibles : cette préinscription 
+ ne garantit pas l'admission.\n⚠️ Les anciens prix Riyad 219/471 SAR re
+ stent historiques et ne sont pas présentés comme billets actifs de ce Ch
+ ampionship.\n⚠️ Aucun horaire exact de match n'est ajouté depuis des 
+ fenêtres techniques ambiguës.\nSource Fortnite : https://www.fortnite.co
+ m/competitive/events/TEST?round=Escargo_Day1&region=NAC\nPréinscription E
+ WC Paris : https://www.signup.esportsworldcup.com/EWCPARIS26
 URL:https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&reg
  ion=NAC
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
