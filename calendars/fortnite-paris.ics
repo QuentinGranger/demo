@@ -44,10 +44,8 @@ DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affich
   que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026
   en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas co
  nvertir cette date en heure française ni déduire l'heure de maintenance 
- ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale a
- nnoncée pour la fin de l'été reste en watchlist tant que sa date/heure 
- de lancement n'est pas officiellement publiée.\nSource : https://www.fort
- nite.com/battle-pass?lang=en-US
+ ou le lancement de la saison suivante.\nSource : https://www.fortnite.com/
+ battle-pass?lang=en-US
 URL:https://www.fortnite.com/battle-pass?lang=en-US
 CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de comb
  at
@@ -201,15 +199,11 @@ DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en
  erience Package : prix affiché 324\,70 € \; son bouton d'achat renvoie 
  au même flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketma
  ster indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche
-  14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont stockées co
- mme horaires salle \; la même page indique encore « Timing to follow »\
- , donc elles ne sont pas présentées comme horaires officiels des parties
-  FNCS.\n📍 Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique.\nRappel
- s : J-30\, J-7 et J-1.\nSource Fortnite : https://www.fortnite.com/competi
- tive/fncs-2026-overview?lang=fr\nBilletterie : https://www.lotto-arena.be/
- en/event/fortnite-global-championship-2026-c1ed5ce1\nListe d'attente : htt
- ps://www.tmnwe.com/tools/ventelister/show.php?event=6LA2609P-2024&l=en-be&
- market=be
+  14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont des horaires
+  salle\, pas des horaires officiels des parties FNCS.\n📍 Lotto Arena\, 
+ Schijnpoortweg 119\, Anvers\, Belgique.\nSource Fortnite : https://www.for
+ tnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://ww
+ w.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
 CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
  p,Europe
@@ -234,13 +228,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-reload-elite-ewc-paris-20260819@openai
-DTSTAMP:20260820T070853Z
-LAST-MODIFIED:20260820T070853Z
-SEQUENCE:3
+DTSTAMP:20260820T191024Z
+LAST-MODIFIED:20260820T191024Z
+SEQUENCE:4
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:REGISTER_INTEREST
+X-FORTNITE-ACTION:WATCH
 X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
 X-FORTNITE-SERIES:RELOAD_ELITE_SERIES
 X-FORTNITE-SERIES:EWC
@@ -257,16 +251,24 @@ X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-ewc-paris-2026
 X-FORTNITE-VENUE-ID:ewc_paris_expo_porte_de_versailles
 X-FORTNITE-LOCATION-PRECISION:VENUE
 X-FORTNITE-ACCESS-PROFILE-ID:fortnite-access-ewc-paris-2026
-X-FORTNITE-ACCESS-STATE:INTEREST_PREREGISTRATION
+X-FORTNITE-ACCESS-STATE:TICKET_REQUIRED
+X-FORTNITE-ADMISSION-MODE:MIXED
+X-FORTNITE-ACCESS-ACTION:WATCH
 X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
 X-FORTNITE-TICKET-STATUS:PREREGISTRATION
-X-FORTNITE-TICKET-SCOPE:EWC_PARIS_GENERAL
+X-FORTNITE-TICKET-SCOPE:EWC_PARIS_MIXED_SCOPES
+X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY
+ -EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
+X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=ANNOUNCED:Billet 
+ Fan Fest valide pour la journée — accès watch parties
+X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=ANNOUNCED;ACCESS=FAN_F
+ EST_DAY_TICKET:Watch parties Fortnite
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260820T051836Z
-X-FORTNITE-UPDATE-UNTIL:20260823T051836Z
-X-FORTNITE-UPDATE-REASON:VENUE_CONFIRMED_PARIS_EXPO
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260820T191024Z
+X-FORTNITE-UPDATE-UNTIL:20260823T191024Z
+X-FORTNITE-UPDATE-REASON:MAIN_STAGE_SOLD_OUT_WATCH_PARTY_ACCESS
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
 SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
@@ -275,18 +277,22 @@ LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
  \, 75015 Paris\, France
 DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
  réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
- août 2026\, pour 1 000 000 $ US.\n📍 Le registre physique EWC confirme 
- désormais Paris Expo Porte de Versailles\, 1 Place de la Porte de Versail
- les\, 75015 Paris comme site EWC 2026. Aucun hall\, stage ou point d'entr
- ée Fortnite spécifique n'est affirmé tant qu'il n'est pas publié.\n
- 🎟️ La page Paris suivie propose seulement une préinscription pour ê
- tre averti lorsque les billets seront disponibles : cette préinscription 
- ne garantit pas l'admission.\n⚠️ Les anciens prix Riyad 219/471 SAR re
- stent historiques et ne sont pas présentés comme billets actifs de ce Ch
- ampionship.\n⚠️ Aucun horaire exact de match n'est ajouté depuis des 
- fenêtres techniques ambiguës.\nSource Fortnite : https://www.fortnite.co
- m/competitive/events/TEST?round=Escargo_Day1&region=NAC\nPréinscription E
- WC Paris : https://www.signup.esportsworldcup.com/EWCPARIS26
+ août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Ver
+ sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun hall ou p
+ oint d'entrée Fortnite spécifique n'est affirmé.\n🎟️ Mise à jour 
+ accès : le guide officiel EWC indique que les billets de la scène princi
+ pale Fortnite sont déjà complets. Ce SOLD OUT est strictement limité à
+  la scène principale et ne signifie pas que tout l'EWC/Fan Fest est compl
+ et.\n👀 EWC indique aussi des watch parties Fortnite à travers le site\
+ , sur les Qiddiya City BattleGrounds stages. Pour y assister\, il faut un 
+ billet Fan Fest valide pour la journée. Le guide ne confirme pas le stock
+  actuel\, le prix\, les horaires exacts\, le hall ou l'entrée de ces bill
+ ets Fan Fest.\nℹ️ Le formulaire de préinscription EWC Paris reste un 
+ formulaire d'intérêt/notification et ne garantit pas l'admission.\n⚠
+ ️ Aucun horaire exact de match n'est ajouté depuis les fenêtres techni
+ ques ambiguës.\nSource Fortnite : https://www.fortnite.com/competitive/ev
+ ents/TEST?round=Escargo_Day1&region=NAC\nGuide officiel EWC : https://ewc-
+ web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guide
 URL:https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&reg
  ion=NAC
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
@@ -324,12 +330,12 @@ DTEND;TZID=Europe/Paris:20260820T133100
 SUMMARY:ℹ️ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — terminée
 DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite 
  v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 ao
- ût 2026 à 11:31 UTC, soit 13:31 heure de Paris.\nFortnite, Game Services
- , Login, Matchmaking, groupes/amis, chat vocal, stats/classements, boutiqu
- e et Fortnite Crew sont actuellement opérationnels sur Epic Status.\nLa f
- enêtre prévue se terminait à 13:00 à Paris ; l’heure 13:31 est l’h
- eure de fin réellement publiée, pas une estimation.\nSource : https://st
- atus.epicgames.com/incidents/b0jf1mxvlc2l
+ ût 2026 à 11:31 UTC\, soit 13:31 heure de Paris.\nFortnite\, Game Servic
+ es\, Login\, Matchmaking\, groupes/amis\, chat vocal\, stats/classements\,
+  boutique et Fortnite Crew sont actuellement opérationnels sur Epic Statu
+ s.\nLa fenêtre prévue se terminait à 13:00 à Paris \; l’heure 13:31 
+ est l’heure de fin réellement publiée\, pas une estimation.\nSource : 
+ https://status.epicgames.com/incidents/b0jf1mxvlc2l
 URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
