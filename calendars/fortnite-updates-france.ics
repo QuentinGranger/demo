@@ -56,4 +56,52 @@ DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date
  officielle ET — termine tes récompenses
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-service-v42-00-20260820@openai
+DTSTAMP:20260820T001202Z
+LAST-MODIFIED:20260820T001202Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:WAIT_UPDATE
+X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
+X-FORTNITE-SERVICE-EVENT-ID:epic-fortnite-v42-00-20260820
+X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
+X-FORTNITE-SERVICE-STATE:DOWNTIME_ANNOUNCED
+X-FORTNITE-SERVICE-PROVIDER-PHASE:SCHEDULED
+X-FORTNITE-SERVICE-IMPACT:UNSPECIFIED
+X-FORTNITE-SERVICE-ACTIONABILITY:HIGH
+X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,
+ Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
+X-FORTNITE-SERVICE-SOURCE-ID:epic_status
+X-FORTNITE-SERVICE-RELATION-TYPE:PATCH_DEPLOYMENT
+X-FORTNITE-PATCH-VERSION:42.00
+X-FORTNITE-MATCHMAKING-DISABLED-AT:20260820T073000
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-FIRST-ADDED-AT:20260820T001202Z
+X-FORTNITE-NEW-UNTIL:20260825T001202Z
+DTSTART;TZID=Europe/Paris:20260820T080000
+DTEND;TZID=Europe/Paris:20260820T130000
+SUMMARY:⭐ ✅ 🆕 🛠️ Maintenance Fortnite v42.00
+DESCRIPTION:Priorité : ⭐ Important — maintenance planifiée officielle p
+ our la mise à jour v42.00.\nEpic programme l'arrêt Fortnite le 20 août 2
+ 026 de 06:00 à 11:00 UTC, soit 08:00–13:00 à Paris.\n⚠️ Le matchmak
+ ing sera désactivé 30 minutes avant, à 07:30 heure de Paris.\nServices
+  Fortnite annoncés comme affectés : Game Services, Login, Parties/Friends
+ /Messaging, Voice Chat, Matchmaking, Stats/Leaderboards, Item Shop et Fortn
+ ite Crew ; les matchmakings LEGO Fortnite, Fortnite Festival et Rocket Raci
+ ng sont également concernés.\nAucun lien avec une nouvelle saison Battle
+  Royale n'est affirmé ici : Epic Status confirme explicitement la v42.00,
+  mais pas un season_id.\nSource : https://status.epicgames.com/incidents/b0
+ jf1mxvlc2l
+URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
+CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🛠️ Maintenance Fortnite v42.00 dans 1 h — matchmaking coupé
+  dès 07h30
+END:VALARM
+END:VEVENT
 END:VCALENDAR
