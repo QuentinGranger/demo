@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-08-20T04:07:38Z",
+  "updated_at": "2026-08-20T06:00:11Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
@@ -16,20 +16,20 @@
     "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": {"revision":2,"change_id":"chg_459f96bf21d0fddf1172fdb4"},
     "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": {"revision":2,"change_id":"chg_3126f15110f19dd7bd7f2fdd"},
     "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": {"revision":2,"change_id":"chg_751fca9c2d49858bf37af262"},
-    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": {"revision":1,"change_id":"chg_7fb18e60334eb95f298ab0d4"}
+    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": {"revision":2,"change_id":"chg_3082b9de725bc335d4cbdd2e"}
   },
   "by_domain": {
     "COMPETITIVE": ["chg_3126f15110f19dd7bd7f2fdd","chg_d7bb61401fb80414535e4338"],
     "PHYSICAL_ACCESS": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
     "PHYSICAL_EVENT": ["chg_ceb30c82d0bcb7360d8cf0a7","chg_e780bd0438e6866893b6797b"],
-    "SERVICE": ["chg_7fb18e60334eb95f298ab0d4"],
+    "SERVICE": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"],
     "TICKETING": ["chg_4d847a615cf7fd9ee9306579","chg_751fca9c2d49858bf37af262"]
   },
   "by_change_type": {
     "ACCESS_CHANGED": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
     "AVAILABILITY_CHANGED": ["chg_4d847a615cf7fd9ee9306579"],
     "LOCATION_CHANGED": ["chg_ceb30c82d0bcb7360d8cf0a7","chg_e780bd0438e6866893b6797b"],
-    "MAINTENANCE_CHANGED": ["chg_7fb18e60334eb95f298ab0d4"],
+    "MAINTENANCE_CHANGED": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"],
     "SOURCE_CORRECTION": ["chg_3126f15110f19dd7bd7f2fdd","chg_751fca9c2d49858bf37af262","chg_d7bb61401fb80414535e4338"]
   },
   "open_changes_by_subject": {
@@ -37,7 +37,7 @@
     "sub_5fc874a6de6d91552766641fb44c82716e06877593356d8814f9673d9ea54269": ["chg_459f96bf21d0fddf1172fdb4","chg_558e71ff655403f489e782fd"],
     "sub_7f4b951bbf1854304d18f761930c13b66830291b5b95b74552d7c93c8cb64b86": ["chg_3126f15110f19dd7bd7f2fdd","chg_d7bb61401fb80414535e4338"],
     "sub_835ce99cc240943376d74f6f30e7f46887fce7fc6ec745f2aa6a979e0cbc1b45": ["chg_4d847a615cf7fd9ee9306579","chg_751fca9c2d49858bf37af262"],
-    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": ["chg_7fb18e60334eb95f298ab0d4"]
+    "sub_c00882a2e94cff33aa6db7fea575b8544cd898b6942bf4f4c1e10977bab1e207": ["chg_3082b9de725bc335d4cbdd2e","chg_7fb18e60334eb95f298ab0d4"]
   },
   "consumed_notification_keys": [
     "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
@@ -50,7 +50,7 @@
   ],
   "pending_reconciliation": [],
   "stats": {
-    "changes": 9,
+    "changes": 10,
     "subjects": 5,
     "notification_intents": 3,
     "consumed_notification_keys": 3,
