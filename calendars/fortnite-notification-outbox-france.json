@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-08-20T06:10:17Z",
+  "updated_at": "2026-08-20T07:08:53Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -118,6 +118,23 @@
       "condition_snapshot": {"service_state":"DOWNTIME_ANNOUNCED","provider_phase":"SCHEDULED","scheduled_start_at":"2026-08-20T06:00:00Z","expected_end_at":"2026-08-20T11:00:00Z","matchmaking_disabled_at":"2026-08-20T05:30:00Z","patch_version":"42.00","within_urgent_window":true},
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
       "due_at": "2026-08-20T04:00:00Z"
+    },
+    {
+      "intent_id": "nti_26dfd133cfb3473e0515c046",
+      "notification_key": "ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266",
+      "change_ids": ["chg_78c3ab21d46e26a806366022", "chg_dab1f0de401485e121b950c6"],
+      "notice_kind": "FORTNITE_C7S4_OVERRIDE_OFFICIAL_AND_PASS_DEADLINES",
+      "audience_key": "user",
+      "channel_key": "chat",
+      "payload_fingerprint": "a908d4c81ad5f435704d2bd6cc21bdff80d4293aabe50ff4e4bfdb9487efd91f",
+      "render_version": "FORTNITE_ALERT_FR_V1",
+      "created_at": "2026-08-20T07:08:53Z",
+      "group_key": "grp_c687fd99accd95ab3187113683fa96955ca4d92729b8bf783d91ccab5f277899",
+      "subject_key": "fortnite-c7s4-override",
+      "locale": "fr-FR",
+      "payload_snapshot": "🎮 Fortnite officialise le Chapitre 7 Saison 4 : Override. Le Passe de combat Override est affiché à 800 V-Bucks et sa fin est fixée au 1er novembre 2026 en heure de l’Est, sans heure exacte publiée. Bonus de lancement : obtenir le Passe avant le 27 août à 23:59 ET, soit le 28 août à 05:59 à Paris, donne la tenue Infiltrator Grace Crowne et ses accessoires. La maintenance v42.00 étant toujours en cours, aucune heure de mise en ligne jouable de la saison n’est déduite.",
+      "condition_snapshot": {"season_id":"C7S4","season_name":"Override","battle_pass_active":true,"battle_pass_price_vbucks":800,"battle_pass_end_date":"2026-11-01","battle_pass_end_precision":"DATE_ONLY_ET","launch_week_bonus_deadline_paris":"2026-08-28T05:59:00+02:00","playable_start_time":"UNPUBLISHED"},
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
     }
   ],
   "delivery_events": [
@@ -158,7 +175,7 @@
       "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
     },
     {
-      "delivery_event_id": "nde_5d6874b5748cd1e3cde167d3",
+      "delivery_event_id": "nde_5d6874b5741c9af0b03ee3",
       "intent_id": "nti_388d1d8e43a4a86038196741",
       "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
       "state": "RESERVED",
@@ -174,70 +191,36 @@
       "at": "2026-08-20T06:10:17Z",
       "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
       "note": "Reservation exceeded the 30-minute stale threshold without a persisted SENT event. Key remains permanently consumed; no automatic replay is allowed."
+    },
+    {
+      "delivery_event_id": "nde_d871a9a797e77138a37b4da4",
+      "intent_id": "nti_26dfd133cfb3473e0515c046",
+      "notification_key": "ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266",
+      "state": "RESERVED",
+      "at": "2026-08-20T07:08:53Z",
+      "reservation_id": "nrs_3aadf740671189d2fc845b79",
+      "note": "Reserved after a fresh outbox read for the coalesced official C7S4 Override season identity and Battle Pass lifecycle/deadline update. This reservation consumes the key before user-visible emission."
     }
   ],
   "consumed_keys": {
-    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {
-      "intent_id": "nti_ed0b51ad60241c9af0b03ee3",
-      "state": "UNKNOWN_DELIVERY",
-      "last_event_id": "nde_ceb4c92a3df245c168b61717"
-    },
-    "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357": {
-      "intent_id": "nti_b5266718dc152ad854dd172f",
-      "state": "UNKNOWN_DELIVERY",
-      "last_event_id": "nde_536b63dd8c9ff552c7e16d41"
-    },
-    "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a": {
-      "intent_id": "nti_388d1d8e43a4a86038196741",
-      "state": "UNKNOWN_DELIVERY",
-      "last_event_id": "nde_e66f3a64e273688b0d98c133"
-    }
+    "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489": {"intent_id":"nti_ed0b51ad60241c9af0b03ee3","state":"UNKNOWN_DELIVERY","last_event_id":"nde_ceb4c92a3df245c168b61717"},
+    "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357": {"intent_id":"nti_b5266718dc152ad854dd172f","state":"UNKNOWN_DELIVERY","last_event_id":"nde_536b63dd8c9ff552c7e16d41"},
+    "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a": {"intent_id":"nti_388d1d8e43a4a86038196741","state":"UNKNOWN_DELIVERY","last_event_id":"nde_e66f3a64e273688b0d98c133"},
+    "ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266": {"intent_id":"nti_26dfd133cfb3473e0515c046","state":"RESERVED","last_event_id":"nde_d871a9a797e77138a37b4da4"}
   },
   "group_index": {
     "grp_880c7fd2fd54d26da925e16f9518fa9c6ebf5af3e10ee6f71896bd9cb4f98bc0": "nti_b5266718dc152ad854dd172f",
-    "grp_d2f999bbbf03504ba9e62bb788f731cc9115cd4eba08e410bf55925ab589601c": "nti_388d1d8e43a4a86038196741"
+    "grp_d2f999bbbf03504ba9e62bb788f731cc9115cd4eba08e410bf55925ab589601c": "nti_388d1d8e43a4a86038196741",
+    "grp_c687fd99accd95ab3187113683fa96955ca4d92729b8bf783d91ccab5f277899": "nti_26dfd133cfb3473e0515c046"
   },
   "history": [
-    {
-      "at": "2026-08-19T15:57:00Z",
-      "type": "OUTBOX_CREATED",
-      "note": "Created as the transactional reservation boundary for restart-safe at-most-once Fortnite notifications. Existing pre-bootstrap facts remain silent through the change-ledger baseline."
-    },
-    {
-      "at": "2026-08-19T18:12:23Z",
-      "type": "NOTIFICATION_RESERVED",
-      "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
-      "note": "One coalesced notification reserved for the EWC location correction and live ticket availability."
-    },
-    {
-      "at": "2026-08-19T19:02:07Z",
-      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
-      "notification_key": "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
-      "note": "Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
-    },
-    {
-      "at": "2026-08-19T21:03:30Z",
-      "type": "NOTIFICATION_RESERVED",
-      "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
-      "note": "One coalesced notification reserved for the current EWC Championship correction back to Paris and removal of stale Riyadh ticket inventory from active state."
-    },
-    {
-      "at": "2026-08-19T22:06:29Z",
-      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
-      "notification_key": "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
-      "note": "Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
-    },
-    {
-      "at": "2026-08-20T04:07:38Z",
-      "type": "NOTIFICATION_RESERVED",
-      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
-      "note": "Previously planned v42.00 downtime notice became due inside the urgent window and was reserved exactly once after a fresh outbox read."
-    },
-    {
-      "at": "2026-08-20T06:10:17Z",
-      "type": "NOTIFICATION_DELIVERY_UNKNOWN",
-      "notification_key": "ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a",
-      "note": "Stale v42.00 maintenance reservation reconciled to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."
-    }
+    {"at":"2026-08-19T15:57:00Z","type":"OUTBOX_CREATED","note":"Created as the transactional reservation boundary for restart-safe at-most-once Fortnite notifications. Existing pre-bootstrap facts remain silent through the change-ledger baseline."},
+    {"at":"2026-08-19T18:12:23Z","type":"NOTIFICATION_RESERVED","notification_key":"ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489","note":"One coalesced notification reserved for the EWC location correction and live ticket availability."},
+    {"at":"2026-08-19T19:02:07Z","type":"NOTIFICATION_DELIVERY_UNKNOWN","notification_key":"ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489","note":"Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."},
+    {"at":"2026-08-19T21:03:30Z","type":"NOTIFICATION_RESERVED","notification_key":"ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357","note":"One coalesced notification reserved for the current EWC Championship correction back to Paris and removal of stale Riyadh ticket inventory from active state."},
+    {"at":"2026-08-19T22:06:29Z","type":"NOTIFICATION_DELIVERY_UNKNOWN","notification_key":"ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357","note":"Stale reservation reconciled conservatively to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."},
+    {"at":"2026-08-20T04:07:38Z","type":"NOTIFICATION_RESERVED","notification_key":"ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a","note":"Previously planned v42.00 downtime notice became due inside the urgent window and was reserved exactly once after a fresh outbox read."},
+    {"at":"2026-08-20T06:10:17Z","type":"NOTIFICATION_DELIVERY_UNKNOWN","notification_key":"ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a","note":"Stale v42.00 maintenance reservation reconciled to UNKNOWN_DELIVERY after timeout. Automatic resend remains forbidden."},
+    {"at":"2026-08-20T07:08:53Z","type":"NOTIFICATION_RESERVED","notification_key":"ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266","note":"One coalesced notification reserved for the official C7S4 Override season identity, Battle Pass end date and launch-week bonus deadline."}
   ]
 }
