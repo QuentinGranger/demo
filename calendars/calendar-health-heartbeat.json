@@ -1,11 +1,11 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-19T16:54:00Z",
-  "last_deep_check_at": "2026-08-19T16:10:00Z",
+  "last_observer_check_at": "2026-08-20T17:08:03Z",
+  "last_deep_check_at": "2026-08-20T17:08:03Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "MANUAL_POLICY_MIGRATION",
-  "migration_bootstrap": true,
+  "observer_title": "Calendriers Fortnite France & Europe",
+  "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
   "repository_reachable": true,
@@ -20,8 +20,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-19T15:03:04.437017Z",
-      "updated_at": "2026-08-19T16:19:13.271140Z",
+      "last_run_time": "2026-08-20T16:24:02.633517Z",
+      "updated_at": "2026-08-20T16:24:25.263948Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Harry Potter France & Paris": {
@@ -30,8 +30,8 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-19T03:56:17.666954Z",
-      "updated_at": "2026-08-19T04:57:27.468637Z",
+      "last_run_time": "2026-08-20T01:44:18.770077Z",
+      "updated_at": "2026-08-20T01:44:42.299634Z",
       "liveness": "HEALTHY"
     },
     "Billetterie Harry Potter France": {
@@ -40,8 +40,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-19T15:42:08.820266Z",
-      "updated_at": "2026-08-19T15:42:31.305595Z",
+      "last_run_time": "2026-08-20T16:39:42.174814Z",
+      "updated_at": "2026-08-20T16:40:04.765022Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
@@ -50,11 +50,11 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": null,
-      "updated_at": "2026-08-19T03:34:32.049825Z",
-      "liveness": "FIRST_RUN_NOT_YET_OVERDUE"
+      "last_run_time": "2026-08-19T19:00:25.641979Z",
+      "updated_at": "2026-08-19T19:00:48.939151Z",
+      "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "V2 heartbeat stores a per-monitor liveness snapshot. Any declared hourly observer may refresh it after a successful cross-check; GitHub Actions validates both heartbeat age and the individual monitor snapshot."
+  "note": "V2 heartbeat stores a per-monitor liveness snapshot. Deep check verified all nine declared ICS paths on master and the three global raw subscription contracts via GitHub raw access; healthy checks remain notification-silent."
 }
