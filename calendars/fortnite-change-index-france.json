@@ -1,6 +1,6 @@
 {
   "version":"FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at":"2026-08-21T17:10:49Z",
+  "updated_at":"2026-08-21T18:06:16Z",
   "source_ledger":"fortnite-change-ledger.json",
   "notification_outbox":"fortnite-notification-outbox-france.json",
   "authority":"DERIVED_ONLY",
@@ -51,7 +51,7 @@
     "sub_fe3e08545867cf3701dd94688696d97e0577ef6757d76e9ee8e7daf4b629b909":["chg_1a50d1b097989310794ddbb1"]
   },
   "consumed_notification_keys":["ntf_34413139b87083a3d9f17ded67c3837f4660b7bdcc543702df307d0e03033e10","ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a","ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266","ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489","ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357"],
-  "unknown_delivery_keys":["ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a","ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489","ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357"],
+  "unknown_delivery_keys":["ntf_34413139b87083a3d9f17ded67c3837f4660b7bdcc543702df307d0e03033e10","ntf_36a433edcd10e54dc9cc4790ba3385954f3563d8782cdcc9a7c6498a6898592a","ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266","ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489","ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357"],
   "pending_reconciliation":[],
-  "stats":{"changes":21,"subjects":12,"notification_intents":5,"consumed_notification_keys":5,"unknown_delivery":3,"pending_reconciliation":0}
+  "stats":{"changes":21,"subjects":12,"notification_intents":5,"consumed_notification_keys":5,"unknown_delivery":5,"pending_reconciliation":0}
 }
