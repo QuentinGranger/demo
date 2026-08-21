@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-21T06:19:11Z",
+  "updated_at": "2026-08-21T07:02:28Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -195,6 +195,33 @@
         {"phase_id":"shadow-cup-eu-2026-08-21:zero-build","name":"Coupe Shadow Zéro construction","phase_type":"OTHER","order":3,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_ZB_EU","name":"Coupe Shadow Zéro construction EU","session_number":1,"round_number":1,"round_label":"Zéro construction","status":"SCHEDULED","region":"EU","ruleset":"ZERO_BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"}
       ],
       "history": [{"at":"2026-08-21T06:19:11Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU schedule published three Shadow Cup sessions for Aug 21. Promoted to CALENDAR because official rules make it a time-sensitive cosmetic-reward opportunity before shop release, including a mobile-only phase."}]
+    },
+    {
+      "competition_id": "mobile-series-championship-copenhagen-2026",
+      "official_event_id": null,
+      "official_event_slug": "mobile-series",
+      "series_id": "MOBILE_SERIES",
+      "season_id": null,
+      "name": "Fortnite Mobile Series Championship 2026 — Copenhague",
+      "competition_class": "MOBILE_SERIES",
+      "status": "SCHEDULED",
+      "regions": ["GLOBAL"],
+      "ruleset": "RELOAD",
+      "team_format": "SOLOS",
+      "platform_scope": "MOBILE",
+      "physical_event": true,
+      "venue": {"name":"BLAST Studios","city":"Copenhagen","country":"Denmark","address":null},
+      "date_window": {"start_date":"2026-10-24","end_date":"2026-10-25","time_precision":"DATE_RANGE"},
+      "registration": null,
+      "eligibility": {"status":"PARTIAL","minimum_rank":null,"account_level":null,"age_min":null,"two_factor_required":null,"region_lock":null,"platform_requirements":"Fortnite Mobile touch-only competitive path; championship field is the top 16 Fortnite Mobile players worldwide.","team_requirements":"SOLOS","other_rules":"Exact championship session times and public attendance/ticketing are not published on the official Mobile Series page.","rules_url":"https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"},
+      "prize_pool": null,
+      "qualification": {"type":"ADVANCEMENT","from_phase":"MOBILE_SERIES","to_phase":"CHAMPIONSHIP","slots":16,"criteria":"Top 16 Fortnite Mobile players worldwide; detailed final qualification composition remains governed by the official Mobile Series path.","tie_break":null,"source_id":"fortnite_competitive","confidence":"PARTIAL"},
+      "visibility": "FEATURED",
+      "calendar_uid": "fortnite-mobile-series-championship-copenhagen-20261024@openai",
+      "source_ids": ["fortnite_competitive"],
+      "source_urls": ["https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"],
+      "phases": [{"phase_id":"mobile-series-championship-copenhagen-2026:championship","name":"Mobile Series Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATES_ONLY"}],
+      "history": [{"at":"2026-08-21T07:02:28Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official Mobile Series page confirms the first in-person championship on Oct 24-25, 2026 at BLAST Studios in Copenhagen with the top 16 Fortnite Mobile players worldwide. The page states $1,000,000 across the Mobile Series/Finals ecosystem; no championship-only prize amount, match times or public ticketing are inferred."}]
     }
   ],
   "watch_targets": [{"watch_id":"fncs-solo-october-2026","related_candidate_id":"fortnite-fncs-solos-october-2026","state":"WATCHING","promotion_rule":"Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."}]
