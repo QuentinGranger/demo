@@ -150,28 +150,28 @@ LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
 DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
  réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
  août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Ver
- sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'
- entrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : 
+ sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'e
+ ntrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : 
  Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, 
  puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne so
  nt pas déduites. « Qiddiya City Grid » est conservé uniquement comme l
  ibellé de zone compétitive du planning EWC\, pas comme instruction d'ent
- rée publique.\n🎟️ Les billets de la scène principale Fortnite sont c
- omplets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch partie
- s Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
- écessitent un billet Fan Fest valide pour la journée. Le stock\, le pri
- x et les horaires exacts des billets Fan Fest ne sont pas affirmés.\nSou
- rce planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC
-  : https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-gu
- ide
+ rée publique.\n🎟️ Les billets de la scène principale Fortnite sont 
+ complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parti
+ es Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
+ écessitent un billet Fan Fest valide pour la journée. Le stock\, le prix
+  et les horaires exacts des billets Fan Fest ne sont pas affirmés.\nSourc
+ e planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC :
+  https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guid
+ e
 URL:https://ewc-web.prod.esf-systems.com/en/schedule
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
  yale,Duos,Paris,France
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260822T090000Z
 ACTION:DISPLAY
-DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h00
-  à Paris
+DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h
+ 00 à Paris
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
