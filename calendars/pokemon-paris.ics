@@ -377,7 +377,7 @@ DTEND;VALUE=DATE:20261019
 SUMMARY:⭐ ✅ 🏆 Play! Pokémon — Championnats Régionaux — Nice
 LOCATION;ALTREP="https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice":Palais des Expositions de Nice\, Parvis de l'Europe\, 06000 Nice\, France
 GEO:43.70889;7.28278
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=Palais des Expositions de Nice:geo:48.86507,2.34186
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=Palais des Expositions de Nice:geo:43.70889,7.28278
 X-POKEMON-LOCATION-PRECISION:VENUE
 X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=43.70889,7.28278
