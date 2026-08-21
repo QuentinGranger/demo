@@ -44,8 +44,10 @@ DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affich
   que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026
   en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas co
  nvertir cette date en heure française ni déduire l'heure de maintenance 
- ou le lancement de la saison suivante.\nSource : https://www.fortnite.com/
- battle-pass?lang=en-US
+ ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale a
+ nnoncée pour la fin de l'été reste en watchlist tant que sa date/heure 
+ de lancement n'est pas officiellement publiée.\nSource : https://www.fort
+ nite.com/battle-pass?lang=en-US
 URL:https://www.fortnite.com/battle-pass?lang=en-US
 CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de comb
  at
@@ -151,6 +153,47 @@ ACTION:DISPLAY
 DESCRIPTION:⏳ Le Passe de combat Override se termine demain selon la date
   officielle ET
 END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-service-v42-00-20260820@openai
+DTSTAMP:20260820T113100Z
+LAST-MODIFIED:20260820T113100Z
+SEQUENCE:2
+STATUS:CONFIRMED
+PRIORITY:9
+X-FORTNITE-PRIORITY:INFO
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
+X-FORTNITE-SERVICE-EVENT-ID:epic-fortnite-v42-00-20260820
+X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
+X-FORTNITE-SERVICE-STATE:RESOLVED
+X-FORTNITE-SERVICE-PROVIDER-PHASE:RESOLVED
+X-FORTNITE-SERVICE-IMPACT:UNSPECIFIED
+X-FORTNITE-SERVICE-ACTIONABILITY:NONE
+X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,
+ Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
+X-FORTNITE-SERVICE-SOURCE-ID:epic_status
+X-FORTNITE-SERVICE-RELATION-TYPE:PATCH_DEPLOYMENT
+X-FORTNITE-PATCH-VERSION:42.00
+X-FORTNITE-MATCHMAKING-DISABLED-AT:20260820T073000
+X-FORTNITE-ACTUAL-START-AT:20260820T080011
+X-FORTNITE-ACTUAL-END-AT:20260820T133100
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-FIRST-ADDED-AT:20260820T001202Z
+X-FORTNITE-NEW-UNTIL:20260825T001202Z
+DTSTART;TZID=Europe/Paris:20260820T080000
+DTEND;TZID=Europe/Paris:20260820T133100
+SUMMARY:ℹ️ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — terminée
+DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite 
+ v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 ao
+ ût 2026 à 11:31 UTC, soit 13:31 heure de Paris.\nFortnite, Game Services
+ , Login, Matchmaking, groupes/amis, chat vocal, stats/classements, boutiqu
+ e et Fortnite Crew sont actuellement opérationnels sur Epic Status.\nLa f
+ enêtre prévue se terminait à 13:00 à Paris ; l’heure 13:31 est l’h
+ eure de fin réellement publiée, pas une estimation.\nSource : https://st
+ atus.epicgames.com/incidents/b0jf1mxvlc2l
+URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
+CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-fncs-global-antwerp-20260926@openai
@@ -323,67 +366,69 @@ X-FORTNITE-SESSION;TYPE=ZERO_BUILD:20260821T170000/20260821T200000
 DTSTART;TZID=Europe/Paris:20260821T160000
 DTEND;TZID=Europe/Paris:20260821T200000
 SUMMARY:⭐ ✅ 🆕 🦔 Coupe Shadow EU — cosmétiques avant boutique
-DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle
-  le 21 août avec récompenses Shadow avant leur arrivée en boutique.\n📱
-  Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs max. 
- Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Doom's 
- Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮 Batt
- le Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set 
- cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Power.\n
- 🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU 
- : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 ans (ou mi
- nimum local) et A2F obligatoire.\nRègles : https://www.fortnite.com/comp
- etitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-offi
- cial-rules
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
+ lle le 21 août avec récompenses Shadow avant leur arrivée en boutique.\
+ n📱 Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs 
+ max. Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Do
+ om's Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮
+  Battle Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : mêm
+ e set cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Pow
+ er.\n🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 
+ 1000 EU : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 an
+ s (ou minimum local) et A2F obligatoire.\nRègles : https://www.fortnite.c
+ om/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-
+ 4-official-rules
 URL:https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU
-CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zéro
-  construction,EU,Récompenses
+CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zér
+ o construction,EU,Récompenses
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à 
- 16h00
+DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à
+  16h00
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fortnite-service-v42-00-20260820@openai
-DTSTAMP:20260820T113100Z
-LAST-MODIFIED:20260820T113100Z
-SEQUENCE:2
+UID:fortnite-mobile-series-championship-copenhagen-20261024@openai
+DTSTAMP:20260821T070228Z
+LAST-MODIFIED:20260821T070228Z
+SEQUENCE:0
 STATUS:CONFIRMED
-PRIORITY:9
-X-FORTNITE-PRIORITY:INFO
-X-FORTNITE-ACTION:PLAY
-X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
-X-FORTNITE-SERVICE-EVENT-ID:epic-fortnite-v42-00-20260820
-X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
-X-FORTNITE-SERVICE-STATE:RESOLVED
-X-FORTNITE-SERVICE-PROVIDER-PHASE:RESOLVED
-X-FORTNITE-SERVICE-IMPACT:UNSPECIFIED
-X-FORTNITE-SERVICE-ACTIONABILITY:NONE
-X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,
- Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
-X-FORTNITE-SERVICE-SOURCE-ID:epic_status
-X-FORTNITE-SERVICE-RELATION-TYPE:PATCH_DEPLOYMENT
-X-FORTNITE-PATCH-VERSION:42.00
-X-FORTNITE-MATCHMAKING-DISABLED-AT:20260820T073000
-X-FORTNITE-ACTUAL-START-AT:20260820T080011
-X-FORTNITE-ACTUAL-END-AT:20260820T133100
-X-FORTNITE-TIME-PRECISION:EXACT
-X-FORTNITE-FIRST-ADDED-AT:20260820T001202Z
-X-FORTNITE-NEW-UNTIL:20260825T001202Z
-DTSTART;TZID=Europe/Paris:20260820T080000
-DTEND;TZID=Europe/Paris:20260820T133100
-SUMMARY:ℹ️ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — terminée
-DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite 
- v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 ao
- ût 2026 à 11:31 UTC\, soit 13:31 heure de Paris.\nFortnite\, Game Servic
- es\, Login\, Matchmaking\, groupes/amis\, chat vocal\, stats/classements\,
-  boutique et Fortnite Crew sont actuellement opérationnels sur Epic Statu
- s.\nLa fenêtre prévue se terminait à 13:00 à Paris \; l’heure 13:31 
- est l’heure de fin réellement publiée\, pas une estimation.\nSource : 
- https://status.epicgames.com/incidents/b0jf1mxvlc2l
-URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
-CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:FOLLOW
+X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
+X-FORTNITE-SERIES:MOBILE_SERIES
+X-FORTNITE-MODE:RELOAD
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-REGION:GLOBAL
+X-FORTNITE-PLATFORM:MOBILE
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-mobile-series-copenhagen-202
+ 6
+X-FORTNITE-VENUE-ID:blast_studios_copenhagen
+X-FORTNITE-LOCATION-PRECISION:VENUE
+X-FORTNITE-ACCESS-STATE:UNKNOWN
+X-FORTNITE-TIME-PRECISION:DATE_RANGE
+X-FORTNITE-FIRST-ADDED-AT:20260821T070228Z
+X-FORTNITE-NEW-UNTIL:20260826T070228Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261026
+SUMMARY:⭐ ✅ 🆕 📱 Fortnite Mobile Series Championship — Copenhagu
+ e
+LOCATION:BLAST Studios\, Copenhague\, Danemark
+DESCRIPTION:Priorité : ⭐ Important — premier championnat Fortnite Mobi
+ le Series en présentiel.\nDates officielles : 24 et 25 octobre 2026 à BL
+ AST Studios\, Copenhague\, Danemark.\nFormat : les 16 meilleurs joueurs Fo
+ rtnite Mobile au monde\, en solos sur le parcours compétitif Mobile/Recha
+ rge.\n💰 Fortnite annonce 1 000 000 $ sur l'écosystème Mobile Series/F
+ inals ; aucun montant spécifique au seul Championship n'est affirmé ici.
+ \n⚠️ Horaires de matchs\, adresse de rue\, accès spectateurs et bille
+ tterie publique non publiés : aucun détail n'est inventé.\nSource : htt
+ ps://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
+URL:https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
+CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenh
+ ague,Danemark
 END:VEVENT
 END:VCALENDAR
