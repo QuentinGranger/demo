@@ -299,6 +299,53 @@ CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
  yale,Duos,Paris,France
 END:VEVENT
 BEGIN:VEVENT
+UID:fortnite-shadow-cup-eu-20260821@openai
+DTSTAMP:20260821T061911Z
+LAST-MODIFIED:20260821T061911Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PARTICIPATE
+X-FORTNITE-EVENT-TYPE:PLATFORM_CUP
+X-FORTNITE-SERIES:SHADOW_CUP
+X-FORTNITE-MODE:MIXED
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-REGION:EU
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-FIRST-ADDED-AT:20260821T061911Z
+X-FORTNITE-NEW-UNTIL:20260826T061911Z
+X-FORTNITE-SESSION;TYPE=MOBILE;MODE=RELOAD:20260821T160000/20260821T171500
+X-FORTNITE-SESSION;TYPE=BATTLE_ROYALE:20260821T170000/20260821T200000
+X-FORTNITE-SESSION;TYPE=ZERO_BUILD:20260821T170000/20260821T200000
+DTSTART;TZID=Europe/Paris:20260821T160000
+DTEND;TZID=Europe/Paris:20260821T200000
+SUMMARY:⭐ ✅ 🆕 🦔 Coupe Shadow EU — cosmétiques avant boutique
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle
+  le 21 août avec récompenses Shadow avant leur arrivée en boutique.\n📱
+  Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs max. 
+ Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Doom's 
+ Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮 Batt
+ le Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set 
+ cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Power.\n
+ 🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU 
+ : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 ans (ou mi
+ nimum local) et A2F obligatoire.\nRègles : https://www.fortnite.com/comp
+ etitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-offi
+ cial-rules
+URL:https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU
+CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zéro
+  construction,EU,Récompenses
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à 
+ 16h00
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:fortnite-service-v42-00-20260820@openai
 DTSTAMP:20260820T113100Z
 LAST-MODIFIED:20260820T113100Z
