@@ -91,9 +91,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-reload-elite-ewc-paris-20260819@openai
-DTSTAMP:20260820T191024Z
-LAST-MODIFIED:20260820T191024Z
-SEQUENCE:4
+DTSTAMP:20260821T171049Z
+LAST-MODIFIED:20260821T171049Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
@@ -127,11 +127,20 @@ X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=ANNOUNCED:Billet
 X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=ANNOUNCED;ACCESS=FAN_F
  EST_DAY_TICKET:Watch parties Fortnite
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
+X-FORTNITE-COMPETITIVE-SCHEDULE-PRECISION:EXACT_STARTS_ENDS_UNKNOWN
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T
+ 150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260820T
+ 150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=SURVIVAL;STATUS=LIVE:20260821T150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=FINALS;STATUS=SCHEDULED:20260822T12000
+ 0
+X-FORTNITE-COMPETITIVE-ZONE:Qiddiya City Grid
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260820T191024Z
-X-FORTNITE-UPDATE-UNTIL:20260823T191024Z
-X-FORTNITE-UPDATE-REASON:MAIN_STAGE_SOLD_OUT_WATCH_PARTY_ACCESS
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260821T171049Z
+X-FORTNITE-UPDATE-UNTIL:20260824T171049Z
+X-FORTNITE-UPDATE-REASON:OFFICIAL_COMPETITIVE_SESSION_TIMES
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
 SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
@@ -141,25 +150,29 @@ LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
 DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
  réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
  août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Ver
- sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun hall ou p
- oint d'entrée Fortnite spécifique n'est affirmé.\n🎟️ Mise à jour 
- accès : le guide officiel EWC indique que les billets de la scène princi
- pale Fortnite sont déjà complets. Ce SOLD OUT est strictement limité à
-  la scène principale et ne signifie pas que tout l'EWC/Fan Fest est compl
- et.\n👀 EWC indique aussi des watch parties Fortnite à travers le site\
- , sur les Qiddiya City BattleGrounds stages. Pour y assister\, il faut un 
- billet Fan Fest valide pour la journée. Le guide ne confirme pas le stock
-  actuel\, le prix\, les horaires exacts\, le hall ou l'entrée de ces bill
- ets Fan Fest.\nℹ️ Le formulaire de préinscription EWC Paris reste un 
- formulaire d'intérêt/notification et ne garantit pas l'admission.\n⚠
- ️ Aucun horaire exact de match n'est ajouté depuis les fenêtres techni
- ques ambiguës.\nSource Fortnite : https://www.fortnite.com/competitive/ev
- ents/TEST?round=Escargo_Day1&region=NAC\nGuide officiel EWC : https://ewc-
- web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guide
-URL:https://www.fortnite.com/competitive/events/TEST?round=Escargo_Day1&reg
- ion=NAC
+ sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'
+ entrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : 
+ Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, 
+ puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne so
+ nt pas déduites. « Qiddiya City Grid » est conservé uniquement comme l
+ ibellé de zone compétitive du planning EWC\, pas comme instruction d'ent
+ rée publique.\n🎟️ Les billets de la scène principale Fortnite sont c
+ omplets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch partie
+ s Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
+ écessitent un billet Fan Fest valide pour la journée. Le stock\, le pri
+ x et les horaires exacts des billets Fan Fest ne sont pas affirmés.\nSou
+ rce planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC
+  : https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-gu
+ ide
+URL:https://ewc-web.prod.esf-systems.com/en/schedule
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
  yale,Duos,Paris,France
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20260822T090000Z
+ACTION:DISPLAY
+DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h00
+  à Paris
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-shadow-cup-eu-20260821@openai
