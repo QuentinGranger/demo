@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-19T21:03:30Z",
+  "updated_at": "2026-08-21T06:19:11Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -164,6 +164,37 @@
         }
       ],
       "history": [{"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."}]
+    },
+    {
+      "competition_id": "shadow-cup-eu-2026-08-21",
+      "official_event_id": "S42_ShadowCup",
+      "official_event_slug": "S42_ShadowCup",
+      "series_id": "SHADOW_CUP",
+      "season_id": "C7S4",
+      "name": "Coupe Shadow — EU",
+      "competition_class": "PLATFORM_CUP",
+      "status": "SCHEDULED",
+      "regions": ["EU"],
+      "ruleset": "MIXED",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {"start_date":"2026-08-21","end_date":"2026-08-21","time_precision":"EXACT"},
+      "registration": null,
+      "eligibility": {"status":"PARTIAL","minimum_rank":null,"account_level":null,"age_min":13,"two_factor_required":true,"region_lock":"EU","platform_requirements":"Mobile phase: Android/iOS only; Battle Royale and Zero Build phases: platform restriction not asserted beyond official event availability.","team_requirements":"SOLOS","other_rules":null,"rules_url":"https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"},
+      "prize_pool": {"currency":null,"total_amount":null,"region_amount":null,"session_amount":null,"distribution":"EU cosmetic rewards: Zero Build top 1000 and Battle Royale top 1000 receive Shadow the Hedgehog outfit, Super Shadow transformation emote and Doom's Eye back bling; Mobile top 200 receive the same set. Spray thresholds: ZB/BR 40 points Sonic's Roll + 8 points Shadow's Power; Mobile 20 points Sonic's Roll + 5 points Shadow's Power.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},
+      "qualification": null,
+      "visibility": "CALENDAR",
+      "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai",
+      "source_ids": ["fortnite_competitive","fortnite_competitive_rules"],
+      "source_urls": ["https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU","https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"],
+      "phases": [
+        {"phase_id":"shadow-cup-eu-2026-08-21:mobile","name":"Coupe Shadow Mobile","phase_type":"OTHER","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":{"status":"PARTIAL","platform_requirements":"Android/iOS","age_min":13,"two_factor_required":true},"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1","official_session_id":"S42_ShadowCup_Mobile_EU","name":"Coupe Shadow Mobile EU","session_number":1,"round_number":1,"round_label":"Mobile","status":"SCHEDULED","region":"EU","ruleset":"RELOAD","team_format":"SOLOS","platform_scope":"MOBILE","start_at":"2026-08-21T16:00:00+02:00","end_at":"2026-08-21T17:15:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":8,"qualification":null,"prize":{"distribution":"EU top 200: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 20 pts Sonic's Roll spray; 5 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"},
+        {"phase_id":"shadow-cup-eu-2026-08-21:battle-royale","name":"Coupe Shadow Battle Royale","phase_type":"OTHER","order":2,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_EU","name":"Coupe Shadow Battle Royale EU","session_number":1,"round_number":1,"round_label":"Battle Royale","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/schedule?lang=fr&region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"},
+        {"phase_id":"shadow-cup-eu-2026-08-21:zero-build","name":"Coupe Shadow Zéro construction","phase_type":"OTHER","order":3,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_ZB_EU","name":"Coupe Shadow Zéro construction EU","session_number":1,"round_number":1,"round_label":"Zéro construction","status":"SCHEDULED","region":"EU","ruleset":"ZERO_BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"}
+      ],
+      "history": [{"at":"2026-08-21T06:19:11Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU schedule published three Shadow Cup sessions for Aug 21. Promoted to CALENDAR because official rules make it a time-sensitive cosmetic-reward opportunity before shop release, including a mobile-only phase."}]
     }
   ],
   "watch_targets": [{"watch_id":"fncs-solo-october-2026","related_candidate_id":"fortnite-fncs-solos-october-2026","state":"WATCHING","promotion_rule":"Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."}]
