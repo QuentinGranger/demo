@@ -12,7 +12,10 @@ X-HARRYPOTTER-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-HARRYPOTTER-CHANGE-POLICY:UID_STABLE_AUDIT_V2
 X-HARRYPOTTER-FRESHNESS-POLICY:NEW5D_UPDATE3D_V3
 X-HARRYPOTTER-RETAILER-POLICY:RETAILER_WATCH_ALL_FR_V2
-X-HARRYPOTTER-TAXONOMY-POLICY:ACTIONABLE_FRANCHISE_V2
+X-HARRYPOTTER-TAXONOMY-POLICY:WIZARDING_TAXONOMY_FR_V2
+X-HARRYPOTTER-TAXONOMY-REGISTRY:harry-potter-taxonomy-france.json
+X-HARRYPOTTER-TAXONOMY-ENGINE:harry-potter-taxonomy-engine-france.json
+X-HARRYPOTTER-TAXONOMY-INDEX:harry-potter-taxonomy-index-france.json
 X-HARRYPOTTER-TERRITORY-POLICY:FR_EXACT_VERSION_V1
 X-HARRYPOTTER-RELATION-POLICY:ACTION_TO_RELEASE_V1
 X-HARRYPOTTER-COLLECTOR-POLICY:INTEREST_LIMITED_V1
@@ -82,7 +85,7 @@ DTSTART;VALUE=DATE:20260829
 DTEND;VALUE=DATE:20260830
 SUMMARY:⭐ ✅ 🆕 🧱 Sortie — LEGO Harry Potter Château de Poudlard miniature #40975
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle référence LEGO Harry Potter officielle et collectionnable.\nFiabilité : ✅ Confirmé par LEGO France.\nType : 🧱 LEGO / collector — marché France.\nIntérêt collection : élevé ; caractère limité non affirmé tant qu'aucune source officielle ne le précise.\nProduit : LEGO Harry Potter Château de Poudlard miniature #40975 — 700 pièces.\nPrix officiel LEGO France : 39,99 €.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 — vérifier disponibilité et offres boutiques.\nSource : https://www.lego.com/fr-fr/product/mini-hogwarts-castle-40975
+DESCRIPTION:Priorité : ⭐ Important — nouvelle référence LEGO Harry Potter officielle et collectionnable.\nFiabilité : ✅ Confirmé par LEGO France.\nType : 🧱 LEGO / collector — marché France.\nIntérêt collection : élevé ; caractère limité non affirmé tant qu'aucune source officielle ne le précise.\nProduit : LEGO Harry Potter Château de Poudlard miniature #40975 — 700 pièces.\nPrix officiel LEGO France : 39,99 €.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://www.lego.com/fr-fr/product/mini-hogwarts-castle-40975
 URL:https://www.lego.com/fr-fr/product/mini-hogwarts-castle-40975
 CATEGORIES:Harry Potter,Sortie,LEGO,Collector,Nouveau,Priorité Important
 BEGIN:VALARM
@@ -142,9 +145,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:hp-lego-back-to-hogwarts-fr-20260901@openai
-DTSTAMP:20260819T035320Z
-LAST-MODIFIED:20260819T035320Z
-SEQUENCE:0
+DTSTAMP:20260821T020155Z
+LAST-MODIFIED:20260821T020155Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
@@ -155,28 +158,48 @@ X-HARRYPOTTER-FORMAT:LEGO_PROMOTION
 X-HARRYPOTTER-MARKET:FR
 X-HARRYPOTTER-COLLECTION-ID:LEGO-BACK-TO-HOGWARTS-2026-FR
 X-HARRYPOTTER-COLLECTOR-INTEREST:HIGH
-X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-LIMITED:YES
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T035320Z
 X-HARRYPOTTER-NEW-UNTIL:20260824T035320Z
-X-HARRYPOTTER-FRESHNESS:NEW
-X-HARRYPOTTER-BADGE:NEW
-X-HARRYPOTTER-RETAILER-OFFER;SELLER=LEGO France;TYPE=NATIONAL;CHANNEL=WEB;STATUS=ANNOUNCED;DATE=20260901:https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20260908
-SUMMARY:⭐ ✅ 🆕 🛍️ LEGO — C’est la rentrée à Poudlard 2026
-LOCATION:France / LEGO.com France
-DESCRIPTION:Priorité : ⭐ Important — campagne officielle LEGO Harry Potter avec offre collector limitée dans le temps.\nFiabilité : ✅ Confirmé directement par LEGO France.\nType : 🛍️ campagne commerciale Harry Potter / LEGO — marché France.\nPériode : du 1er au 7 septembre 2026 inclus.\n🎁 LEGO annonce des offres spéciales et un cadeau exclusif lié à l'achat du Village de Pré-au-Lard – Édition Collector ; le nom exact et les conditions détaillées du cadeau ne sont pas affirmés ici tant qu'ils ne sont pas publiés clairement.\n🧱 Des miniconstructions Pick a Brick « C’est la rentrée à Poudlard » sont également annoncées du 1er au 7 septembre.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 — vérifier les conditions et la disponibilité du cadeau/offre sur LEGO France.\nSource : https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
+X-HARRYPOTTER-LAST-MAJOR-UPDATE-AT:20260821T020155Z
+X-HARRYPOTTER-UPDATE-UNTIL:20260824T020155Z
+X-HARRYPOTTER-UPDATE-REASON:DATE_AND_OFFER_DETAILS
+X-HARRYPOTTER-FRESHNESS:UPDATED
+X-HARRYPOTTER-BADGE:UPDATED
+X-HARRYPOTTER-ORIGINAL-DTSTART:20260901
+X-HARRYPOTTER-ORIGINAL-DTEND:20260908
+X-HARRYPOTTER-PREVIOUS-DTSTART:20260901
+X-HARRYPOTTER-PREVIOUS-DTEND:20260908
+X-HARRYPOTTER-CHANGE-COUNT:1
+X-HARRYPOTTER-DATE-HISTORY:20260901/20260908->20260829/20260907
+X-HARRYPOTTER-CHANGE-SOURCE:https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
+X-HARRYPOTTER-CHANGE-DETECTED-AT:20260821T020155Z
+X-HARRYPOTTER-RETAILER-OFFER;SELLER=LEGO France;TYPE=OFFICIAL;CHANNEL=WEB;STATUS=ANNOUNCED;DATE=20260829;PRICE=429.99:https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
+X-HARRYPOTTER-PRODUCT-ID:LEGO-76476
+X-HARRYPOTTER-OFFICIAL-PRICE-EUR:429.99
+X-HARRYPOTTER-OFFICIAL-PRICE-CURRENCY:EUR
+X-HARRYPOTTER-OFFICIAL-PRICE-SOURCE:https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
+X-HARRYPOTTER-TAXONOMY-VERSION:WIZARDING_TAXONOMY_FR_V2
+X-HARRYPOTTER-PLACE:HOGWARTS
+X-HARRYPOTTER-THEME:BACK_TO_HOGWARTS
+X-HARRYPOTTER-THEME:COLLECTING
+X-HARRYPOTTER-TAG-BASIS:DIRECT
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260907
+SUMMARY:⭐ ✅ ✨ 🛍️ LEGO — C’est la rentrée à Poudlard 2026
+LOCATION:France / LEGO.com France / LEGO Stores
+DESCRIPTION:Priorité : ⭐ Important — campagne officielle LEGO Harry Potter avec accès anticipé et cadeaux conditionnels.\nFiabilité : ✅ Conditions désormais publiées directement par LEGO France.\nPériode officielle actuelle : du 29 août au 6 septembre 2026 inclus.\n🧱 Produit phare : Le ministère de la Magie – Édition collector #76476 — 3 491 pièces — prix officiel France 429,99 €.\n🔐 Accès anticipé LEGO Insiders : du 29 au 31 août ; vente générale annoncée le 1er septembre.\n🎁 Cabine téléphonique du ministère de la Magie #5011072 offerte avec l'achat du set #76476, du 29 août au 6 septembre ou dans la limite des stocks.\n🎁 Kiosque à café du ministère et stand de La Gazette du sorcier #40901 : cadeau pour achats Harry Potter éligibles d'au moins 130 €, selon les conditions LEGO France.\n🎁 Bureau de Dumbledore avec Harry Potter #30724 : cadeau à partir de 40 € sur une sélection de sets Harry Potter éligibles.\n✨ Mise à jour majeure le 21 août : l'ancienne période 1er–7 septembre et la référence au Village de Pré-au-Lard ont été remplacées par les conditions actuelles publiées par LEGO France.\nRappels : J-7 et J-1 calculés depuis le nouveau début du 29 août.\nSource : https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
 URL:https://www.lego.com/fr-fr/themes/harry-potter/back-to-hogwarts
-CATEGORIES:Harry Potter,LEGO,Promotion,Back to Hogwarts,Collector,Nouveau,Priorité Important
+CATEGORIES:Harry Potter,LEGO,Promotion,Back to Hogwarts,Collector,Mise à jour,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🛍️ LEGO Back to Hogwarts commence dans 7 jours — vérifie les offres et le cadeau exclusif
+DESCRIPTION:🛍️ LEGO Back to Hogwarts commence dans 7 jours — accès Insiders et cadeaux à vérifier
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🛍️ LEGO Back to Hogwarts commence demain — ouvre LEGO France et vérifie les conditions
+DESCRIPTION:🛍️ LEGO Back to Hogwarts commence demain — vérifie ton statut Insiders et les conditions cadeaux
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -457,7 +480,7 @@ DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:ℹ️ 🟡 🆕 📚 Sorties livres films — 2 nouveautés Gallimard Jeunesse
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — deux nouveautés françaises de la collection liée aux films regroupées sur leur date commune.\nFiabilité : 🟡 Dates et références relevées directement chez Fnac ; Gallimard Jeunesse est indiqué comme éditeur.\n📦 Checklist produits :\n🟡 Harry Potter — Bienvenue sur le Chemin de Traverse — Un pop-up magique — EAN 9782075234740 — prix Fnac observé 29,90 €.\n🟡 Harry Potter — Baguettes magiques — Le guide des sorts à Poudlard — EAN 9782075247627 — prix Fnac observé 24,90 €.\nComplétude : partielle. Les prix sont des prix vendeurs observés, pas des MSRP officiels.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1.\nSource principale : https://www.fnac.com/a22490397/Harry-Potter-Harry-Potter-Bienvenue-sur-le-Chemin-de-Traverse-Un-pop-up-magique-J-K-Rowling\nSource complémentaire : https://www.fnac.com/a22490398/Harry-Potter-Harry-Potter-Baguettes-magiques-Le-guide-des-sorts-a-Poudlard-J-K-Rowling
+DESCRIPTION:Priorité : ℹ️ Info — deux nouveautés françaises de la collection liée aux films regroupées sur leur date commune.\nFiabilité : 🟡 Dates et références relevées directement chez Fnac ; Gallimard Jeunesse est indiqué comme éditeur.\n📦 Checklist produits :\n🟡 Harry Potter — Bienvenue sur le Chemin de Traverse — Un pop-up magique — EAN 9782075234740 — prix Fnac observé 29,90 €.\n🟡 Harry Potter — Baguettes magiques — Le guide des sorts à Poudlard — EAN 9782075247627 — prix Fnac observé 24,90 €.\nComplétude : partielle — uniquement les deux nouveautés clairement identifiées pour cette collection/date dans le backfill.\nLes prix ci-dessus sont des prix vendeurs observés, pas des MSRP officiels.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1.\nSource principale : https://www.fnac.com/a22490397/Harry-Potter-Harry-Potter-Bienvenue-sur-le-Chemin-de-Traverse-Un-pop-up-magique-J-K-Rowling\nSource complémentaire : https://www.fnac.com/a22490398/Harry-Potter-Harry-Potter-Baguettes-magiques-Le-guide-des-sorts-a-Poudlard-J-K-Rowling
 URL:https://www.fnac.com/a22490397/Harry-Potter-Harry-Potter-Bienvenue-sur-le-Chemin-de-Traverse-Un-pop-up-magique-J-K-Rowling
 CATEGORIES:Harry Potter,Livre,Films,France,Nouveau,Priorité Info
 BEGIN:VALARM
