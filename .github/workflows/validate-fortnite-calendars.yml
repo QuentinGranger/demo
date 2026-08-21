@@ -6,6 +6,7 @@ on:
       - 'calendars/fortnite-*.ics'
       - 'calendars/fortnite-ics-validation.json'
       - 'scripts/validate_fortnite_ics.py'
+      - 'scripts/sync_fortnite_calendars.py'
       - '.gitattributes'
       - '.github/workflows/validate-fortnite-calendars.yml'
   pull_request:
@@ -13,12 +14,13 @@ on:
       - 'calendars/fortnite-*.ics'
       - 'calendars/fortnite-ics-validation.json'
       - 'scripts/validate_fortnite_ics.py'
+      - 'scripts/sync_fortnite_calendars.py'
       - '.gitattributes'
       - '.github/workflows/validate-fortnite-calendars.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -32,5 +34,21 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Synchronize global feed and normalize RFC 5545 serialization
+        run: python scripts/sync_fortnite_calendars.py
+
       - name: Validate RFC 5545, Apple serialization and mirrored Fortnite feeds
         run: python scripts/validate_fortnite_ics.py
+
+      - name: Persist deterministic sync/normalization
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+        run: |
+          if git diff --quiet -- calendars/fortnite-paris.ics calendars/fortnite-updates-france.ics calendars/fortnite-competitive-france.ics; then
+            echo "No deterministic calendar rewrite needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendars/fortnite-paris.ics calendars/fortnite-updates-france.ics calendars/fortnite-competitive-france.ics
+          git commit -m "Normalize and synchronize Fortnite calendars"
+          git push
