@@ -1,0 +1,49 @@
+name: Apply Fortnite EWC final result
+
+on:
+  push:
+    paths:
+      - 'scripts/apply_fortnite_ewc_final_20260823.py'
+      - '.github/workflows/apply-fortnite-ewc-final-20260823.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply official final result
+        run: python scripts/apply_fortnite_ewc_final_20260823.py
+      - name: Validate competitive ledger
+        run: python scripts/validate_fortnite_competitive.py
+      - name: Validate change ledger and outbox
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Commit semantic changes
+        run: |
+          if git diff --quiet; then
+            echo 'No semantic change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            calendars/fortnite-competitive-ledger-france.json \
+            calendars/fortnite-competitive-index-france.json \
+            calendars/fortnite-change-ledger.json \
+            calendars/fortnite-notification-outbox-france.json \
+            calendars/fortnite-change-index-france.json \
+            calendars/fortnite-competitive-france.ics \
+            calendars/fortnite-paris.ics
+          git commit -m 'Finalize EWC Fortnite 2026 results'
+          git push origin HEAD:master
