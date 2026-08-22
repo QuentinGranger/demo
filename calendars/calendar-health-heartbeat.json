@@ -1,7 +1,7 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-21T17:10:49Z",
+  "last_observer_check_at": "2026-08-22T17:10:31Z",
   "last_deep_check_at": "2026-08-20T17:08:03Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers Fortnite France & Europe",
@@ -20,8 +20,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-21T16:12:57.462557Z",
-      "updated_at": "2026-08-21T16:13:19.458592Z",
+      "last_run_time": "2026-08-22T16:08:35.339799Z",
+      "updated_at": "2026-08-22T16:08:57.435858Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Harry Potter France & Paris": {
@@ -30,8 +30,8 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-21T02:11:22.913165Z",
-      "updated_at": "2026-08-21T02:11:45.028589Z",
+      "last_run_time": "2026-08-22T01:58:05.394528Z",
+      "updated_at": "2026-08-22T01:58:28.462439Z",
       "liveness": "HEALTHY"
     },
     "Billetterie Harry Potter France": {
@@ -40,8 +40,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-21T16:48:01.874916Z",
-      "updated_at": "2026-08-21T16:48:24.078834Z",
+      "last_run_time": "2026-08-22T16:40:21.742062Z",
+      "updated_at": "2026-08-22T16:40:44.229497Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
@@ -50,11 +50,11 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-20T18:51:06.627198Z",
-      "updated_at": "2026-08-20T18:51:29.648874Z",
+      "last_run_time": "2026-08-21T18:49:52.414643Z",
+      "updated_at": "2026-08-21T18:50:15.828184Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "V2 heartbeat stores a per-monitor liveness snapshot. This refresh verified repository/branch availability, all nine declared ICS paths, both hourly observers, and the three global raw subscription contracts. The previous deep-check timestamp is retained because a full nine-file structural validator pass was not rerun in this lightweight cycle."
+  "note": "Healthy cross-calendar observer refresh. Repository/master, the nine declared calendar paths, both hourly observers and current automation cadences/liveness were checked. The three global raw subscription endpoints were fetched with their expected calendar identities. No open [Calendar Health] incident was present. last_deep_check_at is intentionally retained because the full nine-file structural validator could not be executed in this connector-only cycle; the independent GitHub Actions validation plane remains authoritative for that check."
 }
