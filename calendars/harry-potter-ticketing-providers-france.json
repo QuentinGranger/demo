@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_PROVIDER_REGISTRY_FR_V1",
-  "updated_at": "2026-08-19T04:47:00Z",
+  "updated_at": "2026-08-22T01:54:24Z",
   "scope": "Harry Potter / Wizarding World — providers de billetterie France",
   "policy": {
     "identity": "provider_id canonique et immuable ; changement d'URL ou de prestataire technique ne crée pas un nouveau provider si l'organisateur/salle responsable reste le même.",
@@ -18,8 +18,22 @@
       "territory": "Paris",
       "status": "ACTIVE",
       "primary_url": "https://www.legrandrex.com/",
-      "can_confirm": ["LOCAL_EVENT_DATE","LOCAL_EVENT_TIME","SESSION_LIST","TICKET_URL","TICKET_STATUS","TICKET_CATEGORY_STATUS","LOCAL_TICKET_PRICE","NEW_SESSION","LOCAL_EXTENSION","LOCAL_CANCELLATION"],
-      "cannot_confirm": ["NATIONAL_TOUR_STATUS","OTHER_VENUE_STATUS"],
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "SESSION_LIST",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "TICKET_CATEGORY_STATUS",
+        "LOCAL_TICKET_PRICE",
+        "NEW_SESSION",
+        "LOCAL_EXTENSION",
+        "LOCAL_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "NATIONAL_TOUR_STATUS",
+        "OTHER_VENUE_STATUS"
+      ],
       "linked_source_id": "grand-rex"
     },
     {
@@ -29,9 +43,25 @@
       "territory": "Paris",
       "status": "ACTIVE",
       "primary_url": "https://theatredugymnase.com/",
-      "event_url_patterns": ["https://theatredugymnase.com/event-pro/"],
-      "can_confirm": ["LOCAL_EVENT_DATE","LOCAL_EVENT_TIME","SESSION_LIST","TICKET_URL","TICKET_STATUS","TICKET_CATEGORY_STATUS","LOCAL_TICKET_PRICE","NEW_SESSION","LOCAL_EXTENSION","LOCAL_CANCELLATION"],
-      "cannot_confirm": ["NATIONAL_TOUR_STATUS","OTHER_VENUE_STATUS"],
+      "event_url_patterns": [
+        "https://theatredugymnase.com/event-pro/"
+      ],
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "SESSION_LIST",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "TICKET_CATEGORY_STATUS",
+        "LOCAL_TICKET_PRICE",
+        "NEW_SESSION",
+        "LOCAL_EXTENSION",
+        "LOCAL_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "NATIONAL_TOUR_STATUS",
+        "OTHER_VENUE_STATUS"
+      ],
       "linked_source_id": "theatre-gymnase"
     },
     {
@@ -41,9 +71,44 @@
       "territory": "France",
       "status": "ACTIVE",
       "primary_url": "https://www.u-play.fr/cine-concerts",
-      "can_confirm": ["TOUR_DATE","TOUR_CITY","TOUR_VENUE","SESSION_LIST","TICKET_URL","TICKET_STATUS","TOUR_EXTENSION","NEW_SESSION","TOUR_CANCELLATION"],
-      "cannot_confirm": ["THIRD_PARTY_LOCAL_CATEGORY_STATUS sans donnée directe","OTHER_ORGANIZER_EVENT"],
+      "can_confirm": [
+        "TOUR_DATE",
+        "TOUR_CITY",
+        "TOUR_VENUE",
+        "SESSION_LIST",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "TOUR_EXTENSION",
+        "NEW_SESSION",
+        "TOUR_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "THIRD_PARTY_LOCAL_CATEGORY_STATUS sans donnée directe",
+        "OTHER_ORGANIZER_EVENT"
+      ],
       "linked_source_id": "ugoplay"
+    },
+    {
+      "provider_id": "droneart-paris",
+      "name": "DroneArt Show Paris / Fever",
+      "authority": "ORGANIZER_DIRECT",
+      "territory": "Paris",
+      "status": "ACTIVE",
+      "primary_url": "https://thedroneartshow.com/paris/harry-potter/",
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "SESSION_LIST",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "ACCESS_RULES",
+        "LOCAL_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "OTHER_CITY_STATUS",
+        "SECONDARY_RESALE_STATUS"
+      ],
+      "linked_source_id": "droneart-harry-potter-paris"
     }
   ]
 }

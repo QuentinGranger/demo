@@ -1,6 +1,6 @@
 {
   "version": "OFFICIAL_SOURCE_REGISTRY_FR_V3",
-  "updated_at": "2026-08-19T04:26:00Z",
+  "updated_at": "2026-08-22T01:54:24Z",
   "scope": "Harry Potter / Wizarding World — France, priorité Paris/Île-de-France",
   "linked_files": {
     "candidate_queue": "harry-potter-watchlist-france.json",
@@ -49,34 +49,160 @@
     "licensed_products": "Un licencié confirme ses propres références/lancements ; cela ne devient pas une date nationale multi-retailers sans preuve supérieure."
   },
   "field_rules": {
-    "SERIES_GLOBAL_DATE": ["wbd-press-hp", "harrypotter-official"],
-    "SERIES_FR_AVAILABILITY": ["max-fr", "warner-fr"],
-    "FR_BOOK_RELEASE": ["gallimard-jeunesse"],
-    "FR_AUDIO_RELEASE": ["audible-fr-hp"],
-    "GAME_RELEASE": ["warner-games", "harrypotter-games"],
-    "LEGO_RELEASE_PRICE_FR": ["lego-fr-hp"],
-    "LICENSED_PRODUCT_RELEASE": ["minalima", "noble-fr", "cinereplicas-fr", "funko-eu"],
-    "LIVE_TOUR_FR": ["ugoplay"],
-    "EXHIBITION_FR": ["hp-exhibition"],
-    "LOCAL_PARIS_EVENT": ["grand-rex", "warner-fr"],
-    "CINEMA_NETWORK_FR": ["pathe-fr", "ugc-fr", "cgr-fr"],
-    "FRANCHISE_EVENT_GLOBAL": ["harrypotter-official"]
+    "SERIES_GLOBAL_DATE": [
+      "wbd-press-hp",
+      "harrypotter-official"
+    ],
+    "SERIES_FR_AVAILABILITY": [
+      "max-fr",
+      "warner-fr"
+    ],
+    "FR_BOOK_RELEASE": [
+      "gallimard-jeunesse"
+    ],
+    "FR_AUDIO_RELEASE": [
+      "audible-fr-hp"
+    ],
+    "GAME_RELEASE": [
+      "warner-games",
+      "harrypotter-games"
+    ],
+    "LEGO_RELEASE_PRICE_FR": [
+      "lego-fr-hp"
+    ],
+    "LICENSED_PRODUCT_RELEASE": [
+      "minalima",
+      "noble-fr",
+      "cinereplicas-fr",
+      "funko-eu"
+    ],
+    "LIVE_TOUR_FR": [
+      "ugoplay"
+    ],
+    "EXHIBITION_FR": [
+      "hp-exhibition"
+    ],
+    "LOCAL_PARIS_EVENT": [
+      "grand-rex",
+      "warner-fr"
+    ],
+    "CINEMA_NETWORK_FR": [
+      "pathe-fr",
+      "ugc-fr",
+      "cgr-fr"
+    ],
+    "FRANCHISE_EVENT_GLOBAL": [
+      "harrypotter-official"
+    ]
   },
   "coverage_matrix": {
-    "franchise_news": {"primary": ["harrypotter-official"], "fallback": ["warner-fr"]},
-    "series_hbo": {"primary": ["wbd-press-hp", "max-fr"], "fallback": ["harrypotter-official", "warner-fr"]},
-    "books_fr": {"primary": ["gallimard-jeunesse"], "fallback": []},
-    "audiobooks_fr": {"primary": ["audible-fr-hp"], "fallback": []},
-    "games": {"primary": ["warner-games", "harrypotter-games"], "fallback": ["harrypotter-official"]},
-    "lego": {"primary": ["lego-fr-hp"], "fallback": []},
-    "graphic_collectors": {"primary": ["minalima"], "fallback": []},
-    "replicas_collectors": {"primary": ["noble-fr", "cinereplicas-fr"], "fallback": []},
-    "funko_loungefly": {"primary": ["funko-eu"], "fallback": []},
-    "live_concerts": {"primary": ["ugoplay"], "fallback": ["grand-rex"]},
-    "exhibitions": {"primary": ["hp-exhibition"], "fallback": ["harrypotter-official"]},
-    "cinema_fr": {"primary": ["pathe-fr", "ugc-fr", "cgr-fr", "grand-rex"], "fallback": ["warner-fr"]},
-    "paris_idf": {"primary": ["warner-fr", "grand-rex"], "fallback": ["harrypotter-official"]},
-    "small_events": {"primary": [], "fallback": ["discovery-fnac-spectacles", "discovery-local-organizers"]}
+    "franchise_news": {
+      "primary": [
+        "harrypotter-official"
+      ],
+      "fallback": [
+        "warner-fr"
+      ]
+    },
+    "series_hbo": {
+      "primary": [
+        "wbd-press-hp",
+        "max-fr"
+      ],
+      "fallback": [
+        "harrypotter-official",
+        "warner-fr"
+      ]
+    },
+    "books_fr": {
+      "primary": [
+        "gallimard-jeunesse"
+      ],
+      "fallback": []
+    },
+    "audiobooks_fr": {
+      "primary": [
+        "audible-fr-hp"
+      ],
+      "fallback": []
+    },
+    "games": {
+      "primary": [
+        "warner-games",
+        "harrypotter-games"
+      ],
+      "fallback": [
+        "harrypotter-official"
+      ]
+    },
+    "lego": {
+      "primary": [
+        "lego-fr-hp"
+      ],
+      "fallback": []
+    },
+    "graphic_collectors": {
+      "primary": [
+        "minalima"
+      ],
+      "fallback": []
+    },
+    "replicas_collectors": {
+      "primary": [
+        "noble-fr",
+        "cinereplicas-fr"
+      ],
+      "fallback": []
+    },
+    "funko_loungefly": {
+      "primary": [
+        "funko-eu"
+      ],
+      "fallback": []
+    },
+    "live_concerts": {
+      "primary": [
+        "ugoplay"
+      ],
+      "fallback": [
+        "grand-rex"
+      ]
+    },
+    "exhibitions": {
+      "primary": [
+        "hp-exhibition"
+      ],
+      "fallback": [
+        "harrypotter-official"
+      ]
+    },
+    "cinema_fr": {
+      "primary": [
+        "pathe-fr",
+        "ugc-fr",
+        "cgr-fr",
+        "grand-rex"
+      ],
+      "fallback": [
+        "warner-fr"
+      ]
+    },
+    "paris_idf": {
+      "primary": [
+        "warner-fr",
+        "grand-rex"
+      ],
+      "fallback": [
+        "harrypotter-official"
+      ]
+    },
+    "small_events": {
+      "primary": [],
+      "fallback": [
+        "discovery-fnac-spectacles",
+        "discovery-local-organizers"
+      ]
+    }
   },
   "sources": [
     {
@@ -86,11 +212,40 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://www.harrypotter.com/news",
-      "domains": ["franchise_news", "back_to_hogwarts", "anniversaries", "films", "series", "books", "games", "experiences"],
-      "expected_information": ["annonces franchise", "Back to Hogwarts", "anniversaires", "nouveaux projets", "dates globales", "expériences officielles"],
-      "can_confirm": ["FRANCHISE_ANNOUNCEMENT", "GLOBAL_DATE", "GLOBAL_WINDOW", "OFFICIAL_PROJECT_STATUS"],
-      "cannot_confirm": ["FR_RETAIL_PRICE", "FR_LOCAL_STOCK", "FR_TICKET_STATUS", "FR_LOCAL_EVENT_TIME sans mention explicite"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "franchise_news",
+        "back_to_hogwarts",
+        "anniversaries",
+        "films",
+        "series",
+        "books",
+        "games",
+        "experiences"
+      ],
+      "expected_information": [
+        "annonces franchise",
+        "Back to Hogwarts",
+        "anniversaires",
+        "nouveaux projets",
+        "dates globales",
+        "expériences officielles"
+      ],
+      "can_confirm": [
+        "FRANCHISE_ANNOUNCEMENT",
+        "GLOBAL_DATE",
+        "GLOBAL_WINDOW",
+        "OFFICIAL_PROJECT_STATUS"
+      ],
+      "cannot_confirm": [
+        "FR_RETAIL_PRICE",
+        "FR_LOCAL_STOCK",
+        "FR_TICKET_STATUS",
+        "FR_LOCAL_EVENT_TIME sans mention explicite"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "wbd-press-hp",
@@ -99,11 +254,36 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://press.wbd.com/us/property/harry-potter/media-releases",
-      "domains": ["series_hbo", "production", "casting", "trailers"],
-      "expected_information": ["production", "casting", "première globale", "fenêtre de diffusion", "trailer", "communiqués HBO"],
-      "can_confirm": ["SERIES_GLOBAL_DATE", "SERIES_GLOBAL_WINDOW", "CASTING", "PRODUCTION_STATUS", "TRAILER_RELEASE"],
-      "cannot_confirm": ["FR_AVAILABILITY sauf mention France", "FR_LOCAL_TIME", "FR_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "series_hbo",
+        "production",
+        "casting",
+        "trailers"
+      ],
+      "expected_information": [
+        "production",
+        "casting",
+        "première globale",
+        "fenêtre de diffusion",
+        "trailer",
+        "communiqués HBO"
+      ],
+      "can_confirm": [
+        "SERIES_GLOBAL_DATE",
+        "SERIES_GLOBAL_WINDOW",
+        "CASTING",
+        "PRODUCTION_STATUS",
+        "TRAILER_RELEASE"
+      ],
+      "cannot_confirm": [
+        "FR_AVAILABILITY sauf mention France",
+        "FR_LOCAL_TIME",
+        "FR_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "max-fr",
@@ -112,11 +292,30 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.max.com/fr/fr",
-      "domains": ["series_hbo", "streaming_fr"],
-      "expected_information": ["date de disponibilité France", "heure de mise en ligne", "page programme", "disponibilité streaming"],
-      "can_confirm": ["SERIES_FR_AVAILABILITY", "FR_STREAMING_DATE", "FR_STREAMING_TIME"],
-      "cannot_confirm": ["GLOBAL_PRODUCTION_STATUS", "FR_PHYSICAL_EVENT", "MERCH_RELEASE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "series_hbo",
+        "streaming_fr"
+      ],
+      "expected_information": [
+        "date de disponibilité France",
+        "heure de mise en ligne",
+        "page programme",
+        "disponibilité streaming"
+      ],
+      "can_confirm": [
+        "SERIES_FR_AVAILABILITY",
+        "FR_STREAMING_DATE",
+        "FR_STREAMING_TIME"
+      ],
+      "cannot_confirm": [
+        "GLOBAL_PRODUCTION_STATUS",
+        "FR_PHYSICAL_EVENT",
+        "MERCH_RELEASE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "warner-fr",
@@ -125,11 +324,33 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.warnerbros.fr/",
-      "domains": ["cinema_fr", "activations_fr", "experiences_fr", "studio_news_fr"],
-      "expected_information": ["sorties/ressorties cinéma France", "activations", "expériences", "événements Warner France"],
-      "can_confirm": ["FR_CINEMA_DATE", "FR_ACTIVATION_DATE", "FR_EVENT_WINDOW", "FR_STUDIO_ANNOUNCEMENT"],
-      "cannot_confirm": ["RETAILER_STOCK", "THIRD_PARTY_TICKETING", "LICENSED_PRODUCT_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "cinema_fr",
+        "activations_fr",
+        "experiences_fr",
+        "studio_news_fr"
+      ],
+      "expected_information": [
+        "sorties/ressorties cinéma France",
+        "activations",
+        "expériences",
+        "événements Warner France"
+      ],
+      "can_confirm": [
+        "FR_CINEMA_DATE",
+        "FR_ACTIVATION_DATE",
+        "FR_EVENT_WINDOW",
+        "FR_STUDIO_ANNOUNCEMENT"
+      ],
+      "cannot_confirm": [
+        "RETAILER_STOCK",
+        "THIRD_PARTY_TICKETING",
+        "LICENSED_PRODUCT_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "gallimard-jeunesse",
@@ -138,11 +359,34 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.gallimard-jeunesse.fr/collection/papeterie-jeunesse/harry-potter.html",
-      "domains": ["books_fr", "illustrated_editions", "paper_goods"],
-      "expected_information": ["date de parution", "édition", "EAN/ISBN", "prix éditeur", "description officielle"],
-      "can_confirm": ["FR_BOOK_RELEASE", "FR_BOOK_EDITION", "EAN_ISBN", "PRICE_FR", "PUBLISHER"],
-      "cannot_confirm": ["RETAILER_STOCK", "RETAILER_PREORDER_DATE", "SECONDARY_MARKET_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "books_fr",
+        "illustrated_editions",
+        "paper_goods"
+      ],
+      "expected_information": [
+        "date de parution",
+        "édition",
+        "EAN/ISBN",
+        "prix éditeur",
+        "description officielle"
+      ],
+      "can_confirm": [
+        "FR_BOOK_RELEASE",
+        "FR_BOOK_EDITION",
+        "EAN_ISBN",
+        "PRICE_FR",
+        "PUBLISHER"
+      ],
+      "cannot_confirm": [
+        "RETAILER_STOCK",
+        "RETAILER_PREORDER_DATE",
+        "SECONDARY_MARKET_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "audible-fr-hp",
@@ -151,11 +395,29 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.audible.fr/ep/harrypotter",
-      "domains": ["audiobooks_fr"],
-      "expected_information": ["date de sortie audio", "langue", "casting audio", "précommande/availability Audible"],
-      "can_confirm": ["FR_AUDIO_RELEASE", "AUDIO_LANGUAGE", "AUDIO_CAST", "AUDIBLE_AVAILABILITY"],
-      "cannot_confirm": ["NATIONAL_MULTI_RETAILER_RELEASE", "PHYSICAL_BOOK_DATE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "audiobooks_fr"
+      ],
+      "expected_information": [
+        "date de sortie audio",
+        "langue",
+        "casting audio",
+        "précommande/availability Audible"
+      ],
+      "can_confirm": [
+        "FR_AUDIO_RELEASE",
+        "AUDIO_LANGUAGE",
+        "AUDIO_CAST",
+        "AUDIBLE_AVAILABILITY"
+      ],
+      "cannot_confirm": [
+        "NATIONAL_MULTI_RETAILER_RELEASE",
+        "PHYSICAL_BOOK_DATE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "harrypotter-games",
@@ -164,11 +426,27 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://www.harrypotter.com/games",
-      "domains": ["games"],
-      "expected_information": ["annonce de jeu", "mise à jour franchise", "liens vers projets Portkey"],
-      "can_confirm": ["GAME_ANNOUNCEMENT", "OFFICIAL_GAME_STATUS"],
-      "cannot_confirm": ["FR_GAME_PRICE", "FR_RETAILER_PREORDER", "FR_RELEASE_DATE sans mention explicite"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "games"
+      ],
+      "expected_information": [
+        "annonce de jeu",
+        "mise à jour franchise",
+        "liens vers projets Portkey"
+      ],
+      "can_confirm": [
+        "GAME_ANNOUNCEMENT",
+        "OFFICIAL_GAME_STATUS"
+      ],
+      "cannot_confirm": [
+        "FR_GAME_PRICE",
+        "FR_RETAILER_PREORDER",
+        "FR_RELEASE_DATE sans mention explicite"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "warner-games",
@@ -177,11 +455,31 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://warnerbrosgames.com/",
-      "domains": ["games", "portkey"],
-      "expected_information": ["date de sortie", "plateformes", "éditions", "précommande officielle", "DLC/updates majeures"],
-      "can_confirm": ["GAME_RELEASE", "GAME_PLATFORMS", "GAME_EDITION", "OFFICIAL_GAME_PREORDER"],
-      "cannot_confirm": ["FR_RETAILER_PRICE sauf boutique Warner", "LOCAL_STORE_STOCK"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "games",
+        "portkey"
+      ],
+      "expected_information": [
+        "date de sortie",
+        "plateformes",
+        "éditions",
+        "précommande officielle",
+        "DLC/updates majeures"
+      ],
+      "can_confirm": [
+        "GAME_RELEASE",
+        "GAME_PLATFORMS",
+        "GAME_EDITION",
+        "OFFICIAL_GAME_PREORDER"
+      ],
+      "cannot_confirm": [
+        "FR_RETAILER_PRICE sauf boutique Warner",
+        "LOCAL_STORE_STOCK"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "lego-fr-hp",
@@ -190,11 +488,35 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.lego.com/fr-fr/themes/harry-potter",
-      "domains": ["lego", "collectors", "promotions", "lego_store_events"],
-      "expected_information": ["set", "date de sortie", "prix France", "GWP", "promotion", "événement LEGO Store"],
-      "can_confirm": ["LEGO_RELEASE_FR", "PRICE_FR", "LEGO_PROMOTION", "LEGO_STORE_EVENT", "LEGO_PRODUCT_ID"],
-      "cannot_confirm": ["OTHER_RETAILER_STOCK", "OTHER_RETAILER_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": "2026-08-19T04:05:00Z"
+      "domains": [
+        "lego",
+        "collectors",
+        "promotions",
+        "lego_store_events"
+      ],
+      "expected_information": [
+        "set",
+        "date de sortie",
+        "prix France",
+        "GWP",
+        "promotion",
+        "événement LEGO Store"
+      ],
+      "can_confirm": [
+        "LEGO_RELEASE_FR",
+        "PRICE_FR",
+        "LEGO_PROMOTION",
+        "LEGO_STORE_EVENT",
+        "LEGO_PRODUCT_ID"
+      ],
+      "cannot_confirm": [
+        "OTHER_RETAILER_STOCK",
+        "OTHER_RETAILER_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": "2026-08-19T04:05:00Z"
     },
     {
       "source_id": "minalima",
@@ -203,11 +525,30 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://minalima.com/",
-      "domains": ["graphic_collectors", "illustrated_editions", "prints"],
-      "expected_information": ["nouvelle édition", "print", "collector graphique", "drop MinaLima"],
-      "can_confirm": ["MINALIMA_PRODUCT", "MINALIMA_RELEASE", "DIRECT_PRICE"],
-      "cannot_confirm": ["FR_NATIONAL_RELEASE", "OTHER_RETAILER_STOCK"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": "2026-08-19T04:10:00Z"
+      "domains": [
+        "graphic_collectors",
+        "illustrated_editions",
+        "prints"
+      ],
+      "expected_information": [
+        "nouvelle édition",
+        "print",
+        "collector graphique",
+        "drop MinaLima"
+      ],
+      "can_confirm": [
+        "MINALIMA_PRODUCT",
+        "MINALIMA_RELEASE",
+        "DIRECT_PRICE"
+      ],
+      "cannot_confirm": [
+        "FR_NATIONAL_RELEASE",
+        "OTHER_RETAILER_STOCK"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": "2026-08-19T04:10:00Z"
     },
     {
       "source_id": "noble-fr",
@@ -216,11 +557,32 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://noblecollection.fr/",
-      "domains": ["replicas_collectors", "wands"],
-      "expected_information": ["réplique", "baguette", "collector", "édition limitée", "prix direct"],
-      "can_confirm": ["NOBLE_PRODUCT", "NOBLE_RELEASE", "PRICE_FR", "DIRECT_AVAILABILITY", "LIMITED_IF_EXPLICIT"],
-      "cannot_confirm": ["OTHER_RETAILER_STOCK", "FRANCHISE_GLOBAL_DATE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": "2026-08-19T04:10:00Z"
+      "domains": [
+        "replicas_collectors",
+        "wands"
+      ],
+      "expected_information": [
+        "réplique",
+        "baguette",
+        "collector",
+        "édition limitée",
+        "prix direct"
+      ],
+      "can_confirm": [
+        "NOBLE_PRODUCT",
+        "NOBLE_RELEASE",
+        "PRICE_FR",
+        "DIRECT_AVAILABILITY",
+        "LIMITED_IF_EXPLICIT"
+      ],
+      "cannot_confirm": [
+        "OTHER_RETAILER_STOCK",
+        "FRANCHISE_GLOBAL_DATE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": "2026-08-19T04:10:00Z"
     },
     {
       "source_id": "cinereplicas-fr",
@@ -229,11 +591,32 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://cinereplicas.fr/collections/harry-potter",
-      "domains": ["replicas_collectors", "licensed_merch"],
-      "expected_information": ["collector", "réplique", "édition limitée", "calendrier de l'Avent", "prix direct"],
-      "can_confirm": ["CINEREPLICAS_PRODUCT", "CINEREPLICAS_RELEASE", "PRICE_FR", "DIRECT_AVAILABILITY", "LIMITED_IF_EXPLICIT"],
-      "cannot_confirm": ["OTHER_RETAILER_STOCK", "FRANCHISE_GLOBAL_DATE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": "2026-08-19T04:10:00Z"
+      "domains": [
+        "replicas_collectors",
+        "licensed_merch"
+      ],
+      "expected_information": [
+        "collector",
+        "réplique",
+        "édition limitée",
+        "calendrier de l'Avent",
+        "prix direct"
+      ],
+      "can_confirm": [
+        "CINEREPLICAS_PRODUCT",
+        "CINEREPLICAS_RELEASE",
+        "PRICE_FR",
+        "DIRECT_AVAILABILITY",
+        "LIMITED_IF_EXPLICIT"
+      ],
+      "cannot_confirm": [
+        "OTHER_RETAILER_STOCK",
+        "FRANCHISE_GLOBAL_DATE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": "2026-08-19T04:10:00Z"
     },
     {
       "source_id": "funko-eu",
@@ -242,11 +625,32 @@
       "evidence_grade": "A",
       "territory": "EU_FR",
       "url": "https://funkoeurope.com/",
-      "domains": ["funko_loungefly", "licensed_merch"],
-      "expected_information": ["Funko Pop", "Loungefly", "exclusivité Europe", "coming soon", "drop direct"],
-      "can_confirm": ["FUNKO_EU_PRODUCT", "LOUNGEFLY_EU_PRODUCT", "DIRECT_EU_RELEASE", "DIRECT_EU_PRICE", "DIRECT_AVAILABILITY"],
-      "cannot_confirm": ["FR_NATIONAL_RETAIL_RELEASE", "OTHER_RETAILER_STOCK"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": "2026-08-19T04:10:00Z"
+      "domains": [
+        "funko_loungefly",
+        "licensed_merch"
+      ],
+      "expected_information": [
+        "Funko Pop",
+        "Loungefly",
+        "exclusivité Europe",
+        "coming soon",
+        "drop direct"
+      ],
+      "can_confirm": [
+        "FUNKO_EU_PRODUCT",
+        "LOUNGEFLY_EU_PRODUCT",
+        "DIRECT_EU_RELEASE",
+        "DIRECT_EU_PRICE",
+        "DIRECT_AVAILABILITY"
+      ],
+      "cannot_confirm": [
+        "FR_NATIONAL_RETAIL_RELEASE",
+        "OTHER_RETAILER_STOCK"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": "2026-08-19T04:10:00Z"
     },
     {
       "source_id": "ugoplay",
@@ -255,11 +659,34 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.u-play.fr/cine-concerts",
-      "domains": ["live_concerts", "tours_fr"],
-      "expected_information": ["tournée", "villes", "dates", "horaires", "salles", "billetterie"],
-      "can_confirm": ["TOUR_DATE", "TOUR_CITY", "TOUR_VENUE", "TOUR_TIME", "TICKETING_URL", "TICKET_STATUS"],
-      "cannot_confirm": ["VENUE_LOCAL_ACCESS_DETAILS non publiés", "THIRD_PARTY_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "live_concerts",
+        "tours_fr"
+      ],
+      "expected_information": [
+        "tournée",
+        "villes",
+        "dates",
+        "horaires",
+        "salles",
+        "billetterie"
+      ],
+      "can_confirm": [
+        "TOUR_DATE",
+        "TOUR_CITY",
+        "TOUR_VENUE",
+        "TOUR_TIME",
+        "TICKETING_URL",
+        "TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "VENUE_LOCAL_ACCESS_DETAILS non publiés",
+        "THIRD_PARTY_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "hp-exhibition",
@@ -268,11 +695,30 @@
       "evidence_grade": "A",
       "territory": "GLOBAL_FR_RELEVANT",
       "url": "https://harrypotterexhibition.com/press/",
-      "domains": ["exhibitions", "experiences"],
-      "expected_information": ["nouvelle ville", "dates", "billetterie", "ouverture/fermeture"],
-      "can_confirm": ["EXHIBITION_CITY", "EXHIBITION_DATES", "TICKETING_URL", "TICKET_STATUS"],
-      "cannot_confirm": ["FR_DATE sans annonce France", "THIRD_PARTY_PACKAGE_PRICE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "exhibitions",
+        "experiences"
+      ],
+      "expected_information": [
+        "nouvelle ville",
+        "dates",
+        "billetterie",
+        "ouverture/fermeture"
+      ],
+      "can_confirm": [
+        "EXHIBITION_CITY",
+        "EXHIBITION_DATES",
+        "TICKETING_URL",
+        "TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "FR_DATE sans annonce France",
+        "THIRD_PARTY_PACKAGE_PRICE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "grand-rex",
@@ -281,11 +727,34 @@
       "evidence_grade": "A",
       "territory": "LOCAL_FR",
       "url": "https://www.legrandrex.com/",
-      "domains": ["cinema_fr", "live_concerts", "paris_idf"],
-      "expected_information": ["séance spéciale", "ciné-concert", "horaire", "prix", "billetterie", "salle"],
-      "can_confirm": ["LOCAL_EVENT_DATE", "LOCAL_EVENT_TIME", "LOCAL_VENUE", "LOCAL_TICKET_PRICE", "LOCAL_TICKET_STATUS"],
-      "cannot_confirm": ["NATIONAL_TOUR_DATE", "FRANCHISE_GLOBAL_DATE"],
-      "status": "ACTIVE", "priority": 1, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "cinema_fr",
+        "live_concerts",
+        "paris_idf"
+      ],
+      "expected_information": [
+        "séance spéciale",
+        "ciné-concert",
+        "horaire",
+        "prix",
+        "billetterie",
+        "salle"
+      ],
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "LOCAL_VENUE",
+        "LOCAL_TICKET_PRICE",
+        "LOCAL_TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "NATIONAL_TOUR_DATE",
+        "FRANCHISE_GLOBAL_DATE"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "pathe-fr",
@@ -294,11 +763,29 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.pathe.fr/",
-      "domains": ["cinema_fr"],
-      "expected_information": ["ressortie", "marathon", "séance anniversaire", "avant-première", "horaires réseau"],
-      "can_confirm": ["PATHE_SCREENING_DATE", "PATHE_SCREENING_TIME", "PATHE_TICKET_STATUS"],
-      "cannot_confirm": ["UGC_CGR_AVAILABILITY", "NATIONAL_NON_PATHE_RELEASE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "cinema_fr"
+      ],
+      "expected_information": [
+        "ressortie",
+        "marathon",
+        "séance anniversaire",
+        "avant-première",
+        "horaires réseau"
+      ],
+      "can_confirm": [
+        "PATHE_SCREENING_DATE",
+        "PATHE_SCREENING_TIME",
+        "PATHE_TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "UGC_CGR_AVAILABILITY",
+        "NATIONAL_NON_PATHE_RELEASE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "ugc-fr",
@@ -307,11 +794,28 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.ugc.fr/",
-      "domains": ["cinema_fr"],
-      "expected_information": ["ressortie", "marathon", "séance spéciale", "avant-première"],
-      "can_confirm": ["UGC_SCREENING_DATE", "UGC_SCREENING_TIME", "UGC_TICKET_STATUS"],
-      "cannot_confirm": ["PATHE_CGR_AVAILABILITY", "NATIONAL_NON_UGC_RELEASE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "cinema_fr"
+      ],
+      "expected_information": [
+        "ressortie",
+        "marathon",
+        "séance spéciale",
+        "avant-première"
+      ],
+      "can_confirm": [
+        "UGC_SCREENING_DATE",
+        "UGC_SCREENING_TIME",
+        "UGC_TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "PATHE_CGR_AVAILABILITY",
+        "NATIONAL_NON_UGC_RELEASE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": null
     },
     {
       "source_id": "cgr-fr",
@@ -320,11 +824,97 @@
       "evidence_grade": "A",
       "territory": "FR",
       "url": "https://www.cgrcinemas.fr/",
-      "domains": ["cinema_fr"],
-      "expected_information": ["ressortie", "séance spéciale", "événement régional"],
-      "can_confirm": ["CGR_SCREENING_DATE", "CGR_SCREENING_TIME", "CGR_TICKET_STATUS"],
-      "cannot_confirm": ["PATHE_UGC_AVAILABILITY", "NATIONAL_NON_CGR_RELEASE"],
-      "status": "ACTIVE", "priority": 2, "cadence": "DAILY", "last_verified_at": null
+      "domains": [
+        "cinema_fr"
+      ],
+      "expected_information": [
+        "ressortie",
+        "séance spéciale",
+        "événement régional"
+      ],
+      "can_confirm": [
+        "CGR_SCREENING_DATE",
+        "CGR_SCREENING_TIME",
+        "CGR_TICKET_STATUS"
+      ],
+      "cannot_confirm": [
+        "PATHE_UGC_AVAILABILITY",
+        "NATIONAL_NON_CGR_RELEASE"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "DAILY",
+      "last_verified_at": null
+    },
+    {
+      "source_id": "arcueil-jean-vilar",
+      "name": "Ville d'Arcueil / Espace Jean Vilar",
+      "authority": "VENUE_DIRECT",
+      "evidence_grade": "A",
+      "territory": "LOCAL_FR",
+      "url": "https://www.arcueil.fr/evenement/marathon-harry-potter-a-lespace-jean-vilar/",
+      "domains": [
+        "cinema_fr",
+        "small_events",
+        "paris_idf"
+      ],
+      "expected_information": [
+        "programmation locale",
+        "dates",
+        "horaires",
+        "tarifs",
+        "lieu"
+      ],
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "LOCAL_EVENT_LOCATION",
+        "LOCAL_TICKET_PRICE"
+      ],
+      "cannot_confirm": [
+        "NATIONAL_CINEMA_DATE",
+        "OTHER_VENUE_STATUS"
+      ],
+      "status": "ACTIVE",
+      "priority": 2,
+      "cadence": "EVENT_DRIVEN",
+      "last_verified_at": "2026-08-22T01:54:24Z"
+    },
+    {
+      "source_id": "droneart-harry-potter-paris",
+      "name": "DroneArt Show — Harry Potter Paris",
+      "authority": "ORGANIZER_DIRECT",
+      "evidence_grade": "A",
+      "territory": "LOCAL_FR",
+      "url": "https://thedroneartshow.com/paris/harry-potter/",
+      "domains": [
+        "experiences_fr",
+        "paris_idf",
+        "ticketing"
+      ],
+      "expected_information": [
+        "dates",
+        "horaires",
+        "lieu",
+        "conditions d'accès",
+        "billetterie"
+      ],
+      "can_confirm": [
+        "FR_EVENT_WINDOW",
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "LOCAL_EVENT_LOCATION",
+        "TICKET_STATUS",
+        "ACCESS_RULES"
+      ],
+      "cannot_confirm": [
+        "OTHER_CITY_EVENT",
+        "THIRD_PARTY_RESALE_STATUS"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "EVENT_DRIVEN",
+      "last_verified_at": "2026-08-22T01:54:24Z"
     }
   ],
   "discovery_relays": [
@@ -335,8 +925,13 @@
       "evidence_grade": "D",
       "territory": "FR",
       "url": "https://www.fnacspectacles.com/",
-      "domains": ["small_events", "live_events"],
-      "expected_information": ["signal de spectacle/convention/ciné-concert"],
+      "domains": [
+        "small_events",
+        "live_events"
+      ],
+      "expected_information": [
+        "signal de spectacle/convention/ciné-concert"
+      ],
       "can_confirm": [],
       "status": "DISCOVERY_ONLY",
       "priority": 3,
@@ -349,8 +944,13 @@
       "evidence_grade": "D",
       "territory": "FR",
       "url": null,
-      "domains": ["small_events", "regional_events"],
-      "expected_information": ["découverte de petits événements régionaux à confirmer à la source"],
+      "domains": [
+        "small_events",
+        "regional_events"
+      ],
+      "expected_information": [
+        "découverte de petits événements régionaux à confirmer à la source"
+      ],
       "can_confirm": [],
       "status": "DISCOVERY_ONLY",
       "priority": 3,
