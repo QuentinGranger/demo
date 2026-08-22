@@ -1,0 +1,46 @@
+name: Apply verified LEGO Fortnite Monastery promotion
+
+on:
+  push:
+    paths:
+      - 'scripts/apply_fortnite_monastery.py'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply idempotent promotion patch
+        run: python scripts/apply_fortnite_monastery.py
+      - name: Synchronize global feed and normalize serialization
+        run: python scripts/sync_fortnite_calendars.py
+      - name: Validate Fortnite calendars
+        run: python scripts/validate_fortnite_ics.py
+      - name: Validate change ledger and outbox
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate remaining Fortnite canonical domains
+        run: |
+          python scripts/validate_fortnite_competitive.py
+          python scripts/validate_fortnite_competitive_deadlines.py
+          python scripts/validate_fortnite_season_pass_lifecycle.py
+          python scripts/validate_fortnite_lore_taxonomy.py
+          python scripts/validate_fortnite_physical_events.py
+      - name: Commit verified promotion
+        run: |
+          if git diff --quiet; then
+            echo 'Promotion already applied; nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/fortnite-change-ledger.json calendars/fortnite-change-index-france.json calendars/fortnite-watchlist-france.json calendars/fortnite-updates-france.ics calendars/fortnite-paris.ics
+          git commit -m 'Add LEGO Fortnite Monastery portal event to calendars'
+          git push
