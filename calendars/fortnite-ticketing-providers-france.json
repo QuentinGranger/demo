@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_TICKETING_PROVIDER_REGISTRY_FR_V2",
-  "updated_at": "2026-08-19T18:12:23Z",
+  "updated_at": "2026-08-22T09:17:06Z",
   "scope": "Official organizers, venues and ticketing partners for Fortnite physical events in France and Europe",
   "provider_types": ["VENUE_DIRECT","ORGANIZER_DIRECT","OFFICIAL_TICKETING_PARTNER","OFFICIAL_EVENT_PARTNER","REGISTRATION_PLATFORM"],
   "principles": {
@@ -54,6 +54,17 @@
       "can_confirm": ["EVENT_EXISTENCE","VENUE","EVENT_DATE","TICKET_STATUS","TICKET_CATEGORY","TICKET_PRICE","EVENT_ACCESS_WHEN_PUBLISHED","AGE_RULE_IF_PUBLISHED","ID_REQUIREMENT_IF_PUBLISHED","CHECK_IN_IF_PUBLISHED","LAST_ENTRY_IF_PUBLISHED","REENTRY_IF_PUBLISHED","ACCESSIBILITY_IF_PUBLISHED","VENUE_SPACE_IF_PUBLISHED"],
       "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT_BEYOND_PUBLISHED_EVENT_COPY","UNPUBLISHED_MATCH_TIME","UNPUBLISHED_ONSITE_RULE"],
       "supports": {"sessions":false,"categories":true,"seatmap":false,"waiting_list":false,"geo":false,"onsite_rules":true,"accessibility":true},
+      "status": "ACTIVE"
+    },
+    {
+      "provider_id": "platinumlist_paris",
+      "name": "Platinumlist Paris",
+      "type": "OFFICIAL_TICKETING_PARTNER",
+      "website": "https://paris.platinumlist.net/",
+      "territory": "PARIS_FR",
+      "can_confirm": ["TICKET_AVAILABILITY_FOR_LISTED_EVENT","TICKET_CATEGORY","TICKET_PRICE","EVENT_DATE","VENUE","ADDRESS","DIGITAL_TICKET_IF_PUBLISHED"],
+      "cannot_confirm": ["FORTNITE_COMPETITIVE_FORMAT","FORTNITE_MATCH_TIME","WATCH_PARTY_ACCESS_REQUIREMENT_UNLESS_EXPLICIT","EVENT_CAPACITY","UNPUBLISHED_ONSITE_RULE"],
+      "supports": {"sessions":true,"categories":true,"seatmap":false,"waiting_list":false,"geo":true,"onsite_rules":false,"accessibility":false},
       "status": "ACTIVE"
     }
   ],
