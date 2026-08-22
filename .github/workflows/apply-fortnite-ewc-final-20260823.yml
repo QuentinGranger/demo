@@ -47,3 +47,5 @@ jobs:
             calendars/fortnite-paris.ics
           git commit -m 'Finalize EWC Fortnite 2026 results'
           git push origin HEAD:master
+
+# trigger: 2026-08-22T22:12Z
