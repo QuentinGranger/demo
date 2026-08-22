@@ -1,0 +1,40 @@
+{
+  "version": "FORTNITE_COMPETITIVE_RESULT_V1",
+  "result_id": "reload-elite-ewc-paris-2026:final",
+  "competition_id": "reload-elite-ewc-paris-2026",
+  "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+  "status": "COMPLETED",
+  "completed_on": "2026-08-22",
+  "location": {
+    "venue": "Paris Expo Porte de Versailles",
+    "city": "Paris",
+    "country": "France"
+  },
+  "champion": {
+    "club": "BIG",
+    "players": ["VICO", "Malibuca"],
+    "prize_usd": 260000,
+    "club_championship_points": 1000
+  },
+  "mvp": "VICO",
+  "podium": [
+    {"rank": 1, "club": "BIG", "prize_usd": 260000, "club_championship_points": 1000},
+    {"rank": 2, "club": "RVNS SkyJump + LYOST Momsy", "prize_usd": 150000, "club_championship_points": 750},
+    {"rank": 3, "club": "Aurora Gaming", "prize_usd": 90000, "club_championship_points": 500}
+  ],
+  "fourth": {"club": "Team HavoK", "prize_usd": 60000, "club_championship_points": 300},
+  "source": {
+    "source_id": "ewc_official",
+    "url": "https://ewc-web.prod.esf-systems.com/en/competitions/2026/fortnite",
+    "authority": "OFFICIAL_EVENT_ORGANIZER",
+    "checked_at": "2026-08-22T23:01:00Z"
+  },
+  "material_transition": {
+    "from": "LIVE",
+    "to": "COMPLETED",
+    "type": "PARTICIPANT_OUTCOME_CHANGED",
+    "notification_disposition": "ELIGIBLE_NOW"
+  },
+  "projection_state": "PENDING_CANONICAL_CAS",
+  "projection_note": "Authoritative immutable outcome overlay created first. Merge into the shared competitive ledger and both calendar projections only after a fresh compare-and-swap read, never by overwriting a stale large-file snapshot."
+}
