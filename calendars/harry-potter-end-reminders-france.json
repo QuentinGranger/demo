@@ -1,6 +1,6 @@
 {
   "version": "DEADLINE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-19T22:41:00Z",
+  "updated_at": "2026-08-22T08:48:01Z",
   "scope": "Harry Potter / Wizarding World — échéances et dernières chances France, priorité Paris/Île-de-France",
   "purpose": "Suivre la fin réelle et la dernière possibilité d'agir pour les expositions, pop-ups, expériences, spectacles et runs limités, sans confondre proximité de fin et rareté de billets.",
   "timezone": "Europe/Paris",
@@ -233,6 +233,18 @@
       "deadline_at":"2026-09-07T13:00:00+02:00",
       "deadline_certainty":"OFFICIAL_EXACT",
       "planned_notices":[{"type":"LAST_CHANCE_WINDOW","trigger_at":"2026-09-06T09:00:00+02:00","label":"LEGO Bièreaubeurre Disneyland Paris — dernière session demain","state":"PLANNED"},{"type":"LAST_DAY","trigger_at":"2026-09-07T09:00:00+02:00","label":"LEGO Bièreaubeurre Disneyland Paris — dernière session aujourd'hui, 11h–13h","state":"PLANNED"}]
+    },
+    {
+      "event_uid":"hp-droneart-paris-20260930@openai",
+      "profile":"MEDIUM_RUN",
+      "deadline_version":1,
+      "last_public_date":"2026-10-10",
+      "deadline_type":"LAST_PUBLIC_SESSION_AT",
+      "deadline_at":"2026-10-10T20:45:00+02:00",
+      "deadline_certainty":"OFFICIAL_EXACT",
+      "planned_notices":[{"type":"ENDING_SOON","trigger_at":"2026-10-03T09:00:00+02:00","label":"DroneArt Harry Potter Paris — dernière semaine","state":"PLANNED"},{"type":"FINAL_DAYS","trigger_at":"2026-10-08T09:00:00+02:00","label":"DroneArt Harry Potter Paris — derniers jours","state":"PLANNED"}],
+      "source_url":"https://thedroneartshow.com/paris/harry-potter/",
+      "enrolled_at":"2026-08-22T08:48:01Z"
     }
   ]
 }
