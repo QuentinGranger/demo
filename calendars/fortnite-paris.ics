@@ -271,9 +271,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-reload-elite-ewc-paris-20260819@openai
-DTSTAMP:20260821T171049Z
-LAST-MODIFIED:20260821T171049Z
-SEQUENCE:5
+DTSTAMP:20260822T152110Z
+LAST-MODIFIED:20260822T152110Z
+SEQUENCE:6
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
@@ -302,10 +302,14 @@ X-FORTNITE-TICKET-STATUS:PREREGISTRATION
 X-FORTNITE-TICKET-SCOPE:EWC_PARIS_MIXED_SCOPES
 X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY
  -EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
-X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=ANNOUNCED:Billet 
- Fan Fest valide pour la journée — accès watch parties
-X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=ANNOUNCED;ACCESS=FAN_F
+X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=AVAILABLE;PRICE-E
+ UR=4.99;PROVIDER-ID=platinumlist_paris:Billet Fan Fest valide pour la jour
+ née — accès watch parties
+X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=AVAILABLE;ACCESS=FAN_F
  EST_DAY_TICKET:Watch parties Fortnite
+X-FORTNITE-WATCH-PARTY-TICKET-URL:https://paris.platinumlist.net/fr/event-t
+ ickets/106986/fan-fest-at-ewc26
+X-FORTNITE-WATCH-PARTY-TICKET-PRICE-FROM-EUR:4.99
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-COMPETITIVE-SCHEDULE-PRECISION:EXACT_STARTS_ENDS_UNKNOWN
 X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T
@@ -339,11 +343,12 @@ DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship
  rée publique.\n🎟️ Les billets de la scène principale Fortnite sont 
  complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parti
  es Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
- écessitent un billet Fan Fest valide pour la journée. Le stock\, le prix
-  et les horaires exacts des billets Fan Fest ne sont pas affirmés.\nSourc
- e planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC :
-  https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guid
- e
+ écessitent un billet Fan Fest valide pour la journée. Billets Fan Fest a
+ ctuellement achetables à partir de 4\,99 € via Platinumlist ; la scène
+  principale Fortnite reste complète. Les horaires exacts des watch partie
+ s ne sont pas affirmés.\nSource planning : https://ewc-web.prod.esf-syste
+ ms.com/en/schedule\nGuide EWC : https://ewc-web.prod.esf-systems.com/en/ne
+ ws/ewc26-fortnite-survival-guide
 URL:https://ewc-web.prod.esf-systems.com/en/schedule
 CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
  yale,Duos,Paris,France
