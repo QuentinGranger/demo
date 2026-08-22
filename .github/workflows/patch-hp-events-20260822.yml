@@ -1,5 +1,6 @@
 name: Patch verified Harry Potter events 2026-08-22
 
+# idempotent one-shot patch workflow
 on:
   push:
     paths:
