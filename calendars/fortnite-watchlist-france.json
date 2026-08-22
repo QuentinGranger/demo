@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-22T20:12:03Z",
+  "updated_at": "2026-08-22T20:18:37Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -46,14 +46,13 @@
     },
     {
       "candidate_id": "fortnite-lego-odyssey-monastery-portal-20260827",
-      "state": "CALENDAR_ADDED",
+      "state": "READY",
       "topic": "LEGO Fortnite Odyssey — réouverture du portail du Monastère",
-      "source_ids": ["fortnite_epic_community"],
+      "source_ids": ["fortnite_news"],
       "known": "Epic annonce officiellement la réouverture du portail du Monastère dans LEGO Fortnite Odyssey du 27 août 2026 à 04:00 ET au 2 septembre 2026 à 04:00 ET. En heure de Paris, cela correspond au 27 août à 10:00 jusqu'au 2 septembre à 10:00. Vaincre le Shatter Spawn permet d'obtenir quatre récompenses dorées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shurikens of ICE.",
       "missing_for_calendar": [],
-      "promotion_rule": "Déjà promu depuis une publication Epic datée et actionnable. Conserver le même UID si la fenêtre ou les récompenses sont corrigées officiellement.",
-      "related_calendar_uid": "fortnite-lego-odyssey-monastery-portal-20260827@openai",
-      "promoted_at": "2026-08-22T20:12:03Z"
+      "promotion_rule": "READY depuis une publication Epic datée et actionnable. Ne passer CALENDAR_ADDED qu'après présence vérifiée du même UID dans le spécialiste updates puis dans le global synchronisé, avec change ledger cohérent.",
+      "related_calendar_uid": "fortnite-lego-odyssey-monastery-portal-20260827@openai"
     },
     {
       "candidate_id": "fortnite-next-live-event",
