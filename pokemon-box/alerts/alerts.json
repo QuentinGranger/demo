@@ -1,0 +1,66 @@
+{
+  "name": "Pokemon Geek Box Alerts System",
+  "version": "1.0",
+  "purpose": "Surveiller les produits pour optimiser les achats de collection Pokemon sur plusieurs annees.",
+  "monitoring": {
+    "enabled": true,
+    "check_product_status": true,
+    "check_price_changes": true,
+    "check_restock": true,
+    "check_preorders": true
+  },
+  "alert_types": {
+    "out_of_stock": {
+      "priority": "high",
+      "action": "find_alternative"
+    },
+    "back_in_stock": {
+      "priority": "high",
+      "action": "notify_for_purchase"
+    },
+    "price_drop": {
+      "priority": "medium",
+      "threshold_percent": 10,
+      "action": "recalculate_score"
+    },
+    "preorder_open": {
+      "priority": "high",
+      "action": "evaluate_product"
+    }
+  },
+  "product_monitoring": {
+    "track": [
+      "pokemon_center_exclusives",
+      "japan_imports",
+      "premium_items",
+      "limited_editions"
+    ],
+    "keep_history": true
+  },
+  "decision_rules": {
+    "do_not_buy_only_because_available": true,
+    "recalculate_product_score_after_price_change": true,
+    "prefer_waiting_for_restock_over_bad_replacement": true,
+    "search_alternative_if_discontinued": true
+  },
+  "alternative_strategy": {
+    "same_pokemon_first": true,
+    "same_theme_second": true,
+    "same_budget_range": true,
+    "preserve_emotional_value": true
+  },
+  "examples": {
+    "product_unavailable": {
+      "event": "Peluche Evoli Pokemon Center rupture",
+      "response": [
+        "check_other_official_shop",
+        "check_japan_import",
+        "suggest_equivalent_evoli_item"
+      ]
+    },
+    "price_drop": {
+      "event": "Objet premium passe de 80 euros a 60 euros",
+      "response": "reevaluate_as_possible_premium_purchase"
+    }
+  }
+}
