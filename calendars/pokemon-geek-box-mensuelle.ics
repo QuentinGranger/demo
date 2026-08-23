@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//QuentinGranger//Pokemon Geek Box Curator//FR
 CALSCALE:GREGORIAN
-METHOD:PUBLISH
+METHOD=PUBLISH
 X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Sélection imposée
 X-WR-TIMEZONE:Europe/Paris
 
@@ -10,33 +10,32 @@ BEGIN:VEVENT
 UID:pokemon-box-september-2026@quentin
 DTSTART:20260901T100000
 DTEND:20260901T110000
-RRULE:FREQ=YEARLY
-SUMMARY:🎁 Septembre 2026 — Box Évoli Lifestyle
-DESCRIPTION:OBJET IMPOSÉ : Peluche Pokémon Évoli officielle.\n\nPourquoi : première pièce parfaite pour commencer une collection physique. Évoli est une mascotte durable, facilement exposable et cohérente avec une collection long terme.\n\nBudget : 20-35€.\n\nComplément : petite figurine Évoli ou Funko Pop Évoli.\n\nSources : Pokémon Center propose des peluches officielles et objets dérivés. https://www.pokemoncenter.com/category/plush
+SUMMARY:🎁 Septembre 2026 — Box Évoli Lifestyle — 50€
+DESCRIPTION:ACHAT IMPOSÉ : Peluche Pokémon Évoli officielle.\n\nBudget : 25-35€.\nLien : https://www.pokemoncenter.com/category/plush\nAlternative France : https://www.pokecenter.fr/peluches-pokemon\n\nComplément box :\n📚 Manga ou livre Pokémon : 10€\n✨ Petit goodie : 5-10€\n\nObjectif : première pièce forte et exposable.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-october-2026@quentin
 DTSTART:20261001T100000
 DTEND:20261001T110000
-SUMMARY:🎁 Octobre 2026 — Box Halloween Pokémon
-DESCRIPTION:OBJET IMPOSÉ : Peluche Mimiqui ou Ectoplasma.\n\nPourquoi : objet décoration fort, parfait pour une ambiance Halloween et une collection avec personnalité.\n\nComplément : mug, figurine ou accessoire Pokémon Spectre.
+SUMMARY:🎁 Octobre 2026 — Box Halloween Spectre — 50€
+DESCRIPTION:ACHAT IMPOSÉ : Objet Mimiqui ou Ectoplasma.\n\nChoix conseillé : figurine ou peluche.\nSource objets : https://lacarterare.com/collections/peluche-pokemon\n\nComplément : décoration Halloween Pokémon ou snack japonais.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-november-2026@quentin
 DTSTART:20261101T100000
 DTEND:20261101T110000
-SUMMARY:🎁 Novembre 2026 — Box Japon Pokémon
-DESCRIPTION:OBJET IMPOSÉ : Objet Pokémon Center Japon.\n\nChoix prioritaire : Pokémon Fit, mascotte japonaise ou accessoire lifestyle.\n\nPourquoi : apporter une vraie dimension japonaise à la collection.
+SUMMARY:🎁 Novembre 2026 — Box Japon Pokémon — 50€
+DESCRIPTION:ACHAT IMPOSÉ : un objet Pokémon Center Japon.\n\nPriorité : Pokémon Fit, mascotte japonaise ou accessoire lifestyle.\nSource officielle Japon : https://www.pokemoncenter-online.com/plush-toys/\nAlternative import : https://pokevault.com/\n\nComplément : petit objet japonais Pokémon.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-december-2026@quentin
 DTSTART:20261201T100000
 DTEND:20261201T110000
-SUMMARY:🎁 Décembre 2026 — Box pièce souvenir
-DESCRIPTION:OBJET IMPOSÉ : Une pièce Pokémon premium de fin d'année.\n\nPriorité :\n- peluche édition spéciale\n- collaboration limitée\n- objet anniversaire\n- figurine premium.\n\nObjectif : créer un souvenir annuel.
+SUMMARY:🎁 Décembre 2026 — Box Noël Collector — 50€
+DESCRIPTION:ACHAT IMPOSÉ : pièce souvenir de fin d'année.\n\nPriorité :\n- peluche spéciale\n- figurine premium\n- objet anniversaire\n- coffret collector.\n\nSources :\nhttps://www.pokemoncenter.com/\nhttps://www.pokestock.fr/categorie-produit/pokemon/coffret-pokebox/
 END:VEVENT
 
 BEGIN:VEVENT
@@ -44,8 +43,8 @@ UID:pokemon-box-curator-monthly@quentin
 DTSTART:20260902T190000
 DTEND:20260902T193000
 RRULE:FREQ=MONTHLY
-SUMMARY:🤖 Curateur Pokémon — Choix obligatoire du prochain objet
-DESCRIPTION:Mission : rechercher et sélectionner UN objet précis pour la prochaine box.\n\nPriorités :\n1. Pokémon Center officiel\n2. Peluche ou figurine de qualité\n3. Objet japonais/import\n4. Artbook ou objet lifestyle\n5. Collaboration limitée.\n\nLe but n'est pas d'acheter plus, mais d'avoir une collection cohérente.\n\nSources :\nhttps://www.pokemoncenter.com/\nhttps://www.pokemon.com/fr/
+SUMMARY:🤖 Curateur Pokémon — Je choisis la pièce du mois
+DESCRIPTION:Mission : sélectionner un objet précis autour de 50€.\n\nCritères : officiel, beau, exposable, durable.\n\nSources de veille :\nhttps://www.pokemon.com/fr/\nhttps://www.pokemoncenter.com/\n\nCatégories : peluche, figurine, manga, artbook, jeu, décoration, objet Japon, vêtement, expérience.
 END:VEVENT
 
 END:VCALENDAR
