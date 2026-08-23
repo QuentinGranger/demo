@@ -280,10 +280,10 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260819T025700Z
-LAST-MODIFIED:20260819T025700Z
-SEQUENCE:8
-STATUS:TENTATIVE
+DTSTAMP:20260823T185512Z
+LAST-MODIFIED:20260823T185512Z
+SEQUENCE:9
+STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
@@ -296,13 +296,18 @@ X-POKEMON-WAVE-PRODUCTS:Boosters|Display|ETB
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:Boosters
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:Display
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:ETB
+X-POKEMON-LAST-MAJOR-UPDATE-AT:20260823T185512Z
+X-POKEMON-UPDATE-UNTIL:20260826T185512Z
+X-POKEMON-UPDATE-REASON:OFFICIAL_RELEASE_DATE_CONFIRMED
+X-POKEMON-FRESHNESS:UPDATED
+X-POKEMON-BADGE:UPDATED
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:⭐ 🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
+SUMMARY:⭐ ✅ ✨ 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟠 Boosters\n🟠 Display\n🟠 ETB\nComplétude : liste partielle des formats actuellement identifiés ; aucun format générique non nommé n'est compté.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
-URL:https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
-CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
+DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : ✅ Pokémon confirme officiellement la sortie de Méga-Évolution – Règne Delta le 6 novembre 2026.\n📦 L'extension contient plus de 135 cartes, dont Méga-Rayquaza-ex, Méga-Golemastoc-ex, Méga-Sepiatroce-ex et Méga-Sarmuraï-ex. Les formats Boosters / Display / ETB restent conservés comme informations distributeur tant qu'ils ne sont pas tous détaillés directement par Pokémon sur cette fiche.\n✨ Mise à jour majeure le 23 août 2026 : la date et le nom de l'extension passent de preuve distributeur à confirmation officielle Pokémon.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource officielle : https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026\nSource distributeur formats : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
+URL:https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Mise à jour,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
