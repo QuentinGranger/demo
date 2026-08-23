@@ -1,0 +1,57 @@
+{
+  "name": "Pokemon Geek Box Display Planner",
+  "version": "1.0",
+  "purpose": "Organiser la mise en valeur des objets obtenus dans les box Pokémon mensuelles et créer une collection visuellement cohérente.",
+  "display_rules": {
+    "prioritize_exposition": true,
+    "create_visual_story": true,
+    "adapt_display_to_theme": true,
+    "take_collection_photos": true
+  },
+  "monthly_display_process": {
+    "step_1": "Choisir la zone d'exposition adaptée au thème",
+    "step_2": "Ajouter l'objet principal comme pièce centrale",
+    "step_3": "Créer une ambiance avec les objets secondaires",
+    "step_4": "Prendre une photo de la vitrine",
+    "step_5": "Noter les améliorations possibles"
+  },
+  "examples": {
+    "2027-03": {
+      "theme": "Pokemon Spectre",
+      "main_items": ["Ectoplasma", "Mimiqui"],
+      "suggestions": [
+        "Mettre Ectoplasma au centre de l'étagère",
+        "Utiliser une décoration sombre ou violette",
+        "Créer une photo de vitrine avant/après",
+        "Ajouter un éclairage doux pour renforcer l'ambiance",
+        "Réorganiser l'étagère pour créer un espace dédié aux Pokémon Spectre"
+      ]
+    }
+  },
+  "display_categories": {
+    "plush": {
+      "rule": "Les peluches deviennent des pièces centrales visibles"
+    },
+    "figures": {
+      "rule": "Créer des scènes avec plusieurs Pokémon liés"
+    },
+    "japanese_items": {
+      "rule": "Mettre en avant l'origine japonaise et l'exclusivité"
+    },
+    "books": {
+      "rule": "Utiliser les livres comme support de décoration"
+    }
+  },
+  "collection_growth": {
+    "avoid_clutter": true,
+    "rotate_display": true,
+    "seasonal_display": true,
+    "archive_old_displays": true
+  },
+  "memory_tracking": {
+    "save_photo": true,
+    "save_date": true,
+    "save_theme": true,
+    "save_favorite_piece": true
+  }
+}
