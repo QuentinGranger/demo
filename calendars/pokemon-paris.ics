@@ -12,6 +12,60 @@ X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 X-POKEMON-RETAILER-POLICY:RETAILER_WATCH_ALL_FR_V2
 BEGIN:VEVENT
+UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
+DTSTAMP:20260819T031000Z
+LAST-MODIFIED:20260819T031000Z
+SEQUENCE:8
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:EVENT_ONGOING_INFO
+X-POKEMON-ACTION:INFO
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20270104
+SUMMARY:ℹ️ ✅ 🎪 Convention / événement — Admirez-les tous !
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe":Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
+GEO:48.86507;2.34186
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=50;X-TITLE=Musée en Herbe:geo:48.86507,2.34186
+X-POKEMON-LOCATION-PRECISION:BUILDING
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe
+X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.86507,2.34186
+X-POKEMON-TICKET-URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
+X-POKEMON-TICKET-STATUS:AVAILABLE
+X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
+X-POKEMON-ACCESS-MODE:TICKET
+DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\n📍 Adresse : Musée en Herbe — 23 rue de l'Arbre-Sec, 75001 Paris, France.\n📌 Précision GEO : bâtiment.\n🗺️ Plans : https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.86507,2.34186\n🎟️ Billetterie : page officielle de l'exposition avec liens de réservation par période — https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
+URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
+CATEGORIES:Pokémon,Événement,Convention,Priorité Info
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-worlds-celebration-stores-20260821@openai
+DTSTAMP:20260819T185408Z
+LAST-MODIFIED:20260819T185408Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-FIRST-ADDED-AT:20260819T185408Z
+X-POKEMON-NEW-UNTIL:20260824T185408Z
+X-POKEMON-FRESHNESS:NEW
+X-POKEMON-BADGE:NEW
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260831
+SUMMARY:🔥 ✅ 🆕 🏆 Play! Pokémon — Célébration des Mondiaux 2026 + promo Pikachu
+LOCATION:Play! Pokémon Stores participants — France
+DESCRIPTION:Priorité : 🔥 Critique — événement officiel imminent avec récompense promotionnelle distribuée dans la limite des stocks disponibles.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Du 21 au 30 août 2026, les Play! Pokémon Stores participants organisent des tournois « Célébration des Mondiaux 2026 ».\n🎁 Participation : carte promo Pikachu Mondiaux 2026 dans la limite des stocks disponibles et selon l'ordre d'arrivée ; les personnes en tête des catégories junior, senior et master dans chaque magasin peuvent recevoir la version estampillée « WINNER ». Des accessoires commémoratifs sont aussi annoncés pour les vainqueurs.\n📍 France : rechercher le magasin et la séance exacte dans le Localisateur d'évènements Play! Pokémon en utilisant le nom « Célébration des Mondiaux 2026 ». Aucun magasin parisien précis n'est affirmé tant qu'une fiche locale officielle n'a pas été vérifiée.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 uniquement ; le rappel J-7 est déjà passé au moment de l'ajout.\nSource : https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
+URL:https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
+CATEGORIES:Pokémon,Play! Pokémon,Événement,Promo,Championnat du Monde,Priorité Critique,Nouveau
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🏆 Célébration des Mondiaux demain — trouve ton Play! Pokémon Store et vérifie la promo Pikachu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:pokemon-pocket-team-rocket-paris-20260822@openai
 DTSTAMP:20260821T184043Z
 LAST-MODIFIED:20260821T184043Z
@@ -38,33 +92,6 @@ X-POKEMON-ACCESS-MODE:FREE
 DESCRIPTION:Priorité : ⭐ Important — activation Pokémon Pocket très courte à Paris et actionnable immédiatement.\nFiabilité : 🟡 Tentative — GAMEWAVE publie des détails précis le 21 août 2026 en les rattachant à l'annonce Pokémon Pocket du 20 août\, mais aucune page Pokémon officielle indexée confirmant l'activation parisienne n'a encore été retrouvée.\n📅 Sessions annoncées : samedi 22 et dimanche 23 août 2026\, de 9h à 18h.\n📍 Point de départ annoncé : gare Saint-Lazare\, Paris 8e. L'adresse 13 Rue d'Amsterdam correspond à l'adresse officielle de la gare ; l'emplacement exact du pop-up à l'intérieur de la gare n'est pas affirmé.\n🎟️ Participation annoncée gratuite et accessible à tous.\n🧩 Parcours : énigmes Team Rocket puis orientation vers un lieu secret pour recevoir un message du Boss.\n🎁 Récompense annoncée après participation : tote-bag et code Pokémon Pocket donnant 24 Sabliers booster. Quantités/conditions non précisées dans la source suivie.\n🆕 Ajouté au calendrier le 21 août 2026. Aucun VALARM rétroactif n'est ajouté car le rappel J-1 standard du début est déjà passé au moment de la découverte.\nSource événement : https://gamewave.fr/pokemon-pocket/pokemon-pocket-participez-a-un-evenement-unique-a-paris-aux-cotes-de-la-team-rocket/\nSource adresse gare : https://www.transilien.com/fr/gare/gare-de-paris-saint-lazare-8738400
 URL:https://gamewave.fr/pokemon-pocket/pokemon-pocket-participez-a-un-evenement-unique-a-paris-aux-cotes-de-la-team-rocket/
 CATEGORIES:Pokémon,Pokémon Pocket,Événement,Paris,Pop-up,Team Rocket,Nouveau,Priorité Important
-END:VEVENT
-BEGIN:VEVENT
-UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260819T031000Z
-LAST-MODIFIED:20260819T031000Z
-SEQUENCE:8
-STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:EVENT_ONGOING_INFO
-X-POKEMON-ACTION:INFO
-DTSTART;VALUE=DATE:20260818
-DTEND;VALUE=DATE:20270104
-SUMMARY:ℹ️ ✅ 🎪 Convention / événement — Admirez-les tous !
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe":Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
-GEO:48.86507;2.34186
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=50;X-TITLE=Musée en Herbe:geo:48.86507,2.34186
-X-POKEMON-LOCATION-PRECISION:BUILDING
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe
-X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.86507,2.34186
-X-POKEMON-TICKET-URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
-X-POKEMON-TICKET-STATUS:AVAILABLE
-X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
-X-POKEMON-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\n📍 Adresse : Musée en Herbe — 23 rue de l'Arbre-Sec, 75001 Paris, France.\n📌 Précision GEO : bâtiment.\n🗺️ Plans : https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.86507,2.34186\n🎟️ Billetterie : page officielle de l'exposition avec liens de réservation par période — https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
-URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
-CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-mega-forces-20260828@openai
@@ -473,10 +500,10 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
-DTSTAMP:20260819T025700Z
-LAST-MODIFIED:20260819T025700Z
-SEQUENCE:8
-STATUS:TENTATIVE
+DTSTAMP:20260823T185512Z
+LAST-MODIFIED:20260823T185512Z
+SEQUENCE:9
+STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
@@ -489,13 +516,18 @@ X-POKEMON-WAVE-PRODUCTS:Boosters|Display|ETB
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:Boosters
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:Display
 X-POKEMON-WAVE-ITEM;STATE=DISTRIBUTOR:ETB
+X-POKEMON-LAST-MAJOR-UPDATE-AT:20260823T185512Z
+X-POKEMON-UPDATE-UNTIL:20260826T185512Z
+X-POKEMON-UPDATE-REASON:OFFICIAL_RELEASE_DATE_CONFIRMED
+X-POKEMON-FRESHNESS:UPDATED
+X-POKEMON-BADGE:UPDATED
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:⭐ 🟠 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
+SUMMARY:⭐ ✅ ✨ 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : 🟠 Annoncé par distributeur.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟠 Boosters\n🟠 Display\n🟠 ETB\nComplétude : liste partielle des formats actuellement identifiés ; aucun format générique non nommé n'est compté.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
-URL:https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
-CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
+DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : ✅ Pokémon confirme officiellement la sortie de Méga-Évolution – Règne Delta le 6 novembre 2026.\n📦 L'extension contient plus de 135 cartes, dont Méga-Rayquaza-ex, Méga-Golemastoc-ex, Méga-Sepiatroce-ex et Méga-Sarmuraï-ex. Les formats Boosters / Display / ETB restent conservés comme informations distributeur tant qu'ils ne sont pas tous détaillés directement par Pokémon sur cette fiche.\n✨ Mise à jour majeure le 23 août 2026 : la date et le nom de l'extension passent de preuve distributeur à confirmation officielle Pokémon.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource officielle : https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026\nSource distributeur formats : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
+URL:https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Mise à jour,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
@@ -636,33 +668,6 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-worlds-celebration-stores-20260821@openai
-DTSTAMP:20260819T185408Z
-LAST-MODIFIED:20260819T185408Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:1
-X-POKEMON-PRIORITY:CRITICAL
-X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
-X-POKEMON-ACTION:ATTEND
-X-POKEMON-FIRST-ADDED-AT:20260819T185408Z
-X-POKEMON-NEW-UNTIL:20260824T185408Z
-X-POKEMON-FRESHNESS:NEW
-X-POKEMON-BADGE:NEW
-DTSTART;VALUE=DATE:20260821
-DTEND;VALUE=DATE:20260831
-SUMMARY:🔥 ✅ 🆕 🏆 Play! Pokémon — Célébration des Mondiaux 2026 + promo Pikachu
-LOCATION:Play! Pokémon Stores participants — France
-DESCRIPTION:Priorité : 🔥 Critique — événement officiel imminent avec récompense promotionnelle distribuée dans la limite des stocks disponibles.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Du 21 au 30 août 2026, les Play! Pokémon Stores participants organisent des tournois « Célébration des Mondiaux 2026 ».\n🎁 Participation : carte promo Pikachu Mondiaux 2026 dans la limite des stocks disponibles et selon l'ordre d'arrivée ; les personnes en tête des catégories junior, senior et master dans chaque magasin peuvent recevoir la version estampillée « WINNER ». Des accessoires commémoratifs sont aussi annoncés pour les vainqueurs.\n📍 France : rechercher le magasin et la séance exacte dans le Localisateur d'évènements Play! Pokémon en utilisant le nom « Célébration des Mondiaux 2026 ». Aucun magasin parisien précis n'est affirmé tant qu'une fiche locale officielle n'a pas été vérifiée.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 uniquement ; le rappel J-7 est déjà passé au moment de l'ajout.\nSource : https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
-URL:https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
-CATEGORIES:Pokémon,Play! Pokémon,Événement,Promo,Championnat du Monde,Priorité Critique,Nouveau
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:🏆 Célébration des Mondiaux demain — trouve ton Play! Pokémon Store et vérifie la promo Pikachu
 END:VALARM
 END:VEVENT
 END:VCALENDAR
