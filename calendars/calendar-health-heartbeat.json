@@ -42,7 +42,7 @@
       "timezone": "Europe/Paris",
       "last_run_time": "2026-08-23T16:41:51.153812Z",
       "updated_at": "2026-08-23T16:42:12.939513Z",
-      "liveness": "HEALTHY_CURRENT_EXECUTION"
+      "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
       "enabled": true,
@@ -56,5 +56,5 @@
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Healthy cross-calendar observer refresh. Repository/master, all nine declared calendar paths, both hourly observers and the four monitored automation cadences/timezones/liveness were checked. The three global raw subscription endpoints were fetched with their expected calendar identities. No health incident is open. last_deep_check_at is retained because the full nine-file structural validator was not executed in this connector-only cycle."
+  "note": "Healthy cross-calendar observer refresh. Repository/master, all nine declared calendar paths, both hourly observers and the four monitored automation cadences/timezones/liveness were checked. The three global raw subscription endpoints were fetched with their expected calendar identities. No health incident is open. last_deep_check_at is retained because the full nine-file structural validator was not executed in this connector-only cycle. Persisted liveness is normalized to HEALTHY for healthy monitors; current-execution nuance is not a persisted health state."
 }
