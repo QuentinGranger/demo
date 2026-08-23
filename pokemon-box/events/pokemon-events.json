@@ -1,53 +1,94 @@
 {
-  "name": "Pokemon Geek Box Event Calendar",
-  "version": "1.0",
-  "purpose": "Adapter les box Pokémon mensuelles aux saisons, événements officiels et périodes importantes.",
+  "name": "Pokemon Geek Box Event Intelligence",
+  "version": "2.0",
+  "purpose": "Adapter intelligemment les box Pokémon mensuelles aux saisons, événements officiels, sorties et opportunités collector.",
+  "event_priority": {
+    "official_pokemon_events": 5,
+    "pokemon_center_releases": 5,
+    "major_anniversaries": 5,
+    "seasonal_events": 4,
+    "community_events": 3
+  },
   "event_rules": {
-    "adapt_theme_to_season": true,
-    "prioritize_official_events": true,
-    "avoid_repeating_event_themes": true,
-    "prepare_special_boxes": true
+    "check_events_before_theme_selection": true,
+    "adapt_products_to_event": true,
+    "avoid_repeating_same_event_theme": true,
+    "create_premium_boxes_for_major_events": true,
+    "use_collection_history_to_adjust": true
   },
   "recurring_events": {
-    "february": {
+    "january": {
+      "theme_pool": ["nouvelle annee pokemon", "retro pokemon", "bonnes resolutions collection"],
+      "preferred_items": ["objet decoration", "piece nostalgique", "organisation collection"]
+    },
+    "february_valentine": {
       "theme": "Saint-Valentin Pokémon",
-      "ideas": ["Pokémon couple", "Evoli et évolutions", "objets mignons", "peluches duo"]
+      "pokemon_pool": ["Evoli", "Pikachu", "Poussifeu", "Togepi"],
+      "ideas": ["duo pokemon", "peluches mignonnes", "objets affectifs"]
     },
     "february_27": {
-      "theme": "Anniversaire Pokémon",
-      "ideas": ["pièce anniversaire", "objet collector", "nostalgie générations"]
+      "theme": "Pokemon Day",
+      "priority": "premium",
+      "ideas": ["piece anniversaire", "collector", "nostalgie generations", "objet historique"]
     },
     "spring": {
       "theme": "Printemps Pokémon",
-      "ideas": ["Pokémon Plante", "nature", "jardin", "décoration lumineuse"]
+      "types": ["Plante", "Fee", "Insecte"],
+      "ideas": ["nature", "jardin", "decoration lumineuse"]
     },
     "summer": {
       "theme": "Vacances Pokémon",
-      "ideas": ["Pokémon Eau", "plage", "objets lifestyle"]
+      "types": ["Eau", "Vol"],
+      "ideas": ["plage", "voyage", "lifestyle"]
+    },
+    "september": {
+      "theme": "Rentree Pokemon",
+      "ideas": ["livres", "papeterie", "academie pokemon"]
     },
     "october": {
       "theme": "Halloween Pokémon",
-      "ideas": ["Pokémon Spectre", "Mimiqui", "Ectoplasma", "décoration sombre"]
+      "types": ["Spectre", "Tenebres"],
+      "pokemon_pool": ["Mimiqui", "Ectoplasma", "Noctali"],
+      "ideas": ["decoration sombre", "ambiance vitrine", "objets mysteres"]
     },
     "november": {
       "theme": "Japon Pokémon",
-      "ideas": ["Pokémon Center Japon", "Pokémon Fit", "objets import"]
+      "priority": "japanese_exclusives",
+      "ideas": ["Pokemon Center Japon", "Pokemon Fit", "import japonais"]
     },
     "december": {
-      "theme": "Noël Pokémon",
-      "ideas": ["Pikachu hiver", "peluches festives", "objets souvenirs"]
+      "theme": "Noel Pokémon",
+      "ideas": ["Pikachu hiver", "peluches festives", "cadeau souvenir"]
     }
   },
-  "special_event_types": {
-    "pokemon_center_release": true,
-    "new_game_release": true,
-    "anime_event": true,
-    "movie_release": true,
-    "collaboration": true
+  "special_events": {
+    "pokemon_center_release": {
+      "action": "create_release_box"
+    },
+    "new_game_release": {
+      "action": "adapt_box_to_new_region_or_pokemon"
+    },
+    "anime_release": {
+      "action": "create_character_or_region_box"
+    },
+    "movie_release": {
+      "action": "create_special_memory_box"
+    },
+    "collaboration": {
+      "action": "prioritize_unique_products"
+    }
   },
-  "box_generation_logic": {
-    "check_events_before_theme": true,
-    "combine_event_with_collection_goals": true,
-    "prefer_memorable_months": true
+  "generation_logic": {
+    "season_weight": true,
+    "event_weight": true,
+    "history_weight": true,
+    "collection_goal_weight": true,
+    "product_availability_weight": true
+  },
+  "future_analysis": {
+    "track_used_events": true,
+    "suggest_new_themes": true,
+    "detect_overused_seasons": true,
+    "prepare_yearly_calendar": true
   }
 }
