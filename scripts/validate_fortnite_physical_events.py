@@ -334,7 +334,19 @@ def main():
 
     for peid, e in physical_ids.items():
         aid = e.get("access_profile_id")
-        if aid not in access_ids:
+        if aid is None:
+            # A venue-confirmed physical event may legitimately have no access profile yet
+            # when public admission/ticketing is still entirely UNKNOWN. Do not force a
+            # fabricated provider or access record just to satisfy validation.
+            allowed_unknown = (
+                e.get("current_admission_state") == "UNKNOWN"
+                and e.get("current_ticket_state") is None
+                and e.get("primary_action") == "FOLLOW"
+                and e.get("operational_completeness") in {"IDENTITY_ONLY", "DATE_CITY_KNOWN", "VENUE_KNOWN"}
+            )
+            if not allowed_unknown:
+                errors.append(f"physical event {peid} has null access profile outside explicit UNKNOWN/FOLLOW state")
+        elif aid not in access_ids:
             errors.append(f"physical event {peid} points to missing access profile {aid}")
         elif access_ids[aid].get("physical_event_id") != peid:
             errors.append(f"physical event {peid} access profile belongs to another event")

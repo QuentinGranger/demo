@@ -197,13 +197,13 @@ CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-fncs-global-antwerp-20260926@openai
-DTSTAMP:20260819T052227Z
-LAST-MODIFIED:20260819T052227Z
-SEQUENCE:2
+DTSTAMP:20260823T151831Z
+LAST-MODIFIED:20260823T151831Z
+SEQUENCE:3
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:ATTEND
+X-FORTNITE-ACTION:BUY_TICKET
 X-FORTNITE-EVENT-TYPE:GLOBAL_CHAMPIONSHIP
 X-FORTNITE-SERIES:FNCS
 X-FORTNITE-MODE:BATTLE_ROYALE
@@ -212,41 +212,51 @@ X-FORTNITE-REGION:GLOBAL
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
 X-FORTNITE-TICKET-PROVIDER-ID:lotto_arena
-X-FORTNITE-TICKET-STATUS:WAITLIST
+X-FORTNITE-TICKET-STATUS:LOW_AVAILABILITY
+X-FORTNITE-TICKET-LAST-TRANSITION:BACK_ON_SALE
+X-FORTNITE-TICKET-CONFIDENCE:HIGH
+X-FORTNITE-TICKET-SCARCITY-EVIDENCE:EXPLICIT_TEXT
+X-FORTNITE-ACCESS-PROFILE-ID:fortnite-access-fncs-global-antwerp-2026
+X-FORTNITE-ACCESS-STATE:TICKET_REQUIRED
+X-FORTNITE-ADMISSION-MODE:PAID_TICKET
+X-FORTNITE-LAST-CHANGE-ID:chg_78c55475112852e25cfa46ad
 X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
 X-FORTNITE-TICKET-WAITLIST:YES
-X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=WAITLIST:Billet standa
- rd 2 jours
-X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=WAITLI
- ST;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=LOW_AVAILABILITY;SCARC
+ ITY-EVIDENCE=EXPLICIT_TEXT:Billet standard 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILA
+ BLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
 X-FORTNITE-AGE-RESTRICTION:16+
 X-FORTNITE-VENUE-TIME-1:20260926T140000
 X-FORTNITE-VENUE-TIME-2:20260927T183000
 X-FORTNITE-VENUE-TIME-STATUS:VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE
 X-FORTNITE-FIRST-ADDED-AT:20260819T050000Z
 X-FORTNITE-NEW-UNTIL:20260824T050000Z
-X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260819T052227Z
-X-FORTNITE-UPDATE-UNTIL:20260822T052227Z
-X-FORTNITE-UPDATE-REASON:TICKETING_WAITLIST
+X-FORTNITE-LAST-MAJOR-UPDATE-AT:20260823T151831Z
+X-FORTNITE-UPDATE-UNTIL:20260826T151831Z
+X-FORTNITE-UPDATE-REASON:TICKETING_BACK_ON_SALE
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260928
-SUMMARY:⭐ ✅ 🆕 🏆 Fortnite Global Championship 2026 — Anvers
+SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
 DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en 
  présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 part
  ies sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Compet
- itive.\n🎟️ Billetterie : Ticketmaster affiche actuellement WAITING LI
- ST pour le pass 2 jours. Ce statut n'est PAS traité comme SOLD OUT : la l
- iste d'attente officielle précise que des billets peuvent redevenir dispo
- nibles. Aucun billet à la journée n'est proposé.\n✨ Ultimate Live Exp
- erience Package : prix affiché 324\,70 € \; son bouton d'achat renvoie 
- au même flux Ticketmaster actuellement en liste d'attente.\n🔞 Ticketma
- ster indique une restriction d'âge 16+.\n🕒 La page Lotto Arena affiche
-  14h00 le samedi 26 et 18h30 le dimanche 27. Ces valeurs sont des horaires
-  salle\, pas des horaires officiels des parties FNCS.\n📍 Lotto Arena\, 
- Schijnpoortweg 119\, Anvers\, Belgique.\nSource Fortnite : https://www.for
- tnite.com/competitive/fncs-2026-overview?lang=fr\nBilletterie : https://ww
- w.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
+ itive.\n🎟️ Billetterie : retour d’inventaire après la liste d’at
+ tente. Ticketmaster Belgique affiche maintenant le pass 2 jours en « Disp
+ onibilité limitée » et propose l’accès aux tickets. La liste d’att
+ ente reste proposée en parallèle \; aucun nombre de places restantes n
+ ’est déduit. Aucun billet à la journée n’est annoncé.\n✨ Ultimat
+ e Live Experience Package : 324\,70 € sur Lotto Arena \; le package rest
+ e présenté avec un accès d’achat\, sans quantité restante affirmée.
+ \n🔞 Restriction d’âge publiée : 16+.\n🕒 Lotto Arena affiche 14h0
+ 0 le samedi 26 et 18h30 le dimanche 27 comme horaires salle \; ils ne sont
+  pas traités comme horaires officiels des parties FNCS.\n📍 Lotto Arena
+ \, Schijnpoortweg 119\, Anvers\, Belgique.\nRappels : J-30\, J-7 et J-1.\n
+ Ticketmaster : https://www.ticketmaster.be/discover/antwerpen?categoryId=K
+ ZFzniwnSyZfZ7v7nE&classificationId=KnvZfZ7vAJF&language=fr-be\nLotto Arena
+  : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c
+ 1ed5ce1
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
 CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
  p,Europe
