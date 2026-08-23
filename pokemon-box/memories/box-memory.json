@@ -1,0 +1,57 @@
+{
+  "name": "Pokemon Geek Box Memory Journal",
+  "version": "1.0",
+  "purpose": "Conserver l'histoire émotionnelle de chaque box Pokémon au-delà du simple achat.",
+  "memory_rules": {
+    "save_photo": true,
+    "save_date": true,
+    "save_theme": true,
+    "save_reason": true,
+    "save_memory": true,
+    "save_favorite_item": true
+  },
+  "box_entry_template": {
+    "date": "YYYY-MM",
+    "theme": "",
+    "main_pokemon": [],
+    "products": [],
+    "photo": {
+      "before_display": "",
+      "after_display": "",
+      "vitrine": ""
+    },
+    "story": {
+      "why_chosen": "Pourquoi cette box a été choisie",
+      "personal_memory": "Souvenir associé à cette box",
+      "emotional_value": 0
+    },
+    "collection_impact": {
+      "favorite_piece": "",
+      "display_location": "",
+      "will_keep_long_term": true
+    }
+  },
+  "analysis": {
+    "create_timeline": true,
+    "compare_years": true,
+    "find_favorite_themes": true,
+    "detect_emotional_patterns": true
+  },
+  "example": {
+    "2026-09": {
+      "theme": "Evoli Lifestyle",
+      "main_pokemon": ["Evoli"],
+      "products": ["Peluche Evoli", "Manga Pokemon", "Figurine Evoli"],
+      "story": {
+        "why_chosen": "Première box qui lance une collection Pokémon personnelle.",
+        "personal_memory": "Le début d'une collection construite avec intention.",
+        "emotional_value": 10
+      },
+      "collection_impact": {
+        "favorite_piece": "Peluche Evoli",
+        "display_location": "Etagère principale",
+        "will_keep_long_term": true
+      }
+    }
+  }
+}
