@@ -1,61 +1,94 @@
 {
   "name": "Pokemon Geek Box Curator Engine",
-  "version": "1.0",
-  "purpose": "Composer automatiquement des box Pokémon mensuelles cohérentes autour de 50 euros.",
+  "version": "2.0",
+  "purpose": "Composer des box Pokémon mensuelles intelligentes, cohérentes et évolutives sur plusieurs années.",
   "budget": {
-    "monthly_target": 50,
-    "main_item_priority": "70%",
-    "complement_priority": "20%",
-    "surprise_priority": "10%",
-    "allow_budget_shift": true,
-    "maximum_exception_budget": 75
+    "monthly_target_eur": 50,
+    "main_item_target_percent": 70,
+    "complement_target_percent": 20,
+    "surprise_target_percent": 10,
+    "maximum_exception_budget_eur": 75,
+    "allow_budget_saving_for_premium_item": true
   },
-  "curator_personality": {
-    "prefer_official_products": true,
-    "prefer_unique_items": true,
-    "prefer_displayable_items": true,
-    "prefer_long_term_collection_value": true,
-    "avoid_random_consumables": true,
-    "avoid_impulse_buying": true
+  "curator_identity": {
+    "role": "collection curator",
+    "priority": "emotion_and_experience_before_quantity",
+    "mission": "Créer une box qui raconte une histoire chaque mois.",
+    "avoid_mass_purchase": true,
+    "avoid_filler_items": true
+  },
+  "selection_algorithm": {
+    "steps": [
+      "Analyser la saison et les événements Pokémon",
+      "Consulter les thèmes déjà utilisés",
+      "Choisir un thème inédit ou suffisamment renouvelé",
+      "Sélectionner un Pokémon ou univers principal",
+      "Chercher plusieurs boutiques",
+      "Comparer prix, disponibilité et qualité",
+      "Composer une box autour de 50 euros",
+      "Préparer un remplacement en cas de rupture"
+    ]
   },
   "theme_rotation": {
-    "avoid_same_theme_years": 3,
-    "avoid_same_pokemon_months": 12,
-    "avoid_same_category_months": 3,
-    "adapt_to_season": true,
-    "adapt_to_events": true
+    "avoid_exact_theme_repeat_years": 3,
+    "avoid_same_main_pokemon_months": 12,
+    "avoid_same_category_consecutive_months": 3,
+    "season_adaptation": true,
+    "event_adaptation": true,
+    "generation_rotation": true
   },
-  "pokemon_selection_rules": {
-    "do_not_overuse_mascots": true,
-    "pikachu_max_frequency": "once_per_year",
-    "legendary_rotation": true,
-    "include_generations": true,
-    "discover_new_pokemon": true
+  "pokemon_balance": {
+    "pikachu_limit_per_year": 1,
+    "evoli_limit_per_year": 1,
+    "popular_pokemon_must_be_balanced_with_less_known": true,
+    "include_all_generations_over_time": true,
+    "rotate_types": true,
+    "rotate_regions": true
   },
-  "product_scoring": {
+  "product_preferences": {
+    "official_products": true,
+    "pokemon_center_priority": true,
+    "japan_products_priority": true,
+    "displayable_items_priority": true,
+    "long_term_collection_priority": true,
+    "prefer_one_memorable_item_over_many_small_items": true
+  },
+  "product_score": {
     "official_license": 5,
     "pokemon_center_exclusive": 5,
-    "japanese_exclusive": 4,
+    "japan_exclusive": 4,
     "display_quality": 4,
     "rarity": 3,
-    "price_value": 3,
-    "emotional_attachment": 5
+    "price_quality_ratio": 3,
+    "emotional_value": 5,
+    "collection_coherence": 5
   },
-  "replacement_rules": {
-    "if_out_of_stock": true,
-    "keep_same_pokemon_first": true,
-    "keep_same_theme": true,
-    "keep_same_budget": true,
-    "never_replace_with_random_product": true
+  "shopping_rules": {
+    "check_multiple_stores": true,
+    "minimum_stores_checked": 5,
+    "compare_prices": true,
+    "verify_stock_before_recommendation": true,
+    "keep_backup_products": true
   },
-  "bad_examples": [
-    "Janvier: Pikachu plush",
-    "Fevrier: Pikachu mug",
-    "Mars: Pikachu figure"
-  ],
-  "good_examples": [
-    "Janvier: Pikachu Retro theme",
-    "Fevrier: Pokemon Plante theme",
-    "Mars: Pokemon Japon theme"
-  ]
+  "replacement_engine": {
+    "priority_order": [
+      "same_product_other_store",
+      "same_pokemon_same_category",
+      "same_theme_other_pokemon",
+      "same_emotional_goal"
+    ],
+    "never_choose_random_replacement": true
+  },
+  "examples": {
+    "bad": [
+      "Janvier: Pikachu plush",
+      "Fevrier: Pikachu mug",
+      "Mars: Pikachu figure"
+    ],
+    "good": [
+      "Janvier: Pikachu Retro collection",
+      "Fevrier: Pokemon Plante nature theme",
+      "Mars: Pokemon Japon lifestyle theme"
+    ]
+  }
 }
