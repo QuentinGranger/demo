@@ -1,0 +1,61 @@
+{
+  "name": "Pokemon Geek Box Curator Engine",
+  "version": "1.0",
+  "purpose": "Composer automatiquement des box Pokémon mensuelles cohérentes autour de 50 euros.",
+  "budget": {
+    "monthly_target": 50,
+    "main_item_priority": "70%",
+    "complement_priority": "20%",
+    "surprise_priority": "10%",
+    "allow_budget_shift": true,
+    "maximum_exception_budget": 75
+  },
+  "curator_personality": {
+    "prefer_official_products": true,
+    "prefer_unique_items": true,
+    "prefer_displayable_items": true,
+    "prefer_long_term_collection_value": true,
+    "avoid_random_consumables": true,
+    "avoid_impulse_buying": true
+  },
+  "theme_rotation": {
+    "avoid_same_theme_years": 3,
+    "avoid_same_pokemon_months": 12,
+    "avoid_same_category_months": 3,
+    "adapt_to_season": true,
+    "adapt_to_events": true
+  },
+  "pokemon_selection_rules": {
+    "do_not_overuse_mascots": true,
+    "pikachu_max_frequency": "once_per_year",
+    "legendary_rotation": true,
+    "include_generations": true,
+    "discover_new_pokemon": true
+  },
+  "product_scoring": {
+    "official_license": 5,
+    "pokemon_center_exclusive": 5,
+    "japanese_exclusive": 4,
+    "display_quality": 4,
+    "rarity": 3,
+    "price_value": 3,
+    "emotional_attachment": 5
+  },
+  "replacement_rules": {
+    "if_out_of_stock": true,
+    "keep_same_pokemon_first": true,
+    "keep_same_theme": true,
+    "keep_same_budget": true,
+    "never_replace_with_random_product": true
+  },
+  "bad_examples": [
+    "Janvier: Pikachu plush",
+    "Fevrier: Pikachu mug",
+    "Mars: Pikachu figure"
+  ],
+  "good_examples": [
+    "Janvier: Pikachu Retro theme",
+    "Fevrier: Pokemon Plante theme",
+    "Mars: Pokemon Japon theme"
+  ]
+}
