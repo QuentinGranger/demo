@@ -1,0 +1,60 @@
+{
+  "name": "Pokemon Geek Box Budget Manager",
+  "version": "1.0",
+  "purpose": "Gerer un budget de collection Pokemon intelligent sur plusieurs annees.",
+  "base_budget": {
+    "normal_month": 50,
+    "weak_month": 30,
+    "major_event_month": 100
+  },
+  "budget_rules": {
+    "prioritize_quality_over_quantity": true,
+    "allow_budget_rollover": true,
+    "avoid_impulse_purchase": true,
+    "save_for_premium_items": true
+  },
+  "month_types": {
+    "normal": {
+      "budget": 50,
+      "goal": "Box classique equilibree"
+    },
+    "weak": {
+      "budget": 30,
+      "goal": "Petit achat plaisir ou economie"
+    },
+    "major_event": {
+      "budget": 100,
+      "goal": "Piece premium ou evenement important"
+    }
+  },
+  "rollover_system": {
+    "enabled": true,
+    "example": {
+      "march": {
+        "available": 50,
+        "spent": 30,
+        "saved": 20
+      },
+      "april": {
+        "base_budget": 50,
+        "rollover": 20,
+        "available": 70
+      }
+    }
+  },
+  "premium_strategy": {
+    "reserve_for_high_score_items": true,
+    "minimum_score_for_saving": 40,
+    "priority": [
+      "Pokemon Center exclusivity",
+      "Japan exclusive",
+      "rare collector item"
+    ]
+  },
+  "tracking": {
+    "monthly_spending": true,
+    "yearly_total": true,
+    "average_box_value": true,
+    "best_purchase_ratio": true
+  }
+}
