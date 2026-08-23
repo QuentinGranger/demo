@@ -1,55 +1,80 @@
 {
   "name": "Pokemon Geek Box Memory Journal",
-  "version": "1.0",
-  "purpose": "Conserver l'histoire émotionnelle de chaque box Pokémon au-delà du simple achat.",
+  "version": "2.0",
+  "purpose": "Conserver l'histoire émotionnelle, visuelle et personnelle de chaque box Pokémon pendant plusieurs années.",
   "memory_rules": {
     "save_photo": true,
     "save_date": true,
     "save_theme": true,
     "save_reason": true,
     "save_memory": true,
-    "save_favorite_item": true
+    "save_favorite_item": true,
+    "save_first_impression": true,
+    "save_unboxing_experience": true,
+    "save_collection_evolution": true
   },
   "box_entry_template": {
     "date": "YYYY-MM",
     "theme": "",
+    "season": "",
     "main_pokemon": [],
     "products": [],
+    "budget": 0,
     "photo": {
       "before_display": "",
       "after_display": "",
-      "vitrine": ""
+      "vitrine": "",
+      "unboxing": ""
     },
     "story": {
       "why_chosen": "Pourquoi cette box a été choisie",
       "personal_memory": "Souvenir associé à cette box",
+      "first_emotion": "Première réaction lors de l'ouverture",
       "emotional_value": 0
     },
     "collection_impact": {
       "favorite_piece": "",
       "display_location": "",
+      "changes_collection": "",
       "will_keep_long_term": true
+    },
+    "future_memory": {
+      "reopen_in_years": true,
+      "message_to_future_self": "",
+      "anniversary_to_check": ""
     }
+  },
+  "scoring": {
+    "emotional_value": 10,
+    "visual_memory": 10,
+    "collection_importance": 10,
+    "nostalgia": 10
   },
   "analysis": {
     "create_timeline": true,
     "compare_years": true,
     "find_favorite_themes": true,
-    "detect_emotional_patterns": true
+    "detect_emotional_patterns": true,
+    "generate_collection_story": true,
+    "identify_most_important_items": true
   },
   "example": {
     "2026-09": {
       "theme": "Evoli Lifestyle",
+      "season": "Autumn",
       "main_pokemon": ["Evoli"],
       "products": ["Peluche Evoli", "Manga Pokemon", "Figurine Evoli"],
+      "budget": 50,
       "story": {
         "why_chosen": "Première box qui lance une collection Pokémon personnelle.",
         "personal_memory": "Le début d'une collection construite avec intention.",
+        "first_emotion": "Joie de créer une première pièce de collection.",
         "emotional_value": 10
       },
       "collection_impact": {
         "favorite_piece": "Peluche Evoli",
         "display_location": "Etagère principale",
+        "changes_collection": "Création du premier espace Pokémon.",
         "will_keep_long_term": true
       }
     }
