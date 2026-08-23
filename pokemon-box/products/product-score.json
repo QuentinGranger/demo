@@ -1,54 +1,81 @@
 {
   "name": "Pokemon Geek Box Product Scoring System",
-  "version": "1.0",
-  "purpose": "Evaluer la qualité des objets Pokémon avant intégration dans une box mensuelle autour de 50 euros.",
+  "version": "2.0",
+  "purpose": "Evaluer intelligemment les objets Pokémon avant intégration dans une box mensuelle autour de 50 euros.",
   "scoring": {
-    "maximum_score": 30,
+    "maximum_score": 50,
     "criteria": {
       "official_pokemon_license": {
         "points": 5,
+        "weight": "important",
         "description": "Produit officiel Pokémon avec licence reconnue."
+      },
+      "pokemon_center_exclusive": {
+        "points": 5,
+        "weight": "premium",
+        "description": "Produit Pokémon Center ou exclusivité officielle."
       },
       "japanese_exclusivity": {
         "points": 5,
-        "description": "Produit exclusif Japon, Pokémon Center Japon ou édition difficile à trouver."
+        "weight": "premium",
+        "description": "Produit Japon, édition limitée ou difficile à obtenir hors Japon."
       },
       "display_quality": {
-        "points": 4,
-        "description": "Objet qui apporte une vraie valeur visuelle dans une collection exposée."
+        "points": 5,
+        "description": "Objet qui améliore visuellement une collection exposée."
       },
       "durability": {
-        "points": 4,
-        "description": "Objet durable qui peut rester plusieurs années dans la collection."
+        "points": 5,
+        "description": "Objet qui garde son intérêt pendant plusieurs années."
       },
       "rarity": {
-        "points": 3,
-        "description": "Objet peu courant, édition limitée ou difficile à obtenir."
+        "points": 5,
+        "description": "Objet rare, limité, retiré ou peu courant."
       },
       "price_value": {
-        "points": 3,
-        "description": "Prix cohérent par rapport à la qualité et au plaisir apporté."
+        "points": 5,
+        "description": "Rapport qualité/prix adapté au budget de la box."
       },
       "emotional_attachment": {
         "points": 5,
-        "description": "Capacité de l'objet à créer un souvenir ou un attachement personnel."
+        "description": "Capacité à créer un souvenir ou un attachement personnel."
+      },
+      "theme_coherence": {
+        "points": 5,
+        "description": "Correspond parfaitement au thème mensuel choisi."
+      },
+      "collection_growth": {
+        "points": 5,
+        "description": "Apporte quelque chose de nouveau à la collection au lieu de répéter un achat existant."
       }
     }
   },
+  "score_levels": {
+    "40_50": "Piece exceptionnelle - achat fortement recommandé",
+    "30_39": "Excellent objet de collection",
+    "20_29": "Bon complément de box",
+    "10_19": "Acceptable seulement en petit bonus",
+    "0_9": "Refusé par le curateur"
+  },
   "evaluation_examples": {
     "random_amazon_plush": {
-      "score": 6,
-      "reason": "Produit officiel incertain, faible rareté, faible valeur de collection."
+      "score": 8,
+      "decision": "rejected",
+      "reason": "Qualité incertaine, faible identité collector, peu de valeur long terme."
     },
     "pokemon_center_plush": {
-      "score": 26,
-      "reason": "Produit officiel, belle exposition, durable et souvent exclusif."
+      "score": 42,
+      "decision": "recommended",
+      "reason": "Produit officiel, exposition forte, durable, émotionnel et adapté à une collection."
     }
   },
   "decision_rules": {
-    "minimum_score_for_main_item": 18,
-    "prefer_high_emotional_value": true,
-    "avoid_low_quality_products": true,
-    "avoid_filler_items": true
+    "minimum_score_for_main_item": 30,
+    "minimum_score_for_complement": 15,
+    "prefer_unique_items": true,
+    "prefer_official_sources": true,
+    "avoid_filler_items": true,
+    "avoid_duplicate_collection_items": true,
+    "compare_multiple_products_before_selection": true
   }
 }
