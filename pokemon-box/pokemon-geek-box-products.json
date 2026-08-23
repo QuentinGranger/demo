@@ -1,0 +1,40 @@
+{
+  "name": "Pokemon Geek Box Curator Database",
+  "version": "1.0",
+  "budget_monthly": 50,
+  "rules": {
+    "main_item_percent": 70,
+    "complement_percent": 20,
+    "surprise_percent": 10,
+    "replacement_policy": "If unavailable, replace with same Pokemon/theme/category"
+  },
+  "sources": [
+    "https://www.pokemoncenter.com/",
+    "https://www.pokemoncenter-online.com/",
+    "https://www.pokemon.com/fr/"
+  ],
+  "monthly_box_template": {
+    "theme": "",
+    "pokemon": "",
+    "main_product": {
+      "name": "",
+      "url": "",
+      "price": 0
+    },
+    "complement_products": [
+      {
+        "name": "",
+        "url": "",
+        "price": 0
+      }
+    ],
+    "backup_products": [
+      {
+        "name": "",
+        "url": "",
+        "reason": ""
+      }
+    ],
+    "status": "active/check-stock"
+  }
+}
