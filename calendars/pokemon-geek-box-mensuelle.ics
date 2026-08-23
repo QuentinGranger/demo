@@ -1,0 +1,72 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//QuentinGranger//Pokemon Geek Box Monthly//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Curateur
+X-WR-TIMEZONE:Europe/Paris
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-creation-monthly@quentin
+DTSTART:20260901T100000
+DTEND:20260901T113000
+RRULE:FREQ=MONTHLY
+SUMMARY:🎁 Création Pokémon Geek Box du mois — 50€
+DESCRIPTION:Mission du mois : composer une box Pokémon plaisir personnelle.\n\nBudget conseillé : 50€.\n\nRépartition suggérée :\n🧸 20€ Objet coup de cœur (peluche, figurine, décoration)\n🇯🇵 15€ Objet univers Pokémon/Japon (goodie, import, manga, livre, accessoire)\n🎮 10€ Expérience (jeu, anime, film, événement)\n✨ 5€ Surprise libre.\n\nObjectif : créer une collection vivante et émotionnelle, pas seulement accumuler.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-intelligence-monthly@quentin
+DTSTART:20260902T190000
+DTEND:20260902T193000
+RRULE:FREQ=MONTHLY
+SUMMARY:🤖 Veille intelligente Pokémon — Choix imposé du mois
+DESCRIPTION:Mission : trouver LA pièce Pokémon du mois.\n\nVérifier :\n- sorties officielles Pokémon : https://www.pokemon.com/fr/\n- Pokémon Center : https://www.pokemoncenter.com/\n- nouveautés jeux, anime, collaborations et produits dérivés.\n\nDécision finale : choisir 1 thème et 1 objet prioritaire.\nExemples : peluche officielle, figurine, manga, objet japonais, décoration, coffret spécial.\n\nRègle : ne pas acheter plusieurs petits objets sans cohérence.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-theme-monthly@quentin
+DTSTART:20260905T190000
+DTEND:20260905T193000
+RRULE:FREQ=MONTHLY
+SUMMARY:🎨 Thème Pokémon du mois
+DESCRIPTION:Créer l'identité de la box.\n\nIdées :\n- Pokémon d'une génération\n- Starter\n- Légendaire\n- Pokémon favori\n- Japon\n- Saison (Halloween, Noël, été)\n- Type Pokémon (spectre, eau, feu...).\n\nChaque box doit raconter une histoire.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-discovery-monthly@quentin
+DTSTART:20260915T190000
+DTEND:20260915T193000
+RRULE:FREQ=MONTHLY
+SUMMARY:🔎 Exploration nouveautés Pokémon
+DESCRIPTION:Rechercher les nouveautés et opportunités :\n- boutiques officielles\n- boutiques geek françaises\n- import Japon\n- conventions\n- collaborations limitées.\n\nComparer avant achat et privilégier les objets qui auront une vraie place dans la collection.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-display-monthly@quentin
+DTSTART:20260920T150000
+DTEND:20260920T160000
+RRULE:FREQ=MONTHLY
+SUMMARY:🏠 Mise en scène collection Pokémon
+DESCRIPTION:Installer la nouvelle pièce :\n- exposition\n- rangement\n- photographie\n- décoration.\n\nCréer un espace Pokémon agréable à regarder.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-journal-monthly@quentin
+DTSTART:20260928T190000
+DTEND:20260928T193000
+RRULE:FREQ=MONTHLY
+SUMMARY:📖 Journal Pokémon Box
+DESCRIPTION:Documenter le mois :\n- photo de la box\n- objet préféré\n- prix\n- souvenir associé\n- prochaine envie.\n\nConstruire l'histoire de la collection au fil des années.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-geek-box-premium-quarterly@quentin
+DTSTART:20260901T120000
+DTEND:20260901T130000
+RRULE:FREQ=MONTHLY;INTERVAL=3
+SUMMARY:🏆 Pièce Pokémon premium trimestrielle
+DESCRIPTION:Tous les 3 mois : choisir une pièce exceptionnelle.\n\nExemples :\n- grosse peluche officielle\n- figurine premium\n- objet Pokémon Center\n- édition japonaise\n- objet anniversaire.
+END:VEVENT
+
+END:VCALENDAR
