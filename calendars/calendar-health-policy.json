@@ -1,6 +1,6 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_POLICY_FR_V2",
-  "updated_at": "2026-08-19T16:54:00Z",
+  "updated_at": "2026-08-23T21:12:00Z",
   "scope": "Permanent redundant health monitoring for subscribed Fortnite, Harry Potter and Pokemon calendars in QuentinGranger/demo",
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -85,6 +85,7 @@
     "required_fields": ["last_observer_check_at", "last_deep_check_at", "observer_title", "automation_snapshot", "repository_reachable", "pinned_branch_reachable", "verified_ics_path_count", "overall_result"],
     "write_rule": "Any declared observer may refresh after a successful cross-calendar check when the previous heartbeat is at least 24 hours old, or immediately for a health-policy migration. Always use a fresh blob SHA and compare-and-swap.",
     "snapshot_rule": "Store each monitored automation's enabled state, expected/observed recurrence, finite flag, timezone, last_run_time and updated_at so GitHub Actions can validate per-monitor liveness from the last independent snapshot.",
+    "persisted_liveness_rule": "Persist liveness=HEALTHY for every monitor that passes the health check. HEALTHY_CURRENT_EXECUTION is execution-local context only and must never be serialized into the shared heartbeat, because the external validator counts the normalized persistent state HEALTHY.",
     "external_check": "Scheduled GitHub Actions fails if the heartbeat is older than max_age_hours or if a snapshotted monitor is already beyond its own liveness threshold."
   },
   "ics_checks": {
