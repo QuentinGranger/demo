@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-23T00:06:12Z",
+  "updated_at": "2026-08-23T14:00:55Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -199,6 +199,33 @@
         {"phase_id":"shadow-cup-eu-2026-08-21:zero-build","name":"Coupe Shadow Zéro construction","phase_type":"OTHER","order":3,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_ZB_EU","name":"Coupe Shadow Zéro construction EU","session_number":1,"round_number":1,"round_label":"Zéro construction","status":"SCHEDULED","region":"EU","ruleset":"ZERO_BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"}
       ],
       "history": [{"at":"2026-08-21T06:19:11Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU schedule published three Shadow Cup sessions for Aug 21. Promoted to CALENDAR because official rules make it a time-sensitive cosmetic-reward opportunity before shop release, including a mobile-only phase."}]
+    },
+    {
+      "competition_id": "performance-evaluation-eu-2026",
+      "official_event_id": "S42_PerformanceEvaluation",
+      "official_event_slug": "S42_PerformanceEvaluation",
+      "series_id": "PERFORMANCE_EVALUATION",
+      "season_id": "C7S4",
+      "name": "Évaluation des performances Fortnite — EU",
+      "competition_class": "PERFORMANCE_EVALUATION",
+      "status": "SCHEDULED",
+      "regions": ["EU"],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {"start_date":"2026-08-23","end_date":"2026-10-22","time_precision":"DATE_RANGE"},
+      "registration": null,
+      "eligibility": {"status":"VERIFIED","minimum_rank":null,"account_level":null,"age_min":13,"two_factor_required":true,"region_lock":"EU","platform_requirements":null,"team_requirements":"DUOS","other_rules":"FNCS Division 1 OR top 5,000 of the overall Power Rankings Leaderboard. The event is a tournament/game-performance test; top 50 teams advance from Round 1 to Round 2. Cash prizes are awarded to top players after Round 2; exact distribution is not asserted here.","rules_url":"https://www.fortnite.com/competitive/rules-guidelines/rules-library"},
+      "prize_pool": {"currency":null,"total_amount":null,"region_amount":null,"session_amount":null,"distribution":"Cash prizes for top players at the conclusion of Round 2; amount/distribution not published on the event page excerpt.","source_id":"fortnite_competitive","confidence":"OFFICIAL"},
+      "qualification": {"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": ["fortnite_competitive"],
+      "source_urls": ["https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","https://www.fortnite.com/competitive/schedule?lang=en-US&region=EU"],
+      "phases": [{"phase_id":"performance-evaluation-eu-2026:test-series","name":"Performance Evaluation test series","phase_type":"OTHER","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":{"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},"sessions":[{"session_id":"performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1","official_session_id":null,"name":"Session 1 - Manche 1","session_number":1,"round_number":1,"round_label":"Session 1 - Manche 1","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-23T16:00:00+02:00","end_at":"2026-08-23T18:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":{"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},{"session_id":"performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2","official_session_id":null,"name":"Session 1 - Manche 2","session_number":1,"round_number":2,"round_label":"Session 1 - Manche 2","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-23T19:00:00+02:00","end_at":"2026-08-23T21:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":{"distribution":"Cash prizes awarded to top players after Round 2; exact amount not asserted.","source_id":"fortnite_competitive","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]}],"schedule_completeness":"PARTIAL_SEE_OFFICIAL_SCHEDULE"}],
+      "history": [{"at":"2026-08-23T14:00:55Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU event page confirms an Aug 23–Oct 22 Performance Evaluation series, Duos Battle Royale, restricted to FNCS Division 1 or top 5,000 overall Power Rankings, with top 50 teams advancing to Round 2. The first EU two-round test is 16:00–18:00 and 19:00–21:00 Europe/Paris on Aug 23. Per projection policy, performance evaluations remain LEDGER_ONLY; later official sessions must be appended as discovered."}]
     },
     {
       "competition_id": "mobile-series-championship-copenhagen-2026",
