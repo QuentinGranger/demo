@@ -1,81 +1,51 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//QuentinGranger//Pokemon Geek Box Monthly//FR
+PRODID:-//QuentinGranger//Pokemon Geek Box Curator//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Curateur Intelligent
+X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Sélection imposée
 X-WR-TIMEZONE:Europe/Paris
 
 BEGIN:VEVENT
-UID:pokemon-geek-box-creation-monthly@quentin
+UID:pokemon-box-september-2026@quentin
 DTSTART:20260901T100000
-DTEND:20260901T113000
-RRULE:FREQ=MONTHLY
-SUMMARY:🎁 Création Pokémon Geek Box — 50€
-DESCRIPTION:Mission : recevoir ta box Pokémon personnelle du mois.\n\nLe calendrier agit comme un curateur : il faut choisir une pièce principale et construire autour.\n\nBudget conseillé : 50€.\n🧸 Objet principal : 25-35€ (peluche officielle, figurine, objet Japon).\n📚 Complément : 10-15€ (manga, livre, accessoire, décoration).\n✨ Bonus : 5€ (snack, petit goodie).\n\nObjectif : créer une collection avec une histoire.
+DTEND:20260901T110000
+RRULE:FREQ=YEARLY
+SUMMARY:🎁 Septembre 2026 — Box Évoli Lifestyle
+DESCRIPTION:OBJET IMPOSÉ : Peluche Pokémon Évoli officielle.\n\nPourquoi : première pièce parfaite pour commencer une collection physique. Évoli est une mascotte durable, facilement exposable et cohérente avec une collection long terme.\n\nBudget : 20-35€.\n\nComplément : petite figurine Évoli ou Funko Pop Évoli.\n\nSources : Pokémon Center propose des peluches officielles et objets dérivés. https://www.pokemoncenter.com/category/plush
 END:VEVENT
 
 BEGIN:VEVENT
-UID:pokemon-geek-box-intelligence-monthly@quentin
+UID:pokemon-box-october-2026@quentin
+DTSTART:20261001T100000
+DTEND:20261001T110000
+SUMMARY:🎁 Octobre 2026 — Box Halloween Pokémon
+DESCRIPTION:OBJET IMPOSÉ : Peluche Mimiqui ou Ectoplasma.\n\nPourquoi : objet décoration fort, parfait pour une ambiance Halloween et une collection avec personnalité.\n\nComplément : mug, figurine ou accessoire Pokémon Spectre.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-box-november-2026@quentin
+DTSTART:20261101T100000
+DTEND:20261101T110000
+SUMMARY:🎁 Novembre 2026 — Box Japon Pokémon
+DESCRIPTION:OBJET IMPOSÉ : Objet Pokémon Center Japon.\n\nChoix prioritaire : Pokémon Fit, mascotte japonaise ou accessoire lifestyle.\n\nPourquoi : apporter une vraie dimension japonaise à la collection.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-box-december-2026@quentin
+DTSTART:20261201T100000
+DTEND:20261201T110000
+SUMMARY:🎁 Décembre 2026 — Box pièce souvenir
+DESCRIPTION:OBJET IMPOSÉ : Une pièce Pokémon premium de fin d'année.\n\nPriorité :\n- peluche édition spéciale\n- collaboration limitée\n- objet anniversaire\n- figurine premium.\n\nObjectif : créer un souvenir annuel.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:pokemon-box-curator-monthly@quentin
 DTSTART:20260902T190000
 DTEND:20260902T193000
 RRULE:FREQ=MONTHLY
-SUMMARY:🤖 Veille intelligente — Le choix Pokémon du mois
-DESCRIPTION:Mission : trouver l'objet que tu dois prendre ce mois-ci.\n\nSources à surveiller :\nPokémon officiel : https://www.pokemon.com/fr/\nPokémon Center : https://www.pokemoncenter.com/\n\nCritères de sélection :\n⭐ officiel ou licence reconnue\n⭐ coup de coeur visuel\n⭐ bonne qualité\n⭐ correspond à la collection\n⭐ pas un achat jetable.\n\nRecommandation actuelle : privilégier les peluches Pokémon Center, figurines, objets japonais et collaborations limitées. Pokémon Center propose régulièrement des collections exclusives de peluches et objets dérivés.\n\nExemples de recherches :\n- Pikachu anniversaire\n- Évoli / évolutions\n- Pokémon Fit\n- peluche saisonnière\n- objet Pokémon Center Japon.
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-theme-monthly@quentin
-DTSTART:20260905T190000
-DTEND:20260905T193000
-RRULE:FREQ=MONTHLY
-SUMMARY:🎨 Thème obligatoire de la Box
-DESCRIPTION:Choisir une identité pour la box avant achat.\n\nExemples :\n🌱 Starter\n⚡ Pikachu\n🌙 Évoli\n👻 Spectre\n🇯🇵 Japon\n🎮 Jeu Pokémon préféré\n🎬 Anime\n🎃 Saison.\n\nChaque objet doit raconter la même histoire.
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-shopping-monthly@quentin
-DTSTART:20260910T190000
-DTEND:20260910T193000
-RRULE:FREQ=MONTHLY
-SUMMARY:🛒 Chasse aux objets Pokémon recommandés
-DESCRIPTION:Comparer les achats du mois.\n\nCatégories prioritaires :\n1. Peluche officielle Pokémon Center\n2. Figurine de qualité\n3. Objet japonais import\n4. Livre ou artbook\n5. Accessoire lifestyle.\n\nBoutiques à vérifier :\nPokémon Center : https://www.pokemoncenter.com/\nPokeVault (objets japonais) : https://pokevault.com/\n\nNe pas acheter sans avoir trouvé l'objet coup de coeur.
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-discovery-monthly@quentin
-DTSTART:20260915T190000
-DTEND:20260915T193000
-RRULE:FREQ=MONTHLY
-SUMMARY:🔎 Découverte nouveautés Pokémon
-DESCRIPTION:Veille sur :\n- nouvelles peluches\n- collaborations\n- jeux vidéo\n- anime\n- événements\n- éditions limitées.\n\nLes collections Pokémon Center mettent régulièrement en avant des peluches et objets exclusifs.\n\nSources :\nhttps://www.pokemon.com/fr/\nhttps://www.pokemoncenter.com/
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-display-monthly@quentin
-DTSTART:20260920T150000
-DTEND:20260920T160000
-RRULE:FREQ=MONTHLY
-SUMMARY:🏠 Installation de la pièce du mois
-DESCRIPTION:Mettre l'objet en valeur :\n- exposition\n- photo\n- décoration\n- rangement.\n\nLa collection doit vivre dans ton espace.
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-journal-monthly@quentin
-DTSTART:20260928T190000
-DTEND:20260928T193000
-RRULE:FREQ=MONTHLY
-SUMMARY:📖 Journal Pokémon Box
-DESCRIPTION:Noter :\n- objet acheté\n- prix\n- lien boutique\n- pourquoi il a été choisi\n- note plaisir sur 10.\n\nCréer un historique de collection.
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pokemon-geek-box-premium-quarterly@quentin
-DTSTART:20260901T120000
-DTEND:20260901T130000
-RRULE:FREQ=MONTHLY;INTERVAL=3
-SUMMARY:🏆 Grande pièce collector trimestrielle
-DESCRIPTION:Tous les 3 mois : remplacer les petits achats par une vraie pièce forte.\n\nExemples :\n- grosse peluche Pokémon Center\n- figurine premium\n- collaboration limitée\n- objet anniversaire\n- pièce japonaise rare.
+SUMMARY:🤖 Curateur Pokémon — Choix obligatoire du prochain objet
+DESCRIPTION:Mission : rechercher et sélectionner UN objet précis pour la prochaine box.\n\nPriorités :\n1. Pokémon Center officiel\n2. Peluche ou figurine de qualité\n3. Objet japonais/import\n4. Artbook ou objet lifestyle\n5. Collaboration limitée.\n\nLe but n'est pas d'acheter plus, mais d'avoir une collection cohérente.\n\nSources :\nhttps://www.pokemoncenter.com/\nhttps://www.pokemon.com/fr/
 END:VEVENT
 
 END:VCALENDAR
