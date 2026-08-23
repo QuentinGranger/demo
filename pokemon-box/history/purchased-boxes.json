@@ -1,17 +1,34 @@
 {
   "name": "Pokemon Geek Box Purchase History",
-  "version": "1.0",
-  "purpose": "Conserver l'historique des box Pokémon créées pour éviter les répétitions et améliorer les futures recommandations.",
+  "version": "2.0",
+  "purpose": "Conserver l'historique complet des box Pokémon afin d'éviter les répétitions et d'améliorer les futures recommandations du curateur.",
+  "intelligence": {
+    "use_history_for_future_selection": true,
+    "avoid_repetition": true,
+    "learn_from_preferences": true,
+    "track_collection_evolution": true
+  },
   "rules": {
-    "avoid_same_theme": true,
-    "avoid_same_main_pokemon": true,
-    "avoid_same_product_category": true,
-    "use_history_for_future_selection": true
+    "avoid_same_theme_years": 3,
+    "avoid_same_main_pokemon_months": 12,
+    "avoid_same_category_months": 3,
+    "avoid_same_product_twice": true,
+    "prefer_discovery": true
+  },
+  "tracking": {
+    "themes_used": [],
+    "pokemon_used": [],
+    "categories_used": [],
+    "brands_used": [],
+    "shops_used": [],
+    "favorite_items": []
   },
   "purchased_boxes": {
     "2026-09": {
       "theme": "Evoli Lifestyle",
+      "season": "autumn",
       "main_pokemon": ["Evoli"],
+      "pokemon_family": ["Evoli", "Aquali", "Voltali", "Pyroli"],
       "items": [
         "peluche",
         "manga",
@@ -22,8 +39,22 @@
         "book",
         "figure"
       ],
+      "products": [],
       "budget": 50,
+      "score": {
+        "emotion": 0,
+        "display": 0,
+        "rarity": 0,
+        "value": 0
+      },
       "notes": "Première box : création de l'identité de la collection."
     }
+  },
+  "analysis": {
+    "monthly_summary": true,
+    "yearly_summary": true,
+    "suggest_future_themes": true,
+    "detect_overused_pokemon": true,
+    "detect_collection_gaps": true
   }
 }
