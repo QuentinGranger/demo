@@ -1,0 +1,34 @@
+{
+  "year": 2026,
+  "purpose": "Premiere annee de construction de collection Pokemon Geek Box",
+  "boxes": [
+    {
+      "month": "09",
+      "theme": "Evoli Lifestyle",
+      "season": "autumn",
+      "main_goal": "Creer une premiere piece emotionnelle",
+      "alternatives": ["Pikachu retro", "Pokemon Center", "Objet Japon"]
+    },
+    {
+      "month": "10",
+      "theme": "Halloween Spectre",
+      "season": "autumn",
+      "main_goal": "Creer une vitrine saisonniere",
+      "alternatives": ["Ectoplasma", "Mimiqui", "Noctali"]
+    },
+    {
+      "month": "11",
+      "theme": "Japon Pokemon",
+      "season": "autumn",
+      "main_goal": "Introduire une piece japonaise",
+      "alternatives": ["Pokemon Center Japon", "Pokemon Fit"]
+    },
+    {
+      "month": "12",
+      "theme": "Noel Pokemon",
+      "season": "winter",
+      "main_goal": "Objet souvenir durable",
+      "alternatives": ["Pikachu hiver", "Peluches festives"]
+    }
+  ]
+}
