@@ -1,66 +1,104 @@
 {
-  "name": "Pokemon Geek Box Alerts System",
-  "version": "1.0",
-  "purpose": "Surveiller les produits pour optimiser les achats de collection Pokemon sur plusieurs annees.",
+  "name": "Pokemon Geek Box Smart Alert Engine",
+  "version": "2.0",
+  "purpose": "Surveiller les produits, anticiper les achats et proteger la qualite de collection sur plusieurs annees.",
   "monitoring": {
     "enabled": true,
-    "check_product_status": true,
-    "check_price_changes": true,
-    "check_restock": true,
-    "check_preorders": true
+    "stock_tracking": true,
+    "price_tracking": true,
+    "restock_tracking": true,
+    "preorder_tracking": true,
+    "release_tracking": true,
+    "alternative_search": true
+  },
+  "alert_priority": {
+    "critical": [
+      "limited_edition_available",
+      "premium_item_restock",
+      "pokemon_center_exclusive_restock"
+    ],
+    "high": [
+      "back_in_stock",
+      "preorder_open",
+      "product_discontinued"
+    ],
+    "medium": [
+      "price_drop",
+      "promotion",
+      "shipping_change"
+    ],
+    "low": [
+      "similar_product_found"
+    ]
   },
   "alert_types": {
     "out_of_stock": {
-      "priority": "high",
-      "action": "find_alternative"
+      "action": "start_replacement_analysis",
+      "rules": [
+        "check_official_sources_first",
+        "check_japan_imports",
+        "wait_before_accepting_lower_quality_replacement"
+      ]
     },
     "back_in_stock": {
-      "priority": "high",
-      "action": "notify_for_purchase"
-    },
-    "price_drop": {
-      "priority": "medium",
-      "threshold_percent": 10,
-      "action": "recalculate_score"
-    },
-    "preorder_open": {
-      "priority": "high",
-      "action": "evaluate_product"
-    }
-  },
-  "product_monitoring": {
-    "track": [
-      "pokemon_center_exclusives",
-      "japan_imports",
-      "premium_items",
-      "limited_editions"
-    ],
-    "keep_history": true
-  },
-  "decision_rules": {
-    "do_not_buy_only_because_available": true,
-    "recalculate_product_score_after_price_change": true,
-    "prefer_waiting_for_restock_over_bad_replacement": true,
-    "search_alternative_if_discontinued": true
-  },
-  "alternative_strategy": {
-    "same_pokemon_first": true,
-    "same_theme_second": true,
-    "same_budget_range": true,
-    "preserve_emotional_value": true
-  },
-  "examples": {
-    "product_unavailable": {
-      "event": "Peluche Evoli Pokemon Center rupture",
-      "response": [
-        "check_other_official_shop",
-        "check_japan_import",
-        "suggest_equivalent_evoli_item"
+      "action": "evaluate_purchase",
+      "checks": [
+        "budget_available",
+        "collection_goal_match",
+        "product_score"
       ]
     },
     "price_drop": {
-      "event": "Objet premium passe de 80 euros a 60 euros",
-      "response": "reevaluate_as_possible_premium_purchase"
+      "threshold_percent": 10,
+      "action": "recalculate_value_score",
+      "possible_actions": [
+        "buy_now",
+        "save_budget",
+        "ignore"
+      ]
+    },
+    "preorder_open": {
+      "action": "collector_analysis",
+      "checks": [
+        "rarity",
+        "official_status",
+        "long_term_interest"
+      ]
     }
+  },
+  "smart_decision_rules": {
+    "never_buy_only_because_available": true,
+    "prefer_quality_over_speed": true,
+    "protect_premium_budget": true,
+    "compare_multiple_shops": true,
+    "recalculate_product_score": true,
+    "use_collection_history": true
+  },
+  "tracked_products": {
+    "categories": [
+      "pokemon_center_exclusives",
+      "japan_exclusives",
+      "premium_items",
+      "limited_editions",
+      "anniversary_products",
+      "display_pieces"
+    ],
+    "keep_price_history": true,
+    "keep_stock_history": true
+  },
+  "replacement_engine": {
+    "priority_order": [
+      "same_product_other_shop",
+      "same_pokemon_same_category",
+      "same_theme_same_emotion",
+      "same_budget_range"
+    ],
+    "avoid_random_replacement": true
+  },
+  "future_analysis": {
+    "detect_market_trends": true,
+    "detect_good_purchase_windows": true,
+    "suggest_waiting_period": true,
+    "prepare_premium_purchase": true
   }
 }
