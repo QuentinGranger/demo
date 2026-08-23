@@ -2,49 +2,49 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//QuentinGranger//Pokemon Geek Box Curator//FR
 CALSCALE:GREGORIAN
-METHOD=PUBLISH
-X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Sélection imposée
+METHOD:PUBLISH
+X-WR-CALNAME:🎁 Pokémon Geek Box Mensuelle — Achats imposés
 X-WR-TIMEZONE:Europe/Paris
 
 BEGIN:VEVENT
 UID:pokemon-box-september-2026@quentin
 DTSTART:20260901T100000
 DTEND:20260901T110000
-SUMMARY:🎁 Septembre 2026 — Box Évoli Lifestyle — 50€
-DESCRIPTION:ACHAT IMPOSÉ : Peluche Pokémon Évoli officielle.\n\nBudget : 25-35€.\nLien : https://www.pokemoncenter.com/category/plush\nAlternative France : https://www.pokecenter.fr/peluches-pokemon\n\nComplément box :\n📚 Manga ou livre Pokémon : 10€\n✨ Petit goodie : 5-10€\n\nObjectif : première pièce forte et exposable.
+SUMMARY:🎁 Septembre 2026 — Box Évoli (~50€)
+DESCRIPTION:ACHAT IMPOSÉ DU MOIS :\n\n🧸 Peluche Évoli 30 cm officielle\nPrix cible : ~25€\nLien produit : https://peluchepokemon.fr/produit/peluche-evoli-30-cm/\n\nCompléments :\n📚 Manga ou livre Pokémon : 10-15€\n✨ Petit goodie Pokémon : 5-10€\n\nObjectif : commencer une collection physique avec une pièce d'exposition forte.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-october-2026@quentin
 DTSTART:20261001T100000
 DTEND:20261001T110000
-SUMMARY:🎁 Octobre 2026 — Box Halloween Spectre — 50€
-DESCRIPTION:ACHAT IMPOSÉ : Objet Mimiqui ou Ectoplasma.\n\nChoix conseillé : figurine ou peluche.\nSource objets : https://lacarterare.com/collections/peluche-pokemon\n\nComplément : décoration Halloween Pokémon ou snack japonais.
+SUMMARY:🎁 Octobre 2026 — Box Halloween Spectre (~50€)
+DESCRIPTION:ACHAT IMPOSÉ DU MOIS :\n\n👻 Peluche Mimiqui ou Ectoplasma officielle\n\nRecherche prioritaire :\nhttps://www.pokemoncenter.com/search/mimikyu\nhttps://www.pokemoncenter.com/search/gengar\n\nCompléments :\n☕ Mug ou décoration Pokémon Spectre\n🍬 Snack japonais Pokémon\n\nThème : créer une pièce Halloween permanente.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-november-2026@quentin
 DTSTART:20261101T100000
 DTEND:20261101T110000
-SUMMARY:🎁 Novembre 2026 — Box Japon Pokémon — 50€
-DESCRIPTION:ACHAT IMPOSÉ : un objet Pokémon Center Japon.\n\nPriorité : Pokémon Fit, mascotte japonaise ou accessoire lifestyle.\nSource officielle Japon : https://www.pokemoncenter-online.com/plush-toys/\nAlternative import : https://pokevault.com/\n\nComplément : petit objet japonais Pokémon.
+SUMMARY:🎁 Novembre 2026 — Box Japon Pokémon (~50€)
+DESCRIPTION:ACHAT IMPOSÉ DU MOIS :\n\n🇯🇵 Objet Pokémon Center Japon\n\nPriorité : Pokémon Fit / mascotte japonaise / accessoire lifestyle.\n\nLien : https://www.pokemoncenter-online.com/\nImport alternatif : https://pokevault.com/\n\nComplément : petit objet japonais assorti.
 END:VEVENT
 
 BEGIN:VEVENT
 UID:pokemon-box-december-2026@quentin
 DTSTART:20261201T100000
 DTEND:20261201T110000
-SUMMARY:🎁 Décembre 2026 — Box Noël Collector — 50€
-DESCRIPTION:ACHAT IMPOSÉ : pièce souvenir de fin d'année.\n\nPriorité :\n- peluche spéciale\n- figurine premium\n- objet anniversaire\n- coffret collector.\n\nSources :\nhttps://www.pokemoncenter.com/\nhttps://www.pokestock.fr/categorie-produit/pokemon/coffret-pokebox/
+SUMMARY:🎁 Décembre 2026 — Box Noël Collector (~50€)
+DESCRIPTION:ACHAT IMPOSÉ DU MOIS :\n\n🎄 Une pièce souvenir annuelle Pokémon.\n\nChoisir :\n- peluche spéciale\n- figurine premium\n- collaboration limitée\n- objet anniversaire\n\nBoutique : https://www.pokemoncenter.com/\n\nObjectif : créer un souvenir annuel.
 END:VEVENT
 
 BEGIN:VEVENT
-UID:pokemon-box-curator-monthly@quentin
+UID:pokemon-curator-monthly@quentin
 DTSTART:20260902T190000
 DTEND:20260902T193000
 RRULE:FREQ=MONTHLY
-SUMMARY:🤖 Curateur Pokémon — Je choisis la pièce du mois
-DESCRIPTION:Mission : sélectionner un objet précis autour de 50€.\n\nCritères : officiel, beau, exposable, durable.\n\nSources de veille :\nhttps://www.pokemon.com/fr/\nhttps://www.pokemoncenter.com/\n\nCatégories : peluche, figurine, manga, artbook, jeu, décoration, objet Japon, vêtement, expérience.
+SUMMARY:🤖 Curateur Pokémon — Validation achat du mois
+DESCRIPTION:Le curateur choisit UN seul objet principal.\n\nCritères :\n⭐ licence officielle\n⭐ belle pièce d'exposition\n⭐ plaisir durable\n⭐ cohérence avec la collection\n\nBudget total : environ 50€.\n\nRépartition :\n70% pièce principale\n20% complément\n10% surprise.
 END:VEVENT
 
 END:VCALENDAR
