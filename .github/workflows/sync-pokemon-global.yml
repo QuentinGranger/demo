@@ -1,0 +1,44 @@
+name: Sync Pokémon global calendar
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'calendars/pokemon-tcg-france.ics'
+      - 'calendars/pokemon-events-france-paris.ics'
+      - 'scripts/sync_pokemon_global.py'
+      - '.github/workflows/sync-pokemon-global.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-pokemon-global
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synchronize global Pokémon calendar
+        run: python scripts/sync_pokemon_global.py
+      - name: Commit synchronized global calendar
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No global calendar change required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'Sync Pokémon global calendar'
+          git push origin HEAD:master
