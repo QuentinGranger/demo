@@ -32,6 +32,8 @@ jobs:
         run: python scripts/validate_fortnite_change_ledger.py
       - name: Validate Fortnite ICS
         run: python scripts/validate_fortnite_ics.py
+      - name: Validate physical-event consistency
+        run: python scripts/validate_fortnite_physical_events.py
       - name: Remove one-shot reconciliation machinery
         run: git rm scripts/apply_fncs_antwerp_ticket_update.py .github/workflows/apply-fncs-antwerp-ticket-update.yml
       - name: Commit and push canonical state
@@ -39,7 +41,7 @@ jobs:
         run: |
           git config user.name 'calendar-reconciliation-bot'
           git config user.email 'calendar-reconciliation-bot@users.noreply.github.com'
-          git add calendars/fortnite-ticketing-france.json calendars/fortnite-physical-access-france.json calendars/fortnite-paris.ics calendars/fortnite-competitive-france.ics calendars/fortnite-change-ledger.json calendars/fortnite-notification-outbox-france.json calendars/fortnite-change-index-france.json
+          git add calendars/fortnite-ticketing-france.json calendars/fortnite-physical-access-france.json calendars/fortnite-physical-events-france.json calendars/fortnite-physical-events-index-france.json calendars/fortnite-paris.ics calendars/fortnite-competitive-france.ics calendars/fortnite-change-ledger.json calendars/fortnite-notification-outbox-france.json calendars/fortnite-change-index-france.json
           if git diff --cached --quiet; then
             echo 'No canonical delta to commit.'
             exit 0
