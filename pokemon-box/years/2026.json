@@ -1,34 +1,57 @@
 {
   "year": 2026,
   "purpose": "Premiere annee de construction de collection Pokemon Geek Box",
+  "strategy": {
+    "goal": "Construire une collection coherente et emotionnelle",
+    "budget_target": 50,
+    "avoid_repetition": true,
+    "prioritize_official_products": true,
+    "balance_categories": true
+  },
   "boxes": [
     {
       "month": "09",
       "theme": "Evoli Lifestyle",
       "season": "autumn",
+      "event_context": "Lancement de collection",
       "main_goal": "Creer une premiere piece emotionnelle",
-      "alternatives": ["Pikachu retro", "Pokemon Center", "Objet Japon"]
+      "preferred_categories": ["peluche", "figurine", "objet decoration"],
+      "main_item_target": "Une piece officielle avec forte valeur sentimentale",
+      "alternatives": ["Pikachu retro", "Pokemon Center", "Objet Japon"],
+      "display_idea": "Premier espace Pokemon visible dans la collection"
     },
     {
       "month": "10",
       "theme": "Halloween Spectre",
       "season": "autumn",
+      "event_context": "Halloween",
       "main_goal": "Creer une vitrine saisonniere",
-      "alternatives": ["Ectoplasma", "Mimiqui", "Noctali"]
+      "preferred_categories": ["figurine", "decoration", "peluche"],
+      "main_item_target": "Pokemon Spectre avec forte presence visuelle",
+      "alternatives": ["Ectoplasma", "Mimiqui", "Noctali"],
+      "display_idea": "Ambiance sombre avec lumiere violette"
     },
     {
       "month": "11",
       "theme": "Japon Pokemon",
       "season": "autumn",
+      "event_context": "Mois exploration Japon",
       "main_goal": "Introduire une piece japonaise",
-      "alternatives": ["Pokemon Center Japon", "Pokemon Fit"]
+      "preferred_categories": ["Pokemon Center", "import", "gashapon"],
+      "main_item_target": "Objet difficile a trouver en France",
+      "alternatives": ["Pokemon Center Japon", "Pokemon Fit"],
+      "display_idea": "Creation d'un coin Japon"
     },
     {
       "month": "12",
       "theme": "Noel Pokemon",
       "season": "winter",
+      "event_context": "Fetes de fin d'annee",
       "main_goal": "Objet souvenir durable",
-      "alternatives": ["Pikachu hiver", "Peluches festives"]
+      "preferred_categories": ["peluche", "objet decoration", "collector"],
+      "main_item_target": "Piece qui restera plusieurs annees",
+      "alternatives": ["Pikachu hiver", "Peluches festives"],
+      "display_idea": "Decoration saisonniere memorable"
     }
   ]
 }
