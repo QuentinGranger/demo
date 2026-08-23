@@ -1,0 +1,53 @@
+{
+  "name": "Pokemon Geek Box Event Calendar",
+  "version": "1.0",
+  "purpose": "Adapter les box Pokémon mensuelles aux saisons, événements officiels et périodes importantes.",
+  "event_rules": {
+    "adapt_theme_to_season": true,
+    "prioritize_official_events": true,
+    "avoid_repeating_event_themes": true,
+    "prepare_special_boxes": true
+  },
+  "recurring_events": {
+    "february": {
+      "theme": "Saint-Valentin Pokémon",
+      "ideas": ["Pokémon couple", "Evoli et évolutions", "objets mignons", "peluches duo"]
+    },
+    "february_27": {
+      "theme": "Anniversaire Pokémon",
+      "ideas": ["pièce anniversaire", "objet collector", "nostalgie générations"]
+    },
+    "spring": {
+      "theme": "Printemps Pokémon",
+      "ideas": ["Pokémon Plante", "nature", "jardin", "décoration lumineuse"]
+    },
+    "summer": {
+      "theme": "Vacances Pokémon",
+      "ideas": ["Pokémon Eau", "plage", "objets lifestyle"]
+    },
+    "october": {
+      "theme": "Halloween Pokémon",
+      "ideas": ["Pokémon Spectre", "Mimiqui", "Ectoplasma", "décoration sombre"]
+    },
+    "november": {
+      "theme": "Japon Pokémon",
+      "ideas": ["Pokémon Center Japon", "Pokémon Fit", "objets import"]
+    },
+    "december": {
+      "theme": "Noël Pokémon",
+      "ideas": ["Pikachu hiver", "peluches festives", "objets souvenirs"]
+    }
+  },
+  "special_event_types": {
+    "pokemon_center_release": true,
+    "new_game_release": true,
+    "anime_event": true,
+    "movie_release": true,
+    "collaboration": true
+  },
+  "box_generation_logic": {
+    "check_events_before_theme": true,
+    "combine_event_with_collection_goals": true,
+    "prefer_memorable_months": true
+  }
+}
