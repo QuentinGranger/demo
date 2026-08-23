@@ -2,11 +2,20 @@
   "year": 2026,
   "purpose": "Premiere annee de construction de collection Pokemon Geek Box",
   "strategy": {
-    "goal": "Construire une collection coherente et emotionnelle",
+    "goal": "Construire une collection coherente, emotionnelle et evolutive",
     "budget_target": 50,
+    "premium_reserve": true,
     "avoid_repetition": true,
     "prioritize_official_products": true,
-    "balance_categories": true
+    "balance_categories": true,
+    "create_collection_story": true
+  },
+  "annual_objectives": {
+    "boxes_created": 4,
+    "official_items_target": 4,
+    "japanese_items_target": 1,
+    "premium_piece_target": 1,
+    "display_projects": 4
   },
   "boxes": [
     {
@@ -14,44 +23,48 @@
       "theme": "Evoli Lifestyle",
       "season": "autumn",
       "event_context": "Lancement de collection",
-      "main_goal": "Creer une premiere piece emotionnelle",
+      "main_goal": "Creer la premiere piece emotionnelle",
       "preferred_categories": ["peluche", "figurine", "objet decoration"],
       "main_item_target": "Une piece officielle avec forte valeur sentimentale",
-      "alternatives": ["Pikachu retro", "Pokemon Center", "Objet Japon"],
-      "display_idea": "Premier espace Pokemon visible dans la collection"
+      "display_idea": "Premier espace Pokemon visible dans la collection",
+      "premium_opportunity": false,
+      "alternatives": ["Pikachu retro", "Pokemon Center", "Objet Japon"]
     },
     {
       "month": "10",
       "theme": "Halloween Spectre",
       "season": "autumn",
-      "event_context": "Halloween",
-      "main_goal": "Creer une vitrine saisonniere",
+      "event_context": "Halloween Pokemon",
+      "main_goal": "Creer une vitrine saisonniere forte",
       "preferred_categories": ["figurine", "decoration", "peluche"],
-      "main_item_target": "Pokemon Spectre avec forte presence visuelle",
-      "alternatives": ["Ectoplasma", "Mimiqui", "Noctali"],
-      "display_idea": "Ambiance sombre avec lumiere violette"
+      "main_item_target": "Une piece Spectre avec forte presence visuelle",
+      "display_idea": "Ambiance sombre, lumiere violette et scene dediee",
+      "premium_opportunity": true,
+      "alternatives": ["Ectoplasma", "Mimiqui", "Noctali"]
     },
     {
       "month": "11",
       "theme": "Japon Pokemon",
       "season": "autumn",
-      "event_context": "Mois exploration Japon",
-      "main_goal": "Introduire une piece japonaise",
+      "event_context": "Exploration des produits japonais",
+      "main_goal": "Introduire une piece difficile a trouver en France",
       "preferred_categories": ["Pokemon Center", "import", "gashapon"],
-      "main_item_target": "Objet difficile a trouver en France",
-      "alternatives": ["Pokemon Center Japon", "Pokemon Fit"],
-      "display_idea": "Creation d'un coin Japon"
+      "main_item_target": "Objet officiel japonais avec identite forte",
+      "display_idea": "Creation d'un coin Japon dans la collection",
+      "premium_opportunity": true,
+      "alternatives": ["Pokemon Center Japon", "Pokemon Fit"]
     },
     {
       "month": "12",
       "theme": "Noel Pokemon",
       "season": "winter",
       "event_context": "Fetes de fin d'annee",
-      "main_goal": "Objet souvenir durable",
-      "preferred_categories": ["peluche", "objet decoration", "collector"],
-      "main_item_target": "Piece qui restera plusieurs annees",
-      "alternatives": ["Pikachu hiver", "Peluches festives"],
-      "display_idea": "Decoration saisonniere memorable"
+      "main_goal": "Ajouter un souvenir durable",
+      "preferred_categories": ["peluche", "collector", "objet decoration"],
+      "main_item_target": "Piece conservee plusieurs annees",
+      "display_idea": "Decoration saisonniere memorable",
+      "premium_opportunity": false,
+      "alternatives": ["Pikachu hiver", "Peluches festives"]
     }
   ]
 }
