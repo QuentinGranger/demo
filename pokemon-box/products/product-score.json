@@ -1,0 +1,54 @@
+{
+  "name": "Pokemon Geek Box Product Scoring System",
+  "version": "1.0",
+  "purpose": "Evaluer la qualité des objets Pokémon avant intégration dans une box mensuelle autour de 50 euros.",
+  "scoring": {
+    "maximum_score": 30,
+    "criteria": {
+      "official_pokemon_license": {
+        "points": 5,
+        "description": "Produit officiel Pokémon avec licence reconnue."
+      },
+      "japanese_exclusivity": {
+        "points": 5,
+        "description": "Produit exclusif Japon, Pokémon Center Japon ou édition difficile à trouver."
+      },
+      "display_quality": {
+        "points": 4,
+        "description": "Objet qui apporte une vraie valeur visuelle dans une collection exposée."
+      },
+      "durability": {
+        "points": 4,
+        "description": "Objet durable qui peut rester plusieurs années dans la collection."
+      },
+      "rarity": {
+        "points": 3,
+        "description": "Objet peu courant, édition limitée ou difficile à obtenir."
+      },
+      "price_value": {
+        "points": 3,
+        "description": "Prix cohérent par rapport à la qualité et au plaisir apporté."
+      },
+      "emotional_attachment": {
+        "points": 5,
+        "description": "Capacité de l'objet à créer un souvenir ou un attachement personnel."
+      }
+    }
+  },
+  "evaluation_examples": {
+    "random_amazon_plush": {
+      "score": 6,
+      "reason": "Produit officiel incertain, faible rareté, faible valeur de collection."
+    },
+    "pokemon_center_plush": {
+      "score": 26,
+      "reason": "Produit officiel, belle exposition, durable et souvent exclusif."
+    }
+  },
+  "decision_rules": {
+    "minimum_score_for_main_item": 18,
+    "prefer_high_emotional_value": true,
+    "avoid_low_quality_products": true,
+    "avoid_filler_items": true
+  }
+}
