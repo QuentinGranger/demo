@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_DEADLINE_INTELLIGENCE_FR_V3",
-  "updated_at": "2026-08-19T09:56:00Z",
+  "updated_at": "2026-08-23T01:13:48Z",
   "scope": "Fortnite — échéances générales, billetterie et lifecycle compétitif route-aware avec rappels conditionnels",
   "policy_engine": "fortnite-competitive-deadline-engine-france.json",
   "principles": {
@@ -92,7 +92,7 @@
     "eliminated_event": "No official route remains and final official evidence supports non-qualification.",
     "on_qualified": "Suppress unused alternative qualifier reminders and arm only future participant-specific final reminders.",
     "on_eliminated_path": "Suppress only that route's reminders and recalculate next action from remaining routes.",
-    "on_eliminated_event": "Invalidate participant PLAY/REGISTER/CHECK_IN downstream reminders, preserve global WATCH/ATTEND.",
+    "on_eliminated_event": "Invalidate participant-specific PLAY/REGISTER/CHECK_IN downstream reminders, preserve global WATCH/ATTEND.",
     "correction": "Official correction creates superseding outcome/history and recalculates future reminders."
   },
   "conditional_notice_policy": {
@@ -200,23 +200,23 @@
     },
     {
       "competition_id": "reload-elite-ewc-paris-2026",
-      "lifecycle_state": "FINAL_LIVE",
-      "lifecycle_version": 1,
-      "result_finality": "UNKNOWN",
+      "lifecycle_state": "FINAL_COMPLETE",
+      "lifecycle_version": 2,
+      "result_finality": "FINAL_OFFICIAL",
       "registration_state": "NOT_PUBLISHED",
       "qualifier_state": "NOT_APPLICABLE",
       "qualification_state": "NOT_APPLICABLE",
-      "final_state": "LIVE",
+      "final_state": "COMPLETE",
       "final_phase_id": "reload-elite-ewc-paris-2026:championship",
       "routes": [
         {
           "route_id": "reload-elite-ewc-paris-2026:direct-final",
           "route_type": "DIRECT_FINAL",
-          "state": "LIVE",
+          "state": "CLOSED",
           "target_id": "reload-elite-ewc-paris-2026:championship",
           "phase_ids": ["reload-elite-ewc-paris-2026:championship"],
           "session_ids": [],
-          "route_version": 1,
+          "route_version": 2,
           "source_id": "fortnite_competitive"
         }
       ],
@@ -226,7 +226,10 @@
       "source_id": "fortnite_competitive",
       "history": [
         {"at": "2026-08-19T09:50:00Z", "type": "LIFECYCLE_CREATED", "note": "Championship run is live; exact match-time milestones remain unavailable because only a date range is trusted."},
-        {"at": "2026-08-19T09:56:00Z", "type": "ROUTE_ADDED", "note": "V3 represents the championship as a DIRECT_FINAL live route."}
+        {"at": "2026-08-19T09:56:00Z", "type": "ROUTE_ADDED", "note": "V3 represents the championship as a DIRECT_FINAL live route."},
+        {"at": "2026-08-23T00:06:12Z", "type": "FINAL_COMPLETED", "note": "Canonical competitive ledger records the Championship and its phase as COMPLETED with a FINAL_OFFICIAL result."},
+        {"at": "2026-08-23T00:06:12Z", "type": "RESULT_FINALIZED", "note": "Official EWC result finalized: BIG champion and VICO MVP; downstream unsent notices are expired silently."},
+        {"at": "2026-08-23T01:13:48Z", "type": "ROUTE_STATE_CHANGED", "note": "Reconciled the direct-final route from LIVE to CLOSED after the already-recorded final official result."}
       ]
     },
     {
@@ -279,19 +282,19 @@
       "deadline_source_timezone": "America/New_York_DATE_ONLY",
       "deadline_certainty": "OFFICIAL_DATE_NO_TIME",
       "planned_notices": [
-        {"type": "LAST_DAY_SOURCE_DATE", "trigger_at": "2026-08-20T09:00:00+02:00", "label": "Fortnite Runners — le Passe de combat se termine aujourd'hui selon la date officielle ET ; heure exacte non publiée", "state": "PLANNED"}
+        {"type": "LAST_DAY_SOURCE_DATE", "trigger_at": "2026-08-20T09:00:00+02:00", "label": "Fortnite Runners — le Passe de combat se termine aujourd'hui selon la date officielle ET ; heure exacte non publiée", "state": "EXPIRED_SILENT"}
       ]
     },
     {
       "event_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
       "profile": "SHORT_RUN",
-      "deadline_version": 1,
+      "deadline_version": 2,
       "last_public_date": "2026-08-22",
       "deadline_type": "LAST_PUBLIC_DATE",
       "deadline_at": null,
       "deadline_certainty": "OFFICIAL_DATE_RANGE_NO_SESSION_TIME",
       "planned_notices": [
-        {"type": "LAST_DAY", "trigger_at": "2026-08-22T09:00:00+02:00", "label": "Reload Elite Series Championship — dernière journée officielle à Paris aujourd'hui ; horaire final fiable non publié", "state": "PLANNED"}
+        {"type": "LAST_DAY", "trigger_at": "2026-08-22T09:00:00+02:00", "label": "Reload Elite Series Championship — dernière journée officielle à Paris aujourd'hui ; horaire final fiable non publié", "state": "EXPIRED_SILENT"}
       ]
     },
     {
