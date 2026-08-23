@@ -1,0 +1,70 @@
+{
+  "name": "Boutiques Pokémon à surveiller",
+  "objectif": "Trouver les meilleurs objets pour composer une Pokémon Geek Box autour de 50€.",
+  "priorites": [
+    "produits officiels",
+    "disponibilité",
+    "prix raisonnable",
+    "possibilité de remplacement en cas de rupture"
+  ],
+  "boutiques": [
+    {
+      "nom": "Pokémon Center officiel",
+      "type": "officiel",
+      "url": "https://www.pokemoncenter.com/",
+      "priorite": 1,
+      "produits": ["peluches", "figurines", "objets lifestyle", "exclusivités"]
+    },
+    {
+      "nom": "Pokémon Center Japon",
+      "type": "import officiel",
+      "url": "https://www.pokemoncenter-online.com/",
+      "priorite": 1,
+      "produits": ["Pokémon Fit", "peluches japonaises", "goodies exclusifs"]
+    },
+    {
+      "nom": "Cultura",
+      "type": "France",
+      "url": "https://www.cultura.com/univers-pokemon.html",
+      "priorite": 2,
+      "produits": ["livres", "mangas", "figurines", "jeux vidéo", "objets dérivés"]
+    },
+    {
+      "nom": "Fnac",
+      "type": "France",
+      "url": "https://www.fnac.com/",
+      "priorite": 2,
+      "produits": ["peluches", "Funko Pop", "figurines", "livres"]
+    },
+    {
+      "nom": "Boîte à Malices",
+      "type": "boutique pop culture France",
+      "url": "https://www.boiteamalice.net/",
+      "priorite": 2,
+      "produits": ["peluches", "figurines", "mugs", "goodies officiels"]
+    },
+    {
+      "nom": "PokeVault",
+      "type": "import Japon",
+      "url": "https://pokevault.com/",
+      "priorite": 3,
+      "produits": ["peluches japonaises", "objets rares"]
+    },
+    {
+      "nom": "Amazon France",
+      "type": "large catalogue",
+      "url": "https://www.amazon.fr/s?k=pokemon",
+      "priorite": 4,
+      "produits": ["produits sous licence", "promotions", "compléments"]
+    },
+    {
+      "nom": "Japan You Want",
+      "type": "import Japon",
+      "url": "https://japanyouwant.com/",
+      "priorite": 3,
+      "produits": ["gashapon", "goodies japonais", "objets exclusifs"]
+    }
+  ],
+  "regle_rupture": "Si un produit est indisponible, chercher le même Pokémon dans une autre boutique puis une catégorie équivalente avec le même budget.",
+  "verification": "Avant chaque box mensuelle, vérifier plusieurs boutiques et choisir le meilleur rapport émotion/prix/disponibilité."
+}
