@@ -1,0 +1,63 @@
+{
+  "name": "Pokemon Geek Box Shop Monitoring",
+  "purpose": "Surveiller plusieurs boutiques avant de choisir les objets mensuels.",
+  "priority_order": [
+    {
+      "priority": 1,
+      "shop": "Pokemon Center",
+      "url": "https://www.pokemoncenter.com/",
+      "use": ["peluches officielles", "objets lifestyle", "exclusivites"]
+    },
+    {
+      "priority": 2,
+      "shop": "Pokemon Center Japon",
+      "url": "https://www.pokemoncenter-online.com/",
+      "use": ["Pokémon Fit", "produits japonais", "editions limitees"]
+    },
+    {
+      "priority": 3,
+      "shop": "PokéVault",
+      "url": "https://pokevault.com/",
+      "use": ["import Japon", "peluches rares", "goodies"]
+    },
+    {
+      "priority": 4,
+      "shop": "Cultura",
+      "url": "https://www.cultura.com/",
+      "use": ["mangas", "livres", "jeux", "produits accessibles"]
+    },
+    {
+      "priority": 5,
+      "shop": "Fnac",
+      "url": "https://www.fnac.com/",
+      "use": ["figurines", "Funko Pop", "livres", "goodies"]
+    },
+    {
+      "priority": 6,
+      "shop": "Amazon France",
+      "url": "https://www.amazon.fr/s?k=pokemon",
+      "use": ["promotions", "petits complements", "remplacements rapides"]
+    },
+    {
+      "priority": 7,
+      "shop": "Japan You Want",
+      "url": "https://japanyouwant.com/",
+      "use": ["gashapon", "objets japonais", "surprises"]
+    }
+  ],
+  "verification_rules": {
+    "before_selecting_box": [
+      "Verifier au moins 5 boutiques",
+      "Verifier prix actuel",
+      "Verifier disponibilite",
+      "Chercher alternative si rupture",
+      "Eviter de reprendre un theme deja utilise"
+    ],
+    "replacement_priority": [
+      "meme Pokemon",
+      "meme categorie",
+      "budget similaire",
+      "meme intention emotionnelle"
+    ]
+  }
+}
