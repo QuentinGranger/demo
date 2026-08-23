@@ -1,0 +1,77 @@
+{
+  "name": "Pokemon Geek Box Collection Goals",
+  "version": "1.0",
+  "purpose": "Donner une direction à la collection Pokémon et éviter les achats sans cohérence.",
+  "goal_rules": {
+    "review_frequency": "yearly",
+    "allow_goal_adjustment": true,
+    "prioritize_quality_over_quantity": true,
+    "avoid_random_purchases": true
+  },
+  "yearly_goals": {
+    "2026": {
+      "total_items": 12,
+      "official_plush": 4,
+      "japanese_items": 2,
+      "premium_piece": 1,
+      "display_projects": 4,
+      "budget_target": 600
+    }
+  },
+  "collection_balance": {
+    "categories": {
+      "plush": {
+        "target": 30,
+        "priority": "high"
+      },
+      "japan_exclusive": {
+        "target": 15,
+        "priority": "high"
+      },
+      "figures": {
+        "target": 20,
+        "priority": "medium"
+      },
+      "books": {
+        "target": 10,
+        "priority": "medium"
+      },
+      "premium_items": {
+        "target": 5,
+        "priority": "very_high"
+      }
+    }
+  },
+  "long_term_goals": {
+    "5_year": {
+      "create_personal_pokemon_room": false,
+      "own_signature_pieces": true,
+      "build_coherent_display": true
+    },
+    "10_year": {
+      "have_story_based_collection": true,
+      "preserve_collection_memory": true
+    }
+  },
+  "progress_tracking": {
+    "completed_goals": [],
+    "milestones": [],
+    "favorite_pokemon": [],
+    "dream_items": []
+  },
+  "analysis": {
+    "detect_collection_gaps": true,
+    "suggest_next_goals": true,
+    "compare_years": true,
+    "measure_progress": true
+  },
+  "example": {
+    "goal": "Construire une première année de collection cohérente",
+    "targets": [
+      "12 objets Pokémon",
+      "4 peluches officielles",
+      "2 objets japonais",
+      "1 pièce premium"
+    ]
+  }
+}
