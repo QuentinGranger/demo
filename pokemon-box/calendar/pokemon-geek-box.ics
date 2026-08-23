@@ -5,32 +5,47 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Pokemon Geek Box
 X-WR-TIMEZONE:Europe/Paris
+
 BEGIN:VEVENT
 UID:pokemon-geek-box-20260901@quentingranger.github.io
 DTSTART:20260901T090000
 DTEND:20260901T093000
 SUMMARY:🎁 Pokémon Geek Box - Évoli Lifestyle
-DESCRIPTION:Box du mois\n\nThème : Évoli Lifestyle\nBudget conseillé : 50€\nObjectif : créer la première pièce émotionnelle de collection.\nCatégories : peluche, figurine, décoration.\nIdée exposition : premier espace Pokémon visible.
+DESCRIPTION:Thème: Évoli Lifestyle\nBudget: 50€\nObjectif: créer la première pièce émotionnelle de collection.\nPriorité: peluche officielle, figurine, décoration.\nExposition: premier espace Pokémon visible.\nLien projet: https://github.com/QuentinGranger/demo
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-geek-box-20261001@quentingranger.github.io
 DTSTART:20261001T090000
 DTEND:20261001T093000
 SUMMARY:🎃 Pokémon Geek Box - Halloween Spectre
-DESCRIPTION:Box du mois\n\nThème : Halloween Spectre\nBudget conseillé : 50€\nObjectif : créer une vitrine saisonnière forte.\nIdée exposition : ambiance sombre et lumière violette.
+DESCRIPTION:Thème: Halloween Spectre\nBudget: 50€\nObjectif: créer une vitrine saisonnière forte.\nPriorité: Ectoplasma, Mimiqui, Pokémon Spectre.\nExposition: lumière sombre et ambiance violette.
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-geek-box-20261101@quentingranger.github.io
 DTSTART:20261101T090000
 DTEND:20261101T093000
 SUMMARY:🇯🇵 Pokémon Geek Box - Japon Pokémon
-DESCRIPTION:Box du mois\n\nThème : Japon Pokémon\nBudget conseillé : 50€\nObjectif : introduire une pièce japonaise ou Pokémon Center.
+DESCRIPTION:Thème: Japon Pokémon\nBudget: 50€ + report possible\nObjectif: obtenir une pièce japonaise ou Pokémon Center.\nPriorité: exclusivités Japon.
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-geek-box-20261201@quentingranger.github.io
 DTSTART:20261201T090000
 DTEND:20261201T093000
 SUMMARY:🎄 Pokémon Geek Box - Noël Pokémon
-DESCRIPTION:Box du mois\n\nThème : Noël Pokémon\nBudget conseillé : 50€\nObjectif : choisir une pièce souvenir durable.
+DESCRIPTION:Thème: Noël Pokémon\nBudget: 50€\nObjectif: une pièce souvenir durable à garder plusieurs années.
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-geek-box-review-monthly@quentingranger.github.io
+DTSTART:20260915T090000
+RRULE:FREQ=MONTHLY
+SUMMARY:🔔 Vérification stock et prix Pokémon Geek Box
+DESCRIPTION:Vérifier disponibilité, retour en stock, précommandes et meilleures opportunités.
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-geek-box-memory-monthly@quentingranger.github.io
+DTSTART:20260928T090000
+RRULE:FREQ=MONTHLY
+SUMMARY:📸 Journal collection Pokémon
+DESCRIPTION:Prendre une photo de la box, noter le souvenir associé et mettre à jour la mémoire de collection.
 END:VEVENT
 END:VCALENDAR
