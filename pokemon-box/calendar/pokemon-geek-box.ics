@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Pokemon Geek Box Curator//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Pokemon Geek Box
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:pokemon-geek-box-20260901@quentingranger.github.io
+DTSTART:20260901T090000
+DTEND:20260901T093000
+SUMMARY:🎁 Pokémon Geek Box - Évoli Lifestyle
+DESCRIPTION:Box du mois\n\nThème : Évoli Lifestyle\nBudget conseillé : 50€\nObjectif : créer la première pièce émotionnelle de collection.\nCatégories : peluche, figurine, décoration.\nIdée exposition : premier espace Pokémon visible.
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-geek-box-20261001@quentingranger.github.io
+DTSTART:20261001T090000
+DTEND:20261001T093000
+SUMMARY:🎃 Pokémon Geek Box - Halloween Spectre
+DESCRIPTION:Box du mois\n\nThème : Halloween Spectre\nBudget conseillé : 50€\nObjectif : créer une vitrine saisonnière forte.\nIdée exposition : ambiance sombre et lumière violette.
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-geek-box-20261101@quentingranger.github.io
+DTSTART:20261101T090000
+DTEND:20261101T093000
+SUMMARY:🇯🇵 Pokémon Geek Box - Japon Pokémon
+DESCRIPTION:Box du mois\n\nThème : Japon Pokémon\nBudget conseillé : 50€\nObjectif : introduire une pièce japonaise ou Pokémon Center.
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-geek-box-20261201@quentingranger.github.io
+DTSTART:20261201T090000
+DTEND:20261201T093000
+SUMMARY:🎄 Pokémon Geek Box - Noël Pokémon
+DESCRIPTION:Box du mois\n\nThème : Noël Pokémon\nBudget conseillé : 50€\nObjectif : choisir une pièce souvenir durable.
+END:VEVENT
+END:VCALENDAR
