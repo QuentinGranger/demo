@@ -1,19 +1,40 @@
 {
   "name": "Pokemon Geek Box Display Planner",
-  "version": "1.0",
-  "purpose": "Organiser la mise en valeur des objets obtenus dans les box Pokémon mensuelles et créer une collection visuellement cohérente.",
-  "display_rules": {
+  "version": "2.0",
+  "purpose": "Transformer chaque box Pokémon en une expérience visuelle cohérente et aider à construire une collection exposée sur plusieurs années.",
+  "display_philosophy": {
+    "goal": "Créer une vitrine qui raconte une histoire et pas seulement accumuler des objets.",
     "prioritize_exposition": true,
     "create_visual_story": true,
     "adapt_display_to_theme": true,
-    "take_collection_photos": true
+    "protect_collection_value": true
+  },
+  "display_scoring": {
+    "visual_harmony": 5,
+    "theme_coherence": 5,
+    "main_piece_focus": 5,
+    "lighting_quality": 3,
+    "photo_quality": 2
   },
   "monthly_display_process": {
-    "step_1": "Choisir la zone d'exposition adaptée au thème",
-    "step_2": "Ajouter l'objet principal comme pièce centrale",
-    "step_3": "Créer une ambiance avec les objets secondaires",
-    "step_4": "Prendre une photo de la vitrine",
-    "step_5": "Noter les améliorations possibles"
+    "step_1": "Choisir la zone d'exposition adaptée au thème et à la taille des objets.",
+    "step_2": "Placer la pièce principale comme point focal.",
+    "step_3": "Créer une composition avec les objets secondaires.",
+    "step_4": "Adapter couleurs, lumière et accessoires à l'univers Pokémon choisi.",
+    "step_5": "Photographier la nouvelle mise en scène.",
+    "step_6": "Comparer avec les anciennes vitrines et améliorer la collection."
+  },
+  "display_zones": {
+    "main_shelf": "Pièces premium et objets avec le meilleur score.",
+    "seasonal_area": "Décorations temporaires Halloween, Noël, événements.",
+    "japan_corner": "Objets Pokémon Center Japon et import.",
+    "memory_area": "Objets avec forte valeur sentimentale."
+  },
+  "composition_rules": {
+    "main_item_ratio": "60% de l'attention visuelle",
+    "secondary_items_ratio": "30%",
+    "decoration_ratio": "10%",
+    "avoid_overcrowding": true
   },
   "examples": {
     "2027-03": {
@@ -21,37 +42,34 @@
       "main_items": ["Ectoplasma", "Mimiqui"],
       "suggestions": [
         "Mettre Ectoplasma au centre de l'étagère",
-        "Utiliser une décoration sombre ou violette",
-        "Créer une photo de vitrine avant/après",
-        "Ajouter un éclairage doux pour renforcer l'ambiance",
-        "Réorganiser l'étagère pour créer un espace dédié aux Pokémon Spectre"
+        "Créer un fond sombre violet/noir",
+        "Ajouter une lumière douce violette",
+        "Placer Mimiqui comme personnage secondaire",
+        "Prendre une photo avant/après",
+        "Créer une zone Pokémon Spectre permanente si le thème revient"
       ]
     }
   },
-  "display_categories": {
-    "plush": {
-      "rule": "Les peluches deviennent des pièces centrales visibles"
-    },
-    "figures": {
-      "rule": "Créer des scènes avec plusieurs Pokémon liés"
-    },
-    "japanese_items": {
-      "rule": "Mettre en avant l'origine japonaise et l'exclusivité"
-    },
-    "books": {
-      "rule": "Utiliser les livres comme support de décoration"
-    }
+  "category_rules": {
+    "plush": "Utiliser comme pièce centrale visible et créer une composition autour.",
+    "figures": "Créer des scènes narratives entre Pokémon liés.",
+    "japanese_items": "Mettre en avant l'origine japonaise avec une zone dédiée.",
+    "books": "Utiliser comme support vertical ou élément de décor.",
+    "premium_items": "Priorité maximale d'exposition."
   },
-  "collection_growth": {
+  "long_term_collection_management": {
     "avoid_clutter": true,
     "rotate_display": true,
     "seasonal_display": true,
-    "archive_old_displays": true
+    "archive_old_displays": true,
+    "upgrade_display_when_collection_grows": true
   },
   "memory_tracking": {
     "save_photo": true,
     "save_date": true,
     "save_theme": true,
-    "save_favorite_piece": true
+    "save_favorite_piece": true,
+    "save_display_notes": true,
+    "compare_year_to_year": true
   }
 }
