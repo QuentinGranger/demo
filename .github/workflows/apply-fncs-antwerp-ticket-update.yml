@@ -5,6 +5,10 @@ on:
     branches: [master]
     paths:
       - 'scripts/apply_fncs_antwerp_ticket_update.py'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'scripts/apply_fncs_antwerp_ticket_update.py'
 
 permissions:
   contents: write
@@ -15,6 +19,7 @@ concurrency:
 
 jobs:
   reconcile:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
