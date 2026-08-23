@@ -1,0 +1,29 @@
+{
+  "name": "Pokemon Geek Box Purchase History",
+  "version": "1.0",
+  "purpose": "Conserver l'historique des box Pokémon créées pour éviter les répétitions et améliorer les futures recommandations.",
+  "rules": {
+    "avoid_same_theme": true,
+    "avoid_same_main_pokemon": true,
+    "avoid_same_product_category": true,
+    "use_history_for_future_selection": true
+  },
+  "purchased_boxes": {
+    "2026-09": {
+      "theme": "Evoli Lifestyle",
+      "main_pokemon": ["Evoli"],
+      "items": [
+        "peluche",
+        "manga",
+        "figurine"
+      ],
+      "categories": [
+        "plush",
+        "book",
+        "figure"
+      ],
+      "budget": 50,
+      "notes": "Première box : création de l'identité de la collection."
+    }
+  }
+}
