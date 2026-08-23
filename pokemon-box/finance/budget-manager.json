@@ -1,37 +1,42 @@
 {
   "name": "Pokemon Geek Box Budget Manager",
-  "version": "1.0",
-  "purpose": "Gerer un budget de collection Pokemon intelligent sur plusieurs annees.",
+  "version": "2.0",
+  "purpose": "Gerer un budget de collection Pokemon intelligent, evolutif et adapte aux opportunites de collection.",
+  "budget_philosophy": {
+    "priority": "qualite_avant_quantite",
+    "avoid_impulse_buying": true,
+    "protect_long_term_collection": true,
+    "allow_exceptional_purchases": true
+  },
   "base_budget": {
     "normal_month": 50,
     "weak_month": 30,
-    "major_event_month": 100
+    "major_event_month": 100,
+    "premium_reserve": 0
   },
-  "budget_rules": {
-    "prioritize_quality_over_quantity": true,
-    "allow_budget_rollover": true,
-    "avoid_impulse_purchase": true,
-    "save_for_premium_items": true
-  },
-  "month_types": {
+  "month_classification": {
     "normal": {
       "budget": 50,
-      "goal": "Box classique equilibree"
+      "conditions": ["objet_score_moyen", "aucun_evenement_majeur"],
+      "goal": "Box plaisir equilibree"
     },
     "weak": {
       "budget": 30,
-      "goal": "Petit achat plaisir ou economie"
+      "conditions": ["aucune_piece_interessante", "periode_economie"],
+      "goal": "Limiter les achats moyens et economiser"
     },
     "major_event": {
       "budget": 100,
-      "goal": "Piece premium ou evenement important"
+      "conditions": ["Pokemon_Day", "edition_limitee", "piece_premium"],
+      "goal": "Acheter une piece exceptionnelle"
     }
   },
   "rollover_system": {
     "enabled": true,
+    "maximum_saved_months": 12,
     "example": {
       "march": {
-        "available": 50,
+        "budget": 50,
         "spent": 30,
         "saved": 20
       },
@@ -42,19 +47,41 @@
       }
     }
   },
-  "premium_strategy": {
-    "reserve_for_high_score_items": true,
-    "minimum_score_for_saving": 40,
+  "premium_fund": {
+    "enabled": true,
+    "purpose": "Mettre de cote pour les pieces rares au lieu de multiplier les petits achats.",
+    "trigger_score": 40,
     "priority": [
-      "Pokemon Center exclusivity",
-      "Japan exclusive",
-      "rare collector item"
+      "Pokemon Center exclusif",
+      "objet Japon rare",
+      "edition anniversaire",
+      "piece historique"
+    ]
+  },
+  "decision_rules": {
+    "reject_if": [
+      "score_produit_trop_faible",
+      "doublon_collection",
+      "achat_uniquement_pour_depense_budget"
+    ],
+    "approve_if": [
+      "forte_valeur_emotionnelle",
+      "bonne_exposition",
+      "coherent_avec_theme",
+      "bon_score_collection"
     ]
   },
   "tracking": {
     "monthly_spending": true,
     "yearly_total": true,
-    "average_box_value": true,
-    "best_purchase_ratio": true
+    "average_box_cost": true,
+    "premium_savings": true,
+    "best_value_purchase": true,
+    "money_saved_by_waiting": true
+  },
+  "reports": {
+    "monthly_report": true,
+    "yearly_collection_budget_review": true,
+    "suggest_budget_adjustments": true
   }
 }
