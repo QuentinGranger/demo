@@ -1,0 +1,18 @@
+{
+  "version": "FORTNITE_OUTBOX_RECONCILIATION_DELTA_V1",
+  "created_at": "2026-08-24T23:30:24Z",
+  "target_outbox": "calendars/fortnite-notification-outbox-france.json",
+  "status": "PENDING_CANONICAL_MERGE",
+  "automatic_delivery_retry": false,
+  "items": [
+    {
+      "notification_key": "ntf_200a9054577949e861f033cca1f180fe99d5fe8c8579f637472eaf23d9224be1",
+      "intent_id": "nti_e4038b7ea2b56d53d4f2454b",
+      "current_canonical_state": "RESERVED",
+      "reserved_at": "2026-08-24T00:15:37Z",
+      "required_reconciliation_state": "UNKNOWN_DELIVERY",
+      "failure_class": "RESERVED_WITHOUT_SENT_ACK_AFTER_TIMEOUT",
+      "reason": "The reservation is older than the configured 30-minute stale threshold and has no persisted SENT event in the current canonical outbox. The notification key remains consumed and must never be automatically replayed."
+    }
+  ]
+}
