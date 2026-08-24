@@ -193,4 +193,44 @@ DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite
 URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-lego-odyssey-monastery-portal-20260827@openai
+DTSTAMP:20260824T001537Z
+LAST-MODIFIED:20260824T001537Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:LIMITED_TIME_EVENT
+X-FORTNITE-MODE:LEGO_FORTNITE_ODYSSEY
+X-FORTNITE-THEME:MONASTERY
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_news
+X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-CANDIDATE-ID:fortnite-lego-odyssey-monastery-portal-20260827
+X-FORTNITE-LAST-CHANGE-ID:chg_0b7089e1a6cd61e1b57954c2
+X-FORTNITE-FIRST-ADDED-AT:20260824T001537Z
+X-FORTNITE-NEW-UNTIL:20260829T001537Z
+DTSTART;TZID=Europe/Paris:20260827T100000
+DTEND;TZID=Europe/Paris:20260902T100000
+SUMMARY:⭐ ✅ 🆕 🧱 LEGO Fortnite Odyssey — portail du Monastère
+DESCRIPTION:Priorité : ⭐ Important — fenêtre limitée officiellement 
+ publiée par Epic.\nDu 27 août 2026 à 10h00 au 2 septembre 2026 à 10h00
+  heure de Paris, le portail du Monastère rouvre dans LEGO Fortnite Odysse
+ y.\nÉliminer le Shatter Spawn permet d’obtenir quatre récompenses dor
+ ées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shuriken
+ s of ICE.\nAucune autre condition, quota ou rareté n’est déduite.\nSou
+ rce : https://www.fortnite.com/@epic/lego-fortnite-odyssey
+URL:https://www.fortnite.com/@epic/lego-fortnite-odyssey
+CATEGORIES:Fortnite,LEGO Fortnite Odyssey,Événement limité,Monastère,R
+ écompenses
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée 
+ LEGO Fortnite Odyssey
+END:VALARM
+END:VEVENT
 END:VCALENDAR
