@@ -1,6 +1,6 @@
 {
   "version": "OFFICIAL_SOURCE_REGISTRY_FR_V3",
-  "updated_at": "2026-08-22T01:54:24Z",
+  "updated_at": "2026-08-24T01:59:44Z",
   "scope": "Harry Potter / Wizarding World — France, priorité Paris/Île-de-France",
   "linked_files": {
     "candidate_queue": "harry-potter-watchlist-france.json",
@@ -84,7 +84,9 @@
     ],
     "LOCAL_PARIS_EVENT": [
       "grand-rex",
-      "warner-fr"
+      "warner-fr",
+      "retourapoudlard-fr",
+      "chateau-versailles-spectacles"
     ],
     "CINEMA_NETWORK_FR": [
       "pathe-fr",
@@ -190,7 +192,9 @@
     "paris_idf": {
       "primary": [
         "warner-fr",
-        "grand-rex"
+        "grand-rex",
+        "retourapoudlard-fr",
+        "chateau-versailles-spectacles"
       ],
       "fallback": [
         "harrypotter-official"
@@ -915,6 +919,76 @@
       "priority": 1,
       "cadence": "EVENT_DRIVEN",
       "last_verified_at": "2026-08-22T01:54:24Z"
+    },
+    {
+      "source_id": "retourapoudlard-fr",
+      "name": "Retour à Poudlard France / Warner Bros. Discovery France",
+      "authority": "ORGANIZER_DIRECT",
+      "evidence_grade": "A",
+      "territory": "LOCAL_FR",
+      "url": "https://www.retourapoudlard.com/",
+      "domains": [
+        "back_to_hogwarts",
+        "activations_fr",
+        "paris_idf"
+      ],
+      "expected_information": [
+        "date locale",
+        "sessions",
+        "inscription",
+        "conditions d'accès",
+        "entrée dédiée"
+      ],
+      "can_confirm": [
+        "FR_ACTIVATION_DATE",
+        "FR_LOCAL_EVENT_TIME",
+        "REGISTRATION_RULES",
+        "ACCESS_RULES",
+        "LOCAL_LOCATION"
+      ],
+      "cannot_confirm": [
+        "EVENING_TICKET_STATUS hors FAQ officielle",
+        "OTHER_FR_EVENT"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "EVENT_DRIVEN",
+      "last_verified_at": "2026-08-24T01:59:44Z"
+    },
+    {
+      "source_id": "chateau-versailles-spectacles",
+      "name": "Château de Versailles Spectacles",
+      "authority": "ORGANIZER_DIRECT",
+      "evidence_grade": "A",
+      "territory": "LOCAL_FR",
+      "url": "https://www.chateauversailles-spectacles.fr/",
+      "domains": [
+        "paris_idf",
+        "live_events",
+        "ticketing"
+      ],
+      "expected_information": [
+        "date locale",
+        "horaire",
+        "lieu",
+        "billetterie",
+        "statut de vente"
+      ],
+      "can_confirm": [
+        "FR_LOCAL_EVENT_TIME",
+        "LOCAL_LOCATION",
+        "FR_TICKET_STATUS",
+        "LOCAL_TICKET_URL",
+        "LOCAL_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "OTHER_VENUE_STATUS",
+        "NATIONAL_FRANCHISE_STATUS"
+      ],
+      "status": "ACTIVE",
+      "priority": 1,
+      "cadence": "EVENT_DRIVEN",
+      "last_verified_at": "2026-08-24T01:59:44Z"
     }
   ],
   "discovery_relays": [

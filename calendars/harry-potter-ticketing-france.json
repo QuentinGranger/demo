@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-22T01:54:24Z",
+  "updated_at": "2026-08-24T01:59:44Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -461,6 +461,81 @@
           "transition": "SALE_OPENED",
           "source_id": "droneart-harry-potter-paris",
           "note": "Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."
+        }
+      ]
+    },
+    {
+      "event_uid": "hp-back-to-hogwarts-versailles-20260829@openai",
+      "title": "Retour à Poudlard 2026 — Château de Versailles",
+      "city": "Versailles",
+      "provider": "Retour à Poudlard / Warner Bros. Discovery France",
+      "provider_id": "retourapoudlard-fr",
+      "source_id": "retourapoudlard-fr",
+      "ticket_url": "https://www.retourapoudlard.com/",
+      "status": "ON_SALE",
+      "status_origin": "DIRECT_VERIFIED",
+      "evidence_grade": "A",
+      "confidence": "HIGH",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "HOT",
+      "last_verified_at": "2026-08-24T01:59:44Z",
+      "last_changed_at": "2026-08-24T01:59:44Z",
+      "price_min_eur": 0.0,
+      "price_max_eur": 0.0,
+      "session_states": [
+        {
+          "session_key": "2026-08-29T09:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-08-29T13:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-08-29T17:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "verification_notes": "Inscription gratuite obligatoire sur le site officiel ; accès à chaque session uniquement pendant la première heure. L'ouverture du flux d'inscription est confirmée, mais aucune quantité restante n'est inférée.",
+      "history": []
+    },
+    {
+      "event_uid": "hp-grandes-eaux-harry-potter-versailles-20260829@openai",
+      "title": "Grandes Eaux Nocturnes — Harry Potter Retour à Poudlard — Versailles",
+      "city": "Versailles",
+      "provider": "Château de Versailles Spectacles",
+      "provider_id": "chateau-versailles-spectacles",
+      "source_id": "chateau-versailles-spectacles",
+      "ticket_url": "https://www.chateauversailles-spectacles.fr/evenement/les-grandes-eaux-nocturnes-harry-potter-retour-a-poudlard/",
+      "status": "SOLD_OUT",
+      "status_origin": "DIRECT_VERIFIED",
+      "evidence_grade": "A",
+      "confidence": "HIGH",
+      "scarcity_evidence": "EXPLICIT_TEXT",
+      "check_tier": "HOT",
+      "last_verified_at": "2026-08-24T01:59:44Z",
+      "last_changed_at": "2026-08-24T01:59:44Z",
+      "session_states": [
+        {
+          "session_key": "2026-08-29T20:30-Europe-Paris",
+          "status": "SOLD_OUT",
+          "confidence": "HIGH",
+          "scarcity_evidence": "EXPLICIT_TEXT",
+          "category_states": []
+        }
+      ],
+      "verification_notes": "La FAQ officielle Retour à Poudlard indique explicitement que les Grandes Eaux Nocturnes Retour à Poudlard sont complètes.",
+      "history": [
+        {
+          "at": "2026-08-24T01:59:44Z",
+          "transition": "SOLD_OUT",
+          "note": "État complet confirmé lors de l'enrôlement initial."
         }
       ]
     }

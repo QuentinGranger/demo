@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_PROVIDER_REGISTRY_FR_V1",
-  "updated_at": "2026-08-22T01:54:24Z",
+  "updated_at": "2026-08-24T01:59:44Z",
   "scope": "Harry Potter / Wizarding World — providers de billetterie France",
   "policy": {
     "identity": "provider_id canonique et immuable ; changement d'URL ou de prestataire technique ne crée pas un nouveau provider si l'organisateur/salle responsable reste le même.",
@@ -109,6 +109,49 @@
         "SECONDARY_RESALE_STATUS"
       ],
       "linked_source_id": "droneart-harry-potter-paris"
+    },
+    {
+      "provider_id": "retourapoudlard-fr",
+      "name": "Retour à Poudlard France / Warner Bros. Discovery France",
+      "authority": "ORGANIZER_DIRECT",
+      "territory": "Versailles / Île-de-France",
+      "status": "ACTIVE",
+      "primary_url": "https://www.retourapoudlard.com/",
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "SESSION_LIST",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "ACCESS_RULES",
+        "LOCAL_LOCATION"
+      ],
+      "cannot_confirm": [
+        "OTHER_EVENT_STATUS",
+        "SECONDARY_RESALE_STATUS"
+      ],
+      "linked_source_id": "retourapoudlard-fr"
+    },
+    {
+      "provider_id": "chateau-versailles-spectacles",
+      "name": "Château de Versailles Spectacles",
+      "authority": "ORGANIZER_DIRECT",
+      "territory": "Versailles / Île-de-France",
+      "status": "ACTIVE",
+      "primary_url": "https://www.chateauversailles-spectacles.fr/",
+      "can_confirm": [
+        "LOCAL_EVENT_DATE",
+        "LOCAL_EVENT_TIME",
+        "TICKET_URL",
+        "TICKET_STATUS",
+        "LOCAL_TICKET_PRICE",
+        "LOCAL_CANCELLATION"
+      ],
+      "cannot_confirm": [
+        "OTHER_VENUE_STATUS",
+        "SECONDARY_RESALE_STATUS"
+      ],
+      "linked_source_id": "chateau-versailles-spectacles"
     }
   ]
 }
