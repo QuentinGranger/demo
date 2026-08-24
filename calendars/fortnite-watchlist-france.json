@@ -1,1 +1,91 @@
-{"version":"FORTNITE_CANDIDATE_QUEUE_FR_V1","updated_at":"2026-08-24T00:15:37Z","scope":"Fortnite — France et Europe pertinente","states":["WATCHING","SIGNAL_FOUND","READY","CALENDAR_ADDED","RESOLVED","REJECTED"],"calendar_threshold":"Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.","candidates":[{"candidate_id":"fortnite-next-br-season-end-summer-2026","state":"SIGNAL_FOUND","topic":"Chapitre 7 Saison 4 — Override / heure de lancement jouable","source_ids":["fortnite_news","fortnite_battle_pass","epic_status"],"known":"Fortnite News identifie officiellement Chapter 7 Season 4: Override le 20 août 2026. La page Battle Pass identifie également Override / Chapter 7 Season 4 et affiche le Passe de combat comme disponible, avec une fin le 1er novembre 2026 en heure de l'Est. Epic Status confirme séparément la maintenance v42.00 du 20 août, mais aucune source autorisée lue ne relie explicitement son heure de fin à l'heure de lancement jouable de C7S4.","missing_for_calendar":["NEXT_SEASON_PLAYABLE_START_EXACT_TIME_OR_EXPLICIT_LAUNCH_WINDOW"],"promotion_rule":"L'identité C7S4 Override et les échéances explicitement publiées sont déjà matérialisées dans le lifecycle/calendrier. Conserver cette watch pour l'heure de lancement jouable seulement ; ne jamais la déduire de la maintenance ou de la disponibilité du Battle Pass.","related_calendar_uid":"fortnite-c7s4-override-battle-pass-end-20261101@openai"},{"candidate_id":"fortnite-fncs-solos-october-2026","state":"SIGNAL_FOUND","topic":"Tournoi solo FNCS indépendant — octobre 2026","source_ids":["fortnite_competitive"],"known":"Fortnite Competitive confirme un tournoi solo FNCS indépendant en octobre 2026.","missing_for_calendar":["EXACT_DATE","FORMAT_DETAILS","REGIONAL_SCHEDULE"],"promotion_rule":"Passer READY dès que le calendrier officiel EU publie au moins une date exploitable."},{"candidate_id":"fortnite-reload-elite-ewc-paris-2026","state":"CALENDAR_ADDED","topic":"Reload Elite Series Championship — Esports World Cup 2026 — Paris","source_ids":["fortnite_competitive","ewc_official"],"known":"État canonique actuel : Reload Elite Series Championship à Paris du 19 au 22 août 2026. Le registre physique identifie Paris Expo Porte de Versailles comme site EWC 2026, sans hall/stage/entrée Fortnite spécifique publié. La page EWC Paris suivie ne confirme actuellement qu'une préinscription d'intérêt ; les anciens billets Riyad 219/471 SAR sont conservés uniquement comme historique de source contradictoire et ne sont plus traités comme inventaire actif du Championship de Paris.","missing_for_calendar":["RELIABLE_MATCH_SESSION_TIMES","FORTNITE_SPECIFIC_HALL_STAGE_OR_ENTRANCE","DETAILED_ONSITE_ACCESS_RULES","FORTNITE_SPECIFIC_TICKET_ONSALE_IF_PUBLISHED"],"promotion_rule":"Déjà promu : conserver le même UID stable et enrichir/corriger la même fiche selon les ledgers physical/access/ticketing. Les identifiants techniques historiques contenant 'paris' restent stables.","related_calendar_uid":"fortnite-reload-elite-ewc-paris-20260819@openai","promoted_at":"2026-08-19T07:12:31Z","ticketing":{"status":"PREREGISTRATION","scope":"EWC_PARIS_GENERAL","url":"https://www.signup.esportsworldcup.com/EWCPARIS26","source_id":"ewc_official","verified_at":"2026-08-19T21:03:30Z","fortnite_specific_ticket_info":false,"categories":[]}},{"candidate_id":"fortnite-lego-odyssey-monastery-portal-20260827","state":"CALENDAR_ADDED","topic":"LEGO Fortnite Odyssey — réouverture du portail du Monastère","source_ids":["fortnite_news"],"known":"Epic confirme le portail du Monastère dans LEGO Fortnite Odyssey du 27 août 2026 à 04:00 ET au 2 septembre 2026 à 04:00 ET, soit du 27 août 10:00 au 2 septembre 10:00 à Paris. Vaincre le Shatter Spawn donne quatre récompenses dorées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shurikens of ICE.","missing_for_calendar":[],"promotion_rule":"READY depuis une publication Epic datée et actionnable. Ne passer CALENDAR_ADDED qu'après présence vérifiée du même UID dans le spécialiste updates puis dans le global synchronisé, avec change ledger cohérent.","related_calendar_uid":"fortnite-lego-odyssey-monastery-portal-20260827@openai","promoted_at":"2026-08-24T00:15:37Z"},{"candidate_id":"fortnite-next-live-event","state":"WATCHING","topic":"Prochain événement live Battle Royale","source_ids":["fortnite_news"],"known":null,"missing_for_calendar":["OFFICIAL_ANNOUNCEMENT","DATE","TIME"],"promotion_rule":"Ne jamais créer depuis rumeur/leak ; exiger annonce Fortnite officielle."},{"candidate_id":"fortnite-festival-season-15-end-next-season","state":"WATCHING","topic":"Fin Saison 15 Fortnite Festival / prochaine icône","source_ids":["fortnite_news"],"known":"La Saison 15 de Festival avec Lil Tecca a été annoncée le 27 juillet 2026.","missing_for_calendar":["OFFICIAL_END_DATE_OR_NEXT_SEASON_DATE"],"promotion_rule":"Créer une fiche seulement si une date de changement de saison est publiée."}]}
+{
+  "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
+  "updated_at": "2026-08-24T04:05:42Z",
+  "scope": "Fortnite — France et Europe pertinente",
+  "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
+  "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
+  "candidates": [
+    {
+      "candidate_id": "fortnite-next-br-season-end-summer-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Chapitre 7 Saison 4 — Override / heure de lancement jouable",
+      "source_ids": ["fortnite_news", "fortnite_battle_pass", "epic_status"],
+      "known": "Fortnite News identifie officiellement Chapter 7 Season 4: Override le 20 août 2026. La page Battle Pass identifie également Override / Chapter 7 Season 4 et affiche le Passe de combat comme disponible, avec une fin le 1er novembre 2026 en heure de l'Est. Epic Status confirme séparément la maintenance v42.00 du 20 août, mais aucune source autorisée lue ne relie explicitement son heure de fin à l'heure de lancement jouable de C7S4.",
+      "missing_for_calendar": ["NEXT_SEASON_PLAYABLE_START_EXACT_TIME_OR_EXPLICIT_LAUNCH_WINDOW"],
+      "promotion_rule": "L'identité C7S4 Override et les échéances explicitement publiées sont déjà matérialisées dans le lifecycle/calendrier. Conserver cette watch pour l'heure de lancement jouable seulement ; ne jamais la déduire de la maintenance ou de la disponibilité du Battle Pass.",
+      "related_calendar_uid": "fortnite-c7s4-override-battle-pass-end-20261101@openai"
+    },
+    {
+      "candidate_id": "fortnite-fncs-solos-october-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Tournoi solo FNCS indépendant — octobre 2026",
+      "source_ids": ["fortnite_competitive"],
+      "known": "Fortnite Competitive confirme un tournoi solo FNCS indépendant en octobre 2026.",
+      "missing_for_calendar": ["EXACT_DATE", "FORMAT_DETAILS", "REGIONAL_SCHEDULE"],
+      "promotion_rule": "Passer READY dès que le calendrier officiel EU publie au moins une date exploitable."
+    },
+    {
+      "candidate_id": "fortnite-override-series-eu-2026",
+      "state": "SIGNAL_FOUND",
+      "topic": "Override Series — Europe — Chapitre 7 Saison 4",
+      "source_ids": ["fortnite_competitive"],
+      "known": "Fortnite Competitive publie des pages officielles Override Series pour l'Europe, en Duos Battle Royale. Une première occurrence EU est datée du 28 août 2026 ; d'autres pages officielles EU sont déjà visibles pour le 8 septembre et le 19 septembre 2026. Les pages indiquent encore « Details Coming Soon » et confirment seulement les exigences générales d'âge minimum 13 ans (ou minimum local) et MFA. Aucun horaire EU exact, prize pool, structure de qualification ou conséquence majeure exploitable n'est encore établi dans les sources lues.",
+      "missing_for_calendar": ["EXACT_EU_SESSION_TIME", "MATERIAL_PRIZE_OR_QUALIFICATION_DETAILS", "ACTIONABLE_REGISTRATION_OR_CHECK_IN_DEADLINE_IF_ANY"],
+      "promotion_rule": "Ingestion compétitive ledger-only autorisée dès identification stable de chaque occurrence officielle. Ne créer un VEVENT visible que si l'horaire/action ou l'importance publiée apporte une vraie valeur de planification ; ne jamais importer l'horaire d'une autre région.",
+      "official_event_urls": [
+        "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep8/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep19/?region=EU"
+      ]
+    },
+    {
+      "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
+      "state": "CALENDAR_ADDED",
+      "topic": "Reload Elite Series Championship — Esports World Cup 2026 — Paris",
+      "source_ids": ["fortnite_competitive", "ewc_official"],
+      "known": "État canonique actuel : Reload Elite Series Championship à Paris du 19 au 22 août 2026. Le registre physique identifie Paris Expo Porte de Versailles comme site EWC 2026, sans hall/stage/entrée Fortnite spécifique publié. La page EWC Paris suivie ne confirme actuellement qu'une préinscription d'intérêt ; les anciens billets Riyad 219/471 SAR sont conservés uniquement comme historique de source contradictoire et ne sont plus traités comme inventaire actif du Championship de Paris.",
+      "missing_for_calendar": ["RELIABLE_MATCH_SESSION_TIMES", "FORTNITE_SPECIFIC_HALL_STAGE_OR_ENTRANCE", "DETAILED_ONSITE_ACCESS_RULES", "FORTNITE_SPECIFIC_TICKET_ONSALE_IF_PUBLISHED"],
+      "promotion_rule": "Déjà promu : conserver le même UID stable et enrichir/corriger la même fiche selon les ledgers physical/access/ticketing. Les identifiants techniques historiques contenant 'paris' restent stables.",
+      "related_calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+      "promoted_at": "2026-08-19T07:12:31Z",
+      "ticketing": {
+        "status": "PREREGISTRATION",
+        "scope": "EWC_PARIS_GENERAL",
+        "url": "https://www.signup.esportsworldcup.com/EWCPARIS26",
+        "source_id": "ewc_official",
+        "verified_at": "2026-08-19T21:03:30Z",
+        "fortnite_specific_ticket_info": false,
+        "categories": []
+      }
+    },
+    {
+      "candidate_id": "fortnite-lego-odyssey-monastery-portal-20260827",
+      "state": "CALENDAR_ADDED",
+      "topic": "LEGO Fortnite Odyssey — réouverture du portail du Monastère",
+      "source_ids": ["fortnite_news"],
+      "known": "Epic confirme le portail du Monastère dans LEGO Fortnite Odyssey du 27 août 2026 à 04:00 ET au 2 septembre 2026 à 04:00 ET, soit du 27 août 10:00 au 2 septembre 10:00 à Paris. Vaincre le Shatter Spawn donne quatre récompenses dorées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shurikens of ICE.",
+      "missing_for_calendar": [],
+      "promotion_rule": "READY depuis une publication Epic datée et actionnable. Ne passer CALENDAR_ADDED qu'après présence vérifiée du même UID dans le spécialiste updates puis dans le global synchronisé, avec change ledger cohérent.",
+      "related_calendar_uid": "fortnite-lego-odyssey-monastery-portal-20260827@openai",
+      "promoted_at": "2026-08-24T00:15:37Z"
+    },
+    {
+      "candidate_id": "fortnite-next-live-event",
+      "state": "WATCHING",
+      "topic": "Prochain événement live Battle Royale",
+      "source_ids": ["fortnite_news"],
+      "known": null,
+      "missing_for_calendar": ["OFFICIAL_ANNOUNCEMENT", "DATE", "TIME"],
+      "promotion_rule": "Ne jamais créer depuis rumeur/leak ; exiger annonce Fortnite officielle."
+    },
+    {
+      "candidate_id": "fortnite-festival-season-15-end-next-season",
+      "state": "WATCHING",
+      "topic": "Fin Saison 15 Fortnite Festival / prochaine icône",
+      "source_ids": ["fortnite_news"],
+      "known": "La Saison 15 de Festival avec Lil Tecca a été annoncée le 27 juillet 2026.",
+      "missing_for_calendar": ["OFFICIAL_END_DATE_OR_NEXT_SEASON_DATE"],
+      "promotion_rule": "Créer une fiche seulement si une date de changement de saison est publiée."
+    }
+  ]
+}
