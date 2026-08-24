@@ -1,0 +1,85 @@
+{
+  "version": "FORTNITE_COMPETITIVE_INGEST_DELTA_EU_V1",
+  "created_at": "2026-08-24T23:30:24Z",
+  "target_ledger": "calendars/fortnite-competitive-ledger-france.json",
+  "source_id": "fortnite_competitive",
+  "source_url": "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+  "status": "PENDING_CANONICAL_MERGE",
+  "notification_disposition": "SILENT_POLICY",
+  "calendar_projection": "NONE",
+  "reason": "Official EU schedule exposes routine Aug 25 sessions not present in the current canonical competitive ledger. They are retained as ledger-only ingestion data; no user-facing alert or VEVENT is warranted under the existing projection policy.",
+  "sessions": [
+    {
+      "stable_subject_key": "fncs-division-1-practice-eu-20260825",
+      "competition_class": "FNCS",
+      "name": "Entraînement Division 1 FNCS",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "WEEK_2_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    },
+    {
+      "stable_subject_key": "solo-reload-ranked-cup-br-eu-20260825",
+      "competition_class": "RANKED_CUP",
+      "name": "Coupe classée Recharge solo (Battle Royale)",
+      "region": "EU",
+      "ruleset": "RELOAD",
+      "team_format": "SOLOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "SESSION_1_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    },
+    {
+      "stable_subject_key": "solo-reload-ranked-cup-zb-eu-20260825",
+      "competition_class": "RANKED_CUP",
+      "name": "Coupe classée Recharge solo (Zéro construction)",
+      "region": "EU",
+      "ruleset": "ZERO_BUILD",
+      "team_format": "SOLOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "SESSION_1_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    },
+    {
+      "stable_subject_key": "fncs-division-2-practice-eu-20260825",
+      "competition_class": "FNCS",
+      "name": "Entraînement Division 2 FNCS",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "WEEK_2_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    },
+    {
+      "stable_subject_key": "fncs-division-3-practice-eu-20260825",
+      "competition_class": "FNCS",
+      "name": "Entraînement Division 3 FNCS",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "WEEK_2_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    },
+    {
+      "stable_subject_key": "fncs-division-4-practice-eu-20260825",
+      "competition_class": "FNCS",
+      "name": "Entraînement Division 4 FNCS",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "start_at": "2026-08-25T17:00:00+02:00",
+      "end_at": "2026-08-25T20:00:00+02:00",
+      "round_label": "WEEK_2_ROUND_1",
+      "visibility": "LEDGER_ONLY"
+    }
+  ]
+}
