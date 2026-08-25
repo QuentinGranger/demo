@@ -1,6 +1,6 @@
 {
   "version": "CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-19T04:21:00Z",
+  "updated_at": "2026-08-25T01:56:07Z",
   "scope": "Harry Potter / Wizarding World — candidats non encore calendrables pour la France",
   "states": {
     "WATCHING": "Sujet surveillé ; seuil calendrier non atteint.",
@@ -23,12 +23,12 @@
       "candidate_id": "hp-hbo-series-fr-premiere",
       "subject": "Série Harry Potter HBO — date exacte de première en France",
       "category": "STREAMING_SERIES",
-      "status": "WATCHING",
+      "status": "SIGNAL_FOUND",
       "priority": "HIGH",
       "source_ids": ["wbd-press-hp", "max-fr", "harrypotter-official"],
       "promotion_requirements": ["date ou fenêtre France officiellement exploitable", "disponibilité France confirmée"],
-      "last_signal_at": null,
-      "last_checked_at": null,
+      "last_signal_at": "2026-08-25T01:56:07Z",
+      "last_checked_at": "2026-08-25T01:56:07Z",
       "calendar_uid": null
     },
     {
