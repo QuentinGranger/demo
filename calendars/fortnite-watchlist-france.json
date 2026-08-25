@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-24T15:12:28Z",
+  "updated_at": "2026-08-25T00:46:36Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -29,9 +29,9 @@
       "state": "SIGNAL_FOUND",
       "topic": "Override Series — Europe — Chapitre 7 Saison 4",
       "source_ids": ["fortnite_competitive"],
-      "known": "Fortnite Competitive publie des pages officielles Override Series pour l'Europe, en Duos Battle Royale. Des occurrences EU sont maintenant confirmées aux dates du 28 août, 8 septembre, 18 septembre, 19 septembre et 25 septembre 2026. Les pages indiquent encore « Details Coming Soon » et confirment seulement les exigences générales d'âge minimum 13 ans (ou minimum local) et MFA. Aucun horaire EU exact, prize pool, structure de qualification ou conséquence majeure exploitable n'est encore établi dans les sources lues.",
-      "missing_for_calendar": ["EXACT_EU_SESSION_TIME", "MATERIAL_PRIZE_OR_QUALIFICATION_DETAILS", "ACTIONABLE_REGISTRATION_OR_CHECK_IN_DEADLINE_IF_ANY"],
-      "promotion_rule": "Ingestion compétitive ledger-only autorisée dès identification stable de chaque occurrence officielle. Ne créer un VEVENT visible que si l'horaire/action ou l'importance publiée apporte une vraie valeur de planification ; ne jamais importer l'horaire d'une autre région.",
+      "known": "Fortnite Competitive publie des pages officielles Override Series pour l'Europe, en Duos Battle Royale. Des occurrences EU sont confirmées aux dates du 28 août, 8 septembre, 18 septembre, 19 septembre et 25 septembre 2026. Le calendrier officiel EU expose désormais une fenêtre exacte pour l'occurrence du 28 août : 17:00–20:00 heure de Paris. Les pages indiquent encore « Details Coming Soon » et confirment seulement les exigences générales d'âge minimum 13 ans (ou minimum local) et MFA. Aucun prize pool, structure de qualification, deadline d'inscription/check-in ou conséquence majeure exploitable n'est encore établi dans les sources lues ; les horaires exacts des autres occurrences restent à confirmer individuellement.",
+      "missing_for_calendar": ["MATERIAL_PRIZE_OR_QUALIFICATION_DETAILS", "ACTIONABLE_REGISTRATION_OR_CHECK_IN_DEADLINE_IF_ANY", "EXACT_EU_SESSION_TIMES_FOR_REMAINING_OCCURRENCES"],
+      "promotion_rule": "Ingestion compétitive ledger-only autorisée dès identification stable de chaque occurrence officielle. Ne créer un VEVENT visible que si l'horaire/action ET le niveau d'importance publié apportent une vraie valeur de planification ; un horaire exact seul, avec Details Coming Soon et sans enjeu matériel publié, reste ledger/watchlist-only pour éviter le bazar.",
       "official_event_urls": [
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep8/?region=EU",
