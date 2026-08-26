@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-26T17:11:11Z",
+  "updated_at": "2026-08-25T00:46:36Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -38,19 +38,6 @@
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep18/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep19/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep25/?region=EU"
-      ]
-    },
-    {
-      "candidate_id": "fortnite-arenas-test-cup-eu-2026",
-      "state": "SIGNAL_FOUND",
-      "topic": "Arenas Test Cup — Europe — Chapitre 7 Saison 4",
-      "source_ids": ["fortnite_competitive"],
-      "known": "Fortnite Competitive publie officiellement l'Arenas Test Cup pour l'Europe sur une fenêtre du 27 août au 4 septembre 2026. Le calendrier EU confirme au moins une session exacte le 27 août de 17:00 à 18:30 heure de Paris. La page événement précise qu'il s'agit d'un tournoi de test sans récompense, avec âge minimum 13 ans (ou minimum local) et MFA obligatoire.",
-      "missing_for_calendar": ["COMPLETE_EU_SESSION_SCHEDULE_IF_ADDITIONAL_SESSIONS", "MATERIAL_PRIZE_OR_QUALIFICATION_VALUE"],
-      "promotion_rule": "Conserver hors calendrier visible : TEST_CUP sans récompense ni enjeu de qualification publié. Ingestion ledger-only dès que les sessions EU exactes sont suffisamment complètes et stables ; ne jamais promouvoir un simple test de faible enjeu uniquement parce qu'une heure est publiée.",
-      "official_event_urls": [
-        "https://www.fortnite.com/competitive/events/S42_ArenaTestCup/?region=EU",
-        "https://www.fortnite.com/competitive/events/S42_ArenaTestCup/schedule?region=EU"
       ]
     },
     {
