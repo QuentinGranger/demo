@@ -1,10 +1,10 @@
 {
   "version": "FORTNITE_OFFICIAL_SOURCE_REGISTRY_FR_V1",
-  "updated_at": "2026-08-19T14:22:00Z",
+  "updated_at": "2026-08-26T00:07:00Z",
   "scope": "Fortnite — France et Europe pertinente",
   "principles": {
     "authority_by_field": "Une source n'est autorisée à confirmer que les champs de son périmètre.",
-    "france_guard": "Une annonce globale n'établit pas automatiquement une disponibilité ou un horaire France.",
+    "france_guard": "Une annonce globale n'établlit pas automatiquement une disponibilité ou un horaire France.",
     "season_pass_engine_v2": "Le lifecycle saison/pass conserve les faits canoniques ; le moteur V2 distingue achat, progression, quêtes, claim, Ranked et handoff sans inférer une fenêtre depuis une autre.",
     "pass_window_guard": "Un PASS_END_DATE ne confirme jamais automatiquement PURCHASE_CLOSE, PROGRESSION_END, QUEST_END ou CLAIM_END ; chaque fenêtre exige un wording officiel adapté.",
     "lore_claim_graph_v2": "Le registre lore V1 conserve les entités stables ; FORTNITE_LORE_KNOWLEDGE_GRAPH_FR_V2 conserve les nouveaux faits sous forme de claims scopés, sourcés et corrigeables.",
@@ -16,6 +16,7 @@
     "participant_outcome_guard": "Un outcome ADVANCED/QUALIFIED/ELIMINATED_PATH/ELIMINATED_EVENT pour un joueur ou roster précis exige une preuve de résultat/standings officielle suffisante ; l'absence d'un nom ou d'une page ne suffit jamais.",
     "status_primary": "Epic Games Status est la source primaire pour incidents, maintenance, impact technique et rétablissement réellement publiés.",
     "service_link_guard": "Epic Status confirme l'état technique mais ne relie une maintenance à une saison, un patch ou un live event que si cette relation est explicitement publiée ou corroborée par une source Fortnite autorisée.",
+    "item_shop_direct_guard": "Une page produit officielle Fortnite Item Shop peut confirmer l'identité, le prix V-Bucks affiché, l'état d'achat courant et une date/heure de fin explicitement publiée pour CETTE offre exacte. Ne jamais généraliser cette fenêtre à toute la boutique ni déduire un futur retour après expiration.",
     "no_social_only": "Un post social sert au signal ; rechercher la page officielle correspondante dès qu'elle existe."
   },
   "sources": [
@@ -42,6 +43,19 @@
       "domains": ["BATTLE_PASS", "SEASON_IDENTITY", "BATTLE_PASS_END_DATE", "PASS_WINDOWS_IF_EXPLICIT"],
       "can_confirm": ["CHAPTER", "SEASON", "SEASON_NAME", "BATTLE_PASS_END_DATE", "PASS_START_IF_EXPLICIT", "PASS_PURCHASE_WINDOW_IF_EXPLICIT", "PASS_PROGRESSION_WINDOW_IF_EXPLICIT", "QUEST_WINDOW_IF_EXPLICIT", "PASS_CLAIM_WINDOW_IF_EXPLICIT", "BONUS_CLAIM_WINDOW_IF_EXPLICIT", "SOURCE_TIMEZONE_IF_PUBLISHED"],
       "cannot_confirm": ["NEXT_SEASON_START_TIME", "FRANCE_LOCAL_TIME_WITHOUT_EXPLICIT_TIME", "SERVICE_STATE", "PASS_PROGRESSION_END_FROM_GENERIC_END_ONLY", "PASS_CLAIM_END_FROM_GENERIC_END_ONLY", "RANK_RESET_WITHOUT_EXPLICIT_TEXT"],
+      "priority": 1,
+      "status": "ACTIVE"
+    },
+    {
+      "source_id": "fortnite_item_shop",
+      "name": "Fortnite Item Shop — official offer pages",
+      "url": "https://www.fortnite.com/item-shop",
+      "authority": "PRIMARY_PRODUCT_PAGE",
+      "evidence_grade": "A",
+      "territory": "GLOBAL_WITH_EXPLICIT_SOURCE_TIMEZONE",
+      "domains": ["ITEM_SHOP", "COLLABS", "COSMETIC_OFFERS", "SHOP_DEADLINES"],
+      "can_confirm": ["OFFER_IDENTITY", "CURRENT_PURCHASE_AVAILABILITY", "VBUCKS_PRICE_IF_PUBLISHED", "OFFER_END_TIME_IF_PUBLISHED", "INCLUDED_ITEMS_IF_PUBLISHED", "COLLAB_RELATION_IF_EXPLICIT"],
+      "cannot_confirm": ["FUTURE_RETURN_AFTER_EXPIRY", "UNPUBLISHED_NEXT_ROTATION", "GLOBAL_SHOP_END_FROM_ONE_OFFER", "REGIONAL_PRICE_NOT_EXPLICITLY_PUBLISHED", "RARITY_OR_SCARCITY_FROM_TIME_REMAINING_ALONE"],
       "priority": 1,
       "status": "ACTIVE"
     },
