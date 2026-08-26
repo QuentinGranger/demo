@@ -1,0 +1,33 @@
+name: Apply Pokémon global sync 2026-08-26
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/apply-pokemon-global-sync-20260826.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synchronize global Pokémon calendar
+        run: python scripts/sync_pokemon_global.py
+      - name: Commit synchronized global and remove one-shot workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -f .github/workflows/apply-pokemon-global-sync-20260826.yml
+          git add calendars/pokemon-paris.ics
+          git commit -m 'Sync Pokémon global calendar after PokémonXP update'
+          git push origin HEAD:master
