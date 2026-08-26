@@ -32,7 +32,28 @@
     "Billetterie Harry Potter France": "HEALTHY"
   },
   "active_incidents": [],
-  "incident_history": [],
+  "incident_history": [
+    {
+      "incident_id": "health-fortnite-competitive-validation-20260826-open",
+      "incident_key": "health|FORTNITE|FRANCHISE_VALIDATION_FAILED|validate-fortnite-competitive",
+      "state": "OPEN",
+      "code": "FRANCHISE_VALIDATION_FAILED",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "at": "2026-08-26T01:15:00Z",
+      "evidence": "GitHub Actions run 32914040096 failed: competitive index stale/missing current ledger entities and validator expected the pre-V3 deadline policy block name."
+    },
+    {
+      "incident_id": "health-fortnite-competitive-validation-20260826-recovered",
+      "incident_key": "health|FORTNITE|FRANCHISE_VALIDATION_FAILED|validate-fortnite-competitive",
+      "state": "RECOVERED",
+      "code": "FRANCHISE_VALIDATION_FAILED",
+      "franchise": "FORTNITE",
+      "severity": "HEALTHY",
+      "at": "2026-08-26T01:19:27Z",
+      "evidence": "Competitive index rebuilt from current ledger and validator aligned with Deadline Intelligence V3; GitHub Actions run 32918528390 completed successfully."
+    }
+  ],
   "history": [
     {
       "at": "2026-08-19T16:10:00Z",
@@ -43,6 +64,11 @@
       "at": "2026-08-19T16:54:00Z",
       "type": "HEALTH_POLICY_V2_MIGRATION",
       "note": "Health monitoring migrated from one primary watchdog to two hourly cross-observers plus independent GitHub Actions validation. Existing healthy state and incident history were preserved."
+    },
+    {
+      "at": "2026-08-26T01:19:27Z",
+      "type": "TECHNICAL_VALIDATION_SELF_HEALED",
+      "note": "Fortnite competitive validation recovered after rebuilding the derived competitive index and updating the validator to accept the V3 competitive_lifecycle_policy block. No VEVENT business data or calendar SEQUENCE was changed."
     }
   ]
 }
