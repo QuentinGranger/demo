@@ -38,3 +38,5 @@ jobs:
           git add calendars/fortnite-service-events-france.json calendars/fortnite-change-ledger.json calendars/fortnite-change-index-france.json calendars/fortnite-updates-france.ics calendars/fortnite-paris.ics
           git commit -m 'feat: track scheduled EOS maintenance on Sep 22'
           git push
+
+# trigger: 2026-08-26T16:16Z
