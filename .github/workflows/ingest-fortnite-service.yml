@@ -1,0 +1,49 @@
+name: Ingest Fortnite service events
+
+on:
+  push:
+    paths:
+      - 'calendars/fortnite-service-inbox.json'
+      - 'scripts/ingest_fortnite_service_event.py'
+      - '.github/workflows/ingest-fortnite-service.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-fortnite-service
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ingest canonical service events
+        run: python scripts/ingest_fortnite_service_event.py
+      - name: Validate Fortnite change ledger
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Commit canonical changes if any
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No semantic changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendars/fortnite-service-events-france.json \
+                  calendars/fortnite-change-ledger.json \
+                  calendars/fortnite-change-index-france.json \
+                  calendars/fortnite-paris.ics \
+                  calendars/fortnite-updates-france.ics
+          git commit -m "Update Fortnite service calendar from official EOS maintenance"
+          git push
