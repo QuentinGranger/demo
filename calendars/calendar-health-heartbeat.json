@@ -1,10 +1,10 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-25T18:52:05Z",
+  "last_observer_check_at": "2026-08-26T18:04:28Z",
   "last_deep_check_at": "2026-08-20T17:08:03Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "Billetterie Harry Potter France",
+  "observer_title": "Calendriers Fortnite France & Europe",
   "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -20,8 +20,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-25T18:12:05.456045Z",
-      "updated_at": "2026-08-25T18:12:28.515586Z",
+      "last_run_time": "2026-08-26T17:15:04.255468Z",
+      "updated_at": "2026-08-26T17:15:27.089316Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Harry Potter France & Paris": {
@@ -30,8 +30,8 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-25T01:57:12.132387Z",
-      "updated_at": "2026-08-25T01:57:33.981331Z",
+      "last_run_time": "2026-08-26T01:58:39.477791Z",
+      "updated_at": "2026-08-26T01:59:02.970254Z",
       "liveness": "HEALTHY"
     },
     "Billetterie Harry Potter France": {
@@ -40,8 +40,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-25T17:47:20.509975Z",
-      "updated_at": "2026-08-25T17:47:43.936909Z",
+      "last_run_time": "2026-08-26T17:44:13.181723Z",
+      "updated_at": "2026-08-26T17:44:36.008908Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
@@ -56,5 +56,5 @@
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Healthy cross-calendar observer refresh. Repository/master, all nine declared calendar paths, both hourly observers and the four monitored automation cadences/timezones/liveness were checked. Harry Potter HOT/WARM ticketing spot-checks found no material transition: Grand Rex standard remains reservable at 10 EUR while VIP remains sold out; DroneArt retains its published dates and booking path; Retour a Poudlard/Versailles remains reservable. No health incident is open. last_deep_check_at is retained because the full nine-file structural validator was not executed in this connector-only cycle."
+  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. Fortnite competitive ingestion already retains the newly discovered future Override Series dates as silent ledger-only candidates. last_deep_check_at is intentionally retained because a complete nine-file structural/raw endpoint deep validation was not executed in this connector-only cycle."
 }
