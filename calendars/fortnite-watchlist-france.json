@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-25T00:46:36Z",
+  "updated_at": "2026-08-26T00:07:00Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -39,6 +39,23 @@
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep19/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep25/?region=EU"
       ]
+    },
+    {
+      "candidate_id": "fortnite-sonic-shadow-knuckles-shop-20260830",
+      "state": "READY",
+      "topic": "Collaboration Sonic — Shadow the Hedgehog & Knuckles — fin des offres Item Shop",
+      "source_ids": ["fortnite_news", "fortnite_item_shop"],
+      "known": "Les pages produit officielles Fortnite Item Shop affichent Shadow the Hedgehog à 1 800 V-Bucks et Knuckles the Echidna à 1 500 V-Bucks, tous deux achetables jusqu'au 30 août 2026 à 00:00 GMT/UTC, soit le 30 août à 02:00 heure de Paris. Le bundle officiel Shadow the Hedgehog & Knuckles the Echidna affiche la même échéance ; son prix n'est pas retenu comme fait canonique dans cette watch car les variantes de page récupérées doivent être stabilisées avant projection. La fin publiée concerne ces offres exactes, pas toute la boutique, et aucun futur retour n'est déduit.",
+      "missing_for_calendar": [],
+      "promotion_rule": "Créer une seule échéance de collaboration regroupée, jamais une fiche par cosmétique. Projeter uniquement après enregistrement du changement causal et synchronisation updates + global. Rappel recommandé J-1 ; éviter le spam cosmétique.",
+      "official_offer_urls": [
+        "https://www.fortnite.com/item-shop/offers/shadow-the-hedgehog-53ec6628",
+        "https://www.fortnite.com/item-shop/offers/knuckles-the-echidna-66c413b6",
+        "https://www.fortnite.com/item-shop/offers/shadow-the-hedgehog-knuckles-the-echidna-bundle-39e63895"
+      ],
+      "source_end_at": "2026-08-30T00:00:00Z",
+      "paris_end_at": "2026-08-30T02:00:00+02:00",
+      "detected_at": "2026-08-26T00:07:00Z"
     },
     {
       "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
