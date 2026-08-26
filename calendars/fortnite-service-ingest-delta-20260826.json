@@ -1,0 +1,61 @@
+{
+  "version": "FORTNITE_SERVICE_INGEST_DELTA_FR_V1",
+  "created_at": "2026-08-26T19:13:51Z",
+  "updated_at": "2026-08-26T19:13:51Z",
+  "target_ledger": "calendars/fortnite-service-events-france.json",
+  "source_id": "epic_status",
+  "status": "PENDING_CANONICAL_MERGE",
+  "notification_disposition": "ELIGIBLE_WHEN_DUE",
+  "calendar_projection": "CALENDAR_REVIEW",
+  "reason": "Epic Games Public Status published an exact future EOS maintenance window affecting Sessions and Lobbies. The provider explicitly states that existing sessions will time out, clients will be disconnected, and new session creation, invites, searching and matchmaking will be temporarily unavailable. This is relevant to Fortnite service planning, but it is not Fortnite-specific downtime and begins nearly four weeks after discovery, so no immediate notification intent is reserved. Canonical merge must preserve the service/content evidence boundary and decide the final visible-calendar projection.",
+  "service_event": {
+    "stable_subject_key": "epic-eos-maintenance-20260922-djsq84vjvp45",
+    "epic_incident_id": "djsq84vjvp45",
+    "kind": "SCHEDULED_MAINTENANCE",
+    "provider_phase": "SCHEDULED",
+    "provider_impact": "UNSPECIFIED",
+    "provider_title": "EOS Maintenance",
+    "canonical_state": "DOWNTIME_ANNOUNCED",
+    "announced_at": "2026-08-26T11:57:00Z",
+    "scheduled_start_at": "2026-09-22T06:00:00Z",
+    "expected_end_at": "2026-09-22T07:30:00Z",
+    "scheduled_start_paris": "2026-09-22T08:00:00+02:00",
+    "expected_end_paris": "2026-09-22T09:30:00+02:00",
+    "timing_precision": "EXACT",
+    "source_timezone": "UTC",
+    "affected_provider_components": ["Epic Online Services - Sessions", "Epic Online Services - Lobbies"],
+    "fortnite_relevance": {
+      "status": "CROSS_PLATFORM_DEPENDENCY",
+      "explicit_effects": [
+        "existing player sessions time out",
+        "clients are disconnected",
+        "new session creation temporarily unavailable",
+        "invites temporarily unavailable",
+        "searching temporarily unavailable",
+        "matchmaking temporarily unavailable",
+        "session/lobby invites may fail"
+      ],
+      "fortnite_specific_relation": "UNKNOWN",
+      "rule": "Do not label this as a Fortnite patch/season maintenance or guaranteed full Fortnite outage unless an authorized Fortnite source explicitly links it."
+    },
+    "relation_type": "PLATFORM_MAINTENANCE",
+    "relation_confidence": "EXPLICIT_PROVIDER_IMPACT_ONLY",
+    "patch_version": null,
+    "season_id": null,
+    "visibility": "CALENDAR_REVIEW",
+    "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45"
+  },
+  "reminder_boundary": {
+    "create_outbox_intent_now": false,
+    "rule": "No early reservation. If canonical policy schedules a reminder, keep it planned in the service/deadline ledger and revalidate the provider state when the trigger becomes due.",
+    "recommended_recheck": "Re-evaluate near the maintenance window and on any provider timing/state update."
+  },
+  "source_observations": [
+    "Epic Games Public Status schedules EOS maintenance for September 22, 2026 from 06:00 to 07:30 UTC.",
+    "The incident explicitly affects Epic Online Services Lobbies and Sessions.",
+    "Epic states that existing sessions will time out and clients will be disconnected during the window.",
+    "Epic states that new session creation, invites, searching and matchmaking will be temporarily unavailable.",
+    "Fortnite is currently operational on Epic Status on August 26, 2026; this future EOS maintenance is not evidence of a current Fortnite incident.",
+    "No immediate user alert is emitted because the maintenance is far in the future and the canonical notification boundary forbids early reservation."
+  ]
+}
