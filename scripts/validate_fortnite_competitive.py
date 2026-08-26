@@ -231,7 +231,10 @@ def validate_links(sources: dict[str, Any], deadlines: dict[str, Any], errors: l
         if deadline_links.get(key) != value:
             errors.append(f'{DEADLINES}: linked_ledgers.{key} must be {value!r}')
 
-    policy = deadlines.get('competitive_deadline_policy', {})
+    # Deadline Intelligence V3 renamed the canonical policy block from
+    # competitive_deadline_policy to competitive_lifecycle_policy. Accept the
+    # V3 name first while retaining the legacy fallback for older snapshots.
+    policy = deadlines.get('competitive_lifecycle_policy') or deadlines.get('competitive_deadline_policy', {})
     if policy.get('canonical_data_source') != EXPECTED[LEDGER]:
         errors.append(f'{DEADLINES}: canonical_data_source mismatch')
     if policy.get('semantic_engine') != EXPECTED[ENGINE]:
