@@ -1,0 +1,40 @@
+name: Apply EOS maintenance 2026-09-22
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-eos-maintenance-20260922.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply deterministic EOS maintenance update
+        run: python scripts/apply_eos_maintenance_20260922.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Validate change ledger
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate permanent calendar health
+        run: python scripts/validate_calendar_health.py
+      - name: Commit semantic update if needed
+        run: |
+          if git diff --quiet; then
+            echo 'No semantic change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/fortnite-service-events-france.json calendars/fortnite-change-ledger.json calendars/fortnite-change-index-france.json calendars/fortnite-updates-france.ics calendars/fortnite-paris.ics
+          git commit -m 'feat: track scheduled EOS maintenance on Sep 22'
+          git push
