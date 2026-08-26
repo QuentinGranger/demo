@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_SERVICE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-20T11:31:00Z",
+  "updated_at": "2026-08-26T21:13:19Z",
   "scope": "Fortnite service maintenance, downtime, degradation and incidents relevant to France/Europe",
   "source_of_truth": {
     "service_state": "Epic Games Public Status",
@@ -598,6 +598,90 @@
           "old_value": null,
           "new_value": "2026-08-20T11:31:00Z",
           "note": "Official actual completion time recorded."
+        }
+      ]
+    },
+    {
+      "service_event_id": "epic-eos-maintenance-20260922",
+      "epic_incident_id": "djsq84vjvp45",
+      "external_alias_ids": [],
+      "calendar_uid": "fortnite-service-eos-20260922@openai",
+      "fingerprint": "epic:djsq84vjvp45",
+      "kind": "SCHEDULED_MAINTENANCE",
+      "state": "DOWNTIME_ANNOUNCED",
+      "source_id": "epic_status",
+      "canonical_source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+      "first_seen_at": "2026-08-26T21:13:19Z",
+      "last_changed_at": "2026-08-26T21:13:19Z",
+      "provider_phase": "SCHEDULED",
+      "provider_impact": "PARTIAL",
+      "provider_title": "EOS Maintenance",
+      "provider_message_hash": null,
+      "announced_at": "2026-08-26T11:57:00Z",
+      "scheduled_start_at": "2026-09-22T06:00:00Z",
+      "actual_start_at": null,
+      "expected_end_at": "2026-09-22T07:30:00Z",
+      "expected_end_updated_at": "2026-08-26T11:57:00Z",
+      "recovery_started_at": null,
+      "actual_end_at": null,
+      "source_timezone": "UTC",
+      "timing_precision": "EXACT",
+      "component_states": [
+        {
+          "component_id": "MATCHMAKING",
+          "status": "UNKNOWN",
+          "impact_note": "Future EOS maintenance: new session creation, searching and matchmaking will be temporarily unavailable during the published window.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+          "observed_at": "2026-08-26T21:13:19Z"
+        },
+        {
+          "component_id": "PARTIES_FRIENDS",
+          "status": "UNKNOWN",
+          "impact_note": "Future EOS maintenance: invites may fail and existing sessions will time out/disconnect during the published window.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+          "observed_at": "2026-08-26T21:13:19Z"
+        }
+      ],
+      "affected_regions": [
+        "GLOBAL"
+      ],
+      "affected_platforms": [],
+      "internal_actionability": "MEDIUM",
+      "internal_priority_score": 55,
+      "relation_type": "PLATFORM_MAINTENANCE",
+      "relation_confidence": "EXPLICIT",
+      "related_event_uid": null,
+      "related_candidate_id": null,
+      "group_id": null,
+      "patch_version": null,
+      "season_id": null,
+      "relation_source_id": "epic_status",
+      "relation_source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+      "calendar_status": "PROMOTED",
+      "calendar_promoted_at": "2026-08-26T21:13:19Z",
+      "calendar_last_synced_at": "2026-08-26T21:13:19Z",
+      "previous_state": null,
+      "evidence_grade": "A",
+      "confidence": "OFFICIAL_EXACT",
+      "last_verified_at": "2026-08-26T21:13:19Z",
+      "extension_count": 0,
+      "notified_transition_keys": [],
+      "history": [
+        {
+          "at": "2026-08-26T21:13:19Z",
+          "event_type": "CREATED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+          "note": "Epic Online Services maintenance affects Lobbies and Sessions. Epic states clients may be disconnected and new sessions, invites, searching and matchmaking will be temporarily unavailable. No Fortnite-specific patch/season relation is inferred."
+        },
+        {
+          "at": "2026-08-26T21:13:19Z",
+          "event_type": "CALENDAR_PROMOTED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
+          "note": "Official exact EOS maintenance window projected to Fortnite global and updates calendars because matchmaking/session availability is actionable."
         }
       ]
     }

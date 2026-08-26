@@ -499,4 +499,47 @@ DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée
  LEGO Fortnite Odyssey
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-service-eos-20260922@openai
+DTSTAMP:20260826T211319Z
+LAST-MODIFIED:20260826T211319Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-FORTNITE-PRIORITY:INFO
+X-FORTNITE-ACTION:PLAN
+X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
+X-FORTNITE-SERVICE-EVENT-ID:epic-eos-maintenance-20260922
+X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
+X-FORTNITE-SERVICE-STATE:DOWNTIME_ANNOUNCED
+X-FORTNITE-SERVICE-PROVIDER-PHASE:SCHEDULED
+X-FORTNITE-SERVICE-IMPACT:PARTIAL
+X-FORTNITE-SERVICE-ACTIONABILITY:MEDIUM
+X-FORTNITE-AFFECTED-SERVICE:Epic Online Services Lobbies,Sessions,Matchmaki
+ ng
+X-FORTNITE-SERVICE-SOURCE-ID:epic_status
+X-FORTNITE-SERVICE-RELATION-TYPE:PLATFORM_MAINTENANCE
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-LAST-CHANGE-ID:chg_62dc8da5562a2281fcacaa09
+DTSTART;TZID=Europe/Paris:20260922T080000
+DTEND;TZID=Europe/Paris:20260922T093000
+SUMMARY:ℹ️ ✅ 🛠️ Maintenance Epic Online Services — sessions/lo
+ bbies
+DESCRIPTION:Priorité : ℹ️ Info — maintenance Epic Online Services pl
+ anifiée.\nLe 22 septembre 2026 de 08h00 à 09h30 heure de Paris\, Epic pr
+ évoit une disponibilité dégradée des services Sessions et Lobbies.\nEp
+ ic indique que les sessions existantes expireront et que les clients seron
+ t déconnectés \; création de nouvelles sessions\, invitations\, recherc
+ he et matchmaking seront temporairement indisponibles pendant cette fenêt
+ re.\nAucun patch Fortnite\, saison ou compétition n'est lié par inféren
+ ce.\nSource : https://status.epicgames.com/incidents/djsq84vjvp45
+URL:https://status.epicgames.com/incidents/djsq84vjvp45
+CATEGORIES:Fortnite,Maintenance,Epic Online Services,Matchmaking
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchm
+ aking potentiellement indisponibles
+END:VALARM
+END:VEVENT
 END:VCALENDAR
