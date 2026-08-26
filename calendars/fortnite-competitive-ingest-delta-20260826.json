@@ -1,0 +1,65 @@
+{
+  "version": "FORTNITE_COMPETITIVE_INGEST_DELTA_EU_V1",
+  "created_at": "2026-08-26T12:18:17Z",
+  "target_ledger": "calendars/fortnite-competitive-ledger-france.json",
+  "source_id": "fortnite_competitive",
+  "status": "PENDING_CANONICAL_MERGE",
+  "notification_disposition": "SILENT_POLICY",
+  "calendar_projection": "NONE",
+  "reason": "Fresh official Fortnite Competitive EU event pages expose additional future Override Series dates beyond the currently retained Aug 28 session. Details remain Coming Soon, with only age/MFA eligibility confirmed; these dates are retained as ledger-only ingestion candidates until prize, qualification, registration or other planning consequences are officially published.",
+  "sessions": [
+    {
+      "stable_subject_key": "override-series-eu-20260908",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "event_date": "2026-09-08",
+      "start_at": null,
+      "end_at": null,
+      "time_precision": "DATE_ONLY",
+      "eligibility": {"age_min": 13, "two_factor_required": true, "details_state": "COMING_SOON"},
+      "visibility": "LEDGER_ONLY",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep8/?region=EU"
+    },
+    {
+      "stable_subject_key": "override-series-eu-20260918",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "event_date": "2026-09-18",
+      "start_at": null,
+      "end_at": null,
+      "time_precision": "DATE_ONLY",
+      "eligibility": {"age_min": 13, "two_factor_required": true, "details_state": "COMING_SOON"},
+      "visibility": "LEDGER_ONLY",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep18/?region=EU"
+    },
+    {
+      "stable_subject_key": "override-series-eu-20260919",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "event_date": "2026-09-19",
+      "start_at": null,
+      "end_at": null,
+      "time_precision": "DATE_ONLY",
+      "eligibility": {"age_min": 13, "two_factor_required": true, "details_state": "COMING_SOON"},
+      "visibility": "LEDGER_ONLY",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep19/?region=EU"
+    }
+  ],
+  "source_observations": [
+    "Official EU event pages now expose Override Series dates on September 8, September 18 and September 19, 2026.",
+    "Each page still states Details Coming Soon and only confirms Duos, Battle Royale, age eligibility and MFA; no prize pool, qualification consequence, registration deadline or exact EU session time is published on these pages.",
+    "Under the current competitive projection policy these remain LEDGER_ONLY and SILENT_POLICY; no user notification or ICS VEVENT is warranted yet."
+  ]
+}
