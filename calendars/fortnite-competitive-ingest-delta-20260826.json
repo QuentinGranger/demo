@@ -1,13 +1,66 @@
 {
   "version": "FORTNITE_COMPETITIVE_INGEST_DELTA_EU_V1",
   "created_at": "2026-08-26T12:18:17Z",
+  "updated_at": "2026-08-26T18:04:28Z",
   "target_ledger": "calendars/fortnite-competitive-ledger-france.json",
   "source_id": "fortnite_competitive",
   "status": "PENDING_CANONICAL_MERGE",
   "notification_disposition": "SILENT_POLICY",
-  "calendar_projection": "NONE",
-  "reason": "Fresh official Fortnite Competitive EU event pages expose additional future Override Series dates beyond the currently retained Aug 28 session. Details remain Coming Soon, with only age/MFA eligibility confirmed; these dates are retained as ledger-only ingestion candidates until prize, qualification, registration or other planning consequences are officially published.",
+  "calendar_projection": "REVIEW_REQUIRED_FOR_CRASH_REWARD_CUPS",
+  "reason": "Fresh official Fortnite Competitive EU event pages expose additional future Override Series dates and, separately, exact EU Crash Bandicoot reward-cup sessions for August 28. The September Override dates remain ledger-only because their details are still Coming Soon. The Crash Bandicoot sessions are retained with exact times and official cosmetic-reward evidence; visible-calendar promotion is intentionally left for canonical merge/change-engine evaluation rather than bypassing the notification outbox or rewriting ICS from a stale snapshot.",
   "sessions": [
+    {
+      "stable_subject_key": "crash-bandicoot-mobile-cup-eu-20260828",
+      "competition_class": "PLATFORM_CUP",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series: Crash Bandicoot Mobile Cup",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "MOBILE",
+      "event_date": "2026-08-28",
+      "start_at": "2026-08-28T16:00:00+02:00",
+      "end_at": "2026-08-28T17:15:00+02:00",
+      "time_precision": "EXACT",
+      "eligibility": {"age_min": 13, "two_factor_required": true},
+      "reward_evidence": {"type": "COSMETIC_REWARDS", "status": "OFFICIAL_CONFIRMED", "exact_items": null},
+      "visibility": "CALENDAR_REVIEW",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootMobileCup/?region=EU"
+    },
+    {
+      "stable_subject_key": "crash-bandicoot-cup-reload-eu-20260828",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series: Crash Bandicoot Cup Reload",
+      "region": "EU",
+      "ruleset": "RELOAD",
+      "team_format": "DUOS",
+      "event_date": "2026-08-28",
+      "start_at": "2026-08-28T17:00:00+02:00",
+      "end_at": "2026-08-28T19:30:00+02:00",
+      "time_precision": "EXACT",
+      "eligibility": {"age_min": 13, "two_factor_required": true},
+      "reward_evidence": {"type": "COSMETIC_REWARDS", "status": "OFFICIAL_CONFIRMED", "exact_items": null},
+      "visibility": "CALENDAR_REVIEW",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU"
+    },
+    {
+      "stable_subject_key": "crash-bandicoot-cup-zb-reload-eu-20260828",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series: Crash Bandicoot Cup Zero Build Reload",
+      "region": "EU",
+      "ruleset": "ZERO_BUILD",
+      "team_format": "DUOS",
+      "event_date": "2026-08-28",
+      "start_at": "2026-08-28T17:00:00+02:00",
+      "end_at": "2026-08-28T19:30:00+02:00",
+      "time_precision": "EXACT",
+      "eligibility": {"age_min": 13, "two_factor_required": true},
+      "reward_evidence": {"type": "COSMETIC_REWARDS", "status": "OFFICIAL_CONFIRMED", "exact_items": null},
+      "visibility": "CALENDAR_REVIEW",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU"
+    },
     {
       "stable_subject_key": "override-series-eu-20260908",
       "competition_class": "OTHER",
@@ -58,8 +111,11 @@
     }
   ],
   "source_observations": [
-    "Official EU event pages now expose Override Series dates on September 8, September 18 and September 19, 2026.",
-    "Each page still states Details Coming Soon and only confirms Duos, Battle Royale, age eligibility and MFA; no prize pool, qualification consequence, registration deadline or exact EU session time is published on these pages.",
-    "Under the current competitive projection policy these remain LEDGER_ONLY and SILENT_POLICY; no user notification or ICS VEVENT is warranted yet."
+    "Official EU Fortnite Competitive pages confirm Crash Bandicoot cosmetic-reward competition on August 28, 2026.",
+    "EU schedule exposes exact sessions: Mobile Cup 16:00-17:15 Europe/Paris; Crash Bandicoot Cup Reload 17:00-19:30; Crash Bandicoot Cup Zero Build Reload 17:00-19:30.",
+    "Official event text confirms a chance to earn Crash Bandicoot cosmetic rewards and confirms minimum age 13/local minimum plus MFA. Exact cosmetic item names/placement thresholds are not asserted because they are not exposed in the checked event-page evidence.",
+    "Official EU event pages also expose base Override Series dates on September 8, September 18 and September 19, 2026.",
+    "Those September pages still state Details Coming Soon and publish no prize pool, qualification consequence, registration deadline or exact EU session time, so they remain LEDGER_ONLY and SILENT_POLICY.",
+    "Crash reward cups are retained as CALENDAR_REVIEW rather than written directly into public ICS from a partial snapshot; canonical merge must apply change-engine materiality and outbox reservation before any user-facing alert."
   ]
 }
