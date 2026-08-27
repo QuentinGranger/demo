@@ -10,31 +10,34 @@ X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 BEGIN:VEVENT
 UID:pokemon-pocket-team-rocket-paris-20260822@openai
-DTSTAMP:20260821T184043Z
-LAST-MODIFIED:20260821T184043Z
-SEQUENCE:0
-STATUS:TENTATIVE
+DTSTAMP:20260827T185125Z
+LAST-MODIFIED:20260827T185125Z
+SEQUENCE:1
+STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-REMINDER-PROFILE:PARIS_LIMITED_EVENT
 X-POKEMON-ACTION:ATTEND
 X-POKEMON-FIRST-ADDED-AT:20260821T184043Z
 X-POKEMON-NEW-UNTIL:20260826T184043Z
-X-POKEMON-FRESHNESS:NEW
-X-POKEMON-BADGE:NEW
+X-POKEMON-LAST-MAJOR-UPDATE-AT:20260827T185125Z
+X-POKEMON-UPDATE-UNTIL:20260830T185125Z
+X-POKEMON-UPDATE-REASON:OFFICIAL_CONFIRMATION
+X-POKEMON-FRESHNESS:UPDATED
+X-POKEMON-BADGE:UPDATED
 X-POKEMON-SESSION;DATE=20260822;START=0900;END=1800:Paris Saint-Lazare
 X-POKEMON-SESSION;DATE=20260823;START=0900;END=1800:Paris Saint-Lazare
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260824
-SUMMARY:⭐ 🟡 🆕 🚀 Pop-up Pokémon Pocket — Team Rocket — Paris Saint-Lazare
+SUMMARY:⭐ ✅ ✨ 🚀 Pop-up Pokémon Pocket — Team Rocket — Paris Saint-Lazare
 LOCATION;ALTREP="https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20Rue%20d%27Amsterdam%2C%2075008%20Paris":Gare Saint-Lazare\, 13 Rue d'Amsterdam\, 75008 Paris\, France
 X-POKEMON-LOCATION-PRECISION:VENUE
 X-POKEMON-MAPS-URL:https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20Rue%20d%27Amsterdam%2C%2075008%20Paris
 X-POKEMON-TICKET-STATUS:FREE_NO_TICKET
 X-POKEMON-ACCESS-MODE:FREE
-DESCRIPTION:Priorité : ⭐ Important — activation Pokémon Pocket très courte à Paris et actionnable immédiatement.\nFiabilité : 🟡 Tentative — GAMEWAVE publie des détails précis le 21 août 2026 en les rattachant à l'annonce Pokémon Pocket du 20 août\, mais aucune page Pokémon officielle indexée confirmant l'activation parisienne n'a encore été retrouvée.\n📅 Sessions annoncées : samedi 22 et dimanche 23 août 2026\, de 9h à 18h.\n📍 Point de départ annoncé : gare Saint-Lazare\, Paris 8e. L'adresse 13 Rue d'Amsterdam correspond à l'adresse officielle de la gare ; l'emplacement exact du pop-up à l'intérieur de la gare n'est pas affirmé.\n🎟️ Participation annoncée gratuite et accessible à tous.\n🧩 Parcours : énigmes Team Rocket puis orientation vers un lieu secret pour recevoir un message du Boss.\n🎁 Récompense annoncée après participation : tote-bag et code Pokémon Pocket donnant 24 Sabliers booster. Quantités/conditions non précisées dans la source suivie.\n🆕 Ajouté au calendrier le 21 août 2026. Aucun VALARM rétroactif n'est ajouté car le rappel J-1 standard du début est déjà passé au moment de la découverte.\nSource événement : https://gamewave.fr/pokemon-pocket/pokemon-pocket-participez-a-un-evenement-unique-a-paris-aux-cotes-de-la-team-rocket/\nSource adresse gare : https://www.transilien.com/fr/gare/gare-de-paris-saint-lazare-8738400
-URL:https://gamewave.fr/pokemon-pocket/pokemon-pocket-participez-a-un-evenement-unique-a-paris-aux-cotes-de-la-team-rocket/
-CATEGORIES:Pokémon,Pokémon Pocket,Événement,Paris,Pop-up,Team Rocket,Nouveau,Priorité Important
+DESCRIPTION:Priorité : ⭐ Important — activation Pokémon Pocket très courte à Paris.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 21 août 2026. Pokémon confirme les stands Team Rocket à la gare Saint-Lazare à Paris les 22 et 23 août 2026\, de 09:00 à 18:00.\n📅 Sessions officielles : samedi 22 et dimanche 23 août 2026\, de 9h à 18h.\n📍 Point de rendez-vous officiel : gare Saint-Lazare\, Paris. L'adresse 13 Rue d'Amsterdam correspond à l'adresse officielle de la gare ; l'emplacement exact dans la gare n'est pas inventé.\n🎟️ Participation : accès libre au stand éphémère.\n🧩 Parcours : énigmes et code secret permettant d'accéder à un lieu secret et à un message du Boss.\n🎁 Récompense annoncée : tote bag et code échangeable contre 24 Sabliers Booster dans le JCC Pokémon Pocket.\n✨ Mise à jour majeure le 27 août 2026 : la source Pokémon officielle remplace la qualification tentative antérieure. L'événement est déjà terminé ; aucun rappel rétroactif n'est créé.\nSource officielle : https://www.pokemon.com/fr/actualites/rejoignez-les-fans-de-la-team-rocket-a-londres-ou-a-paris\nSource adresse gare : https://www.transilien.com/fr/gare/gare-de-paris-saint-lazare-8738400
+URL:https://www.pokemon.com/fr/actualites/rejoignez-les-fans-de-la-team-rocket-a-londres-ou-a-paris
+CATEGORIES:Pokémon,Pokémon Pocket,Événement,Paris,Pop-up,Team Rocket,Mise à jour,Priorité Important
 END:VEVENT
 BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
@@ -109,7 +112,7 @@ DTEND;VALUE=DATE:20261004
 SUMMARY:ℹ️ 🟡 🎪 Convention — Lille Card Show
 LOCATION;ALTREP="https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village":B'Twin Village\, 4 rue du Professeur Langevin\, 59000 Lille\, France
 GEO:50.62012;3.08449
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=B'Twin Village:geo:50.62012,3.08449
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=B'Twin Village:geo:48.97046,2.52131
 X-POKEMON-LOCATION-PRECISION:VENUE
 X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=50.62012,3.08449
@@ -349,5 +352,27 @@ TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:📡 Mondiaux Pokémon & PokémonXP demain — active les drops Twitch et vérifie les horaires
 END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-pocket-team-rocket-ambition-20260827@openai
+DTSTAMP:20260827T185125Z
+LAST-MODIFIED:20260827T185125Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-FIRST-ADDED-AT:20260827T185125Z
+X-POKEMON-NEW-UNTIL:20260901T185125Z
+X-POKEMON-FRESHNESS:NEW
+X-POKEMON-BADGE:NEW
+DTSTART;TZID=Europe/Paris:20260827T030000
+DTEND;TZID=Europe/Paris:20260827T031500
+SUMMARY:ℹ️ ✅ 🆕 📱 JCC Pokémon Pocket — L’Ambition de la Team Rocket
+LOCATION:En ligne — JCC Pokémon Pocket (iOS / Android)
+DESCRIPTION:Priorité : ℹ️ Info — sortie numérique officielle importante pour Pokémon Pocket mais sans déplacement physique.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 20 août 2026. L'extension L’Ambition de la Team Rocket est sortie le 27 août 2026 à 01:00 UTC\, soit 03:00 heure de Paris (CEST).\n📱 Contenu : extension centrée sur la Team Rocket avec nouvelles cartes et Pokémon associés à l'organisation.\n🆕 Ajoutée le jour de sortie ; aucun rappel rétroactif n'est créé car l'heure de lancement était déjà passée au moment de cette veille.\nSource : https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextension-lambition-de-la-team-rocket-arrive-bientot
+URL:https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextension-lambition-de-la-team-rocket-arrive-bientot
+CATEGORIES:Pokémon,Pokémon Pocket,Sortie numérique,Team Rocket,Nouveau,Priorité Info
 END:VEVENT
 END:VCALENDAR
