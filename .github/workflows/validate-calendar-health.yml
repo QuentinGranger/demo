@@ -46,7 +46,14 @@ jobs:
       - name: Validate permanent health and live raw subscription URLs
         if: github.event_name != 'pull_request'
         run: |
+          # raw.githubusercontent.com can briefly lag the just-pushed master commit.
+          # Never open a health incident from a single transient CDN mismatch.
           sleep 5
+          if python scripts/validate_calendar_health.py --online; then
+            exit 0
+          fi
+          echo 'First online validation failed; waiting for raw CDN convergence before confirming an incident.'
+          sleep 30
           python scripts/validate_calendar_health.py --online
 
   incident-record:
@@ -66,7 +73,7 @@ jobs:
             if [ -z "$ISSUE_NUMBER" ]; then
               gh issue create --repo "$REPO" \
                 --title '[Calendar Health] Incident' \
-                --body "The permanent Fortnite / Harry Potter / Pokémon calendar health validator failed. This issue is intentionally reused until recovery to avoid duplicate incident records.\n\nWorkflow run: $RUN_URL"
+                --body "The permanent Fortnite / Harry Potter / Pokémon calendar health validator failed after retrying transient raw/CDN propagation. This issue is intentionally reused until recovery to avoid duplicate incident records.\n\nWorkflow run: $RUN_URL"
             fi
           else
             if [ -n "$ISSUE_NUMBER" ]; then
