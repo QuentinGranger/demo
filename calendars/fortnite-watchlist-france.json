@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-27T06:16:35Z",
+  "updated_at": "2026-08-27T09:19:24Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -43,6 +43,16 @@
       ]
     },
     {
+      "candidate_id": "fortnite-arenas-test-cup-eu-20260827",
+      "state": "SIGNAL_FOUND",
+      "topic": "Arenas Test Cup — Europe — 27 août 2026",
+      "source_ids": ["fortnite_competitive"],
+      "known": "Le calendrier officiel Fortnite Competitive EU affiche une Arenas Test Cup le 27 août 2026 de 17:00 à 18:30 heure de Paris. Le moteur compétitif classe explicitement les TEST_CUP comme LEDGER_ONLY par défaut.",
+      "missing_for_calendar": ["MATERIAL_PRIZE_OR_QUALIFICATION_CONSEQUENCE", "ACTIONABLE_REGISTRATION_OR_CHECK_IN_DEADLINE_IF_ANY"],
+      "promotion_rule": "Ingérer dans le ledger compétitif comme TEST_CUP / LEDGER_ONLY. Ne créer aucun VEVENT visible ni notification sans enjeu matériel supplémentaire officiellement publié.",
+      "official_event_url": "https://www.fortnite.com/competitive/schedule?lang=fr&region=EU"
+    },
+    {
       "candidate_id": "fortnite-reload-elite-ewc-paris-2026",
       "state": "CALENDAR_ADDED",
       "topic": "Reload Elite Series Championship — Esports World Cup 2026 — Paris",
@@ -72,6 +82,16 @@
       "promotion_rule": "READY depuis une publication Epic datée et actionnable. Ne passer CALENDAR_ADDED qu'après présence vérifiée du même UID dans le spécialiste updates puis dans le global synchronisé, avec change ledger cohérent.",
       "related_calendar_uid": "fortnite-lego-odyssey-monastery-portal-20260827@openai",
       "promoted_at": "2026-08-24T00:15:37Z"
+    },
+    {
+      "candidate_id": "fortnite-lego-odyssey-gamescom-gift-20260826",
+      "state": "SIGNAL_FOUND",
+      "topic": "LEGO Fortnite Odyssey — cadeau Happy Gamescom / décor rétro",
+      "source_ids": ["fortnite_news"],
+      "known": "La page officielle Epic LEGO Fortnite Odyssey affiche depuis le 26 août 2026 un temps fort 'Happy Gamescom!' actuellement en cours, avec des objets de décoration rétro à récupérer. L'interface officielle indique seulement une fin relative ('Ends in 6 days') dans la vue consultée. Un signal communautaire reprend une limite au 2 septembre à 08:00 ET, mais cette heure n'est pas élevée au rang de fait canonique tant qu'une source Epic directe ne l'affiche pas explicitement.",
+      "missing_for_calendar": ["OFFICIAL_EXACT_END_DATE_OR_TIME", "DIRECT_OFFICIAL_CLAIM_INSTRUCTIONS_IF_REQUIRED"],
+      "promotion_rule": "Ne créer un VEVENT qu'après publication Epic directe d'une échéance exploitable. Ne jamais convertir le compte à rebours relatif ou une reprise communautaire en deadline officielle.",
+      "official_event_url": "https://www.fortnite.com/@epic/lego-fortnite-odyssey"
     },
     {
       "candidate_id": "fortnite-next-live-event",
