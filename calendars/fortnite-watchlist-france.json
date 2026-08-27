@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-25T00:46:36Z",
+  "updated_at": "2026-08-27T06:16:35Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": ["WATCHING", "SIGNAL_FOUND", "READY", "CALENDAR_ADDED", "RESOLVED", "REJECTED"],
   "calendar_threshold": "Créer un VEVENT uniquement avec date/heure/période exploitable ou action datée suffisamment fiable.",
@@ -29,11 +29,13 @@
       "state": "SIGNAL_FOUND",
       "topic": "Override Series — Europe — Chapitre 7 Saison 4",
       "source_ids": ["fortnite_competitive"],
-      "known": "Fortnite Competitive publie des pages officielles Override Series pour l'Europe, en Duos Battle Royale. Des occurrences EU sont confirmées aux dates du 28 août, 8 septembre, 18 septembre, 19 septembre et 25 septembre 2026. Le calendrier officiel EU expose désormais une fenêtre exacte pour l'occurrence du 28 août : 17:00–20:00 heure de Paris. Les pages indiquent encore « Details Coming Soon » et confirment seulement les exigences générales d'âge minimum 13 ans (ou minimum local) et MFA. Aucun prize pool, structure de qualification, deadline d'inscription/check-in ou conséquence majeure exploitable n'est encore établi dans les sources lues ; les horaires exacts des autres occurrences restent à confirmer individuellement.",
+      "known": "Fortnite Competitive publie des pages officielles Override Series pour l'Europe, en Duos Battle Royale. Des occurrences EU sont confirmées aux dates du 28 août, 8 septembre, 18 septembre, 19 septembre et 25 septembre 2026. Le calendrier officiel EU expose une fenêtre exacte pour l'occurrence principale du 28 août : 17:00–20:00 heure de Paris. Epic publie désormais aussi des sous-événements officiels Crash Bandicoot le 28 août avec récompenses cosmétiques : Mobile Cup en solos Battle Royale de 16:00 à 17:15 à Paris, ainsi que Crash Bandicoot Cup en duos avec variantes Reload et Zero Build Reload annoncées de 17:00 à 19:30. Ces cups restent une opportunité compétitive/cosmétique de faible portée et ne prouvent ni prize pool majeur, ni qualification FNCS/LAN, ni deadline d'inscription/check-in. Les autres occurrences Override Series restent à confirmer individuellement pour leurs horaires et enjeux.",
       "missing_for_calendar": ["MATERIAL_PRIZE_OR_QUALIFICATION_DETAILS", "ACTIONABLE_REGISTRATION_OR_CHECK_IN_DEADLINE_IF_ANY", "EXACT_EU_SESSION_TIMES_FOR_REMAINING_OCCURRENCES"],
-      "promotion_rule": "Ingestion compétitive ledger-only autorisée dès identification stable de chaque occurrence officielle. Ne créer un VEVENT visible que si l'horaire/action ET le niveau d'importance publié apportent une vraie valeur de planification ; un horaire exact seul, avec Details Coming Soon et sans enjeu matériel publié, reste ledger/watchlist-only pour éviter le bazar.",
+      "promotion_rule": "Ingestion compétitive ledger-only autorisée dès identification stable de chaque occurrence officielle. Les cups Crash Bandicoot restent ledger/watchlist-only par défaut malgré leurs récompenses cosmétiques : ne créer un VEVENT visible que si une conséquence de qualification, une deadline d'action distincte, un niveau d'importance supérieur ou une autre valeur de planification matérielle est officiellement publiée.",
       "official_event_urls": [
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_CrashBandicootMobileCup/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep8/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep18/?region=EU",
         "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep19/?region=EU",
