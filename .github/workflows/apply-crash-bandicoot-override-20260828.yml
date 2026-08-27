@@ -49,3 +49,5 @@ jobs:
           git add calendars/fortnite-competitive-ledger-france.json calendars/fortnite-competitive-index-france.json calendars/fortnite-change-ledger.json calendars/fortnite-change-index-france.json calendars/fortnite-competitive-france.ics calendars/fortnite-paris.ics
           git commit -m 'feat: add Crash Bandicoot Override Cup EU'
           git push
+
+# trigger: 2026-08-27T20:08Z
