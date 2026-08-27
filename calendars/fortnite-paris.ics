@@ -196,6 +196,89 @@ URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
 BEGIN:VEVENT
+UID:fortnite-lego-odyssey-monastery-portal-20260827@openai
+DTSTAMP:20260824T001537Z
+LAST-MODIFIED:20260824T001537Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:LIMITED_TIME_EVENT
+X-FORTNITE-MODE:LEGO_FORTNITE_ODYSSEY
+X-FORTNITE-THEME:MONASTERY
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_news
+X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-CANDIDATE-ID:fortnite-lego-odyssey-monastery-portal-20260827
+X-FORTNITE-LAST-CHANGE-ID:chg_0b7089e1a6cd61e1b57954c2
+X-FORTNITE-FIRST-ADDED-AT:20260824T001537Z
+X-FORTNITE-NEW-UNTIL:20260829T001537Z
+DTSTART;TZID=Europe/Paris:20260827T100000
+DTEND;TZID=Europe/Paris:20260902T100000
+SUMMARY:⭐ ✅ 🆕 🧱 LEGO Fortnite Odyssey — portail du Monastère
+DESCRIPTION:Priorité : ⭐ Important — fenêtre limitée officiellement 
+ publiée par Epic.\nDu 27 août 2026 à 10h00 au 2 septembre 2026 à 10h00
+  heure de Paris, le portail du Monastère rouvre dans LEGO Fortnite Odysse
+ y.\nÉliminer le Shatter Spawn permet d’obtenir quatre récompenses dor
+ ées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shuriken
+ s of ICE.\nAucune autre condition, quota ou rareté n’est déduite.\nSou
+ rce : https://www.fortnite.com/@epic/lego-fortnite-odyssey
+URL:https://www.fortnite.com/@epic/lego-fortnite-odyssey
+CATEGORIES:Fortnite,LEGO Fortnite Odyssey,Événement limité,Monastère,R
+ écompenses
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée 
+ LEGO Fortnite Odyssey
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-service-eos-20260922@openai
+DTSTAMP:20260826T211319Z
+LAST-MODIFIED:20260826T211319Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-FORTNITE-PRIORITY:INFO
+X-FORTNITE-ACTION:PLAN
+X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
+X-FORTNITE-SERVICE-EVENT-ID:epic-eos-maintenance-20260922
+X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
+X-FORTNITE-SERVICE-STATE:DOWNTIME_ANNOUNCED
+X-FORTNITE-SERVICE-PROVIDER-PHASE:SCHEDULED
+X-FORTNITE-SERVICE-IMPACT:PARTIAL
+X-FORTNITE-SERVICE-ACTIONABILITY:MEDIUM
+X-FORTNITE-AFFECTED-SERVICE:Epic Online Services Lobbies,Sessions,Matchmaki
+ ng
+X-FORTNITE-SERVICE-SOURCE-ID:epic_status
+X-FORTNITE-SERVICE-RELATION-TYPE:PLATFORM_MAINTENANCE
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-LAST-CHANGE-ID:chg_62dc8da5562a2281fcacaa09
+DTSTART;TZID=Europe/Paris:20260922T080000
+DTEND;TZID=Europe/Paris:20260922T093000
+SUMMARY:ℹ️ ✅ 🛠️ Maintenance Epic Online Services — sessions/lo
+ bbies
+DESCRIPTION:Priorité : ℹ️ Info — maintenance Epic Online Services pl
+ anifiée.\nLe 22 septembre 2026 de 08h00 à 09h30 heure de Paris\, Epic pr
+ évoit une disponibilité dégradée des services Sessions et Lobbies.\nEp
+ ic indique que les sessions existantes expireront et que les clients seron
+ t déconnectés \; création de nouvelles sessions\, invitations\, recherc
+ he et matchmaking seront temporairement indisponibles pendant cette fenêt
+ re.\nAucun patch Fortnite\, saison ou compétition n'est lié par inféren
+ ce.\nSource : https://status.epicgames.com/incidents/djsq84vjvp45
+URL:https://status.epicgames.com/incidents/djsq84vjvp45
+CATEGORIES:Fortnite,Maintenance,Epic Online Services,Matchmaking
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchm
+ aking potentiellement indisponibles
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:fortnite-fncs-global-antwerp-20260926@openai
 DTSTAMP:20260823T151831Z
 LAST-MODIFIED:20260823T151831Z
@@ -460,86 +543,52 @@ CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenh
  ague,Danemark
 END:VEVENT
 BEGIN:VEVENT
-UID:fortnite-lego-odyssey-monastery-portal-20260827@openai
-DTSTAMP:20260824T001537Z
-LAST-MODIFIED:20260824T001537Z
+UID:fortnite-crash-bandicoot-cup-eu-20260828@openai
+DTSTAMP:20260827T200011Z
+LAST-MODIFIED:20260827T200011Z
 SEQUENCE:0
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:PLAY
-X-FORTNITE-EVENT-TYPE:LIMITED_TIME_EVENT
-X-FORTNITE-MODE:LEGO_FORTNITE_ODYSSEY
-X-FORTNITE-THEME:MONASTERY
+X-FORTNITE-ACTION:PARTICIPATE
+X-FORTNITE-EVENT-TYPE:SPECIAL_COSMETIC_CUP
+X-FORTNITE-SERIES:OVERRIDE_SERIES
+X-FORTNITE-MODE:MIXED
+X-FORTNITE-FORMAT:MIXED
+X-FORTNITE-REGION:EU
+X-FORTNITE-THEME:CRASH_BANDICOOT
 X-FORTNITE-EVIDENCE-GRADE:A
-X-FORTNITE-SOURCE-ID:fortnite_news
-X-FORTNITE-SOURCE-TIMEZONE:America/New_York
+X-FORTNITE-SOURCE-ID:fortnite_competitive
 X-FORTNITE-TIME-PRECISION:EXACT
-X-FORTNITE-CANDIDATE-ID:fortnite-lego-odyssey-monastery-portal-20260827
-X-FORTNITE-LAST-CHANGE-ID:chg_0b7089e1a6cd61e1b57954c2
-X-FORTNITE-FIRST-ADDED-AT:20260824T001537Z
-X-FORTNITE-NEW-UNTIL:20260829T001537Z
-DTSTART;TZID=Europe/Paris:20260827T100000
-DTEND;TZID=Europe/Paris:20260902T100000
-SUMMARY:⭐ ✅ 🆕 🧱 LEGO Fortnite Odyssey — portail du Monastère
-DESCRIPTION:Priorité : ⭐ Important — fenêtre limitée officiellement 
- publiée par Epic.\nDu 27 août 2026 à 10h00 au 2 septembre 2026 à 10h00
-  heure de Paris, le portail du Monastère rouvre dans LEGO Fortnite Odysse
- y.\nÉliminer le Shatter Spawn permet d’obtenir quatre récompenses dor
- ées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shuriken
- s of ICE.\nAucune autre condition, quota ou rareté n’est déduite.\nSou
- rce : https://www.fortnite.com/@epic/lego-fortnite-odyssey
-URL:https://www.fortnite.com/@epic/lego-fortnite-odyssey
-CATEGORIES:Fortnite,LEGO Fortnite Odyssey,Événement limité,Monastère,R
- écompenses
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée 
- LEGO Fortnite Odyssey
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fortnite-service-eos-20260922@openai
-DTSTAMP:20260826T211319Z
-LAST-MODIFIED:20260826T211319Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:9
-X-FORTNITE-PRIORITY:INFO
-X-FORTNITE-ACTION:PLAN
-X-FORTNITE-EVENT-TYPE:SERVICE_DOWNTIME
-X-FORTNITE-SERVICE-EVENT-ID:epic-eos-maintenance-20260922
-X-FORTNITE-SERVICE-KIND:SCHEDULED_MAINTENANCE
-X-FORTNITE-SERVICE-STATE:DOWNTIME_ANNOUNCED
-X-FORTNITE-SERVICE-PROVIDER-PHASE:SCHEDULED
-X-FORTNITE-SERVICE-IMPACT:PARTIAL
-X-FORTNITE-SERVICE-ACTIONABILITY:MEDIUM
-X-FORTNITE-AFFECTED-SERVICE:Epic Online Services Lobbies,Sessions,Matchmaki
- ng
-X-FORTNITE-SERVICE-SOURCE-ID:epic_status
-X-FORTNITE-SERVICE-RELATION-TYPE:PLATFORM_MAINTENANCE
-X-FORTNITE-TIME-PRECISION:EXACT
-X-FORTNITE-LAST-CHANGE-ID:chg_62dc8da5562a2281fcacaa09
-DTSTART;TZID=Europe/Paris:20260922T080000
-DTEND;TZID=Europe/Paris:20260922T093000
-SUMMARY:ℹ️ ✅ 🛠️ Maintenance Epic Online Services — sessions/lo
- bbies
-DESCRIPTION:Priorité : ℹ️ Info — maintenance Epic Online Services pl
- anifiée.\nLe 22 septembre 2026 de 08h00 à 09h30 heure de Paris\, Epic pr
- évoit une disponibilité dégradée des services Sessions et Lobbies.\nEp
- ic indique que les sessions existantes expireront et que les clients seron
- t déconnectés \; création de nouvelles sessions\, invitations\, recherc
- he et matchmaking seront temporairement indisponibles pendant cette fenêt
- re.\nAucun patch Fortnite\, saison ou compétition n'est lié par inféren
- ce.\nSource : https://status.epicgames.com/incidents/djsq84vjvp45
-URL:https://status.epicgames.com/incidents/djsq84vjvp45
-CATEGORIES:Fortnite,Maintenance,Epic Online Services,Matchmaking
+X-FORTNITE-LAST-CHANGE-ID:chg_9a22269bdd60b9c74ab681b7
+X-FORTNITE-FIRST-ADDED-AT:20260827T200011Z
+X-FORTNITE-NEW-UNTIL:20260901T200011Z
+X-FORTNITE-SESSION;TYPE=MOBILE;FORMAT=SOLOS:20260828T160000/20260828T171500
+X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
+X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260
+ 828T193000
+DTSTART;TZID=Europe/Paris:20260828T160000
+DTEND;TZID=Europe/Paris:20260828T193000
+SUMMARY:⭐ ✅ 🆕 🥭 Override Series — Crash Bandicoot Cup EU
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
+ lle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobi
+ le : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero 
+ Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuv
+ ent concourir pour tenter de gagner des récompenses cosmétiques Crash Ba
+ ndicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont
+  pas matérialisés depuis les règles officielles.\nÉligibilité publié
+ e : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA act
+ ivée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBand
+ icootCup/?region=EU
+URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?regi
+ on=EU
+CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmét
+ iques
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchm
- aking potentiellement indisponibles
+DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload 
+ à 17h
 END:VALARM
 END:VEVENT
 END:VCALENDAR

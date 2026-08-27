@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-08-26T01:15:00Z",
+  "generated_at": "2026-08-27T20:00:11Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "db4eff53ea9ecc670a625ca4d91bedd7b6ab690a",
+    "ledger_sha": "1c20335faa6a5326af70c49eeae18ecc30a77739",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -20,75 +20,211 @@
     "fncs-global-2026-antwerp",
     "fncs-global-last-chance-eu-2026",
     "mobile-series-championship-copenhagen-2026",
+    "override-series-crash-bandicoot-eu-2026-08-28",
     "performance-evaluation-eu-2026",
     "reload-elite-ewc-paris-2026",
     "shadow-cup-eu-2026-08-21"
   ],
   "by_visibility": {
-    "CALENDAR": ["shadow-cup-eu-2026-08-21"],
-    "FEATURED": ["fncs-global-2026-antwerp", "mobile-series-championship-copenhagen-2026", "reload-elite-ewc-paris-2026"],
-    "LEDGER_ONLY": ["fncs-global-last-chance-eu-2026", "performance-evaluation-eu-2026"]
+    "FEATURED": [
+      "fncs-global-2026-antwerp",
+      "mobile-series-championship-copenhagen-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
+    "LEDGER_ONLY": [
+      "fncs-global-last-chance-eu-2026",
+      "performance-evaluation-eu-2026"
+    ],
+    "CALENDAR": [
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "shadow-cup-eu-2026-08-21"
+    ]
   },
   "by_status": {
-    "ANNOUNCED": [],
-    "CANCELLED": [],
-    "COMPLETED": ["fncs-global-last-chance-eu-2026", "reload-elite-ewc-paris-2026"],
-    "LIVE": [],
-    "POSTPONED": [],
-    "REGISTRATION_OPEN": [],
-    "SCHEDULED": ["fncs-global-2026-antwerp", "mobile-series-championship-copenhagen-2026", "performance-evaluation-eu-2026", "shadow-cup-eu-2026-08-21"]
+    "SCHEDULED": [
+      "fncs-global-2026-antwerp",
+      "mobile-series-championship-copenhagen-2026",
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "performance-evaluation-eu-2026",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "COMPLETED": [
+      "fncs-global-last-chance-eu-2026",
+      "reload-elite-ewc-paris-2026"
+    ]
   },
   "by_region": {
-    "EU": ["fncs-global-last-chance-eu-2026", "performance-evaluation-eu-2026", "shadow-cup-eu-2026-08-21"],
-    "GLOBAL": ["fncs-global-2026-antwerp", "mobile-series-championship-copenhagen-2026", "reload-elite-ewc-paris-2026"]
+    "GLOBAL": [
+      "fncs-global-2026-antwerp",
+      "mobile-series-championship-copenhagen-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
+    "EU": [
+      "fncs-global-last-chance-eu-2026",
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "performance-evaluation-eu-2026",
+      "shadow-cup-eu-2026-08-21"
+    ]
   },
   "by_series_id": {
-    "FNCS": ["fncs-global-2026-antwerp", "fncs-global-last-chance-eu-2026"],
-    "MOBILE_SERIES": ["mobile-series-championship-copenhagen-2026"],
-    "PERFORMANCE_EVALUATION": ["performance-evaluation-eu-2026"],
-    "RELOAD_ELITE_SERIES": ["reload-elite-ewc-paris-2026"],
-    "SHADOW_CUP": ["shadow-cup-eu-2026-08-21"]
+    "FNCS": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "RELOAD_ELITE_SERIES": [
+      "reload-elite-ewc-paris-2026"
+    ],
+    "SHADOW_CUP": [
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "PERFORMANCE_EVALUATION": [
+      "performance-evaluation-eu-2026"
+    ],
+    "MOBILE_SERIES": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "OVERRIDE_SERIES": [
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
   },
   "by_competition_class": {
-    "FNCS": ["fncs-global-2026-antwerp", "fncs-global-last-chance-eu-2026"],
-    "MOBILE_SERIES": ["mobile-series-championship-copenhagen-2026"],
-    "PERFORMANCE_EVALUATION": ["performance-evaluation-eu-2026"],
-    "PLATFORM_CUP": ["shadow-cup-eu-2026-08-21"],
-    "RELOAD_ELITE": ["reload-elite-ewc-paris-2026"]
+    "FNCS": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "RELOAD_ELITE": [
+      "reload-elite-ewc-paris-2026"
+    ],
+    "PLATFORM_CUP": [
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "PERFORMANCE_EVALUATION": [
+      "performance-evaluation-eu-2026"
+    ],
+    "MOBILE_SERIES": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "OTHER": [
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
   },
   "by_ruleset": {
-    "BUILD": ["fncs-global-2026-antwerp", "fncs-global-last-chance-eu-2026", "performance-evaluation-eu-2026"],
-    "MIXED": ["shadow-cup-eu-2026-08-21"],
-    "RELOAD": ["mobile-series-championship-copenhagen-2026", "reload-elite-ewc-paris-2026"]
+    "BUILD": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026",
+      "performance-evaluation-eu-2026"
+    ],
+    "RELOAD": [
+      "mobile-series-championship-copenhagen-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
+    "MIXED": [
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "shadow-cup-eu-2026-08-21"
+    ]
   },
   "by_team_format": {
-    "DUOS": ["fncs-global-2026-antwerp", "fncs-global-last-chance-eu-2026", "performance-evaluation-eu-2026", "reload-elite-ewc-paris-2026"],
-    "SOLOS": ["mobile-series-championship-copenhagen-2026", "shadow-cup-eu-2026-08-21"]
+    "DUOS": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026",
+      "performance-evaluation-eu-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
+    "SOLOS": [
+      "mobile-series-championship-copenhagen-2026",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "UNKNOWN": [
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
   },
   "by_platform_scope": {
-    "ALL_SUPPORTED": ["fncs-global-2026-antwerp", "fncs-global-last-chance-eu-2026", "performance-evaluation-eu-2026", "reload-elite-ewc-paris-2026", "shadow-cup-eu-2026-08-21"],
-    "MOBILE": ["mobile-series-championship-copenhagen-2026"]
+    "ALL_SUPPORTED": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026",
+      "performance-evaluation-eu-2026",
+      "reload-elite-ewc-paris-2026",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "MOBILE": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "UNKNOWN": [
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
   },
   "by_phase_type": {
-    "CHAMPIONSHIP": ["fncs-global-2026-antwerp:championship", "mobile-series-championship-copenhagen-2026:championship", "reload-elite-ewc-paris-2026:championship"],
-    "LCQ": ["fncs-global-last-chance-eu-2026:lcq"],
-    "OTHER": ["performance-evaluation-eu-2026:test-series", "shadow-cup-eu-2026-08-21:battle-royale", "shadow-cup-eu-2026-08-21:mobile", "shadow-cup-eu-2026-08-21:zero-build"]
+    "CHAMPIONSHIP": [
+      "fncs-global-2026-antwerp:championship",
+      "mobile-series-championship-copenhagen-2026:championship",
+      "reload-elite-ewc-paris-2026:championship"
+    ],
+    "LCQ": [
+      "fncs-global-last-chance-eu-2026:lcq"
+    ],
+    "OTHER": [
+      "override-series-crash-bandicoot-eu-2026-08-28:mobile",
+      "override-series-crash-bandicoot-eu-2026-08-28:reload",
+      "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload",
+      "performance-evaluation-eu-2026:test-series",
+      "shadow-cup-eu-2026-08-21:battle-royale",
+      "shadow-cup-eu-2026-08-21:mobile",
+      "shadow-cup-eu-2026-08-21:zero-build"
+    ]
   },
   "by_date": {
-    "2026-08-03": ["fncs-global-last-chance-eu-2026"],
-    "2026-08-04": ["fncs-global-last-chance-eu-2026"],
-    "2026-08-05": ["fncs-global-last-chance-eu-2026"],
-    "2026-08-07": ["fncs-global-last-chance-eu-2026"],
-    "2026-08-08": ["fncs-global-last-chance-eu-2026"],
-    "2026-08-19": ["reload-elite-ewc-paris-2026"],
-    "2026-08-20": ["reload-elite-ewc-paris-2026"],
-    "2026-08-21": ["reload-elite-ewc-paris-2026", "shadow-cup-eu-2026-08-21"],
-    "2026-08-22": ["reload-elite-ewc-paris-2026"],
-    "2026-08-23": ["performance-evaluation-eu-2026"],
-    "2026-09-26": ["fncs-global-2026-antwerp"],
-    "2026-09-27": ["fncs-global-2026-antwerp"],
-    "2026-10-24": ["mobile-series-championship-copenhagen-2026"],
-    "2026-10-25": ["mobile-series-championship-copenhagen-2026"]
+    "2026-09-26": [
+      "fncs-global-2026-antwerp"
+    ],
+    "2026-09-27": [
+      "fncs-global-2026-antwerp"
+    ],
+    "2026-08-19": [
+      "reload-elite-ewc-paris-2026"
+    ],
+    "2026-08-22": [
+      "reload-elite-ewc-paris-2026"
+    ],
+    "2026-08-20": [
+      "reload-elite-ewc-paris-2026"
+    ],
+    "2026-08-21": [
+      "reload-elite-ewc-paris-2026",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "2026-08-03": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-14": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-04": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-05": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-07": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-08": [
+      "fncs-global-last-chance-eu-2026"
+    ],
+    "2026-08-23": [
+      "performance-evaluation-eu-2026"
+    ],
+    "2026-10-22": [
+      "performance-evaluation-eu-2026"
+    ],
+    "2026-10-24": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "2026-10-25": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "2026-08-28": [
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
   },
   "sessions": {
     "all_ids": [
@@ -97,6 +233,9 @@
       "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2",
+      "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
+      "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
+      "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1",
@@ -108,59 +247,221 @@
       "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
     ],
     "by_exact_date": {
-      "2026-08-03": ["fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1"],
-      "2026-08-04": ["fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2"],
-      "2026-08-05": ["fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3"],
-      "2026-08-07": ["fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1"],
-      "2026-08-08": ["fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2"],
-      "2026-08-19": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1"],
-      "2026-08-20": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2"],
-      "2026-08-21": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival", "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1", "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1", "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"],
-      "2026-08-22": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"],
-      "2026-08-23": ["performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1", "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"]
+      "2026-08-19": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1"
+      ],
+      "2026-08-20": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2"
+      ],
+      "2026-08-21": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival",
+        "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
+        "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
+        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+      ],
+      "2026-08-22": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"
+      ],
+      "2026-08-03": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1"
+      ],
+      "2026-08-04": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2"
+      ],
+      "2026-08-05": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3"
+      ],
+      "2026-08-07": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1"
+      ],
+      "2026-08-08": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2"
+      ],
+      "2026-08-23": [
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"
+      ],
+      "2026-08-28": [
+        "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
+        "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
+        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1"
+      ]
     },
     "by_status": {
-      "COMPLETED": ["fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1", "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2", "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3", "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1", "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2", "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1", "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2", "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival", "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"],
-      "SCHEDULED": ["performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1", "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2", "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1", "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1", "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"]
+      "COMPLETED": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1",
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2",
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3",
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1",
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2",
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1",
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2",
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival",
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"
+      ],
+      "SCHEDULED": [
+        "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
+        "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
+        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
+        "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
+        "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
+        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+      ]
     },
     "by_start_at": {
-      "2026-08-03T17:00:00+02:00": ["fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1"],
-      "2026-08-04T17:00:00+02:00": ["fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2"],
-      "2026-08-05T17:00:00+02:00": ["fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3"],
-      "2026-08-07T17:00:00+02:00": ["fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1"],
-      "2026-08-08T17:00:00+02:00": ["fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2"],
-      "2026-08-19T15:00:00+02:00": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1"],
-      "2026-08-20T15:00:00+02:00": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2"],
-      "2026-08-21T15:00:00+02:00": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival"],
-      "2026-08-21T16:00:00+02:00": ["shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1"],
-      "2026-08-21T17:00:00+02:00": ["shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1", "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"],
-      "2026-08-22T12:00:00+02:00": ["reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"],
-      "2026-08-23T16:00:00+02:00": ["performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1"],
-      "2026-08-23T19:00:00+02:00": ["performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"]
+      "2026-08-19T15:00:00+02:00": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1"
+      ],
+      "2026-08-20T15:00:00+02:00": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2"
+      ],
+      "2026-08-21T15:00:00+02:00": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival"
+      ],
+      "2026-08-22T12:00:00+02:00": [
+        "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"
+      ],
+      "2026-08-03T17:00:00+02:00": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1"
+      ],
+      "2026-08-04T17:00:00+02:00": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2"
+      ],
+      "2026-08-05T17:00:00+02:00": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3"
+      ],
+      "2026-08-07T17:00:00+02:00": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1"
+      ],
+      "2026-08-08T17:00:00+02:00": [
+        "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2"
+      ],
+      "2026-08-21T16:00:00+02:00": [
+        "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1"
+      ],
+      "2026-08-21T17:00:00+02:00": [
+        "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
+        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+      ],
+      "2026-08-23T16:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1"
+      ],
+      "2026-08-23T19:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"
+      ],
+      "2026-08-28T16:00:00+02:00": [
+        "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1"
+      ],
+      "2026-08-28T17:00:00+02:00": [
+        "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
+        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1"
+      ]
     }
   },
   "actionable": {
-    "ATTEND": ["fncs-global-2026-antwerp", "mobile-series-championship-copenhagen-2026", "reload-elite-ewc-paris-2026"],
-    "CHECK_IN": [],
-    "FOLLOW": ["fncs-global-last-chance-eu-2026"],
-    "PLAY": ["shadow-cup-eu-2026-08-21"],
+    "ATTEND": [
+      "fncs-global-2026-antwerp",
+      "mobile-series-championship-copenhagen-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
+    "WATCH": [
+      "fncs-global-2026-antwerp",
+      "mobile-series-championship-copenhagen-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
     "REGISTER": [],
-    "WATCH": ["fncs-global-2026-antwerp", "mobile-series-championship-copenhagen-2026", "reload-elite-ewc-paris-2026"]
+    "CHECK_IN": [],
+    "PLAY": [
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "FOLLOW": [
+      "fncs-global-last-chance-eu-2026"
+    ]
   },
-  "deadlines": {"LAST_CHECK_IN_AT": [], "LAST_QUALIFIER_AT": [], "LAST_REGISTRATION_AT": []},
+  "deadlines": {
+    "LAST_CHECK_IN_AT": [],
+    "LAST_QUALIFIER_AT": [],
+    "LAST_REGISTRATION_AT": []
+  },
   "qualification_graph": {
     "edges": [],
-    "unresolved_candidates": [{"from": "PHASE:fncs-global-last-chance-eu-2026:lcq", "to": "COMPETITION:fncs-global-2026-antwerp", "type": "QUALIFIES_TO", "status": "NOT_MATERIALIZED", "reason": "V1 ledger says advancement toward a global championship but exact sourced graph edge/slots are not yet materialized in V2."}]
+    "unresolved_candidates": [
+      {
+        "from": "PHASE:fncs-global-last-chance-eu-2026:lcq",
+        "to": "COMPETITION:fncs-global-2026-antwerp",
+        "type": "QUALIFIES_TO",
+        "status": "NOT_MATERIALIZED",
+        "reason": "V1 ledger says advancement toward a global championship but exact sourced graph edge/slots are not yet materialized in V2."
+      }
+    ]
   },
   "projection": {
-    "fncs-global-2026-antwerp": {"initial_level": "FEATURED", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": "fortnite-fncs-global-antwerp-20260926@openai"},
-    "fncs-global-last-chance-eu-2026": {"initial_level": "LEDGER_ONLY", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": null},
-    "mobile-series-championship-copenhagen-2026": {"initial_level": "FEATURED", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": "fortnite-mobile-series-championship-copenhagen-20261024@openai"},
-    "performance-evaluation-eu-2026": {"initial_level": "LEDGER_ONLY", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": null},
-    "reload-elite-ewc-paris-2026": {"initial_level": "FEATURED", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai"},
-    "shadow-cup-eu-2026-08-21": {"initial_level": "CALENDAR", "v2_score_status": "NOT_MATERIALIZED", "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai"}
+    "fncs-global-2026-antwerp": {
+      "initial_level": "FEATURED",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-fncs-global-antwerp-20260926@openai"
+    },
+    "reload-elite-ewc-paris-2026": {
+      "initial_level": "FEATURED",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai"
+    },
+    "fncs-global-last-chance-eu-2026": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "shadow-cup-eu-2026-08-21": {
+      "initial_level": "CALENDAR",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai"
+    },
+    "performance-evaluation-eu-2026": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "mobile-series-championship-copenhagen-2026": {
+      "initial_level": "FEATURED",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-mobile-series-championship-copenhagen-20261024@openai"
+    },
+    "override-series-crash-bandicoot-eu-2026-08-28": {
+      "initial_level": "CALENDAR",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai"
+    }
   },
-  "conflicts": [{"conflict_set_key": "2026-08-21:EU:MIXED", "session_ids": ["shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1", "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"], "reason": "Two projected Shadow Cup sessions overlap exactly; no automatic play choice is made."}],
-  "watch_targets": ["fncs-solo-october-2026"],
-  "rebuild_triggers": ["CALENDAR_DEMOTED", "CALENDAR_PROMOTED", "COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "ELIGIBILITY_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "REGISTRATION_CHANGED", "SESSION_ADDED", "SESSION_CANCELLED", "SESSION_TIME_CHANGED", "SOURCE_CORRECTION"]
+  "conflicts": [
+    {
+      "conflict_set_key": "2026-08-21:EU:MIXED",
+      "session_ids": [
+        "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
+        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+      ],
+      "reason": "Two projected Shadow Cup sessions overlap exactly; no automatic play choice is made."
+    }
+  ],
+  "watch_targets": [
+    "fncs-solo-october-2026"
+  ],
+  "rebuild_triggers": [
+    "CALENDAR_DEMOTED",
+    "CALENDAR_PROMOTED",
+    "COMPETITION_CREATED",
+    "COMPETITION_STATUS_CHANGED",
+    "ELIGIBILITY_CHANGED",
+    "PHASE_ADDED",
+    "PHASE_CHANGED",
+    "PRIZE_CHANGED",
+    "QUALIFICATION_CHANGED",
+    "REGISTRATION_CHANGED",
+    "SESSION_ADDED",
+    "SESSION_CANCELLED",
+    "SESSION_TIME_CHANGED",
+    "SOURCE_CORRECTION"
+  ]
 }

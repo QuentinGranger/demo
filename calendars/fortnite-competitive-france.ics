@@ -279,4 +279,53 @@ URL:https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
 CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenh
  ague,Danemark
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-crash-bandicoot-cup-eu-20260828@openai
+DTSTAMP:20260827T200011Z
+LAST-MODIFIED:20260827T200011Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PARTICIPATE
+X-FORTNITE-EVENT-TYPE:SPECIAL_COSMETIC_CUP
+X-FORTNITE-SERIES:OVERRIDE_SERIES
+X-FORTNITE-MODE:MIXED
+X-FORTNITE-FORMAT:MIXED
+X-FORTNITE-REGION:EU
+X-FORTNITE-THEME:CRASH_BANDICOOT
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-LAST-CHANGE-ID:chg_9a22269bdd60b9c74ab681b7
+X-FORTNITE-FIRST-ADDED-AT:20260827T200011Z
+X-FORTNITE-NEW-UNTIL:20260901T200011Z
+X-FORTNITE-SESSION;TYPE=MOBILE;FORMAT=SOLOS:20260828T160000/20260828T171500
+X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
+X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260
+ 828T193000
+DTSTART;TZID=Europe/Paris:20260828T160000
+DTEND;TZID=Europe/Paris:20260828T193000
+SUMMARY:⭐ ✅ 🆕 🥭 Override Series — Crash Bandicoot Cup EU
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
+ lle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobi
+ le : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero 
+ Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuv
+ ent concourir pour tenter de gagner des récompenses cosmétiques Crash Ba
+ ndicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont
+  pas matérialisés depuis les règles officielles.\nÉligibilité publié
+ e : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA act
+ ivée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBand
+ icootCup/?region=EU
+URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?regi
+ on=EU
+CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmét
+ iques
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload 
+ à 17h
+END:VALARM
+END:VEVENT
 END:VCALENDAR

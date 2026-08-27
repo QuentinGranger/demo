@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-23T14:00:55Z",
+  "updated_at": "2026-08-27T20:00:11Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -14,42 +14,285 @@
     "service_bridge": "Competitive sessions may reference FORTNITE_SERVICE_INTELLIGENCE_FR_V2 for officially linked outages/maintenance, but service state never changes tournament status without competitive evidence."
   },
   "identity": {
-    "competition_id_priority": ["official_event_id", "official_event_slug", "stable_normalized_series_season_region"],
+    "competition_id_priority": [
+      "official_event_id",
+      "official_event_slug",
+      "stable_normalized_series_season_region"
+    ],
     "phase_id_pattern": "<competition_id>:<phase-key>",
     "session_id_pattern": "<phase_id>:<region>:<YYYYMMDDTHHMM>:<round-or-slot>",
     "calendar_uid_policy": "Only projected logical events get a VEVENT UID. Hidden sessions keep stable ledger IDs without creating calendar UIDs.",
-    "dedupe_order": ["same official session/event id","same official event URL + region + exact start","same competition_id + phase + region + exact start + format + round label","otherwise keep separate until evidence supports merge"]
+    "dedupe_order": [
+      "same official session/event id",
+      "same official event URL + region + exact start",
+      "same competition_id + phase + region + exact start + format + round label",
+      "otherwise keep separate until evidence supports merge"
+    ]
   },
   "enums": {
-    "competition_status": ["ANNOUNCED", "REGISTRATION_OPEN", "SCHEDULED", "LIVE", "COMPLETED", "POSTPONED", "CANCELLED"],
-    "session_status": ["ANNOUNCED", "SCHEDULED", "LIVE", "COMPLETED", "POSTPONED", "CANCELLED"],
-    "visibility": ["LEDGER_ONLY", "CALENDAR", "FEATURED"],
-    "competition_class": ["FNCS", "RELOAD_ELITE", "CASH_CUP", "VICTORY_CUP", "RANKED_CUP", "PERFORMANCE_EVALUATION", "MOBILE_SERIES", "PLATFORM_CUP", "TEST_CUP", "THIRD_PARTY_OFFICIAL", "OTHER"],
-    "phase_type": ["OPEN", "QUALIFIER", "PLAY_IN", "GROUP_STAGE", "ROUND", "HEAT", "SEMIFINAL", "FINAL", "LCQ", "GRAND_FINAL", "CHAMPIONSHIP", "OTHER"],
-    "region": ["EU", "GLOBAL", "NAC", "NAW", "BR", "ASIA", "OCE", "ME"],
-    "ruleset": ["BUILD", "ZERO_BUILD", "RELOAD", "MIXED", "UNKNOWN"],
-    "team_format": ["SOLOS", "DUOS", "TRIOS", "SQUADS", "TEAMS", "UNKNOWN"],
-    "platform_scope": ["ALL_SUPPORTED", "PC", "PLAYSTATION", "XBOX", "NINTENDO", "MOBILE", "CONSOLE", "UNKNOWN"],
-    "eligibility_status": ["VERIFIED", "PARTIAL", "UNKNOWN"],
-    "qualification_type": ["POINTS_THRESHOLD", "PLACEMENT", "TOP_N", "SERIES_POINTS", "ADVANCEMENT", "INVITE", "UNKNOWN"],
-    "time_precision": ["EXACT", "DATE_ONLY", "DATE_RANGE", "UNPUBLISHED"]
+    "competition_status": [
+      "ANNOUNCED",
+      "REGISTRATION_OPEN",
+      "SCHEDULED",
+      "LIVE",
+      "COMPLETED",
+      "POSTPONED",
+      "CANCELLED"
+    ],
+    "session_status": [
+      "ANNOUNCED",
+      "SCHEDULED",
+      "LIVE",
+      "COMPLETED",
+      "POSTPONED",
+      "CANCELLED"
+    ],
+    "visibility": [
+      "LEDGER_ONLY",
+      "CALENDAR",
+      "FEATURED"
+    ],
+    "competition_class": [
+      "FNCS",
+      "RELOAD_ELITE",
+      "CASH_CUP",
+      "VICTORY_CUP",
+      "RANKED_CUP",
+      "PERFORMANCE_EVALUATION",
+      "MOBILE_SERIES",
+      "PLATFORM_CUP",
+      "TEST_CUP",
+      "THIRD_PARTY_OFFICIAL",
+      "OTHER"
+    ],
+    "phase_type": [
+      "OPEN",
+      "QUALIFIER",
+      "PLAY_IN",
+      "GROUP_STAGE",
+      "ROUND",
+      "HEAT",
+      "SEMIFINAL",
+      "FINAL",
+      "LCQ",
+      "GRAND_FINAL",
+      "CHAMPIONSHIP",
+      "OTHER"
+    ],
+    "region": [
+      "EU",
+      "GLOBAL",
+      "NAC",
+      "NAW",
+      "BR",
+      "ASIA",
+      "OCE",
+      "ME"
+    ],
+    "ruleset": [
+      "BUILD",
+      "ZERO_BUILD",
+      "RELOAD",
+      "MIXED",
+      "UNKNOWN"
+    ],
+    "team_format": [
+      "SOLOS",
+      "DUOS",
+      "TRIOS",
+      "SQUADS",
+      "TEAMS",
+      "UNKNOWN"
+    ],
+    "platform_scope": [
+      "ALL_SUPPORTED",
+      "PC",
+      "PLAYSTATION",
+      "XBOX",
+      "NINTENDO",
+      "MOBILE",
+      "CONSOLE",
+      "UNKNOWN"
+    ],
+    "eligibility_status": [
+      "VERIFIED",
+      "PARTIAL",
+      "UNKNOWN"
+    ],
+    "qualification_type": [
+      "POINTS_THRESHOLD",
+      "PLACEMENT",
+      "TOP_N",
+      "SERIES_POINTS",
+      "ADVANCEMENT",
+      "INVITE",
+      "UNKNOWN"
+    ],
+    "time_precision": [
+      "EXACT",
+      "DATE_ONLY",
+      "DATE_RANGE",
+      "UNPUBLISHED"
+    ]
   },
   "schema": {
-    "competition_required": ["competition_id", "name", "competition_class", "status", "regions", "visibility", "source_ids", "phases", "history"],
-    "competition_fields": ["official_event_id", "official_event_slug", "series_id", "season_id", "name", "competition_class", "status", "regions", "ruleset", "team_format", "platform_scope", "physical_event", "venue", "date_window", "registration", "eligibility", "prize_pool", "qualification", "result", "visibility", "calendar_uid", "source_ids", "source_urls", "phases", "history"],
-    "phase_fields": ["phase_id", "name", "phase_type", "order", "status", "registration", "eligibility_override", "qualification_override", "sessions"],
-    "session_fields": ["session_id", "official_session_id", "name", "session_number", "round_number", "round_label", "status", "region", "ruleset", "team_format", "platform_scope", "start_at", "end_at", "source_timezone", "display_timezone", "time_precision", "registration_deadline_at", "check_in_at", "max_matches", "qualification", "prize", "source_url", "visibility", "calendar_uid", "related_service_event_ids"],
-    "registration_fields": ["opens_at", "closes_at", "check_in_at", "method", "url", "required", "source_id", "confidence"],
-    "eligibility_fields": ["status", "minimum_rank", "account_level", "age_min", "two_factor_required", "region_lock", "platform_requirements", "team_requirements", "other_rules", "rules_url"],
-    "prize_fields": ["currency", "total_amount", "region_amount", "session_amount", "distribution", "source_id", "confidence"],
-    "qualification_fields": ["type", "from_phase", "to_phase", "slots", "criteria", "tie_break", "source_id", "confidence"],
-    "result_fields": ["finality", "champion_club", "mvp", "first_place_prize_usd", "club_championship_points", "runner_up", "third_place", "source_id", "source_url", "observed_at"]
+    "competition_required": [
+      "competition_id",
+      "name",
+      "competition_class",
+      "status",
+      "regions",
+      "visibility",
+      "source_ids",
+      "phases",
+      "history"
+    ],
+    "competition_fields": [
+      "official_event_id",
+      "official_event_slug",
+      "series_id",
+      "season_id",
+      "name",
+      "competition_class",
+      "status",
+      "regions",
+      "ruleset",
+      "team_format",
+      "platform_scope",
+      "physical_event",
+      "venue",
+      "date_window",
+      "registration",
+      "eligibility",
+      "prize_pool",
+      "qualification",
+      "result",
+      "visibility",
+      "calendar_uid",
+      "source_ids",
+      "source_urls",
+      "phases",
+      "history"
+    ],
+    "phase_fields": [
+      "phase_id",
+      "name",
+      "phase_type",
+      "order",
+      "status",
+      "registration",
+      "eligibility_override",
+      "qualification_override",
+      "sessions"
+    ],
+    "session_fields": [
+      "session_id",
+      "official_session_id",
+      "name",
+      "session_number",
+      "round_number",
+      "round_label",
+      "status",
+      "region",
+      "ruleset",
+      "team_format",
+      "platform_scope",
+      "start_at",
+      "end_at",
+      "source_timezone",
+      "display_timezone",
+      "time_precision",
+      "registration_deadline_at",
+      "check_in_at",
+      "max_matches",
+      "qualification",
+      "prize",
+      "source_url",
+      "visibility",
+      "calendar_uid",
+      "related_service_event_ids"
+    ],
+    "registration_fields": [
+      "opens_at",
+      "closes_at",
+      "check_in_at",
+      "method",
+      "url",
+      "required",
+      "source_id",
+      "confidence"
+    ],
+    "eligibility_fields": [
+      "status",
+      "minimum_rank",
+      "account_level",
+      "age_min",
+      "two_factor_required",
+      "region_lock",
+      "platform_requirements",
+      "team_requirements",
+      "other_rules",
+      "rules_url"
+    ],
+    "prize_fields": [
+      "currency",
+      "total_amount",
+      "region_amount",
+      "session_amount",
+      "distribution",
+      "source_id",
+      "confidence"
+    ],
+    "qualification_fields": [
+      "type",
+      "from_phase",
+      "to_phase",
+      "slots",
+      "criteria",
+      "tie_break",
+      "source_id",
+      "confidence"
+    ],
+    "result_fields": [
+      "finality",
+      "champion_club",
+      "mvp",
+      "first_place_prize_usd",
+      "club_championship_points",
+      "runner_up",
+      "third_place",
+      "source_id",
+      "source_url",
+      "observed_at"
+    ]
   },
   "calendar_projection_policy": {
-    "FEATURED": ["FNCS finals/major championship/global championship","Reload Elite Championship / EWC or equivalent top-tier event","major official LAN or in-person event in France/Europe","session with major qualification consequence or user planning value"],
-    "CALENDAR": ["important EU qualifier/final","large cash event with meaningful qualification or platform specificity","registration opening/closing deadline when action is required"],
-    "LEDGER_ONLY": ["ordinary ranked cups","routine victory cups","performance evaluations","test cups","repetitive low-stakes sessions unless specifically requested"],
-    "promotion_signals": ["major prize pool","qualification to FNCS/global/LAN","France/Europe physical attendance","registration deadline","platform-specific opportunity relevant to the user","officially elevated tournament status"],
+    "FEATURED": [
+      "FNCS finals/major championship/global championship",
+      "Reload Elite Championship / EWC or equivalent top-tier event",
+      "major official LAN or in-person event in France/Europe",
+      "session with major qualification consequence or user planning value"
+    ],
+    "CALENDAR": [
+      "important EU qualifier/final",
+      "large cash event with meaningful qualification or platform specificity",
+      "registration opening/closing deadline when action is required"
+    ],
+    "LEDGER_ONLY": [
+      "ordinary ranked cups",
+      "routine victory cups",
+      "performance evaluations",
+      "test cups",
+      "repetitive low-stakes sessions unless specifically requested"
+    ],
+    "promotion_signals": [
+      "major prize pool",
+      "qualification to FNCS/global/LAN",
+      "France/Europe physical attendance",
+      "registration deadline",
+      "platform-specific opportunity relevant to the user",
+      "officially elevated tournament status"
+    ],
     "anti_bazar": "Never create one VEVENT per match/game. Normally project one logical competition phase/run, while retaining every underlying session in the ledger."
   },
   "timezone_policy": {
@@ -58,9 +301,42 @@
     "dst_guard": "Use actual timezone rules for the event date; never apply a fixed UTC offset across DST changes.",
     "ambiguous_time": "If the official page exposes a suspicious 24-hour placeholder/window instead of a reliable session time, store time_precision as DATE_ONLY/DATE_RANGE and do not create an exact calendar time."
   },
-  "deadline_bridge": {"types":["LAST_REGISTRATION_AT","LAST_CHECK_IN_AT","LAST_QUALIFIER_AT"],"rule":"Only exact, officially supported deadlines are exported to the deadline ledger. A tournament may remain LEDGER_ONLY while its registration deadline becomes independently actionable.","dedupe_key":"competition_id + phase_id + deadline_type + deadline_at"},
-  "history_event_types": ["COMPETITION_CREATED", "COMPETITION_STATUS_CHANGED", "PHASE_ADDED", "PHASE_CHANGED", "SESSION_ADDED", "SESSION_TIME_CHANGED", "SESSION_CANCELLED", "SESSION_COMPLETED", "REGISTRATION_OPENED", "REGISTRATION_CHANGED", "ELIGIBILITY_CHANGED", "PRIZE_CHANGED", "QUALIFICATION_CHANGED", "CALENDAR_PROMOTED", "CALENDAR_DEMOTED", "SOURCE_CORRECTION"],
-  "ingestion_policy": {"scope":"EU official schedule plus GLOBAL majors relevant to EU/France","all_eu_sessions":true,"small_cups_ingested":true,"small_cups_calendar_default":false,"official_schedule_url":"https://www.fortnite.com/competitive/schedule?lang=fr&region=EU","event_pages":"Use official event-specific pages when they provide richer phase, eligibility, prize or qualification details.","write_policy":"Do not commit a pure recheck. Write only new/changed competitions, phases, sessions, rules, deadlines, prize/qualification data or projection changes."},
+  "deadline_bridge": {
+    "types": [
+      "LAST_REGISTRATION_AT",
+      "LAST_CHECK_IN_AT",
+      "LAST_QUALIFIER_AT"
+    ],
+    "rule": "Only exact, officially supported deadlines are exported to the deadline ledger. A tournament may remain LEDGER_ONLY while its registration deadline becomes independently actionable.",
+    "dedupe_key": "competition_id + phase_id + deadline_type + deadline_at"
+  },
+  "history_event_types": [
+    "COMPETITION_CREATED",
+    "COMPETITION_STATUS_CHANGED",
+    "PHASE_ADDED",
+    "PHASE_CHANGED",
+    "SESSION_ADDED",
+    "SESSION_TIME_CHANGED",
+    "SESSION_CANCELLED",
+    "SESSION_COMPLETED",
+    "REGISTRATION_OPENED",
+    "REGISTRATION_CHANGED",
+    "ELIGIBILITY_CHANGED",
+    "PRIZE_CHANGED",
+    "QUALIFICATION_CHANGED",
+    "CALENDAR_PROMOTED",
+    "CALENDAR_DEMOTED",
+    "SOURCE_CORRECTION"
+  ],
+  "ingestion_policy": {
+    "scope": "EU official schedule plus GLOBAL majors relevant to EU/France",
+    "all_eu_sessions": true,
+    "small_cups_ingested": true,
+    "small_cups_calendar_default": false,
+    "official_schedule_url": "https://www.fortnite.com/competitive/schedule?lang=fr&region=EU",
+    "event_pages": "Use official event-specific pages when they provide richer phase, eligibility, prize or qualification details.",
+    "write_policy": "Do not commit a pure recheck. Write only new/changed competitions, phases, sessions, rules, deadlines, prize/qualification data or projection changes."
+  },
   "competitions": [
     {
       "competition_id": "fncs-global-2026-antwerp",
@@ -71,23 +347,80 @@
       "name": "Fortnite Global Championship 2026 — Anvers",
       "competition_class": "FNCS",
       "status": "SCHEDULED",
-      "regions": ["GLOBAL"],
+      "regions": [
+        "GLOBAL"
+      ],
       "ruleset": "BUILD",
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": true,
-      "venue": {"name":"Lotto Arena","city":"Antwerpen","country":"Belgium","address":"Schijnpoortweg 119, Antwerpen, Belgium"},
-      "date_window": {"start_date":"2026-09-26","end_date":"2026-09-27","time_precision":"DATE_RANGE"},
+      "venue": {
+        "name": "Lotto Arena",
+        "city": "Antwerpen",
+        "country": "Belgium",
+        "address": "Schijnpoortweg 119, Antwerpen, Belgium"
+      },
+      "date_window": {
+        "start_date": "2026-09-26",
+        "end_date": "2026-09-27",
+        "time_precision": "DATE_RANGE"
+      },
       "registration": null,
-      "eligibility": {"status":"UNKNOWN"},
-      "prize_pool": {"currency":"USD","total_amount":2000000,"region_amount":null,"session_amount":null,"distribution":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": {
+        "currency": "USD",
+        "total_amount": 2000000,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
       "qualification": null,
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-fncs-global-antwerp-20260926@openai",
-      "source_ids": ["fortnite_competitive","lotto_arena"],
-      "source_urls": ["https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr","https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"],
-      "phases": [{"phase_id":"fncs-global-2026-antwerp:championship","name":"Global Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATES_ONLY","venue_time_hints":[{"at":"2026-09-26T14:00:00+02:00","status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"},{"at":"2026-09-27T18:30:00+02:00","status":"VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"}]}],
-      "history": [{"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."}]
+      "source_ids": [
+        "fortnite_competitive",
+        "lotto_arena"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr",
+        "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-global-2026-antwerp:championship",
+          "name": "Global Championship",
+          "phase_type": "CHAMPIONSHIP",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [],
+          "schedule_completeness": "DATES_ONLY",
+          "venue_time_hints": [
+            {
+              "at": "2026-09-26T14:00:00+02:00",
+              "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"
+            },
+            {
+              "at": "2026-09-27T18:30:00+02:00",
+              "status": "VENUE_LISTED_NOT_COMPETITIVE_SCHEDULE"
+            }
+          ]
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-19T09:35:00Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."
+        }
+      ]
     },
     {
       "competition_id": "reload-elite-ewc-paris-2026",
@@ -98,29 +431,221 @@
       "name": "Reload Elite Series Championship — EWC 2026 — Paris",
       "competition_class": "RELOAD_ELITE",
       "status": "COMPLETED",
-      "regions": ["GLOBAL"],
+      "regions": [
+        "GLOBAL"
+      ],
       "ruleset": "RELOAD",
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": true,
-      "venue": {"name":"Paris Expo Porte de Versailles","city":"Paris","country":"France","address":"1 Place de la Porte de Versailles, 75015 Paris, France"},
-      "date_window": {"start_date":"2026-08-19","end_date":"2026-08-22","time_precision":"DATE_RANGE"},
+      "venue": {
+        "name": "Paris Expo Porte de Versailles",
+        "city": "Paris",
+        "country": "France",
+        "address": "1 Place de la Porte de Versailles, 75015 Paris, France"
+      },
+      "date_window": {
+        "start_date": "2026-08-19",
+        "end_date": "2026-08-22",
+        "time_precision": "DATE_RANGE"
+      },
       "registration": null,
-      "eligibility": {"status":"UNKNOWN"},
-      "prize_pool": {"currency":"USD","total_amount":1000000,"region_amount":null,"session_amount":null,"distribution":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": {
+        "currency": "USD",
+        "total_amount": 1000000,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
       "qualification": null,
-      "result": {"finality":"FINAL_OFFICIAL","champion_club":"BIG","mvp":"VICO","first_place_prize_usd":260000,"club_championship_points":1000,"runner_up":"RVNS SkyJump + LYOST Momsy","third_place":"Aurora Gaming","source_id":"ewc_official","source_url":"https://ewc-web.prod.esf-systems.com/en/competitions/2026/fortnite","observed_at":"2026-08-23T00:06:12Z"},
+      "result": {
+        "finality": "FINAL_OFFICIAL",
+        "champion_club": "BIG",
+        "mvp": "VICO",
+        "first_place_prize_usd": 260000,
+        "club_championship_points": 1000,
+        "runner_up": "RVNS SkyJump + LYOST Momsy",
+        "third_place": "Aurora Gaming",
+        "source_id": "ewc_official",
+        "source_url": "https://ewc-web.prod.esf-systems.com/en/competitions/2026/fortnite",
+        "observed_at": "2026-08-23T00:06:12Z"
+      },
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
-      "source_ids": ["fortnite_competitive","ewc_official"],
-      "source_urls": ["https://www.fortnite.com/competitive/events/EWCParis/?region=EU","https://www.signup.esportsworldcup.com/EWCPARIS26","https://resources.esportsworldcup.com/en/competitive-ops/articles/article","https://ewc-web.prod.esf-systems.com/en/schedule","https://ewc-web.prod.esf-systems.com/en/competitions/2026/fortnite"],
-      "phases": [{"phase_id":"reload-elite-ewc-paris-2026:championship","name":"Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"COMPLETED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1","official_session_id":null,"name":"Group Stage — Jour 1","session_number":1,"round_number":1,"round_label":"GROUP_STAGE_DAY_1","status":"COMPLETED","region":"GLOBAL","ruleset":"RELOAD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-19T15:00:00+02:00","end_at":null,"source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://ewc-web.prod.esf-systems.com/en/schedule","visibility":"FEATURED","calendar_uid":"fortnite-reload-elite-ewc-paris-20260819@openai","related_service_event_ids":[],"venue_zone_label":"Qiddiya City Grid"},{"session_id":"reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2","official_session_id":null,"name":"Group Stage — Jour 2","session_number":2,"round_number":2,"round_label":"GROUP_STAGE_DAY_2","status":"COMPLETED","region":"GLOBAL","ruleset":"RELOAD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-20T15:00:00+02:00","end_at":null,"source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://ewc-web.prod.esf-systems.com/en/schedule","visibility":"FEATURED","calendar_uid":"fortnite-reload-elite-ewc-paris-20260819@openai","related_service_event_ids":[],"venue_zone_label":"Qiddiya City Grid"},{"session_id":"reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival","official_session_id":null,"name":"Survival","session_number":3,"round_number":3,"round_label":"SURVIVAL","status":"COMPLETED","region":"GLOBAL","ruleset":"RELOAD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T15:00:00+02:00","end_at":null,"source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://ewc-web.prod.esf-systems.com/en/schedule","visibility":"FEATURED","calendar_uid":"fortnite-reload-elite-ewc-paris-20260819@openai","related_service_event_ids":[],"venue_zone_label":"Qiddiya City Grid"},{"session_id":"reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals","official_session_id":null,"name":"Finals","session_number":4,"round_number":4,"round_label":"FINALS","status":"COMPLETED","region":"GLOBAL","ruleset":"RELOAD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-22T12:00:00+02:00","end_at":null,"source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://ewc-web.prod.esf-systems.com/en/schedule","visibility":"FEATURED","calendar_uid":"fortnite-reload-elite-ewc-paris-20260819@openai","related_service_event_ids":[],"venue_zone_label":"Qiddiya City Grid"}],"schedule_completeness":"EXACT_STARTS_ENDS_UNKNOWN"}],
+      "source_ids": [
+        "fortnite_competitive",
+        "ewc_official"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/EWCParis/?region=EU",
+        "https://www.signup.esportsworldcup.com/EWCPARIS26",
+        "https://resources.esportsworldcup.com/en/competitive-ops/articles/article",
+        "https://ewc-web.prod.esf-systems.com/en/schedule",
+        "https://ewc-web.prod.esf-systems.com/en/competitions/2026/fortnite"
+      ],
+      "phases": [
+        {
+          "phase_id": "reload-elite-ewc-paris-2026:championship",
+          "name": "Championship",
+          "phase_type": "CHAMPIONSHIP",
+          "order": 1,
+          "status": "COMPLETED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1",
+              "official_session_id": null,
+              "name": "Group Stage — Jour 1",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "GROUP_STAGE_DAY_1",
+              "status": "COMPLETED",
+              "region": "GLOBAL",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-19T15:00:00+02:00",
+              "end_at": null,
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://ewc-web.prod.esf-systems.com/en/schedule",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+              "related_service_event_ids": [],
+              "venue_zone_label": "Qiddiya City Grid"
+            },
+            {
+              "session_id": "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2",
+              "official_session_id": null,
+              "name": "Group Stage — Jour 2",
+              "session_number": 2,
+              "round_number": 2,
+              "round_label": "GROUP_STAGE_DAY_2",
+              "status": "COMPLETED",
+              "region": "GLOBAL",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-20T15:00:00+02:00",
+              "end_at": null,
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://ewc-web.prod.esf-systems.com/en/schedule",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+              "related_service_event_ids": [],
+              "venue_zone_label": "Qiddiya City Grid"
+            },
+            {
+              "session_id": "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival",
+              "official_session_id": null,
+              "name": "Survival",
+              "session_number": 3,
+              "round_number": 3,
+              "round_label": "SURVIVAL",
+              "status": "COMPLETED",
+              "region": "GLOBAL",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-21T15:00:00+02:00",
+              "end_at": null,
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://ewc-web.prod.esf-systems.com/en/schedule",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+              "related_service_event_ids": [],
+              "venue_zone_label": "Qiddiya City Grid"
+            },
+            {
+              "session_id": "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals",
+              "official_session_id": null,
+              "name": "Finals",
+              "session_number": 4,
+              "round_number": 4,
+              "round_label": "FINALS",
+              "status": "COMPLETED",
+              "region": "GLOBAL",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-22T12:00:00+02:00",
+              "end_at": null,
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://ewc-web.prod.esf-systems.com/en/schedule",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-reload-elite-ewc-paris-20260819@openai",
+              "related_service_event_ids": [],
+              "venue_zone_label": "Qiddiya City Grid"
+            }
+          ],
+          "schedule_completeness": "EXACT_STARTS_ENDS_UNKNOWN"
+        }
+      ],
       "history": [
-        {"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."},
-        {"at":"2026-08-19T18:12:23Z","type":"SOURCE_CORRECTION","source_id":"ewc_official","note":"A previously followed EWC ticket page identified Boulevard City, Riyadh. Multiple regional qualifier pages also contained Riyadh wording; the conflict with Paris was retained in audit."},
-        {"at":"2026-08-19T21:03:30Z","type":"SOURCE_CORRECTION","source_id":"fortnite_competitive","note":"Current Reload Elite Series Championship details explicitly place the top 40 duos at the Esports World Cup in Paris, France, Aug 19–22. EWC's July 17 official rulebook update says the event was relocated to Paris, and the current EWC Paris signup says the 2026 Esports World Cup continues in Paris. Older regional qualifier copy still says Riyadh and is retained as conflicting historical evidence. Current championship/event-level sources control the canonical location."},
-        {"at":"2026-08-21T17:10:49Z","type":"SESSION_ADDED","source_id":"ewc_official","note":"EWC's official schedule now supplies exact start times in the Paris event context: Group Stage 15:00 on Aug 19 and Aug 20, Survival 15:00 on Aug 21, and Finals 12:00 on Aug 22. End times are not inferred. Qiddiya City Grid is retained only as the schedule's competition-zone label, not as a public-entry instruction."},
-        {"at":"2026-08-23T00:06:12Z","type":"COMPETITION_STATUS_CHANGED","source_id":"ewc_official","note":"Official EWC final standings now mark the Fortnite Reload Championship complete. BIG is champion, winning $260,000 and 1,000 Club Championship points; VICO is the event MVP. RVNS SkyJump + LYOST Momsy are second and Aurora Gaming third. Results do not alter calendar DTSTART/DTEND."}
+        {
+          "at": "2026-08-19T09:35:00Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Seeded from existing confirmed EWC Paris calendar state; suspicious placeholder session windows are not treated as exact match times."
+        },
+        {
+          "at": "2026-08-19T18:12:23Z",
+          "type": "SOURCE_CORRECTION",
+          "source_id": "ewc_official",
+          "note": "A previously followed EWC ticket page identified Boulevard City, Riyadh. Multiple regional qualifier pages also contained Riyadh wording; the conflict with Paris was retained in audit."
+        },
+        {
+          "at": "2026-08-19T21:03:30Z",
+          "type": "SOURCE_CORRECTION",
+          "source_id": "fortnite_competitive",
+          "note": "Current Reload Elite Series Championship details explicitly place the top 40 duos at the Esports World Cup in Paris, France, Aug 19–22. EWC's July 17 official rulebook update says the event was relocated to Paris, and the current EWC Paris signup says the 2026 Esports World Cup continues in Paris. Older regional qualifier copy still says Riyadh and is retained as conflicting historical evidence. Current championship/event-level sources control the canonical location."
+        },
+        {
+          "at": "2026-08-21T17:10:49Z",
+          "type": "SESSION_ADDED",
+          "source_id": "ewc_official",
+          "note": "EWC's official schedule now supplies exact start times in the Paris event context: Group Stage 15:00 on Aug 19 and Aug 20, Survival 15:00 on Aug 21, and Finals 12:00 on Aug 22. End times are not inferred. Qiddiya City Grid is retained only as the schedule's competition-zone label, not as a public-entry instruction."
+        },
+        {
+          "at": "2026-08-23T00:06:12Z",
+          "type": "COMPETITION_STATUS_CHANGED",
+          "source_id": "ewc_official",
+          "note": "Official EWC final standings now mark the Fortnite Reload Championship complete. BIG is champion, winning $260,000 and 1,000 Club Championship points; VICO is the event MVP. RVNS SkyJump + LYOST Momsy are second and Aurora Gaming third. Results do not alter calendar DTSTART/DTEND."
+        }
       ]
     },
     {
@@ -132,21 +657,42 @@
       "name": "Championnat global FNCS — Dernière chance EU",
       "competition_class": "FNCS",
       "status": "COMPLETED",
-      "regions": ["EU"],
+      "regions": [
+        "EU"
+      ],
       "ruleset": "BUILD",
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": false,
       "venue": null,
-      "date_window": {"start_date":"2026-08-03","end_date":"2026-08-14","time_precision":"DATE_RANGE"},
+      "date_window": {
+        "start_date": "2026-08-03",
+        "end_date": "2026-08-14",
+        "time_precision": "DATE_RANGE"
+      },
       "registration": null,
-      "eligibility": {"status":"UNKNOWN"},
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
       "prize_pool": null,
-      "qualification": {"type":"ADVANCEMENT","from_phase":"LCQ","to_phase":"GLOBAL_CHAMPIONSHIP","slots":null,"criteria":null,"tie_break":null,"source_id":"fortnite_competitive","confidence":"PARTIAL"},
+      "qualification": {
+        "type": "ADVANCEMENT",
+        "from_phase": "LCQ",
+        "to_phase": "GLOBAL_CHAMPIONSHIP",
+        "slots": null,
+        "criteria": null,
+        "tie_break": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "PARTIAL"
+      },
       "visibility": "LEDGER_ONLY",
       "calendar_uid": null,
-      "source_ids": ["fortnite_competitive"],
-      "source_urls": ["https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU"],
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU"
+      ],
       "phases": [
         {
           "phase_id": "fncs-global-last-chance-eu-2026:lcq",
@@ -158,16 +704,153 @@
           "eligibility_override": null,
           "qualification_override": null,
           "sessions": [
-            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1","official_session_id":null,"name":"Session 2 - Manche 1","session_number":2,"round_number":1,"round_label":"Session 2 - Manche 1","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-03T17:00:00+02:00","end_at":"2026-08-03T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
-            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2","official_session_id":null,"name":"Session 2 - Manche 2","session_number":2,"round_number":2,"round_label":"Session 2 - Manche 2","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-04T17:00:00+02:00","end_at":"2026-08-04T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
-            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3","official_session_id":null,"name":"Session 2 - Manche 3","session_number":2,"round_number":3,"round_label":"Session 2 - Manche 3","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-05T17:00:00+02:00","end_at":"2026-08-05T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
-            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1","official_session_id":null,"name":"Session 3 - Manche 1","session_number":3,"round_number":1,"round_label":"Session 3 - Manche 1","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-07T17:00:00+02:00","end_at":"2026-08-07T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},
-            {"session_id":"fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2","official_session_id":null,"name":"Session 3 - Manche 2","session_number":3,"round_number":2,"round_label":"Session 3 - Manche 2","status":"COMPLETED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-08T17:00:00+02:00","end_at":"2026-08-08T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]}
+            {
+              "session_id": "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1",
+              "official_session_id": null,
+              "name": "Session 2 - Manche 1",
+              "session_number": 2,
+              "round_number": 1,
+              "round_label": "Session 2 - Manche 1",
+              "status": "COMPLETED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-03T17:00:00+02:00",
+              "end_at": "2026-08-03T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2",
+              "official_session_id": null,
+              "name": "Session 2 - Manche 2",
+              "session_number": 2,
+              "round_number": 2,
+              "round_label": "Session 2 - Manche 2",
+              "status": "COMPLETED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-04T17:00:00+02:00",
+              "end_at": "2026-08-04T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3",
+              "official_session_id": null,
+              "name": "Session 2 - Manche 3",
+              "session_number": 2,
+              "round_number": 3,
+              "round_label": "Session 2 - Manche 3",
+              "status": "COMPLETED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-05T17:00:00+02:00",
+              "end_at": "2026-08-05T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "fncs-global-last-chance-eu-2026:lcq:EU:20260807T1700:s3r1",
+              "official_session_id": null,
+              "name": "Session 3 - Manche 1",
+              "session_number": 3,
+              "round_number": 1,
+              "round_label": "Session 3 - Manche 1",
+              "status": "COMPLETED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-07T17:00:00+02:00",
+              "end_at": "2026-08-07T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2",
+              "official_session_id": null,
+              "name": "Session 3 - Manche 2",
+              "session_number": 3,
+              "round_number": 2,
+              "round_label": "Session 3 - Manche 2",
+              "status": "COMPLETED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-08T17:00:00+02:00",
+              "end_at": "2026-08-08T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S36_FNCSMajor3_LCQ/schedule?lang=fr&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
           ],
           "schedule_completeness": "PARTIAL_SEE_OFFICIAL_SCHEDULE"
         }
       ],
-      "history": [{"at":"2026-08-19T09:35:00Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."}]
+      "history": [
+        {
+          "at": "2026-08-19T09:35:00Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Historical EU session seed used to initialize the session-level model; future ingestion must complete/maintain official schedule coverage."
+        }
+      ]
     },
     {
       "competition_id": "shadow-cup-eu-2026-08-21",
@@ -178,27 +861,200 @@
       "name": "Coupe Shadow — EU",
       "competition_class": "PLATFORM_CUP",
       "status": "SCHEDULED",
-      "regions": ["EU"],
+      "regions": [
+        "EU"
+      ],
       "ruleset": "MIXED",
       "team_format": "SOLOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": false,
       "venue": null,
-      "date_window": {"start_date":"2026-08-21","end_date":"2026-08-21","time_precision":"EXACT"},
+      "date_window": {
+        "start_date": "2026-08-21",
+        "end_date": "2026-08-21",
+        "time_precision": "EXACT"
+      },
       "registration": null,
-      "eligibility": {"status":"PARTIAL","minimum_rank":null,"account_level":null,"age_min":13,"two_factor_required":true,"region_lock":"EU","platform_requirements":"Mobile phase: Android/iOS only; Battle Royale and Zero Build phases: platform restriction not asserted beyond official event availability.","team_requirements":"SOLOS","other_rules":null,"rules_url":"https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"},
-      "prize_pool": {"currency":null,"total_amount":null,"region_amount":null,"session_amount":null,"distribution":"EU cosmetic rewards: Zero Build top 1000 and Battle Royale top 1000 receive Shadow the Hedgehog outfit, Super Shadow transformation emote and Doom's Eye back bling; Mobile top 200 receive the same set. Spray thresholds: ZB/BR 40 points Sonic's Roll + 8 points Shadow's Power; Mobile 20 points Sonic's Roll + 5 points Shadow's Power.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},
+      "eligibility": {
+        "status": "PARTIAL",
+        "minimum_rank": null,
+        "account_level": null,
+        "age_min": 13,
+        "two_factor_required": true,
+        "region_lock": "EU",
+        "platform_requirements": "Mobile phase: Android/iOS only; Battle Royale and Zero Build phases: platform restriction not asserted beyond official event availability.",
+        "team_requirements": "SOLOS",
+        "other_rules": null,
+        "rules_url": "https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"
+      },
+      "prize_pool": {
+        "currency": null,
+        "total_amount": null,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": "EU cosmetic rewards: Zero Build top 1000 and Battle Royale top 1000 receive Shadow the Hedgehog outfit, Super Shadow transformation emote and Doom's Eye back bling; Mobile top 200 receive the same set. Spray thresholds: ZB/BR 40 points Sonic's Roll + 8 points Shadow's Power; Mobile 20 points Sonic's Roll + 5 points Shadow's Power.",
+        "source_id": "fortnite_competitive_rules",
+        "confidence": "OFFICIAL"
+      },
       "qualification": null,
       "visibility": "CALENDAR",
       "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai",
-      "source_ids": ["fortnite_competitive","fortnite_competitive_rules"],
-      "source_urls": ["https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU","https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"],
-      "phases": [
-        {"phase_id":"shadow-cup-eu-2026-08-21:mobile","name":"Coupe Shadow Mobile","phase_type":"OTHER","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":{"status":"PARTIAL","platform_requirements":"Android/iOS","age_min":13,"two_factor_required":true},"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1","official_session_id":"S42_ShadowCup_Mobile_EU","name":"Coupe Shadow Mobile EU","session_number":1,"round_number":1,"round_label":"Mobile","status":"SCHEDULED","region":"EU","ruleset":"RELOAD","team_format":"SOLOS","platform_scope":"MOBILE","start_at":"2026-08-21T16:00:00+02:00","end_at":"2026-08-21T17:15:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":8,"qualification":null,"prize":{"distribution":"EU top 200: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 20 pts Sonic's Roll spray; 5 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"},
-        {"phase_id":"shadow-cup-eu-2026-08-21:battle-royale","name":"Coupe Shadow Battle Royale","phase_type":"OTHER","order":2,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_EU","name":"Coupe Shadow Battle Royale EU","session_number":1,"round_number":1,"round_label":"Battle Royale","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/schedule?lang=fr&region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"},
-        {"phase_id":"shadow-cup-eu-2026-08-21:zero-build","name":"Coupe Shadow Zéro construction","phase_type":"OTHER","order":3,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[{"session_id":"shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1","official_session_id":"S42_ShadowCup_ZB_EU","name":"Coupe Shadow Zéro construction EU","session_number":1,"round_number":1,"round_label":"Zéro construction","status":"SCHEDULED","region":"EU","ruleset":"ZERO_BUILD","team_format":"SOLOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-21T17:00:00+02:00","end_at":"2026-08-21T20:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":11,"qualification":null,"prize":{"distribution":"EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.","source_id":"fortnite_competitive_rules","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU","visibility":"CALENDAR","calendar_uid":"fortnite-shadow-cup-eu-20260821@openai","related_service_event_ids":[]}],"schedule_completeness":"EXACT"}
+      "source_ids": [
+        "fortnite_competitive",
+        "fortnite_competitive_rules"
       ],
-      "history": [{"at":"2026-08-21T06:19:11Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU schedule published three Shadow Cup sessions for Aug 21. Promoted to CALENDAR because official rules make it a time-sensitive cosmetic-reward opportunity before shop release, including a mobile-only phase."}]
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU",
+        "https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules"
+      ],
+      "phases": [
+        {
+          "phase_id": "shadow-cup-eu-2026-08-21:mobile",
+          "name": "Coupe Shadow Mobile",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": {
+            "status": "PARTIAL",
+            "platform_requirements": "Android/iOS",
+            "age_min": 13,
+            "two_factor_required": true
+          },
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
+              "official_session_id": "S42_ShadowCup_Mobile_EU",
+              "name": "Coupe Shadow Mobile EU",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "Mobile",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "SOLOS",
+              "platform_scope": "MOBILE",
+              "start_at": "2026-08-21T16:00:00+02:00",
+              "end_at": "2026-08-21T17:15:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 8,
+              "qualification": null,
+              "prize": {
+                "distribution": "EU top 200: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 20 pts Sonic's Roll spray; 5 pts Shadow's Power spray.",
+                "source_id": "fortnite_competitive_rules",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_ShadowCup_Mobile/?region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "shadow-cup-eu-2026-08-21:battle-royale",
+          "name": "Coupe Shadow Battle Royale",
+          "phase_type": "OTHER",
+          "order": 2,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
+              "official_session_id": "S42_ShadowCup_EU",
+              "name": "Coupe Shadow Battle Royale EU",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "Battle Royale",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-21T17:00:00+02:00",
+              "end_at": "2026-08-21T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": null,
+              "prize": {
+                "distribution": "EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.",
+                "source_id": "fortnite_competitive_rules",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/schedule?lang=fr&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "shadow-cup-eu-2026-08-21:zero-build",
+          "name": "Coupe Shadow Zéro construction",
+          "phase_type": "OTHER",
+          "order": 3,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1",
+              "official_session_id": "S42_ShadowCup_ZB_EU",
+              "name": "Coupe Shadow Zéro construction EU",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "Zéro construction",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-21T17:00:00+02:00",
+              "end_at": "2026-08-21T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": null,
+              "prize": {
+                "distribution": "EU top 1000: Shadow outfit + Super Shadow emote + Doom's Eye back bling; 40 pts Sonic's Roll spray; 8 pts Shadow's Power spray.",
+                "source_id": "fortnite_competitive_rules",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-shadow-cup-eu-20260821@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-21T06:19:11Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule published three Shadow Cup sessions for Aug 21. Promoted to CALENDAR because official rules make it a time-sensitive cosmetic-reward opportunity before shop release, including a mobile-only phase."
+        }
+      ]
     },
     {
       "competition_id": "performance-evaluation-eu-2026",
@@ -209,23 +1065,159 @@
       "name": "Évaluation des performances Fortnite — EU",
       "competition_class": "PERFORMANCE_EVALUATION",
       "status": "SCHEDULED",
-      "regions": ["EU"],
+      "regions": [
+        "EU"
+      ],
       "ruleset": "BUILD",
       "team_format": "DUOS",
       "platform_scope": "ALL_SUPPORTED",
       "physical_event": false,
       "venue": null,
-      "date_window": {"start_date":"2026-08-23","end_date":"2026-10-22","time_precision":"DATE_RANGE"},
+      "date_window": {
+        "start_date": "2026-08-23",
+        "end_date": "2026-10-22",
+        "time_precision": "DATE_RANGE"
+      },
       "registration": null,
-      "eligibility": {"status":"VERIFIED","minimum_rank":null,"account_level":null,"age_min":13,"two_factor_required":true,"region_lock":"EU","platform_requirements":null,"team_requirements":"DUOS","other_rules":"FNCS Division 1 OR top 5,000 of the overall Power Rankings Leaderboard. The event is a tournament/game-performance test; top 50 teams advance from Round 1 to Round 2. Cash prizes are awarded to top players after Round 2; exact distribution is not asserted here.","rules_url":"https://www.fortnite.com/competitive/rules-guidelines/rules-library"},
-      "prize_pool": {"currency":null,"total_amount":null,"region_amount":null,"session_amount":null,"distribution":"Cash prizes for top players at the conclusion of Round 2; amount/distribution not published on the event page excerpt.","source_id":"fortnite_competitive","confidence":"OFFICIAL"},
-      "qualification": {"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},
+      "eligibility": {
+        "status": "VERIFIED",
+        "minimum_rank": null,
+        "account_level": null,
+        "age_min": 13,
+        "two_factor_required": true,
+        "region_lock": "EU",
+        "platform_requirements": null,
+        "team_requirements": "DUOS",
+        "other_rules": "FNCS Division 1 OR top 5,000 of the overall Power Rankings Leaderboard. The event is a tournament/game-performance test; top 50 teams advance from Round 1 to Round 2. Cash prizes are awarded to top players after Round 2; exact distribution is not asserted here.",
+        "rules_url": "https://www.fortnite.com/competitive/rules-guidelines/rules-library"
+      },
+      "prize_pool": {
+        "currency": null,
+        "total_amount": null,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": "Cash prizes for top players at the conclusion of Round 2; amount/distribution not published on the event page excerpt.",
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
+      "qualification": {
+        "type": "TOP_N",
+        "from_phase": "ROUND_1",
+        "to_phase": "ROUND_2",
+        "slots": 50,
+        "criteria": "Top 50 teams advance to Round 2.",
+        "tie_break": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
       "visibility": "LEDGER_ONLY",
       "calendar_uid": null,
-      "source_ids": ["fortnite_competitive"],
-      "source_urls": ["https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","https://www.fortnite.com/competitive/schedule?lang=en-US&region=EU"],
-      "phases": [{"phase_id":"performance-evaluation-eu-2026:test-series","name":"Performance Evaluation test series","phase_type":"OTHER","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":{"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},"sessions":[{"session_id":"performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1","official_session_id":null,"name":"Session 1 - Manche 1","session_number":1,"round_number":1,"round_label":"Session 1 - Manche 1","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-23T16:00:00+02:00","end_at":"2026-08-23T18:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":{"type":"TOP_N","from_phase":"ROUND_1","to_phase":"ROUND_2","slots":50,"criteria":"Top 50 teams advance to Round 2.","tie_break":null,"source_id":"fortnite_competitive","confidence":"OFFICIAL"},"prize":null,"source_url":"https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]},{"session_id":"performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2","official_session_id":null,"name":"Session 1 - Manche 2","session_number":1,"round_number":2,"round_label":"Session 1 - Manche 2","status":"SCHEDULED","region":"EU","ruleset":"BUILD","team_format":"DUOS","platform_scope":"ALL_SUPPORTED","start_at":"2026-08-23T19:00:00+02:00","end_at":"2026-08-23T21:00:00+02:00","source_timezone":"Europe/Paris","display_timezone":"Europe/Paris","time_precision":"EXACT","registration_deadline_at":null,"check_in_at":null,"max_matches":null,"qualification":null,"prize":{"distribution":"Cash prizes awarded to top players after Round 2; exact amount not asserted.","source_id":"fortnite_competitive","confidence":"OFFICIAL"},"source_url":"https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU","visibility":"LEDGER_ONLY","calendar_uid":null,"related_service_event_ids":[]}],"schedule_completeness":"PARTIAL_SEE_OFFICIAL_SCHEDULE"}],
-      "history": [{"at":"2026-08-23T14:00:55Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official EU event page confirms an Aug 23–Oct 22 Performance Evaluation series, Duos Battle Royale, restricted to FNCS Division 1 or top 5,000 overall Power Rankings, with top 50 teams advancing to Round 2. The first EU two-round test is 16:00–18:00 and 19:00–21:00 Europe/Paris on Aug 23. Per projection policy, performance evaluations remain LEDGER_ONLY; later official sessions must be appended as discovered."}]
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU",
+        "https://www.fortnite.com/competitive/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "performance-evaluation-eu-2026:test-series",
+          "name": "Performance Evaluation test series",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": {
+            "type": "TOP_N",
+            "from_phase": "ROUND_1",
+            "to_phase": "ROUND_2",
+            "slots": 50,
+            "criteria": "Top 50 teams advance to Round 2.",
+            "tie_break": null,
+            "source_id": "fortnite_competitive",
+            "confidence": "OFFICIAL"
+          },
+          "sessions": [
+            {
+              "session_id": "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
+              "official_session_id": null,
+              "name": "Session 1 - Manche 1",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "Session 1 - Manche 1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-23T16:00:00+02:00",
+              "end_at": "2026-08-23T18:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": {
+                "type": "TOP_N",
+                "from_phase": "ROUND_1",
+                "to_phase": "ROUND_2",
+                "slots": 50,
+                "criteria": "Top 50 teams advance to Round 2.",
+                "tie_break": null,
+                "source_id": "fortnite_competitive",
+                "confidence": "OFFICIAL"
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
+              "official_session_id": null,
+              "name": "Session 1 - Manche 2",
+              "session_number": 1,
+              "round_number": 2,
+              "round_label": "Session 1 - Manche 2",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-23T19:00:00+02:00",
+              "end_at": "2026-08-23T21:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": {
+                "distribution": "Cash prizes awarded to top players after Round 2; exact amount not asserted.",
+                "source_id": "fortnite_competitive",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation/?region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "PARTIAL_SEE_OFFICIAL_SCHEDULE"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-23T14:00:55Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU event page confirms an Aug 23–Oct 22 Performance Evaluation series, Duos Battle Royale, restricted to FNCS Division 1 or top 5,000 overall Power Rankings, with top 50 teams advancing to Round 2. The first EU two-round test is 16:00–18:00 and 19:00–21:00 Europe/Paris on Aug 23. Per projection policy, performance evaluations remain LEDGER_ONLY; later official sessions must be appended as discovered."
+        }
+      ]
     },
     {
       "competition_id": "mobile-series-championship-copenhagen-2026",
@@ -236,24 +1228,288 @@
       "name": "Fortnite Mobile Series Championship 2026 — Copenhague",
       "competition_class": "MOBILE_SERIES",
       "status": "SCHEDULED",
-      "regions": ["GLOBAL"],
+      "regions": [
+        "GLOBAL"
+      ],
       "ruleset": "RELOAD",
       "team_format": "SOLOS",
       "platform_scope": "MOBILE",
       "physical_event": true,
-      "venue": {"name":"BLAST Studios","city":"Copenhagen","country":"Denmark","address":null},
-      "date_window": {"start_date":"2026-10-24","end_date":"2026-10-25","time_precision":"DATE_RANGE"},
+      "venue": {
+        "name": "BLAST Studios",
+        "city": "Copenhagen",
+        "country": "Denmark",
+        "address": null
+      },
+      "date_window": {
+        "start_date": "2026-10-24",
+        "end_date": "2026-10-25",
+        "time_precision": "DATE_RANGE"
+      },
       "registration": null,
-      "eligibility": {"status":"PARTIAL","minimum_rank":null,"account_level":null,"age_min":null,"two_factor_required":null,"region_lock":null,"platform_requirements":"Fortnite Mobile touch-only competitive path; championship field is the top 16 Fortnite Mobile players worldwide.","team_requirements":"SOLOS","other_rules":"Exact championship session times and public attendance/ticketing are not published on the official Mobile Series page.","rules_url":"https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"},
+      "eligibility": {
+        "status": "PARTIAL",
+        "minimum_rank": null,
+        "account_level": null,
+        "age_min": null,
+        "two_factor_required": null,
+        "region_lock": null,
+        "platform_requirements": "Fortnite Mobile touch-only competitive path; championship field is the top 16 Fortnite Mobile players worldwide.",
+        "team_requirements": "SOLOS",
+        "other_rules": "Exact championship session times and public attendance/ticketing are not published on the official Mobile Series page.",
+        "rules_url": "https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"
+      },
       "prize_pool": null,
-      "qualification": {"type":"ADVANCEMENT","from_phase":"MOBILE_SERIES","to_phase":"CHAMPIONSHIP","slots":16,"criteria":"Top 16 Fortnite Mobile players worldwide; detailed final qualification composition remains governed by the official Mobile Series path.","tie_break":null,"source_id":"fortnite_competitive","confidence":"PARTIAL"},
+      "qualification": {
+        "type": "ADVANCEMENT",
+        "from_phase": "MOBILE_SERIES",
+        "to_phase": "CHAMPIONSHIP",
+        "slots": 16,
+        "criteria": "Top 16 Fortnite Mobile players worldwide; detailed final qualification composition remains governed by the official Mobile Series path.",
+        "tie_break": null,
+        "source_id": "fortnite_competitive",
+        "confidence": "PARTIAL"
+      },
       "visibility": "FEATURED",
       "calendar_uid": "fortnite-mobile-series-championship-copenhagen-20261024@openai",
-      "source_ids": ["fortnite_competitive"],
-      "source_urls": ["https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"],
-      "phases": [{"phase_id":"mobile-series-championship-copenhagen-2026:championship","name":"Mobile Series Championship","phase_type":"CHAMPIONSHIP","order":1,"status":"SCHEDULED","registration":null,"eligibility_override":null,"qualification_override":null,"sessions":[],"schedule_completeness":"DATES_ONLY"}],
-      "history": [{"at":"2026-08-21T07:02:28Z","type":"COMPETITION_CREATED","source_id":"fortnite_competitive","note":"Official Mobile Series page confirms the first in-person championship on Oct 24-25, 2026 at BLAST Studios in Copenhagen with the top 16 Fortnite Mobile players worldwide. The page states $1,000,000 across the Mobile Series/Finals ecosystem; no championship-only prize amount, match times or public ticketing are inferred."}]
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "mobile-series-championship-copenhagen-2026:championship",
+          "name": "Mobile Series Championship",
+          "phase_type": "CHAMPIONSHIP",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [],
+          "schedule_completeness": "DATES_ONLY"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-21T07:02:28Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official Mobile Series page confirms the first in-person championship on Oct 24-25, 2026 at BLAST Studios in Copenhagen with the top 16 Fortnite Mobile players worldwide. The page states $1,000,000 across the Mobile Series/Finals ecosystem; no championship-only prize amount, match times or public ticketing are inferred."
+        }
+      ]
+    },
+    {
+      "competition_id": "override-series-crash-bandicoot-eu-2026-08-28",
+      "official_event_id": "S42_CrashBandicootCup",
+      "official_event_slug": "S42_CrashBandicootCup",
+      "series_id": "OVERRIDE_SERIES",
+      "season_id": "C7S4",
+      "name": "Override Series — Crash Bandicoot Cup — EU",
+      "competition_class": "OTHER",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "MIXED",
+      "team_format": "UNKNOWN",
+      "platform_scope": "UNKNOWN",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-28",
+        "end_date": "2026-08-28",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "PARTIAL",
+        "age_min": 13,
+        "two_factor_required": true
+      },
+      "prize_pool": {
+        "currency": null,
+        "total_amount": null,
+        "region_amount": null,
+        "session_amount": null,
+        "distribution": "Crash Bandicoot cosmetic rewards; exact thresholds not asserted from the event page.",
+        "source_id": "fortnite_competitive",
+        "confidence": "OFFICIAL"
+      },
+      "qualification": null,
+      "visibility": "CALENDAR",
+      "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai",
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU",
+        "https://www.fortnite.com/competitive/events/S42_CrashBandicootMobileCup/?region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "override-series-crash-bandicoot-eu-2026-08-28:mobile",
+          "name": "Mobile",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": {
+            "status": "PARTIAL",
+            "age_min": 13,
+            "two_factor_required": true
+          },
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
+              "official_session_id": "S42_CrashBandicootMobileCup_EU",
+              "name": "Override Series: Crash Bandicoot Mobile Cup",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "MOBILE",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "MOBILE",
+              "start_at": "2026-08-28T16:00:00+02:00",
+              "end_at": "2026-08-28T17:15:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": {
+                "distribution": "Chance to earn Crash Bandicoot cosmetic rewards; exact thresholds are not asserted here.",
+                "source_id": "fortnite_competitive",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootMobileCup/?region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "override-series-crash-bandicoot-eu-2026-08-28:reload",
+          "name": "Reload",
+          "phase_type": "OTHER",
+          "order": 2,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": {
+            "status": "PARTIAL",
+            "age_min": 13,
+            "two_factor_required": true
+          },
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
+              "official_session_id": "S42_CrashBandicootCup_Reload_EU",
+              "name": "Override Series: Crash Bandicoot Cup Reload",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "RELOAD",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-28T17:00:00+02:00",
+              "end_at": "2026-08-28T19:30:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": {
+                "distribution": "Chance to earn Crash Bandicoot cosmetic rewards; exact thresholds are not asserted here.",
+                "source_id": "fortnite_competitive",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload",
+          "name": "Zero Build Reload",
+          "phase_type": "OTHER",
+          "order": 3,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": {
+            "status": "PARTIAL",
+            "age_min": 13,
+            "two_factor_required": true
+          },
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+              "official_session_id": "S42_CrashBandicootCup_ZB_Reload_EU",
+              "name": "Override Series: Crash Bandicoot Cup Zero Build Reload",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "ZERO_BUILD_RELOAD",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-28T17:00:00+02:00",
+              "end_at": "2026-08-28T19:30:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": {
+                "distribution": "Chance to earn Crash Bandicoot cosmetic rewards; exact thresholds are not asserted here.",
+                "source_id": "fortnite_competitive",
+                "confidence": "OFFICIAL"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-27T20:00:11Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule confirms three Crash Bandicoot sessions on Aug 28 with exact times and cosmetic rewards. Projected as one logical calendar event to avoid three overlapping VEVENTs."
+        }
+      ]
     }
   ],
-  "watch_targets": [{"watch_id":"fncs-solo-october-2026","related_candidate_id":"fortnite-fncs-solos-october-2026","state":"WATCHING","promotion_rule":"Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."}]
+  "watch_targets": [
+    {
+      "watch_id": "fncs-solo-october-2026",
+      "related_candidate_id": "fortnite-fncs-solos-october-2026",
+      "state": "WATCHING",
+      "promotion_rule": "Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."
+    }
+  ]
 }
