@@ -1,7 +1,7 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-26T18:04:28Z",
+  "last_observer_check_at": "2026-08-27T18:06:22Z",
   "last_deep_check_at": "2026-08-20T17:08:03Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers Fortnite France & Europe",
@@ -20,8 +20,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-26T17:15:04.255468Z",
-      "updated_at": "2026-08-26T17:15:27.089316Z",
+      "last_run_time": "2026-08-27T17:17:23.211115Z",
+      "updated_at": "2026-08-27T17:17:45.983733Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Harry Potter France & Paris": {
@@ -30,8 +30,8 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-26T01:58:39.477791Z",
-      "updated_at": "2026-08-26T01:59:02.970254Z",
+      "last_run_time": "2026-08-27T01:56:16.399601Z",
+      "updated_at": "2026-08-27T01:56:41.832762Z",
       "liveness": "HEALTHY"
     },
     "Billetterie Harry Potter France": {
@@ -40,8 +40,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-26T17:44:13.181723Z",
-      "updated_at": "2026-08-26T17:44:36.008908Z",
+      "last_run_time": "2026-08-27T17:52:20.002113Z",
+      "updated_at": "2026-08-27T17:52:43.282944Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
@@ -50,11 +50,11 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-25T18:41:36.222471Z",
-      "updated_at": "2026-08-25T18:41:58.275674Z",
+      "last_run_time": "2026-08-26T18:48:29.098191Z",
+      "updated_at": "2026-08-26T18:48:52.562055Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. Fortnite competitive ingestion already retains the newly discovered future Override Series dates as silent ledger-only candidates. last_deep_check_at is intentionally retained because a complete nine-file structural/raw endpoint deep validation was not executed in this connector-only cycle."
+  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. The three global raw subscription endpoints returned the expected calendars. Fortnite is operational on Epic Status. Current EU competitive schedule observations are already represented by existing silent/staged ingest deltas, so no business calendar or notification change was created. last_deep_check_at is retained because a complete nine-file structural/franchise-validator deep pass was not executed in this run."
 }
