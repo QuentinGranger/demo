@@ -36,8 +36,8 @@ jobs:
         run: python scripts/validate_fortnite_physical_events.py
       - name: Validate change ledger
         run: python scripts/validate_fortnite_change_ledger.py
-      - name: Validate permanent calendar health online
-        run: python scripts/validate_calendar_health.py --online
+      - name: Validate permanent calendar health locally before commit
+        run: python scripts/validate_calendar_health.py
       - name: Commit semantic update if needed
         run: |
           if git diff --quiet; then
@@ -50,4 +50,4 @@ jobs:
           git commit -m 'feat: add Crash Bandicoot Override Cup EU'
           git push
 
-# trigger: 2026-08-27T20:08Z
+# trigger: 2026-08-27T20:11Z
