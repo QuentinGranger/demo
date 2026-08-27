@@ -1,0 +1,110 @@
+{
+  "version": "FORTNITE_COMPETITIVE_PROMOTION_DELTA_EU_V1",
+  "created_at": "2026-08-27T03:11:11Z",
+  "source_delta": "calendars/fortnite-competitive-ingest-delta-20260826.json",
+  "target_ledger": "calendars/fortnite-competitive-ledger-france.json",
+  "target_calendar": "calendars/fortnite-competitive-france.ics",
+  "target_global_calendar": "calendars/fortnite-paris.ics",
+  "status": "PENDING_CANONICAL_MERGE",
+  "decision": "PROMOTE_GROUPED_CRASH_BANDICOOT_EVENT",
+  "notification_disposition": "SILENT_POLICY",
+  "outbox_action": "NONE",
+  "reason": "The Crash Bandicoot reward-cup facts were already discovered and persisted on 2026-08-26 with SILENT_POLICY. This file records only the later calendar-projection decision. Promotion is not a new user effect and must not create a retroactive notification. Official EU pages provide exact actionable times plus official cosmetic-reward evidence, matching the established Shadow Cup precedent for visible calendar value.",
+  "logical_event": {
+    "competition_id": "crash-bandicoot-cups-eu-20260828",
+    "calendar_uid": "fortnite-crash-bandicoot-cups-eu-20260828@openai",
+    "name": "Override Series — Crash Bandicoot Cups EU",
+    "series_id": "OVERRIDE_SERIES",
+    "competition_class": "OTHER",
+    "status": "SCHEDULED",
+    "regions": ["EU"],
+    "ruleset": "MIXED",
+    "team_format": "MIXED",
+    "platform_scope": "ALL_SUPPORTED",
+    "event_date": "2026-08-28",
+    "visibility": "CALENDAR",
+    "action": "PARTICIPATE",
+    "priority": "IMPORTANT",
+    "source_id": "fortnite_competitive",
+    "time_precision": "EXACT",
+    "dtstart_paris": "2026-08-28T16:00:00+02:00",
+    "dtend_paris": "2026-08-28T19:30:00+02:00",
+    "reminder_policy": {
+      "profile": "COMPETITIVE_REWARD_OPPORTUNITY",
+      "planned": [
+        {
+          "type": "J_MINUS_1",
+          "trigger_at": "2026-08-27T16:00:00+02:00",
+          "state": "PLANNED",
+          "note": "Still future at promotion-decision time; do not reserve outbox until trigger time and canonical conditions are revalidated."
+        }
+      ]
+    },
+    "eligibility": {
+      "age_min": 13,
+      "local_minimum_overrides": true,
+      "two_factor_required": true
+    },
+    "reward_evidence": {
+      "type": "COSMETIC_REWARDS",
+      "status": "OFFICIAL_CONFIRMED",
+      "exact_items": null,
+      "note": "Do not invent item names or placement thresholds until an official source exposes them."
+    },
+    "sessions": [
+      {
+        "stable_subject_key": "crash-bandicoot-mobile-cup-eu-20260828",
+        "name": "Crash Bandicoot Mobile Cup",
+        "ruleset": "BUILD",
+        "team_format": "SOLOS",
+        "platform_scope": "MOBILE",
+        "start_at": "2026-08-28T16:00:00+02:00",
+        "end_at": "2026-08-28T17:15:00+02:00",
+        "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootMobileCup/?region=EU"
+      },
+      {
+        "stable_subject_key": "crash-bandicoot-cup-reload-eu-20260828",
+        "name": "Crash Bandicoot Cup Reload",
+        "ruleset": "RELOAD",
+        "team_format": "DUOS",
+        "platform_scope": "ALL_SUPPORTED",
+        "start_at": "2026-08-28T17:00:00+02:00",
+        "end_at": "2026-08-28T19:30:00+02:00",
+        "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU"
+      },
+      {
+        "stable_subject_key": "crash-bandicoot-cup-zb-reload-eu-20260828",
+        "name": "Crash Bandicoot Cup Zero Build Reload",
+        "ruleset": "ZERO_BUILD",
+        "team_format": "DUOS",
+        "platform_scope": "ALL_SUPPORTED",
+        "start_at": "2026-08-28T17:00:00+02:00",
+        "end_at": "2026-08-28T19:30:00+02:00",
+        "source_url": "https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU"
+      }
+    ]
+  },
+  "other_projection_decisions": [
+    {
+      "stable_subject_key": "arenas-test-cup-eu-20260827",
+      "decision": "LEDGER_ONLY",
+      "notification_disposition": "SILENT_POLICY",
+      "reason": "Official page explicitly states this is a test tournament with no prizing; exact time alone does not justify visible-calendar promotion."
+    },
+    {
+      "stable_subject_key": "arenas-test-cup-eu-20260830",
+      "decision": "LEDGER_ONLY",
+      "notification_disposition": "SILENT_POLICY",
+      "reason": "Same routine no-prizing test-cup policy."
+    }
+  ],
+  "canonical_merge_protocol": [
+    "Fresh-read the full competitive ledger and derived index before merge.",
+    "Merge each stable session identity once; never duplicate the 2026-08-26 staging facts.",
+    "Create one logical VEVENT for all three Crash Bandicoot sessions, not three VEVENTs.",
+    "Synchronize the identical business VEVENT into competitive and global calendars with one stable UID.",
+    "Do not create a notification intent for this promotion because the underlying discovered fact is frozen SILENT_POLICY.",
+    "At the J-1 trigger, revalidate the event and only then evaluate any reminder according to the canonical reminder/outbox rules.",
+    "Run competitive, ICS and calendar-health validators after the material calendar write."
+  ]
+}
