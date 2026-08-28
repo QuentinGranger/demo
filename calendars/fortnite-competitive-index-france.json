@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-08-28T13:19:11Z",
+  "generated_at": "2026-08-28T22:06:02Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "eba9763f8d9f744454ed025a0b2363185fd11ffe",
+    "ledger_sha": "a779091a953779a78169162af02fe20cc4c5cabb",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -17,6 +17,14 @@
     "sorted_deduped": "All ID lists must remain sorted and duplicate-free."
   },
   "competition_ids": [
+    "arenas-test-eu-20260830",
+    "console-zb-solo-victory-eu-20260829",
+    "duos-ranked-br-eu-20260829",
+    "duos-ranked-zb-eu-20260829",
+    "duos-reload-ranked-br-eu-20260830",
+    "duos-reload-ranked-zb-eu-20260830",
+    "fncs-div1-practice-eu-20260829",
+    "fncs-div1-practice-eu-20260831",
     "fncs-global-2026-antwerp",
     "fncs-global-last-chance-eu-2026",
     "mobile-series-championship-copenhagen-2026",
@@ -24,6 +32,7 @@
     "override-series-eu-20260828",
     "performance-evaluation-eu-2026",
     "reload-elite-ewc-paris-2026",
+    "reload-zb-duos-cash-eu-20260830",
     "shadow-cup-eu-2026-08-21"
   ],
   "by_visibility": {
@@ -33,9 +42,18 @@
       "reload-elite-ewc-paris-2026"
     ],
     "LEDGER_ONLY": [
+      "arenas-test-eu-20260830",
+      "console-zb-solo-victory-eu-20260829",
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-last-chance-eu-2026",
       "override-series-eu-20260828",
-      "performance-evaluation-eu-2026"
+      "performance-evaluation-eu-2026",
+      "reload-zb-duos-cash-eu-20260830"
     ],
     "CALENDAR": [
       "override-series-crash-bandicoot-eu-2026-08-28",
@@ -44,11 +62,20 @@
   },
   "by_status": {
     "SCHEDULED": [
+      "arenas-test-eu-20260830",
+      "console-zb-solo-victory-eu-20260829",
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
       "mobile-series-championship-copenhagen-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
+      "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21"
     ],
     "COMPLETED": [
@@ -63,10 +90,19 @@
       "reload-elite-ewc-paris-2026"
     ],
     "EU": [
+      "arenas-test-eu-20260830",
+      "console-zb-solo-victory-eu-20260829",
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-last-chance-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
+      "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21"
     ]
   },
@@ -90,10 +126,33 @@
     "OVERRIDE_SERIES": [
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828"
+    ],
+    "CONSOLE_VICTORY_CUP": [
+      "console-zb-solo-victory-eu-20260829"
+    ],
+    "FNCS_DIVISION_1_PRACTICE": [
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831"
+    ],
+    "RANKED_CUP": [
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829"
+    ],
+    "ARENAS_TEST": [
+      "arenas-test-eu-20260830"
+    ],
+    "RANKED_RELOAD": [
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830"
+    ],
+    "RELOAD_CASH_CUP": [
+      "reload-zb-duos-cash-eu-20260830"
     ]
   },
   "by_competition_class": {
     "FNCS": [
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026"
     ],
@@ -112,47 +171,92 @@
     "OTHER": [
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828"
+    ],
+    "VICTORY_CUP": [
+      "console-zb-solo-victory-eu-20260829"
+    ],
+    "RANKED_CUP": [
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830"
+    ],
+    "TEST_CUP": [
+      "arenas-test-eu-20260830"
+    ],
+    "CASH_CUP": [
+      "reload-zb-duos-cash-eu-20260830"
     ]
   },
   "by_ruleset": {
     "BUILD": [
+      "duos-ranked-br-eu-20260829",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026"
     ],
     "RELOAD": [
+      "duos-reload-ranked-br-eu-20260830",
       "mobile-series-championship-copenhagen-2026",
       "reload-elite-ewc-paris-2026"
     ],
     "MIXED": [
       "override-series-crash-bandicoot-eu-2026-08-28",
       "shadow-cup-eu-2026-08-21"
+    ],
+    "ZERO_BUILD": [
+      "console-zb-solo-victory-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-zb-eu-20260830",
+      "reload-zb-duos-cash-eu-20260830"
+    ],
+    "UNKNOWN": [
+      "arenas-test-eu-20260830"
     ]
   },
   "by_team_format": {
     "DUOS": [
-      "fncs-global-2026-antwerp",
-      "fncs-global-last-chance-eu-2026",
-      "override-series-eu-20260828",
-      "performance-evaluation-eu-2026",
-      "reload-elite-ewc-paris-2026"
-    ],
-    "SOLOS": [
-      "mobile-series-championship-copenhagen-2026",
-      "shadow-cup-eu-2026-08-21"
-    ],
-    "UNKNOWN": [
-      "override-series-crash-bandicoot-eu-2026-08-28"
-    ]
-  },
-  "by_platform_scope": {
-    "ALL_SUPPORTED": [
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "reload-elite-ewc-paris-2026",
+      "reload-zb-duos-cash-eu-20260830"
+    ],
+    "SOLOS": [
+      "console-zb-solo-victory-eu-20260829",
+      "mobile-series-championship-copenhagen-2026",
+      "shadow-cup-eu-2026-08-21"
+    ],
+    "UNKNOWN": [
+      "arenas-test-eu-20260830",
+      "override-series-crash-bandicoot-eu-2026-08-28"
+    ]
+  },
+  "by_platform_scope": {
+    "ALL_SUPPORTED": [
+      "arenas-test-eu-20260830",
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "fncs-div1-practice-eu-20260829",
+      "fncs-div1-practice-eu-20260831",
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026",
+      "override-series-eu-20260828",
+      "performance-evaluation-eu-2026",
+      "reload-elite-ewc-paris-2026",
+      "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21"
     ],
     "MOBILE": [
@@ -160,6 +264,9 @@
     ],
     "UNKNOWN": [
       "override-series-crash-bandicoot-eu-2026-08-28"
+    ],
+    "CONSOLE": [
+      "console-zb-solo-victory-eu-20260829"
     ]
   },
   "by_phase_type": {
@@ -172,11 +279,20 @@
       "fncs-global-last-chance-eu-2026:lcq"
     ],
     "OTHER": [
+      "arenas-test-eu-20260830:main",
+      "console-zb-solo-victory-eu-20260829:main",
+      "duos-ranked-br-eu-20260829:main",
+      "duos-ranked-zb-eu-20260829:main",
+      "duos-reload-ranked-br-eu-20260830:main",
+      "duos-reload-ranked-zb-eu-20260830:main",
+      "fncs-div1-practice-eu-20260829:main",
+      "fncs-div1-practice-eu-20260831:main",
       "override-series-crash-bandicoot-eu-2026-08-28:mobile",
       "override-series-crash-bandicoot-eu-2026-08-28:reload",
       "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload",
       "override-series-eu-20260828:base",
       "performance-evaluation-eu-2026:test-series",
+      "reload-zb-duos-cash-eu-20260830:main",
       "shadow-cup-eu-2026-08-21:battle-royale",
       "shadow-cup-eu-2026-08-21:mobile",
       "shadow-cup-eu-2026-08-21:zero-build"
@@ -235,10 +351,34 @@
     "2026-08-28": [
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828"
+    ],
+    "2026-08-29": [
+      "console-zb-solo-victory-eu-20260829",
+      "duos-ranked-br-eu-20260829",
+      "duos-ranked-zb-eu-20260829",
+      "fncs-div1-practice-eu-20260829"
+    ],
+    "2026-08-30": [
+      "arenas-test-eu-20260830",
+      "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-zb-eu-20260830",
+      "reload-zb-duos-cash-eu-20260830"
+    ],
+    "2026-08-31": [
+      "fncs-div1-practice-eu-20260831"
     ]
   },
   "sessions": {
     "all_ids": [
+      "arenas-test-eu-20260830:main:EU:20260830T1700:session1",
+      "console-zb-solo-victory-eu-20260829:main:EU:20260829T1700:round1",
+      "console-zb-solo-victory-eu-20260829:main:EU:20260829T2000:round2",
+      "duos-ranked-br-eu-20260829:main:EU:20260829T1700:session1",
+      "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
+      "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+      "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+      "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
+      "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260804T1700:s2r2",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260805T1700:s2r3",
@@ -254,6 +394,7 @@
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals",
+      "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
       "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
       "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
       "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
@@ -298,6 +439,22 @@
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
         "override-series-eu-20260828:base:EU:20260828T1700:session1"
+      ],
+      "2026-08-29": [
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T1700:round1",
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T2000:round2",
+        "duos-ranked-br-eu-20260829:main:EU:20260829T1700:session1",
+        "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
+        "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1"
+      ],
+      "2026-08-30": [
+        "arenas-test-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+        "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1"
+      ],
+      "2026-08-31": [
+        "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1"
       ]
     },
     "by_status": {
@@ -313,12 +470,22 @@
         "reload-elite-ewc-paris-2026:championship:GLOBAL:20260822T1200:finals"
       ],
       "SCHEDULED": [
+        "arenas-test-eu-20260830:main:EU:20260830T1700:session1",
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T1700:round1",
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T2000:round2",
+        "duos-ranked-br-eu-20260829:main:EU:20260829T1700:session1",
+        "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
+        "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+        "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
+        "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
         "override-series-eu-20260828:base:EU:20260828T1700:session1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
+        "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
         "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
         "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
         "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
@@ -372,6 +539,24 @@
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
         "override-series-eu-20260828:base:EU:20260828T1700:session1"
+      ],
+      "2026-08-29T17:00:00+02:00": [
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T1700:round1",
+        "duos-ranked-br-eu-20260829:main:EU:20260829T1700:session1",
+        "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
+        "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1"
+      ],
+      "2026-08-29T20:00:00+02:00": [
+        "console-zb-solo-victory-eu-20260829:main:EU:20260829T2000:round2"
+      ],
+      "2026-08-30T17:00:00+02:00": [
+        "arenas-test-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+        "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1"
+      ],
+      "2026-08-31T17:00:00+02:00": [
+        "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1"
       ]
     }
   },
@@ -450,6 +635,51 @@
       "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai"
     },
     "override-series-eu-20260828": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "console-zb-solo-victory-eu-20260829": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "fncs-div1-practice-eu-20260829": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-ranked-br-eu-20260829": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-ranked-zb-eu-20260829": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "arenas-test-eu-20260830": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-reload-ranked-zb-eu-20260830": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-reload-ranked-br-eu-20260830": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "reload-zb-duos-cash-eu-20260830": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "fncs-div1-practice-eu-20260831": {
       "initial_level": "LEDGER_ONLY",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": null

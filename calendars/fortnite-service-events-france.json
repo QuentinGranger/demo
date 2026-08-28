@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_SERVICE_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-26T21:13:19Z",
+  "updated_at": "2026-08-28T22:06:02Z",
   "scope": "Fortnite service maintenance, downtime, degradation and incidents relevant to France/Europe",
   "source_of_truth": {
     "service_state": "Epic Games Public Status",
@@ -682,6 +682,87 @@
           "source_id": "epic_status",
           "source_url": "https://status.epicgames.com/incidents/djsq84vjvp45",
           "note": "Official exact EOS maintenance window projected to Fortnite global and updates calendars because matchmaking/session availability is actionable."
+        }
+      ]
+    },
+    {
+      "service_event_id": "epic-fortnite-ps-login-20260828",
+      "epic_incident_id": "tsz8bfd4nyql",
+      "external_alias_ids": [],
+      "calendar_uid": null,
+      "fingerprint": "epic:tsz8bfd4nyql",
+      "kind": "UNPLANNED_INCIDENT",
+      "state": "RESOLVED",
+      "source_id": "epic_status",
+      "canonical_source_url": "https://status.epicgames.com/incidents/tsz8bfd4nyql",
+      "first_seen_at": "2026-08-28T22:06:02Z",
+      "last_changed_at": "2026-08-28T14:32:00Z",
+      "provider_phase": "RESOLVED",
+      "provider_impact": "PARTIAL",
+      "provider_title": "Fortnite Login Issues on PlayStation 4 and PlayStation 5",
+      "provider_message_hash": "29dadc205a195683c9f16639f9595534b5bfe4c2ea8bc6ffa2e2bfa3dc790ce8",
+      "announced_at": "2026-08-28T13:55:00Z",
+      "scheduled_start_at": null,
+      "actual_start_at": "2026-08-28T13:55:00Z",
+      "expected_end_at": null,
+      "expected_end_updated_at": null,
+      "recovery_started_at": null,
+      "actual_end_at": "2026-08-28T14:32:00Z",
+      "source_timezone": "UTC",
+      "timing_precision": "EXACT",
+      "component_states": [
+        {
+          "component_id": "LOGIN",
+          "status": "OPERATIONAL",
+          "provider_component_name": "Fortnite (Login)",
+          "impact_note": "Epic reported that some PS4/PS5 players could not log into Fortnite; service returned to normal at 14:32 UTC.",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/tsz8bfd4nyql",
+          "observed_at": "2026-08-28T22:06:02Z"
+        }
+      ],
+      "affected_regions": [
+        "GLOBAL"
+      ],
+      "affected_platforms": [
+        "PLAYSTATION"
+      ],
+      "internal_actionability": "NONE",
+      "internal_priority_score": 15,
+      "relation_type": "UNRELATED_OR_UNKNOWN",
+      "relation_confidence": "UNKNOWN",
+      "related_event_uid": null,
+      "related_candidate_id": null,
+      "group_id": null,
+      "patch_version": null,
+      "season_id": null,
+      "relation_source_id": null,
+      "relation_source_url": null,
+      "calendar_status": "LEDGER_ONLY",
+      "calendar_promoted_at": null,
+      "calendar_last_synced_at": null,
+      "previous_state": "STARTED",
+      "evidence_grade": "A",
+      "confidence": "OFFICIAL_EXACT",
+      "last_verified_at": "2026-08-28T22:06:02Z",
+      "extension_count": 0,
+      "notified_transition_keys": [],
+      "history": [
+        {
+          "at": "2026-08-28T13:55:00Z",
+          "event_type": "CREATED",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/tsz8bfd4nyql",
+          "note": "Epic began investigating Fortnite login failures affecting PlayStation 4 and PlayStation 5."
+        },
+        {
+          "at": "2026-08-28T14:32:00Z",
+          "event_type": "STATE_TRANSITION",
+          "source_id": "epic_status",
+          "source_url": "https://status.epicgames.com/incidents/tsz8bfd4nyql",
+          "from": "STARTED",
+          "to": "RESOLVED",
+          "note": "Epic confirmed PS4/PS5 Fortnite login services returned to normal."
         }
       ]
     }

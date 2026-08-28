@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-28T13:19:11Z",
+  "updated_at": "2026-08-28T22:06:02Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -1588,6 +1588,816 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Canonical merge of previously staged official EU Override Series base session. Routine session remains LEDGER_ONLY and SILENT_POLICY."
+        }
+      ]
+    },
+    {
+      "competition_id": "console-zb-solo-victory-eu-20260829",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "CONSOLE_VICTORY_CUP",
+      "season_id": "C7S4",
+      "name": "Console Zero Build Solo Victory Cup — EU — 29 août 2026",
+      "competition_class": "VICTORY_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "CONSOLE",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-29",
+        "end_date": "2026-08-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "console-zb-solo-victory-eu-20260829:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "console-zb-solo-victory-eu-20260829:main:EU:20260829T1700:round1",
+              "official_session_id": null,
+              "name": "Console Zero Build Solo Victory Cup",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "ROUND1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "CONSOLE",
+              "start_at": "2026-08-29T17:00:00+02:00",
+              "end_at": "2026-08-29T19:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "console-zb-solo-victory-eu-20260829:main:EU:20260829T2000:round2",
+              "official_session_id": null,
+              "name": "Console Zero Build Solo Victory Cup",
+              "session_number": 2,
+              "round_number": 2,
+              "round_label": "ROUND2",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "CONSOLE",
+              "start_at": "2026-08-29T20:00:00+02:00",
+              "end_at": "2026-08-29T21:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "fncs-div1-practice-eu-20260829",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "FNCS_DIVISION_1_PRACTICE",
+      "season_id": "C7S4",
+      "name": "FNCS Division 1 Practice — EU — 29 août 2026",
+      "competition_class": "FNCS",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-29",
+        "end_date": "2026-08-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-div1-practice-eu-20260829:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
+              "official_session_id": null,
+              "name": "FNCS Division 1 Practice — EU — 29 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-29T17:00:00+02:00",
+              "end_at": "2026-08-29T19:40:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "duos-ranked-br-eu-20260829",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "RANKED_CUP",
+      "season_id": "C7S4",
+      "name": "Duos Ranked Cup (Battle Royale) — EU — 29 août 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-29",
+        "end_date": "2026-08-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "duos-ranked-br-eu-20260829:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "duos-ranked-br-eu-20260829:main:EU:20260829T1700:session1",
+              "official_session_id": null,
+              "name": "Duos Ranked Cup (Battle Royale) — EU — 29 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-29T17:00:00+02:00",
+              "end_at": "2026-08-29T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "duos-ranked-zb-eu-20260829",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "RANKED_CUP",
+      "season_id": "C7S4",
+      "name": "Duos Ranked Cup (Zero Build) — EU — 29 août 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-29",
+        "end_date": "2026-08-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "duos-ranked-zb-eu-20260829:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
+              "official_session_id": null,
+              "name": "Duos Ranked Cup (Zero Build) — EU — 29 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-29T17:00:00+02:00",
+              "end_at": "2026-08-29T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "arenas-test-eu-20260830",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "ARENAS_TEST",
+      "season_id": "C7S4",
+      "name": "Arenas Test Cup — EU — 30 août 2026",
+      "competition_class": "TEST_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "UNKNOWN",
+      "team_format": "UNKNOWN",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-30",
+        "end_date": "2026-08-30",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "arenas-test-eu-20260830:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "arenas-test-eu-20260830:main:EU:20260830T1700:session1",
+              "official_session_id": null,
+              "name": "Arenas Test Cup — EU — 30 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "UNKNOWN",
+              "team_format": "UNKNOWN",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-30T17:00:00+02:00",
+              "end_at": "2026-08-30T19:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "duos-reload-ranked-zb-eu-20260830",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "RANKED_RELOAD",
+      "season_id": "C7S4",
+      "name": "Duos Reload Ranked Cup (Zero Build) — EU — 30 août 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-30",
+        "end_date": "2026-08-30",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "duos-reload-ranked-zb-eu-20260830:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+              "official_session_id": null,
+              "name": "Duos Reload Ranked Cup (Zero Build) — EU — 30 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-30T17:00:00+02:00",
+              "end_at": "2026-08-30T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "duos-reload-ranked-br-eu-20260830",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "RANKED_RELOAD",
+      "season_id": "C7S4",
+      "name": "Duos Reload Ranked Cup (Battle Royale) — EU — 30 août 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "RELOAD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-30",
+        "end_date": "2026-08-30",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "duos-reload-ranked-br-eu-20260830:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+              "official_session_id": null,
+              "name": "Duos Reload Ranked Cup (Battle Royale) — EU — 30 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-30T17:00:00+02:00",
+              "end_at": "2026-08-30T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "reload-zb-duos-cash-eu-20260830",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "RELOAD_CASH_CUP",
+      "season_id": "C7S4",
+      "name": "Reload ZB Duos Cash Cup — EU — 30 août 2026",
+      "competition_class": "CASH_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-30",
+        "end_date": "2026-08-30",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "reload-zb-duos-cash-eu-20260830:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
+              "official_session_id": null,
+              "name": "Reload ZB Duos Cash Cup — EU — 30 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-30T17:00:00+02:00",
+              "end_at": "2026-08-30T19:30:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "fncs-div1-practice-eu-20260831",
+      "official_event_id": null,
+      "official_event_slug": null,
+      "series_id": "FNCS_DIVISION_1_PRACTICE",
+      "season_id": "C7S4",
+      "name": "FNCS Division 1 Practice — EU — 31 août 2026",
+      "competition_class": "FNCS",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-31",
+        "end_date": "2026-08-31",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-div1-practice-eu-20260831:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
+              "official_session_id": null,
+              "name": "FNCS Division 1 Practice — EU — 31 août 2026",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "SESSION1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-31T17:00:00+02:00",
+              "end_at": "2026-08-31T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T22:06:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
         }
       ]
     }
