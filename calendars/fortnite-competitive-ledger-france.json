@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-27T20:00:11Z",
+  "updated_at": "2026-08-28T13:19:11Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -1500,6 +1500,94 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Official EU schedule confirms three Crash Bandicoot sessions on Aug 28 with exact times and cosmetic rewards. Projected as one logical calendar event to avoid three overlapping VEVENTs."
+        }
+      ]
+    },
+    {
+      "competition_id": "override-series-eu-20260828",
+      "official_event_id": "S42_OverrideSeries_aug28",
+      "official_event_slug": "S42_OverrideSeries_aug28",
+      "series_id": "OVERRIDE_SERIES",
+      "season_id": "C7S4",
+      "name": "Override Series — EU — 28 août 2026",
+      "competition_class": "OTHER",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-08-28",
+        "end_date": "2026-08-28",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "UNKNOWN"
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
+        "https://www.fortnite.com/competitive/?lang=en-US&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "override-series-eu-20260828:base",
+          "name": "Base session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "override-series-eu-20260828:base:EU:20260828T1700:session1",
+              "official_session_id": "S42_OverrideSeries_aug28",
+              "name": "Override Series",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "BASE",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "DUOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-08-28T17:00:00+02:00",
+              "end_at": "2026-08-28T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-08-28T13:19:11Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Canonical merge of previously staged official EU Override Series base session. Routine session remains LEDGER_ONLY and SILENT_POLICY."
         }
       ]
     }

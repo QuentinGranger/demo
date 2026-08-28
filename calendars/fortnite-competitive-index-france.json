@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-08-27T20:00:11Z",
+  "generated_at": "2026-08-28T13:19:11Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "1c20335faa6a5326af70c49eeae18ecc30a77739",
+    "ledger_sha": "eba9763f8d9f744454ed025a0b2363185fd11ffe",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -21,6 +21,7 @@
     "fncs-global-last-chance-eu-2026",
     "mobile-series-championship-copenhagen-2026",
     "override-series-crash-bandicoot-eu-2026-08-28",
+    "override-series-eu-20260828",
     "performance-evaluation-eu-2026",
     "reload-elite-ewc-paris-2026",
     "shadow-cup-eu-2026-08-21"
@@ -33,6 +34,7 @@
     ],
     "LEDGER_ONLY": [
       "fncs-global-last-chance-eu-2026",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026"
     ],
     "CALENDAR": [
@@ -45,6 +47,7 @@
       "fncs-global-2026-antwerp",
       "mobile-series-championship-copenhagen-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "shadow-cup-eu-2026-08-21"
     ],
@@ -62,6 +65,7 @@
     "EU": [
       "fncs-global-last-chance-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "shadow-cup-eu-2026-08-21"
     ]
@@ -84,7 +88,8 @@
       "mobile-series-championship-copenhagen-2026"
     ],
     "OVERRIDE_SERIES": [
-      "override-series-crash-bandicoot-eu-2026-08-28"
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "override-series-eu-20260828"
     ]
   },
   "by_competition_class": {
@@ -105,13 +110,15 @@
       "mobile-series-championship-copenhagen-2026"
     ],
     "OTHER": [
-      "override-series-crash-bandicoot-eu-2026-08-28"
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "override-series-eu-20260828"
     ]
   },
   "by_ruleset": {
     "BUILD": [
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026"
     ],
     "RELOAD": [
@@ -127,6 +134,7 @@
     "DUOS": [
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "reload-elite-ewc-paris-2026"
     ],
@@ -142,6 +150,7 @@
     "ALL_SUPPORTED": [
       "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
+      "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "reload-elite-ewc-paris-2026",
       "shadow-cup-eu-2026-08-21"
@@ -166,6 +175,7 @@
       "override-series-crash-bandicoot-eu-2026-08-28:mobile",
       "override-series-crash-bandicoot-eu-2026-08-28:reload",
       "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload",
+      "override-series-eu-20260828:base",
       "performance-evaluation-eu-2026:test-series",
       "shadow-cup-eu-2026-08-21:battle-royale",
       "shadow-cup-eu-2026-08-21:mobile",
@@ -223,7 +233,8 @@
       "mobile-series-championship-copenhagen-2026"
     ],
     "2026-08-28": [
-      "override-series-crash-bandicoot-eu-2026-08-28"
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "override-series-eu-20260828"
     ]
   },
   "sessions": {
@@ -236,6 +247,7 @@
       "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
       "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
       "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+      "override-series-eu-20260828:base:EU:20260828T1700:session1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1",
@@ -284,7 +296,8 @@
       "2026-08-28": [
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
-        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1"
+        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+        "override-series-eu-20260828:base:EU:20260828T1700:session1"
       ]
     },
     "by_status": {
@@ -303,6 +316,7 @@
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+        "override-series-eu-20260828:base:EU:20260828T1700:session1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
         "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
@@ -356,7 +370,8 @@
       ],
       "2026-08-28T17:00:00+02:00": [
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
-        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1"
+        "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
+        "override-series-eu-20260828:base:EU:20260828T1700:session1"
       ]
     }
   },
@@ -433,6 +448,11 @@
       "initial_level": "CALENDAR",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": "fortnite-crash-bandicoot-cup-eu-20260828@openai"
+    },
+    "override-series-eu-20260828": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
     }
   },
   "conflicts": [
