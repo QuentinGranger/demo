@@ -1,0 +1,45 @@
+name: Apply Override Series base session 2026-08-28
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/apply-override-series-aug28-base.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Merge staged routine competitive delta
+        run: python scripts/apply_fortnite_override_series_aug28_base.py
+      - name: Validate competitive intelligence
+        run: python scripts/validate_fortnite_competitive.py
+      - name: Validate competitive deadlines
+        run: python scripts/validate_fortnite_competitive_deadlines.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Validate change ledger
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate permanent calendar health locally
+        run: python scripts/validate_calendar_health.py
+      - name: Commit semantic ledger-only merge if needed
+        run: |
+          if git diff --quiet; then
+            echo 'No semantic change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/fortnite-competitive-ingest-delta-20260828.json calendars/fortnite-competitive-ledger-france.json calendars/fortnite-competitive-index-france.json calendars/fortnite-change-ledger.json calendars/fortnite-change-index-france.json
+          git commit -m 'chore: merge Aug 28 Override Series base session'
+          git push
