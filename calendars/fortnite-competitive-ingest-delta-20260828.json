@@ -1,0 +1,41 @@
+{
+  "version": "FORTNITE_COMPETITIVE_INGEST_DELTA_EU_V1",
+  "created_at": "2026-08-28T07:13:26Z",
+  "updated_at": "2026-08-28T07:13:26Z",
+  "target_ledger": "calendars/fortnite-competitive-ledger-france.json",
+  "source_id": "fortnite_competitive",
+  "status": "PENDING_CANONICAL_MERGE",
+  "notification_disposition": "SILENT_POLICY",
+  "calendar_projection": "LEDGER_ONLY_ROUTINE_SESSION",
+  "reason": "Fresh official Fortnite Competitive EU schedule evidence exposes a distinct base Override Series session on August 28, 2026 from 17:00 to 20:00 Europe/Paris. The three Crash Bandicoot reward sessions on the same date are already represented separately in the canonical/staged competitive state. This base Override Series session has no newly verified registration deadline, major qualification consequence, major prize pool or physical-attendance action in the checked evidence, so exhaustive ingestion applies while visible-calendar projection and notification remain suppressed by policy.",
+  "sessions": [
+    {
+      "stable_subject_key": "override-series-eu-20260828",
+      "official_event_id": "S42_OverrideSeries_aug28",
+      "official_event_slug": "S42_OverrideSeries_aug28",
+      "competition_class": "OTHER",
+      "series": "OVERRIDE_SERIES",
+      "name": "Override Series",
+      "region": "EU",
+      "ruleset": "BUILD",
+      "team_format": "DUOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "event_date": "2026-08-28",
+      "start_at": "2026-08-28T17:00:00+02:00",
+      "end_at": "2026-08-28T20:00:00+02:00",
+      "time_precision": "EXACT",
+      "eligibility": {"status": "UNKNOWN"},
+      "visibility": "LEDGER_ONLY",
+      "source_url": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_aug28/?region=EU",
+      "schedule_evidence_url": "https://www.fortnite.com/competitive/?lang=en-US&region=EU"
+    }
+  ],
+  "source_observations": [
+    "The official Fortnite Competitive EU event/schedule surface lists a distinct Override Series session on August 28, 2026 from 17:00 to 20:00 Europe/Paris, Battle Royale, Duos.",
+    "This item is distinct from the Crash Bandicoot Mobile Cup (16:00-17:15), Crash Bandicoot Cup Reload (17:00-19:30), and Crash Bandicoot Cup Zero Build Reload (17:00-19:30), which are already represented separately.",
+    "No new official registration deadline, major qualification consequence, major prize pool or physical attendance action was verified for the base Override Series session in this run.",
+    "Per FORTNITE_COMPETITIVE_ENGINE_EU_V2, the session remains LEDGER_ONLY and SILENT_POLICY; no public ICS, SEQUENCE, change-ledger notification occurrence or outbox intent is created before canonical merge/change-engine evaluation.",
+    "Ticketmaster Belgium continues to show the September 26-27 Fortnite Global Championship two-day pass as limited availability, matching the existing canonical ticketing state; no ticketing transition is created.",
+    "Epic Status currently reports Fortnite operational; no Fortnite service transition is created."
+  ]
+}
