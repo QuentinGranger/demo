@@ -1,10 +1,10 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-28T18:40:04Z",
+  "last_observer_check_at": "2026-08-29T17:03:59Z",
   "last_deep_check_at": "2026-08-20T17:08:03Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "Billetterie Harry Potter France",
+  "observer_title": "Calendriers Fortnite France & Europe",
   "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -20,8 +20,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-28T18:08:02.972398Z",
-      "updated_at": "2026-08-28T18:08:25.794958Z",
+      "last_run_time": "2026-08-29T16:10:43.121821Z",
+      "updated_at": "2026-08-29T16:11:05.201749Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Harry Potter France & Paris": {
@@ -30,8 +30,8 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-28T01:56:39.000406Z",
-      "updated_at": "2026-08-28T01:57:03.710144Z",
+      "last_run_time": "2026-08-29T01:53:59.434701Z",
+      "updated_at": "2026-08-29T01:54:23.153315Z",
       "liveness": "HEALTHY"
     },
     "Billetterie Harry Potter France": {
@@ -40,8 +40,8 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-28T17:50:36.603782Z",
-      "updated_at": "2026-08-28T17:50:59.925333Z",
+      "last_run_time": "2026-08-29T16:43:30.962662Z",
+      "updated_at": "2026-08-29T16:43:53.651645Z",
       "liveness": "HEALTHY"
     },
     "Calendriers Pokémon France & Paris": {
@@ -50,11 +50,11 @@
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-27T18:57:57.102477Z",
-      "updated_at": "2026-08-27T18:58:25.510939Z",
+      "last_run_time": "2026-08-29T13:21:30.137872Z",
+      "updated_at": "2026-08-29T13:21:31.099040Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. No new material Harry Potter ticketing/deadline transition was confirmed in this run. last_deep_check_at is retained because a complete nine-file structural/franchise-validator deep pass was not executed."
+  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. No new material Fortnite delta was confirmed beyond already-canonical same-day events. last_deep_check_at is retained because this runtime could not complete the independent raw-endpoint and full validator deep pass; this is not classified as a calendar outage."
 }
