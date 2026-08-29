@@ -1,0 +1,56 @@
+name: Apply Fortnite OG Final Showdown
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/apply-final-showdown-og-20260829.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply official Fortnite OG Final Showdown
+        run: python scripts/apply_final_showdown_og_20260829.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Validate change ledger and outbox
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate competitive ledger
+        run: python scripts/validate_fortnite_competitive.py
+      - name: Validate competitive deadlines
+        run: python scripts/validate_fortnite_competitive_deadlines.py
+      - name: Validate season/pass lifecycle
+        run: python scripts/validate_fortnite_season_pass_lifecycle.py
+      - name: Validate lore taxonomy
+        run: python scripts/validate_fortnite_lore_taxonomy.py
+      - name: Validate physical events
+        run: python scripts/validate_fortnite_physical_events.py
+      - name: Deep cross-calendar health check
+        run: python scripts/validate_calendar_health.py --online
+      - name: Commit canonical changes
+        run: |
+          if git diff --quiet -- calendars; then
+            echo 'No semantic change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/fortnite-watchlist-france.json \
+                  calendars/fortnite-change-ledger.json \
+                  calendars/fortnite-change-index-france.json \
+                  calendars/fortnite-notification-outbox-france.json \
+                  calendars/fortnite-updates-france.ics \
+                  calendars/fortnite-paris.ics
+          git commit -m 'Add Fortnite OG Final Showdown live event'
+          git push origin HEAD:master
