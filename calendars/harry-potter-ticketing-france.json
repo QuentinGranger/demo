@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-24T01:59:44Z",
+  "updated_at": "2026-08-29T00:46:01Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -192,48 +192,13 @@
       "run_start": "2026-11-04",
       "run_end": "2026-11-08",
       "session_states": [
-        {
-          "session_key": "2026-11-04T20:30-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-05T20:30-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-06T20:30-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-07T15:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-07T20:30-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-08T15:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-11-08T20:30-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
+        {"session_key": "2026-11-04T20:30-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-05T20:30-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-06T20:30-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-07T15:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-07T20:30-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-08T15:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2026-11-08T20:30-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}
       ],
       "history": []
     },
@@ -253,14 +218,7 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "session_states": [
-        {
-          "session_key": "2026-12-28T20:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2026-12-28T20:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}],
       "history": []
     },
     {
@@ -279,14 +237,7 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "session_states": [
-        {
-          "session_key": "2026-12-29T20:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2026-12-29T20:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}],
       "history": []
     },
     {
@@ -305,14 +256,7 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "session_states": [
-        {
-          "session_key": "2026-12-30T20:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2026-12-30T20:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}],
       "history": []
     },
     {
@@ -332,18 +276,8 @@
       "last_verified_at": null,
       "last_changed_at": null,
       "session_states": [
-        {
-          "session_key": "2027-01-02T20:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2027-01-03T16:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
+        {"session_key": "2027-01-02T20:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []},
+        {"session_key": "2027-01-03T16:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}
       ],
       "history": []
     },
@@ -363,14 +297,7 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "session_states": [
-        {
-          "session_key": "2027-01-09T20:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2027-01-09T20:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}],
       "history": []
     },
     {
@@ -389,14 +316,7 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "session_states": [
-        {
-          "session_key": "2027-01-10T17:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2027-01-10T17:00-Europe-Paris", "status": "UNKNOWN", "confidence": "LOW", "category_states": []}],
       "history": []
     },
     {
@@ -418,51 +338,14 @@
       "run_start": "2026-09-30",
       "run_end": "2026-10-10",
       "session_states": [
-        {
-          "session_key": "2026-09-30T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-10-01T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-10-03T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-10-07T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-10-08T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-10-10T20:45-Europe-Paris",
-          "status": "ON_SALE",
-          "confidence": "HIGH",
-          "category_states": []
-        }
+        {"session_key": "2026-09-30T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-10-01T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-10-03T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-10-07T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-10-08T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-10-10T20:45-Europe-Paris", "status": "ON_SALE", "confidence": "HIGH", "category_states": []}
       ],
-      "history": [
-        {
-          "at": "2026-08-22T01:54:24Z",
-          "transition": "SALE_OPENED",
-          "source_id": "droneart-harry-potter-paris",
-          "note": "Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."
-        }
-      ]
+      "history": [{"at": "2026-08-22T01:54:24Z", "transition": "SALE_OPENED", "source_id": "droneart-harry-potter-paris", "note": "Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."}]
     },
     {
       "event_uid": "hp-back-to-hogwarts-versailles-20260829@openai",
@@ -472,38 +355,25 @@
       "provider_id": "retourapoudlard-fr",
       "source_id": "retourapoudlard-fr",
       "ticket_url": "https://www.retourapoudlard.com/",
-      "status": "ON_SALE",
+      "status": "CLOSED",
       "status_origin": "DIRECT_VERIFIED",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-08-24T01:59:44Z",
-      "last_changed_at": "2026-08-24T01:59:44Z",
+      "last_verified_at": "2026-08-29T00:46:01Z",
+      "last_changed_at": "2026-08-29T00:46:01Z",
       "price_min_eur": 0.0,
       "price_max_eur": 0.0,
       "session_states": [
-        {
-          "session_key": "2026-08-29T09:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-08-29T13:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        },
-        {
-          "session_key": "2026-08-29T17:00-Europe-Paris",
-          "status": "UNKNOWN",
-          "confidence": "LOW",
-          "category_states": []
-        }
+        {"session_key": "2026-08-29T09:00-Europe-Paris", "status": "CLOSED", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-08-29T13:00-Europe-Paris", "status": "CLOSED", "confidence": "HIGH", "category_states": []},
+        {"session_key": "2026-08-29T17:00-Europe-Paris", "status": "CLOSED", "confidence": "HIGH", "category_states": []}
       ],
-      "verification_notes": "Inscription gratuite obligatoire sur le site officiel ; accès à chaque session uniquement pendant la première heure. L'ouverture du flux d'inscription est confirmée, mais aucune quantité restante n'est inférée.",
-      "history": []
+      "verification_notes": "Inscription gratuite obligatoire. Au 29 août 2026, le parcours d'inscription officiel renvoie vers un formulaire de contact et ne propose plus de réservation ; la FAQ confirme qu'aucun billet n'est délivré sur place. État classé CLOSED/SALE_CLOSED, pas SOLD_OUT faute de preuve explicite que toutes les places de la journée ont été attribuées.",
+      "history": [
+        {"at": "2026-08-29T00:46:01Z", "transition": "SALE_CLOSED", "source_id": "retourapoudlard-fr", "note": "Le flux d'inscription officiel ne propose plus de réservation et renvoie vers un formulaire de contact ; aucun billet sur place selon la FAQ. Fermeture de vente/inscription, sans inférer SOLD_OUT."}
+      ]
     },
     {
       "event_uid": "hp-grandes-eaux-harry-potter-versailles-20260829@openai",
@@ -521,23 +391,9 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-24T01:59:44Z",
       "last_changed_at": "2026-08-24T01:59:44Z",
-      "session_states": [
-        {
-          "session_key": "2026-08-29T20:30-Europe-Paris",
-          "status": "SOLD_OUT",
-          "confidence": "HIGH",
-          "scarcity_evidence": "EXPLICIT_TEXT",
-          "category_states": []
-        }
-      ],
+      "session_states": [{"session_key": "2026-08-29T20:30-Europe-Paris", "status": "SOLD_OUT", "confidence": "HIGH", "scarcity_evidence": "EXPLICIT_TEXT", "category_states": []}],
       "verification_notes": "La FAQ officielle Retour à Poudlard indique explicitement que les Grandes Eaux Nocturnes Retour à Poudlard sont complètes.",
-      "history": [
-        {
-          "at": "2026-08-24T01:59:44Z",
-          "transition": "SOLD_OUT",
-          "note": "État complet confirmé lors de l'enrôlement initial."
-        }
-      ]
+      "history": [{"at": "2026-08-24T01:59:44Z", "transition": "SOLD_OUT", "note": "État complet confirmé lors de l'enrôlement initial."}]
     }
   ]
 }
