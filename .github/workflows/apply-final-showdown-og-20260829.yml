@@ -36,8 +36,8 @@ jobs:
         run: python scripts/validate_fortnite_lore_taxonomy.py
       - name: Validate physical events
         run: python scripts/validate_fortnite_physical_events.py
-      - name: Deep cross-calendar health check
-        run: python scripts/validate_calendar_health.py --online
+      - name: Validate cross-calendar health locally
+        run: python scripts/validate_calendar_health.py
       - name: Commit canonical changes
         run: |
           if git diff --quiet -- calendars; then
@@ -54,3 +54,7 @@ jobs:
                   calendars/fortnite-paris.ics
           git commit -m 'Add Fortnite OG Final Showdown live event'
           git push origin HEAD:master
+      - name: Verify public subscription endpoints after propagation
+        run: |
+          sleep 35
+          python scripts/validate_calendar_health.py --online
