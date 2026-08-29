@@ -2,6 +2,7 @@ name: Apply Sonic Sprites Power Hours
 
 on:
   push:
+    branches: [master]
     paths:
       - '.github/workflows/apply-sonic-sprites-power-hours.yml'
   workflow_dispatch:
