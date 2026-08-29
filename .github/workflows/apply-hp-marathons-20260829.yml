@@ -1,0 +1,36 @@
+name: Apply Harry Potter marathon calendar patch
+
+on:
+  push:
+    paths:
+      - 'scripts/apply_hp_marathons_20260829.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply idempotent calendar patch
+        run: python scripts/apply_hp_marathons_20260829.py
+      - name: Validate generic calendar health
+        run: python scripts/validate_calendar_health.py
+      - name: Commit material changes
+        run: |
+          if git diff --quiet; then
+            echo "No material calendar change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendars/harry-potter-events-france-paris.ics calendars/harry-potter-paris.ics calendars/harry-potter-watchlist-france.json calendars/harry-potter-ticketing-france.json
+          git commit -m "feat: add official Harry Potter 25th anniversary marathons"
+          git push
