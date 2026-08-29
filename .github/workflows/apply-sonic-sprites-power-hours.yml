@@ -22,6 +22,8 @@ jobs:
           python-version: '3.12'
       - name: Apply official Sonic Sprites Power Hours
         run: python scripts/apply_sonic_sprites_power_hours_20260829.py
+      - name: Reconcile derived notification index
+        run: python scripts/reconcile_sonic_outbox_index.py
       - name: Validate Fortnite ICS
         run: python scripts/validate_fortnite_ics.py
       - name: Validate change ledger and outbox
