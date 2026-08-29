@@ -1,0 +1,186 @@
+name: Sync Pokemon TCG Live code reminders
+
+on:
+  push:
+    paths:
+      - 'calendars/pokemon-tcg-live-codes.json'
+      - '.github/workflows/sync-pokemon-tcgl-codes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pokemon-tcgl-code-calendar-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync actionable TCG Live expiry reminders
+        run: |
+          python - <<'PY'
+          import json, re, hashlib
+          from datetime import datetime, timedelta
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          ledger_path = Path('calendars/pokemon-tcg-live-codes.json')
+          ics_path = Path('calendars/pokemon-paris.ics')
+          data = json.loads(ledger_path.read_text(encoding='utf-8'))
+          ics = ics_path.read_text(encoding='utf-8')
+
+          def esc(s):
+              return str(s).replace('\\', '\\\\').replace(';', '\\;').replace(',', '\\,').replace('\n', '\\n')
+
+          def parse_dt(value):
+              if not value or value == 'UNKNOWN':
+                  return None
+              try:
+                  return datetime.fromisoformat(value).astimezone(ZoneInfo('Europe/Paris'))
+              except Exception:
+                  return None
+
+          # Existing managed events by UID.
+          blocks = re.findall(r'BEGIN:VEVENT\r?\n.*?END:VEVENT\r?\n?', ics, flags=re.S)
+          existing = {}
+          for b in blocks:
+              m = re.search(r'^UID:(.+)$', b, flags=re.M)
+              if m and m.group(1).strip().startswith('pokemon-tcgl-expiry-'):
+                  existing[m.group(1).strip()] = b
+
+          # Remove only events managed by this workflow; everything else is preserved byte-for-byte.
+          base = re.sub(r'BEGIN:VEVENT\r?\n(?:(?!END:VEVENT).)*?UID:pokemon-tcgl-expiry-[^\r\n]+\r?\n.*?END:VEVENT\r?\n?', '', ics, flags=re.S)
+
+          active = []
+          for e in data.get('entries', []):
+              if e.get('STATUS') not in {'ACTIVE', 'UPCOMING'}:
+                  continue
+              dt = parse_dt(e.get('EXPIRES_AT'))
+              if not dt or e.get('DATE_PRECISION') != 'TIME':
+                  continue
+              active.append((e, dt))
+
+          groups = {}
+          for e, dt in active:
+              # Universal public codes remain separate; Twitch-generated codes sharing one redemption deadline are grouped.
+              key = (dt.isoformat(), e.get('CODE_ID')) if e.get('TYPE') == 'PUBLIC_CODE' else (dt.isoformat(), 'TWITCH_DROP')
+              groups.setdefault(key, []).append((e, dt))
+
+          now_utc = datetime.now(ZoneInfo('UTC')).strftime('%Y%m%dT%H%M%SZ')
+          managed = []
+          for key, rows in sorted(groups.items(), key=lambda x: x[0][0]):
+              dt = rows[0][1]
+              is_public = rows[0][0].get('TYPE') == 'PUBLIC_CODE'
+              if is_public:
+                  e = rows[0][0]
+                  slug = re.sub(r'[^a-z0-9]+', '-', e.get('CODE_ID','code').lower()).strip('-')[:48]
+                  uid = f'pokemon-tcgl-expiry-{slug}@openai'
+                  summary = f"⏳ Fin code TCG Live — {e.get('CODE_TEXT','code promotionnel')}"
+                  reward_lines = [f"🎁 {e.get('REWARD','Récompense TCG Live')}"]
+                  action = f"Entre le code {e.get('CODE_TEXT')} dans Pokémon TCG Live avant l'échéance."
+                  tier = e.get('SOURCE_TIER','UNKNOWN')
+                  status = 'CONFIRMED' if tier == 'OFFICIAL' else 'TENTATIVE'
+              else:
+                  stamp = dt.strftime('%Y%m%dT%H%M')
+                  uid = f'pokemon-tcgl-expiry-twitch-{stamp}@openai'
+                  summary = '⏳ Fin codes Twitch Drops TCG Live — Mondiaux / PokémonXP'
+                  reward_lines = [f"🎁 {e.get('REWARD','Récompense TCG Live')}" for e,_ in rows]
+                  action = "Réclame les Drops dans Twitch puis utilise les codes générés dans Pokémon TCG Live avant l'échéance."
+                  status = 'CONFIRMED' if all(e.get('SOURCE_TIER') == 'OFFICIAL' for e,_ in rows) else 'TENTATIVE'
+                  tier = 'OFFICIAL' if status == 'CONFIRMED' else 'MIXED'
+
+              dtend = dt + timedelta(minutes=15)
+              sources = []
+              for e,_ in rows:
+                  u = e.get('PRIMARY_SOURCE_URL')
+                  if u and u not in sources:
+                      sources.append(u)
+              description = '\\n'.join([
+                  action,
+                  *reward_lines,
+                  f"⏰ Expiration : {dt.strftime('%d/%m/%Y à %H:%M')} — Europe/Paris.",
+                  f"Source tier : {tier}.",
+                  *[f"Source : {u}" for u in sources]
+              ])
+
+              seq = 0
+              old = existing.get(uid)
+              if old:
+                  sm = re.search(r'^SEQUENCE:(\d+)$', old, flags=re.M)
+                  old_seq = int(sm.group(1)) if sm else 0
+              else:
+                  old_seq = -1
+
+              lines = [
+                  'BEGIN:VEVENT',
+                  f'UID:{uid}',
+                  f'DTSTAMP:{now_utc}',
+                  f'LAST-MODIFIED:{now_utc}',
+                  'SEQUENCE:0',
+                  f'STATUS:{status}',
+                  'PRIORITY:5',
+                  'X-POKEMON-PRIORITY:IMPORTANT',
+                  'X-POKEMON-REMINDER-PROFILE:TCGL_CODE_EXPIRY',
+                  'X-POKEMON-ACTION:REDEEM',
+                  f'DTSTART;TZID=Europe/Paris:{dt.strftime("%Y%m%dT%H%M%S")}',
+                  f'DTEND;TZID=Europe/Paris:{dtend.strftime("%Y%m%dT%H%M%S")}',
+                  f'SUMMARY:{esc(summary)}',
+                  'LOCATION:En ligne — Pokémon TCG Live',
+                  f'DESCRIPTION:{esc(description)}',
+                  'CATEGORIES:Pokémon,TCG Live,Code promotionnel,Rappel',
+                  'BEGIN:VALARM',
+                  'TRIGGER:-P1D',
+                  'ACTION:DISPLAY',
+                  f'DESCRIPTION:{esc(summary)} demain — pense à récupérer tes récompenses',
+                  'END:VALARM',
+                  'END:VEVENT',
+              ]
+              new = '\r\n'.join(lines) + '\r\n'
+
+              def semantic(s):
+                  s = re.sub(r'^DTSTAMP:.*\r?\n', '', s, flags=re.M)
+                  s = re.sub(r'^LAST-MODIFIED:.*\r?\n', '', s, flags=re.M)
+                  s = re.sub(r'^SEQUENCE:\d+\r?\n', '', s, flags=re.M)
+                  return s.replace('\r\n','\n')
+
+              if old and semantic(old) == semantic(new):
+                  managed.append(old if old.endswith(('\n','\r')) else old + '\r\n')
+              else:
+                  seq = max(0, old_seq + 1)
+                  new = new.replace('SEQUENCE:0\r\n', f'SEQUENCE:{seq}\r\n', 1)
+                  managed.append(new)
+
+          marker = 'END:VCALENDAR'
+          if marker not in base:
+              raise SystemExit('Invalid global ICS: END:VCALENDAR missing')
+          out = base.replace(marker, ''.join(managed) + marker)
+          if 'BEGIN:VCALENDAR' not in out or out.count('BEGIN:VEVENT') != out.count('END:VEVENT'):
+              raise SystemExit('ICS structural validation failed')
+          if out != ics:
+              ics_path.write_text(out, encoding='utf-8', newline='')
+              print(f'Synced {len(managed)} managed TCG Live expiry reminder(s).')
+          else:
+              print('No semantic calendar change.')
+          PY
+
+      - name: Commit calendar change
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No calendar update"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: sync TCG Live code expiry reminders"
+          git push
