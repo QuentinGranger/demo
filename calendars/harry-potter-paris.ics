@@ -1011,4 +1011,80 @@ ACTION:DISPLAY
 DESCRIPTION:✨ Grandes Eaux Nocturnes Harry Potter à Versailles demain — prépare ton billet et ton trajet
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:hp-ugc-marathon-25ans-idf-20260829@openai
+DTSTAMP:20260829T015055Z
+LAST-MODIFIED:20260829T015055Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINEMA_MARATHON
+X-HARRYPOTTER-FORMAT:CINEMA_SPECIAL
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-CANDIDATE-ID:hp-ugc-marathon-25ans-idf-20260829
+X-HARRYPOTTER-SOURCE-ID:ugc-fr
+X-HARRYPOTTER-EVIDENCE-GRADE:A
+X-HARRYPOTTER-COLLECTOR-INTEREST:LOW
+X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260829T015055Z
+X-HARRYPOTTER-NEW-UNTIL:20260903T015055Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+X-HARRYPOTTER-TICKET-STATUS:ON_SALE
+X-HARRYPOTTER-TICKET-PROVIDER:UGC
+X-HARRYPOTTER-TICKET-PROVIDER-ID:ugc-fr
+X-HARRYPOTTER-TICKET-CONFIDENCE:HIGH
+X-HARRYPOTTER-TICKET-SCARCITY-EVIDENCE:UNKNOWN
+X-HARRYPOTTER-TICKET-URL:https://www.ugc.fr/cinema-ugc-cine-cite-sqy-ouest.html
+X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:40.00
+X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:40.00
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260831
+SUMMARY:⭐ ✅ 🆕 🎬 Marathon Harry Potter — 25 ans de magie — UGC Île-de-France
+LOCATION:Île-de-France — cinémas UGC participants, dont SQY Ouest, Créteil et Rosny-sous-Bois
+DESCRIPTION:Priorité : ⭐ Important — marathon officiel UGC des huit films pour les 25 ans de la saga.\nFiabilité : ✅ Vérifié directement sur les pages UGC des cinémas participants.\nPériode : samedi 29 et dimanche 30 août 2026.\nProgramme : les huit films de la saga ; bonus inédit annoncé après Harry Potter à l'école des sorciers.\nTarif pack annoncé par UGC : 40 € les huit films ; séances non numérotées, placement libre.\nÎle-de-France : participation vérifiée notamment à UGC Ciné Cité SQY Ouest, UGC Ciné Cité Créteil et UGC Ciné Cité Rosny.\nAjout le 29 août 2026 après vérification directe ; aucun rappel rétroactif n'est créé.\nSource : https://www.ugc.fr/cinema-ugc-cine-cite-sqy-ouest.html
+URL:https://www.ugc.fr/cinema-ugc-cine-cite-sqy-ouest.html
+CATEGORIES:Harry Potter,Événement,Cinéma,Marathon,25e anniversaire,Île-de-France,Nouveau,Priorité Important
+END:VEVENT
+BEGIN:VEVENT
+UID:hp-cgr-torcy-marathon-25ans-20260829@openai
+DTSTAMP:20260829T015055Z
+LAST-MODIFIED:20260829T015055Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-HARRYPOTTER-PRIORITY:IMPORTANT
+X-HARRYPOTTER-REMINDER-PROFILE:EVENT_IMPORTANT
+X-HARRYPOTTER-ACTION:ATTEND
+X-HARRYPOTTER-EVENT-TYPE:CINEMA_MARATHON
+X-HARRYPOTTER-FORMAT:CINEMA_SPECIAL
+X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-CANDIDATE-ID:hp-cgr-torcy-marathon-25ans-20260829
+X-HARRYPOTTER-SOURCE-ID:cgr-fr
+X-HARRYPOTTER-EVIDENCE-GRADE:A
+X-HARRYPOTTER-COLLECTOR-INTEREST:LOW
+X-HARRYPOTTER-LIMITED:UNKNOWN
+X-HARRYPOTTER-FIRST-ADDED-AT:20260829T015055Z
+X-HARRYPOTTER-NEW-UNTIL:20260903T015055Z
+X-HARRYPOTTER-FRESHNESS:NEW
+X-HARRYPOTTER-BADGE:NEW
+X-HARRYPOTTER-TICKET-STATUS:ON_SALE
+X-HARRYPOTTER-TICKET-PROVIDER:CGR Cinémas
+X-HARRYPOTTER-TICKET-PROVIDER-ID:cgr-fr
+X-HARRYPOTTER-TICKET-CONFIDENCE:HIGH
+X-HARRYPOTTER-TICKET-SCARCITY-EVIDENCE:UNKNOWN
+X-HARRYPOTTER-TICKET-URL:https://www.cgrcinemas.fr/evenements/77943-harry-potter-le-marathon-des-25-ans/
+X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:20.00
+X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:48.00
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260831
+SUMMARY:⭐ ✅ 🆕 🎬 Marathon Harry Potter — 25 ans — CGR Torcy Marne-la-Vallée
+LOCATION:CGR Torcy - Marne-la-Vallée, Torcy, Seine-et-Marne, France
+DESCRIPTION:Priorité : ⭐ Important — marathon anniversaire officiel CGR en Île-de-France.\nFiabilité : ✅ Confirmé directement par CGR Torcy - Marne-la-Vallée.\nPériode : samedi 29 et dimanche 30 août 2026.\nProgramme : quatre films samedi puis quatre films dimanche, en VF.\nHoraires publiés : samedi 10h30, 14h00, 17h10, 20h30 ; dimanche 10h45, 14h00, 17h10, 20h30.\nTarifs publiés : 26 € la journée de quatre films, 48 € les huit films ; membres fidélité 20 € / 36 €.\nAjout le 29 août 2026 après vérification directe ; aucun rappel rétroactif n'est créé.\nSource : https://www.cgrcinemas.fr/evenements/77943-harry-potter-le-marathon-des-25-ans/
+URL:https://www.cgrcinemas.fr/evenements/77943-harry-potter-le-marathon-des-25-ans/
+CATEGORIES:Harry Potter,Événement,Cinéma,Marathon,25e anniversaire,Île-de-France,Torcy,Nouveau,Priorité Important
+END:VEVENT
 END:VCALENDAR

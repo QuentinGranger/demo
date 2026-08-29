@@ -1,6 +1,6 @@
 {
   "version": "CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-25T01:56:07Z",
+  "updated_at": "2026-08-29T01:50:55Z",
   "scope": "Harry Potter / Wizarding World — candidats non encore calendrables pour la France",
   "states": {
     "WATCHING": "Sujet surveillé ; seuil calendrier non atteint.",
@@ -25,8 +25,15 @@
       "category": "STREAMING_SERIES",
       "status": "SIGNAL_FOUND",
       "priority": "HIGH",
-      "source_ids": ["wbd-press-hp", "max-fr", "harrypotter-official"],
-      "promotion_requirements": ["date ou fenêtre France officiellement exploitable", "disponibilité France confirmée"],
+      "source_ids": [
+        "wbd-press-hp",
+        "max-fr",
+        "harrypotter-official"
+      ],
+      "promotion_requirements": [
+        "date ou fenêtre France officiellement exploitable",
+        "disponibilité France confirmée"
+      ],
       "last_signal_at": "2026-08-25T01:56:07Z",
       "last_checked_at": "2026-08-25T01:56:07Z",
       "calendar_uid": null
@@ -37,8 +44,14 @@
       "category": "AUDIOBOOK",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["audible-fr-hp", "harrypotter-official"],
-      "promotion_requirements": ["titre/édition identifiable", "date de sortie ou précommande France précise"],
+      "source_ids": [
+        "audible-fr-hp",
+        "harrypotter-official"
+      ],
+      "promotion_requirements": [
+        "titre/édition identifiable",
+        "date de sortie ou précommande France précise"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -49,8 +62,16 @@
       "category": "GAME_RELEASE",
       "status": "WATCHING",
       "priority": "HIGH",
-      "source_ids": ["harrypotter-games", "warner-games", "harrypotter-official"],
-      "promotion_requirements": ["jeu officiellement identifié", "date ou ouverture de précommande exploitable", "plateforme/territoire suffisamment clair"],
+      "source_ids": [
+        "harrypotter-games",
+        "warner-games",
+        "harrypotter-official"
+      ],
+      "promotion_requirements": [
+        "jeu officiellement identifié",
+        "date ou ouverture de précommande exploitable",
+        "plateforme/territoire suffisamment clair"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -61,8 +82,14 @@
       "category": "COLLECTIBLE_OR_BOOK",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["minalima"],
-      "promotion_requirements": ["produit/édition Harry Potter identifié", "date précise", "achat ou disponibilité pertinente pour France/Europe"],
+      "source_ids": [
+        "minalima"
+      ],
+      "promotion_requirements": [
+        "produit/édition Harry Potter identifié",
+        "date précise",
+        "achat ou disponibilité pertinente pour France/Europe"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -73,8 +100,14 @@
       "category": "PROP_REPLICA",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["noble-fr"],
-      "promotion_requirements": ["produit identifiable", "date de lancement/précommande/restock important", "France"],
+      "source_ids": [
+        "noble-fr"
+      ],
+      "promotion_requirements": [
+        "produit identifiable",
+        "date de lancement/précommande/restock important",
+        "France"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -85,8 +118,14 @@
       "category": "COLLECTIBLE",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["cinereplicas-fr"],
-      "promotion_requirements": ["produit identifiable", "date de lancement/précommande/restock important", "France"],
+      "source_ids": [
+        "cinereplicas-fr"
+      ],
+      "promotion_requirements": [
+        "produit identifiable",
+        "date de lancement/précommande/restock important",
+        "France"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -97,8 +136,14 @@
       "category": "COLLECTIBLE_ACCESSORY",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["funko-eu"],
-      "promotion_requirements": ["référence identifiable", "date de sortie/drop ou précommande", "disponibilité Europe/France"],
+      "source_ids": [
+        "funko-eu"
+      ],
+      "promotion_requirements": [
+        "référence identifiable",
+        "date de sortie/drop ou précommande",
+        "disponibilité Europe/France"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -109,8 +154,16 @@
       "category": "EXHIBITION",
       "status": "WATCHING",
       "priority": "HIGH",
-      "source_ids": ["hp-exhibition", "harrypotter-official", "warner-fr"],
-      "promotion_requirements": ["ville française", "période ou date d'ouverture exploitable", "source organisateur/franchise"],
+      "source_ids": [
+        "hp-exhibition",
+        "harrypotter-official",
+        "warner-fr"
+      ],
+      "promotion_requirements": [
+        "ville française",
+        "période ou date d'ouverture exploitable",
+        "source organisateur/franchise"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
@@ -121,11 +174,57 @@
       "category": "LOCAL_EVENTS_DISCOVERY",
       "status": "WATCHING",
       "priority": "MEDIUM",
-      "source_ids": ["fnac-spectacles", "local-organizers-discovery", "pathe-fr", "ugc-fr", "cgr-fr"],
-      "promotion_requirements": ["organisateur/lieu directement responsable retrouvé", "date et lieu précis", "lien avec Harry Potter suffisamment officiel/licencié"],
+      "source_ids": [
+        "fnac-spectacles",
+        "local-organizers-discovery",
+        "pathe-fr",
+        "ugc-fr",
+        "cgr-fr"
+      ],
+      "promotion_requirements": [
+        "organisateur/lieu directement responsable retrouvé",
+        "date et lieu précis",
+        "lien avec Harry Potter suffisamment officiel/licencié"
+      ],
       "last_signal_at": null,
       "last_checked_at": null,
       "calendar_uid": null
+    },
+    {
+      "candidate_id": "hp-ugc-marathon-25ans-idf-20260829",
+      "subject": "Marathon Harry Potter — 25 ans de magie — UGC Île-de-France",
+      "category": "CINEMA_MARATHON",
+      "status": "CALENDAR_ADDED",
+      "priority": "HIGH",
+      "source_ids": [
+        "ugc-fr"
+      ],
+      "promotion_requirements": [
+        "organisateur directement responsable",
+        "date et lieu/périmètre précis",
+        "action de réservation exploitable"
+      ],
+      "last_signal_at": "2026-08-29T01:50:55Z",
+      "last_checked_at": "2026-08-29T01:50:55Z",
+      "calendar_uid": "hp-ugc-marathon-25ans-idf-20260829@openai"
+    },
+    {
+      "candidate_id": "hp-cgr-torcy-marathon-25ans-20260829",
+      "subject": "Marathon Harry Potter — 25 ans — CGR Torcy Marne-la-Vallée",
+      "category": "CINEMA_MARATHON",
+      "status": "CALENDAR_ADDED",
+      "priority": "HIGH",
+      "source_ids": [
+        "cgr-fr"
+      ],
+      "promotion_requirements": [
+        "organisateur directement responsable",
+        "date et lieu/périmètre précis",
+        "action de réservation exploitable"
+      ],
+      "last_signal_at": "2026-08-29T01:50:55Z",
+      "last_checked_at": "2026-08-29T01:50:55Z",
+      "calendar_uid": "hp-cgr-torcy-marathon-25ans-20260829@openai"
     }
   ]
 }
