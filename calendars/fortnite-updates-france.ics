@@ -276,4 +276,51 @@ DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchm
  aking potentiellement indisponibles
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-sonic-sprites-power-hours-20260829@openai
+DTSTAMP:20260829T020055Z
+LAST-MODIFIED:20260829T020055Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:LIMITED_TIME_EVENT
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-THEME:SONIC_SPRITES
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_news
+X-FORTNITE-SOURCE-TIMEZONE:UTC
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-CANDIDATE-ID:fortnite-sonic-sprites-power-hours-20260829
+X-FORTNITE-LAST-CHANGE-ID:chg_36b3242002f395627ef8575a
+X-FORTNITE-FIRST-ADDED-AT:20260829T020055Z
+X-FORTNITE-NEW-UNTIL:20260903T020055Z
+X-FORTNITE-SESSION;TYPE=POWER_HOUR_1:20260829T200000/20260829T220000
+X-FORTNITE-SESSION;TYPE=POWER_HOUR_2:20260830T030000/20260830T050000
+DTSTART;TZID=Europe/Paris:20260829T200000
+DTEND;TZID=Europe/Paris:20260829T220000
+SUMMARY:⭐ ✅ 🆕 💨 Power Hours — Sonic Sprites
+DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité
+  confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 29 août 20
+ h00–22h00 à Paris.\nFenêtre 2 : dimanche 30 août 03h00–05h00 à Par
+ is.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’est p
+ as présenté comme actif entre 22h et 03h.\nLe Storm Scout Sprite fait se
+ s débuts pendant ces Power Hours. Sonic, Tails et Shadow Sprites apparais
+ sent plus souvent, variantes incluses ; les Sonic Power Sneakers ont un ta
+ ux de drop accru depuis les coffres. Des 1-Up Tokens et Portable Extractor
+ s peuvent aussi apparaître comme trouvailles rares.\nAucun taux chiffré 
+ ni garantie de drop n’est déduit.\nSource : https://communities.epicgam
+ es.com/thread/power-hours-sonic-sprites-this-weekend-august-29/XvRq
+URL:https://communities.epicgames.com/thread/power-hours-sonic-sprites-this
+ -weekend-august-29/XvRq
+CATEGORIES:Fortnite,Battle Royale,Power Hours,Sonic,Sprites,Événement lim
+ ité
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:💨 Sonic Sprites Power Hours dans 1 h — première fenêtre 
+ à 20h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
