@@ -28,6 +28,18 @@ jobs:
         run: python scripts/validate_fortnite_ics.py
       - name: Validate change ledger and outbox
         run: python scripts/validate_fortnite_change_ledger.py
+      - name: Validate competitive ledger
+        run: python scripts/validate_fortnite_competitive.py
+      - name: Validate competitive deadlines
+        run: python scripts/validate_fortnite_competitive_deadlines.py
+      - name: Validate season/pass lifecycle
+        run: python scripts/validate_fortnite_season_pass_lifecycle.py
+      - name: Validate lore taxonomy
+        run: python scripts/validate_fortnite_lore_taxonomy.py
+      - name: Validate physical events
+        run: python scripts/validate_fortnite_physical_events.py
+      - name: Deep cross-calendar health check
+        run: python scripts/validate_calendar_health.py --online
       - name: Commit canonical changes
         run: |
           if git diff --quiet -- calendars; then
