@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-29T02:00:55Z",
+  "updated_at": "2026-08-29T09:13:36Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": [
     "WATCHING",
@@ -179,6 +179,20 @@
       "official_event_url": "https://communities.epicgames.com/thread/power-hours-sonic-sprites-this-weekend-august-29/XvRq",
       "related_calendar_uid": "fortnite-sonic-sprites-power-hours-20260829@openai",
       "promoted_at": "2026-08-29T02:00:55Z"
+    },
+    {
+      "candidate_id": "fortnite-og-final-showdown-return-20260829",
+      "state": "CALENDAR_ADDED",
+      "topic": "Fortnite OG — The Final Showdown — retour le 29 août 2026",
+      "source_ids": [
+        "fortnite_news"
+      ],
+      "known": "Epic confirme le retour de The Final Showdown dans Fortnite OG le 29 août 2026 à 18:00 UTC, soit 20:00 à Paris. L'événement dure 10 minutes. Epic recommande d'entrer dans une partie OG avant 17:55 UTC, soit 19:55 à Paris. Les dégâts et la tempête sont désactivés 10 minutes avant et un Jetpack est fourni pour choisir un point d'observation.",
+      "missing_for_calendar": [],
+      "promotion_rule": "Déjà promu depuis une publication Epic Communities directe mise en avant sur la page Fortnite OG officielle. Conserver un UID stable ; aucune identité du 'monstrous threat' ni relation lore n'est inférée sans source officielle explicite.",
+      "official_event_url": "https://communities.epicgames.com/thread/the-final-showdown-event-returns-to-fortnite-og/Ull5",
+      "related_calendar_uid": "fortnite-og-final-showdown-return-20260829@openai",
+      "promoted_at": "2026-08-29T09:13:36Z"
     }
   ]
 }

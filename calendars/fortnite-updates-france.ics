@@ -323,4 +323,53 @@ DESCRIPTION:💨 Sonic Sprites Power Hours dans 1 h — première fenêtre
  à 20h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-og-final-showdown-return-20260829@openai
+DTSTAMP:20260829T091336Z
+LAST-MODIFIED:20260829T091336Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-FORTNITE-PRIORITY:CRITICAL
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:LIVE_EVENT
+X-FORTNITE-MODE:FORTNITE_OG
+X-FORTNITE-THEME:FINAL_SHOWDOWN
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_news
+X-FORTNITE-SOURCE-TIMEZONE:UTC
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-CANDIDATE-ID:fortnite-og-final-showdown-return-20260829
+X-FORTNITE-LAST-CHANGE-ID:chg_4420022ba3332a7f2d9d82f9
+X-FORTNITE-FIRST-ADDED-AT:20260829T091336Z
+X-FORTNITE-NEW-UNTIL:20260903T091336Z
+X-FORTNITE-JOIN-BY;TZID=Europe/Paris:20260829T195500
+DTSTART;TZID=Europe/Paris:20260829T200000
+DTEND;TZID=Europe/Paris:20260829T201000
+SUMMARY:🔥 ✅ 🆕 🎬 Fortnite OG — The Final Showdown
+DESCRIPTION:Priorité : 🔥 Critique — live event Fortnite OG officiel d
+ e 10 minutes.\nDébut : samedi 29 août à 20h00 à Paris (18:00 UTC).\n
+ ⚠️ Epic recommande d’entrer dans une partie Fortnite OG avant 19h55 
+ à Paris.\nDix minutes avant l’événement, les dégâts sont désactiv
+ és et la tempête mise en pause ; un Jetpack est fourni pour choisir un p
+ oint d’observation. Après l’événement, dégâts et tempête sont r
+ éactivés.\nEpic décrit une menace monstrueuse près de la côte au nord
+  de Lazy Lagoon ; aucune identité, relation ou causalité lore supplémen
+ taire n’est déduite.\nSource : https://communities.epicgames.com/thread
+ /the-final-showdown-event-returns-to-fortnite-og/Ull5
+URL:https://communities.epicgames.com/thread/the-final-showdown-event-retur
+ ns-to-fortnite-og/Ull5
+CATEGORIES:Fortnite,Fortnite OG,Live Event,The Final Showdown
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🎬 The Final Showdown dans 1 h — Fortnite OG à 20h
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:🔥 The Final Showdown dans 15 min — entre dans une partie O
+ G avant 19h55
+END:VALARM
+END:VEVENT
 END:VCALENDAR
