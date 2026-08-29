@@ -1,0 +1,43 @@
+name: Apply Sonic Sprites Power Hours
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-sonic-sprites-power-hours.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply official Sonic Sprites Power Hours
+        run: python scripts/apply_sonic_sprites_power_hours_20260829.py
+      - name: Validate Fortnite ICS
+        run: python scripts/validate_fortnite_ics.py
+      - name: Validate change ledger and outbox
+        run: python scripts/validate_fortnite_change_ledger.py
+      - name: Commit canonical changes
+        run: |
+          if git diff --quiet -- calendars; then
+            echo 'No semantic change to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/fortnite-watchlist-france.json \
+                  calendars/fortnite-change-ledger.json \
+                  calendars/fortnite-change-index-france.json \
+                  calendars/fortnite-notification-outbox-france.json \
+                  calendars/fortnite-updates-france.ics \
+                  calendars/fortnite-paris.ics
+          git commit -m 'Add Sonic Sprites Power Hours to Fortnite calendars'
+          git push origin HEAD:master
