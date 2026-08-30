@@ -67,6 +67,8 @@ RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 X-POKEMON-PRODUCT-EAN:0196214144835
 X-POKEMON-PRODUCT-UPC:196214144835
 X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
+X-POKEMON-CLD-AVAILABILITY-DATE:20260915
+X-POKEMON-RETAIL-STREET-DATE:20260916
 X-POKEMON-WATCH-MODE:ZERO_MISS_ULTRA
 X-POKEMON-WATCH-FREQUENCY:HOURLY
 X-POKEMON-REFERENCE-PRICE-EUR:62.99
@@ -77,7 +79,7 @@ DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
 SUMMARY:🔥 🔎 Veille précommandes — ETB Pokémon 30 ans FR
 LOCATION:France / Europe — en ligne
-DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
+DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n📦 CLD Distribution : disponibilité/logistique B2B indiquée au 15 septembre 2026 ; street date retailer suivie au 16 septembre 2026.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
