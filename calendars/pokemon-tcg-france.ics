@@ -90,7 +90,6 @@ X-POKEMON-LATEST-ALERT-RETAILER:Foxchip-Collector
 X-POKEMON-LATEST-ALERT-STATUS:OUT_OF_STOCK
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
 X-POKEMON-LATEST-ALERT-AT:20260830T082600+0200
-URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
