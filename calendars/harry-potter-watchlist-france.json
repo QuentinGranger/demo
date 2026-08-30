@@ -1,6 +1,6 @@
 {
   "version": "CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-29T01:50:55Z",
+  "updated_at": "2026-08-30T01:48:58Z",
   "scope": "Harry Potter / Wizarding World — candidats non encore calendrables pour la France",
   "states": {
     "WATCHING": "Sujet surveillé ; seuil calendrier non atteint.",
@@ -25,206 +25,26 @@
       "category": "STREAMING_SERIES",
       "status": "SIGNAL_FOUND",
       "priority": "HIGH",
-      "source_ids": [
-        "wbd-press-hp",
-        "max-fr",
-        "harrypotter-official"
-      ],
-      "promotion_requirements": [
-        "date ou fenêtre France officiellement exploitable",
-        "disponibilité France confirmée"
-      ],
-      "last_signal_at": "2026-08-25T01:56:07Z",
-      "last_checked_at": "2026-08-25T01:56:07Z",
+      "source_ids": ["wbd-press-hp","max-fr","harrypotter-official"],
+      "promotion_requirements": ["date ou fenêtre France officiellement exploitable","disponibilité France confirmée"],
+      "global_title": "Harry Potter and the Philosopher’s Stone",
+      "global_window": "Christmas 2026",
+      "global_window_source_id": "harrypotter-official",
+      "global_window_source_url": "https://www.harrypotter.com/news/watch-the-first-teaser-for-hbo-original-harry-potter-series-premiering-christmas-2026",
+      "territory_guard": "La fenêtre globale Noël 2026 est confirmée, mais aucune source PRIMARY_FR/max-fr vérifiée dans ce run ne confirme explicitement la même fenêtre pour la France. Ne pas créer MARKET:FR avant confirmation France.",
+      "last_signal_at": "2026-08-30T01:48:58Z",
+      "last_checked_at": "2026-08-30T01:48:58Z",
       "calendar_uid": null
     },
-    {
-      "candidate_id": "hp-audible-fr-next-release",
-      "subject": "Prochaine sortie audio Harry Potter datée pour la France",
-      "category": "AUDIOBOOK",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "audible-fr-hp",
-        "harrypotter-official"
-      ],
-      "promotion_requirements": [
-        "titre/édition identifiable",
-        "date de sortie ou précommande France précise"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-next-portkey-game-fr",
-      "subject": "Prochain jeu Harry Potter / Portkey — sortie ou précommande France",
-      "category": "GAME_RELEASE",
-      "status": "WATCHING",
-      "priority": "HIGH",
-      "source_ids": [
-        "harrypotter-games",
-        "warner-games",
-        "harrypotter-official"
-      ],
-      "promotion_requirements": [
-        "jeu officiellement identifié",
-        "date ou ouverture de précommande exploitable",
-        "plateforme/territoire suffisamment clair"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-minalima-next-dated-launch",
-      "subject": "MinaLima Harry Potter — prochain lancement daté pertinent pour la France",
-      "category": "COLLECTIBLE_OR_BOOK",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "minalima"
-      ],
-      "promotion_requirements": [
-        "produit/édition Harry Potter identifié",
-        "date précise",
-        "achat ou disponibilité pertinente pour France/Europe"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-noble-next-limited-fr",
-      "subject": "Noble Collection France — prochaine réplique/édition limitée Harry Potter datée",
-      "category": "PROP_REPLICA",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "noble-fr"
-      ],
-      "promotion_requirements": [
-        "produit identifiable",
-        "date de lancement/précommande/restock important",
-        "France"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-cinereplicas-next-limited-fr",
-      "subject": "Cinereplicas France — prochain collector/édition limitée Harry Potter daté",
-      "category": "COLLECTIBLE",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "cinereplicas-fr"
-      ],
-      "promotion_requirements": [
-        "produit identifiable",
-        "date de lancement/précommande/restock important",
-        "France"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-funko-loungefly-next-exclusive-eu",
-      "subject": "Funko/Loungefly Harry Potter — prochaine exclusivité ou sortie datée pertinente en France",
-      "category": "COLLECTIBLE_ACCESSORY",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "funko-eu"
-      ],
-      "promotion_requirements": [
-        "référence identifiable",
-        "date de sortie/drop ou précommande",
-        "disponibilité Europe/France"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-exhibition-next-france",
-      "subject": "Harry Potter: The Exhibition — prochaine date française",
-      "category": "EXHIBITION",
-      "status": "WATCHING",
-      "priority": "HIGH",
-      "source_ids": [
-        "hp-exhibition",
-        "harrypotter-official",
-        "warner-fr"
-      ],
-      "promotion_requirements": [
-        "ville française",
-        "période ou date d'ouverture exploitable",
-        "source organisateur/franchise"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-france-small-events-discovery",
-      "subject": "Petits événements Harry Potter officiels ou licenciés en France",
-      "category": "LOCAL_EVENTS_DISCOVERY",
-      "status": "WATCHING",
-      "priority": "MEDIUM",
-      "source_ids": [
-        "fnac-spectacles",
-        "local-organizers-discovery",
-        "pathe-fr",
-        "ugc-fr",
-        "cgr-fr"
-      ],
-      "promotion_requirements": [
-        "organisateur/lieu directement responsable retrouvé",
-        "date et lieu précis",
-        "lien avec Harry Potter suffisamment officiel/licencié"
-      ],
-      "last_signal_at": null,
-      "last_checked_at": null,
-      "calendar_uid": null
-    },
-    {
-      "candidate_id": "hp-ugc-marathon-25ans-idf-20260829",
-      "subject": "Marathon Harry Potter — 25 ans de magie — UGC Île-de-France",
-      "category": "CINEMA_MARATHON",
-      "status": "CALENDAR_ADDED",
-      "priority": "HIGH",
-      "source_ids": [
-        "ugc-fr"
-      ],
-      "promotion_requirements": [
-        "organisateur directement responsable",
-        "date et lieu/périmètre précis",
-        "action de réservation exploitable"
-      ],
-      "last_signal_at": "2026-08-29T01:50:55Z",
-      "last_checked_at": "2026-08-29T01:50:55Z",
-      "calendar_uid": "hp-ugc-marathon-25ans-idf-20260829@openai"
-    },
-    {
-      "candidate_id": "hp-cgr-torcy-marathon-25ans-20260829",
-      "subject": "Marathon Harry Potter — 25 ans — CGR Torcy Marne-la-Vallée",
-      "category": "CINEMA_MARATHON",
-      "status": "CALENDAR_ADDED",
-      "priority": "HIGH",
-      "source_ids": [
-        "cgr-fr"
-      ],
-      "promotion_requirements": [
-        "organisateur directement responsable",
-        "date et lieu/périmètre précis",
-        "action de réservation exploitable"
-      ],
-      "last_signal_at": "2026-08-29T01:50:55Z",
-      "last_checked_at": "2026-08-29T01:50:55Z",
-      "calendar_uid": "hp-cgr-torcy-marathon-25ans-20260829@openai"
-    }
+    {"candidate_id":"hp-audible-fr-next-release","subject":"Prochaine sortie audio Harry Potter datée pour la France","category":"AUDIOBOOK","status":"WATCHING","priority":"MEDIUM","source_ids":["audible-fr-hp","harrypotter-official"],"promotion_requirements":["titre/édition identifiable","date de sortie ou précommande France précise"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-next-portkey-game-fr","subject":"Prochain jeu Harry Potter / Portkey — sortie ou précommande France","category":"GAME_RELEASE","status":"WATCHING","priority":"HIGH","source_ids":["harrypotter-games","warner-games","harrypotter-official"],"promotion_requirements":["jeu officiellement identifié","date ou ouverture de précommande exploitable","plateforme/territoire suffisamment clair"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-minalima-next-dated-launch","subject":"MinaLima Harry Potter — prochain lancement daté pertinent pour la France","category":"COLLECTIBLE_OR_BOOK","status":"WATCHING","priority":"MEDIUM","source_ids":["minalima"],"promotion_requirements":["produit/édition Harry Potter identifié","date précise","achat ou disponibilité pertinente pour France/Europe"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-noble-next-limited-fr","subject":"Noble Collection France — prochaine réplique/édition limitée Harry Potter datée","category":"PROP_REPLICA","status":"WATCHING","priority":"MEDIUM","source_ids":["noble-fr"],"promotion_requirements":["produit identifiable","date de lancement/précommande/restock important","France"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-cinereplicas-next-limited-fr","subject":"Cinereplicas France — prochain collector/édition limitée Harry Potter daté","category":"COLLECTIBLE","status":"WATCHING","priority":"MEDIUM","source_ids":["cinereplicas-fr"],"promotion_requirements":["produit identifiable","date de lancement/précommande/restock important","France"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-funko-loungefly-next-exclusive-eu","subject":"Funko/Loungefly Harry Potter — prochaine exclusivité ou sortie datée pertinente en France","category":"COLLECTIBLE_ACCESSORY","status":"WATCHING","priority":"MEDIUM","source_ids":["funko-eu"],"promotion_requirements":["référence identifiable","date de sortie/drop ou précommande","disponibilité Europe/France"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-exhibition-next-france","subject":"Harry Potter: The Exhibition — prochaine date française","category":"EXHIBITION","status":"WATCHING","priority":"HIGH","source_ids":["hp-exhibition","harrypotter-official","warner-fr"],"promotion_requirements":["ville française","période ou date d'ouverture exploitable","source organisateur/franchise"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-france-small-events-discovery","subject":"Petits événements Harry Potter officiels ou licenciés en France","category":"LOCAL_EVENTS_DISCOVERY","status":"WATCHING","priority":"MEDIUM","source_ids":["fnac-spectacles","local-organizers-discovery","pathe-fr","ugc-fr","cgr-fr"],"promotion_requirements":["organisateur/lieu directement responsable retrouvé","date et lieu précis","lien avec Harry Potter suffisamment officiel/licencié"],"last_signal_at":null,"last_checked_at":null,"calendar_uid":null},
+    {"candidate_id":"hp-ugc-marathon-25ans-idf-20260829","subject":"Marathon Harry Potter — 25 ans de magie — UGC Île-de-France","category":"CINEMA_MARATHON","status":"CALENDAR_ADDED","priority":"HIGH","source_ids":["ugc-fr"],"promotion_requirements":["organisateur directement responsable","date et lieu/périmètre précis","action de réservation exploitable"],"last_signal_at":"2026-08-29T01:50:55Z","last_checked_at":"2026-08-29T01:50:55Z","calendar_uid":"hp-ugc-marathon-25ans-idf-20260829@openai"},
+    {"candidate_id":"hp-cgr-torcy-marathon-25ans-20260829","subject":"Marathon Harry Potter — 25 ans — CGR Torcy Marne-la-Vallée","category":"CINEMA_MARATHON","status":"CALENDAR_ADDED","priority":"HIGH","source_ids":["cgr-fr"],"promotion_requirements":["organisateur directement responsable","date et lieu/périmètre précis","action de réservation exploitable"],"last_signal_at":"2026-08-29T01:50:55Z","last_checked_at":"2026-08-29T01:50:55Z","calendar_uid":"hp-cgr-torcy-marathon-25ans-20260829@openai"}
   ]
 }
