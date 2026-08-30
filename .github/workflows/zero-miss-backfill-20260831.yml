@@ -1,4 +1,3 @@
-# trigger: 2026-08-31T00:22+02:00
 name: ZERO_MISS backfill 2026-08-31
 
 on:
@@ -6,219 +5,36 @@ on:
     branches: [master]
     paths:
       - '.github/workflows/zero-miss-backfill-20260831.yml'
+      - 'scripts/patch_zero_miss_backfill_20260831.py'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  patch-calendar:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Patch canonical Pokemon calendar
-        shell: python
+        run: python scripts/patch_zero_miss_backfill_20260831.py
+      - name: Verify required events
         run: |
-          from pathlib import Path
-          import re
-
-          p = Path('calendars/pokemon-paris.ics')
-          data = p.read_bytes().decode('utf-8')
-          nl = '\r\n' if '\r\n' in data else '\n'
-
-          data = data.replace('STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:', 'STATUS=SOLD_OUT;CONFIDENCE=88;SELLER=86;PRICE=60.00:')
-          data = data.replace('SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans', 'SUMMARY:ℹ️ RUPTURE — Passion Geek — ETB 30 ans')
-          data = data.replace('X-POKEMON-LATEST-ALERT-STATUS:ALLOCATIONS_TONIGHT', 'X-POKEMON-LATEST-ALERT-STATUS:SOLD_OUT')
-          data = data.replace('X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCÉE', 'X-POKEMON-LATEST-ALERT-LEVEL:INFORMATIONAL_SOLD_OUT')
-          data = data.replace('X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCED', 'X-POKEMON-LATEST-ALERT-LEVEL:INFORMATIONAL_SOLD_OUT')
-
-          events = [
-          '''BEGIN:VEVENT
-UID:pokemon-go-mega-ascension-20260831@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260831T100000
-DTEND;TZID=Europe/Paris:20260905T000000
-SUMMARY:⭐ ✅ 📱 Pokémon GO — Méga ascension
-LOCATION:Pokémon GO — France
-DESCRIPTION:Événement officiel Pokémon GO. Méga ascension du 31 août 2026 à 10:00 au 4 septembre 2026 à 23:59, heure locale. Le Passe GO : Méga-Finale devient disponible le 31 août à 10:00. Source : https://pokemongo.com/fr/gofest/megafinale
-URL:https://pokemongo.com/fr/gofest/megafinale
-CATEGORIES:Pokémon,Pokémon GO,Événement,Priorité Important
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:pokemon-play-season-2027-start-20260901@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_INFO
-X-POKEMON-ACTION:INFO
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20260902
-SUMMARY:ℹ️ ✅ 🏆 Début de la saison Play! Pokémon 2027
-LOCATION:France / Play! Pokémon
-DESCRIPTION:Début de la saison 2027 des League Cups et League Challenges le 1er septembre 2026. Aucun horaire précis n'est publié, donc l'événement reste en journée entière. Source : https://www.pokemon.com/us/news/new-prizes-are-coming-to-pokemon-league-cups-at-play-pokemon-stores
-URL:https://www.pokemon.com/us/news/new-prizes-are-coming-to-pokemon-league-cups-at-play-pokemon-stores
-CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Info
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:pokemon-go-mega-finale-20260905@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-SESSION;DATE=20260905;START=1000;END=1800:Méga-Finale
-X-POKEMON-SESSION;DATE=20260906;START=1000;END=1800:Méga-Finale
-DTSTART;VALUE=DATE:20260905
-DTEND;VALUE=DATE:20260907
-SUMMARY:⭐ ✅ 📱 Festival Pokémon GO 2026 — Méga-Finale
-LOCATION:Pokémon GO — France
-DESCRIPTION:Festival Pokémon GO 2026 : Méga-Finale les 5 et 6 septembre 2026, de 10:00 à 18:00 heure locale. Source : https://pokemongo.com/fr/gofest/megafinale
-URL:https://pokemongo.com/fr/gofest/megafinale
-CATEGORIES:Pokémon,Pokémon GO,Festival,Événement,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:📱 Méga-Finale Pokémon GO demain — prépare tes raids
-END:VALARM
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:pokemon-go-worlds2026-rewards-expiry-20260911@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DEADLINE_IMPORTANT
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260911T214500
-DTEND;TZID=Europe/Paris:20260911T220000
-SUMMARY:⏳ Fin récompenses Pokémon GO — Mondiaux 2026
-LOCATION:Pokémon GO — en ligne
-DESCRIPTION:Deadline officielle : récompenses Pokémon GO des Mondiaux 2026 jusqu'au 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Mondiaux
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompenses Pokémon GO Mondiaux — expiration demain
-END:VALARM
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:pokemon-go-pokemonxp-pikachu-claim-20260912@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DEADLINE_IMPORTANT
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260912T044500
-DTEND;TZID=Europe/Paris:20260912T050000
-SUMMARY:⏳ Fin claim Pokémon GO — Pikachu PokémonXP
-LOCATION:Pokémon GO — en ligne
-DESCRIPTION:La récompense PokémonXP donnant l'Étude ponctuelle Pikachu en costume PokémonXP doit être récupérée avant le 11 septembre 2026 à 20:00 PDT, soit le 12 septembre à 05:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,PokémonXP,Deadline
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Pikachu PokémonXP — fin du claim demain
-END:VALARM
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:tcgl-worlds2026-redeem-deadline-20260925@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:CODE_EXPIRY
-X-POKEMON-ACTION:REDEEM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-USER-EFFECT:TCGL-WORLDS2026-REDEEM-DEADLINE
-DTSTART;TZID=Europe/Paris:20260925T174500
-DTEND;TZID=Europe/Paris:20260925T180000
-SUMMARY:⏳ Fin codes JCC Live — Drops Mondiaux 2026
-LOCATION:JCC Pokémon Live — en ligne
-DESCRIPTION:Les codes JCC Pokémon Live reçus via les Twitch Drops des Mondiaux 2026 et du panel PokémonXP expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris. Les codes uniques/personnels ne sont pas exposés. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,JCC Pokémon Live,Code,Deadline,Mondiaux
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Codes JCC Live Mondiaux — expiration demain à 18h
-END:VALARM
-END:VEVENT''',
-          '''BEGIN:VEVENT
-UID:pokemon-go-lego-les-halles-20260803@openai
-DTSTAMP:20260830T221700Z
-LAST-MODIFIED:20260830T221700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:PARIS_LIMITED_EVENT
-X-POKEMON-ACTION:ATTEND
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;VALUE=DATE:20260803
-DTEND;VALUE=DATE:20261001
-SUMMARY:⭐ ✅ 🧱 Pokémon GO × LEGO Store — Paris Les Halles
-LOCATION:LEGO Store Paris - Les Halles, 1 Passage de la Canopée, 75001 Paris, France
-DESCRIPTION:Activation officielle Pokémon GO × LEGO du 3 août au 30 septembre 2026 dans les LEGO Stores participants. La fiche LEGO du magasin Paris - Les Halles affiche les opérations Pokémon. PokéStop, raids Pikachu, Chasse aux tampons, Études ponctuelles, stickers et SMART Play. SMART Tag limité selon les stocks. Les tâches/récompenses expirent le 30 septembre à 23:59 heure locale. Sources : https://pokemongo.com/fr/news/lego-pokemon-go-2026 ; https://www.lego.com/fr-fr/stores/store/paris-les-halles
-URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
-CATEGORIES:Pokémon,Pokémon GO,LEGO,Paris,Événement,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:🧱 Pokémon GO × LEGO — dernière journée demain
-END:VALARM
-END:VEVENT'''
-          ]
-
-          for raw in events:
-              raw = raw.replace('\n', nl)
-              uid = re.search(r'^UID:(.+)$', raw, flags=re.M).group(1).strip().rstrip('\r')
-              if f'UID:{uid}' not in data:
-                  data = data.replace('END:VCALENDAR' + nl, raw + nl + 'END:VCALENDAR' + nl)
-
-          if data.count('BEGIN:VCALENDAR') != 1 or data.count('END:VCALENDAR') != 1:
-              raise SystemExit('Invalid VCALENDAR envelope')
-          uids = re.findall(r'^UID:(.+?)\r?$', data, flags=re.M)
-          if len(uids) != len(set(uids)):
-              raise SystemExit('Duplicate UID detected')
-
-          p.write_bytes(data.encode('utf-8'))
-
-      - name: Commit calendar changes
+          python -c "from pathlib import Path; t=Path('calendars/pokemon-paris.ics').read_text(encoding='utf-8'); required=['UID:pokemon-go-mega-ascension-20260831@openai','UID:pokemon-play-season-2027-start-20260901@openai','UID:pokemon-go-mega-finale-20260905@openai','UID:pokemon-go-worlds2026-rewards-expiry-20260911@openai','UID:pokemon-go-pokemonxp-pikachu-claim-20260912@openai','UID:tcgl-worlds2026-redeem-deadline-20260925@openai','UID:pokemon-go-lego-les-halles-20260803@openai']; assert all(x in t for x in required); assert t.count('BEGIN:VCALENDAR')==1 and t.count('END:VCALENDAR')==1"
+      - name: Commit calendar update
         run: |
           if git diff --quiet -- calendars/pokemon-paris.ics; then
-            echo "No calendar changes needed"
+            echo 'No calendar change required.'
             exit 0
           fi
-          git config user.name "ZERO_MISS bot"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add calendars/pokemon-paris.ics
-          git commit -m "ZERO_MISS: reconcile confirmed calendar gaps"
-          git push origin master
+          git commit -m 'ZERO_MISS: reconcile confirmed Pokemon calendar gaps'
+          git push origin HEAD:master
