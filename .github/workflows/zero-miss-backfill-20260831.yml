@@ -1,3 +1,4 @@
+# trigger: 2026-08-31T00:22+02:00
 name: ZERO_MISS backfill 2026-08-31
 
 on:
@@ -26,10 +27,10 @@ jobs:
           data = p.read_bytes().decode('utf-8')
           nl = '\r\n' if '\r\n' in data else '\n'
 
-          # Material retail-state correction: Passion Geek ETB 30 ans is no longer open/allocating.
           data = data.replace('STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:', 'STATUS=SOLD_OUT;CONFIDENCE=88;SELLER=86;PRICE=60.00:')
           data = data.replace('SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans', 'SUMMARY:ℹ️ RUPTURE — Passion Geek — ETB 30 ans')
           data = data.replace('X-POKEMON-LATEST-ALERT-STATUS:ALLOCATIONS_TONIGHT', 'X-POKEMON-LATEST-ALERT-STATUS:SOLD_OUT')
+          data = data.replace('X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCÉE', 'X-POKEMON-LATEST-ALERT-LEVEL:INFORMATIONAL_SOLD_OUT')
           data = data.replace('X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCED', 'X-POKEMON-LATEST-ALERT-LEVEL:INFORMATIONAL_SOLD_OUT')
 
           events = [
@@ -88,7 +89,7 @@ DTSTART;VALUE=DATE:20260905
 DTEND;VALUE=DATE:20260907
 SUMMARY:⭐ ✅ 📱 Festival Pokémon GO 2026 — Méga-Finale
 LOCATION:Pokémon GO — France
-DESCRIPTION:Festival Pokémon GO 2026 : Méga-Finale les 5 et 6 septembre 2026, de 10:00 à 18:00 heure locale. Méga-Mewtwo X et Y et rotations de Méga-Raids sont annoncés. Source : https://pokemongo.com/fr/gofest/megafinale
+DESCRIPTION:Festival Pokémon GO 2026 : Méga-Finale les 5 et 6 septembre 2026, de 10:00 à 18:00 heure locale. Source : https://pokemongo.com/fr/gofest/megafinale
 URL:https://pokemongo.com/fr/gofest/megafinale
 CATEGORIES:Pokémon,Pokémon GO,Festival,Événement,Priorité Important
 BEGIN:VALARM
@@ -112,7 +113,7 @@ DTSTART;TZID=Europe/Paris:20260911T214500
 DTEND;TZID=Europe/Paris:20260911T220000
 SUMMARY:⏳ Fin récompenses Pokémon GO — Mondiaux 2026
 LOCATION:Pokémon GO — en ligne
-DESCRIPTION:Deadline officielle : les récompenses Pokémon GO des Mondiaux 2026 expirent le 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+DESCRIPTION:Deadline officielle : récompenses Pokémon GO des Mondiaux 2026 jusqu'au 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
 URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
 CATEGORIES:Pokémon,Pokémon GO,Deadline,Mondiaux
 BEGIN:VALARM
@@ -161,7 +162,7 @@ DTSTART;TZID=Europe/Paris:20260925T174500
 DTEND;TZID=Europe/Paris:20260925T180000
 SUMMARY:⏳ Fin codes JCC Live — Drops Mondiaux 2026
 LOCATION:JCC Pokémon Live — en ligne
-DESCRIPTION:Les codes JCC Pokémon Live reçus via les Twitch Drops des Mondiaux 2026 et du panel PokémonXP expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris. Les codes sont uniques/personnels et ne sont pas exposés dans le calendrier. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+DESCRIPTION:Les codes JCC Pokémon Live reçus via les Twitch Drops des Mondiaux 2026 et du panel PokémonXP expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris. Les codes uniques/personnels ne sont pas exposés. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
 URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
 CATEGORIES:Pokémon,JCC Pokémon Live,Code,Deadline,Mondiaux
 BEGIN:VALARM
@@ -185,7 +186,7 @@ DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20261001
 SUMMARY:⭐ ✅ 🧱 Pokémon GO × LEGO Store — Paris Les Halles
 LOCATION:LEGO Store Paris - Les Halles, 1 Passage de la Canopée, 75001 Paris, France
-DESCRIPTION:Activation officielle Pokémon GO × LEGO du 3 août au 30 septembre 2026 dans les LEGO Stores participants. La fiche LEGO du magasin Paris - Les Halles affiche les opérations Pokémon. Au programme : PokéStop, raids Pikachu, Chasse aux tampons, Études ponctuelles, stickers et démonstration LEGO Pokémon SMART Play ; SMART Tag limité selon les stocks. Les tâches/récompenses d'Étude ponctuelle expirent le 30 septembre à 23:59 heure locale. Source Pokémon GO : https://pokemongo.com/fr/news/lego-pokemon-go-2026 ; source magasin : https://www.lego.com/fr-fr/stores/store/paris-les-halles
+DESCRIPTION:Activation officielle Pokémon GO × LEGO du 3 août au 30 septembre 2026 dans les LEGO Stores participants. La fiche LEGO du magasin Paris - Les Halles affiche les opérations Pokémon. PokéStop, raids Pikachu, Chasse aux tampons, Études ponctuelles, stickers et SMART Play. SMART Tag limité selon les stocks. Les tâches/récompenses expirent le 30 septembre à 23:59 heure locale. Sources : https://pokemongo.com/fr/news/lego-pokemon-go-2026 ; https://www.lego.com/fr-fr/stores/store/paris-les-halles
 URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
 CATEGORIES:Pokémon,Pokémon GO,LEGO,Paris,Événement,Priorité Important
 BEGIN:VALARM
@@ -202,7 +203,6 @@ END:VEVENT'''
               if f'UID:{uid}' not in data:
                   data = data.replace('END:VCALENDAR' + nl, raw + nl + 'END:VCALENDAR' + nl)
 
-          # Sanity checks
           if data.count('BEGIN:VCALENDAR') != 1 or data.count('END:VCALENDAR') != 1:
               raise SystemExit('Invalid VCALENDAR envelope')
           uids = re.findall(r'^UID:(.+?)\r?$', data, flags=re.M)
