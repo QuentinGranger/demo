@@ -53,6 +53,55 @@ DESCRIPTION:🃏 Sortie demain — prépare ton achat : Boîte Méga Puissances
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:watch-etb-30ans-fr-20260830@openai
+DTSTAMP:20260830T051000Z
+LAST-MODIFIED:20260830T051000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PREORDER_WATCH
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
+RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
+X-POKEMON-PRODUCT-EAN:0196214144835
+X-POKEMON-PRODUCT-UPC:196214144835
+X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
+X-POKEMON-WATCH-MODE:ZERO_MISS_ULTRA
+X-POKEMON-WATCH-FREQUENCY:HOURLY
+X-POKEMON-REFERENCE-PRICE-EUR:62.99
+X-POKEMON-PRICE-BANDS:SPLUS_LE_59.99|S_60_62.99|A_63_69.99|B_70_79.99|C_80_99.99|D_GE_100
+X-POKEMON-WATCH-TIER0:Pokemon|CLD-Distribution
+X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260917
+SUMMARY:🔥 🔎 Veille précommandes — ETB Pokémon 30 ans FR
+LOCATION:France / Europe — en ligne
+DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
+URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20260902T080000Z
+ACTION:DISPLAY
+DESCRIPTION:🔥 ETB 30 ans — point préco J-14 : vérifie les retailers TIER 1
+END:VALARM
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20260909T080000Z
+ACTION:DISPLAY
+DESCRIPTION:🔥 ETB 30 ans — point préco J-7 : vérifie prix, comptes et paiement
+END:VALARM
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20260913T080000Z
+ACTION:DISPLAY
+DESCRIPTION:🔥 ETB 30 ans — point préco J-3 : vérifie stock et click & collect
+END:VALARM
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20260915T080000Z
+ACTION:DISPLAY
+DESCRIPTION:🚨 ETB 30 ans demain — prépare achat et retrait magasin
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:preorder-guizette-etb-30ans-20260906@openai
 DTSTAMP:20260819T024000Z
 LAST-MODIFIED:20260819T024000Z
@@ -85,8 +134,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 DTSTAMP:20260819T025700Z
-LAST-MODIFIED:20260819T025700Z
-SEQUENCE:10
+LAST-MODIFIED:20260830T051000Z
+SEQUENCE:11
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -100,18 +149,37 @@ X-POKEMON-WAVE-PREORDER-COUNT:1
 X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|ETB 30 ans
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Extension JCC 30e Anniversaire
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=20260906:ETB 30 ans
+X-POKEMON-PRODUCT-EAN:0196214144835
+X-POKEMON-PRODUCT-UPC:196214144835
+X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
+X-POKEMON-WATCH-MODE:ZERO_MISS_ULTRA
+X-POKEMON-WATCH-FREQUENCY:HOURLY
+X-POKEMON-REFERENCE-PRICE-EUR:62.99
+X-POKEMON-PRICE-BANDS:SPLUS_LE_59.99|S_60_62.99|A_63_69.99|B_70_79.99|C_80_99.99|D_GE_100
+X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-etb-30ans-20260906@openai
+RELATED-TO;RELTYPE=CHILD:watch-etb-30ans-fr-20260830@openai
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\n🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\n💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\nRappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P14D
+ACTION:DISPLAY
+DESCRIPTION:🔥 ETB 30 ans dans 14 jours — vérifie les précommandes TIER 1 et prépare tes comptes
+END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
 DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : 30e Anniversaire
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:🔥 ETB 30 ans dans 3 jours — contrôle stock, prix et retrait magasin
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
