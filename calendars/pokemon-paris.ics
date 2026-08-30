@@ -194,8 +194,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260830T062800Z
-SEQUENCE:3
+LAST-MODIFIED:20260830T072434Z
+SEQUENCE:4
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -218,17 +218,18 @@ X-POKEMON-ALERT-LINK;RETAILER=Carrefour;STATUS=PREOPEN;CONFIDENCE=92:https://www
 X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=INDEXED;CONFIDENCE=78:https://www.micromania.fr/c/carte-pokemon-30-ans
 X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:https://cld.eu/
 X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
+X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟡 NOUVELLE FICHE — Foxchip Collector — ETB 30 ans
+SUMMARY:🔴 PRÉCO OUVERTE — Les Trésors de Kanto — ETB 30 ans
 LOCATION:France / Europe — en ligne
-DESCRIPTION:🟡 NOUVELLE FICHE\n\nFoxchip Collector — fiche ETB 30 ans FR avec EAN exact 0196214144835, actuellement rupture de stock, avec alerte de disponibilité.\nPrix : non affiché | score : — | confiance : 82/100\nEAN : 0196214144835 | statut : FICHE CRÉÉE / ÉPUISÉE\n🔗 Ouvrir la fiche Foxchip Collector : https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nINFO À SURVEILLER
-URL:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
-X-POKEMON-LATEST-ALERT-LEVEL:YELLOW_NEW_LISTING
-X-POKEMON-LATEST-ALERT-RETAILER:Foxchip-Collector
-X-POKEMON-LATEST-ALERT-STATUS:OUT_OF_STOCK
+DESCRIPTION:🔴 PRÉCO OUVERTE\n\nLes Trésors de Kanto — précommande ETB 30 ans FR ouverte, stock faible, EAN exact 0196214144835.\nPrix : 74,90 € | livré : ≥ 74,90 € (frais calculés au checkout) | score : B minimum | écart vs 62,99 € : +11,91 €\nDate : 16/09/2026 | limite/client : non indiquée | retrait magasin : non indiqué\nConfiance : 82/100 | EAN : 0196214144835\n🔗 Ouvrir la fiche Les Trésors de Kanto : https://lestresorsdekanto.com/products/etb-30-ans-me5-5\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nATTENDS UNE MEILLEURE OFFRE
+URL:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
+X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
+X-POKEMON-LATEST-ALERT-RETAILER:Les-Tresors-de-Kanto
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_LOW_STOCK
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-ALERT-AT:20260830T082600+0200
+X-POKEMON-LATEST-ALERT-AT:20260830T092434+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
