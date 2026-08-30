@@ -1,6 +1,6 @@
 {
   "schema": "POKEMON_TCG_LIVE_CODES_FR_V1",
-  "last_updated_at": "2026-08-29T20:46:38+02:00",
+  "last_updated_at": "2026-08-30T07:27:00+02:00",
   "policy": {
     "official_first": true,
     "never_publish_personal_unique_codes": true,
@@ -8,6 +8,20 @@
     "claim_deadline_separate_from_redeem_deadline": true,
     "calendar_target": "calendars/pokemon-paris.ics",
     "expiry_reminder": "J-1; H-6 if discovered with less than 24h remaining"
+  },
+  "audit": {
+    "SCAN_DATE": "2026-08-30T07:27:00+02:00",
+    "BACKFILL_DAYS": 30,
+    "OFFICIAL_SOCIAL_CHECKED": true,
+    "POKEMON_COM_WORLDS_REWARDS_CHECKED": true,
+    "COMMUNITY_DISTRIBUTION_INDEX_CHECKED": true,
+    "ACTIVE_CODES_RECHECKED": true,
+    "CALENDAR_RECONCILED": false,
+    "CALENDAR_GAPS": [
+      "tcgl-worlds2026-redeem-deadline-20260925",
+      "public-code-expiry-events-awaiting-official-expiry-evidence"
+    ],
+    "NOTES": "Zero-miss backfill found official public codes absent from the previous ledger: PITCHBLACK26, ENDLESSNIGHT26 and HAUNTEDRUINS26. Their code/reward facts are official; exact September 16 expiry dates are currently supported by secondary distribution indexes and therefore are not promoted to official-exact calendar deadlines. The official Worlds/PokemonXP Twitch-drop redemption deadline remains a calendar gap requiring a VEVENT in pokemon-paris.ics."
   },
   "entries": [
     {
@@ -24,18 +38,95 @@
       "EXPIRES_AT": "2026-08-31T17:59:00+02:00",
       "DATE_PRECISION": "TIME",
       "STATUS": "ACTIVE",
-      "SOURCE_TIER": "OFFICIAL_SOCIAL_WITH_SECONDARY_EXPIRY",
+      "SOURCE_TIER": "OFFICIAL_CODE_AND_REWARD_SECONDARY_EXPIRY",
       "PRIMARY_SOURCE": "Pokemon TCG Live official social account",
       "PRIMARY_SOURCE_URL": "https://x.com/PokemonTCGLive",
       "SECONDARY_SOURCES": [
-        "https://www.pokebip.com/news/7493/codes-de-distribution-en-amont-des-championnats-du-monde",
         "https://pokezentrum.de/pokemon-karten-news/erhalte-einen-kostenlosen-booster-blister-fuer-pokemon-tcg-live/"
       ],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": null,
-      "NOTES": "Code and reward are corroborated by the official Pokemon TCG Live social account. Exact expiry is currently supported by secondary specialist sources; keep this distinction explicit until an official expiry source is captured."
+      "NOTES": "Official Pokemon TCG Live social confirms the public code and reward. Exact expiry remains secondary-source evidence; do not label the deadline official until captured from a direct Pokemon source."
+    },
+    {
+      "CODE_ID": "tcgl-public-pitchblack26-2026",
+      "TYPE": "PUBLIC_CODE",
+      "CODE_TEXT": "PITCHBLACK26",
+      "REWARD": "4 Mega Evolution—Pitch Black booster packs",
+      "PLATFORM": "Pokemon TCG Live",
+      "REGION": "GLOBAL_SUPPORTED_REGIONS",
+      "ANNOUNCED_AT": "2026-07-17",
+      "CLAIM_START_AT": null,
+      "CLAIM_END_AT": null,
+      "REDEEM_START_AT": "2026-07-17",
+      "EXPIRES_AT": "2026-09-16",
+      "DATE_PRECISION": "DAY",
+      "STATUS": "ACTIVE",
+      "SOURCE_TIER": "OFFICIAL_CODE_AND_REWARD_SECONDARY_EXPIRY",
+      "PRIMARY_SOURCE": "Pokemon TCG Live official social account",
+      "PRIMARY_SOURCE_URL": "https://x.com/PokemonTCGLive",
+      "SECONDARY_SOURCES": [
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_Live_distributions"
+      ],
+      "FIRST_SEEN_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHANGED_AT": "2026-08-30T07:27:00+02:00",
+      "CALENDAR_UID": null,
+      "NOTES": "Recovered by the mandatory 30-day backfill. Official social confirms code and reward. September 16 expiry is secondary-source evidence, so no exact official calendar deadline is asserted."
+    },
+    {
+      "CODE_ID": "tcgl-public-endlessnight26-2026",
+      "TYPE": "PUBLIC_CODE",
+      "CODE_TEXT": "ENDLESSNIGHT26",
+      "REWARD": "1 Mega Evolution—Pitch Black booster pack + Ultra Rare Mega Zeraora ex + Ultra Rare Mega Excadrill ex",
+      "PLATFORM": "Pokemon TCG Live",
+      "REGION": "GLOBAL_SUPPORTED_REGIONS",
+      "ANNOUNCED_AT": "2026-07-31",
+      "CLAIM_START_AT": null,
+      "CLAIM_END_AT": null,
+      "REDEEM_START_AT": "2026-07-31",
+      "EXPIRES_AT": "2026-09-16",
+      "DATE_PRECISION": "DAY",
+      "STATUS": "ACTIVE",
+      "SOURCE_TIER": "OFFICIAL_CODE_AND_REWARD_SECONDARY_EXPIRY",
+      "PRIMARY_SOURCE": "Pokemon TCG Live official Bluesky/social account",
+      "PRIMARY_SOURCE_URL": "https://bsky.app/profile/pokemontcglive.bsky.social/post/3mrxn7ujlaa2g",
+      "SECONDARY_SOURCES": [
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_Live_distributions"
+      ],
+      "FIRST_SEEN_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHANGED_AT": "2026-08-30T07:27:00+02:00",
+      "CALENDAR_UID": null,
+      "NOTES": "Recovered by the mandatory 30-day backfill. Official Pokemon TCG Live post confirms code and reward. September 16 expiry is not yet promoted beyond secondary evidence."
+    },
+    {
+      "CODE_ID": "tcgl-public-hauntedruins26-2026",
+      "TYPE": "PUBLIC_CODE",
+      "CODE_TEXT": "HAUNTEDRUINS26",
+      "REWARD": "Haunted Ruins card sleeves + 1,000 Trainer Points + 1,000 Trade Credits",
+      "PLATFORM": "Pokemon TCG Live",
+      "REGION": "GLOBAL_SUPPORTED_REGIONS",
+      "ANNOUNCED_AT": "2026-08-29",
+      "CLAIM_START_AT": null,
+      "CLAIM_END_AT": null,
+      "REDEEM_START_AT": "2026-08-29",
+      "EXPIRES_AT": "2026-09-16",
+      "DATE_PRECISION": "DAY",
+      "STATUS": "ACTIVE",
+      "SOURCE_TIER": "OFFICIAL_CODE_AND_REWARD_SECONDARY_EXPIRY",
+      "PRIMARY_SOURCE": "Pokemon TCG Live official social account",
+      "PRIMARY_SOURCE_URL": "https://x.com/PokemonTCGLive",
+      "SECONDARY_SOURCES": [
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_Live_distributions"
+      ],
+      "FIRST_SEEN_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
+      "LAST_CHANGED_AT": "2026-08-30T07:27:00+02:00",
+      "CALENDAR_UID": null,
+      "NOTES": "New official public code detected this cycle. Code and reward are direct official evidence. September 16 expiry is currently secondary-source evidence."
     },
     {
       "CODE_ID": "tcgl-worlds2026-twitch-main-30m",
@@ -56,7 +147,7 @@
       "PRIMARY_SOURCE_URL": "https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu",
       "SECONDARY_SOURCES": ["https://www.pokemon.com/us/news/tune-in-to-worlds-and-pokemonxp-for-top-tier-digital-rewards"],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": null,
       "NOTES": "Watch 30 minutes on an eligible official Pokemon TCG Worlds broadcast with Twitch Drops enabled. Twitch claim and TCG Live redemption are separate actions."
@@ -80,7 +171,7 @@
       "PRIMARY_SOURCE_URL": "https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu",
       "SECONDARY_SOURCES": ["https://www.pokemon.com/us/news/tune-in-to-worlds-and-pokemonxp-for-top-tier-digital-rewards"],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": null,
       "NOTES": "Watch 45 minutes on the eligible official TCG stream."
@@ -104,7 +195,7 @@
       "PRIMARY_SOURCE_URL": "https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu",
       "SECONDARY_SOURCES": ["https://www.pokemon.com/us/news/tune-in-to-worlds-and-pokemonxp-for-top-tier-digital-rewards"],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": null,
       "NOTES": "Watch 60 minutes on eligible official streams; claim the Twitch Drop, then redeem the generated code in TCG Live before expiry."
@@ -128,7 +219,7 @@
       "PRIMARY_SOURCE_URL": "https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu",
       "SECONDARY_SOURCES": ["https://www.pokemon.com/us/news/tune-in-to-worlds-and-pokemonxp-for-top-tier-digital-rewards"],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": null,
       "NOTES": "Requires an approved partnered co-stream, not the standard main campaign."
@@ -152,7 +243,7 @@
       "PRIMARY_SOURCE_URL": "https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu",
       "SECONDARY_SOURCES": ["https://www.pokemon.com/us/news/tune-in-to-worlds-and-pokemonxp-for-top-tier-digital-rewards"],
       "FIRST_SEEN_AT": "2026-08-29T20:46:38+02:00",
-      "LAST_CHECKED_AT": "2026-08-29T20:46:38+02:00",
+      "LAST_CHECKED_AT": "2026-08-30T07:27:00+02:00",
       "LAST_CHANGED_AT": "2026-08-29T20:46:38+02:00",
       "CALENDAR_UID": "pokemon-worlds-pokemonxp-streams-20260828@openai",
       "NOTES": "The panel itself is already represented inside the grouped Worlds/PokemonXP calendar event. Do not create a duplicate event for the same viewing window."
