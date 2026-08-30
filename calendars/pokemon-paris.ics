@@ -220,16 +220,16 @@ X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:
 X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
 X-POKEMON-ALERT-LINK;RETAILER=Smartoys;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=77:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
-X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
+X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=SOLD_OUT;CONFIDENCE=88;SELLER=86;PRICE=60.00:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans
+SUMMARY:ℹ️ RUPTURE — Passion Geek — ETB 30 ans
 LOCATION:France — Arras / compte client en ligne
 DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nPassion Geek — allocations de précommande ETB 30 ans annoncées pour ce soir sur les comptes clients éligibles ; attribution basée sur l’historique d’achat des 365 derniers jours.\nPrix : 60,00 € | livré : inconnu | score : S | écart vs 62,99 € : -2,99 €\nDate/heure Europe/Paris : 30/08/2026 ce soir (heure exacte non publiée) | limite : 1 exemplaire/item/compte | compte + éligibilité requis\nConfiance produit : 88/100 | SELLER_RELIABILITY : 86/100 TRUSTED | EAN : 0196214144835\n🔗 Ouvrir la fiche Passion Geek : https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nOUVRE ET CONNECTE-TOI
 URL:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
-X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCED
+X-POKEMON-LATEST-ALERT-LEVEL:INFORMATIONAL_SOLD_OUT
 X-POKEMON-LATEST-ALERT-RETAILER:Passion-Geek
-X-POKEMON-LATEST-ALERT-STATUS:ALLOCATIONS_TONIGHT
+X-POKEMON-LATEST-ALERT-STATUS:SOLD_OUT
 X-POKEMON-LATEST-ALERT-CONFIDENCE:88
 X-POKEMON-LATEST-SELLER-RELIABILITY:86
 X-POKEMON-LATEST-ALERT-AT:20260830T171325+0200
@@ -807,6 +807,167 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-ascension-20260831@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+DTSTART;TZID=Europe/Paris:20260831T100000
+DTEND;TZID=Europe/Paris:20260905T000000
+SUMMARY:⭐ ✅ 📱 Pokémon GO — Méga ascension
+LOCATION:Pokémon GO — France
+DESCRIPTION:Événement officiel Pokémon GO. Méga ascension du 31 août 2026 à 10:00 au 4 septembre 2026 à 23:59, heure locale. Le Passe GO : Méga-Finale devient disponible le 31 août à 10:00. Source : https://pokemongo.com/fr/gofest/megafinale
+URL:https://pokemongo.com/fr/gofest/megafinale
+CATEGORIES:Pokémon,Pokémon GO,Événement,Priorité Important
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-play-season-2027-start-20260901@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_INFO
+X-POKEMON-ACTION:INFO
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:ℹ️ ✅ 🏆 Début de la saison Play! Pokémon 2027
+LOCATION:France / Play! Pokémon
+DESCRIPTION:Début de la saison 2027 des League Cups et League Challenges le 1er septembre 2026. Aucun horaire précis n'est publié, donc l'événement reste en journée entière. Source : https://www.pokemon.com/us/news/new-prizes-are-coming-to-pokemon-league-cups-at-play-pokemon-stores
+URL:https://www.pokemon.com/us/news/new-prizes-are-coming-to-pokemon-league-cups-at-play-pokemon-stores
+CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Info
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-SESSION;DATE=20260905;START=1000;END=1800:Méga-Finale
+X-POKEMON-SESSION;DATE=20260906;START=1000;END=1800:Méga-Finale
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260907
+SUMMARY:⭐ ✅ 📱 Festival Pokémon GO 2026 — Méga-Finale
+LOCATION:Pokémon GO — France
+DESCRIPTION:Festival Pokémon GO 2026 : Méga-Finale les 5 et 6 septembre 2026, de 10:00 à 18:00 heure locale. Source : https://pokemongo.com/fr/gofest/megafinale
+URL:https://pokemongo.com/fr/gofest/megafinale
+CATEGORIES:Pokémon,Pokémon GO,Festival,Événement,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:📱 Méga-Finale Pokémon GO demain — prépare tes raids
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-rewards-expiry-20260911@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DEADLINE_IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+DTSTART;TZID=Europe/Paris:20260911T214500
+DTEND;TZID=Europe/Paris:20260911T220000
+SUMMARY:⏳ Fin récompenses Pokémon GO — Mondiaux 2026
+LOCATION:Pokémon GO — en ligne
+DESCRIPTION:Deadline officielle : récompenses Pokémon GO des Mondiaux 2026 jusqu'au 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon GO,Deadline,Mondiaux
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Récompenses Pokémon GO Mondiaux — expiration demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pokemonxp-pikachu-claim-20260912@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DEADLINE_IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+DTSTART;TZID=Europe/Paris:20260912T044500
+DTEND;TZID=Europe/Paris:20260912T050000
+SUMMARY:⏳ Fin claim Pokémon GO — Pikachu PokémonXP
+LOCATION:Pokémon GO — en ligne
+DESCRIPTION:La récompense PokémonXP donnant l'Étude ponctuelle Pikachu en costume PokémonXP doit être récupérée avant le 11 septembre 2026 à 20:00 PDT, soit le 12 septembre à 05:00 à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon GO,PokémonXP,Deadline
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Pikachu PokémonXP — fin du claim demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tcgl-worlds2026-redeem-deadline-20260925@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:CODE_EXPIRY
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-USER-EFFECT:TCGL-WORLDS2026-REDEEM-DEADLINE
+DTSTART;TZID=Europe/Paris:20260925T174500
+DTEND;TZID=Europe/Paris:20260925T180000
+SUMMARY:⏳ Fin codes JCC Live — Drops Mondiaux 2026
+LOCATION:JCC Pokémon Live — en ligne
+DESCRIPTION:Les codes JCC Pokémon Live reçus via les Twitch Drops des Mondiaux 2026 et du panel PokémonXP expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris. Les codes uniques/personnels ne sont pas exposés. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,JCC Pokémon Live,Code,Deadline,Mondiaux
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Codes JCC Live Mondiaux — expiration demain à 18h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-lego-les-halles-20260803@openai
+DTSTAMP:20260830T221700Z
+LAST-MODIFIED:20260830T221700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PARIS_LIMITED_EVENT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20261001
+SUMMARY:⭐ ✅ 🧱 Pokémon GO × LEGO Store — Paris Les Halles
+LOCATION:LEGO Store Paris - Les Halles, 1 Passage de la Canopée, 75001 Paris, France
+DESCRIPTION:Activation officielle Pokémon GO × LEGO du 3 août au 30 septembre 2026 dans les LEGO Stores participants. La fiche LEGO du magasin Paris - Les Halles affiche les opérations Pokémon. PokéStop, raids Pikachu, Chasse aux tampons, Études ponctuelles, stickers et SMART Play. SMART Tag limité selon les stocks. Les tâches/récompenses expirent le 30 septembre à 23:59 heure locale. Sources : https://pokemongo.com/fr/news/lego-pokemon-go-2026 ; https://www.lego.com/fr-fr/stores/store/paris-les-halles
+URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
+CATEGORIES:Pokémon,Pokémon GO,LEGO,Paris,Événement,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🧱 Pokémon GO × LEGO — dernière journée demain
 END:VALARM
 END:VEVENT
 END:VCALENDAR
