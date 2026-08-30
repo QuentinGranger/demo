@@ -22,8 +22,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Rebuild latest ETB alert event safely
-        shell: python
         run: |
+          python - <<'PY'
           from pathlib import Path
 
           path = Path('calendars/pokemon-tcg-france.ics')
@@ -110,12 +110,12 @@ END:VEVENT'''
 
           text = text[:start] + block + text[end:]
           path.write_text(text, encoding='utf-8')
-
+          PY
       - name: Synchronize global Pokémon calendar
         run: python scripts/sync_pokemon_global.py
       - name: Verify source and global calendars
-        shell: python
         run: |
+          python - <<'PY'
           from pathlib import Path
           uid = 'UID:watch-etb-30ans-fr-20260830@openai'
           needle = 'https://lestresorsdekanto.com/products/etb-30-ans-me5-5'
@@ -131,6 +131,7 @@ END:VEVENT'''
               block = t[start:end]
               assert block.count('\nURL:') == 1, f'URL field count != 1 in {p}'
               assert 'X-POKEMON-LATEST-ALERT-RETAILER:Les-Tresors-de-Kanto' in block, f'missing latest fields in {p}'
+          PY
       - name: Commit calendar update
         run: |
           if git diff --quiet -- calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics; then
