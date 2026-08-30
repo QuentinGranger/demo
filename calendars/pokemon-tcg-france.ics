@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260830T072434Z
-SEQUENCE:4
+LAST-MODIFIED:20260830T101859Z
+SEQUENCE:5
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -80,17 +80,19 @@ X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=INDEXED;CONFIDENCE=78:https://ww
 X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:https://cld.eu/
 X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
+X-POKEMON-ALERT-LINK;RETAILER=Smartoys;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=77:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🔴 PRÉCO OUVERTE — Les Trésors de Kanto — ETB 30 ans
-LOCATION:France / Europe — en ligne
-DESCRIPTION:🔴 PRÉCO OUVERTE\n\nLes Trésors de Kanto — précommande ETB 30 ans FR ouverte, stock faible, EAN exact 0196214144835.\nPrix : 74,90 € | livré : ≥ 74,90 € (frais calculés au checkout) | score : B minimum | écart vs 62,99 € : +11,91 €\nDate : 16/09/2026 | limite/client : non indiquée | retrait magasin : non indiqué\nConfiance : 82/100 | EAN : 0196214144835\n🔗 Ouvrir la fiche Les Trésors de Kanto : https://lestresorsdekanto.com/products/etb-30-ans-me5-5\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nATTENDS UNE MEILLEURE OFFRE
-URL:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
+SUMMARY:🔴 PRÉCO OUVERTE — Smartoys — ETB 30 ans
+LOCATION:Belgique / livraison Europe — en ligne
+DESCRIPTION:🔴 PRÉCO OUVERTE\n\nSmartoys — précommande ETB 30 ans FR ouverte, EAN exact 196214144835 et Product ID 169049.\nPrix : 79,99 € | livré : ≥ 79,99 € (frais non vérifiés) | score : B minimum | écart vs 62,99 € : +17,00 €\nDate : 16/09/2026 | limite/client : non indiquée | disponibilité magasin : vérifiable sur la fiche\nConfiance produit : 82/100 | SELLER_RELIABILITY : 77/100 ACCEPTABLE | EAN : 196214144835\n🔗 Ouvrir la fiche Smartoys : https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nATTENDS UNE MEILLEURE OFFRE
+URL:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
 X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
-X-POKEMON-LATEST-ALERT-RETAILER:Les-Tresors-de-Kanto
-X-POKEMON-LATEST-ALERT-STATUS:PREORDER_LOW_STOCK
+X-POKEMON-LATEST-ALERT-RETAILER:Smartoys
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_OPEN
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-ALERT-AT:20260830T092434+0200
+X-POKEMON-LATEST-SELLER-RELIABILITY:77
+X-POKEMON-LATEST-ALERT-AT:20260830T121859+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
