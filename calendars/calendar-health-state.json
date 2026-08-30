@@ -3,8 +3,8 @@
   "policy": "calendar-health-policy.json",
   "baseline_at": "2026-08-19T16:10:00Z",
   "last_policy_migration_at": "2026-08-19T16:54:00Z",
-  "current_overall_state": "HEALTHY",
-  "redundancy_state": "HEALTHY",
+  "current_overall_state": "DEGRADED",
+  "redundancy_state": "DEGRADED",
   "baseline_manifest": {
     "FORTNITE": [
       {"path":"calendars/fortnite-paris.ics","sha":"45202efd91f0d03ce7d1eae0a39e0b8853de991e"},
@@ -23,15 +23,34 @@
     ]
   },
   "franchise_state": {
-    "FORTNITE": "HEALTHY",
+    "FORTNITE": "DEGRADED",
     "HARRY_POTTER": "HEALTHY",
     "POKEMON": "HEALTHY"
   },
   "observer_state": {
-    "Calendriers Fortnite France & Europe": "HEALTHY",
+    "Calendriers Fortnite France & Europe": "DEGRADED",
     "Billetterie Harry Potter France": "HEALTHY"
   },
-  "active_incidents": [],
+  "active_incidents": [
+    {
+      "incident_key": "health|FORTNITE|AUTOMATION_DISABLED|Calendriers Fortnite France & Europe",
+      "state": "OPEN",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T05:40:58Z",
+      "evidence": "automations.peek reports Calendriers Fortnite France & Europe is_enabled=false while the health policy requires it enabled; no automatic re-enable was performed."
+    },
+    {
+      "incident_key": "health|SYSTEM|OBSERVER_REDUNDANCY_LOST|hourly-observers",
+      "state": "OPEN",
+      "code": "OBSERVER_REDUNDANCY_LOST",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T05:40:58Z",
+      "evidence": "Only one of the two declared hourly cross-calendar observers is enabled: Billetterie Harry Potter France is active, Calendriers Fortnite France & Europe is disabled."
+    }
+  ],
   "incident_history": [
     {
       "incident_id": "health-fortnite-competitive-validation-20260826-open",
@@ -52,6 +71,26 @@
       "severity": "HEALTHY",
       "at": "2026-08-26T01:19:27Z",
       "evidence": "Competitive index rebuilt from current ledger and validator aligned with Deadline Intelligence V3; GitHub Actions run 32918528390 completed successfully."
+    },
+    {
+      "incident_id": "health-fortnite-automation-disabled-20260830-open",
+      "incident_key": "health|FORTNITE|AUTOMATION_DISABLED|Calendriers Fortnite France & Europe",
+      "state": "OPEN",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "at": "2026-08-30T05:40:58Z",
+      "evidence": "automations.peek reports Calendriers Fortnite France & Europe is_enabled=false."
+    },
+    {
+      "incident_id": "health-observer-redundancy-20260830-open",
+      "incident_key": "health|SYSTEM|OBSERVER_REDUNDANCY_LOST|hourly-observers",
+      "state": "OPEN",
+      "code": "OBSERVER_REDUNDANCY_LOST",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "at": "2026-08-30T05:40:58Z",
+      "evidence": "Cross-calendar health redundancy dropped from two enabled hourly observers to one."
     }
   ],
   "history": [
@@ -69,6 +108,11 @@
       "at": "2026-08-26T01:19:27Z",
       "type": "TECHNICAL_VALIDATION_SELF_HEALED",
       "note": "Fortnite competitive validation recovered after rebuilding the derived competitive index and updating the validator to accept the V3 competitive_lifecycle_policy block. No VEVENT business data or calendar SEQUENCE was changed."
+    },
+    {
+      "at": "2026-08-30T05:40:58Z",
+      "type": "OBSERVER_REDUNDANCY_DEGRADED",
+      "note": "Fortnite hourly monitor was found disabled. Harry Potter ticketing observer remains active, so cross-calendar health monitoring continues with reduced redundancy."
     }
   ]
 }
