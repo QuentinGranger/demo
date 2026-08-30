@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260830T062300Z
-SEQUENCE:1
+LAST-MODIFIED:20260830T063000Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -78,11 +78,12 @@ X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-
 X-POKEMON-ALERT-LINK;RETAILER=Carrefour;STATUS=PREOPEN;CONFIDENCE=92:https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835
 X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=INDEXED;CONFIDENCE=78:https://www.micromania.fr/c/carte-pokemon-30-ans
 X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:https://cld.eu/
+X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
 SUMMARY:🔥 🔎 Veille précommandes — ETB Pokémon 30 ans FR
 LOCATION:France / Europe — en ligne
-DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n📦 CLD Distribution : disponibilité/logistique B2B indiquée au 15 septembre 2026 ; street date retailer suivie au 16 septembre 2026.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\n🔗 ALERTES / LIENS DIRECTS :\n⚡ Carrefour — fiche ETB EAN exact, actuellement indisponible / pré-ouverture : https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835\n🟡 Micromania — catégorie Pokémon 30 ans indexée : https://www.micromania.fr/c/carte-pokemon-30-ans\n🔵 CLD Distribution — source distributeur / B2B : https://cld.eu/\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
+DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n📦 CLD Distribution : disponibilité/logistique B2B indiquée au 15 septembre 2026 ; street date retailer suivie au 16 septembre 2026.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\n🔗 ALERTES / LIENS DIRECTS :\n⚡ Carrefour — fiche ETB EAN exact, actuellement indisponible / pré-ouverture : https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835\n🟡 Micromania — catégorie Pokémon 30 ans indexée : https://www.micromania.fr/c/carte-pokemon-30-ans\n🔵 CLD Distribution — source distributeur / B2B : https://cld.eu/\n🟡 Foxchip Collector — fiche EAN exact, actuellement en rupture de stock / alerte disponibilité : https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
