@@ -1,3 +1,4 @@
+# trigger valid workflow
 from pathlib import Path
 import re
 
@@ -5,7 +6,6 @@ p = Path('calendars/pokemon-paris.ics')
 data = p.read_bytes().decode('utf-8')
 nl = '\r\n' if '\r\n' in data else '\n'
 
-# Material retail-state correction: Passion Geek ETB 30 ans is sold out.
 data = data.replace('STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:', 'STATUS=SOLD_OUT;CONFIDENCE=88;SELLER=86;PRICE=60.00:')
 data = data.replace('SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans', 'SUMMARY:ℹ️ RUPTURE — Passion Geek — ETB 30 ans')
 data = data.replace('X-POKEMON-LATEST-ALERT-STATUS:ALLOCATIONS_TONIGHT', 'X-POKEMON-LATEST-ALERT-STATUS:SOLD_OUT')
