@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260830T151325Z
-SEQUENCE:6
+LAST-MODIFIED:20260830T151900Z
+SEQUENCE:7
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -86,7 +86,7 @@ DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
 SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans
 LOCATION:France — Arras / compte client en ligne
-DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nPassion Geek — allocations de précommande ETB 30 ans annoncées pour ce soir sur les comptes clients éligibles ; attribution basée sur l’historique d’achat des 365 derniers jours.\nPrix : 60,00 € | livré : inconnu | score : S | écart vs 62,99 € : -2,99 €\nDate/heure Europe/Paris : 30/08/2026 ce soir (heure exacte non publiée) | limite : 1 exemplaire/item/compte | compte + éligibilité requis\nConfiance produit : 88/100 | SELLER_RELIABILITY : 86/100 TRUSTED | EAN : 0196214144835\n🔗 Ouvrir la fiche Passion Geek : https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr\n📅 Calendrier : ajouté + lien direct + synchronisation à vérifier dans pokemon-paris.ics\nOUVRE ET CONNECTE-TOI
+DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nPassion Geek — allocations de précommande ETB 30 ans annoncées pour ce soir sur les comptes clients éligibles ; attribution basée sur l’historique d’achat des 365 derniers jours.\nPrix : 60,00 € | livré : inconnu | score : S | écart vs 62,99 € : -2,99 €\nDate/heure Europe/Paris : 30/08/2026 ce soir (heure exacte non publiée) | limite : 1 exemplaire/item/compte | compte + éligibilité requis\nConfiance produit : 88/100 | SELLER_RELIABILITY : 86/100 TRUSTED | EAN : 0196214144835\n🔗 Ouvrir la fiche Passion Geek : https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nOUVRE ET CONNECTE-TOI
 URL:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
 X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCED
 X-POKEMON-LATEST-ALERT-RETAILER:Passion-Geek
