@@ -49,6 +49,15 @@
       "severity": "DEGRADED",
       "opened_at": "2026-08-30T05:40:58Z",
       "evidence": "Only one of the two declared hourly cross-calendar observers is enabled: Billetterie Harry Potter France is active, Calendriers Fortnite France & Europe is disabled."
+    },
+    {
+      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "state": "OPEN",
+      "code": "WATCHDOG_HEARTBEAT_STALE",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T23:43:14Z",
+      "evidence": "calendar-health-heartbeat.json last_observer_check_at=2026-08-29T17:03:59Z is older than the 30h health-policy limit. The current Harry Potter observer is alive, but policy forbids refreshing a HEALTHY heartbeat while cross-calendar checks fail because the Fortnite observer remains disabled."
     }
   ],
   "incident_history": [
@@ -91,6 +100,16 @@
       "severity": "DEGRADED",
       "at": "2026-08-30T05:40:58Z",
       "evidence": "Cross-calendar health redundancy dropped from two enabled hourly observers to one."
+    },
+    {
+      "incident_id": "health-watchdog-heartbeat-stale-20260830-open",
+      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "state": "OPEN",
+      "code": "WATCHDOG_HEARTBEAT_STALE",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "at": "2026-08-30T23:43:14Z",
+      "evidence": "Shared cross-calendar heartbeat exceeded its 30h maximum age while observer redundancy remained degraded."
     }
   ],
   "history": [
@@ -113,6 +132,11 @@
       "at": "2026-08-30T05:40:58Z",
       "type": "OBSERVER_REDUNDANCY_DEGRADED",
       "note": "Fortnite hourly monitor was found disabled. Harry Potter ticketing observer remains active, so cross-calendar health monitoring continues with reduced redundancy."
+    },
+    {
+      "at": "2026-08-30T23:43:14Z",
+      "type": "SHARED_HEARTBEAT_STALE",
+      "note": "The shared cross-calendar heartbeat exceeded 30 hours. It was intentionally not refreshed as HEALTHY because the Fortnite observer is still disabled and the cross-calendar check is not fully healthy."
     }
   ]
 }
