@@ -206,6 +206,8 @@ RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 X-POKEMON-PRODUCT-EAN:0196214144835
 X-POKEMON-PRODUCT-UPC:196214144835
 X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
+X-POKEMON-CLD-AVAILABILITY-DATE:20260915
+X-POKEMON-RETAIL-STREET-DATE:20260916
 X-POKEMON-WATCH-MODE:ZERO_MISS_ULTRA
 X-POKEMON-WATCH-FREQUENCY:HOURLY
 X-POKEMON-REFERENCE-PRICE-EUR:62.99
@@ -216,7 +218,7 @@ DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
 SUMMARY:🔥 🔎 Veille précommandes — ETB Pokémon 30 ans FR
 LOCATION:France / Europe — en ligne
-DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
+DESCRIPTION:Priorité : 🔥 Critique — veille active jusqu’à la sortie du 16 septembre 2026.\n🎯 Produit : ETB Pokémon JCC 30e Anniversaire FR.\n🔑 Identifiants : EAN 0196214144835 / 196214144835 ; UPC 196214144835 ; refs POK1010447102, POK2114483, CLD 169049.\n📦 CLD Distribution : disponibilité/logistique B2B indiquée au 15 septembre 2026 ; street date retailer suivie au 16 septembre 2026.\n🔎 Mode : ZERO MISS ULTRA — vérification horaire externe, anti-doublon, signaux publics de pré-ouverture, tiers retailers et validation par concordance.\n💶 Prix repère : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 € ; B 70–79,99 € ; C 80–99,99 € ; D ≥ 100 €.\n🏪 Priorité : Fnac, Cultura, Micromania, Carrefour, E.Leclerc, Auchan, Amazon FR, Smyths Toys, JouéClub, King Jouet, puis boutiques TCG fiables.\n🚨 Achat immédiat seulement si préco/stock réellement ouvert, retailer fiable, confiance élevée et prix S+/S/A.\nLié à : sortie JCC 30e Anniversaire — 16 septembre 2026.
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
@@ -792,50 +794,6 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-tcgl-expiry-tcgl-public-hangryforworlds-2026@openai
-DTSTAMP:20260830T052946Z
-LAST-MODIFIED:20260830T052946Z
-SEQUENCE:0
-STATUS:TENTATIVE
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:TCGL_CODE_EXPIRY
-X-POKEMON-ACTION:REDEEM
-DTSTART;TZID=Europe/Paris:20260831T175900
-DTEND;TZID=Europe/Paris:20260831T181400
-SUMMARY:⏳ Fin code TCG Live — HANGRYFORWORLDS
-LOCATION:En ligne — Pokémon TCG Live
-DESCRIPTION:Entre le code HANGRYFORWORLDS dans Pokémon TCG Live avant l'échéance.\\n🎁 2 boosters Mega Evolution—Pitch Black / Nuit Noire\, 1 Event Token\, 1 Morpeko ex special illustration rare\\n⏰ Expiration : 31/08/2026 à 17:59 — Europe/Paris.\\nSource tier : OFFICIAL_CODE_AND_REWARD_SECONDARY_EXPIRY.\\nSource : https://x.com/PokemonTCGLive
-CATEGORIES:Pokémon,TCG Live,Code promotionnel,Rappel
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Fin code TCG Live — HANGRYFORWORLDS demain — pense à récupérer tes récompenses
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-tcgl-expiry-twitch-20260925T1800@openai
-DTSTAMP:20260830T052946Z
-LAST-MODIFIED:20260830T052946Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:TCGL_CODE_EXPIRY
-X-POKEMON-ACTION:REDEEM
-DTSTART;TZID=Europe/Paris:20260925T180000
-DTEND;TZID=Europe/Paris:20260925T181500
-SUMMARY:⏳ Fin codes Twitch Drops TCG Live — Mondiaux / PokémonXP
-LOCATION:En ligne — Pokémon TCG Live
-DESCRIPTION:Réclame les Drops dans Twitch puis utilise les codes générés dans Pokémon TCG Live avant l'échéance.\\n🎁 6 Mega Evolution—Pitch Black booster packs\\n🎁 2 double rare Mega Zeraora ex + 2 special illustration rare Mega Zeraora ex\\n🎁 2026 Worlds Crate: Worlds Pikachu deck box\, sleeves\, coin\, avatar jacket\, avatar hat\, 1 Build & Battle Event Token\, 6 Pitch Black booster packs\\n🎁 Ultra rare Misty's Vitality + Gladion's Final Battle\\n🎁 6 Mega Evolution—Pitch Black booster packs + 1 Build & Battle Event Token\\n⏰ Expiration : 25/09/2026 à 18:00 — Europe/Paris.\\nSource tier : OFFICIAL.\\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,TCG Live,Code promotionnel,Rappel
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Fin codes Twitch Drops TCG Live — Mondiaux / PokémonXP demain — pense à récupérer tes récompenses
 END:VALARM
 END:VEVENT
 END:VCALENDAR
