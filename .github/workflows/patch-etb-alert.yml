@@ -1,0 +1,119 @@
+name: Patch ETB 30 ans alert calendar
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/patch-etb-alert.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch latest ETB alert
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path('calendars/pokemon-tcg-france.ics')
+          text = path.read_text(encoding='utf-8')
+          uid = 'UID:watch-etb-30ans-fr-20260830@openai'
+          pos = text.find(uid)
+          if pos < 0:
+              raise SystemExit('ETB watch event not found')
+          start = text.rfind('BEGIN:VEVENT\n', 0, pos)
+          end = text.find('\nEND:VEVENT', pos)
+          if start < 0 or end < 0:
+              raise SystemExit('ETB watch event boundaries not found')
+          end += len('\nEND:VEVENT')
+          block = text[start:end]
+
+          url = 'https://lestresorsdekanto.com/products/etb-30-ans-me5-5'
+          alert_link = 'X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:' + url
+          if alert_link not in block:
+              links = list(re.finditer(r'^X-POKEMON-ALERT-LINK[^\n]*$', block, flags=re.M))
+              if links:
+                  m = links[-1]
+                  block = block[:m.end()] + '\n' + alert_link + block[m.end():]
+              else:
+                  anchor = 'X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet'
+                  block = block.replace(anchor, anchor + '\n' + alert_link)
+
+          block = re.sub(r'^LAST-MODIFIED:.*$', 'LAST-MODIFIED:20260830T072434Z', block, flags=re.M)
+          m = re.search(r'^SEQUENCE:(\d+)$', block, flags=re.M)
+          if m:
+              block = block[:m.start()] + f'SEQUENCE:{int(m.group(1)) + 1}' + block[m.end():]
+
+          block = re.sub(r'^SUMMARY:.*$', 'SUMMARY:🔴 PRÉCO OUVERTE — Les Trésors de Kanto — ETB 30 ans', block, flags=re.M)
+          desc = (
+              'DESCRIPTION:🔴 PRÉCO OUVERTE\\n\\n'
+              'Les Trésors de Kanto — précommande ETB 30 ans FR ouverte, stock faible, EAN exact 0196214144835.\\n'
+              'Prix : 74,90 € | livré : ≥ 74,90 € (frais calculés au checkout) | score : B minimum | écart vs 62,99 € : +11,91 €\\n'
+              'Date : 16/09/2026 | limite/client : non indiquée | retrait magasin : non indiqué\\n'
+              'Confiance : 82/100 | EAN : 0196214144835\\n'
+              '🔗 Ouvrir la fiche Les Trésors de Kanto : ' + url + '\\n'
+              '📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\\n'
+              'ATTENDS UNE MEILLEURE OFFRE'
+          )
+          block = re.sub(r'^DESCRIPTION:.*?\nURL:.*$', desc + '\nURL:' + url, block, count=1, flags=re.M | re.S)
+
+          latest = {
+              'X-POKEMON-LATEST-ALERT-LEVEL': 'RED_PREORDER_OPEN',
+              'X-POKEMON-LATEST-ALERT-RETAILER': 'Les-Tresors-de-Kanto',
+              'X-POKEMON-LATEST-ALERT-STATUS': 'PREORDER_LOW_STOCK',
+              'X-POKEMON-LATEST-ALERT-CONFIDENCE': '82',
+              'X-POKEMON-LATEST-ALERT-AT': '20260830T092434+0200',
+          }
+          for key, value in latest.items():
+              line = f'{key}:{value}'
+              if re.search(rf'^{re.escape(key)}:.*$', block, flags=re.M):
+                  block = re.sub(rf'^{re.escape(key)}:.*$', line, block, flags=re.M)
+              else:
+                  block = block.replace('CATEGORIES:', line + '\nCATEGORIES:', 1)
+
+          # Keep exactly one URL field in this VEVENT.
+          lines = block.splitlines()
+          seen_url = False
+          cleaned = []
+          for line in lines:
+              if line.startswith('URL:'):
+                  if seen_url:
+                      continue
+                  seen_url = True
+              cleaned.append(line)
+          block = '\n'.join(cleaned)
+
+          text = text[:start] + block + text[end:]
+          path.write_text(text, encoding='utf-8')
+
+      - name: Synchronize global Pokémon calendar
+        run: python scripts/sync_pokemon_global.py
+      - name: Verify alert in source and global calendars
+        run: |
+          grep -F 'Les Trésors de Kanto — précommande ETB 30 ans FR ouverte' calendars/pokemon-tcg-france.ics
+          grep -F 'https://lestresorsdekanto.com/products/etb-30-ans-me5-5' calendars/pokemon-tcg-france.ics
+          grep -F 'Les Trésors de Kanto — précommande ETB 30 ans FR ouverte' calendars/pokemon-paris.ics
+          grep -F 'https://lestresorsdekanto.com/products/etb-30-ans-me5-5' calendars/pokemon-paris.ics
+      - name: Commit calendar update
+        run: |
+          if git diff --quiet -- calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics; then
+            echo 'No calendar change required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics
+          git commit -m 'Update ETB 30th alert: Les Tresors de Kanto preorder'
+          git push origin HEAD:master
