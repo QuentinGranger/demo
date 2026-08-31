@@ -1,0 +1,53 @@
+name: Patch Pokémon Worlds reward deadlines 2026-08-31
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/patch_pokemon_worlds_reward_deadlines_20260831.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch calendar
+        run: python scripts/patch_pokemon_worlds_reward_deadlines_20260831.py
+      - name: Validate calendar integrity
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('calendars/pokemon-paris.ics').read_text(encoding='utf-8')
+          assert s.count('BEGIN:VCALENDAR') == 1
+          assert s.count('END:VCALENDAR') == 1
+          uids=re.findall(r'^UID:(.+?)\r?$', s, flags=re.M)
+          assert len(uids) == len(set(uids))
+          for uid in [
+              'pokemon-champions-worlds-outfit-deadline-20260904@openai',
+              'pokemon-go-worlds-twitch-rewards-deadline-20260911@openai',
+              'pokemon-pocket-worlds-drop-code-deadline-20271128@openai',
+          ]:
+              assert f'UID:{uid}' in s
+          assert s.rstrip().endswith('END:VCALENDAR')
+          PY
+      - name: Commit calendar if changed
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: add Worlds 2026 reward deadlines'
+          git push origin HEAD:master
