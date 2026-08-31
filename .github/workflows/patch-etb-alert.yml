@@ -28,7 +28,7 @@ jobs:
         run: python scripts/sync_pokemon_global.py
       - name: Verify source and global calendars
         run: |
-          python -c "from pathlib import Path; uid='UID:watch-etb-30ans-fr-20260830@openai'; url='https://lestresorsdekanto.com/products/etb-30-ans-me5-5'; files=[Path('calendars/pokemon-tcg-france.ics'),Path('calendars/pokemon-paris.ics')]; [(lambda t,p: (uid in t and url in t and 'SUMMARY:🔴 PRÉCO OUVERTE — Les Trésors de Kanto — ETB 30 ans' in t) or (_ for _ in ()).throw(AssertionError(str(p))))(p.read_text(encoding='utf-8'),p) for p in files]"
+          python -c "from pathlib import Path; uid='UID:watch-etb-30ans-fr-20260830@openai'; url='https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr'; summary='SUMMARY:⚫ ÉPUISÉ — Playin — ETB 30 ans'; files=[Path('calendars/pokemon-tcg-france.ics'),Path('calendars/pokemon-paris.ics')]; [(lambda t,p: (uid in t and ('URL:'+url) in t and summary in t and 'X-POKEMON-LATEST-ALERT-RETAILER:Playin' in t) or (_ for _ in ()).throw(AssertionError(str(p))))(p.read_text(encoding='utf-8'),p) for p in files]"
       - name: Commit calendar update
         run: |
           if git diff --quiet -- calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics; then
@@ -38,5 +38,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics
-          git commit -m 'Update ETB 30th alert: Les Tresors de Kanto preorder'
+          git commit -m 'Update ETB 30th alert: Playin listing unavailable'
           git push origin HEAD:master
