@@ -204,9 +204,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:hp-back-to-hogwarts-showcase-20260901@openai
-DTSTAMP:20260819T040500Z
-LAST-MODIFIED:20260819T040500Z
-SEQUENCE:0
+DTSTAMP:20260831T014332Z
+LAST-MODIFIED:20260831T014332Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
@@ -215,21 +215,37 @@ X-HARRYPOTTER-ACTION:WATCH
 X-HARRYPOTTER-EVENT-TYPE:MEDIA_PREMIERE
 X-HARRYPOTTER-FORMAT:ONLINE_SHOWCASE
 X-HARRYPOTTER-MARKET:FR
+X-HARRYPOTTER-END-TIME-STATUS:UNKNOWN
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T040500Z
-X-HARRYPOTTER-NEW-UNTIL:20260824T040500Z
-X-HARRYPOTTER-FRESHNESS:NEW
-X-HARRYPOTTER-BADGE:NEW
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20260902
-SUMMARY:⭐ ✅ 🆕 📡 Back to Hogwarts Showcase 2026
-LOCATION:En ligne — HarryPotter.com / YouTube / TikTok
-DESCRIPTION:Priorité : ⭐ Important — rendez-vous officiel Back to Hogwarts avec annonces et célébration de la franchise.\nFiabilité : ✅ Confirmé par HarryPotter.com.\nDate : 1er septembre 2026. Aucune heure exacte suffisamment fiable n'est stockée tant qu'elle n'est pas publiée officiellement.\nDiffusion annoncée sur les canaux officiels Harry Potter, notamment YouTube et TikTok.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 ; H-1 uniquement si une heure officielle apparaît plus tard.\nSource : https://www.harrypotter.com/news/how-to-celebrate-back-to-hogwarts-2026
-URL:https://www.harrypotter.com/news/how-to-celebrate-back-to-hogwarts-2026
-CATEGORIES:Harry Potter,Back to Hogwarts,En ligne,Showcase,Nouveau,Priorité Important
+X-HARRYPOTTER-LAST-MAJOR-UPDATE-AT:20260831T014332Z
+X-HARRYPOTTER-UPDATE-UNTIL:20260903T014332Z
+X-HARRYPOTTER-UPDATE-REASON:OFFICIAL_TIME_CONFIRMED
+X-HARRYPOTTER-FRESHNESS:UPDATED
+X-HARRYPOTTER-BADGE:UPDATED
+X-HARRYPOTTER-ORIGINAL-DTSTART;VALUE=DATE:20260901
+X-HARRYPOTTER-ORIGINAL-DTEND;VALUE=DATE:20260902
+X-HARRYPOTTER-PREVIOUS-DTSTART;VALUE=DATE:20260901
+X-HARRYPOTTER-PREVIOUS-DTEND;VALUE=DATE:20260902
+X-HARRYPOTTER-CHANGE-COUNT:1
+X-HARRYPOTTER-CURRENT-DATE-STATUS:CONFIRMED_TIME
+X-HARRYPOTTER-CHANGE-SOURCE:https://www.youtube.com/watch?v=2dHaAeLsLmo
+X-HARRYPOTTER-CHANGE-DETECTED-AT:20260831T014332Z
+X-HARRYPOTTER-DATE-HISTORY:20260901 ALLDAY -> 20260901T180000 Europe/Paris (official showcase time confirmed)
+DTSTART;TZID=Europe/Paris:20260901T180000
+SUMMARY:⭐ ✅ ✨ 📡 Back to Hogwarts Showcase 2026 — 18h00
+LOCATION:En ligne — chaîne officielle Harry Potter / YouTube / TikTok
+DESCRIPTION:Priorité : ⭐ Important — rendez-vous officiel Back to Hogwarts avec annonces et célébration de la franchise.\nFiabilité : ✅ Heure confirmée directement par la chaîne YouTube officielle Harry Potter.\nHoraire : mardi 1er septembre 2026 à 18h00 heure de Paris (17h00 BST publié par Harry Potter).\nDiffusion : chaîne officielle Harry Potter sur YouTube ; HarryPotter.com indique également YouTube et TikTok pour le direct.\nHeure de fin : inconnue — aucune durée officielle n'est affirmée.\n✨ Mise à jour majeure détectée le 31 août 2026 : l'heure exacte est désormais officielle.\nRappels : J-1 et H-1 ; aucun rappel passé n'est créé.\nSource horaire : https://www.youtube.com/watch?v=2dHaAeLsLmo\nSource événement : https://www.harrypotter.com/news/how-to-celebrate-back-to-hogwarts-2026
+URL:https://www.youtube.com/watch?v=2dHaAeLsLmo
+CATEGORIES:Harry Potter,Back to Hogwarts,En ligne,Showcase,Mise à jour,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:📡 Back to Hogwarts Showcase demain — vérifie l'heure officielle et la diffusion
+DESCRIPTION:📡 Back to Hogwarts Showcase demain à 18h — chaîne officielle Harry Potter
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:📡 Back to Hogwarts Showcase dans 1 heure — direct à 18h
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
