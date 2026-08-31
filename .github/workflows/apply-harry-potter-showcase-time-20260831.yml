@@ -1,0 +1,73 @@
+name: Apply Harry Potter Showcase official time
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/apply_harry_potter_showcase_time_20260831.py'
+      - '.github/workflows/apply-harry-potter-showcase-time-20260831.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-harry-potter-showcase-time-20260831
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply idempotent VEVENT patch
+        run: python scripts/apply_harry_potter_showcase_time_20260831.py
+
+      - name: Verify second pass is a no-op
+        run: |
+          git diff -- calendars/harry-potter-events-france-paris.ics calendars/harry-potter-paris.ics > /tmp/first.diff
+          python scripts/apply_harry_potter_showcase_time_20260831.py
+          git diff -- calendars/harry-potter-events-france-paris.ics calendars/harry-potter-paris.ics > /tmp/second.diff
+          diff -u /tmp/first.diff /tmp/second.diff
+
+      - name: Verify synchronized target and ICS structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          uid='hp-back-to-hogwarts-showcase-20260901@openai'
+          files=[Path('calendars/harry-potter-events-france-paris.ics'),Path('calendars/harry-potter-paris.ics')]
+          blocks=[]
+          for p in files:
+              t=p.read_text(encoding='utf-8')
+              assert t.startswith('BEGIN:VCALENDAR\n') and t.rstrip().endswith('END:VCALENDAR')
+              assert t.count('BEGIN:VEVENT') == t.count('END:VEVENT')
+              assert t.count('UID:'+uid) == 1
+              m=re.search(r'BEGIN:VEVENT\n(?:(?!BEGIN:VEVENT).)*?UID:'+re.escape(uid)+r'\n(?:(?!BEGIN:VEVENT).)*?END:VEVENT',t,re.S)
+              assert m
+              blocks.append(m.group(0))
+          assert blocks[0] == blocks[1]
+          assert 'DTSTART;TZID=Europe/Paris:20260901T180000' in blocks[0]
+          assert 'TRIGGER:-PT1H' in blocks[0]
+          assert 'SEQUENCE:1' in blocks[0]
+          print('OK: target VEVENT synchronized and structurally valid')
+          PY
+
+      - name: Commit material calendar change
+        run: |
+          if git diff --quiet -- calendars/harry-potter-events-france-paris.ics calendars/harry-potter-paris.ics; then
+            echo 'No material diff to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/harry-potter-events-france-paris.ics calendars/harry-potter-paris.ics
+          git commit -m 'Update Back to Hogwarts Showcase to official 18:00 Paris time'
+          git push
