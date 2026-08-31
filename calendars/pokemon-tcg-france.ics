@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260831T092712Z
-SEQUENCE:8
+LAST-MODIFIED:20260831T102349Z
+SEQUENCE:9
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -75,7 +75,7 @@ X-POKEMON-REFERENCE-PRICE-EUR:62.99
 X-POKEMON-PRICE-BANDS:SPLUS_LE_59.99|S_60_62.99|A_63_69.99|B_70_79.99|C_80_99.99|D_GE_100
 X-POKEMON-WATCH-TIER0:Pokemon|CLD-Distribution
 X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet
-X-POKEMON-ALERT-LINK;RETAILER=Carrefour;STATUS=PREOPEN;CONFIDENCE=92:https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835
+X-POKEMON-ALERT-LINK;RETAILER=Carrefour;STATUS=LISTING_UNAVAILABLE;CONFIDENCE=92:https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835
 X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=INDEXED;CONFIDENCE=78:https://www.micromania.fr/c/carte-pokemon-30-ans
 X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:https://cld.eu/
 X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
@@ -83,18 +83,19 @@ X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CON
 X-POKEMON-ALERT-LINK;RETAILER=Smartoys;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=77:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
 X-POKEMON-ALERT-LINK;RETAILER=ShopForGeek;STATUS=RAFFLE_OPEN;CONFIDENCE=82;SELLER=95;PRICE=59.99:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
+X-POKEMON-ALERT-LINK;RETAILER=PlazaTCG;STATUS=OUT_OF_STOCK;CONFIDENCE=82;SELLER=92:https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟡 NOUVELLE FICHE — ShopForGeek — ETB 30 ans
-LOCATION:France / Europe — inscription en ligne
-DESCRIPTION:🟡 NOUVELLE FICHE\n\nShopForGeek — RAFFLE / liste de réservation ouverte jusqu'au 13/09/2026 23:59 ; inscription sur compte requise et achat non garanti.\nPrix : 59,99 € | livré : 59,99 € si livraison gratuite applicable dès 39 € | score : S+ | écart vs 62,99 € : -3,00 €\nDate/heure Europe/Paris : clôture 13/09/2026 23:59 | limite : sélection après inscription | Click & Collect indisponible sur cette fiche\nConfiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN : 0196214144835 | SKU : POK1010447102 / 196214144835\n🔗 Ouvrir la fiche ShopForGeek : https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée\nOUVRE ET CONNECTE-TOI
-URL:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
-X-POKEMON-LATEST-ALERT-LEVEL:YELLOW_NEW_LISTING
-X-POKEMON-LATEST-ALERT-RETAILER:ShopForGeek
-X-POKEMON-LATEST-ALERT-STATUS:RAFFLE_OPEN
+SUMMARY:⚫ ÉPUISÉ — PlazaTCG — ETB 30 ans
+LOCATION:France — Montévrain / en ligne
+DESCRIPTION:⚫ ÉPUISÉ/FERMÉ\n\nPlazaTCG — nouvelle fiche ETB 30 ans FR détectée ; EAN et référence distributeur exacts ; rupture de stock affichée et date de disponibilité au 16/09/2026.\nPrix : non exploitable — la fiche affiche 0,00 € comme valeur technique | score : —\nDate/heure Europe/Paris : sortie affichée 16/09/2026 | disponibilité actuelle : rupture de stock\nConfiance produit : 82/100 | SELLER_RELIABILITY : 92/100 TRUSTED | EAN : 196214144835 | SKU : POK1010447102\n🔗 Ouvrir la fiche PlazaTCG : https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html\n📅 Calendrier : ajouté + lien direct ; synchronisation globale à vérifier\nINFO À SURVEILLER
+URL:https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html
+X-POKEMON-LATEST-ALERT-LEVEL:BLACK_OUT_OF_STOCK
+X-POKEMON-LATEST-ALERT-RETAILER:PlazaTCG
+X-POKEMON-LATEST-ALERT-STATUS:OUT_OF_STOCK
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260831T112712+0200
+X-POKEMON-LATEST-SELLER-RELIABILITY:92
+X-POKEMON-LATEST-ALERT-AT:20260831T122349+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
