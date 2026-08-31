@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260830T151900Z
-SEQUENCE:7
+LAST-MODIFIED:20260831T092712Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -82,18 +82,19 @@ X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=8
 X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
 X-POKEMON-ALERT-LINK;RETAILER=Smartoys;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=77:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE=88;SELLER=86;PRICE=60.00:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
+X-POKEMON-ALERT-LINK;RETAILER=ShopForGeek;STATUS=RAFFLE_OPEN;CONFIDENCE=82;SELLER=95;PRICE=59.99:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟠 DATE/HEURE ANNONCÉE — Passion Geek — ETB 30 ans
-LOCATION:France — Arras / compte client en ligne
-DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nPassion Geek — allocations de précommande ETB 30 ans annoncées pour ce soir sur les comptes clients éligibles ; attribution basée sur l’historique d’achat des 365 derniers jours.\nPrix : 60,00 € | livré : inconnu | score : S | écart vs 62,99 € : -2,99 €\nDate/heure Europe/Paris : 30/08/2026 ce soir (heure exacte non publiée) | limite : 1 exemplaire/item/compte | compte + éligibilité requis\nConfiance produit : 88/100 | SELLER_RELIABILITY : 86/100 TRUSTED | EAN : 0196214144835\n🔗 Ouvrir la fiche Passion Geek : https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée dans pokemon-tcg-france.ics et pokemon-paris.ics\nOUVRE ET CONNECTE-TOI
-URL:https://www.passiongeek.fr/product-page/pokemon-30%C3%A8me-anniversaire-elite-trainer-box-fr
-X-POKEMON-LATEST-ALERT-LEVEL:ORANGE_DATE_WINDOW_ANNOUNCED
-X-POKEMON-LATEST-ALERT-RETAILER:Passion-Geek
-X-POKEMON-LATEST-ALERT-STATUS:ALLOCATIONS_TONIGHT
-X-POKEMON-LATEST-ALERT-CONFIDENCE:88
-X-POKEMON-LATEST-SELLER-RELIABILITY:86
-X-POKEMON-LATEST-ALERT-AT:20260830T171325+0200
+SUMMARY:🟡 NOUVELLE FICHE — ShopForGeek — ETB 30 ans
+LOCATION:France / Europe — inscription en ligne
+DESCRIPTION:🟡 NOUVELLE FICHE\n\nShopForGeek — RAFFLE / liste de réservation ouverte jusqu'au 13/09/2026 23:59 ; inscription sur compte requise et achat non garanti.\nPrix : 59,99 € | livré : 59,99 € si livraison gratuite applicable dès 39 € | score : S+ | écart vs 62,99 € : -3,00 €\nDate/heure Europe/Paris : clôture 13/09/2026 23:59 | limite : sélection après inscription | Click & Collect indisponible sur cette fiche\nConfiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN : 0196214144835 | SKU : POK1010447102 / 196214144835\n🔗 Ouvrir la fiche ShopForGeek : https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html\n📅 Calendrier : ajouté + lien direct + synchronisation vérifiée\nOUVRE ET CONNECTE-TOI
+URL:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
+X-POKEMON-LATEST-ALERT-LEVEL:YELLOW_NEW_LISTING
+X-POKEMON-LATEST-ALERT-RETAILER:ShopForGeek
+X-POKEMON-LATEST-ALERT-STATUS:RAFFLE_OPEN
+X-POKEMON-LATEST-ALERT-CONFIDENCE:82
+X-POKEMON-LATEST-SELLER-RELIABILITY:95
+X-POKEMON-LATEST-ALERT-AT:20260831T112712+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
