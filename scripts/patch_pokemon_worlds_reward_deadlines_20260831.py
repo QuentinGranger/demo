@@ -50,9 +50,49 @@ events = [
             'X-POKEMON-USER-EFFECT-ID:pocket-worlds-2026-booster-hourglass-code-expiry',
         ],
     ),
+    (
+        'pokemon-go-pokemonxp-pikachu-claim-deadline-20260912@openai',
+        [
+            'DTSTART;TZID=Europe/Paris:20260912T050000',
+            'DTEND;TZID=Europe/Paris:20260912T051500',
+            'SUMMARY:⭐ ✅ ⏳ Pokémon GO — Fin récupération drop Pikachu PokémonXP',
+            'LOCATION:En ligne — Twitch / Pokémon GO',
+            'DESCRIPTION:Priorité : ⭐ Important — fin de la fenêtre officielle de récupération du drop PokémonXP donnant une Étude ponctuelle pour rencontrer Pikachu en costume PokémonXP.\\nFiabilité : ✅ Confirmé officiellement par Pokémon. La récompense doit être récupérée avant le 11 septembre 2026 à 20:00 PDT, soit le 12 septembre à 05:00 à Paris (CEST).\\n⚠️ Cette échéance est une fenêtre de récupération du drop Twitch, distincte des autres échéances de récompenses Pokémon GO.\\nAction : récupérer le drop Twitch avant l’échéance si vous l’avez obtenu.\\nSource : ' + SOURCE,
+            'CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drop,PokémonXP,Priorité Important',
+            'X-POKEMON-ACTIONABILITY:84',
+            'X-POKEMON-WINDOW-TYPE:TWITCH_CLAIM',
+            'X-POKEMON-USER-EFFECT-ID:pokemon-go-pokemonxp-2026-pikachu-twitch-claim',
+        ],
+    ),
+    (
+        'pokemon-tcgl-worlds-pokemonxp-codes-deadline-20260925@openai',
+        [
+            'DTSTART;TZID=Europe/Paris:20260925T180000',
+            'DTEND;TZID=Europe/Paris:20260925T181500',
+            'SUMMARY:⭐ ✅ ⏳ JCC Pokémon Live — Fin codes drops Mondiaux / PokémonXP 2026',
+            'LOCATION:En ligne — JCC Pokémon Live',
+            'DESCRIPTION:Priorité : ⭐ Important — échéance officielle d’échange des codes générés par les drops Twitch des Mondiaux 2026 et de PokémonXP dans le JCC Pokémon Live.\\nFiabilité : ✅ Confirmé officiellement par Pokémon. Les codes reçus via drops Twitch expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris (CEST).\\n🎁 Selon le drop obtenu : boosters Méga-Évolution – Nuit Noire, cartes Méga-Zeraora-ex, Caisse des Mondiaux 2026, cartes ultra rare et/ou récompense du panel PokémonXP.\\n🔐 Aucun code personnel à usage unique n’est exposé dans ce calendrier.\\nAction : échanger les codes déjà obtenus avant l’échéance.\\nSource : ' + SOURCE,
+            'CATEGORIES:Pokémon,JCC Pokémon Live,Deadline,Twitch Drop,Mondiaux 2026,PokémonXP,Priorité Important',
+            'X-POKEMON-ACTIONABILITY:76',
+            'X-POKEMON-USER-EFFECT-ID:tcgl-worlds-pokemonxp-2026-drop-codes-expiry',
+        ],
+    ),
+    (
+        'pokemon-champions-worlds-item-codes-deadline-20260930@openai',
+        [
+            'DTSTART;TZID=Europe/Paris:20260930T015900',
+            'DTEND;TZID=Europe/Paris:20260930T021400',
+            'SUMMARY:⭐ ✅ ⏳ Pokémon Champions — Fin codes objets Mondiaux 2026',
+            'LOCATION:En ligne — Pokémon Champions',
+            'DESCRIPTION:Priorité : ⭐ Important — dernière échéance officielle pour échanger les codes d’objets Pokémon Champions obtenus pendant les Mondiaux 2026 et via les co-streams partenaires.\\nFiabilité : ✅ Confirmé officiellement par Pokémon. Ces codes sont valables jusqu’au 29 septembre 2026 à 23:59 UTC, soit le 30 septembre à 01:59 à Paris (CEST).\\n🎁 Récompenses concernées selon le visionnage : 50 Coupons de Vitesse, 5 Tickets de Recrutement Permanent, 5 Tickets d’Entraînement et code co-stream pour 50 Coupons de Vitesse.\\nAction : échanger les codes déjà obtenus avant l’échéance.\\nSource : ' + SOURCE,
+            'CATEGORIES:Pokémon,Pokémon Champions,Deadline,Twitch Drop,Mondiaux 2026,Priorité Important',
+            'X-POKEMON-ACTIONABILITY:72',
+            'X-POKEMON-USER-EFFECT-ID:champions-worlds-2026-item-codes-expiry',
+        ],
+    ),
 ]
 
-stamp = '20260831T155633Z'
+stamp = '20260831T195200Z'
 base_common = [
     'DTSTAMP:' + stamp,
     'LAST-MODIFIED:' + stamp,
