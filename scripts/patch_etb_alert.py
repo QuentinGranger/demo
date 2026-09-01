@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 
 SOURCE = Path('calendars/pokemon-tcg-france.ics')
 UID = 'UID:watch-etb-30ans-fr-20260830@openai'
-URL = 'https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html'
-ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:{URL}'
+URL = 'https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html'
+ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:{URL}'
 
 text = SOURCE.read_text(encoding='utf-8')
 pos = text.find(UID)
@@ -34,12 +34,12 @@ sequence = int(seq_match.group(1)) + 1 if seq_match else 1
 now_utc = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 
 latest_description = (
-    'DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\n'
-    "Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.\\n"
-    'Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche\\n'
-    "Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud\\n"
-    'Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835\\n'
-    'INFO À SURVEILLER'
+    'DESCRIPTION:⚡ PRÉ-OUVERTURE PROBABLE\\n\\n'
+    "UltraJeux — fiche FR dédiée détectée pour l’ETB Pokémon JCC 30e Anniversaire ; EAN exact, statut « En Précommande » et prix indiqué « Bientôt Disponible », mais aucune commande exploitable confirmée pour l’instant.\\n"
+    'Prix : non publié | score : — | écart vs 62,99 € : — | livraison annoncée à partir de 1,80 € et offerte dès 50 € lorsque la vente sera ouverte\\n'
+    'Date/heure Europe/Paris : détectée au 01/09/2026 05:20 | limite/client : non publiée | retrait : non confirmé\\n'
+    'Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835\\n'
+    'PRÉPARE-TOI À L’OUVERTURE'
 )
 block, count = re.subn(r'^DESCRIPTION:.*?(?=^URL:)', latest_description + '\n', block, count=1, flags=re.M | re.S)
 if count != 1:
@@ -48,15 +48,15 @@ if count != 1:
 replacements = {
     r'^LAST-MODIFIED:.*$': f'LAST-MODIFIED:{now_utc}',
     r'^SEQUENCE:\d+$': f'SEQUENCE:{sequence}',
-    r'^SUMMARY:.*$': 'SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans',
-    r'^LOCATION:.*$': "LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud",
+    r'^SUMMARY:.*$': 'SUMMARY:⚡ PRÉ-OUVERTURE PROBABLE — UltraJeux — ETB 30 ans',
+    r'^LOCATION:.*$': 'LOCATION:France — UltraJeux',
     r'^URL:.*$': f'URL:{URL}',
-    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN',
-    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop',
-    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:PREORDER_RESERVATION_OPEN',
+    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:PREOPEN_PROBABLE',
+    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:UltraJeux',
+    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:PREOPEN_PROBABLE',
     r'^X-POKEMON-LATEST-ALERT-CONFIDENCE:.*$': 'X-POKEMON-LATEST-ALERT-CONFIDENCE:82',
-    r'^X-POKEMON-LATEST-SELLER-RELIABILITY:.*$': 'X-POKEMON-LATEST-SELLER-RELIABILITY:95',
-    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260901T042724+0200',
+    r'^X-POKEMON-LATEST-SELLER-RELIABILITY:.*$': 'X-POKEMON-LATEST-SELLER-RELIABILITY:90',
+    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260901T052000+0200',
 }
 for pattern, replacement in replacements.items():
     block, count = re.subn(pattern, replacement, block, count=1, flags=re.M)
