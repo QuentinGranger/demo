@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 
 SOURCE = Path('calendars/pokemon-tcg-france.ics')
 UID = 'UID:watch-etb-30ans-fr-20260830@openai'
-URL = 'https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr'
-ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95:{URL}'
+URL = 'https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html'
+ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:{URL}'
 
 text = SOURCE.read_text(encoding='utf-8')
 pos = text.find(UID)
@@ -36,21 +36,21 @@ now_utc = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 replacements = {
     r'^LAST-MODIFIED:.*$': f'LAST-MODIFIED:{now_utc}',
     r'^SEQUENCE:\d+$': f'SEQUENCE:{sequence}',
-    r'^SUMMARY:.*$': 'SUMMARY:⚫ ÉPUISÉ — Playin — ETB 30 ans',
-    r'^LOCATION:.*$': 'LOCATION:France — Playin / en ligne',
-    r'^DESCRIPTION:.*$': ('DESCRIPTION:⚫ ÉPUISÉ/FERMÉ\\n\\n'
-        'Playin — première fiche ETB 30 ans FR détectée ; sortie affichée le 16/09/2026 ; livraison actuellement indisponible avec rupture temporaire.\\n'
-        'Prix : non publié | score : —\\n'
-        'Date/heure Europe/Paris : aucune ouverture annoncée | limite/client : non indiquée | retrait : selon disponibilité magasin\\n'
-        'Confiance produit : 81/100 | SELLER_RELIABILITY : 95/100 TRUSTED\\n'
+    r'^SUMMARY:.*$': 'SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans',
+    r'^LOCATION:.*$': "LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud",
+    r'^DESCRIPTION:.*$': ('DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\n'
+        "Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.\\n"
+        'Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche\\n'
+        "Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud\\n"
+        'Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835\\n'
         'INFO À SURVEILLER'),
     r'^URL:.*$': f'URL:{URL}',
-    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:BLACK_OUT_OF_STOCK',
-    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Playin',
-    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:OUT_OF_STOCK',
-    r'^X-POKEMON-LATEST-ALERT-CONFIDENCE:.*$': 'X-POKEMON-LATEST-ALERT-CONFIDENCE:81',
+    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN',
+    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop',
+    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:PREORDER_RESERVATION_OPEN',
+    r'^X-POKEMON-LATEST-ALERT-CONFIDENCE:.*$': 'X-POKEMON-LATEST-ALERT-CONFIDENCE:82',
     r'^X-POKEMON-LATEST-SELLER-RELIABILITY:.*$': 'X-POKEMON-LATEST-SELLER-RELIABILITY:95',
-    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260831T132830+0200',
+    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260901T042724+0200',
 }
 for pattern, replacement in replacements.items():
     block, count = re.subn(pattern, replacement, block, count=1, flags=re.M)
