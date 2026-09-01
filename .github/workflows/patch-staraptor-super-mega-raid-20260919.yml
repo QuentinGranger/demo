@@ -1,0 +1,36 @@
+name: Patch Staraptor Super Mega Raid 2026-09-19
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/patch-staraptor-super-mega-raid-20260919.yml'
+      - 'scripts/patch_staraptor_super_mega_raid_20260919.py'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Patch canonical calendar
+        run: python3 scripts/patch_staraptor_super_mega_raid_20260919.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No business change"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: add Staraptor Super Mega Raid Day"
+          git push origin HEAD:master
