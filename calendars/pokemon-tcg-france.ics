@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260901T032308Z
-SEQUENCE:14
+LAST-MODIFIED:20260901T092322Z
+SEQUENCE:15
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -77,6 +77,7 @@ X-POKEMON-WATCH-TIER0:Pokemon|CLD-Distribution
 X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet
 X-POKEMON-ALERT-LINK;RETAILER=Carrefour;STATUS=LISTING_UNAVAILABLE;CONFIDENCE=92:https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835
 X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=INDEXED;CONFIDENCE=78:https://www.micromania.fr/c/carte-pokemon-30-ans
+X-POKEMON-ALERT-LINK;RETAILER=Micromania;STATUS=RAFFLE_OPEN;CONFIDENCE=88;SELLER=95;PRICE=55.99:https://www.micromania.fr/inscription-vente-reservee.html
 X-POKEMON-ALERT-LINK;RETAILER=CLD-Distribution;STATUS=DISTRIBUTOR;CONFIDENCE=95:https://cld.eu/
 X-POKEMON-ALERT-LINK;RETAILER=Foxchip-Collector;STATUS=OUT_OF_STOCK;CONFIDENCE=82:https://www.foxchip-collector.com/fr/coffrets-dresseur-d-elite-etb/81311-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Les-Tresors-de-Kanto;STATUS=PREORDER_LOW_STOCK;CONFIDENCE=82:https://lestresorsdekanto.com/products/etb-30-ans-me5-5
@@ -89,23 +90,17 @@ X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;C
 X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:⚡ PRÉ-OUVERTURE PROBABLE — UltraJeux — ETB 30 ans
-LOCATION:France — UltraJeux
-DESCRIPTION:⚡ PRÉ-OUVERTURE PROBABLE
-
-UltraJeux — fiche FR dédiée détectée pour l’ETB Pokémon JCC 30e Anniversaire ; EAN exact, statut « En Précommande » et prix indiqué « Bientôt Disponible », mais aucune commande exploitable confirmée pour l’instant.
-Prix : non publié | score : — | écart vs 62,99 € : — | livraison annoncée à partir de 1,80 € et offerte dès 50 € lorsque la vente sera ouverte
-Date/heure Europe/Paris : détectée au 01/09/2026 05:20 | limite/client : non publiée | retrait : non confirmé
-Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835
-PRÉPARE-TOI À L’OUVERTURE
-URL:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
-X-POKEMON-LATEST-ALERT-LEVEL:PREOPEN_PROBABLE
-X-POKEMON-LATEST-ALERT-RETAILER:UltraJeux
-X-POKEMON-LATEST-ALERT-STATUS:PREOPEN_PROBABLE
-X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:90
-X-POKEMON-LATEST-ALERT-AT:20260901T052000+0200
-CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
+SUMMARY:🟡 RAFFLE OUVERTE — Micromania — ETB 30 ans
+LOCATION:France — Micromania
+DESCRIPTION:🟡 RAFFLE OUVERTE\n\nMicromania — tirage au sort / vente réservée détecté pour l’ETB Pokémon JCC 30e Anniversaire FR. Inscription exploitable via la page officielle de vente réservée ; achat non garanti car soumis au tirage au sort.\nPrix : 55,99 € | score S+ | écart vs 62,99 € : -7,00 €\nDate/heure Europe/Paris : détectée au 01/09/2026 11:23 | limite/client : non publiée | retrait/livraison : non confirmés\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | correspondance produit forte via fiche presse + redirection Micromania officielle\nOUVRE ET CONNECTE-TOI
+URL:https://www.micromania.fr/inscription-vente-reservee.html
+X-POKEMON-LATEST-ALERT-LEVEL:RAFFLE_OPEN
+X-POKEMON-LATEST-ALERT-RETAILER:Micromania
+X-POKEMON-LATEST-ALERT-STATUS:RAFFLE_OPEN
+X-POKEMON-LATEST-ALERT-CONFIDENCE:88
+X-POKEMON-LATEST-SELLER-RELIABILITY:95
+X-POKEMON-LATEST-ALERT-AT:20260901T112322+0200
+CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
 ACTION:DISPLAY
