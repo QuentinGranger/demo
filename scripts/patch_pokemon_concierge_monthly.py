@@ -1,187 +1,124 @@
-from __future__ import annotations
-
 from pathlib import Path
 import re
 
-PATH = Path("calendars/pokemon-paris.ics")
-MONTH = "2026-09"
-UID = f"pokemon-concierge-{MONTH}@openai"
-DTSTAMP = "20260901T075806Z"
-SUMMARY = "🎒 Pokémon Monthly Experience — La Rentrée des 30 ans"
+PATH = Path('calendars/pokemon-paris.ics')
+MONTH = '2026-09'
+UID = f'pokemon-concierge-{MONTH}@openai'
+STAMP = '20260901T080300Z'
+SUMMARY = '🎒 Pokémon Monthly Experience — La Rentrée des 30 ans'
 
 
-def escape_text(value: str) -> str:
-    return (
-        value.replace("\\", "\\\\")
-        .replace(";", "\\;")
-        .replace(",", "\\,")
-        .replace("\r\n", "\\n")
-        .replace("\n", "\\n")
-    )
+def esc(s: str) -> str:
+    return s.replace('\\', '\\\\').replace(';', '\\;').replace(',', '\\,').replace('\n', '\\n')
 
 
-def fold_ical_line(line: str, limit: int = 75) -> list[str]:
-    """RFC5545 line folding without splitting UTF-8 code points."""
-    if len(line.encode("utf-8")) <= limit:
+def fold(line: str, limit: int = 75):
+    if len(line.encode()) <= limit:
         return [line]
-    out: list[str] = []
-    current = ""
-    first = True
+    parts, cur, first = [], '', True
     for ch in line:
-        prefix = "" if first else " "
-        candidate = current + ch
-        if len((prefix + candidate).encode("utf-8")) > limit and current:
-            out.append(prefix + current)
-            current = ch
-            first = False
+        prefix = '' if first else ' '
+        if cur and len((prefix + cur + ch).encode()) > limit:
+            parts.append(prefix + cur)
+            cur, first = ch, False
         else:
-            current = candidate
-    if current:
-        out.append(("" if first else " ") + current)
-    return out
+            cur += ch
+    if cur:
+        parts.append(('' if first else ' ') + cur)
+    return parts
 
 
-def render(lines: list[str], newline: str) -> str:
-    physical: list[str] = []
-    for line in lines:
-        physical.extend(fold_ical_line(line))
-    return newline.join(physical) + newline
+def render(lines, nl):
+    return nl.join(p for line in lines for p in fold(line)) + nl
 
 
 raw = PATH.read_bytes()
-text = raw.decode("utf-8")
-newline = "\r\n" if b"\r\n" in raw else "\n"
+text = raw.decode('utf-8')
+nl = '\r\n' if b'\r\n' in raw else '\n'
+assert text.count('BEGIN:VCALENDAR') == 1 and text.count('END:VCALENDAR') == 1
 
-if text.count("BEGIN:VCALENDAR") != 1 or text.count("END:VCALENDAR") != 1:
-    raise SystemExit("Unsafe calendar envelope")
+# Continuity: August already proposed the Kanto Tome 1, so September advances to Johto
+# instead of repeating the same object.
+description = '\n'.join([
+    '🍂 Saison/période : rentrée en France, fin d’été et mois du 30e anniversaire du JCC Pokémon.',
+    '🌟 Thème : des origines vers Johto avant la grande fête des 30 ans.',
+    '⚡ Mascotte : Pikachu | 🌍 Région/génération : Kanto→Johto / Générations I–II | 🕰 Époque : 1996→1999→2026.',
+    '🎮 Inspiration : JCC 30e Anniversaire, manga Pokémon La Grande Aventure, histoire et art Pokémon.',
+    'Verdict : SELECTIVE BUY — profiter de Pokémon sans surpayer les précommandes 30 ans.',
+    '🛒 Achats retenus :',
+    '1) Admirez-les tous ! — visite libre Musée en Herbe — 8,00 € TTC — UTILISER — https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html',
+    '2) Pokémon - La Grande Aventure - Or et Argent, Tome 1 (Kurokawa) — 10,00 € TTC — UTILISER — https://www.cultura.com/p-pokemon-la-grande-aventure-or-et-argent-t-1-9782368522219.html',
+    '💰 TOTAL TTC : 18,00 € / 50 € | Réserve Pokédollars : 32,00 €.',
+    '🧠 Anti-FOMO : l’ETB 30 ans dépasse le budget de cette Experience et plusieurs offres observées sont au-dessus du prix de référence du calendrier. Ne pas courir après une ETB chère.',
+    '🎒 Rituel : visite de l’exposition puis lecture du départ vers Johto ; à la maison, créer une mini-vitrine 1996→1999→2026 avec des pièces déjà possédées.',
+    '🧳 Mini-expédition <=25 € : manga Or et Argent seul à 10,00 € + rituel chronologique.',
+    '🌿 No-buy 0 € : découvrir les cartes 30e Anniversaire sur Pokemon.fr, jouer à Pokémon Pocket/TCG Live avec ce que tu possèdes déjà et réorganiser 30 pièces par ordre chronologique.',
+    '📅 Rappels du calendrier : 6 sept. précommande ETB 30 ans Guizette (retailer) ; 16 sept. sortie officielle JCC 30e Anniversaire ; 19 sept. précommande Bundle 6 boosters Guizette ; 20 sept. précommande Coffret Classeur Guizette.',
+    '⭐ Score : 94/100 — 🟢 Badge obtenu. Émotion 20/20 | Immersion 19/20 | Culture 15/15 | Expérience 14/15 | Objets 8/10 | Plaisir/prix 9/10 | Long terme 9/10.'
+])
 
-# Business/editorial payload. DTSTAMP/LAST-MODIFIED/SEQUENCE are handled separately
-# so SEQUENCE only increments when the actual Monthly Experience changes.
-description = "\n".join(
-    [
-        "🍂 Saison/période : rentrée en France, fin d’été et mois du 30e anniversaire du JCC Pokémon.",
-        "🌟 Thème : retourner aux origines avant la grande fête des 30 ans.",
-        "⚡ Mascotte : Pikachu | 🌍 Région/génération : Kanto / Génération I | 🕰 Époque : 1996→2026.",
-        "🎮 Inspiration : JCC 30e Anniversaire, manga Pokémon La Grande Aventure, histoire et art Pokémon.",
-        "Verdict : SELECTIVE BUY — profiter de Pokémon sans surpayer les précommandes 30 ans.",
-        "🛒 Achats retenus :",
-        "1) Admirez-les tous ! — visite libre Musée en Herbe — 8,00 € TTC — UTILISER — https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html",
-        "2) Pokémon - La Grande Aventure, Tome 1 (Kurokawa) — 10,00 € TTC — UTILISER — https://www.cultura.com/p-pokemon-la-grande-aventure-t-1-9782368520130.html",
-        "💰 TOTAL TTC : 18,00 € / 50 € | Réserve Pokédollars : 32,00 €.",
-        "🧠 Anti-FOMO : l’ETB 30 ans dépasse le budget de cette Experience et plusieurs offres observées sont au-dessus du prix de référence du calendrier. Ne pas courir après une ETB chère.",
-        "🎒 Rituel : visite de l’exposition puis lecture du début de La Grande Aventure ; à la maison, créer une mini-vitrine 1996→2026 avec une carte ou un objet déjà possédé.",
-        "🧳 Mini-expédition <=25 € : manga seul à 10,00 € + rituel 1996→2026.",
-        "🌿 No-buy 0 € : découvrir les cartes 30e Anniversaire sur Pokemon.fr, jouer à Pokémon Pocket/TCG Live avec ce que tu possèdes déjà et réorganiser 30 pièces de collection par ordre chronologique.",
-        "📅 Rappels du calendrier : 6 sept. précommande ETB 30 ans Guizette (retailer) ; 16 sept. sortie officielle JCC 30e Anniversaire ; 19 sept. précommande Bundle 6 boosters Guizette ; 20 sept. précommande Coffret Classeur Guizette.",
-        "⭐ Score : 94/100 — 🟢 Badge obtenu. Émotion 20/20 | Immersion 19/20 | Culture 15/15 | Expérience 14/15 | Objets 8/10 | Plaisir/prix 9/10 | Long terme 9/10.",
-    ]
-)
-
-base_lines = [
-    "BEGIN:VEVENT",
-    f"UID:{UID}",
-    "STATUS:CONFIRMED",
-    "DTSTART;TZID=Europe/Paris:20260901T100000",
-    "DTEND;TZID=Europe/Paris:20260901T103000",
-    f"SUMMARY:{escape_text(SUMMARY)}",
-    f"DESCRIPTION:{escape_text(description)}",
-    "CATEGORIES:POKEMON,CONCIERGE,MONTHLY-EXPERIENCE",
-    "X-POKEMON-CONCIERGE:YES",
-    "X-POKEMON-CONCIERGE-BUDGET:50EUR",
-    f"X-POKEMON-CONCIERGE-MONTH:{MONTH}",
-    "X-POKEMON-CONCIERGE-VERDICT:SELECTIVE_BUY",
-    "X-POKEMON-CONCIERGE-SCORE:94",
-    "URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon",
-    "BEGIN:VALARM",
-    "TRIGGER:-P1D",
-    "ACTION:DISPLAY",
-    "DESCRIPTION:🎒 La Pokémon Monthly Experience de septembre arrive demain",
-    "END:VALARM",
-    "END:VEVENT",
+business = [
+    'BEGIN:VEVENT',
+    f'UID:{UID}',
+    'STATUS:CONFIRMED',
+    'DTSTART;TZID=Europe/Paris:20260901T100000',
+    'DTEND;TZID=Europe/Paris:20260901T103000',
+    f'SUMMARY:{esc(SUMMARY)}',
+    f'DESCRIPTION:{esc(description)}',
+    'CATEGORIES:POKEMON,CONCIERGE,MONTHLY-EXPERIENCE',
+    'X-POKEMON-CONCIERGE:YES',
+    'X-POKEMON-CONCIERGE-BUDGET:50EUR',
+    'X-POKEMON-CONCIERGE-MONTH:2026-09',
+    'X-POKEMON-CONCIERGE-VERDICT:SELECTIVE_BUY',
+    'X-POKEMON-CONCIERGE-SCORE:94',
+    'URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon',
+    'BEGIN:VALARM',
+    'TRIGGER:-P1D',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:🎒 La Pokémon Monthly Experience de septembre arrive demain',
+    'END:VALARM',
+    'END:VEVENT',
 ]
 
-# Unfold existing content for semantic comparison and event replacement.
-unfolded = text.replace("\r\n ", "").replace("\n ", "")
-pattern = re.compile(r"BEGIN:VEVENT(?:\r?\n).*?END:VEVENT(?:\r?\n)", re.S)
-existing_match = None
-existing_seq = 0
-for match in pattern.finditer(unfolded):
-    block = match.group(0)
-    if f"UID:{UID}" in block:
-        existing_match = match
-        seq_match = re.search(r"^SEQUENCE:(\d+)$", block, flags=re.M)
-        existing_seq = int(seq_match.group(1)) if seq_match else 0
-        break
+unfolded = text.replace('\r\n ', '').replace('\n ', '')
+pat = re.compile(r'BEGIN:VEVENT(?:\r?\n).*?END:VEVENT(?:\r?\n)?', re.S)
+old = next((m for m in pat.finditer(unfolded) if f'UID:{UID}' in m.group(0)), None)
+old_seq = 0
+if old:
+    m = re.search(r'^SEQUENCE:(\d+)$', old.group(0), re.M)
+    old_seq = int(m.group(1)) if m else 0
 
 
-def normalize_business(block: str) -> str:
-    lines = block.replace("\r\n", "\n").split("\n")
-    filtered = [
-        line
-        for line in lines
-        if not line.startswith("DTSTAMP:")
-        and not line.startswith("LAST-MODIFIED:")
-        and not line.startswith("SEQUENCE:")
-        and line
-    ]
-    return "\n".join(filtered)
+def norm(block: str):
+    return '\n'.join(x for x in block.replace('\r\n', '\n').split('\n')
+                     if x and not x.startswith(('DTSTAMP:', 'LAST-MODIFIED:', 'SEQUENCE:')))
 
-candidate_business = "\n".join(base_lines)
+candidate = '\n'.join(business)
+if old and norm(old.group(0)) == norm(candidate):
+    print('Monthly Experience already current; no change.')
+    raise SystemExit(0)
 
-if existing_match:
-    existing_block = existing_match.group(0)
-    if normalize_business(existing_block) == normalize_business(candidate_business):
-        print("Monthly Experience already current; no change.")
-        raise SystemExit(0)
-    sequence = existing_seq + 1
-else:
-    sequence = 0
+seq = old_seq + 1 if old else 0
+lines = [business[0], business[1], f'DTSTAMP:{STAMP}', f'LAST-MODIFIED:{STAMP}', f'SEQUENCE:{seq}', *business[2:]]
+event = render(lines, nl)
 
-final_lines = [
-    base_lines[0],
-    base_lines[1],
-    f"DTSTAMP:{DTSTAMP}",
-    f"LAST-MODIFIED:{DTSTAMP}",
-    f"SEQUENCE:{sequence}",
-    *base_lines[2:],
-]
-event = render(final_lines, newline)
-
-# Rebuild from raw text to preserve all non-Concierge VEVENTs byte-for-byte apart
-# from newline normalization already used by this calendar.
-if existing_match:
-    # Locate the same event in the original (possibly folded) text by UID and boundaries.
-    uid_pos = text.find(f"UID:{UID}")
-    start = text.rfind("BEGIN:VEVENT", 0, uid_pos)
-    end = text.find("END:VEVENT", uid_pos)
-    if start < 0 or end < 0:
-        raise SystemExit("Could not safely locate existing Concierge event")
-    end += len("END:VEVENT")
-    if text.startswith("\r\n", end):
-        end += 2
-    elif text.startswith("\n", end):
-        end += 1
+if old:
+    pos = text.find(f'UID:{UID}')
+    start = text.rfind('BEGIN:VEVENT', 0, pos)
+    end = text.find('END:VEVENT', pos) + len('END:VEVENT')
+    if text.startswith('\r\n', end): end += 2
+    elif text.startswith('\n', end): end += 1
     text = text[:start] + event + text[end:]
 else:
-    marker = "END:VCALENDAR"
-    idx = text.index(marker)
-    prefix, suffix = text[:idx], text[idx:]
-    if prefix and not prefix.endswith(("\r\n", "\n")):
-        prefix += newline
-    text = prefix + event + suffix
+    idx = text.index('END:VCALENDAR')
+    prefix = text[:idx]
+    if prefix and not prefix.endswith(('\r\n', '\n')): prefix += nl
+    text = prefix + event + text[idx:]
 
-# Enforce original newline style and validate key invariants locally.
-text = text.replace("\r\n", "\n").replace("\n", newline)
-if text.count("BEGIN:VCALENDAR") != 1 or text.count("END:VCALENDAR") != 1:
-    raise SystemExit("Calendar envelope corrupted")
-if text.count(f"UID:{UID}") != 1:
-    raise SystemExit("Concierge UID is not unique")
-if text.count("BEGIN:VEVENT") != text.count("END:VEVENT"):
-    raise SystemExit("VEVENT boundary mismatch")
-if "X-POKEMON-CONCIERGE:YES" not in text or "CATEGORIES:POKEMON,CONCIERGE,MONTHLY-EXPERIENCE" not in text:
-    raise SystemExit("Concierge metadata missing")
-if not text.rstrip().endswith("END:VCALENDAR"):
-    raise SystemExit("Calendar does not end correctly")
-
-PATH.write_bytes(text.encode("utf-8"))
-print(f"Applied {UID} with SEQUENCE:{sequence}")
+text = text.replace('\r\n', '\n').replace('\n', nl)
+assert text.count(f'UID:{UID}') == 1
+assert text.count('BEGIN:VEVENT') == text.count('END:VEVENT')
+assert text.rstrip().endswith('END:VCALENDAR')
+assert 'X-POKEMON-CONCIERGE:YES' in text
+PATH.write_bytes(text.encode('utf-8'))
+print(f'Applied {UID} with SEQUENCE:{seq}')
