@@ -1,3 +1,4 @@
+# Verified canonical gap on 2026-09-01; trigger idempotent calendar patch workflow.
 from pathlib import Path
 
 PATH = Path('calendars/pokemon-paris.ics')
