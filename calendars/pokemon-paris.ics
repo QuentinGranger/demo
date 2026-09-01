@@ -936,4 +936,30 @@ ACTION:DISPLAY
 DESCRIPTION:Ligue Combat GO — Sentiers crépusculaires commence demain à 22h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-staraptor-super-mega-raid-day-20260919@openai
+DTSTAMP:20260901T174854Z
+LAST-MODIFIED:20260901T174854Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:GO_RAID_DAY
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:⭐ ✅ 🆕 🪽 Pokémon GO — Journée de Super Méga-Raids Étouraptor
+LOCATION:France — Pokémon GO
+DESCRIPTION:Priorité : ⭐ Important — événement officiel limité à 3 heures.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO. Samedi 19 septembre 2026 de 14h à 17h heure locale.\n🪽 Première apparition de Méga-Étouraptor dans les Super Méga-Raids et accès au Super Niveau Max.\n🎟️ Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes. Une Étude ponctuelle permet d’obtenir un passe de combat premium et une rencontre avec Gardevoir.\n🛒 Ticket optionnel annoncé à 4,99 USD ou équivalent local, disponible jusqu’à 17h heure locale le 19 septembre.\nSource officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
+URL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
+CATEGORIES:Pokémon,Pokémon GO,Super Méga-Raid,Événement,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🪽 Journée de Super Méga-Raids Étouraptor demain à 14h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
