@@ -910,4 +910,30 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO City Safari Marseille commence demain à 10h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-gbl-twilight-trails-20260908@openai
+DTSTAMP:20260901T165003Z
+LAST-MODIFIED:20260901T165003Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DIGITAL_SEASON
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:68
+DTSTART;TZID=Europe/Paris:20260908T220000
+DTEND;TZID=Europe/Paris:20261201T220000
+SUMMARY:⭐ ✅ Pokémon GO — Ligue Combat GO : Sentiers crépusculaires
+LOCATION:En ligne — Pokémon GO
+DESCRIPTION:Saison officielle de la Ligue Combat GO « Sentiers crépusculaires », du 8 septembre 2026 à 22:00 heure de Paris (13:00 PDT) au 1er décembre 2026 à 22:00 heure de Paris (13:00 PST). Début de saison : récompenses de fin de saison disponibles et classement réinitialisé. Les Méga-Évolutions sont autorisées dans de nouvelles ligues Méga. Un Passe d’Étude ponctuelle Ligue Combat GO gratuit sera disponible dans la boutique du jeu dès le début de la saison. Le programme hebdomadaire détaillé et les règles des coupes figurent dans la source officielle. Source : https://pokemongo.com/fr/news/go-battle-league-twilight-trails
+URL:https://pokemongo.com/fr/news/go-battle-league-twilight-trails
+CATEGORIES:Pokémon,Pokémon GO,Ligue Combat GO,Saison,Compétitif
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Ligue Combat GO — Sentiers crépusculaires commence demain à 22h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
