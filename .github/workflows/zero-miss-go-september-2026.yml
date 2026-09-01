@@ -1,0 +1,36 @@
+name: ZERO MISS GO September 2026
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/zero-miss-go-september-2026.yml'
+      - 'scripts/zero_miss_go_september_2026.py'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Patch canonical calendar
+        run: python3 scripts/zero_miss_go_september_2026.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No business change"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "ZERO MISS: calendarize September Pokemon GO events"
+          git push origin HEAD:master
