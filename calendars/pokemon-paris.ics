@@ -989,4 +989,29 @@ ACTION:DISPLAY
 DESCRIPTION:⏳ Pokémon Champions — la saison M-5 et son pass se terminent demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-live-30th-20260915@openai
+DTSTAMP:20260901T215500Z
+LAST-MODIFIED:20260901T215500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+DTSTART;TZID=Europe/Paris:20260915T190000
+DTEND;TZID=Europe/Paris:20260915T191500
+SUMMARY:⭐ ✅ 🃏 JCC Pokémon Live — 30e Anniversaire disponible
+LOCATION:En ligne — JCC Pokémon Live
+DESCRIPTION:Priorité : ⭐ Important — accès numérique anticipé à l'extension 30e Anniversaire avant la sortie physique du lendemain.\nFiabilité : ✅ Confirmé par The Pokémon Company International. Les Dresseurs et Dresseuses pourront jouer avec l'extension 30e Anniversaire dans le JCC Pokémon Live à partir du 15 septembre 2026 à 19:00 CEST.\nAction : ouvrir JCC Pokémon Live à partir de 19h pour découvrir, collectionner et jouer les nouvelles cartes.\nSource : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
+URL:https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
+CATEGORIES:Pokémon,JCC Pokémon Live,30e Anniversaire,Sortie numérique,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon Live — 30e Anniversaire disponible demain à 19h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
