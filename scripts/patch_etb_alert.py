@@ -33,17 +33,23 @@ seq_match = re.search(r'^SEQUENCE:(\d+)$', block, flags=re.M)
 sequence = int(seq_match.group(1)) + 1 if seq_match else 1
 now_utc = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 
+latest_description = (
+    'DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\n'
+    "Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.\\n"
+    'Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche\\n'
+    "Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud\\n"
+    'Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835\\n'
+    'INFO À SURVEILLER'
+)
+block, count = re.subn(r'^DESCRIPTION:.*?(?=^URL:)', latest_description + '\n', block, count=1, flags=re.M | re.S)
+if count != 1:
+    raise SystemExit('ETB DESCRIPTION block not replaced exactly once')
+
 replacements = {
     r'^LAST-MODIFIED:.*$': f'LAST-MODIFIED:{now_utc}',
     r'^SEQUENCE:\d+$': f'SEQUENCE:{sequence}',
     r'^SUMMARY:.*$': 'SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans',
     r'^LOCATION:.*$': "LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud",
-    r'^DESCRIPTION:.*$': ('DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\n'
-        "Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.\\n"
-        'Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche\\n'
-        "Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud\\n"
-        'Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835\\n'
-        'INFO À SURVEILLER'),
     r'^URL:.*$': f'URL:{URL}',
     r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN',
     r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop',
