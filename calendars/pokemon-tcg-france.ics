@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260901T023115Z
-SEQUENCE:13
+LAST-MODIFIED:20260901T032308Z
+SEQUENCE:14
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -86,24 +86,25 @@ X-POKEMON-ALERT-LINK;RETAILER=ShopForGeek;STATUS=RAFFLE_OPEN;CONFIDENCE=82;SELLE
 X-POKEMON-ALERT-LINK;RETAILER=PlazaTCG;STATUS=OUT_OF_STOCK;CONFIDENCE=82;SELLER=92:https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95:https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr
 X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
+X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans
-LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud
-DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE
+SUMMARY:⚡ PRÉ-OUVERTURE PROBABLE — UltraJeux — ETB 30 ans
+LOCATION:France — UltraJeux
+DESCRIPTION:⚡ PRÉ-OUVERTURE PROBABLE
 
-Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.
-Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche
-Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud
-Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835
-INFO À SURVEILLER
-URL:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
-X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
-X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop
-X-POKEMON-LATEST-ALERT-STATUS:PREORDER_RESERVATION_OPEN
+UltraJeux — fiche FR dédiée détectée pour l’ETB Pokémon JCC 30e Anniversaire ; EAN exact, statut « En Précommande » et prix indiqué « Bientôt Disponible », mais aucune commande exploitable confirmée pour l’instant.
+Prix : non publié | score : — | écart vs 62,99 € : — | livraison annoncée à partir de 1,80 € et offerte dès 50 € lorsque la vente sera ouverte
+Date/heure Europe/Paris : détectée au 01/09/2026 05:20 | limite/client : non publiée | retrait : non confirmé
+Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835
+PRÉPARE-TOI À L’OUVERTURE
+URL:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
+X-POKEMON-LATEST-ALERT-LEVEL:PREOPEN_PROBABLE
+X-POKEMON-LATEST-ALERT-RETAILER:UltraJeux
+X-POKEMON-LATEST-ALERT-STATUS:PREOPEN_PROBABLE
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260901T042724+0200
+X-POKEMON-LATEST-SELLER-RELIABILITY:90
+X-POKEMON-LATEST-ALERT-AT:20260901T052000+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
