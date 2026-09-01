@@ -28,7 +28,7 @@ jobs:
         run: python scripts/sync_pokemon_global.py
       - name: Verify source and global calendars
         run: |
-          python -c "from pathlib import Path; uid='UID:watch-etb-30ans-fr-20260830@openai'; url='https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html'; summary='SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans'; files=[Path('calendars/pokemon-tcg-france.ics'),Path('calendars/pokemon-paris.ics')]; [(lambda t,p: (uid in t and ('URL:'+url) in t and summary in t and 'X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop' in t and 'X-POKEMON-LATEST-SELLER-RELIABILITY:95' in t) or (_ for _ in ()).throw(AssertionError(str(p))))(p.read_text(encoding='utf-8'),p) for p in files]"
+          python -c "from pathlib import Path; uid='UID:watch-etb-30ans-fr-20260830@openai'; url='https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html'; summary='SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans'; files=[Path('calendars/pokemon-tcg-france.ics'),Path('calendars/pokemon-paris.ics')]; [(lambda t,p: (uid in t and ('URL:'+url) in t and summary in t and 'X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop' in t and 'X-POKEMON-LATEST-SELLER-RELIABILITY:95' in t and 'DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\nMultimedia Shop' in t and 'DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE\\n\\nMultimedia Shop' in t and 'INFO À SURVEILLER\\nURL:'+url in t) or (_ for _ in ()).throw(AssertionError(str(p))))(p.read_text(encoding='utf-8'),p) for p in files]"
       - name: Commit calendar update
         run: |
           if git diff --quiet -- calendars/pokemon-tcg-france.ics calendars/pokemon-paris.ics; then
