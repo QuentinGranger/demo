@@ -820,4 +820,54 @@ ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-concierge-2026-09@openai
+DTSTAMP:20260901T075806Z
+LAST-MODIFIED:20260901T075806Z
+SEQUENCE:0
+STATUS:CONFIRMED
+DTSTART;TZID=Europe/Paris:20260901T100000
+DTEND;TZID=Europe/Paris:20260901T103000
+SUMMARY:🎒 Pokémon Monthly Experience — La Rentrée des 30 ans
+DESCRIPTION:🍂 Saison/période : rentrée en France\, fin d’été et mo
+ is du 30e anniversaire du JCC Pokémon.\n🌟 Thème : retourner aux origi
+ nes avant la grande fête des 30 ans.\n⚡ Mascotte : Pikachu | 🌍 Régi
+ on/génération : Kanto / Génération I | 🕰 Époque : 1996→2026.\n
+ 🎮 Inspiration : JCC 30e Anniversaire\, manga Pokémon La Grande Aventur
+ e\, histoire et art Pokémon.\nVerdict : SELECTIVE BUY — profiter de Pok
+ émon sans surpayer les précommandes 30 ans.\n🛒 Achats retenus :\n1) A
+ dmirez-les tous ! — visite libre Musée en Herbe — 8\,00 € TTC — U
+ TILISER — https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo44
+ 35.html\n2) Pokémon - La Grande Aventure\, Tome 1 (Kurokawa) — 10\,00 
+ € TTC — UTILISER — https://www.cultura.com/p-pokemon-la-grande-avent
+ ure-t-1-9782368520130.html\n💰 TOTAL TTC : 18\,00 € / 50 € | Réserv
+ e Pokédollars : 32\,00 €.\n🧠 Anti-FOMO : l’ETB 30 ans dépasse le 
+ budget de cette Experience et plusieurs offres observées sont au-dessus d
+ u prix de référence du calendrier. Ne pas courir après une ETB chère.\
+ n🎒 Rituel : visite de l’exposition puis lecture du début de La Grand
+ e Aventure \; à la maison\, créer une mini-vitrine 1996→2026 avec une 
+ carte ou un objet déjà possédé.\n🧳 Mini-expédition <=25 € : mang
+ a seul à 10\,00 € + rituel 1996→2026.\n🌿 No-buy 0 € : découvrir
+  les cartes 30e Anniversaire sur Pokemon.fr\, jouer à Pokémon Pocket/TCG
+  Live avec ce que tu possèdes déjà et réorganiser 30 pièces de collec
+ tion par ordre chronologique.\n📅 Rappels du calendrier : 6 sept. préco
+ mmande ETB 30 ans Guizette (retailer) \; 16 sept. sortie officielle JCC 30
+ e Anniversaire \; 19 sept. précommande Bundle 6 boosters Guizette \; 20 s
+ ept. précommande Coffret Classeur Guizette.\n⭐ Score : 94/100 — 🟢 
+ Badge obtenu. Émotion 20/20 | Immersion 19/20 | Culture 15/15 | Expérien
+ ce 14/15 | Objets 8/10 | Plaisir/prix 9/10 | Long terme 9/10.
+CATEGORIES:POKEMON,CONCIERGE,MONTHLY-EXPERIENCE
+X-POKEMON-CONCIERGE:YES
+X-POKEMON-CONCIERGE-BUDGET:50EUR
+X-POKEMON-CONCIERGE-MONTH:2026-09
+X-POKEMON-CONCIERGE-VERDICT:SELECTIVE_BUY
+X-POKEMON-CONCIERGE-SCORE:94
+URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-
+ anniversaire-du-jcc-pokemon
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🎒 La Pokémon Monthly Experience de septembre arrive demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
