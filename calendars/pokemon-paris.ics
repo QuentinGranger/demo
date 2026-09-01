@@ -194,8 +194,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260831T153143Z
-SEQUENCE:11
+LAST-MODIFIED:20260901T023023Z
+SEQUENCE:12
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -224,24 +224,31 @@ X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE
 X-POKEMON-ALERT-LINK;RETAILER=ShopForGeek;STATUS=RAFFLE_OPEN;CONFIDENCE=82;SELLER=95;PRICE=59.99:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
 X-POKEMON-ALERT-LINK;RETAILER=PlazaTCG;STATUS=OUT_OF_STOCK;CONFIDENCE=82;SELLER=92:https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95:https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr
+X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:⚫ PRÉCOMMANDE FERMÉE — Smartoys — ETB 30 ans
-LOCATION:Belgique — Smartoys / en ligne
-DESCRIPTION:⚫ ÉPUISÉ/FERMÉ
+SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans
+LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud
+DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE
+
+Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.
+Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche
+Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud
+Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835
+INFO À SURVEILLER
 
 Smartoys — la fiche reste marquée « Précommande » mais l'article est désormais non disponible online ; disponibilité uniquement à vérifier auprès des magasins.
 Prix : 79,99 € | score : B | écart vs 62,99 € : +17,00 €
 Date/heure Europe/Paris : aucune réouverture annoncée | limite/client : non indiquée | retrait : disponibilité magasin à vérifier
 Confiance produit : 82/100 | SELLER_RELIABILITY : 77/100 ACCEPTABLE | EAN 196214144835 | SKU 169049
 INFO À SURVEILLER
-URL:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
-X-POKEMON-LATEST-ALERT-LEVEL:BLACK_PREORDER_CLOSED
-X-POKEMON-LATEST-ALERT-RETAILER:Smartoys
-X-POKEMON-LATEST-ALERT-STATUS:PREORDER_CLOSED
+URL:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
+X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
+X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_RESERVATION_OPEN
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:77
-X-POKEMON-LATEST-ALERT-AT:20260831T173143+0200
+X-POKEMON-LATEST-SELLER-RELIABILITY:95
+X-POKEMON-LATEST-ALERT-AT:20260901T042724+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
@@ -816,169 +823,6 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-worlds-outfit-deadline-20260904@openai
-DTSTAMP:20260831T155633Z
-LAST-MODIFIED:20260831T155633Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20260904T015900
-DTEND;TZID=Europe/Paris:20260904T021400
-SUMMARY:⭐ ✅ ⏳ Pokémon Champions — Fin mot de passe tenue Mondiaux 2026
-LOCATION:En ligne — Pokémon Champions
-DESCRIPTION:Priorité : ⭐ Important — dernière échéance officielle pour utiliser le mot de passe de la tenue des Mondiaux 2026 dans Pokémon Champions.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Le mot de passe est valable jusqu’au 3 septembre 2026 à 23:59 UTC, soit le 4 septembre à 01:59 à Paris (CEST).\n🎁 Récompense : Casquette des Mondiaux 2026 (rouge) + T-shirt des Mondiaux 2026 (rouge).\nAction : saisir le mot de passe avant l’échéance si ce n’est pas déjà fait.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon Champions,Deadline,Récompense,Mondiaux 2026,Priorité Important
-X-POKEMON-ACTIONABILITY:91
-X-POKEMON-USER-EFFECT-ID:champions-worlds-2026-outfit-password-deadline
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-worlds-twitch-rewards-deadline-20260911@openai
-DTSTAMP:20260831T155633Z
-LAST-MODIFIED:20260831T155633Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20260911T220000
-DTEND;TZID=Europe/Paris:20260911T221500
-SUMMARY:⭐ ✅ ⏳ Pokémon GO — Fin récompenses Twitch Mondiaux 2026
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — expiration des récompenses Pokémon GO obtenues via les diffusions des Mondiaux 2026.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Les récompenses expirent le 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris (CEST).\n🎁 Sont notamment concernés les Études ponctuelles Esprit d’équipe, Champion du Monde avec Forgelina, le t-shirt Mondiaux 2026 et l’Étude Pikachu en costume Mondiaux selon le drop obtenu.\nAction : réclamer/échanger les récompenses obtenues avant l’échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drop,Mondiaux 2026,Priorité Important
-X-POKEMON-ACTIONABILITY:88
-X-POKEMON-USER-EFFECT-ID:pokemon-go-worlds-2026-twitch-rewards-expiry
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-pocket-worlds-drop-code-deadline-20271128@openai
-DTSTAMP:20260831T155633Z
-LAST-MODIFIED:20260831T155633Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20271128T155900
-DTEND;TZID=Europe/Paris:20271128T161400
-SUMMARY:ℹ️ ✅ ⏳ JCC Pokémon Pocket — Fin code 24 Sabliers Booster Mondiaux 2026
-LOCATION:En ligne — JCC Pokémon Pocket
-DESCRIPTION:Priorité : ℹ️ Info — échéance lointaine mais exacte pour le code issu du drop Mondiaux/PokémonXP 2026.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Le code permettant d’obtenir 24 Sabliers Booster est valable jusqu’au 28 novembre 2027 à 14:59 UTC, soit 15:59 à Paris (CET).\nAction : conserver le code de manière sûre puis l’utiliser avant l’échéance si nécessaire.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,JCC Pokémon Pocket,Deadline,Twitch Drop,Mondiaux 2026,Priorité Info
-X-POKEMON-ACTIONABILITY:40
-X-POKEMON-USER-EFFECT-ID:pocket-worlds-2026-booster-hourglass-code-expiry
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-pokemonxp-pikachu-claim-deadline-20260912@openai
-DTSTAMP:20260831T195200Z
-LAST-MODIFIED:20260831T195200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20260912T050000
-DTEND;TZID=Europe/Paris:20260912T051500
-SUMMARY:⭐ ✅ ⏳ Pokémon GO — Fin récupération drop Pikachu PokémonXP
-LOCATION:En ligne — Twitch / Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — fin de la fenêtre officielle de récupération du drop PokémonXP donnant une Étude ponctuelle pour rencontrer Pikachu en costume PokémonXP.\nFiabilité : ✅ Confirmé officiellement par Pokémon. La récompense doit être récupérée avant le 11 septembre 2026 à 20:00 PDT, soit le 12 septembre à 05:00 à Paris (CEST).\n⚠️ Cette échéance est une fenêtre de récupération du drop Twitch, distincte des autres échéances de récompenses Pokémon GO.\nAction : récupérer le drop Twitch avant l’échéance si vous l’avez obtenu.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drop,PokémonXP,Priorité Important
-X-POKEMON-ACTIONABILITY:84
-X-POKEMON-WINDOW-TYPE:TWITCH_CLAIM
-X-POKEMON-USER-EFFECT-ID:pokemon-go-pokemonxp-2026-pikachu-twitch-claim
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-tcgl-worlds-pokemonxp-codes-deadline-20260925@openai
-DTSTAMP:20260831T195200Z
-LAST-MODIFIED:20260831T195200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20260925T180000
-DTEND;TZID=Europe/Paris:20260925T181500
-SUMMARY:⭐ ✅ ⏳ JCC Pokémon Live — Fin codes drops Mondiaux / PokémonXP 2026
-LOCATION:En ligne — JCC Pokémon Live
-DESCRIPTION:Priorité : ⭐ Important — échéance officielle d’échange des codes générés par les drops Twitch des Mondiaux 2026 et de PokémonXP dans le JCC Pokémon Live.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Les codes reçus via drops Twitch expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris (CEST).\n🎁 Selon le drop obtenu : boosters Méga-Évolution – Nuit Noire, cartes Méga-Zeraora-ex, Caisse des Mondiaux 2026, cartes ultra rare et/ou récompense du panel PokémonXP.\n🔐 Aucun code personnel à usage unique n’est exposé dans ce calendrier.\nAction : échanger les codes déjà obtenus avant l’échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,JCC Pokémon Live,Deadline,Twitch Drop,Mondiaux 2026,PokémonXP,Priorité Important
-X-POKEMON-ACTIONABILITY:76
-X-POKEMON-USER-EFFECT-ID:tcgl-worlds-pokemonxp-2026-drop-codes-expiry
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-worlds-item-codes-deadline-20260930@openai
-DTSTAMP:20260831T195200Z
-LAST-MODIFIED:20260831T195200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-DTSTART;TZID=Europe/Paris:20260930T015900
-DTEND;TZID=Europe/Paris:20260930T021400
-SUMMARY:⭐ ✅ ⏳ Pokémon Champions — Fin codes objets Mondiaux 2026
-LOCATION:En ligne — Pokémon Champions
-DESCRIPTION:Priorité : ⭐ Important — dernière échéance officielle pour échanger les codes d’objets Pokémon Champions obtenus pendant les Mondiaux 2026 et via les co-streams partenaires.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Ces codes sont valables jusqu’au 29 septembre 2026 à 23:59 UTC, soit le 30 septembre à 01:59 à Paris (CEST).\n🎁 Récompenses concernées selon le visionnage : 50 Coupons de Vitesse, 5 Tickets de Recrutement Permanent, 5 Tickets d’Entraînement et code co-stream pour 50 Coupons de Vitesse.\nAction : échanger les codes déjà obtenus avant l’échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon Champions,Deadline,Twitch Drop,Mondiaux 2026,Priorité Important
-X-POKEMON-ACTIONABILITY:72
-X-POKEMON-USER-EFFECT-ID:champions-worlds-2026-item-codes-expiry
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Récompense Pokémon limitée — échéance demain
 END:VALARM
 END:VEVENT
 END:VCALENDAR

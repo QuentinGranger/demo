@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260831T153143Z
-SEQUENCE:11
+LAST-MODIFIED:20260901T023023Z
+SEQUENCE:12
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -85,24 +85,31 @@ X-POKEMON-ALERT-LINK;RETAILER=Passion-Geek;STATUS=ALLOCATIONS_TONIGHT;CONFIDENCE
 X-POKEMON-ALERT-LINK;RETAILER=ShopForGeek;STATUS=RAFFLE_OPEN;CONFIDENCE=82;SELLER=95;PRICE=59.99:https://www.shopforgeek.com/fr/POKEMON-30EME-ANNIVERSAIRE-ELITE-TRAINER-BOX-FR-258861.html
 X-POKEMON-ALERT-LINK;RETAILER=PlazaTCG;STATUS=OUT_OF_STOCK;CONFIDENCE=82;SELLER=92:https://plazatcg.com/etb/2184-pokemon-etb-coffret-dresseur-d-elite-30e-anniversaire-francais-196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95:https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr
+X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:⚫ PRÉCOMMANDE FERMÉE — Smartoys — ETB 30 ans
-LOCATION:Belgique — Smartoys / en ligne
-DESCRIPTION:⚫ ÉPUISÉ/FERMÉ
+SUMMARY:🔴 PRÉCO OUVERTE — Multimedia Shop — ETB 30 ans
+LOCATION:Belgique — Multimedia Shop / Braine-l'Alleud
+DESCRIPTION:🔴 PRÉCOMMANDE OUVERTE
+
+Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; non commandable en ligne, réservation uniquement en magasin, par téléphone ou Facebook Messenger et non garantie tant que l’allocation fournisseur n’est pas confirmée.
+Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche
+Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud
+Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835
+INFO À SURVEILLER
 
 Smartoys — la fiche reste marquée « Précommande » mais l'article est désormais non disponible online ; disponibilité uniquement à vérifier auprès des magasins.
 Prix : 79,99 € | score : B | écart vs 62,99 € : +17,00 €
 Date/heure Europe/Paris : aucune réouverture annoncée | limite/client : non indiquée | retrait : disponibilité magasin à vérifier
 Confiance produit : 82/100 | SELLER_RELIABILITY : 77/100 ACCEPTABLE | EAN 196214144835 | SKU 169049
 INFO À SURVEILLER
-URL:https://www.smartoys.be/catalog/trading-cards-pokemon-pokemon-jcc-coffret-dresseur-delite-30e-anniversaire-p-0196214144835.html
-X-POKEMON-LATEST-ALERT-LEVEL:BLACK_PREORDER_CLOSED
-X-POKEMON-LATEST-ALERT-RETAILER:Smartoys
-X-POKEMON-LATEST-ALERT-STATUS:PREORDER_CLOSED
+URL:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
+X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
+X-POKEMON-LATEST-ALERT-RETAILER:Multimedia-Shop
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_RESERVATION_OPEN
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:77
-X-POKEMON-LATEST-ALERT-AT:20260831T173143+0200
+X-POKEMON-LATEST-SELLER-RELIABILITY:95
+X-POKEMON-LATEST-ALERT-AT:20260901T042724+0200
 CATEGORIES:Pokémon,TCG,Précommande,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
