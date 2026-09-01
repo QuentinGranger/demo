@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260901T023023Z
-SEQUENCE:12
+LAST-MODIFIED:20260901T023115Z
+SEQUENCE:13
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -96,12 +96,6 @@ Multimedia Shop — réservation ouverte pour l’ETB Pokémon JCC 30e Anniversa
 Prix : 64,99 € en retrait magasin | score : A | écart vs 62,99 € : +2,00 € | livraison : non proposée sur cette fiche
 Date/heure Europe/Paris : ouverte au 01/09/2026 04:27 | limite/client : allocation/limitation possible | retrait : magasin Braine-l’Alleud
 Confiance produit : 82/100 | SELLER_RELIABILITY : 95/100 TRUSTED | EAN 196214144835
-INFO À SURVEILLER
-
-Smartoys — la fiche reste marquée « Précommande » mais l'article est désormais non disponible online ; disponibilité uniquement à vérifier auprès des magasins.
-Prix : 79,99 € | score : B | écart vs 62,99 € : +17,00 €
-Date/heure Europe/Paris : aucune réouverture annoncée | limite/client : non indiquée | retrait : disponibilité magasin à vérifier
-Confiance produit : 82/100 | SELLER_RELIABILITY : 77/100 ACCEPTABLE | EAN 196214144835 | SKU 169049
 INFO À SURVEILLER
 URL:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
 X-POKEMON-LATEST-ALERT-LEVEL:RED_PREORDER_OPEN
