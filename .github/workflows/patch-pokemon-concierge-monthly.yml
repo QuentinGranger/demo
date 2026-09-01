@@ -1,0 +1,88 @@
+name: Sync Pokémon Monthly Experience
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/patch_pokemon_concierge_monthly.py'
+      - '.github/workflows/patch-pokemon-concierge-monthly.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Fresh-fetch and apply Concierge event
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin master
+          git reset --hard origin/master
+          python scripts/patch_pokemon_concierge_monthly.py
+      - name: Validate calendar integrity
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          raw = Path('calendars/pokemon-paris.ics').read_bytes()
+          s = raw.decode('utf-8')
+          assert b'\r\n' in raw, 'Calendar must use CRLF'
+          assert s.count('BEGIN:VCALENDAR') == 1
+          assert s.count('END:VCALENDAR') == 1
+          assert s.count('BEGIN:VEVENT') == s.count('END:VEVENT')
+          uids = re.findall(r'^UID:(.+?)\r?$', s, flags=re.M)
+          assert len(uids) == len(set(uids)), 'Duplicate UID detected'
+          uid = 'pokemon-concierge-2026-09@openai'
+          assert s.count(f'UID:{uid}') == 1
+          assert 'X-POKEMON-CONCIERGE:YES' in s
+          assert 'X-POKEMON-CONCIERGE-BUDGET:50EUR' in s
+          assert 'X-POKEMON-CONCIERGE-VERDICT:SELECTIVE_BUY' in s
+          assert s.rstrip().endswith('END:VCALENDAR')
+          PY
+      - name: Commit with conflict-safe recompute
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: sync Pokémon Monthly Experience 2026-09'
+          if git push origin HEAD:master; then
+            exit 0
+          fi
+          echo 'Push conflict detected; fresh-fetching and recomputing once.'
+          git fetch origin master
+          git reset --hard origin/master
+          python scripts/patch_pokemon_concierge_monthly.py
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('calendars/pokemon-paris.ics').read_text(encoding='utf-8')
+          assert s.count('BEGIN:VCALENDAR') == 1 and s.count('END:VCALENDAR') == 1
+          uids=re.findall(r'^UID:(.+?)\r?$', s, flags=re.M)
+          assert len(uids) == len(set(uids))
+          assert s.count('UID:pokemon-concierge-2026-09@openai') == 1
+          PY
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'Calendar already updated by concurrent writer.'
+            exit 0
+          fi
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: sync Pokémon Monthly Experience 2026-09 (recomputed)'
+          git push origin HEAD:master
