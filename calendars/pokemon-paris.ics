@@ -822,40 +822,41 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-concierge-2026-09@openai
-DTSTAMP:20260901T075806Z
-LAST-MODIFIED:20260901T075806Z
-SEQUENCE:0
+DTSTAMP:20260901T080300Z
+LAST-MODIFIED:20260901T080300Z
+SEQUENCE:1
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Paris:20260901T100000
 DTEND;TZID=Europe/Paris:20260901T103000
 SUMMARY:🎒 Pokémon Monthly Experience — La Rentrée des 30 ans
 DESCRIPTION:🍂 Saison/période : rentrée en France\, fin d’été et mo
- is du 30e anniversaire du JCC Pokémon.\n🌟 Thème : retourner aux origi
- nes avant la grande fête des 30 ans.\n⚡ Mascotte : Pikachu | 🌍 Régi
- on/génération : Kanto / Génération I | 🕰 Époque : 1996→2026.\n
- 🎮 Inspiration : JCC 30e Anniversaire\, manga Pokémon La Grande Aventur
- e\, histoire et art Pokémon.\nVerdict : SELECTIVE BUY — profiter de Pok
- émon sans surpayer les précommandes 30 ans.\n🛒 Achats retenus :\n1) A
- dmirez-les tous ! — visite libre Musée en Herbe — 8\,00 € TTC — U
- TILISER — https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo44
- 35.html\n2) Pokémon - La Grande Aventure\, Tome 1 (Kurokawa) — 10\,00 
- € TTC — UTILISER — https://www.cultura.com/p-pokemon-la-grande-avent
- ure-t-1-9782368520130.html\n💰 TOTAL TTC : 18\,00 € / 50 € | Réserv
- e Pokédollars : 32\,00 €.\n🧠 Anti-FOMO : l’ETB 30 ans dépasse le 
- budget de cette Experience et plusieurs offres observées sont au-dessus d
- u prix de référence du calendrier. Ne pas courir après une ETB chère.\
- n🎒 Rituel : visite de l’exposition puis lecture du début de La Grand
- e Aventure \; à la maison\, créer une mini-vitrine 1996→2026 avec une 
- carte ou un objet déjà possédé.\n🧳 Mini-expédition <=25 € : mang
- a seul à 10\,00 € + rituel 1996→2026.\n🌿 No-buy 0 € : découvrir
-  les cartes 30e Anniversaire sur Pokemon.fr\, jouer à Pokémon Pocket/TCG
-  Live avec ce que tu possèdes déjà et réorganiser 30 pièces de collec
- tion par ordre chronologique.\n📅 Rappels du calendrier : 6 sept. préco
- mmande ETB 30 ans Guizette (retailer) \; 16 sept. sortie officielle JCC 30
- e Anniversaire \; 19 sept. précommande Bundle 6 boosters Guizette \; 20 s
- ept. précommande Coffret Classeur Guizette.\n⭐ Score : 94/100 — 🟢 
- Badge obtenu. Émotion 20/20 | Immersion 19/20 | Culture 15/15 | Expérien
- ce 14/15 | Objets 8/10 | Plaisir/prix 9/10 | Long terme 9/10.
+ is du 30e anniversaire du JCC Pokémon.\n🌟 Thème : des origines vers J
+ ohto avant la grande fête des 30 ans.\n⚡ Mascotte : Pikachu | 🌍 Rég
+ ion/génération : Kanto→Johto / Générations I–II | 🕰 Époque : 1
+ 996→1999→2026.\n🎮 Inspiration : JCC 30e Anniversaire\, manga Pokém
+ on La Grande Aventure\, histoire et art Pokémon.\nVerdict : SELECTIVE BUY
+  — profiter de Pokémon sans surpayer les précommandes 30 ans.\n🛒 Ac
+ hats retenus :\n1) Admirez-les tous ! — visite libre Musée en Herbe —
+  8\,00 € TTC — UTILISER — https://www.musee-en-herbe.com/50-ans-ca-s
+ e-fete-en-grand-lo4435.html\n2) Pokémon - La Grande Aventure - Or et Arge
+ nt\, Tome 1 (Kurokawa) — 10\,00 € TTC — UTILISER — https://www.cul
+ tura.com/p-pokemon-la-grande-aventure-or-et-argent-t-1-9782368522219.html\
+ n💰 TOTAL TTC : 18\,00 € / 50 € | Réserve Pokédollars : 32\,00 €
+ .\n🧠 Anti-FOMO : l’ETB 30 ans dépasse le budget de cette Experience 
+ et plusieurs offres observées sont au-dessus du prix de référence du ca
+ lendrier. Ne pas courir après une ETB chère.\n🎒 Rituel : visite de l
+ ’exposition puis lecture du départ vers Johto \; à la maison\, créer 
+ une mini-vitrine 1996→1999→2026 avec des pièces déjà possédées.\n
+ 🧳 Mini-expédition <=25 € : manga Or et Argent seul à 10\,00 € + r
+ ituel chronologique.\n🌿 No-buy 0 € : découvrir les cartes 30e Annive
+ rsaire sur Pokemon.fr\, jouer à Pokémon Pocket/TCG Live avec ce que tu p
+ ossèdes déjà et réorganiser 30 pièces par ordre chronologique.\n📅 
+ Rappels du calendrier : 6 sept. précommande ETB 30 ans Guizette (retailer
+ ) \; 16 sept. sortie officielle JCC 30e Anniversaire \; 19 sept. précomma
+ nde Bundle 6 boosters Guizette \; 20 sept. précommande Coffret Classeur G
+ uizette.\n⭐ Score : 94/100 — 🟢 Badge obtenu. Émotion 20/20 | Immer
+ sion 19/20 | Culture 15/15 | Expérience 14/15 | Objets 8/10 | Plaisir/pri
+ x 9/10 | Long terme 9/10.
 CATEGORIES:POKEMON,CONCIERGE,MONTHLY-EXPERIENCE
 X-POKEMON-CONCIERGE:YES
 X-POKEMON-CONCIERGE-BUDGET:50EUR
