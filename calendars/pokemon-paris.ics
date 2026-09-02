@@ -1119,4 +1119,31 @@ ACTION:DISPLAY
 DESCRIPTION:Festival Pokémon GO Méga-Finale demain à 10h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-live-30th-20260915@openai
+DTSTAMP:20260902T195800Z
+LAST-MODIFIED:20260902T195800Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT-ID:tcg-live-30th-digital-release-fr-20260915
+DTSTART;TZID=Europe/Paris:20260915T190000
+DTEND;TZID=Europe/Paris:20260915T191500
+SUMMARY:⭐ ✅ 💻 JCC Pokémon Live — 30ᵉ Anniversaire disponible
+LOCATION:En ligne — JCC Pokémon Live
+DESCRIPTION:Priorité : ⭐ Important — l’extension 30ᵉ Anniversaire devient jouable numériquement avant la sortie physique.\nFiabilité : ✅ Confirmé par The Pokémon Company International.\n📅 Disponibilité JCC Pokémon Live : 15 septembre 2026 à 19:00 CEST (Europe/Paris), sur iOS, Android, macOS et Windows.\n🃏 Les Dresseurs pourront collectionner et jouer les cartes de l’extension et recevoir des bonus en jeu en se connectant.\n⚠️ Cette échéance numérique est distincte de la sortie physique mondiale du 16 septembre 2026.\nSource primaire : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
+URL:https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
+CATEGORIES:Pokémon,JCC Pokémon Live,30e Anniversaire,Sortie numérique,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon Live 30ᵉ Anniversaire demain à 19h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
