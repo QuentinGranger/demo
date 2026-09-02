@@ -1,0 +1,62 @@
+name: ZERO MISS Pokémon GO Mega Finale 2026
+
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-go-mega-finale-2026.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Patch canonical calendar
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('calendars/pokemon-paris.ics')
+          raw = p.read_text(encoding='utf-8')
+          uids = {
+            'pokemon-go-mega-ascension-20260831@openai',
+            'pokemon-go-mega-finale-20260905@openai',
+          }
+          if all(f'UID:{u}' in raw for u in uids):
+              print('Events already present; no-op')
+              raise SystemExit(0)
+          events = []
+          if 'UID:pokemon-go-mega-ascension-20260831@openai' not in raw:
+              events.append('''BEGIN:VEVENT\nUID:pokemon-go-mega-ascension-20260831@openai\nDTSTAMP:20260902T184700Z\nLAST-MODIFIED:20260902T184700Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:5\nX-POKEMON-PRIORITY:IMPORTANT\nX-POKEMON-ACTION:PLAY\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:73\nX-POKEMON-USER-EFFECT-ID:go-mega-ascension-fr-20260831\nDTSTART;TZID=Europe/Paris:20260831T100000\nDTEND;TZID=Europe/Paris:20260904T235900\nSUMMARY:⭐ ✅ Pokémon GO — Méga ascension\nLOCATION:Pokémon GO — France\nDESCRIPTION:Évènement officiel Pokémon GO en cours. Du 31 août 2026 à 10h au 4 septembre 2026 à 23h59\, heures locales. Étude ponctuelle à parcours\, Passe GO : Méga-Finale\, Méga-Raids et limite de Raids à distance portée à 30 pendant l'évènement. Aucun niveau de rareté n'est inféré. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nURL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nCATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Priorité Important\nEND:VEVENT''')
+          if 'UID:pokemon-go-mega-finale-20260905@openai' not in raw:
+              events.append('''BEGIN:VEVENT\nUID:pokemon-go-mega-finale-20260905@openai\nDTSTAMP:20260902T184700Z\nLAST-MODIFIED:20260902T184700Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:1\nX-POKEMON-PRIORITY:CRITICAL\nX-POKEMON-ACTION:PLAY\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:88\nX-POKEMON-USER-EFFECT-ID:go-mega-finale-fr-20260905\nDTSTART;TZID=Europe/Paris:20260905T100000\nDTEND;TZID=Europe/Paris:20260906T180000\nSUMMARY:🔥 ✅ Pokémon GO — Festival 2026 : Méga-Finale\nLOCATION:Pokémon GO — France\nDESCRIPTION:Évènement officiel mondial applicable en France. Samedi 5 et dimanche 6 septembre 2026 de 10h à 18h\, heures locales. Méga-Mewtwo X revient le 5 septembre et Méga-Mewtwo Y le 6 septembre. Aucune limite de Raids à distance les 5 et 6 septembre. Habitats de Méga-Raids tournants chaque heure. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nURL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nCATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Méga-Mewtwo,Priorité Critique\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Festival Pokémon GO Méga-Finale demain à 10h\nEND:VALARM\nEND:VEVENT''')
+          if not events:
+              raise SystemExit(0)
+          marker = 'END:VCALENDAR'
+          if raw.count(marker) != 1:
+              raise SystemExit('Invalid VCALENDAR terminator count')
+          new = raw.replace(marker, '\n'.join(events) + '\n' + marker)
+          # RFC5545 canonical CRLF and basic integrity checks
+          lines = new.replace('\r\n','\n').replace('\r','\n').split('\n')
+          new = '\r\n'.join(lines)
+          if not new.startswith('BEGIN:VCALENDAR\r\n') or 'END:VCALENDAR' not in new:
+              raise SystemExit('Calendar integrity check failed')
+          all_uids = [ln[4:] for ln in lines if ln.startswith('UID:')]
+          if len(all_uids) != len(set(all_uids)):
+              raise SystemExit('Duplicate UID detected')
+          p.write_bytes(new.encode('utf-8'))
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No calendar changes"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: add Pokémon GO Mega Finale events"
+          git push origin master
