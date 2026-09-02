@@ -1014,4 +1014,31 @@ ACTION:DISPLAY
 DESCRIPTION:JCC Pokémon Live — 30e Anniversaire disponible demain à 19h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTAMP:20260902T010207Z
+LAST-MODIFIED:20260902T010207Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:GO_GLOBAL_WEEKEND
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:GO-MEGA-FINALE-20260905-FR
+DTSTART;TZID=Europe/Paris:20260905T100000
+DTEND;TZID=Europe/Paris:20260906T180000
+SUMMARY:⭐ ✅ 🆕 ⚡ Pokémon GO — Festival 2026 : Méga-Finale
+LOCATION:France — Pokémon GO
+DESCRIPTION:Priorité : ⭐ Important — grand événement mondial officiel limité au week-end.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO. Samedi 5 et dimanche 6 septembre 2026 de 10h à 18h heure locale.\n⚡ Méga-Raids en rotations horaires ; Méga-Mewtwo X revient le 5 septembre et Méga-Mewtwo Y le 6 septembre.\n🛡️ Mewtwo en armure apparaît dans les Raids de niveau 5 pendant les deux jours ; sa version chromatique n'est pas disponible cette fois-ci.\n🌐 Aucune limite de Raids à distance les 5 et 6 septembre. Tous les Pokémon méga-évolués reçoivent un boost de PC pendant le week-end.\nSource officielle principale : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nSource officielle Mewtwo en armure : https://pokemongo.com/fr/news/megafinale-2026-armored-mewtwo
+URL:https://pokemongo.com/fr/news/gofest2026-finale-save-the-date
+CATEGORIES:Pokémon,Pokémon GO,Festival GO,Méga-Raid,Événement,Nouveau,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⚡ Méga-Finale Pokémon GO demain à 10h — prépare tes équipes et passes de Raid
+END:VALARM
+END:VEVENT
 END:VCALENDAR
