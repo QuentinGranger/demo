@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# trigger: 2026-09-03T01:02 Europe/Paris
 p = Path('calendars/pokemon-paris.ics')
 s = p.read_text(encoding='utf-8')
 uid = 'UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai\r\n'
