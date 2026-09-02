@@ -1049,4 +1049,27 @@ Source : https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Poke
 URL:https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Pokemon-Company
 CATEGORIES:Pokémon,Livre,Pokécologie,France,Sortie,Priorité Info
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-reglement-mc-20260909@openai
+DTSTAMP:20260902T164600Z
+LAST-MODIFIED:20260902T164600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-FIRST-ADDED-AT:20260902T164600Z
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT-ID:pokemon-champions-mc-fr-20260909
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20261203
+SUMMARY:ℹ️ ✅ 🎮 Pokémon Champions — Règlement M-C
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:Priorité : ℹ️ Info — nouveau règlement compétitif officiel de Pokémon Champions.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Le règlement M-C entre en vigueur le 9 septembre 2026 et ajoute notamment de nouvelles Méga-Évolutions Z ainsi que de nouveaux Pokémon à la sélection.\n📅 Précision : date exacte confirmée ; aucune heure n'est ajoutée ici afin de ne pas sur-préciser au-delà de la preuve primaire disponible dans ce scan.\nSource : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Compétitif,Règlement
+END:VEVENT
 END:VCALENDAR
