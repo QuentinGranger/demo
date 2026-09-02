@@ -858,4 +858,26 @@ ACTION:DISPLAY
 DESCRIPTION:LEGO Pokémon demain — début d’expédition #72154 et #40868
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-twilight-trails-20260908@openai
+DTSTAMP:20260902T100328Z
+LAST-MODIFIED:20260902T100328Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:SEASON_START_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:68
+DTSTART;TZID=Europe/Paris:20260908T100000
+DTEND;TZID=Europe/Paris:20261201T100000
+SUMMARY:ℹ️ ✅ 🌆 Pokémon GO — Saison Sentiers crépusculaires
+LOCATION:Pokémon GO — France
+DESCRIPTION:Fiabilité : ✅ Confirmé officiellement par Pokémon GO. La Saison Sentiers crépusculaires débute le 8 septembre 2026 à 10 h et se termine le 1er décembre 2026 à 10 h\, heure locale. Parmi les temps forts annoncés : nouveaux Pokémon de Paldea\, nouvelles Méga-Évolutions\, nouveaux Pokémon Dynamax et plusieurs Journées Communauté.
+Source officielle : https://pokemongo.com/fr/seasons/twilight-trails
+URL:https://pokemongo.com/fr/seasons/twilight-trails
+CATEGORIES:Pokémon,Pokémon GO,Saison,Sortie numérique,Priorité Info
+END:VEVENT
 END:VCALENDAR
