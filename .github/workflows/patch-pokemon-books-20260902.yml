@@ -1,0 +1,33 @@
+name: ZERO MISS Pokémon books September 2026
+
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-pokemon-books-20260902.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Patch canonical calendar
+        run: python3 scripts/patch_pokemon_books_20260902.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No business change"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: add missing September Pokémon books"
+          git push origin HEAD:master
