@@ -1,0 +1,36 @@
+name: ZERO MISS GO Pass September 2026
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/patch-zero-miss-go-pass-sep-2026.yml'
+      - 'scripts/patch_zero_miss_go_pass_sep_2026.py'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Patch canonical calendar
+        run: python3 scripts/patch_zero_miss_go_pass_sep_2026.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No business change"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: add September 2026 GO Pass"
+          git push origin HEAD:master
