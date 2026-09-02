@@ -300,9 +300,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260819T025700Z
-LAST-MODIFIED:20260830T051000Z
-SEQUENCE:12
+DTSTAMP:20260902T230249Z
+LAST-MODIFIED:20260902T230249Z
+SEQUENCE:13
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -312,9 +312,9 @@ X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 X-POKEMON-WAVE-ID:TCG-30TH-LAUNCH-20260916
 X-POKEMON-WAVE-COMPLETENESS:COMPLETE
 X-POKEMON-VARIANT-POLICY:EXACT_SKU_VARIANTS_SPLIT
-X-POKEMON-WAVE-PRODUCT-COUNT:8
+X-POKEMON-WAVE-PRODUCT-COUNT:10
 X-POKEMON-WAVE-PREORDER-COUNT:1
-X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|Coffret Dresseur d’élite 30e Anniversaire|Collection poster 30e Anniversaire|Collection autocollant réajustable 30e Anniversaire|Coffret 30e Anniversaire Nymphali-ex|Coffret 30e Anniversaire Amphinobi-ex|Pokébox 30e Anniversaire Nymphali-ex|Pokébox 30e Anniversaire Amphinobi-ex
+X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|Coffret Dresseur d’élite 30e Anniversaire|Collection poster 30e Anniversaire|Collection autocollant réajustable 30e Anniversaire|Coffret 30e Anniversaire Nymphali-ex|Coffret 30e Anniversaire Amphinobi-ex|Pokébox 30e Anniversaire Nymphali-ex|Pokébox 30e Anniversaire Amphinobi-ex|Blister 2 boosters 30e Anniversaire Évoli|Collection K.O. 30e Anniversaire Évoli
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Extension JCC 30e Anniversaire
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=20260906:Coffret Dresseur d’élite 30e Anniversaire
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection poster 30e Anniversaire
@@ -323,6 +323,8 @@ X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147102:Coffret 30e Anniversaire N
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147164:Coffret 30e Anniversaire Amphinobi-ex
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Nymphali-ex
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Amphinobi-ex
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Blister 2 boosters 30e Anniversaire Évoli
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;REF=COLKOME5.5:Collection K.O. 30e Anniversaire Évoli
 X-POKEMON-PRODUCT-EAN:0196214144835
 X-POKEMON-PRODUCT-UPC:196214144835
 X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
@@ -337,7 +339,7 @@ DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Correction ZERO MISS du 2 septembre 2026 : variantes Nymphali-ex et Amphinobi-ex séparées ; coffrets et Pokébox ne sont plus fusionnés.\nPriorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\n🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\n💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\nSource gamme officielle : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon\nRappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Correction ZERO MISS du 3 septembre 2026 : ajout des deux formats Évoli distincts du lancement (Blister 2 boosters et Collection K.O.) ; variantes Nymphali-ex/Amphinobi-ex restent séparées.\nPriorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\n🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\n💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\nSource gamme officielle : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon\nRappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
