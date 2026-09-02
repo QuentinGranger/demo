@@ -822,4 +822,36 @@ ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:lego-pokemon-wave-20261001@openai
+DTSTAMP:20260902T073400Z
+LAST-MODIFIED:20260902T073400Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PRODUCT_RELEASE
+X-POKEMON-ACTION:BUY
+X-POKEMON-WAVE-ID:LEGO-POKEMON-20261001
+X-POKEMON-WAVE-COMPLETENESS:PARTIAL
+X-POKEMON-WAVE-PRODUCT-COUNT:2
+X-POKEMON-WAVE-PREORDER-COUNT:2
+X-POKEMON-WAVE-PRODUCTS:Poké Ball Moments culte de Dresseur #72154|Minifigurine de Red grand format #40868
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Poké Ball Moments culte de Dresseur #72154
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Minifigurine de Red grand format #40868
+X-POKEMON-RETAILER-OFFER;SELLER=LEGO France;TYPE=OFFICIAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20261001;PRICE=259.99:https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
+X-POKEMON-RETAILER-OFFER;SELLER=LEGO France;TYPE=OFFICIAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20261001;PRICE=79.99:https://www.lego.com/fr-fr/product/up-scaled-red-minifigure-40868
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:⭐ ✅ 🧱 LEGO Pokémon — expédition Poké Ball #72154 + Red #40868
+LOCATION:France — Boutique LEGO officielle
+DESCRIPTION:Priorité : ⭐ Important — deux références LEGO Pokémon officielles sont en précommande sur LEGO France.\nFiabilité : ✅ Confirmé par les fiches produit LEGO France.\n📦 Poké Ball Moments culte de Dresseur #72154 — 259,99 € — limite 3 — expédition à partir du 1 octobre 2026.\n📦 Minifigurine de Red grand format #40868 — 79,99 € — limite 3 — expédition à partir du 1 octobre 2026.\n⚠️ La date correspond explicitement au début d’expédition annoncé par LEGO France ; elle n’est pas sur-précisée comme heure de lancement.\nSources : https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154 ; https://www.lego.com/fr-fr/product/up-scaled-red-minifigure-40868
+URL:https://www.lego.com/fr-fr/themes/pokemon
+CATEGORIES:Pokémon,LEGO,Collector,Licence,Sortie produit,Précommande,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:LEGO Pokémon demain — début d’expédition #72154 et #40868
+END:VALARM
+END:VEVENT
 END:VCALENDAR
