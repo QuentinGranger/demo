@@ -194,8 +194,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260901T092322Z
-SEQUENCE:15
+LAST-MODIFIED:20260902T051709Z
+SEQUENCE:16
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -227,18 +227,25 @@ X-POKEMON-ALERT-LINK;RETAILER=PlazaTCG;STATUS=OUT_OF_STOCK;CONFIDENCE=82;SELLER=
 X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95:https://www.play-in.com/fr/produit/659570/coffret-dresseur-d-elite-etb-pokemon-30-ans-fr
 X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
 X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
+X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=90;PRICE=259.00:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟡 RAFFLE OUVERTE — Micromania — ETB 30 ans
-LOCATION:France — Micromania
-DESCRIPTION:🟡 RAFFLE OUVERTE\n\nMicromania — tirage au sort / vente réservée détecté pour l’ETB Pokémon JCC 30e Anniversaire FR. Inscription exploitable via la page officielle de vente réservée ; achat non garanti car soumis au tirage au sort.\nPrix : 55,99 € | score S+ | écart vs 62,99 € : -7,00 €\nDate/heure Europe/Paris : détectée au 01/09/2026 11:23 | limite/client : non publiée | retrait/livraison : non confirmés\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | correspondance produit forte via fiche presse + redirection Micromania officielle\nOUVRE ET CONNECTE-TOI
-URL:https://www.micromania.fr/inscription-vente-reservee.html
-X-POKEMON-LATEST-ALERT-LEVEL:RAFFLE_OPEN
-X-POKEMON-LATEST-ALERT-RETAILER:Micromania
-X-POKEMON-LATEST-ALERT-STATUS:RAFFLE_OPEN
-X-POKEMON-LATEST-ALERT-CONFIDENCE:88
-X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260901T112322+0200
+SUMMARY:🔴 PRÉCO OUVERTE — Atmos Arena — ETB 30 ans
+LOCATION:France — Atmos Arena
+DESCRIPTION:🔴 PRÉCO OUVERTE
+
+Atmos Arena — précommande ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; EAN exact et bouton Ajouter au panier actif. Offre exploitable mais très au-dessus du prix de référence.
+Prix : 259,00 € TTC | score D | écart vs 62,99 € : +196,01 € | livraison : calculée au checkout
+Date/heure Europe/Paris : détectée au 02/09/2026 07:14 | limite/client : non publiée | retrait : boutique physique Paris confirmée, disponibilité retrait produit non confirmée
+Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835
+ATTENDS UNE MEILLEURE OFFRE
+URL:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
+X-POKEMON-LATEST-ALERT-LEVEL:PREORDER_OPEN
+X-POKEMON-LATEST-ALERT-RETAILER:Atmos-Arena
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_OPEN
+X-POKEMON-LATEST-ALERT-CONFIDENCE:82
+X-POKEMON-LATEST-SELLER-RELIABILITY:90
+X-POKEMON-LATEST-ALERT-AT:20260902T071400+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
@@ -813,258 +820,6 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-pass-september-20260908@openai
-DTSTAMP:20260901T124614Z
-LAST-MODIFIED:20260901T124614Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20261006T100000
-SUMMARY:⭐ ✅ Pokémon GO — Passe GO septembre
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Événement officiel Pokémon GO. Passe GO de septembre disponible du 8 septembre 2026 à 10:00 au 6 octobre 2026 à 10:00, heure locale. Récompenses incluant notamment Latios. Les récompenses du Passe expirent le 8 octobre 2026 à 10:00, heure locale. Source officielle : https://pokemongo.com/fr/news/go-pass-september-2026
-URL:https://pokemongo.com/fr/news/go-pass-september-2026
-CATEGORIES:Pokémon,Pokémon GO,Passe GO,Événement numérique
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Passe GO septembre demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-mega-squads-20260908@openai
-DTSTAMP:20260901T124614Z
-LAST-MODIFIED:20260901T124614Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20260914T200000
-SUMMARY:⭐ ✅ Pokémon GO — Hordes Méga
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Événement officiel Pokémon GO du 8 septembre 2026 à 10:00 au 14 septembre 2026 à 20:00, heure locale. Débuts de Grondogue et Dogrino, première disponibilité chromatique de Flamenroule, nouveau Super Niveau Max pour certaines Méga-Évolutions et Passe GO dédié. Source officielle : https://pokemongo.com/fr/news/mega-squads-2026
-URL:https://pokemongo.com/fr/news/mega-squads-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Hordes Méga commence demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-community-day-classic-gible-20260912@openai
-DTSTAMP:20260901T124614Z
-LAST-MODIFIED:20260901T124614Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-DTSTART;TZID=Europe/Paris:20260912T140000
-DTEND;TZID=Europe/Paris:20260912T170000
-SUMMARY:⭐ ✅ Pokémon GO — Community Day Classic Griknot
-LOCATION:France — Pokémon GO
-DESCRIPTION:Classique de la Journée Communauté officiel Pokémon GO le 12 septembre 2026 de 14:00 à 17:00, heure locale. Griknot à l'affiche. Faire évoluer Carmache avant 21:00 permet d'obtenir Carchacrok avec Telluriforce. Des événements communautaires locaux peuvent offrir une Étude ponctuelle supplémentaire. Source officielle : https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
-URL:https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
-CATEGORIES:Pokémon,Pokémon GO,Community Day,Événement
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Community Day Classic Griknot demain à 14h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-city-safari-marseille-20260926@openai
-DTSTAMP:20260901T144809Z
-LAST-MODIFIED:20260901T144809Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
-X-POKEMON-ACTION:ATTEND
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:76
-DTSTART;TZID=Europe/Paris:20260926T100000
-DTEND;TZID=Europe/Paris:20260927T180000
-SUMMARY:⭐ ✅ Pokémon GO City Safari — Marseille
-LOCATION:Marseille, France
-DESCRIPTION:Événement officiel Pokémon GO City Safari à Marseille les 26 et 27 septembre 2026, de 10:00 à 18:00 CEST. Billet d'une journée : 10,00 € taxes et frais applicables compris. Possibilité d'ajouter le second jour via un add-on. Source officielle : https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
-URL:https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
-CATEGORIES:Pokémon,Pokémon GO,Événement,France,Marseille,City Safari
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Pokémon GO City Safari Marseille commence demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-gbl-twilight-trails-20260908@openai
-DTSTAMP:20260901T165003Z
-LAST-MODIFIED:20260901T165003Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_SEASON
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:68
-DTSTART;TZID=Europe/Paris:20260908T220000
-DTEND;TZID=Europe/Paris:20261201T220000
-SUMMARY:⭐ ✅ Pokémon GO — Ligue Combat GO : Sentiers crépusculaires
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Saison officielle de la Ligue Combat GO « Sentiers crépusculaires », du 8 septembre 2026 à 22:00 heure de Paris (13:00 PDT) au 1er décembre 2026 à 22:00 heure de Paris (13:00 PST). Début de saison : récompenses de fin de saison disponibles et classement réinitialisé. Les Méga-Évolutions sont autorisées dans de nouvelles ligues Méga. Un Passe d’Étude ponctuelle Ligue Combat GO gratuit sera disponible dans la boutique du jeu dès le début de la saison. Le programme hebdomadaire détaillé et les règles des coupes figurent dans la source officielle. Source : https://pokemongo.com/fr/news/go-battle-league-twilight-trails
-URL:https://pokemongo.com/fr/news/go-battle-league-twilight-trails
-CATEGORIES:Pokémon,Pokémon GO,Ligue Combat GO,Saison,Compétitif
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Ligue Combat GO — Sentiers crépusculaires commence demain à 22h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-staraptor-super-mega-raid-day-20260919@openai
-DTSTAMP:20260901T174854Z
-LAST-MODIFIED:20260901T174854Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:GO_RAID_DAY
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:78
-DTSTART;TZID=Europe/Paris:20260919T140000
-DTEND;TZID=Europe/Paris:20260919T170000
-SUMMARY:⭐ ✅ 🆕 🪽 Pokémon GO — Journée de Super Méga-Raids Étouraptor
-LOCATION:France — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — événement officiel limité à 3 heures.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO. Samedi 19 septembre 2026 de 14h à 17h heure locale.\n🪽 Première apparition de Méga-Étouraptor dans les Super Méga-Raids et accès au Super Niveau Max.\n🎟️ Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes. Une Étude ponctuelle permet d’obtenir un passe de combat premium et une rencontre avec Gardevoir.\n🛒 Ticket optionnel annoncé à 4,99 USD ou équivalent local, disponible jusqu’à 17h heure locale le 19 septembre.\nSource officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-URL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-CATEGORIES:Pokémon,Pokémon GO,Super Méga-Raid,Événement,Nouveau,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:🪽 Journée de Super Méga-Raids Étouraptor demain à 14h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-m5-deadline-20260909@openai
-DTSTAMP:20260831T070100Z
-LAST-MODIFIED:20260831T070100Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_DEADLINE
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:98
-X-POKEMON-ACTIONABILITY:78
-X-POKEMON-USER-EFFECT-ID:champions-m5-end-global-20260909
-DTSTART;TZID=Europe/Paris:20260909T035900
-DTEND;TZID=Europe/Paris:20260909T041400
-SUMMARY:⭐ ✅ ⏳ Pokémon Champions — Fin saison M-5 + pass de combat
-LOCATION:En ligne — Pokémon Champions
-DESCRIPTION:Priorité : ⭐ Important — dernière échéance pour progresser dans la saison M-5 des combats classés et le pass de combat associé.\nFiabilité : ✅ Confirmé officiellement par Pokémon France. La saison M-5 et le pass de combat se terminent le 9 septembre 2026 à 01:59 UTC, soit 03:59 à Paris (CEST).\n🎁 Pass M-5 : Lugulabre, Lugulabrite, icône Lugulabre, 48 Coupons de Vitesse, 4 Tickets de Recrutement Permanent, 4 Tickets d’Entraînement et 10 000 PdV selon progression.\nAction : terminer la progression et récupérer les récompenses utiles avant l’échéance.\nSource : https://www.pokemon.com/fr/actualites/evenements-pokemon-champions-daout-2026-defi-mensuel-saison-des-combats-classes-et-pass-de-combat
-URL:https://www.pokemon.com/fr/actualites/evenements-pokemon-champions-daout-2026-defi-mensuel-saison-des-combats-classes-et-pass-de-combat
-CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Deadline,Pass de combat,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Pokémon Champions — la saison M-5 et son pass se terminent demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-tcg-live-30th-20260915@openai
-DTSTAMP:20260901T215500Z
-LAST-MODIFIED:20260901T215500Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:72
-DTSTART;TZID=Europe/Paris:20260915T190000
-DTEND;TZID=Europe/Paris:20260915T191500
-SUMMARY:⭐ ✅ 🃏 JCC Pokémon Live — 30e Anniversaire disponible
-LOCATION:En ligne — JCC Pokémon Live
-DESCRIPTION:Priorité : ⭐ Important — accès numérique anticipé à l'extension 30e Anniversaire avant la sortie physique du lendemain.\nFiabilité : ✅ Confirmé par The Pokémon Company International. Les Dresseurs et Dresseuses pourront jouer avec l'extension 30e Anniversaire dans le JCC Pokémon Live à partir du 15 septembre 2026 à 19:00 CEST.\nAction : ouvrir JCC Pokémon Live à partir de 19h pour découvrir, collectionner et jouer les nouvelles cartes.\nSource : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
-URL:https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
-CATEGORIES:Pokémon,JCC Pokémon Live,30e Anniversaire,Sortie numérique,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:JCC Pokémon Live — 30e Anniversaire disponible demain à 19h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-mega-finale-20260905@openai
-DTSTAMP:20260902T010207Z
-LAST-MODIFIED:20260902T010207Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:GO_GLOBAL_WEEKEND
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:84
-X-POKEMON-USER-EFFECT:GO-MEGA-FINALE-20260905-FR
-DTSTART;TZID=Europe/Paris:20260905T100000
-DTEND;TZID=Europe/Paris:20260906T180000
-SUMMARY:⭐ ✅ 🆕 ⚡ Pokémon GO — Festival 2026 : Méga-Finale
-LOCATION:France — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — grand événement mondial officiel limité au week-end.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO. Samedi 5 et dimanche 6 septembre 2026 de 10h à 18h heure locale.\n⚡ Méga-Raids en rotations horaires ; Méga-Mewtwo X revient le 5 septembre et Méga-Mewtwo Y le 6 septembre.\n🛡️ Mewtwo en armure apparaît dans les Raids de niveau 5 pendant les deux jours ; sa version chromatique n'est pas disponible cette fois-ci.\n🌐 Aucune limite de Raids à distance les 5 et 6 septembre. Tous les Pokémon méga-évolués reçoivent un boost de PC pendant le week-end.\nSource officielle principale : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale\nSource officielle Mewtwo en armure : https://pokemongo.com/fr/news/megafinale-2026-armored-mewtwo
-URL:https://pokemongo.com/fr/news/gofest2026-finale-save-the-date
-CATEGORIES:Pokémon,Pokémon GO,Festival GO,Méga-Raid,Événement,Nouveau,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⚡ Méga-Finale Pokémon GO demain à 10h — prépare tes équipes et passes de Raid
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-hordes-mega-20260908@openai
-DTSTAMP:20260902T034929Z
-LAST-MODIFIED:20260902T034929Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:82
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20260914T200000
-SUMMARY:⭐ ✅ Pokémon GO — Hordes Méga
-LOCATION:Pokémon GO — France
-DESCRIPTION:Événement officiel Pokémon GO du 8 septembre 2026 à 10:00 au 14 septembre à 20:00, heure locale. Débuts de Grondogue et Dogrino, premier Flamenroule chromatique, Super Niveau Max pour Méga-Dardargnan et Méga-Démolosse, Passe GO Hordes Méga. Les récompenses du Passe GO expirent le 16 septembre 2026 à 20:00. Source officielle : https://pokemongo.com/fr/news/mega-squads-2026
-URL:https://pokemongo.com/fr/news/mega-squads-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,France,Hordes Méga
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Pokémon GO Hordes Méga commence demain à 10h
 END:VALARM
 END:VEVENT
 END:VCALENDAR
