@@ -1,0 +1,27 @@
+name: ZERO MISS Pokémon Champions M-C
+on:
+  push:
+    paths:
+      - 'scripts/patch_champions_mc_20260909.py'
+      - '.github/workflows/patch-champions-mc-20260909.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch canonical calendar
+        run: python scripts/patch_champions_mc_20260909.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change needed.'
+            exit 0
+          fi
+          git config user.name 'pokemon-calendar-bot'
+          git config user.email 'pokemon-calendar-bot@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: add Pokémon Champions M-C regulation'
+          git push
