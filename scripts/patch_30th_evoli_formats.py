@@ -1,8 +1,9 @@
 from pathlib import Path
 
-# trigger: 2026-09-03T01:02 Europe/Paris
+# preserve RFC5545 CRLF exactly
 p = Path('calendars/pokemon-paris.ics')
-s = p.read_text(encoding='utf-8')
+with p.open('r', encoding='utf-8', newline='') as f:
+    s = f.read()
 uid = 'UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai\r\n'
 start = s.index(uid)
 end = s.index('END:VEVENT\r\n', start) + len('END:VEVENT\r\n')
@@ -31,4 +32,5 @@ if 'X-POKEMON-WAVE-PRODUCT-COUNT:10' not in e:
     raise SystemExit('count update failed')
 if 'Blister 2 boosters 30e Anniversaire Évoli' not in e or 'Collection K.O. 30e Anniversaire Évoli' not in e:
     raise SystemExit('new products missing')
-p.write_text(s2, encoding='utf-8', newline='')
+with p.open('w', encoding='utf-8', newline='') as f:
+    f.write(s2)
