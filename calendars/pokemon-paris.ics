@@ -1041,4 +1041,30 @@ ACTION:DISPLAY
 DESCRIPTION:⚡ Méga-Finale Pokémon GO demain à 10h — prépare tes équipes et passes de Raid
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hordes-mega-20260908@openai
+DTSTAMP:20260902T034929Z
+LAST-MODIFIED:20260902T034929Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PLAY_EVENT_LIMITED
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+DTSTART;TZID=Europe/Paris:20260908T100000
+DTEND;TZID=Europe/Paris:20260914T200000
+SUMMARY:⭐ ✅ Pokémon GO — Hordes Méga
+LOCATION:Pokémon GO — France
+DESCRIPTION:Événement officiel Pokémon GO du 8 septembre 2026 à 10:00 au 14 septembre à 20:00, heure locale. Débuts de Grondogue et Dogrino, premier Flamenroule chromatique, Super Niveau Max pour Méga-Dardargnan et Méga-Démolosse, Passe GO Hordes Méga. Les récompenses du Passe GO expirent le 16 septembre 2026 à 20:00. Source officielle : https://pokemongo.com/fr/news/mega-squads-2026
+URL:https://pokemongo.com/fr/news/mega-squads-2026
+CATEGORIES:Pokémon,Pokémon GO,Événement,France,Hordes Méga
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO Hordes Méga commence demain à 10h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
