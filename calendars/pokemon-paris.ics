@@ -985,4 +985,65 @@ ACTION:DISPLAY
 DESCRIPTION:⏳ Dernier jour demain pour récupérer les récompenses du Passe GO Horizons
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-manga-ecarlate-violet-t4-20260903@openai
+DTSTAMP:20260902T144600Z
+LAST-MODIFIED:20260902T144600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:BOOK_RELEASE
+X-POKEMON-ACTION:READ
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:62
+X-POKEMON-IDENTIFIER-TYPE:EAN13
+X-POKEMON-IDENTIFIER:9791042021955
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:⭐ ✅ 📚 Manga FR — Pokémon Écarlate et Violet — Tome 4
+LOCATION:France
+DESCRIPTION:Sortie française du tome 4 de Pokémon Écarlate et Violet.
+Éditeur : Kurokawa.
+Auteurs : Hidenori Kusaka et Satoshi Yamamoto.
+EAN : 9791042021955.
+Prix public constaté : 7,30 €.
+Date : 3 septembre 2026.
+Sources concordantes : Fnac et E.Leclerc.
+Source : https://www.fnac.com/a22717565/Les-Pokemon-Pokemon-Ecarlate-et-Violet-tome-4-Hidenori-Kusaka
+URL:https://www.fnac.com/a22717565/Les-Pokemon-Pokemon-Ecarlate-et-Violet-tome-4-Hidenori-Kusaka
+CATEGORIES:Pokémon,Manga,Livre,France,Sortie,Priorité Important
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-pokecologie-fr-20260930@openai
+DTSTAMP:20260902T144600Z
+LAST-MODIFIED:20260902T144600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:BOOK_RELEASE
+X-POKEMON-ACTION:READ
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:97
+X-POKEMON-ACTIONABILITY:55
+X-POKEMON-IDENTIFIER-TYPE:EAN13
+X-POKEMON-IDENTIFIER:9782017901815
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:ℹ️ ✅ 📖 Livre FR — Pokémon : Pokécologie
+LOCATION:France
+DESCRIPTION:Sortie française de Pokémon : Pokécologie.
+Auteur crédité : The Pokémon Company.
+Éditeur : Hachette Jeunesse.
+Format : relié, 208 pages.
+EAN : 9782017901815.
+Prix éditeur constaté : 12,90 €.
+Date : 30 septembre 2026.
+Sources concordantes : Fnac, Decitre et librairies françaises.
+Source : https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Pokemon-Company
+URL:https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Pokemon-Company
+CATEGORIES:Pokémon,Livre,Pokécologie,France,Sortie,Priorité Info
+END:VEVENT
 END:VCALENDAR
