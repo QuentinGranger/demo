@@ -1072,4 +1072,51 @@ DESCRIPTION:Priorité : ℹ️ Info — nouveau règlement compétitif officiel 
 URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
 CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Compétitif,Règlement
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-ascension-20260831@openai
+DTSTAMP:20260902T184700Z
+LAST-MODIFIED:20260902T184700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:73
+X-POKEMON-USER-EFFECT-ID:go-mega-ascension-fr-20260831
+DTSTART;TZID=Europe/Paris:20260831T100000
+DTEND;TZID=Europe/Paris:20260904T235900
+SUMMARY:⭐ ✅ Pokémon GO — Méga ascension
+LOCATION:Pokémon GO — France
+DESCRIPTION:Évènement officiel Pokémon GO en cours. Du 31 août 2026 à 10h au 4 septembre 2026 à 23h59\, heures locales. Étude ponctuelle à parcours\, Passe GO : Méga-Finale\, Méga-Raids et limite de Raids à distance portée à 30 pendant l'évènement. Aucun niveau de rareté n'est inféré. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
+URL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
+CATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Priorité Important
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTAMP:20260902T184700Z
+LAST-MODIFIED:20260902T184700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT-ID:go-mega-finale-fr-20260905
+DTSTART;TZID=Europe/Paris:20260905T100000
+DTEND;TZID=Europe/Paris:20260906T180000
+SUMMARY:🔥 ✅ Pokémon GO — Festival 2026 : Méga-Finale
+LOCATION:Pokémon GO — France
+DESCRIPTION:Évènement officiel mondial applicable en France. Samedi 5 et dimanche 6 septembre 2026 de 10h à 18h\, heures locales. Méga-Mewtwo X revient le 5 septembre et Méga-Mewtwo Y le 6 septembre. Aucune limite de Raids à distance les 5 et 6 septembre. Habitats de Méga-Raids tournants chaque heure. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
+URL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
+CATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Méga-Mewtwo,Priorité Critique
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Festival Pokémon GO Méga-Finale demain à 10h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
