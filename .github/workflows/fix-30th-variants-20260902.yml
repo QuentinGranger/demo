@@ -1,0 +1,82 @@
+name: ZERO MISS 30th Anniversary variant split
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-30th-variants-20260902.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Patch canonical calendar
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          p = Path('calendars/pokemon-paris.ics')
+          raw = p.read_bytes()
+          text = raw.decode('utf-8')
+          nl = '\r\n' if '\r\n' in text else '\n'
+          marker = 'X-POKEMON-WAVE-ID:TCG-30TH-LAUNCH-20260916'
+          idx = text.find(marker)
+          if idx < 0:
+              raise SystemExit('30th launch event not found')
+          start = text.rfind('BEGIN:VEVENT', 0, idx)
+          end = text.find('END:VEVENT', idx)
+          if start < 0 or end < 0:
+              raise SystemExit('VEVENT bounds not found')
+          end += len('END:VEVENT')
+          event = text[start:end]
+          old_products = 'X-POKEMON-WAVE-PRODUCT-COUNT:6'
+          old_list = 'X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|Coffret Dresseur d’élite 30e Anniversaire|Collection poster 30e Anniversaire|Collection autocollant réajustable 30e Anniversaire|Coffret 30e Anniversaire Pokémon-ex|Boîte 30e Anniversaire Pokémon-ex'
+          if old_products not in event or old_list not in event:
+              if 'Coffret 30e Anniversaire Nymphali-ex' in event and 'Coffret 30e Anniversaire Amphinobi-ex' in event:
+                  print('already patched')
+                  raise SystemExit(0)
+              raise SystemExit('expected generic product lines not found')
+          event = event.replace(old_products, 'X-POKEMON-WAVE-PRODUCT-COUNT:8', 1)
+          new_list = 'X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|Coffret Dresseur d’élite 30e Anniversaire|Collection poster 30e Anniversaire|Collection autocollant réajustable 30e Anniversaire|Coffret 30e Anniversaire Nymphali-ex|Coffret 30e Anniversaire Amphinobi-ex|Pokébox 30e Anniversaire Nymphali-ex|Pokébox 30e Anniversaire Amphinobi-ex'
+          event = event.replace(old_list, new_list, 1)
+          generic_items = (
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret 30e Anniversaire Pokémon-ex' + nl +
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Boîte 30e Anniversaire Pokémon-ex'
+          )
+          exact_items = (
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147102:Coffret 30e Anniversaire Nymphali-ex' + nl +
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147164:Coffret 30e Anniversaire Amphinobi-ex' + nl +
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Nymphali-ex' + nl +
+              'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Amphinobi-ex'
+          )
+          if generic_items not in event:
+              raise SystemExit('generic item pair not found')
+          event = event.replace(generic_items, exact_items, 1)
+          m = re.search(r'(?m)^SEQUENCE:(\d+)', event)
+          if m:
+              event = event[:m.start()] + f'SEQUENCE:{int(m.group(1))+1}' + event[m.end():]
+          else:
+              event = event.replace('STATUS:CONFIRMED', 'SEQUENCE:1' + nl + 'STATUS:CONFIRMED', 1)
+          event = event.replace('X-POKEMON-WAVE-COMPLETENESS:COMPLETE', 'X-POKEMON-WAVE-COMPLETENESS:COMPLETE' + nl + 'X-POKEMON-VARIANT-POLICY:EXACT_SKU_VARIANTS_SPLIT', 1)
+          event = event.replace('DESCRIPTION:', 'DESCRIPTION:Correction ZERO MISS du 2 septembre 2026 : variantes Nymphali-ex et Amphinobi-ex séparées ; coffrets et Pokébox ne sont plus fusionnés.\\n', 1)
+          text = text[:start] + event + text[end:]
+          if text.count('BEGIN:VCALENDAR') != 1 or text.count('END:VCALENDAR') != 1:
+              raise SystemExit('calendar envelope invalid')
+          if 'Coffret 30e Anniversaire Nymphali-ex' not in text or 'Coffret 30e Anniversaire Amphinobi-ex' not in text:
+              raise SystemExit('postcondition failed')
+          p.write_bytes(text.replace('\r\n','\n').replace('\n','\r\n').encode('utf-8'))
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No business change'
+            exit 0
+          fi
+          git config user.name 'pokemon-calendar-bot'
+          git config user.email 'pokemon-calendar-bot@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: split 30th Anniversary Nymphali/Amphinobi variants'
+          git push origin master
