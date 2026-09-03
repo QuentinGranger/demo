@@ -146,7 +146,14 @@ DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
 SUMMARY:ℹ️ 🟡 ✨ 🃏 Sortie JCC — Boîte Méga Puissances
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — produit standard, mais fiche désormais enrichie par une source Pokémon officielle.\nFiabilité : 🟡 pour la date exacte du 28 août en France ; Pokémon confirme officiellement le nom « Boîte Méga Puissances » et le contenu, mais sa galerie n'indique que le 3e trimestre 2026. La date du 28 août reste donc une date France issue de vendeurs/sources spécialisées et n'est pas présentée comme une date officielle Pokémon.\n📦 Variantes officielles : Méga-Zeraora-ex, Méga-Darkrai-ex ou Méga-Dracolosse-ex. Chaque boîte contient 1 carte promo brillante, 4 boosters et 1 carte à code JCC Pokémon Live.\n🛒 Boutique repérée : Pokemagic — précommande Méga-Dracolosse-ex à 29,99 €, sortie annoncée le 28 août 2026 ; cette date concerne l'offre du vendeur.\n✨ Mise à jour majeure le 19 août 2026 : nom français et contenu officialisés.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource officielle produit : https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/boite-mega-puissances\nSource date France suivie : https://www.pokecardex.com/forums/viewtopic.php?t=49894
+DESCRIPTION:Priorité : ℹ️ Info — produit standard, mais fiche désormais enrichie par une source Pokémon officielle.\
+Fiabilité : 🟡 pour la date exacte du 28 août en France ; Pokémon confirme officiellement le nom « Boîte Méga Puissances » et le contenu, mais sa galerie n'indique que le 3e trimestre 2026. La date du 28 août reste donc une date France issue de vendeurs/sources spécialisées et n'est pas présentée comme une date officielle Pokémon.\
+📦 Variantes officielles : Méga-Zeraora-ex, Méga-Darkrai-ex ou Méga-Dracolosse-ex. Chaque boîte contient 1 carte promo brillante, 4 boosters et 1 carte à code JCC Pokémon Live.\
+🛒 Boutique repérée : Pokemagic — précommande Méga-Dracolosse-ex à 29,99 €, sortie annoncée le 28 août 2026 ; cette date concerne l'offre du vendeur.\
+✨ Mise à jour majeure le 19 août 2026 : nom français et contenu officialisés.\
+Rappels : J-7 et J-1 — vérifier prix et stock.\
+Source officielle produit : https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/boite-mega-puissances\
+Source date France suivie : https://www.pokecardex.com/forums/viewtopic.php?t=49894
 URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/boite-mega-puissances
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Mise à jour,Priorité Info
 BEGIN:VALARM
@@ -194,8 +201,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260902T051709Z
-SEQUENCE:16
+LAST-MODIFIED:20260903T041557Z
+SEQUENCE:17
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -228,24 +235,20 @@ X-POKEMON-ALERT-LINK;RETAILER=Playin;STATUS=OUT_OF_STOCK;CONFIDENCE=81;SELLER=95
 X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;CONFIDENCE=82;SELLER=95;PRICE=64.99:https://www.multimediashop.be/80354-Acheter_Pok_mon_JCC_Coffret_Dresseur_d_lite_30e_Anniversaire_sur_tcard.html
 X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=90;PRICE=259.00:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
+X-POKEMON-ALERT-LINK;RETAILER=DestockTCG;STATUS=INDEXED_NOT_OPEN;CONFIDENCE=82;SELLER=90:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
+X-POKEMON-SELLER-RELIABILITY;RETAILER=DestockTCG;SCORE=90;BAND=TRUSTED:LEGAL_IDENTITY20|REGISTRY_VERIFICATION15|ADDRESS_CONSISTENCY10|DOMAIN_HISTORY7|PAYMENT_PROTECTION10|EXTERNAL_REPUTATION11|FULFILLMENT_TRACK_RECORD7|CONTACT_TRANSPARENCY5|POLICY_QUALITY5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🔴 PRÉCO OUVERTE — Atmos Arena — ETB 30 ans
-LOCATION:France — Atmos Arena
-DESCRIPTION:🔴 PRÉCO OUVERTE
-
-Atmos Arena — précommande ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; EAN exact et bouton Ajouter au panier actif. Offre exploitable mais très au-dessus du prix de référence.
-Prix : 259,00 € TTC | score D | écart vs 62,99 € : +196,01 € | livraison : calculée au checkout
-Date/heure Europe/Paris : détectée au 02/09/2026 07:14 | limite/client : non publiée | retrait : boutique physique Paris confirmée, disponibilité retrait produit non confirmée
-Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835
-ATTENDS UNE MEILLEURE OFFRE
-URL:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
-X-POKEMON-LATEST-ALERT-LEVEL:PREORDER_OPEN
-X-POKEMON-LATEST-ALERT-RETAILER:Atmos-Arena
-X-POKEMON-LATEST-ALERT-STATUS:PREORDER_OPEN
+SUMMARY:🟡 NOUVELLE FICHE — DestockTCG — ETB 30 ans
+LOCATION:France — DestockTCG
+DESCRIPTION:🟡 NOUVELLE FICHE\n\nDestockTCG — fiche FR créée avec EAN exact 0196214144835 et référence POK1010447102. La page affiche « Prix à venir » et « Prévenez-moi de l'ouverture des précommandes » : aucune précommande exploitable pour l'instant.\nPrix : à venir | score : — | écart vs 62,99 € : — | livraison : non applicable\nDate/heure Europe/Paris : détectée au 03/09/2026 06:15 | limite/client : non publiée | retrait : non confirmé\nConfiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835\nINFO À SURVEILLER
+URL:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
+X-POKEMON-LATEST-ALERT-LEVEL:NEW_LISTING
+X-POKEMON-LATEST-ALERT-RETAILER:DestockTCG
+X-POKEMON-LATEST-ALERT-STATUS:INDEXED_NOT_OPEN
 X-POKEMON-LATEST-ALERT-CONFIDENCE:82
 X-POKEMON-LATEST-SELLER-RELIABILITY:90
-X-POKEMON-LATEST-ALERT-AT:20260902T071400+0200
+X-POKEMON-LATEST-ALERT-AT:20260903T061557+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
@@ -284,7 +287,11 @@ DTSTART;VALUE=DATE:20260906
 DTEND;VALUE=DATE:20260907
 SUMMARY:🔥 ✅ 🔔 Précommande — ETB 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\
+Fiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\
+Rappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\
+Lié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\
+Source : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -300,9 +307,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
-DTSTAMP:20260902T230249Z
-LAST-MODIFIED:20260902T230249Z
-SEQUENCE:13
+DTSTAMP:20260819T025700Z
+LAST-MODIFIED:20260830T051000Z
+SEQUENCE:11
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -310,21 +317,12 @@ X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 X-POKEMON-WAVE-ID:TCG-30TH-LAUNCH-20260916
-X-POKEMON-WAVE-COMPLETENESS:COMPLETE
-X-POKEMON-VARIANT-POLICY:EXACT_SKU_VARIANTS_SPLIT
-X-POKEMON-WAVE-PRODUCT-COUNT:10
+X-POKEMON-WAVE-COMPLETENESS:PARTIAL
+X-POKEMON-WAVE-PRODUCT-COUNT:2
 X-POKEMON-WAVE-PREORDER-COUNT:1
-X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|Coffret Dresseur d’élite 30e Anniversaire|Collection poster 30e Anniversaire|Collection autocollant réajustable 30e Anniversaire|Coffret 30e Anniversaire Nymphali-ex|Coffret 30e Anniversaire Amphinobi-ex|Pokébox 30e Anniversaire Nymphali-ex|Pokébox 30e Anniversaire Amphinobi-ex|Blister 2 boosters 30e Anniversaire Évoli|Collection K.O. 30e Anniversaire Évoli
+X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|ETB 30 ans
 X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Extension JCC 30e Anniversaire
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=20260906:Coffret Dresseur d’élite 30e Anniversaire
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection poster 30e Anniversaire
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection autocollant réajustable 30e Anniversaire
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147102:Coffret 30e Anniversaire Nymphali-ex
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;EAN=0196214147164:Coffret 30e Anniversaire Amphinobi-ex
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Nymphali-ex
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Pokébox 30e Anniversaire Amphinobi-ex
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Blister 2 boosters 30e Anniversaire Évoli
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;REF=COLKOME5.5:Collection K.O. 30e Anniversaire Évoli
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=20260906:ETB 30 ans
 X-POKEMON-PRODUCT-EAN:0196214144835
 X-POKEMON-PRODUCT-UPC:196214144835
 X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
@@ -339,7 +337,17 @@ DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Correction ZERO MISS du 3 septembre 2026 : ajout des deux formats Évoli distincts du lancement (Blister 2 boosters et Collection K.O.) ; variantes Nymphali-ex/Amphinobi-ex restent séparées.\nPriorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\n🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\n💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\nSource gamme officielle : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon\nRappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire.\
+Fiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\
+📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\
+✅ Extension JCC 30e Anniversaire\
+✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\
+Complétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\
+🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\
+💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\
+Rappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\
+Lié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\
+Source : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
@@ -379,7 +387,11 @@ DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
 SUMMARY:⭐ ✅ 🔔 Précommande — Bundle 6 boosters 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
+DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\
+Fiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\
+Rappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\
+Lié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\
+Source : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 URL:https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Important
 BEGIN:VALARM
@@ -409,7 +421,11 @@ DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:ℹ️ ✅ 🔔 Précommande — Coffret Classeur 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-1 uniquement — précommande informative.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
+DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\
+Fiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\
+Rappels : J-1 uniquement — précommande informative.\
+Lié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\
+Source : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Info
 BEGIN:VALARM
@@ -443,7 +459,16 @@ DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 pour la vague globale ; le niveau de preuve de chaque produit est indiqué ci-dessous.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟡 Bundle 6 boosters — 🔔 précommande Guizette le 19 septembre\n🟡 Coffret Classeur — 🔔 précommande Guizette le 20 septembre\n🟡 Mini-Tins\nComplétude : liste partielle. D'autres produits peuvent appartenir à la vague, mais ils ne sont pas comptés tant qu'ils ne sont pas nommés assez précisément.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\
+Fiabilité : 🟠 pour la vague globale ; le niveau de preuve de chaque produit est indiqué ci-dessous.\
+📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\
+🟡 Bundle 6 boosters — 🔔 précommande Guizette le 19 septembre\
+🟡 Coffret Classeur — 🔔 précommande Guizette le 20 septembre\
+🟡 Mini-Tins\
+Complétude : liste partielle. D'autres produits peuvent appartenir à la vague, mais ils ne sont pas comptés tant qu'ils ne sont pas nommés assez précisément.\
+Rappels : J-7 et J-1 — vérifier disponibilité et prix.\
+Lié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\
+Source : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
@@ -536,7 +561,11 @@ DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
 LOCATION:En ligne — France
-DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\
+Fiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\
+Rappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\
+Lié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\
+Source : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
 CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
 BEGIN:VALARM
@@ -645,7 +674,14 @@ DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:ℹ️ 🟡 🃏 Sortie JCC — Vague Decks Mentali-ex & Noctali-ex
 LOCATION:France
-DESCRIPTION:Priorité : ℹ️ Info — deux decks standards regroupés sur leur date commune.\nFiabilité : 🟡 À confirmer.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟡 Deck Combat Mentali-ex\n🟡 Deck Combat Noctali-ex\nComplétude : liste complète des deux decks actuellement référencés ensemble.\nRappels : J-7 et J-1 — vérifier prix et stock.\nSource : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
+DESCRIPTION:Priorité : ℹ️ Info — deux decks standards regroupés sur leur date commune.\
+Fiabilité : 🟡 À confirmer.\
+📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\
+🟡 Deck Combat Mentali-ex\
+🟡 Deck Combat Noctali-ex\
+Complétude : liste complète des deux decks actuellement référencés ensemble.\
+Rappels : J-7 et J-1 — vérifier prix et stock.\
+Source : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 URL:https://lorenzone.fr/products/deck-combat-30eme-anniversaire
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Info
 BEGIN:VALARM
@@ -686,7 +722,13 @@ DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ ✅ ✨ 🃏 Sortie JCC — Méga-Évolution : Règne Delta (ME06)
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\nFiabilité : ✅ Pokémon confirme officiellement la sortie de Méga-Évolution – Règne Delta le 6 novembre 2026.\n📦 L'extension contient plus de 135 cartes, dont Méga-Rayquaza-ex, Méga-Golemastoc-ex, Méga-Sepiatroce-ex et Méga-Sarmuraï-ex. Les formats Boosters / Display / ETB restent conservés comme informations distributeur tant qu'ils ne sont pas tous détaillés directement par Pokémon sur cette fiche.\n✨ Mise à jour majeure le 23 août 2026 : la date et le nom de l'extension passent de preuve distributeur à confirmation officielle Pokémon.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nSource officielle : https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026\nSource distributeur formats : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
+DESCRIPTION:Priorité : ⭐ Important — nouvelle extension JCC avec vague de produits associée.\
+Fiabilité : ✅ Pokémon confirme officiellement la sortie de Méga-Évolution – Règne Delta le 6 novembre 2026.\
+📦 L'extension contient plus de 135 cartes, dont Méga-Rayquaza-ex, Méga-Golemastoc-ex, Méga-Sepiatroce-ex et Méga-Sarmuraï-ex. Les formats Boosters / Display / ETB restent conservés comme informations distributeur tant qu'ils ne sont pas tous détaillés directement par Pokémon sur cette fiche.\
+✨ Mise à jour majeure le 23 août 2026 : la date et le nom de l'extension passent de preuve distributeur à confirmation officielle Pokémon.\
+Rappels : J-7 et J-1 — vérifier disponibilité et prix.\
+Source officielle : https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026\
+Source distributeur formats : https://hikarudistribution.com/fr-be/blogs/actualite/nouvelle-extension-serie-mega-me6-31-juillet-2026-mega-rayquaza
 URL:https://www.pokemon.com/fr/actualites/lextension-mega-evolution-regne-delta-du-jcc-pokemon-arrive-le-6-novembre-2026
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Mise à jour,Priorité Important
 BEGIN:VALARM
@@ -725,7 +767,17 @@ DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — vague de produits premium anniversaire regroupée dans un seul événement.\nFiabilité : 🟡 À confirmer pour la date de sortie globale.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟡 UPC Journée Mentali-ex — 🔔 précommande Guizette le 4 octobre\n🟡 UPC Soirée Noctali-ex — 🔔 précommande Guizette le 4 octobre\n🟡 Coffret figurine Mew — 🔔 précommande Guizette le 4 octobre\n🟡 Coffret figurine Mewtwo — 🔔 précommande Guizette le 4 octobre\nComplétude : liste partielle des produits premium actuellement identifiés.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+DESCRIPTION:Priorité : ⭐ Important — vague de produits premium anniversaire regroupée dans un seul événement.\
+Fiabilité : 🟡 À confirmer pour la vague globale ; le niveau de preuve de chaque produit est indiqué ci-dessous.\
+📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\
+🟡 UPC Journée Mentali-ex — 🔔 précommande Guizette le 4 octobre\
+🟡 UPC Soirée Noctali-ex — 🔔 précommande Guizette le 4 octobre\
+🟡 Coffret figurine Mew — 🔔 précommande Guizette le 4 octobre\
+🟡 Coffret figurine Mewtwo — 🔔 précommande Guizette le 4 octobre\
+Complétude : liste partielle des produits premium actuellement identifiés.\
+Rappels : J-7 et J-1 — vérifier disponibilité et prix.\
+Lié à : 🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family) — 4 octobre 2026.\
+Source : https://www.pokeindex.fr/calendrier-sorties
 URL:https://www.pokeindex.fr/calendrier-sorties
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
@@ -829,323 +881,6 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:lego-pokemon-wave-20261001@openai
-DTSTAMP:20260902T073400Z
-LAST-MODIFIED:20260902T073400Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:PRODUCT_RELEASE
-X-POKEMON-ACTION:BUY
-X-POKEMON-WAVE-ID:LEGO-POKEMON-20261001
-X-POKEMON-WAVE-COMPLETENESS:PARTIAL
-X-POKEMON-WAVE-PRODUCT-COUNT:2
-X-POKEMON-WAVE-PREORDER-COUNT:2
-X-POKEMON-WAVE-PRODUCTS:Poké Ball Moments culte de Dresseur #72154|Minifigurine de Red grand format #40868
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Poké Ball Moments culte de Dresseur #72154
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Minifigurine de Red grand format #40868
-X-POKEMON-RETAILER-OFFER;SELLER=LEGO France;TYPE=OFFICIAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20261001;PRICE=259.99:https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
-X-POKEMON-RETAILER-OFFER;SELLER=LEGO France;TYPE=OFFICIAL;CHANNEL=WEB;STATUS=PREORDER;DATE=20261001;PRICE=79.99:https://www.lego.com/fr-fr/product/up-scaled-red-minifigure-40868
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:⭐ ✅ 🧱 LEGO Pokémon — expédition Poké Ball #72154 + Red #40868
-LOCATION:France — Boutique LEGO officielle
-DESCRIPTION:Priorité : ⭐ Important — deux références LEGO Pokémon officielles sont en précommande sur LEGO France.\nFiabilité : ✅ Confirmé par les fiches produit LEGO France.\n📦 Poké Ball Moments culte de Dresseur #72154 — 259,99 € — limite 3 — expédition à partir du 1 octobre 2026.\n📦 Minifigurine de Red grand format #40868 — 79,99 € — limite 3 — expédition à partir du 1 octobre 2026.\n⚠️ La date correspond explicitement au début d’expédition annoncé par LEGO France ; elle n’est pas sur-précisée comme heure de lancement.\nSources : https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154 ; https://www.lego.com/fr-fr/product/up-scaled-red-minifigure-40868
-URL:https://www.lego.com/fr-fr/themes/pokemon
-CATEGORIES:Pokémon,LEGO,Collector,Licence,Sortie produit,Précommande,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:LEGO Pokémon demain — début d’expédition #72154 et #40868
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-twilight-trails-20260908@openai
-DTSTAMP:20260902T100328Z
-LAST-MODIFIED:20260902T100328Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:SEASON_START_INFO
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:68
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20261201T100000
-SUMMARY:ℹ️ ✅ 🌆 Pokémon GO — Saison Sentiers crépusculaires
-LOCATION:Pokémon GO — France
-DESCRIPTION:Fiabilité : ✅ Confirmé officiellement par Pokémon GO. La Saison Sentiers crépusculaires débute le 8 septembre 2026 à 10 h et se termine le 1er décembre 2026 à 10 h\, heure locale. Parmi les temps forts annoncés : nouveaux Pokémon de Paldea\, nouvelles Méga-Évolutions\, nouveaux Pokémon Dynamax et plusieurs Journées Communauté.
-Source officielle : https://pokemongo.com/fr/seasons/twilight-trails
-URL:https://pokemongo.com/fr/seasons/twilight-trails
-CATEGORIES:Pokémon,Pokémon GO,Saison,Sortie numérique,Priorité Info
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-pass-september-2026@openai
-DTSTAMP:20260902T124500Z
-LAST-MODIFIED:20260902T124500Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:76
-X-POKEMON-USER-EFFECT:go-pass-september-2026-france
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20261006T100000
-SUMMARY:⭐ ✅ 🎮 Pokémon GO — Passe GO de septembre — Latios
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — Passe GO mensuel avec fenêtre exacte et récompense vedette Latios.\nFiabilité : ✅ Confirmé par la page officielle Pokémon GO France.\n📅 Disponible du 8 septembre 2026 à 10:00 au 6 octobre 2026 à 10:00, heure locale.\n🎁 Récompenses à récupérer avant le 8 octobre 2026 à 10:00, heure locale.\n⭐ Rencontre vedette : Latios, avec possibilité chromatique.\n⏳ L'Incubateur ponctuel du Passe GO deluxe expire le 13 octobre 2026 à 10:00.\nSource : https://pokemongo.com/fr/news/go-pass-september-2026
-URL:https://pokemongo.com/fr/news/go-pass-september-2026
-CATEGORIES:Pokémon,Pokémon GO,Passe GO,Événement numérique,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Le Passe GO de septembre commence demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-super-mega-raid-day-staraptor-20260919@openai
-DTSTAMP:20260902T135200Z
-LAST-MODIFIED:20260902T135200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:GO_LIMITED_EVENT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:84
-DTSTART;TZID=Europe/Paris:20260919T140000
-DTEND;TZID=Europe/Paris:20260919T170000
-SUMMARY:⭐ ✅ 🦅 Pokémon GO — Journée de Super Méga-Raids Étouraptor
-LOCATION:Pokémon GO — France / heure locale
-DESCRIPTION:Priorité : ⭐ Important — événement limité de 3 heures.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO.\n📅 Samedi 19 septembre 2026 de 14:00 à 17:00, heure locale.\n✨ Début de Méga-Étouraptor dans les Super Méga-Raids et accès au Super Niveau Max.\n🎟️ Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes ; ticket payant optionnel.\nSource officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-URL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,Raid,Méga,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:🦅 Journée de Super Méga-Raids Étouraptor demain à 14h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-horizons-celebration-20260916@openai
-DTSTAMP:20260902T135200Z
-LAST-MODIFIED:20260902T135200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:GO_EVENT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:78
-DTSTART;TZID=Europe/Paris:20260916T100000
-DTEND;TZID=Europe/Paris:20260922T200000
-SUMMARY:⭐ ✅ 📺 Pokémon GO — Célébration Pokémon, les horizons
-LOCATION:Pokémon GO — France / heure locale
-DESCRIPTION:Priorité : ⭐ Important — événement officiel avec contenu limité dans le temps.\nFiabilité : ✅ Confirmé officiellement par Pokémon GO.\n📅 Du 16 septembre 2026 à 10:00 au 22 septembre 2026 à 20:00, heure locale.\n✨ Début de Salamèche portant les lunettes de Friede ; raids, rencontres sauvages, études et Passe GO de collaboration.\n⏳ Récompenses du Passe GO à récupérer avant le 24 septembre 2026 à 20:00, heure locale.\nSource officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-URL:https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,Pokémon Horizons,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:📺 Célébration Pokémon Horizons demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-horizons-pass-rewards-expiry-20260924@openai
-DTSTAMP:20260902T135200Z
-LAST-MODIFIED:20260902T135200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DEADLINE
-X-POKEMON-ACTION:CLAIM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:86
-DTSTART;TZID=Europe/Paris:20260924T200000
-DTEND;TZID=Europe/Paris:20260924T201500
-SUMMARY:⏳ Pokémon GO — Fin de récupération des récompenses Passe GO Horizons
-LOCATION:Pokémon GO — en ligne
-DESCRIPTION:Deadline officielle : récupérer les récompenses du Passe GO Célébration de collaboration avant le 24 septembre 2026 à 20:00, heure locale.\nSource officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-URL:https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Pokémon Horizons
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Dernier jour demain pour récupérer les récompenses du Passe GO Horizons
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-manga-ecarlate-violet-t4-20260903@openai
-DTSTAMP:20260902T144600Z
-LAST-MODIFIED:20260902T144600Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:BOOK_RELEASE
-X-POKEMON-ACTION:READ
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-CONFIDENCE:96
-X-POKEMON-ACTIONABILITY:62
-X-POKEMON-IDENTIFIER-TYPE:EAN13
-X-POKEMON-IDENTIFIER:9791042021955
-DTSTART;VALUE=DATE:20260903
-DTEND;VALUE=DATE:20260904
-SUMMARY:⭐ ✅ 📚 Manga FR — Pokémon Écarlate et Violet — Tome 4
-LOCATION:France
-DESCRIPTION:Sortie française du tome 4 de Pokémon Écarlate et Violet.
-Éditeur : Kurokawa.
-Auteurs : Hidenori Kusaka et Satoshi Yamamoto.
-EAN : 9791042021955.
-Prix public constaté : 7,30 €.
-Date : 3 septembre 2026.
-Sources concordantes : Fnac et E.Leclerc.
-Source : https://www.fnac.com/a22717565/Les-Pokemon-Pokemon-Ecarlate-et-Violet-tome-4-Hidenori-Kusaka
-URL:https://www.fnac.com/a22717565/Les-Pokemon-Pokemon-Ecarlate-et-Violet-tome-4-Hidenori-Kusaka
-CATEGORIES:Pokémon,Manga,Livre,France,Sortie,Priorité Important
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-pokecologie-fr-20260930@openai
-DTSTAMP:20260902T144600Z
-LAST-MODIFIED:20260902T144600Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:BOOK_RELEASE
-X-POKEMON-ACTION:READ
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-CONFIDENCE:97
-X-POKEMON-ACTIONABILITY:55
-X-POKEMON-IDENTIFIER-TYPE:EAN13
-X-POKEMON-IDENTIFIER:9782017901815
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:ℹ️ ✅ 📖 Livre FR — Pokémon : Pokécologie
-LOCATION:France
-DESCRIPTION:Sortie française de Pokémon : Pokécologie.
-Auteur crédité : The Pokémon Company.
-Éditeur : Hachette Jeunesse.
-Format : relié, 208 pages.
-EAN : 9782017901815.
-Prix éditeur constaté : 12,90 €.
-Date : 30 septembre 2026.
-Sources concordantes : Fnac, Decitre et librairies françaises.
-Source : https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Pokemon-Company
-URL:https://www.fnac.com/a23281600/Les-Pokemon-Pokemon-Pokecologie-The-Pokemon-Company
-CATEGORIES:Pokémon,Livre,Pokécologie,France,Sortie,Priorité Info
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-reglement-mc-20260909@openai
-DTSTAMP:20260902T164600Z
-LAST-MODIFIED:20260902T164600Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
-X-POKEMON-ACTION:PLAY
-X-POKEMON-FIRST-ADDED-AT:20260902T164600Z
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-CONFIDENCE:96
-X-POKEMON-ACTIONABILITY:58
-X-POKEMON-USER-EFFECT-ID:pokemon-champions-mc-fr-20260909
-DTSTART;VALUE=DATE:20260909
-DTEND;VALUE=DATE:20261203
-SUMMARY:ℹ️ ✅ 🎮 Pokémon Champions — Règlement M-C
-LOCATION:En ligne — Pokémon Champions
-DESCRIPTION:Priorité : ℹ️ Info — nouveau règlement compétitif officiel de Pokémon Champions.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Le règlement M-C entre en vigueur le 9 septembre 2026 et ajoute notamment de nouvelles Méga-Évolutions Z ainsi que de nouveaux Pokémon à la sélection.\n📅 Précision : date exacte confirmée ; aucune heure n'est ajoutée ici afin de ne pas sur-préciser au-delà de la preuve primaire disponible dans ce scan.\nSource : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
-URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
-CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Compétitif,Règlement
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-mega-ascension-20260831@openai
-DTSTAMP:20260902T184700Z
-LAST-MODIFIED:20260902T184700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:73
-X-POKEMON-USER-EFFECT-ID:go-mega-ascension-fr-20260831
-DTSTART;TZID=Europe/Paris:20260831T100000
-DTEND;TZID=Europe/Paris:20260904T235900
-SUMMARY:⭐ ✅ Pokémon GO — Méga ascension
-LOCATION:Pokémon GO — France
-DESCRIPTION:Évènement officiel Pokémon GO en cours. Du 31 août 2026 à 10h au 4 septembre 2026 à 23h59\, heures locales. Étude ponctuelle à parcours\, Passe GO : Méga-Finale\, Méga-Raids et limite de Raids à distance portée à 30 pendant l'évènement. Aucun niveau de rareté n'est inféré. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
-URL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
-CATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Priorité Important
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-mega-finale-20260905@openai
-DTSTAMP:20260902T184700Z
-LAST-MODIFIED:20260902T184700Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:1
-X-POKEMON-PRIORITY:CRITICAL
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:88
-X-POKEMON-USER-EFFECT-ID:go-mega-finale-fr-20260905
-DTSTART;TZID=Europe/Paris:20260905T100000
-DTEND;TZID=Europe/Paris:20260906T180000
-SUMMARY:🔥 ✅ Pokémon GO — Festival 2026 : Méga-Finale
-LOCATION:Pokémon GO — France
-DESCRIPTION:Évènement officiel mondial applicable en France. Samedi 5 et dimanche 6 septembre 2026 de 10h à 18h\, heures locales. Méga-Mewtwo X revient le 5 septembre et Méga-Mewtwo Y le 6 septembre. Aucune limite de Raids à distance les 5 et 6 septembre. Habitats de Méga-Raids tournants chaque heure. Source officielle : https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
-URL:https://www.pokemon.com/fr/actualites/des-mega-raids-et-des-super-mega-raids-au-programme-du-festival-pokemon-go-2026-mega-finale
-CATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Méga-Mewtwo,Priorité Critique
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Festival Pokémon GO Méga-Finale demain à 10h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-tcg-live-30th-20260915@openai
-DTSTAMP:20260902T195800Z
-LAST-MODIFIED:20260902T195800Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:72
-X-POKEMON-USER-EFFECT-ID:tcg-live-30th-digital-release-fr-20260915
-DTSTART;TZID=Europe/Paris:20260915T190000
-DTEND;TZID=Europe/Paris:20260915T191500
-SUMMARY:⭐ ✅ 💻 JCC Pokémon Live — 30ᵉ Anniversaire disponible
-LOCATION:En ligne — JCC Pokémon Live
-DESCRIPTION:Priorité : ⭐ Important — l’extension 30ᵉ Anniversaire devient jouable numériquement avant la sortie physique.\nFiabilité : ✅ Confirmé par The Pokémon Company International.\n📅 Disponibilité JCC Pokémon Live : 15 septembre 2026 à 19:00 CEST (Europe/Paris), sur iOS, Android, macOS et Windows.\n🃏 Les Dresseurs pourront collectionner et jouer les cartes de l’extension et recevoir des bonus en jeu en se connectant.\n⚠️ Cette échéance numérique est distincte de la sortie physique mondiale du 16 septembre 2026.\nSource primaire : https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
-URL:https://the-pokemon-company-international.prezly.com/the-pokemon-company-international-devoile-sa-gamme-de-produits-celebrant-lextension-30-anniversaire-du-jeu-de-cartes-a-collectionner-pokemon
-CATEGORIES:Pokémon,JCC Pokémon Live,30e Anniversaire,Sortie numérique,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:JCC Pokémon Live 30ᵉ Anniversaire demain à 19h
 END:VALARM
 END:VEVENT
 END:VCALENDAR
