@@ -3,10 +3,13 @@ import argparse
 import hashlib
 import json
 import re
-import subprocess
 from pathlib import Path
 
-CAL = Path('calendars/pokemon-paris.ics')
+ALLOWED_CALENDARS = {
+    'calendars/pokemon-paris.ics',
+    'calendars/pokemon-tcg-france.ics',
+}
+DEFAULT_CALENDAR = 'calendars/pokemon-paris.ics'
 
 
 def blob_sha(data: bytes) -> str:
@@ -14,8 +17,15 @@ def blob_sha(data: bytes) -> str:
     return hashlib.sha1(hdr + data).hexdigest()
 
 
-def read_calendar():
-    raw = CAL.read_bytes()
+def resolve_calendar(req: dict) -> Path:
+    calendar_path = req.get('calendar_path', DEFAULT_CALENDAR)
+    if calendar_path not in ALLOWED_CALENDARS:
+        raise SystemExit(f'calendar_path not allowed: {calendar_path}')
+    return Path(calendar_path)
+
+
+def read_calendar(cal: Path):
+    raw = cal.read_bytes()
     text = raw.decode('utf-8')
     return raw, text
 
@@ -84,7 +94,8 @@ def semantic(event: str):
 
 def apply_request(req_path: Path):
     req = json.loads(req_path.read_text(encoding='utf-8'))
-    raw, text = read_calendar()
+    cal = resolve_calendar(req)
+    raw, text = read_calendar(cal)
     validate_calendar(text)
 
     expected = req.get('expected_calendar_blob_sha')
@@ -112,6 +123,7 @@ def apply_request(req_path: Path):
         if span:
             start, end, old = span
             if semantic(old) == semantic(event):
+                print(f'CALENDAR_PATH={cal.as_posix()}')
                 print('No business change')
                 return False
             event = bump_sequence(event, old)
@@ -133,6 +145,7 @@ def apply_request(req_path: Path):
             raise SystemExit('delete requires uid')
         span = find_event_span(text, uid)
         if not span:
+            print(f'CALENDAR_PATH={cal.as_posix()}')
             print('No business change')
             return False
         start, end, _ = span
@@ -152,7 +165,9 @@ def apply_request(req_path: Path):
         raise SystemExit('post-delete UID still present')
 
     if changed:
-        CAL.write_bytes(text.encode('utf-8'))
+        cal.write_bytes(text.encode('utf-8'))
+
+    print(f'CALENDAR_PATH={cal.as_posix()}')
     return changed
 
 
