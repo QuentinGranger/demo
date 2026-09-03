@@ -37,6 +37,27 @@ jobs:
           echo "path=$req" >> "$GITHUB_OUTPUT"
           echo "Using request: $req"
 
+      - name: Resolve target calendar
+        id: target
+        shell: bash
+        run: |
+          set -euo pipefail
+          cal=$(python3 - "${{ steps.request.outputs.path }}" <<'PY'
+          import json, sys
+          allowed = {
+              'calendars/pokemon-paris.ics',
+              'calendars/pokemon-tcg-france.ics',
+          }
+          req = json.load(open(sys.argv[1], encoding='utf-8'))
+          cal = req.get('calendar_path', 'calendars/pokemon-paris.ics')
+          if cal not in allowed:
+              raise SystemExit(f'calendar_path not allowed: {cal}')
+          print(cal)
+          PY
+          )
+          echo "path=$cal" >> "$GITHUB_OUTPUT"
+          echo "Target calendar: $cal"
+
       - name: Verify request against current calendar and apply
         run: |
           set -euo pipefail
@@ -46,41 +67,43 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          target="${{ steps.target.outputs.path }}"
           changed=$(git diff --name-only)
           if [ -z "$changed" ]; then
             echo "No business change"
             exit 0
           fi
-          unexpected=$(printf '%s\n' "$changed" | grep -v '^calendars/pokemon-paris\.ics$' || true)
+          unexpected=$(printf '%s\n' "$changed" | grep -v -F -x "$target" || true)
           if [ -n "$unexpected" ]; then
             echo "Unexpected changed files:"
             echo "$unexpected"
             exit 1
           fi
-          python3 - <<'PY'
+          TARGET="$target" python3 - <<'PY'
           from pathlib import Path
-          import re
-          p=Path('calendars/pokemon-paris.ics')
-          t=p.read_bytes().decode('utf-8')
+          import os, re
+          p = Path(os.environ['TARGET'])
+          t = p.read_bytes().decode('utf-8')
           assert t.startswith('BEGIN:VCALENDAR\r\n')
           assert t.rstrip().endswith('END:VCALENDAR')
           assert t.count('BEGIN:VCALENDAR') == 1
           assert t.count('END:VCALENDAR') == 1
-          uids=re.findall(r'(?m)^UID:(.+)\r$', t)
-          assert len(uids)==len(set(uids)), 'duplicate UIDs'
-          print(f'Validated {len(uids)} unique VEVENT UIDs')
+          uids = re.findall(r'(?m)^UID:(.+)\r$', t)
+          assert len(uids) == len(set(uids)), 'duplicate UIDs'
+          print(f'Validated {len(uids)} unique VEVENT UIDs in {p}')
           PY
 
-      - name: Commit calendar only
+      - name: Commit target calendar only
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- calendars/pokemon-paris.ics; then
+          target="${{ steps.target.outputs.path }}"
+          if git diff --quiet -- "$target"; then
             echo "No calendar change to commit"
             exit 0
           fi
           git config user.name "pokemon-calendar-bot"
           git config user.email "pokemon-calendar-bot@users.noreply.github.com"
-          git add calendars/pokemon-paris.ics
+          git add "$target"
           git commit -m "calendar: apply safe event patch"
           git push origin HEAD:master
