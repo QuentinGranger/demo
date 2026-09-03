@@ -1,0 +1,48 @@
+name: Sanitize Pokémon TCG France ICS
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/sanitize_pokemon_tcg_calendar.py'
+      - '.github/workflows/sanitize-pokemon-tcg-france.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sanitize-pokemon-tcg-france
+  cancel-in-progress: false
+
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Sanitize legacy malformed DESCRIPTION continuations
+        run: python3 scripts/sanitize_pokemon_tcg_calendar.py
+      - name: Validate only calendar changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          changed=$(git diff --name-only)
+          if [ -z "$changed" ]; then
+            echo "No change"
+            exit 0
+          fi
+          unexpected=$(printf '%s\n' "$changed" | grep -v '^calendars/pokemon-tcg-france\.ics$' || true)
+          test -z "$unexpected" || { echo "Unexpected changes: $unexpected"; exit 1; }
+      - name: Commit sanitized calendar
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- calendars/pokemon-tcg-france.ics; then exit 0; fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-tcg-france.ics
+          git commit -m "calendar: sanitize TCG France ICS for Apple Calendar"
+          git push origin HEAD:master
