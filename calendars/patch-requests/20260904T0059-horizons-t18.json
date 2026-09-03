@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "expected_calendar_blob_sha": "c2e1b5b06836c048224381d480d10bdd03248cc5",
+  "operation": "add",
+  "uid": "pokemon-horizons-t18-fr-20260923@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-horizons-t18-fr-20260923@openai\nDTSTAMP:20260903T225932Z\nLAST-MODIFIED:20260903T225932Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:9\nX-POKEMON-PRIORITY:INFO\nX-POKEMON-DATE-PRECISION:EXACT_DATE\nX-POKEMON-CONFIDENCE:98\nX-POKEMON-ACTIONABILITY:28\nX-POKEMON-PRODUCT-EAN:9782017392101\nX-POKEMON-USER-EFFECT-ID:book-horizons-t18-fr-20260923\nDTSTART;VALUE=DATE:20260923\nDTEND;VALUE=DATE:20260924\nSUMMARY:ℹ️ 📚 Sortie FR — Pokémon Les Horizons Tome 18\nLOCATION:France\nDESCRIPTION:Sortie française de Pokémon Les Horizons, Tome 18 — Face au Conseil 4 de Paldea ! Hachette Jeunesse. 64 pages. EAN 9782017392101. Prix éditeur papier : 5,90 €. Date confirmée par l'éditeur Hachette : 23 septembre 2026.\\nSource : https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/\nURL:https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/\nCATEGORIES:Pokémon,Livre,France,Sortie\nEND:VEVENT"
+}
