@@ -49,7 +49,7 @@ jobs:
               'calendars/pokemon-tcg-france.ics',
           }
           req = json.load(open(sys.argv[1], encoding='utf-8'))
-          cal = req.get('calendar_path', 'calendars/pokemon-paris.ics')
+          cal = req.get('calendar_path', 'calendars/pokemon-tcg-france.ics')
           if cal not in allowed:
               raise SystemExit(f'calendar_path not allowed: {cal}')
           print(cal)
