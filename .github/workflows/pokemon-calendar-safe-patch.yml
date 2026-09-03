@@ -1,0 +1,86 @@
+name: Pokémon calendar safe patch
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'calendars/patch-requests/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pokemon-calendar-safe-patch
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Select request from triggering commit
+        id: request
+        shell: bash
+        run: |
+          set -euo pipefail
+          req=$(git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" -- 'calendars/patch-requests/*.json' | head -n 1)
+          if [ -z "$req" ]; then
+            echo "No patch request in triggering commit"
+            exit 1
+          fi
+          echo "path=$req" >> "$GITHUB_OUTPUT"
+          echo "Using request: $req"
+
+      - name: Verify request against current calendar and apply
+        run: |
+          set -euo pipefail
+          python3 scripts/pokemon_calendar_safe_patch.py "${{ steps.request.outputs.path }}"
+
+      - name: Validate no collateral file changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          changed=$(git diff --name-only)
+          if [ -z "$changed" ]; then
+            echo "No business change"
+            exit 0
+          fi
+          unexpected=$(printf '%s\n' "$changed" | grep -v '^calendars/pokemon-paris\.ics$' || true)
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected changed files:"
+            echo "$unexpected"
+            exit 1
+          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('calendars/pokemon-paris.ics')
+          t=p.read_bytes().decode('utf-8')
+          assert t.startswith('BEGIN:VCALENDAR\r\n')
+          assert t.rstrip().endswith('END:VCALENDAR')
+          assert t.count('BEGIN:VCALENDAR') == 1
+          assert t.count('END:VCALENDAR') == 1
+          uids=re.findall(r'(?m)^UID:(.+)\r$', t)
+          assert len(uids)==len(set(uids)), 'duplicate UIDs'
+          print(f'Validated {len(uids)} unique VEVENT UIDs')
+          PY
+
+      - name: Commit calendar only
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo "No calendar change to commit"
+            exit 0
+          fi
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
+          git add calendars/pokemon-paris.ics
+          git commit -m "calendar: apply safe event patch"
+          git push origin HEAD:master
