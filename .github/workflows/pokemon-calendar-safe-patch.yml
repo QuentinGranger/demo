@@ -37,26 +37,38 @@ jobs:
           echo "path=$req" >> "$GITHUB_OUTPUT"
           echo "Using request: $req"
 
-      - name: Resolve target calendar
+      - name: Resolve target calendar and expected UID
         id: target
         shell: bash
         run: |
           set -euo pipefail
-          cal=$(python3 - "${{ steps.request.outputs.path }}" <<'PY'
+          python3 - "${{ steps.request.outputs.path }}" "$GITHUB_OUTPUT" <<'PY'
           import json, sys
+          req_path, out_path = sys.argv[1], sys.argv[2]
           allowed = {
               'calendars/pokemon-paris.ics',
               'calendars/pokemon-tcg-france.ics',
           }
-          req = json.load(open(sys.argv[1], encoding='utf-8'))
+          req = json.load(open(req_path, encoding='utf-8'))
           cal = req.get('calendar_path', 'calendars/pokemon-tcg-france.ics')
           if cal not in allowed:
               raise SystemExit(f'calendar_path not allowed: {cal}')
-          print(cal)
+          op = req.get('operation')
+          uid = req.get('uid')
+          if not uid and op in ('add', 'upsert', 'update'):
+              import re
+              m = re.search(r'(?m)^UID:(.+)$', req.get('event', ''))
+              uid = m.group(1).strip() if m else None
+          if not uid:
+              raise SystemExit('request has no resolvable UID')
+          with open(out_path, 'a', encoding='utf-8') as f:
+              f.write(f'path={cal}\n')
+              f.write(f'uid={uid}\n')
+              f.write(f'operation={op}\n')
+          print(f'Target calendar: {cal}')
+          print(f'Expected UID: {uid}')
+          print(f'Operation: {op}')
           PY
-          )
-          echo "path=$cal" >> "$GITHUB_OUTPUT"
-          echo "Target calendar: $cal"
 
       - name: Verify request against current calendar and apply
         run: |
@@ -107,3 +119,61 @@ jobs:
           git add "$target"
           git commit -m "calendar: apply safe event patch"
           git push origin HEAD:master
+
+      - name: Verify canonical master after write
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="${{ steps.target.outputs.path }}"
+          uid="${{ steps.target.outputs.uid }}"
+          op="${{ steps.target.outputs.operation }}"
+          git fetch origin master --force
+          git show "origin/master:$target" > /tmp/canonical.ics
+          python3 - /tmp/canonical.ics "$uid" "$op" <<'PY'
+          from pathlib import Path
+          import re, sys
+          path, uid, op = sys.argv[1:]
+          text = Path(path).read_text(encoding='utf-8')
+          if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
+              raise SystemExit('master verification failed: invalid VCALENDAR bounds')
+          uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
+          if len(uids) != len(set(uids)):
+              raise SystemExit('master verification failed: duplicate UIDs')
+          present = uid in uids
+          expected = op != 'delete'
+          if present != expected:
+              raise SystemExit(f'master verification failed: UID {uid} present={present}, expected={expected}')
+          print(f'MASTER_VERIFIED=1 UID={uid} PRESENT={present}')
+          PY
+
+      - name: Verify public RAW subscription feed
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="${{ steps.target.outputs.path }}"
+          uid="${{ steps.target.outputs.uid }}"
+          op="${{ steps.target.outputs.operation }}"
+          raw_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/${target}?verify=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-$(date +%s)"
+          echo "Checking public RAW feed: $raw_url"
+          curl --fail --silent --show-error --location \
+            --retry 6 --retry-delay 2 --retry-all-errors \
+            -H 'Cache-Control: no-cache' \
+            -H 'Pragma: no-cache' \
+            "$raw_url" -o /tmp/public-raw.ics
+          python3 - /tmp/public-raw.ics "$uid" "$op" <<'PY'
+          from pathlib import Path
+          import re, sys
+          path, uid, op = sys.argv[1:]
+          raw = Path(path).read_bytes()
+          text = raw.decode('utf-8')
+          if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
+              raise SystemExit('RAW verification failed: invalid VCALENDAR bounds')
+          uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
+          if len(uids) != len(set(uids)):
+              raise SystemExit('RAW verification failed: duplicate UIDs')
+          present = uid in uids
+          expected = op != 'delete'
+          if present != expected:
+              raise SystemExit(f'RAW verification failed: UID {uid} present={present}, expected={expected}')
+          print(f'PUBLIC_RAW_VERIFIED=1 UID={uid} PRESENT={present} BYTES={len(raw)}')
+          PY
