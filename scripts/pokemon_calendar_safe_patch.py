@@ -9,7 +9,7 @@ ALLOWED_CALENDARS = {
     'calendars/pokemon-paris.ics',
     'calendars/pokemon-tcg-france.ics',
 }
-DEFAULT_CALENDAR = 'calendars/pokemon-paris.ics'
+DEFAULT_CALENDAR = 'calendars/pokemon-tcg-france.ics'
 
 
 def blob_sha(data: bytes) -> str:
@@ -154,7 +154,6 @@ def apply_request(req_path: Path):
     else:
         raise SystemExit(f'unsupported operation: {op}')
 
-    # Canonicalize line endings only at final write; untouched logical lines stay unchanged.
     text = text.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\r\n')
     validate_calendar(text)
 
