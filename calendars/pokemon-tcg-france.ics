@@ -479,4 +479,25 @@ ACTION:DISPLAY
 DESCRIPTION:Événement Pokémon 30 ans à la Fnac Beaune demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-horizons-t18-fr-20260923@openai
+DTSTAMP:20260903T225932Z
+LAST-MODIFIED:20260903T225932Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:28
+X-POKEMON-PRODUCT-EAN:9782017392101
+X-POKEMON-USER-EFFECT-ID:book-horizons-t18-fr-20260923
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:ℹ️ 📚 Sortie FR — Pokémon Les Horizons Tome 18
+LOCATION:France
+DESCRIPTION:Sortie française de Pokémon Les Horizons, Tome 18 — Face au Conseil 4 de Paldea ! Hachette Jeunesse. 64 pages. EAN 9782017392101. Prix éditeur papier : 5,90 €. Date confirmée par l'éditeur Hachette : 23 septembre 2026.\nSource : https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/
+URL:https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/
+CATEGORIES:Pokémon,Livre,France,Sortie
+END:VEVENT
 END:VCALENDAR
