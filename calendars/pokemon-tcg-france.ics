@@ -62,8 +62,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260903T041557Z
-SEQUENCE:17
+LAST-MODIFIED:20260903T171216Z
+SEQUENCE:18
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -97,19 +97,20 @@ X-POKEMON-ALERT-LINK;RETAILER=Multimedia-Shop;STATUS=PREORDER_RESERVATION_OPEN;C
 X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SELLER=90:https://www.ultrajeux.com/produit-32960-etb-coffret-dresseur-d-elite-pokemon-30e-anniversaire-0196214144835.html
 X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=90;PRICE=259.00:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
 X-POKEMON-ALERT-LINK;RETAILER=DestockTCG;STATUS=INDEXED_NOT_OPEN;CONFIDENCE=82;SELLER=90:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
+X-POKEMON-ALERT-LINK;RETAILER=Smyths-France;STATUS=PREOPEN_PROBABLE;CONFIDENCE=88;SELLER=95;PRICE=55.99:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
 X-POKEMON-SELLER-RELIABILITY;RETAILER=DestockTCG;SCORE=90;BAND=TRUSTED:LEGAL_IDENTITY20|REGISTRY_VERIFICATION15|ADDRESS_CONSISTENCY10|DOMAIN_HISTORY7|PAYMENT_PROTECTION10|EXTERNAL_REPUTATION11|FULFILLMENT_TRACK_RECORD7|CONTACT_TRANSPARENCY5|POLICY_QUALITY5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟡 NOUVELLE FICHE — DestockTCG — ETB 30 ans
-LOCATION:France — DestockTCG
-DESCRIPTION:🟡 NOUVELLE FICHE\n\nDestockTCG — fiche FR créée avec EAN exact 0196214144835 et référence POK1010447102. La page affiche « Prix à venir » et « Prévenez-moi de l'ouverture des précommandes » : aucune précommande exploitable pour l'instant.\nPrix : à venir | score : — | écart vs 62,99 € : — | livraison : non applicable\nDate/heure Europe/Paris : détectée au 03/09/2026 06:15 | limite/client : non publiée | retrait : non confirmé\nConfiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835\nINFO À SURVEILLER
-URL:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
-X-POKEMON-LATEST-ALERT-LEVEL:NEW_LISTING
-X-POKEMON-LATEST-ALERT-RETAILER:DestockTCG
-X-POKEMON-LATEST-ALERT-STATUS:INDEXED_NOT_OPEN
-X-POKEMON-LATEST-ALERT-CONFIDENCE:82
-X-POKEMON-LATEST-SELLER-RELIABILITY:90
-X-POKEMON-LATEST-ALERT-AT:20260903T061557+0200
+SUMMARY:⚡ PRÉ-OUVERTURE PROBABLE — Smyths France — ETB 30 ans
+LOCATION:France — Smyths Toys
+DESCRIPTION:⚡ PRÉ-OUVERTURE PROBABLE\n\nSmyths Toys France — l'ETB 30e Anniversaire apparaît maintenant dans la catégorie Cartes Pokémon à 55,99 € et une fiche directe produit /p/261821 existe côté Smyths Europe. La fiche FR directe renvoie actuellement une protection 403 côté crawler : aucune précommande ou stock exploitable n'est confirmé.\nPrix : 55,99 € | score : S+ | écart vs 62,99 € : -7,00 € | livraison : non confirmée\nDate/heure Europe/Paris : détectée au 03/09/2026 19:12 | limite/client : non publiée | retrait : click & collect générique Smyths disponible, stock ETB non confirmé\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | réf. Smyths 261821\nPRÉPARE-TOI À L'OUVERTURE
+URL:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
+X-POKEMON-LATEST-ALERT-LEVEL:PREOPEN_PROBABLE
+X-POKEMON-LATEST-ALERT-RETAILER:Smyths-France
+X-POKEMON-LATEST-ALERT-STATUS:PREOPEN_PROBABLE
+X-POKEMON-LATEST-ALERT-CONFIDENCE:88
+X-POKEMON-LATEST-SELLER-RELIABILITY:95
+X-POKEMON-LATEST-ALERT-AT:20260903T191216+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
