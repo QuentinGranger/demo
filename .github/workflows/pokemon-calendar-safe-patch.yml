@@ -153,27 +153,39 @@ jobs:
           target="${{ steps.target.outputs.path }}"
           uid="${{ steps.target.outputs.uid }}"
           op="${{ steps.target.outputs.operation }}"
-          raw_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/${target}?verify=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-$(date +%s)"
-          echo "Checking public RAW feed: $raw_url"
-          curl --fail --silent --show-error --location \
-            --retry 6 --retry-delay 2 --retry-all-errors \
-            -H 'Cache-Control: no-cache' \
-            -H 'Pragma: no-cache' \
-            "$raw_url" -o /tmp/public-raw.ics
-          python3 - /tmp/public-raw.ics "$uid" "$op" <<'PY'
+          expected_present=true
+          if [ "$op" = "delete" ]; then expected_present=false; fi
+
+          for attempt in $(seq 1 20); do
+            raw_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/${target}?verify=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}-$(date +%s%N)"
+            echo "RAW verification attempt ${attempt}/20"
+            if curl --fail --silent --show-error --location \
+              -H 'Cache-Control: no-cache' \
+              -H 'Pragma: no-cache' \
+              "$raw_url" -o /tmp/public-raw.ics; then
+              if python3 - /tmp/public-raw.ics "$uid" "$op" <<'PY'
           from pathlib import Path
           import re, sys
           path, uid, op = sys.argv[1:]
           raw = Path(path).read_bytes()
           text = raw.decode('utf-8')
           if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
-              raise SystemExit('RAW verification failed: invalid VCALENDAR bounds')
+              raise SystemExit(2)
           uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
           if len(uids) != len(set(uids)):
-              raise SystemExit('RAW verification failed: duplicate UIDs')
+              raise SystemExit(3)
           present = uid in uids
           expected = op != 'delete'
           if present != expected:
-              raise SystemExit(f'RAW verification failed: UID {uid} present={present}, expected={expected}')
+              raise SystemExit(4)
           print(f'PUBLIC_RAW_VERIFIED=1 UID={uid} PRESENT={present} BYTES={len(raw)}')
           PY
+              then
+                exit 0
+              fi
+            fi
+            sleep 3
+          done
+
+          echo "RAW verification failed after propagation retries for UID=$uid expected_present=$expected_present"
+          exit 1
