@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260903T171216Z
-SEQUENCE:18
+LAST-MODIFIED:20260904T223435Z
+SEQUENCE:19
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -91,19 +91,20 @@ X-POKEMON-ALERT-LINK;RETAILER=UltraJeux;STATUS=PREOPEN_PROBABLE;CONFIDENCE=82;SE
 X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=90;PRICE=259.00:https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/
 X-POKEMON-ALERT-LINK;RETAILER=DestockTCG;STATUS=INDEXED_NOT_OPEN;CONFIDENCE=82;SELLER=90:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
 X-POKEMON-ALERT-LINK;RETAILER=Smyths-France;STATUS=PREOPEN_PROBABLE;CONFIDENCE=88;SELLER=95;PRICE=55.99:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
+X-POKEMON-ALERT-LINK;RETAILER=King-Jouet;STATUS=DATE_TIME_ANNOUNCED;CONFIDENCE=88;SELLER=95;DATE=20260916T090000+0200:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
 X-POKEMON-SELLER-RELIABILITY;RETAILER=DestockTCG;SCORE=90;BAND=TRUSTED:LEGAL_IDENTITY20|REGISTRY_VERIFICATION15|ADDRESS_CONSISTENCY10|DOMAIN_HISTORY7|PAYMENT_PROTECTION10|EXTERNAL_REPUTATION11|FULFILLMENT_TRACK_RECORD7|CONTACT_TRANSPARENCY5|POLICY_QUALITY5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:⚡ PRÉ-OUVERTURE PROBABLE — Smyths France — ETB 30 ans
-LOCATION:France — Smyths Toys
-DESCRIPTION:⚡ PRÉ-OUVERTURE PROBABLE\n\nSmyths Toys France — l'ETB 30e Anniversaire apparaît maintenant dans la catégorie Cartes Pokémon à 55,99 € et une fiche directe produit /p/261821 existe côté Smyths Europe. La fiche FR directe renvoie actuellement une protection 403 côté crawler : aucune précommande ou stock exploitable n'est confirmé.\nPrix : 55,99 € | score : S+ | écart vs 62,99 € : -7,00 € | livraison : non confirmée\nDate/heure Europe/Paris : détectée au 03/09/2026 19:12 | limite/client : non publiée | retrait : click & collect générique Smyths disponible, stock ETB non confirmé\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | réf. Smyths 261821\nPRÉPARE-TOI À L'OUVERTURE
-URL:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
-X-POKEMON-LATEST-ALERT-LEVEL:PREOPEN_PROBABLE
-X-POKEMON-LATEST-ALERT-RETAILER:Smyths-France
-X-POKEMON-LATEST-ALERT-STATUS:PREOPEN_PROBABLE
+SUMMARY:🟠 DATE/HEURE ANNONCÉE — King Jouet — ETB 30 ans
+LOCATION:France — King Jouet
+DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nKing Jouet annonce l'ouverture du drop JCC Pokémon 30 ans le 16/09/2026 à 09:00 Europe/Paris. La page officielle King Jouet cite explicitement un coffret Dresseur d'Élite dans la sélection du drop. La précommande/vente ETB n'est pas encore ouverte et aucun prix ETB n'est publié.\nPrix/livré : non annoncé | score : — | écart vs 62,99 € : —\nDate/heure Europe/Paris : 16/09/2026 09:00 | limite/client : non publiée | retrait : non publié\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | TIER 1\nPRÉPARE-TOI À L'OUVERTURE
+URL:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
+X-POKEMON-LATEST-ALERT-LEVEL:DATE_TIME_ANNOUNCED
+X-POKEMON-LATEST-ALERT-RETAILER:King-Jouet
+X-POKEMON-LATEST-ALERT-STATUS:DATE_TIME_ANNOUNCED
 X-POKEMON-LATEST-ALERT-CONFIDENCE:88
 X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260903T191216+0200
+X-POKEMON-LATEST-ALERT-AT:20260905T003435+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
