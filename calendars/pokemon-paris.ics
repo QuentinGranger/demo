@@ -1126,4 +1126,34 @@ ACTION:DISPLAY
 DESCRIPTION:🃏 Coffret 30 ans Nymphali-ex demain — vérifie prix et stock
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-poster-20260916@openai
+DTSTAMP:20260904T123600Z
+LAST-MODIFIED:20260904T123600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:94
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT-ID:tcg-30ans-poster-fr-20260916
+X-POKEMON-PRODUCT-EAN:196214147225
+X-POKEMON-DISTRIBUTOR-PRODUCT-ID:169048
+X-POKEMON-EVIDENCE-QUORUM:OFFICIAL_PRODUCT|DISTRIBUTOR_IDENTITY|RETAIL_PRODUCT_DATE
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:⭐ ✅ 🃏 Sortie JCC — Collection Poster 30 ans
+LOCATION:France
+DESCRIPTION:Collection Poster 30e Anniversaire du JCC Pokémon — version française. Identité exacte : EAN 196214147225 — CLD Product ID 169048. Contenu : 3 cartes promo brillantes Artikodin, Électhor et Sulfura, 1 poster recto-verso et 3 boosters 30e Anniversaire. Date France recoupée : 16 septembre 2026. État commercial : aucune disponibilité achetable fiable n'est affirmée par cet événement ; Playin indique actuellement une rupture temporaire/livraison indisponible.\nSources : https://www.pokemon.com/fr/actualites/jcc-pokemon-produits-30-anniversaire | https://cld.eu/fr/products/169048/the-pok-mon-company-pok-mon-jcc-collection-poster-30e-anniversaire-fr-pokemon-pok-mon-jcc | https://www.play-in.com/fr/produit/659419/coffret-collection-poster-30-ans-pokemon-fr
+URL:https://www.play-in.com/fr/produit/659419/coffret-collection-poster-30-ans-pokemon-fr
+CATEGORIES:Pokémon,JCC,30e Anniversaire,Sortie produit,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon — Collection Poster 30 ans demain : vérifie stock et prix
+END:VALARM
+END:VEVENT
 END:VCALENDAR
