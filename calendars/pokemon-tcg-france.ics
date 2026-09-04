@@ -500,4 +500,26 @@ DESCRIPTION:Sortie française de Pokémon Les Horizons, Tome 18 — Face au Cons
 URL:https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/
 CATEGORIES:Pokémon,Livre,France,Sortie
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-collection-classeur-q4-2026@openai
+DTSTAMP:20260904T014900Z
+LAST-MODIFIED:20260904T014900Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:7
+X-POKEMON-PRIORITY:MONITOR
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:QUARTER
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:45
+X-POKEMON-PRODUCT-SMYTHS-REF:261831
+X-POKEMON-USER-EFFECT-ID:tcg-30th-binder-collection-fr-q4-2026
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270101
+SUMMARY:🟡 🃏 Fenêtre de sortie — Collection classeur 30ᵉ Anniversaire
+LOCATION:France
+DESCRIPTION:Produit officiellement confirmé par Pokémon France pour le 4ᵉ trimestre 2026. Contenu : 1 classeur à thème à 9 pochettes et 5 boosters 30ᵉ Anniversaire. Les dates exactes actuellement publiées par des retailers français/européens sont contradictoires (notamment 2 octobre et 23 octobre) : aucune date exacte n'est donc retenue tant qu'une source plus forte ne tranche. Réf. Smyths France repérée : 261831.\nSource officielle : https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-classeur-30-anniversaire
+URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-classeur-30-anniversaire
+CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,À confirmer
+END:VEVENT
 END:VCALENDAR
