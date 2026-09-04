@@ -993,4 +993,25 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Journée Méga-Étouraptor demain de 14h à 17h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-upc-journee-soiree-q4-2026@openai
+DTSTAMP:20260904T071200Z
+LAST-MODIFIED:20260904T071200Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:6
+X-POKEMON-PRIORITY:MONITOR
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:QUARTER
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT-ID:tcg-30th-upc-day-night-fr-q4-2026
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270101
+SUMMARY:🟡 🃏 Fenêtre de sortie — Collections Ultra-Premium 30ᵉ Anniversaire
+LOCATION:France
+DESCRIPTION:Pokémon France confirme deux Collections Ultra-Premium 30ᵉ Anniversaire au 4ᵉ trimestre 2026 : Journée avec Mentali-ex et Soirée avec Noctali-ex. Chaque collection comprend notamment Pikachu-ex, Mentali-ex ou Noctali-ex, un tapis de jeu, 65 protège-cartes, un étui pour deck, une pièce métallisée, 6 dés marqueurs de dégâts, 29 boosters 30ᵉ Anniversaire, 1 booster Collection Classique 30ᵉ Anniversaire et 1 carte à code JCC Pokémon Live. Aucune date France exacte n'est publiée par la source officielle : la fenêtre Q4 est conservée sans sur-précision.\nSource officielle : https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collections-ultra-premium-30-anniversaire-journee-et-soiree
+URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collections-ultra-premium-30-anniversaire-journee-et-soiree
+CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,Ultra-Premium
+END:VEVENT
 END:VCALENDAR
