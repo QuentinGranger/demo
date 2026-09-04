@@ -1156,4 +1156,33 @@ ACTION:DISPLAY
 DESCRIPTION:JCC Pokémon — Collection Poster 30 ans demain : vérifie stock et prix
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-collection-ko-evoli-20260916@openai
+DTSTAMP:20260904T144827Z
+LAST-MODIFIED:20260904T144827Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:90
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT-ID:tcg-30ans-collection-ko-evoli-fr-20260916
+X-POKEMON-PRODUCT-REF:COLKOME5.5
+X-POKEMON-EVIDENCE-QUORUM:OFFICIAL_EXTENSION_DATE|RETAIL_PRODUCT_DATE_PLAYIN|RETAIL_PRODUCT_DATE_POKELITE
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:⭐ ✅ 🃏 Sortie JCC — Collection K.O. 30 ans Évoli
+LOCATION:France
+DESCRIPTION:Collection K.O. 30e Anniversaire — Évoli — version française. Référence publique relevée : COLKOME5.5. Contenu : 2 boosters 30e Anniversaire, 1 carte brillante Évoli et 1 pièce commémorative. La sortie France du 16 septembre 2026 est recoupée par plusieurs fiches retail directes et cohérente avec la date officielle de l’extension. État commercial : PAS OUVERT / livraison indisponible selon les sources vérifiées ; aucune disponibilité achetable n’est affirmée. Sources : https://www.pokemon.com/fr/actualites/admirez-lugia-et-ho-oh-dans-lextension-30-anniversaire-du-jcc-pokemon | https://www.play-in.com/fr/produit/659418/collection-k-o-pokemon-30-ans-evoli-fr | https://pokelite.fr/products/collection-k-o-evoli-30-ans-pokemon-fr
+URL:https://www.play-in.com/fr/produit/659418/collection-k-o-pokemon-30-ans-evoli-fr
+CATEGORIES:Pokémon,JCC,30e Anniversaire,Sortie produit,Évoli,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon — Collection K.O. 30 ans Évoli demain : vérifie stock et prix
+END:VALARM
+END:VEVENT
 END:VCALENDAR
