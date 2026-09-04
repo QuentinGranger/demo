@@ -1098,4 +1098,32 @@ ACTION:DISPLAY
 DESCRIPTION:JCC Pokémon — Coffret 30 ans Amphinobi-ex demain : vérifie stock et prix
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-nymphali-ex-20260916@openai
+DTSTAMP:20260904T110423Z
+LAST-MODIFIED:20260904T110423Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-PRODUCT-EAN:196214147102
+X-POKEMON-DISTRIBUTOR-ID:169045
+X-POKEMON-CONFIDENCE:93
+X-POKEMON-ACTIONABILITY:58
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:⭐ ✅ 🃏 Sortie JCC — Coffret 30 ans Nymphali-ex
+LOCATION:France
+DESCRIPTION:Priorité : ⭐ Important — nouveau produit physique 30e Anniversaire identifié précisément pour la France.\nIdentité : Coffret 30e Anniversaire Nymphali-ex FR — EAN 196214147102 — CLD ID 169045.\nDate France : 16 septembre 2026 côté retailer ; CLD disponibilité distributeur au 15 septembre 2026.\nContenu : 1 carte promo brillante Nymphali-ex, 1 carte grand format brillante et 4 boosters 30e Anniversaire.\nÉtat commercial : aucune disponibilité achetable fiable n'est affirmée par cet événement.\nSources : https://www.cld.eu/en/products/169045/the-pok-mon-company-pok-mon-jcc-coffret-30e-anniversaire-nymphali-ex-fr-pokemon-pok-mon-tcg ; https://www.play-in.com/fr/produit/659425/coffret-pokemon-30-ans-nymphali-ex-fr
+URL:https://www.play-in.com/fr/produit/659425/coffret-pokemon-30-ans-nymphali-ex-fr
+CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🃏 Coffret 30 ans Nymphali-ex demain — vérifie prix et stock
+END:VALARM
+END:VEVENT
 END:VCALENDAR
