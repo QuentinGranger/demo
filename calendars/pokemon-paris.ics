@@ -1068,4 +1068,34 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Journée Communauté classique Griknot demain à 14h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-amphinobi-ex-20260916@openai
+DTSTAMP:20260904T095258Z
+LAST-MODIFIED:20260904T095258Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:93
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT-ID:tcg-30ans-amphinobi-ex-fr-20260916
+X-POKEMON-PRODUCT-EAN:196214147164
+X-POKEMON-DISTRIBUTOR-PRODUCT-ID:169046
+X-POKEMON-EVIDENCE-QUORUM:OFFICIAL_EXTENSION_DATE|DISTRIBUTOR_IDENTITY_DATE|RETAIL_PRODUCT_DATE
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:⭐ ✅ 🃏 Sortie JCC — Coffret 30 ans Amphinobi-ex
+LOCATION:France
+DESCRIPTION:Sortie France suivie du Coffret Pokémon 30 Ans Amphinobi-ex. Identité exacte : EAN 196214147164. Recoupement : Pokémon confirme la sortie mondiale de l’extension 30e Anniversaire le 16 septembre 2026 ; CLD Distribution référence cet EAN sous Product ID 169046 avec disponibilité distributeur au 15 septembre ; Playin référence le coffret français pour le 16 septembre. État commercial : aucune offre OPEN n’est déduite de ces seules preuves ; surveiller disponibilité et prix. Sources : https://www.pokemon.com/fr/actualites/admirez-lugia-et-ho-oh-dans-lextension-30-anniversaire-du-jcc-pokemon | https://cld.eu/fr/license/pokemon | https://www.play-in.com/fr/produit/659558/coffret-pokemon-30-ans-amphinobi-ex-fr
+URL:https://www.play-in.com/fr/produit/659558/coffret-pokemon-30-ans-amphinobi-ex-fr
+CATEGORIES:Pokémon,JCC,30e Anniversaire,Sortie produit,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon — Coffret 30 ans Amphinobi-ex demain : vérifie stock et prix
+END:VALARM
+END:VEVENT
 END:VCALENDAR
