@@ -912,4 +912,31 @@ ACTION:DISPLAY
 DESCRIPTION:Événement Pokémon 30 ans à la Fnac Beaune demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-reglement-mc-20260909@openai
+DTSTAMP:20260904T033500Z
+LAST-MODIFIED:20260904T033500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:38
+X-POKEMON-USER-EFFECT-ID:pokemon-champions-reglement-mc-20260909
+DTSTART;TZID=Europe/Paris:20260909T040000
+DTEND;TZID=Europe/Paris:20261202T025900
+SUMMARY:ℹ️ ✅ 🎮 Pokémon Champions — Règlement M-C
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:Le règlement M-C entre officiellement en vigueur dans Pokémon Champions le 9 septembre 2026 à 02:00 UTC, soit 04:00 à Paris. Il reste actif jusqu’au 2 décembre 2026 à 01:59 UTC, soit 02:59 à Paris. Il ajoute notamment Méga-Drattak, Méga-Sarmuraï, Méga-Glaivodo, Méga-Absol Z, Méga-Carchacrok Z et Méga-Lucario Z, ainsi que 24 nouveaux Pokémon jouables.\nSource officielle : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Règlement,Compétitif
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Champions — le règlement M-C commence demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
