@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-paris.ics",
+  "expected_calendar_blob_sha": "0564a8b111baf2c7af3d0b64a4cd2092fd7e4a7e",
+  "operation": "add",
+  "uid": "pokemon-go-mega-staraptor-raid-day-20260919@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-go-mega-staraptor-raid-day-20260919@openai\nDTSTAMP:20260904T052455Z\nLAST-MODIFIED:20260904T052455Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:5\nX-POKEMON-PRIORITY:IMPORTANT\nX-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_LIMITED\nX-POKEMON-ACTION:PLAY\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:78\nX-POKEMON-USER-EFFECT-ID:go-mega-staraptor-raid-day-fr-20260919\nDTSTART;TZID=Europe/Paris:20260919T140000\nDTEND;TZID=Europe/Paris:20260919T170000\nSUMMARY:⭐ ✅ 📱 Pokémon GO — Journée de Super Méga-Raids Méga-Étouraptor\nLOCATION:France — Pokémon GO\nDESCRIPTION:Évènement officiel Pokémon GO le 19 septembre 2026 de 14h à 17h, heure locale. Première apparition de Méga-Étouraptor dans Pokémon GO via les Super Méga-Raids, déblocage du Super Niveau Max et de Rapace+. Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes et chances accrues de rencontrer Étouraptor chromatique. Source officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026\nURL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026\nCATEGORIES:Pokémon,Pokémon GO,Événement,Méga-Évolution,Raid,Priorité Important\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Pokémon GO — Journée Méga-Étouraptor demain de 14h à 17h\nEND:VALARM\nEND:VEVENT"
+}
