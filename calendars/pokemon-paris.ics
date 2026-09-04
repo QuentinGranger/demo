@@ -1014,4 +1014,31 @@ DESCRIPTION:Pokémon France confirme deux Collections Ultra-Premium 30ᵉ Annive
 URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collections-ultra-premium-30-anniversaire-journee-et-soiree
 CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,Ultra-Premium
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTAMP:20260904T080502Z
+LAST-MODIFIED:20260904T080502Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:DIGITAL_EVENT_LIMITED
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:90
+X-POKEMON-USER-EFFECT-ID:go-festival-mega-finale-fr-20260905
+DTSTART;TZID=Europe/Paris:20260905T100000
+DTEND;TZID=Europe/Paris:20260906T180000
+SUMMARY:🔥 ✅ 📱 Pokémon GO — Festival 2026 : Méga-Finale
+LOCATION:France — Pokémon GO
+DESCRIPTION:Évènement officiel Pokémon GO les 5 et 6 septembre 2026 de 10h à 18h, heure locale. Méga-Mewtwo X est mis à l’honneur en Super Méga-Raids le samedi 5 septembre et Méga-Mewtwo Y le dimanche 6 septembre. Huit habitats tournent pendant le week-end, avec Méga-Raids associés, bonus sur les Pokémon méga-évolués et absence de limite de Raids à distance pendant les deux jours. Le Passe GO : Méga-Finale reste disponible jusqu’au 6 septembre. Source officielle : https://pokemongo.com/fr/gofest/megafinale
+URL:https://pokemongo.com/fr/gofest/megafinale
+CATEGORIES:Pokémon,Pokémon GO,Événement,Festival,Méga-Évolution,Raid,Priorité Critique
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Méga-Finale commence dans 1 heure
+END:VALARM
+END:VEVENT
 END:VCALENDAR
