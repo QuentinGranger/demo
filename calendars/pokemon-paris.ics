@@ -939,4 +939,22 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Célébration Pokémon Horizons commence demain à 10 h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:tcgl-worlds2026-redeem-deadline-20260925@openai
+SEQUENCE:0
+DTSTART;TZID=Europe/Paris:20260925T180000
+DTEND;TZID=Europe/Paris:20260925T181500
+SUMMARY:⏳ Fin code TCG Live — récompenses Mondiaux/PokémonXP 2026
+DESCRIPTION:Deadline officielle de redemption des codes JCC Pokémon Live générés via les Twitch Drops des Mondiaux Pokémon 2026 et de PokémonXP. Les fenêtres de claim Twitch sont terminées : cet événement concerne uniquement les récompenses déjà réclamées et les codes personnels déjà générés. Ne jamais partager un code personnel. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,TCG-LIVE,CODE,DEADLINE
+X-POKEMON-USER-EFFECT-ID:tcgl-worlds2026-redeem-deadline-20260925
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les codes JCC Pokémon Live des Mondiaux/PokémonXP expirent demain à 18h.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
