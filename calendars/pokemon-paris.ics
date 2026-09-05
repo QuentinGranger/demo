@@ -915,4 +915,28 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Journée de Super Méga-Raids Étouraptor demain à 14 h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-celebration-20260916@openai
+DTSTAMP:20260905T115500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:go-horizons-celebration-fr-20260916
+DTSTART;TZID=Europe/Paris:20260916T100000
+DTEND;TZID=Europe/Paris:20260922T200000
+SUMMARY:⭐ ✅ Pokémon GO — Célébration Pokémon, les horizons
+LOCATION:France — Pokémon GO
+DESCRIPTION:Événement officiel Pokémon GO du 16 septembre 2026 à 10 h au 22 septembre à 20 h heure locale. Début de Salamèche portant les lunettes de Friede, avec évolution possible jusqu’à Dracaufeu costumé. Passe GO de collaboration disponible pendant l’événement. Les récompenses du Passe GO expirent le 24 septembre 2026 à 20 h heure locale. Source officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
+URL:https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
+CATEGORIES:Pokémon,Pokémon GO,Événement,Pokémon Horizons
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Célébration Pokémon Horizons commence demain à 10 h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
