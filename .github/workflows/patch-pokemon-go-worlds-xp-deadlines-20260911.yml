@@ -1,0 +1,27 @@
+name: ZERO MISS Pokémon GO Worlds XP reward deadlines
+on:
+  push:
+    paths:
+      - 'scripts/patch_pokemon_go_worlds_xp_deadlines_20260911.py'
+      - '.github/workflows/patch-pokemon-go-worlds-xp-deadlines-20260911.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch canonical calendar
+        run: python scripts/patch_pokemon_go_worlds_xp_deadlines_20260911.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change needed.'
+            exit 0
+          fi
+          git config user.name 'pokemon-calendar-bot'
+          git config user.email 'pokemon-calendar-bot@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: add Pokémon GO Worlds and PokémonXP reward deadlines'
+          git push
