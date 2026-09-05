@@ -25,3 +25,4 @@ jobs:
           git add calendars/pokemon-paris.ics
           git commit -m 'calendar: consolidate Pokémon duplicate events'
           git push
+# rerun 2026-09-05T20:37:33+02:00
