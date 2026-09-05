@@ -523,4 +523,22 @@ DESCRIPTION:Produit officiellement confirmé par Pokémon France pour le 4ᵉ tr
 URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-classeur-30-anniversaire
 CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,À confirmer
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTART;TZID=Europe/Paris:20260905T100000
+DTEND;TZID=Europe/Paris:20260906T180000
+SUMMARY:🌐 Pokémon GO — Festival 2026 Méga-Finale
+DESCRIPTION:Festival Pokémon GO 2026 Méga-Finale. Samedi 5 et dimanche 6 septembre 2026 de 10:00 à 18:00 (heure locale). Source officielle : https://pokemongo.com/fr/gofest/megafinale
+URL:https://pokemongo.com/fr/gofest/megafinale
+CATEGORIES:POKEMON,POKEMON GO,EVENT
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:94
+X-POKEMON-USER-EFFECT:pokemon-go-mega-finale-20260905
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Festival Pokémon GO 2026 Méga-Finale demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
