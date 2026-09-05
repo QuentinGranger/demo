@@ -1020,4 +1020,25 @@ ACTION:DISPLAY
 DESCRIPTION:JCC Pokémon 30ᵉ Anniversaire — vague 2 demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-regulation-mc-20260909@openai
+DTSTAMP:20260905T162821Z
+LAST-MODIFIED:20260905T162821Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT-ID:pokemon-champions-regulation-mc-global-20260909
+DTSTART;TZID=Europe/Paris:20260909T040000
+DTEND;TZID=Europe/Paris:20261202T025900
+SUMMARY:⭐ ✅ 🎮 Pokémon Champions — Règlement M-C
+LOCATION:En ligne — Pokémon Champions (Nintendo Switch / iOS / Android)
+DESCRIPTION:Priorité : ⭐ Important — nouveau règlement de combats classés Pokémon Champions.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 2 septembre 2026.\n📅 Période officielle : du 9 septembre 2026 à 02:00 UTC au 2 décembre 2026 à 01:59 UTC, soit du 9 septembre à 04:00 (CEST) au 2 décembre à 02:59 (CET) en heure de Paris.\n🎮 Contenu : 24 nouveaux Pokémon jouables et 6 nouvelles Méga-Évolutions, dont Méga-Absol Z, Méga-Carchacrok Z, Méga-Lucario Z, Méga-Drattak, Méga-Sarmuraï et Méga-Glaivodo.\nDATE_PRECISION=EXACT_DATETIME. CONFIDENCE=99. ACTIONABILITY=72.\nSource officielle : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions\nRecoupement secondaire : https://www.serebii.net/pokemonchampions/rankedbattle/regulationm-c.shtml
+URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Combat classé,Règlement,Priorité Important
+END:VEVENT
 END:VCALENDAR
