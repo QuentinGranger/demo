@@ -5,9 +5,6 @@ PATH = Path('calendars/pokemon-paris.ics')
 text = PATH.read_text(encoding='utf-8')
 newline = '\r\n' if '\r\n' in text else '\n'
 
-# Canonical events to remove because they are either superseded duplicates or
-# future public-preorder alerts invalidated by the retailer's current public
-# position (Pokémon 30th public preorders not opening / product pages closed).
 REMOVE_UIDS = {
     'pokemon-30ans-collection-classeur-q4-2026@openai',
     'ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai',
@@ -42,15 +39,23 @@ while i < len(lines):
     out.append(lines[i])
     i += 1
 
+# Remove RELATED-TO relations pointing at events that are now absent.
+cleaned = []
+for line in out:
+    if line.startswith('RELATED-TO;') and ':' in line:
+        target = line.split(':', 1)[1]
+        if target in REMOVE_UIDS:
+            continue
+    cleaned.append(line)
+out = cleaned
+
 new_text = '\n'.join(out)
 
-# Re-parent any surviving legacy wave-2 children if they exist. This is
-# idempotent and harmless after the invalidated Guizette public alerts vanish.
+# If any valid surviving legacy child ever remains, point it to the canonical wave.
 legacy_parent = 'RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai'
 new_parent = 'RELATED-TO;RELTYPE=PARENT:pokemon-jcc-30ans-wave2-fr-20261002@openai'
 new_text = new_text.replace(legacy_parent, new_parent)
 
-# Safety checks: canonical consolidated entries must exist exactly once.
 required_uids = [
     'pokemon-jcc-30ans-wave2-fr-20261002@openai',
     'fnac-beaune-pokemon-30-20260919@openai',
@@ -63,8 +68,9 @@ for uid in required_uids:
 for uid in REMOVE_UIDS:
     if f'UID:{uid}' in new_text:
         raise SystemExit(f'Safety check failed: invalidated/superseded UID still present: {uid}')
+    if re.search(r'^RELATED-TO;[^:]*:' + re.escape(uid) + r'$', new_text, flags=re.M):
+        raise SystemExit(f'Safety check failed: orphan relation still points to {uid}')
 
-# Global VCALENDAR and UID uniqueness validation.
 if new_text.count('BEGIN:VCALENDAR') != 1 or new_text.count('END:VCALENDAR') != 1:
     raise SystemExit('Safety check failed: VCALENDAR envelope invalid')
 uids = re.findall(r'^UID:(.+)$', new_text, flags=re.M)
@@ -72,8 +78,15 @@ if len(uids) != len(set(uids)):
     dupes = sorted({u for u in uids if uids.count(u) > 1})
     raise SystemExit(f'Safety check failed: duplicate UIDs remain: {dupes}')
 
-# Preserve original line-ending policy.
+# Check every RELATED-TO target against current UIDs to prevent hidden orphans.
+uid_set = set(uids)
+relations = re.findall(r'^RELATED-TO;[^:]*:(.+)$', new_text, flags=re.M)
+orphans = sorted({target for target in relations if target not in uid_set})
+if orphans:
+    raise SystemExit(f'Safety check failed: unrelated orphan RELATED-TO targets remain: {orphans}')
+
 PATH.write_text(new_text.replace('\n', newline), encoding='utf-8', newline='')
 print('Removed invalidated/superseded events:', ', '.join(sorted(removed)))
 print('VEVENT count:', new_text.count('BEGIN:VEVENT'))
 print('UID count:', len(uids))
+print('RELATED-TO orphan count: 0')
