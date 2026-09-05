@@ -1,0 +1,27 @@
+name: ZERO MISS Pokémon calendar duplicate audit fix
+on:
+  push:
+    paths:
+      - 'scripts/audit_fix_pokemon_duplicates_20260905.py'
+      - '.github/workflows/audit-fix-pokemon-duplicates-20260905.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Consolidate superseded Pokémon calendar events
+        run: python scripts/audit_fix_pokemon_duplicates_20260905.py
+      - name: Commit canonical calendar changes
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change needed.'
+            exit 0
+          fi
+          git config user.name 'pokemon-calendar-bot'
+          git config user.email 'pokemon-calendar-bot@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'calendar: consolidate Pokémon duplicate events'
+          git push
