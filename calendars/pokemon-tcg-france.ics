@@ -541,4 +541,22 @@ ACTION:DISPLAY
 DESCRIPTION:Festival Pokémon GO 2026 Méga-Finale demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hordes-mega-20260908@openai
+DTSTAMP:20260905T103407Z
+DTSTART;TZID=Europe/Paris:20260908T100000
+DTEND;TZID=Europe/Paris:20260914T200000
+SUMMARY:⚡ Pokémon GO — Hordes Méga
+DESCRIPTION:Événement officiel Pokémon GO du 8 septembre 2026 à 10h au 14 septembre à 20h (heure locale). Débuts de Grondogue et Dogrino, Flamenroule chromatique disponible pour la première fois, nouveaux Super Niveaux Max pour Méga-Dardargnan et Méga-Démolosse. Les récompenses du Passe GO expirent le 16 septembre à 20h. Source: https://pokemongo.com/fr/news/mega-squads-2026
+URL:https://pokemongo.com/fr/news/mega-squads-2026
+CATEGORIES:POKEMON,POKEMON GO,EVENEMENT
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-hordes-mega-20260908
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Rappel — Pokémon GO Hordes Méga demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
