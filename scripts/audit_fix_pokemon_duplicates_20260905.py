@@ -56,9 +56,49 @@ legacy_parent = 'RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@
 new_parent = 'RELATED-TO;RELTYPE=PARENT:pokemon-jcc-30ans-wave2-fr-20261002@openai'
 new_text = new_text.replace(legacy_parent, new_parent)
 
+# Complete the canonical 16 September launch wave using the now-confirmed product set.
+launch_uid = '74a1a108-68cd-4c81-b8f1-9206bfa31970@openai'
+launch_match = re.search(
+    r'BEGIN:VEVENT\n(?:(?!END:VEVENT).)*?UID:' + re.escape(launch_uid) + r'\n(?:(?!END:VEVENT).)*?END:VEVENT',
+    new_text,
+    flags=re.S,
+)
+if not launch_match:
+    raise SystemExit('Safety check failed: canonical 16 September launch wave not found')
+launch = launch_match.group(0)
+launch = re.sub(r'^X-POKEMON-WAVE-COMPLETENESS:.*$', 'X-POKEMON-WAVE-COMPLETENESS:COMPLETE', launch, flags=re.M)
+launch = re.sub(r'^X-POKEMON-WAVE-PRODUCT-COUNT:.*$', 'X-POKEMON-WAVE-PRODUCT-COUNT:5', launch, flags=re.M)
+launch = re.sub(r'^X-POKEMON-WAVE-PREORDER-COUNT:.*$', 'X-POKEMON-WAVE-PREORDER-COUNT:0', launch, flags=re.M)
+launch = re.sub(
+    r'^X-POKEMON-WAVE-PRODUCTS:.*$',
+    'X-POKEMON-WAVE-PRODUCTS:Coffret Dresseur d’Élite 30 ans|Coffret Nymphali-ex 30 ans|Coffret Amphinobi-ex 30 ans|Collection Poster 30 ans|Collection Autocollant réajustable 30 ans',
+    launch,
+    flags=re.M,
+)
+launch = re.sub(r'^X-POKEMON-WAVE-ITEM;STATE=CONFIRMED(?:;PREORDER=\d+)?:.*\n?', '', launch, flags=re.M)
+insert_after = 'X-POKEMON-WAVE-PRODUCTS:Coffret Dresseur d’Élite 30 ans|Coffret Nymphali-ex 30 ans|Coffret Amphinobi-ex 30 ans|Collection Poster 30 ans|Collection Autocollant réajustable 30 ans\n'
+items = (
+    'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Dresseur d’Élite 30 ans\n'
+    'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Nymphali-ex 30 ans\n'
+    'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Amphinobi-ex 30 ans\n'
+    'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection Poster 30 ans\n'
+    'X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection Autocollant réajustable 30 ans\n'
+)
+launch = launch.replace(insert_after, insert_after + items, 1)
+launch = re.sub(r'^SEQUENCE:(\d+)$', lambda m: f'SEQUENCE:{int(m.group(1)) + 1}', launch, count=1, flags=re.M)
+launch = re.sub(r'^LAST-MODIFIED:.*$', 'LAST-MODIFIED:20260905T183733Z', launch, count=1, flags=re.M)
+launch = re.sub(
+    r'^DESCRIPTION:.*?(?=\nURL:)',
+    'DESCRIPTION:Priorité : ⭐ Important — sortie majeure de la gamme 30ᵉ Anniversaire.\\nFiabilité : ✅ Pokémon confirme la sortie mondiale du 16 septembre 2026 et sa page produits de septembre recoupe la vague de lancement.\\n📦 Checklist consolidée : Coffret Dresseur d’Élite 30 ans ; Coffret Nymphali-ex 30 ans ; Coffret Amphinobi-ex 30 ans ; Collection Poster 30 ans ; Collection Autocollant réajustable 30 ans.\\nLa précédente précommande Guizette du 6 septembre est invalidée et ne doit plus être présentée comme opportunité publique.\\nDATE_PRECISION=EXACT_DATE. Aucun horaire de vente global n’est inventé.\\nSource : https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026',
+    launch,
+    flags=re.S | re.M,
+)
+new_text = new_text[:launch_match.start()] + launch + new_text[launch_match.end():]
+
 required_uids = [
     'pokemon-jcc-30ans-wave2-fr-20261002@openai',
     'fnac-beaune-pokemon-30-20260919@openai',
+    launch_uid,
 ]
 for uid in required_uids:
     count = new_text.count(f'UID:{uid}')
@@ -70,6 +110,12 @@ for uid in REMOVE_UIDS:
         raise SystemExit(f'Safety check failed: invalidated/superseded UID still present: {uid}')
     if re.search(r'^RELATED-TO;[^:]*:' + re.escape(uid) + r'$', new_text, flags=re.M):
         raise SystemExit(f'Safety check failed: orphan relation still points to {uid}')
+
+if 'X-POKEMON-WAVE-COMPLETENESS:COMPLETE' not in launch or 'X-POKEMON-WAVE-PRODUCT-COUNT:5' not in launch:
+    raise SystemExit('Safety check failed: launch wave completion patch missing')
+for product in ['Coffret Nymphali-ex 30 ans', 'Coffret Amphinobi-ex 30 ans', 'Collection Poster 30 ans', 'Collection Autocollant réajustable 30 ans']:
+    if product not in launch:
+        raise SystemExit(f'Safety check failed: launch product missing: {product}')
 
 if new_text.count('BEGIN:VCALENDAR') != 1 or new_text.count('END:VCALENDAR') != 1:
     raise SystemExit('Safety check failed: VCALENDAR envelope invalid')
@@ -87,6 +133,7 @@ if orphans:
 
 PATH.write_text(new_text.replace('\n', newline), encoding='utf-8', newline='')
 print('Removed invalidated/superseded events:', ', '.join(sorted(removed)))
+print('Launch wave patched to COMPLETE with 5 products')
 print('VEVENT count:', new_text.count('BEGIN:VEVENT'))
 print('UID count:', len(uids))
 print('RELATED-TO orphan count: 0')
