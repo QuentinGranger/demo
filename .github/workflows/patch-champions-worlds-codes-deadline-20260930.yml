@@ -1,0 +1,56 @@
+name: Pokémon Champions codes deadline safe patch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-champions-worlds-codes-deadline-20260930.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Patch canonical Pokémon calendar
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          p = Path('calendars/pokemon-paris.ics')
+          raw = p.read_text(encoding='utf-8')
+          uid = 'pokemon-champions-worlds2026-codes-deadline-20260930@openai'
+          if uid in raw:
+              print('UID already present; no business change')
+              raise SystemExit(0)
+          event = '''BEGIN:VEVENT\nUID:pokemon-champions-worlds2026-codes-deadline-20260930@openai\nDTSTAMP:20260905T195626Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:5\nX-POKEMON-PRIORITY:IMPORTANT\nX-POKEMON-ACTION:REDEEM\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:78\nX-POKEMON-USER-EFFECT:champions-worlds2026-twitch-codes-redeem-deadline-global\nDTSTART;TZID=Europe/Paris:20260930T015900\nDTEND;TZID=Europe/Paris:20260930T021400\nSUMMARY:⏳ Fin codes Pokémon Champions — récompenses Mondiaux/PokémonXP 2026\nLOCATION:En ligne — Pokémon Champions\nDESCRIPTION:Deadline officielle d’échange des codes Pokémon Champions générés via les Twitch Drops des Mondiaux Pokémon 2026 / PokémonXP : 29 septembre 2026 à 23:59 UTC, soit 30 septembre 2026 à 01:59 heure de Paris (CEST). Cela concerne notamment les codes à usage unique obtenus via les Drops pour des récompenses d’entraînement. Ne pas confondre avec les mots de passe Félinferno / tenue des Mondiaux, expirés le 3 septembre. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\nURL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\nCATEGORIES:Pokémon,Pokémon Champions,Code,Deadline,Mondiaux 2026\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Les codes Pokémon Champions des Mondiaux/PokémonXP expirent demain.\nEND:VALARM\nEND:VEVENT\n'''
+          marker = 'END:VCALENDAR'
+          if marker not in raw:
+              raise SystemExit('Invalid ICS: missing END:VCALENDAR')
+          raw = raw.replace(marker, event + marker, 1)
+          # Business-integrity checks before write.
+          uids = re.findall(r'^UID:(.+)$', raw, flags=re.M)
+          if len(uids) != len(set(uids)):
+              raise SystemExit('Invalid ICS: duplicate UID detected')
+          if raw.count('BEGIN:VCALENDAR') != 1 or raw.count('END:VCALENDAR') != 1:
+              raise SystemExit('Invalid ICS envelope')
+          # RFC5545 line endings.
+          raw = raw.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\r\n')
+          p.write_bytes(raw.encode('utf-8'))
+      - name: Commit only if materially changed
+        run: |
+          if git diff --quiet -- calendars/pokemon-paris.ics; then
+            echo 'No calendar change required.'
+            exit 0
+          fi
+          git config user.name 'openai-calendar-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add calendars/pokemon-paris.ics
+          git commit -m 'Calendarize Pokémon Champions Worlds codes redemption deadline'
+          git pull --rebase origin master
+          git push origin HEAD:master
