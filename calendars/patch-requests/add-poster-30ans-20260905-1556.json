@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-paris.ics",
+  "operation": "add",
+  "expected_calendar_blob_sha": "9612f2a86f6a941680cc2f18ee713a716d5a17b9",
+  "uid": "pokemon-jcc-30ans-poster-fr-20260916@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-jcc-30ans-poster-fr-20260916@openai\r\nDTSTAMP:20260905T135648Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nDTSTART;VALUE=DATE:20260916\r\nDTEND;VALUE=DATE:20260917\r\nSUMMARY:🃏 Sortie JCC Pokémon — Collection Poster 30ᵉ Anniversaire (FR)\r\nDESCRIPTION:Sortie France de la Collection Poster 30ᵉ Anniversaire du JCC Pokémon. EAN/GTIN: 0196214147225 / 196214147225. Contenu: 3 cartes promo brillantes Artikodin, Électhor et Sulfura, 1 poster double face et 3 boosters 30ᵉ Anniversaire. DATE_PRECISION=EXACT_DATE. CONFIDENCE=98. ACTIONABILITY=58. Sources: Pokémon officiel; CLD Distribution ID 169048; retailers FR recoupés.\r\nCATEGORIES:POKEMON,JCC,RELEASE,30TH\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-CONFIDENCE:98\r\nX-POKEMON-ACTIONABILITY:58\r\nX-POKEMON-PRODUCT-EAN:196214147225\r\nX-POKEMON-USER-EFFECT:product-196214147225-release-fr-20260916\r\nEND:VEVENT"
+}
