@@ -880,4 +880,60 @@ ACTION:DISPLAY
 DESCRIPTION:Les codes Pokémon Champions des Mondiaux/PokémonXP expirent demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-rewards-deadline-20260911@openai
+DTSTAMP:20260905T205437Z
+LAST-MODIFIED:20260905T205437Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DEADLINE
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-FIRST-ADDED-AT:20260905T205437Z
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT-ID:pokemon-go-worlds2026-rewards-expiry-fr-20260911
+DTSTART;TZID=Europe/Paris:20260911T220000
+DTEND;TZID=Europe/Paris:20260911T220000
+SUMMARY:⏳ Fin récompenses Pokémon GO — Mondiaux 2026
+LOCATION:En ligne — Pokémon GO
+DESCRIPTION:Priorité : ⭐ Important — deadline officielle de récompense.\nFiabilité : ✅ Source primaire Pokémon. Les récompenses Pokémon GO obtenues via les diffusions des Championnats du Monde 2026 expirent le 11 septembre 2026 à 13h PDT, soit 22h en Europe/Paris (CEST). Cela couvre notamment les Études ponctuelles et récompenses associées annoncées par Pokémon.\nAction : récupère/valide la récompense avant cette échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drops,Récompense
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Fin récompenses Pokémon GO — Mondiaux 2026 dans 24 h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-xp2026-pikachu-reward-deadline-20260912@openai
+DTSTAMP:20260905T205437Z
+LAST-MODIFIED:20260905T205437Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:DEADLINE
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-FIRST-ADDED-AT:20260905T205437Z
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT-ID:pokemon-go-pokemonxp2026-pikachu-claim-fr-20260912
+DTSTART;TZID=Europe/Paris:20260912T050000
+DTEND;TZID=Europe/Paris:20260912T050000
+SUMMARY:⏳ Fin récupération Pokémon GO — Pikachu PokémonXP
+LOCATION:En ligne — Pokémon GO
+DESCRIPTION:Priorité : ⭐ Important — deadline officielle de récompense.\nFiabilité : ✅ Source primaire Pokémon. La récompense Pokémon GO du panel PokémonXP permettant une Étude ponctuelle avec Pikachu en costume PokémonXP doit être récupérée avant le 11 septembre 2026 à 20h PDT, soit le 12 septembre à 05h en Europe/Paris (CEST).\nAction : récupère/valide la récompense avant cette échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drops,Récompense
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:⏳ Fin récupération Pokémon GO — Pikachu PokémonXP dans 24 h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
