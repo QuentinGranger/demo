@@ -5,12 +5,17 @@ PATH = Path('calendars/pokemon-paris.ics')
 text = PATH.read_text(encoding='utf-8')
 newline = '\r\n' if '\r\n' in text else '\n'
 
-# Canonical events to remove because they are superseded by stronger,
-# retailer-independent consolidated events already present in the calendar.
+# Canonical events to remove because they are either superseded duplicates or
+# future public-preorder alerts invalidated by the retailer's current public
+# position (Pokémon 30th public preorders not opening / product pages closed).
 REMOVE_UIDS = {
     'pokemon-30ans-collection-classeur-q4-2026@openai',
     'ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai',
     'pokemon-fnac-beaune-30ans-20260919@openai',
+    'preorder-guizette-etb-30ans-20260906@openai',
+    'preorder-guizette-bundle-30ans-20260919@openai',
+    'preorder-guizette-classeur-30ans-20260920@openai',
+    'preorder-guizette-premium-30ans-20261004@openai',
 }
 
 lines = text.replace('\r\n', '\n').split('\n')
@@ -39,8 +44,8 @@ while i < len(lines):
 
 new_text = '\n'.join(out)
 
-# Re-parent the existing Guizette preorder child events to the consolidated
-# wave-2 event so removing the legacy tentative parent does not create orphans.
+# Re-parent any surviving legacy wave-2 children if they exist. This is
+# idempotent and harmless after the invalidated Guizette public alerts vanish.
 legacy_parent = 'RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai'
 new_parent = 'RELATED-TO;RELTYPE=PARENT:pokemon-jcc-30ans-wave2-fr-20261002@openai'
 new_text = new_text.replace(legacy_parent, new_parent)
@@ -57,11 +62,7 @@ for uid in required_uids:
 
 for uid in REMOVE_UIDS:
     if f'UID:{uid}' in new_text:
-        raise SystemExit(f'Safety check failed: superseded UID still present: {uid}')
-
-# Two preorder child links should now target the canonical wave-2 parent.
-if new_text.count(new_parent) < 2:
-    raise SystemExit('Safety check failed: preorder children were not re-parented')
+        raise SystemExit(f'Safety check failed: invalidated/superseded UID still present: {uid}')
 
 # Global VCALENDAR and UID uniqueness validation.
 if new_text.count('BEGIN:VCALENDAR') != 1 or new_text.count('END:VCALENDAR') != 1:
@@ -73,6 +74,6 @@ if len(uids) != len(set(uids)):
 
 # Preserve original line-ending policy.
 PATH.write_text(new_text.replace('\n', newline), encoding='utf-8', newline='')
-print('Removed superseded events:', ', '.join(sorted(removed)))
+print('Removed invalidated/superseded events:', ', '.join(sorted(removed)))
 print('VEVENT count:', new_text.count('BEGIN:VEVENT'))
 print('UID count:', len(uids))
