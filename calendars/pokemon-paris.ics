@@ -855,4 +855,29 @@ DESCRIPTION:Priorité : ⭐ Important — nouveau règlement de combats classés
 URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
 CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Combat classé,Règlement,Priorité Important
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-worlds2026-codes-deadline-20260930@openai
+DTSTAMP:20260905T195626Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT:champions-worlds2026-twitch-codes-redeem-deadline-global
+DTSTART;TZID=Europe/Paris:20260930T015900
+DTEND;TZID=Europe/Paris:20260930T021400
+SUMMARY:⏳ Fin codes Pokémon Champions — récompenses Mondiaux/PokémonXP 2026
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:Deadline officielle d’échange des codes Pokémon Champions générés via les Twitch Drops des Mondiaux Pokémon 2026 / PokémonXP : 29 septembre 2026 à 23:59 UTC, soit 30 septembre 2026 à 01:59 heure de Paris (CEST). Cela concerne notamment les codes à usage unique obtenus via les Drops pour des récompenses d’entraînement. Ne pas confondre avec les mots de passe Félinferno / tenue des Mondiaux, expirés le 3 septembre. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon Champions,Code,Deadline,Mondiaux 2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les codes Pokémon Champions des Mondiaux/PokémonXP expirent demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
