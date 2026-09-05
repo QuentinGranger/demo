@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-paris.ics",
+  "expected_calendar_blob_sha": "41f9def46ac67728cf2ebe796e24f96c628737ed",
+  "operation": "add",
+  "uid": "pokemon-go-horizons-celebration-20260916@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-go-horizons-celebration-20260916@openai\nDTSTAMP:20260905T115500Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:5\nX-POKEMON-PRIORITY:IMPORTANT\nX-POKEMON-ACTION:PLAY\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:80\nX-POKEMON-USER-EFFECT:go-horizons-celebration-fr-20260916\nDTSTART;TZID=Europe/Paris:20260916T100000\nDTEND;TZID=Europe/Paris:20260922T200000\nSUMMARY:⭐ ✅ Pokémon GO — Célébration Pokémon, les horizons\nLOCATION:France — Pokémon GO\nDESCRIPTION:Événement officiel Pokémon GO du 16 septembre 2026 à 10 h au 22 septembre à 20 h heure locale. Début de Salamèche portant les lunettes de Friede, avec évolution possible jusqu’à Dracaufeu costumé. Passe GO de collaboration disponible pendant l’événement. Les récompenses du Passe GO expirent le 24 septembre 2026 à 20 h heure locale. Source officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026\nURL:https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026\nCATEGORIES:Pokémon,Pokémon GO,Événement,Pokémon Horizons\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Pokémon GO — Célébration Pokémon Horizons commence demain à 10 h\nEND:VALARM\nEND:VEVENT"
+}
