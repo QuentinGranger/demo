@@ -1,0 +1,44 @@
+name: Pokémon calendar full probe
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'calendars/probe-requests/*.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pokemon-calendar-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Select probe request
+        id: request
+        shell: bash
+        run: |
+          set -euo pipefail
+          req=$(git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" -- 'calendars/probe-requests/*.json' | head -n 1)
+          if [ -z "$req" ]; then
+            echo "No probe request in triggering commit"
+            exit 1
+          fi
+          echo "path=$req" >> "$GITHUB_OUTPUT"
+          echo "Using probe request: $req"
+
+      - name: Probe complete calendar in runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/pokemon_calendar_probe.py "${{ steps.request.outputs.path }}"
