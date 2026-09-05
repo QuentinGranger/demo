@@ -559,4 +559,22 @@ TRIGGER:-P1D
 DESCRIPTION:Rappel — Pokémon GO Hordes Méga demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-classic-griknot-20260912@openai
+DTSTAMP:20260905T103407Z
+DTSTART;TZID=Europe/Paris:20260912T140000
+DTEND;TZID=Europe/Paris:20260912T170000
+SUMMARY:⭐ Pokémon GO — Journée Communauté classique Griknot
+DESCRIPTION:Événement officiel Pokémon GO le 12 septembre 2026 de 14h à 17h (heure locale). Griknot est le Pokémon vedette. Faites évoluer Carmache avant 21h pour obtenir Carchacrok avec Telluriforce. Source: https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
+URL:https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
+CATEGORIES:POKEMON,POKEMON GO,COMMUNITY DAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-classic-griknot-20260912
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Rappel — Journée Communauté classique Griknot demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
