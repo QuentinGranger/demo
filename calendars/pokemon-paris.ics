@@ -990,4 +990,34 @@ X-POKEMON-ACTIONABILITY:63
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-USER-EFFECT:pokemon30-fnac-beaune-event-20260919
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-jcc-30ans-wave2-fr-20261002@openai
+DTSTAMP:20260905T162100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
+X-POKEMON-WAVE-ID:TCG-30TH-WAVE2-20261002
+X-POKEMON-WAVE-COMPLETENESS:RECONCILED
+X-POKEMON-WAVE-PRODUCT-COUNT:3
+X-POKEMON-WAVE-PRODUCTS:Collection Classeur 30e Anniversaire|Lot de 6 boosters 30e Anniversaire|Mini-boîtes 30e Anniversaire
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CONFIDENCE:90
+X-POKEMON-ACTIONABILITY:64
+X-POKEMON-USER-EFFECT-ID:tcg-30th-wave2-fr-20261002
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:⭐ ✅ 🃏 JCC Pokémon — 30ᵉ Anniversaire — vague 2
+LOCATION:France
+DESCRIPTION:Vague France recoupée pour le 2 octobre 2026. Produits : Collection Classeur 30ᵉ Anniversaire (5 boosters + classeur 9 pochettes), Lot de 6 boosters 30ᵉ Anniversaire, et Mini-boîtes 30ᵉ Anniversaire (2 boosters + carte artistique + autocollants). La gamme officielle Pokémon confirme l’existence de ces produits ; la date France du 2 octobre est recoupée par plusieurs sources retail/spécialisées indépendantes. EAN vérifié pour la Collection Classeur : 0196214145153. Aucun horaire n’est inventé. Sources : https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026 ; https://www.destocktcg.fr/product/30e-anniversaire-collection-classeur-pokemon-fr-1755 ; https://www.hamacards.com/produit/coffret-pokemon-collection-classeur-30e-anniversaire-francais/ ; https://www.eternia.fr/article/la-gamme-de-produits-celebrant-l-extension-30e-anniversaire-du-jcc-pokemon-se-devoile
+URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026
+CATEGORIES:Pokémon,JCC Pokémon,30e Anniversaire,Sortie France,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon 30ᵉ Anniversaire — vague 2 demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
