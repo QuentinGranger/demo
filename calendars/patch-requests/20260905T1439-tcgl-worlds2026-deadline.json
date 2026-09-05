@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-paris.ics",
+  "operation": "add",
+  "expected_calendar_blob_sha": "9ab217d28ced46906ca1d10782997893d284eaf2",
+  "uid": "tcgl-worlds2026-redeem-deadline-20260925@openai",
+  "event": "BEGIN:VEVENT\r\nUID:tcgl-worlds2026-redeem-deadline-20260925@openai\r\nSEQUENCE:0\r\nDTSTART;TZID=Europe/Paris:20260925T180000\r\nDTEND;TZID=Europe/Paris:20260925T181500\r\nSUMMARY:⏳ Fin code TCG Live — récompenses Mondiaux/PokémonXP 2026\r\nDESCRIPTION:Deadline officielle de redemption des codes JCC Pokémon Live générés via les Twitch Drops des Mondiaux Pokémon 2026 et de PokémonXP. Les fenêtres de claim Twitch sont terminées : cet événement concerne uniquement les récompenses déjà réclamées et les codes personnels déjà générés. Ne jamais partager un code personnel. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\r\nCATEGORIES:POKEMON,TCG-LIVE,CODE,DEADLINE\r\nX-POKEMON-USER-EFFECT-ID:tcgl-worlds2026-redeem-deadline-20260925\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:78\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Les codes JCC Pokémon Live des Mondiaux/PokémonXP expirent demain à 18h.\r\nEND:VALARM\r\nEND:VEVENT"
+}
