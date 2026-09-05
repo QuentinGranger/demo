@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "add",
+  "uid": "pokemon-go-mega-finale-20260905@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-go-mega-finale-20260905@openai\nDTSTART;TZID=Europe/Paris:20260905T100000\nDTEND;TZID=Europe/Paris:20260906T180000\nSUMMARY:🌐 Pokémon GO — Festival 2026 Méga-Finale\nDESCRIPTION:Festival Pokémon GO 2026 Méga-Finale. Samedi 5 et dimanche 6 septembre 2026 de 10:00 à 18:00 (heure locale). Source officielle : https://pokemongo.com/fr/gofest/megafinale\nURL:https://pokemongo.com/fr/gofest/megafinale\nCATEGORIES:POKEMON,POKEMON GO,EVENT\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:94\nX-POKEMON-USER-EFFECT:pokemon-go-mega-finale-20260905\nSEQUENCE:0\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Festival Pokémon GO 2026 Méga-Finale demain\nEND:VALARM\nEND:VEVENT"
+}
