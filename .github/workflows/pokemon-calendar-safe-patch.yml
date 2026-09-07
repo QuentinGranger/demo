@@ -18,139 +18,152 @@ jobs:
   patch:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout latest master
+      - name: Checkout repository history
         uses: actions/checkout@v4
         with:
           ref: master
           fetch-depth: 0
 
-      - name: Select request from triggering commit
-        id: request
+      - name: Capture every patch request from triggering commit
+        id: requests
         shell: bash
         run: |
           set -euo pipefail
-          req=$(git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" -- 'calendars/patch-requests/*.json' | head -n 1)
-          if [ -z "$req" ]; then
+          mkdir -p /tmp/pokemon-patch-requests
+          mapfile -t reqs < <(
+            git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" -- 'calendars/patch-requests/*.json' \
+              | sort -u
+          )
+          if [ "${#reqs[@]}" -eq 0 ]; then
             echo "No patch request in triggering commit"
             exit 1
           fi
-          echo "path=$req" >> "$GITHUB_OUTPUT"
-          echo "Using request: $req"
 
-      - name: Resolve canonical target and expected UID
-        id: target
+          : > /tmp/pokemon-patch-requests/list.txt
+          index=0
+          for req in "${reqs[@]}"; do
+            index=$((index + 1))
+            dest="/tmp/pokemon-patch-requests/$(printf '%03d' "$index")-$(basename "$req")"
+            cp "$req" "$dest"
+            printf '%s\n' "$dest" >> /tmp/pokemon-patch-requests/list.txt
+            echo "Captured request: $req -> $dest"
+          done
+          echo "count=${#reqs[@]}" >> "$GITHUB_OUTPUT"
+
+      - name: Apply transaction on latest master and push with conflict retry
+        id: apply
         shell: bash
         run: |
           set -euo pipefail
-          python3 - "${{ steps.request.outputs.path }}" "$GITHUB_OUTPUT" <<'PY'
-          import json, sys, re
-          req_path, out_path = sys.argv[1], sys.argv[2]
-          canonical = 'calendars/pokemon-tcg-france.ics'
-          req = json.load(open(req_path, encoding='utf-8'))
-          cal = req.get('calendar_path', canonical)
-          if cal != canonical:
-              raise SystemExit(f'calendar_path must target canonical subscribed feed: {canonical} (got {cal})')
-          op = req.get('operation')
-          uid = req.get('uid')
-          if not uid and op in ('add', 'upsert', 'update'):
-              m = re.search(r'(?m)^UID:(.+)$', req.get('event', ''))
-              uid = m.group(1).strip() if m else None
-          if not uid:
-              raise SystemExit('request has no resolvable UID')
-          with open(out_path, 'a', encoding='utf-8') as f:
-              f.write(f'path={cal}\n')
-              f.write(f'uid={uid}\n')
-              f.write(f'operation={op}\n')
-          print(f'Canonical target: {cal}')
-          print(f'Expected UID: {uid}')
-          print(f'Operation: {op}')
-          PY
+          target='calendars/pokemon-tcg-france.ics'
+          mapfile -t reqs < /tmp/pokemon-patch-requests/list.txt
+          git config user.name "pokemon-calendar-bot"
+          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
 
-      - name: Verify request against current calendar and apply
-        run: |
-          set -euo pipefail
-          python3 scripts/pokemon_calendar_safe_patch.py "${{ steps.request.outputs.path }}"
+          success=0
+          changed=0
+          for attempt in $(seq 1 5); do
+            echo "Transactional apply attempt ${attempt}/5"
+            git fetch origin master --force
+            git reset --hard origin/master
 
-      - name: Validate no collateral file changes
-        shell: bash
-        run: |
-          set -euo pipefail
-          target="${{ steps.target.outputs.path }}"
-          changed=$(git diff --name-only)
-          if [ -z "$changed" ]; then
-            echo "No business change"
-            exit 0
-          fi
-          unexpected=$(printf '%s\n' "$changed" | grep -v -F -x "$target" || true)
-          if [ -n "$unexpected" ]; then
-            echo "Unexpected changed files:"
-            echo "$unexpected"
-            exit 1
-          fi
-          TARGET="$target" python3 - <<'PY'
+            python3 scripts/pokemon_calendar_batch_patch.py "${reqs[@]}"
+
+            unexpected=$(git diff --name-only | grep -v -F -x "$target" || true)
+            if [ -n "$unexpected" ]; then
+              echo "Unexpected changed files:"
+              echo "$unexpected"
+              exit 1
+            fi
+
+            TARGET="$target" python3 - <<'PY'
           from pathlib import Path
           import os, re
           p = Path(os.environ['TARGET'])
-          t = p.read_bytes().decode('utf-8')
-          assert t.startswith('BEGIN:VCALENDAR\r\n')
-          assert t.rstrip().endswith('END:VCALENDAR')
-          assert t.count('BEGIN:VCALENDAR') == 1
-          assert t.count('END:VCALENDAR') == 1
-          uids = re.findall(r'(?m)^UID:(.+)\r$', t)
-          assert len(uids) == len(set(uids)), 'duplicate UIDs'
-          print(f'Validated {len(uids)} unique VEVENT UIDs in {p}')
+          raw = p.read_bytes()
+          text = raw.decode('utf-8')
+          if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
+              raise SystemExit('invalid VCALENDAR bounds')
+          if text.count('BEGIN:VCALENDAR') != 1 or text.count('END:VCALENDAR') != 1:
+              raise SystemExit('invalid VCALENDAR multiplicity')
+          uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
+          if len(uids) != len(set(uids)):
+              raise SystemExit('duplicate UIDs')
+          if b'\n' in raw.replace(b'\r\n', b''):
+              raise SystemExit('calendar contains non-CRLF line endings')
+          print(f'Validated {len(uids)} unique VEVENT UIDs; bytes={len(raw)}')
           PY
 
-      - name: Commit target calendar only
-        shell: bash
-        run: |
-          set -euo pipefail
-          target="${{ steps.target.outputs.path }}"
-          if git diff --quiet -- "$target"; then
-            echo "No calendar change to commit"
-            exit 0
-          fi
-          git config user.name "pokemon-calendar-bot"
-          git config user.email "pokemon-calendar-bot@users.noreply.github.com"
-          git add "$target"
-          git commit -m "calendar: apply safe event patch"
-          git push origin HEAD:master
+            if git diff --quiet -- "$target"; then
+              echo "No business change after recompute on latest master"
+              changed=0
+              success=1
+              break
+            fi
 
-      - name: Verify canonical master after write
+            git add "$target"
+            git commit -m "calendar: apply transactional batch patch (${{ steps.requests.outputs.count }} request(s))"
+            if git push origin HEAD:master; then
+              changed=1
+              success=1
+              break
+            fi
+
+            echo "Push conflict detected; refetching and recomputing the batch"
+            sleep 2
+          done
+
+          if [ "$success" -ne 1 ]; then
+            echo "Transactional patch failed after conflict retries"
+            exit 1
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Verify canonical master after transaction
         shell: bash
         run: |
           set -euo pipefail
-          target="${{ steps.target.outputs.path }}"
-          uid="${{ steps.target.outputs.uid }}"
-          op="${{ steps.target.outputs.operation }}"
+          target='calendars/pokemon-tcg-france.ics'
+          mapfile -t reqs < /tmp/pokemon-patch-requests/list.txt
           git fetch origin master --force
           git show "origin/master:$target" > /tmp/canonical.ics
-          python3 - /tmp/canonical.ics "$uid" "$op" <<'PY'
+          python3 - /tmp/canonical.ics "${reqs[@]}" <<'PY'
           from pathlib import Path
-          import re, sys
-          path, uid, op = sys.argv[1:]
-          text = Path(path).read_text(encoding='utf-8')
+          import json, re, sys
+
+          calendar_path = Path(sys.argv[1])
+          request_paths = [Path(p) for p in sys.argv[2:]]
+          text = calendar_path.read_text(encoding='utf-8')
           if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
               raise SystemExit('master verification failed: invalid VCALENDAR bounds')
           uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
           if len(uids) != len(set(uids)):
               raise SystemExit('master verification failed: duplicate UIDs')
-          present = uid in uids
-          expected = op != 'delete'
-          if present != expected:
-              raise SystemExit(f'master verification failed: UID {uid} present={present}, expected={expected}')
-          print(f'MASTER_VERIFIED=1 UID={uid} PRESENT={present}')
+          uid_set = set(uids)
+
+          for request_path in request_paths:
+              req = json.loads(request_path.read_text(encoding='utf-8'))
+              uid = req.get('uid')
+              if not uid:
+                  match = re.search(r'(?m)^UID:(.+)$', req.get('event', ''))
+                  uid = match.group(1).strip().rstrip('\r') if match else None
+              if not uid:
+                  raise SystemExit(f'{request_path}: request has no resolvable UID')
+              expected = req.get('operation') != 'delete'
+              present = uid in uid_set
+              if present != expected:
+                  raise SystemExit(
+                      f'master verification failed: UID {uid} present={present}, expected={expected}'
+                  )
+              print(f'MASTER_VERIFIED=1 UID={uid} PRESENT={present}')
           PY
 
       - name: Verify public RAW subscription feed
         shell: bash
         run: |
           set -euo pipefail
-          target="${{ steps.target.outputs.path }}"
-          uid="${{ steps.target.outputs.uid }}"
-          op="${{ steps.target.outputs.operation }}"
-          expected_present=true
-          if [ "$op" = "delete" ]; then expected_present=false; fi
+          target='calendars/pokemon-tcg-france.ics'
+          mapfile -t reqs < /tmp/pokemon-patch-requests/list.txt
 
           for attempt in $(seq 1 20); do
             raw_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/master/${target}?verify=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}-$(date +%s%N)"
@@ -159,22 +172,33 @@ jobs:
               -H 'Cache-Control: no-cache' \
               -H 'Pragma: no-cache' \
               "$raw_url" -o /tmp/public-raw.ics; then
-              if python3 - /tmp/public-raw.ics "$uid" "$op" <<'PY'
+              if python3 - /tmp/public-raw.ics "${reqs[@]}" <<'PY'
           from pathlib import Path
-          import re, sys
-          path, uid, op = sys.argv[1:]
-          raw = Path(path).read_bytes()
+          import json, re, sys
+
+          calendar_path = Path(sys.argv[1])
+          request_paths = [Path(p) for p in sys.argv[2:]]
+          raw = calendar_path.read_bytes()
           text = raw.decode('utf-8')
           if not text.startswith('BEGIN:VCALENDAR') or not text.rstrip().endswith('END:VCALENDAR'):
               raise SystemExit(2)
           uids = re.findall(r'(?m)^UID:(.+)\r?$', text)
           if len(uids) != len(set(uids)):
               raise SystemExit(3)
-          present = uid in uids
-          expected = op != 'delete'
-          if present != expected:
-              raise SystemExit(4)
-          print(f'PUBLIC_RAW_VERIFIED=1 UID={uid} PRESENT={present} BYTES={len(raw)}')
+          uid_set = set(uids)
+
+          for request_path in request_paths:
+              req = json.loads(request_path.read_text(encoding='utf-8'))
+              uid = req.get('uid')
+              if not uid:
+                  match = re.search(r'(?m)^UID:(.+)$', req.get('event', ''))
+                  uid = match.group(1).strip().rstrip('\r') if match else None
+              if not uid:
+                  raise SystemExit(4)
+              expected = req.get('operation') != 'delete'
+              if (uid in uid_set) != expected:
+                  raise SystemExit(5)
+          print(f'PUBLIC_RAW_VERIFIED=1 REQUESTS={len(request_paths)} BYTES={len(raw)}')
           PY
               then
                 exit 0
@@ -183,5 +207,5 @@ jobs:
             sleep 3
           done
 
-          echo "RAW verification failed after propagation retries for UID=$uid expected_present=$expected_present"
+          echo "RAW verification failed after propagation retries"
           exit 1
