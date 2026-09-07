@@ -793,4 +793,35 @@ ACTION:DISPLAY
 DESCRIPTION:Les codes Pokémon Champions des Mondiaux 2026 expirent demain nuit.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hordes-mega-pass-rewards-expiry-20260916@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-hordes-mega-pass-rewards-expiry-20260916
+DTSTART;TZID=Europe/Paris:20260916T200000
+DTEND;TZID=Europe/Paris:20260916T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Hordes Méga
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de l’événement Hordes Méga expirent le 16 septembre 2026 à 20:00 heure locale. Pense à réclamer les récompenses obtenues avant l’expiration.\nSource officielle : https://pokemongo.com/fr/news/mega-squads-2026
+URL:https://pokemongo.com/fr/news/mega-squads-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Hordes Méga expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour réclamer les récompenses Hordes Méga.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
