@@ -1189,4 +1189,27 @@ ACTION:DISPLAY
 DESCRIPTION:L’Incubateur temporaire du Passe septembre expire demain à 10:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-hachette-halloween-stickers-fr-20260923@openai
+DTSTAMP:20260907T071500Z
+LAST-MODIFIED:20260907T071500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:BUY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:28
+X-POKEMON-PRODUCT-EAN:9782017901785
+X-POKEMON-USER-EFFECT:pokemon-hachette-halloween-stickers-fr-20260923
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:📚 Pokémon — Grand livre de stickers Halloween — sortie FR
+LOCATION:France
+DESCRIPTION:Sortie française de Pokémon - Le grand livre de stickers Halloween, par The Pokémon Company chez Hachette Jeunesse. 120 pages, plus de 700 stickers. Prix éditeur papier : 14,90 €. EAN 9782017901785.\nSource éditeur : https://www.hachette.fr/livre/pokemon-le-grand-livre-de-stickers-halloween-9782017901785/
+URL:https://www.hachette.fr/livre/pokemon-le-grand-livre-de-stickers-halloween-9782017901785/
+CATEGORIES:POKEMON,LIVRE,HALLOWEEN,FRANCE,SORTIE
+END:VEVENT
 END:VCALENDAR
