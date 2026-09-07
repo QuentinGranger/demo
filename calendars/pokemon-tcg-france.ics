@@ -705,4 +705,35 @@ ACTION:DISPLAY
 DESCRIPTION:Les codes JCC Pokémon Live des Mondiaux/PokémonXP expirent demain à 18h.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-main-rewards-expiry-20260911@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:86
+X-POKEMON-USER-EFFECT:pokemon-go-worlds2026-main-rewards-expiry-20260911
+DTSTART;TZID=Europe/Paris:20260911T220000
+DTEND;TZID=Europe/Paris:20260911T221500
+SUMMARY:⏳ Pokémon GO — fin des récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle des récompenses Pokémon GO obtenues pendant les Championnats du Monde Pokémon 2026 via les diffusions Twitch. Pokémon indique que toutes ces récompenses expirent le 11 septembre 2026 à 13:00 PDT, soit 22:00 Europe/Paris. Cela inclut notamment les Études ponctuelles et récompenses Worlds décrites sur la page officielle. Cette échéance est distincte de la récompense PokémonXP Pikachu en costume, dont la deadline est plus tardive. Ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-GO,REWARD,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon GO des Mondiaux 2026 expirent demain à 22:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures — récompenses Pokémon GO Mondiaux 2026.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
