@@ -627,4 +627,23 @@ DESCRIPTION:Rappel — règlement M-C Pokémon Champions
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-reward-expiry-20260911@openai
+SEQUENCE:0
+DTSTART;TZID=Europe/Paris:20260911T220000
+DTEND;TZID=Europe/Paris:20260911T221500
+SUMMARY:⏳ Pokémon GO — fin des récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle des récompenses Pokémon GO liées aux streams des Championnats du Monde Pokémon 2026 / PokémonXP. Les récompenses concernées expirent le 11 septembre 2026 à 13:00 PDT, soit 22:00 Europe/Paris. Cela inclut les récompenses de visionnage/Études ponctuelles et le code avatar annoncés dans la page officielle ; vérifier et terminer/récupérer ce qui est encore disponible avant l’échéance. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-GO,REWARD,DEADLINE,WORLDS-2026
+X-POKEMON-USER-EFFECT-ID:pokemon-go-worlds2026-reward-expiry-20260911
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon GO des Mondiaux 2026 expirent demain à 22h.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
