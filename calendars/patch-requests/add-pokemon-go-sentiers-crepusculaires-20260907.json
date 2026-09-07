@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "expected_calendar_blob_sha": "8ca65b414ee63ae9796933bd54666a5a192c246e",
+  "operation": "add",
+  "uid": "pokemon-go-sentiers-crepusculaires-20260908@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-go-sentiers-crepusculaires-20260908@openai\nDTSTAMP:20260906T235900Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:5\nDTSTART;TZID=Europe/Paris:20260908T100000\nDTEND;TZID=Europe/Paris:20261201T100000\nSUMMARY:✅ Pokémon GO — Saison Sentiers crépusculaires\nLOCATION:Pokémon GO — France\nDESCRIPTION:Saison Pokémon GO Sentiers crépusculaires. Du 8 septembre 2026 à 10:00 au 1er décembre 2026 à 10:00, heure locale. Date et horaires confirmés par Pokémon GO.\\nSource officielle : https://pokemongo.com/fr/seasons/twilight-trails\nURL:https://pokemongo.com/fr/seasons/twilight-trails\nCATEGORIES:Pokémon,Pokémon GO,Saison\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:76\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-USER-EFFECT:POKEMON_GO_TWILIGHT_TRAILS_FR_20260908\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Pokémon GO — Sentiers crépusculaires commence demain\nEND:VALARM\nEND:VEVENT"
+}
