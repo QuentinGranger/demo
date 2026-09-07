@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "add",
+  "expected_calendar_blob_sha": "13a4e060b0829ef06136374febc70dadec91817e",
+  "uid": "tcgl-maintenance-1-42-0-20260910@openai",
+  "event": "BEGIN:VEVENT\r\nUID:tcgl-maintenance-1-42-0-20260910@openai\r\nSEQUENCE:0\r\nDTSTART;TZID=Europe/Paris:20260910T170000\r\nDTEND;TZID=Europe/Paris:20260911T010000\r\nSUMMARY:🛠️ JCC Pokémon Live — maintenance 1.42.0\r\nDESCRIPTION:Maintenance officielle du JCC Pokémon Live pour la version 1.42.0. Le service sera hors ligne le 10 septembre 2026 de 15:00 à 23:00 UTC, soit de 17:00 à 01:00 Europe/Paris. Source officielle : https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes\r\nURL:https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes\r\nCATEGORIES:POKEMON,TCG-LIVE,MAINTENANCE,UPDATE\r\nX-POKEMON-USER-EFFECT-ID:tcgl-maintenance-1-42-0-20260910\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:70\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nBEGIN:VALARM\r\nTRIGGER:-PT1H\r\nACTION:DISPLAY\r\nDESCRIPTION:JCC Pokémon Live sera en maintenance dans 1 heure.\r\nEND:VALARM\r\nEND:VEVENT"
+}
