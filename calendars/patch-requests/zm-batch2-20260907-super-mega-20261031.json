@@ -1,0 +1,6 @@
+{
+  "operation": "upsert",
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "uid": "pokemon-go-super-mega-raid-day-20261031@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-super-mega-raid-day-20261031@openai\r\nDTSTAMP:20260907T071000Z\r\nLAST-MODIFIED:20260907T071000Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:9\r\nX-POKEMON-PRIORITY:INFO\r\nX-POKEMON-ACTION:PLAY\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:58\r\nX-POKEMON-USER-EFFECT:pokemon-go-super-mega-raid-day-20261031\r\nDTSTART;VALUE=DATE:20261031\r\nDTEND;VALUE=DATE:20261101\r\nSUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids — détails à venir\r\nDESCRIPTION:Date officiellement annoncée pour une Journée Super Méga-Raids le 31 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\\nSource officielle : https://pokemongo.com/news/save-the-date-s24\r\nURL:https://pokemongo.com/news/save-the-date-s24\r\nCATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY,SAVE-THE-DATE\r\nEND:VEVENT"
+}
