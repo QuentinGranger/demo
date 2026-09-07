@@ -850,4 +850,170 @@ ACTION:DISPLAY
 DESCRIPTION:Le Passe GO de septembre commence demain à 10:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-pass-rewards-expiry-20260924@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-go-horizons-pass-rewards-expiry-20260924
+DTSTART;TZID=Europe/Paris:20260924T200000
+DTEND;TZID=Europe/Paris:20260924T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Pokémon Horizons
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de la Célébration Pokémon Horizons expirent le 24 septembre 2026 à 20:00 heure locale.\nSource officielle : https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+URL:https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+CATEGORIES:POKEMON,POKEMON-GO,POKEMON-HORIZONS,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Pokémon Horizons expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour réclamer les récompenses Pokémon Horizons.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-celebration-20260916@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-horizons-celebration-20260916
+DTSTART;TZID=Europe/Paris:20260916T100000
+DTEND;TZID=Europe/Paris:20260922T200000
+SUMMARY:🌅 Pokémon GO — Célébration Pokémon, les horizons
+DESCRIPTION:Célébration pour La série : Pokémon, les horizons du 16 septembre 2026 à 10:00 au 22 septembre à 20:00 heure locale. Salamèche avec les lunettes de Friede fait ses débuts et un Passe GO d’événement est proposé.\nSource officielle : https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+URL:https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+CATEGORIES:POKEMON,POKEMON-GO,POKEMON-HORIZONS,EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Célébration Pokémon Horizons commence demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-september-rewards-expiry-20261008@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:74
+X-POKEMON-USER-EFFECT:pokemon-go-pass-september-rewards-expiry-20261008
+DTSTART;TZID=Europe/Paris:20261008T100000
+DTEND;TZID=Europe/Paris:20261008T101500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO septembre
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de septembre expirent le 8 octobre 2026 à 10:00 heure locale.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+URL:https://pokemongo.com/news/go-pass-september-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO septembre expirent demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-phantump-catch-mastery-20260926@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT:pokemon-go-phantump-catch-mastery-20260926
+DTSTART;TZID=Europe/Paris:20260926T100000
+DTEND;TZID=Europe/Paris:20260926T200000
+SUMMARY:🎯 Pokémon GO — Maîtrise de capture Brocélôme
+DESCRIPTION:Événement Maîtrise de capture Brocélôme le 26 septembre 2026 de 10:00 à 20:00 heure locale. Les tâches et récompenses d’Étude ponctuelle expirent à 20:00.\nSource officielle : https://pokemongo.com/en/news/catch-mastery-phantump-2026
+URL:https://pokemongo.com/en/news/catch-mastery-phantump-2026
+CATEGORIES:POKEMON,POKEMON-GO,CATCH-MASTERY,PHANTUMP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Maîtrise de capture Brocélôme a lieu demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-staraptor-super-mega-raid-day-20260919@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:86
+X-POKEMON-USER-EFFECT:pokemon-go-staraptor-super-mega-raid-day-20260919
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids Étouraptor
+DESCRIPTION:Journée de Super Méga-Raids Étouraptor le 19 septembre 2026 de 14:00 à 17:00 heure locale. Début de Méga-Étouraptor dans les Super Méga-Raids.\nSource officielle : https://pokemongo.com/news/staraptor-super-mega-raid-day-2026
+URL:https://pokemongo.com/news/staraptor-super-mega-raid-day-2026
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Journée Super Méga-Raids Étouraptor a lieu demain.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Super Méga-Raids Étouraptor dans 1 heure.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-wild-area-global-20261114@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:pokemon-go-wild-area-global-20261114
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261116
+SUMMARY:🌍 Pokémon GO — Terres Sauvages 2026 : Mondial
+DESCRIPTION:L’événement Pokémon GO Terres Sauvages 2026 : Mondial est officiellement annoncé pour les 14 et 15 novembre 2026. Horaires et programme détaillé à venir ; aucune heure n’est sur-précisée.\nSource officielle : https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
+URL:https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
+CATEGORIES:POKEMON,POKEMON-GO,WILD-AREA,GLOBAL-EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO Terres Sauvages 2026 : Mondial commence demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
