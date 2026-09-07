@@ -37,26 +37,22 @@ jobs:
           echo "path=$req" >> "$GITHUB_OUTPUT"
           echo "Using request: $req"
 
-      - name: Resolve target calendar and expected UID
+      - name: Resolve canonical target and expected UID
         id: target
         shell: bash
         run: |
           set -euo pipefail
           python3 - "${{ steps.request.outputs.path }}" "$GITHUB_OUTPUT" <<'PY'
-          import json, sys
+          import json, sys, re
           req_path, out_path = sys.argv[1], sys.argv[2]
-          allowed = {
-              'calendars/pokemon-paris.ics',
-              'calendars/pokemon-tcg-france.ics',
-          }
+          canonical = 'calendars/pokemon-tcg-france.ics'
           req = json.load(open(req_path, encoding='utf-8'))
-          cal = req.get('calendar_path', 'calendars/pokemon-tcg-france.ics')
-          if cal not in allowed:
-              raise SystemExit(f'calendar_path not allowed: {cal}')
+          cal = req.get('calendar_path', canonical)
+          if cal != canonical:
+              raise SystemExit(f'calendar_path must target canonical subscribed feed: {canonical} (got {cal})')
           op = req.get('operation')
           uid = req.get('uid')
           if not uid and op in ('add', 'upsert', 'update'):
-              import re
               m = re.search(r'(?m)^UID:(.+)$', req.get('event', ''))
               uid = m.group(1).strip() if m else None
           if not uid:
@@ -65,7 +61,7 @@ jobs:
               f.write(f'path={cal}\n')
               f.write(f'uid={uid}\n')
               f.write(f'operation={op}\n')
-          print(f'Target calendar: {cal}')
+          print(f'Canonical target: {cal}')
           print(f'Expected UID: {uid}')
           print(f'Operation: {op}')
           PY
