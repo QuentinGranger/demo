@@ -1,4 +1,5 @@
 {
+  "batch_requeue": "20260908T0052",
   "calendar_path": "calendars/pokemon-tcg-france.ics",
   "operation": "upsert",
   "uid": "lego-pokemon-72154-fr-20261001@openai",
