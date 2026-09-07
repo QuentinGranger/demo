@@ -1238,4 +1238,32 @@ ACTION:DISPLAY
 DESCRIPTION:Les récompenses Pokémon UNITE des Mondiaux 2026 expirent demain nuit.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:lego-pokemon-72154-fr-20261001@openai
+DTSTAMP:20260907T224700Z
+LAST-MODIFIED:20260907T224700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:lego-pokemon-72154-fr-20261001
+X-POKEMON-PRODUCT-SKU:72154
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:🧱 LEGO Pokémon — Poké Ball Moments culte de Dresseur 72154
+LOCATION:France — LEGO.com
+DESCRIPTION:Précommande ouverte sur la boutique LEGO officielle France. Prix officiel : 259,99 €. Expédition annoncée à partir du 1 octobre 2026. Limite officielle : 3 exemplaires par foyer. Set de 2 386 pièces. Source officielle : https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
+URL:https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
+CATEGORIES:POKEMON,LEGO,PRODUIT-LICENCIE,PRECOMMANDE,FRANCE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:LEGO Pokémon 72154 — expédition annoncée à partir de demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
