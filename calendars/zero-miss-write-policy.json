@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "canonical_calendar": "calendars/pokemon-tcg-france.ics",
+  "write_mode": "UPSERT_ALWAYS_FOR_QUALIFIED_EVENT",
+  "absence_check": "DO_NOT_INFER_FROM_TRUNCATED_OR_PARTIAL_FETCH",
+  "dedupe_authority": "TRANSACTIONAL_SAFE_PATCH",
+  "rules": [
+    "When a future France-relevant event qualifies for calendarization, submit an idempotent UPSERT using its stable UID even if the model-side calendar read is incomplete.",
+    "Do not emit CALENDAR_MISSING_* solely because the ICS fetch is truncated, too large, cached, or partially searchable.",
+    "The transactional safe-patch workflow decides whether the request is CHANGED=1 or a no-op because the event already exists.",
+    "CALENDAR_MISSING_* is allowed only after an UPSERT attempt itself fails or canonical master verification fails.",
+    "A successful canonical master verification is authoritative. RAW propagation failure is CHECK_INCONCLUSIVE and must not roll back or invalidate a verified master write.",
+    "For an existing event, preserve the stable UID and use UPSERT; increment SEQUENCE only for a material business change.",
+    "Never replace the large canonical ICS from a truncated model-side copy."
+  ]
+}
