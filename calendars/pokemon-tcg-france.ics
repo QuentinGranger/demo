@@ -1266,4 +1266,29 @@ ACTION:DISPLAY
 DESCRIPTION:LEGO Pokémon 72154 — expédition annoncée à partir de demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-exchange-deadline-20261001@openai
+DTSTAMP:20260907T225100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-sleep-mewtwo-exchange-deadline-20261001
+DTSTART;TZID=Europe/Paris:20261001T035900
+DTEND;TZID=Europe/Paris:20261001T041400
+SUMMARY:⏳ Pokémon Sleep — fin échange ADN de Mewtwo
+DESCRIPTION:Fin de la période d’échange de l’évènement Mewtwo. L’ADN de Mewtwo restant ne pourra plus être échangé après la fermeture de l’échange. La page officielle indique une fin le 1 octobre 2026 à 03:59. Source officielle : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+URL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+CATEGORIES:POKEMON,POKEMON-SLEEP,MEWTWO,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — l’échange ADN de Mewtwo ferme demain matin.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
