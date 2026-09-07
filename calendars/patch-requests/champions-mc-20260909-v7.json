@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-champions-reglement-mc-20260909@openai",
+  "expected_calendar_blob_sha": "472712f40f53fb290a19a311653aca57a00162a3",
+  "event": "BEGIN:VEVENT\nUID:pokemon-champions-reglement-mc-20260909@openai\nDTSTAMP:20260907T001700Z\nLAST-MODIFIED:20260907T001700Z\nSEQUENCE:0\nSTATUS:CONFIRMED\nPRIORITY:9\nX-POKEMON-PRIORITY:INFO\nX-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO\nX-POKEMON-ACTION:PLAY\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:64\nX-POKEMON-USER-EFFECT-ID:pokemon-champions-mc-fr-20260909\nDTSTART;TZID=Europe/Paris:20260909T040000\nDTEND;TZID=Europe/Paris:20261202T030000\nSUMMARY:🎮 Pokémon Champions — Règlement M-C\nLOCATION:En ligne — Pokémon Champions\nDESCRIPTION:✅ Confirmé officiellement par Pokémon France. Le règlement M-C entre en vigueur le 9 septembre 2026 à 04:00 (Europe/Paris) et reste actif jusqu’au 2 décembre 2026 à 02:59. Il ajoute notamment de nouvelles Méga-Évolutions Z et de nouveaux Pokémon jouables.\\nPrécision : EXACT_DATETIME.\\nConfiance : 99/100. Actionability : 64/100.\\nSource : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions\nURL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions\nCATEGORIES:POKEMON,POKEMON CHAMPIONS,JEU VIDEO,COMPETITIF,REGLEMENT\nBEGIN:VALARM\nACTION:DISPLAY\nDESCRIPTION:Rappel — règlement M-C Pokémon Champions\nTRIGGER:-P1D\nEND:VALARM\nEND:VEVENT"
+}
