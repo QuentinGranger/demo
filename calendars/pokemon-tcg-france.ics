@@ -667,4 +667,24 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO City Safari Marseille commence demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:tcgl-maintenance-1-42-0-20260910@openai
+SEQUENCE:0
+DTSTART;TZID=Europe/Paris:20260910T170000
+DTEND;TZID=Europe/Paris:20260911T010000
+SUMMARY:🛠️ JCC Pokémon Live — maintenance 1.42.0
+DESCRIPTION:Maintenance officielle du JCC Pokémon Live pour la version 1.42.0. Le service sera hors ligne le 10 septembre 2026 de 15:00 à 23:00 UTC, soit de 17:00 à 01:00 Europe/Paris. Source officielle : https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+URL:https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+CATEGORIES:POKEMON,TCG-LIVE,MAINTENANCE,UPDATE
+X-POKEMON-USER-EFFECT-ID:tcgl-maintenance-1-42-0-20260910
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:70
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon Live sera en maintenance dans 1 heure.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
