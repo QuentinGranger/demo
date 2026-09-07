@@ -736,4 +736,35 @@ ACTION:DISPLAY
 DESCRIPTION:Dernières heures — récompenses Pokémon GO Mondiaux 2026.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-pocket-worlds2026-code-expiry-20271128@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT:pokemon-pocket-worlds2026-code-expiry-20271128
+DTSTART;TZID=Europe/Paris:20271128T155900
+DTEND;TZID=Europe/Paris:20271128T161400
+SUMMARY:⏳ JCC Pokémon Pocket — fin du code Worlds 2026
+DESCRIPTION:Deadline officielle du code de récompense JCC Pokémon Pocket distribué pendant PokémonXP et les Championnats du Monde Pokémon 2026 pour obtenir 24 Sabliers Booster. Pokémon indique que ce code est valable jusqu'au 28 novembre 2027 à 14:59 UTC, soit 15:59 Europe/Paris. Cette échéance concerne uniquement le code déjà obtenu ; ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,TCG-POCKET,REWARD,CODE,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Le code JCC Pokémon Pocket Worlds 2026 expire dans 7 jours.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le code JCC Pokémon Pocket Worlds 2026 expire demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
