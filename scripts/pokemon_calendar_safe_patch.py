@@ -5,11 +5,10 @@ import json
 import re
 from pathlib import Path
 
-ALLOWED_CALENDARS = {
-    'calendars/pokemon-paris.ics',
-    'calendars/pokemon-tcg-france.ics',
-}
-DEFAULT_CALENDAR = 'calendars/pokemon-tcg-france.ics'
+# Canonical Apple/iOS subscribed feed. Legacy pokemon-paris.ics is intentionally
+# not writable through the safe patch path anymore, to prevent split-brain writes.
+CANONICAL_CALENDAR = 'calendars/pokemon-tcg-france.ics'
+DEFAULT_CALENDAR = CANONICAL_CALENDAR
 
 
 def blob_sha(data: bytes) -> str:
@@ -19,8 +18,11 @@ def blob_sha(data: bytes) -> str:
 
 def resolve_calendar(req: dict) -> Path:
     calendar_path = req.get('calendar_path', DEFAULT_CALENDAR)
-    if calendar_path not in ALLOWED_CALENDARS:
-        raise SystemExit(f'calendar_path not allowed: {calendar_path}')
+    if calendar_path != CANONICAL_CALENDAR:
+        raise SystemExit(
+            f'calendar_path must target canonical subscribed feed: {CANONICAL_CALENDAR} '
+            f'(got {calendar_path})'
+        )
     return Path(calendar_path)
 
 
