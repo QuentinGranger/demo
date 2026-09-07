@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "lego-pokemon-72154-fr-20261001@openai",
+  "event": "BEGIN:VEVENT\r\nUID:lego-pokemon-72154-fr-20261001@openai\r\nDTSTAMP:20260907T224700Z\r\nLAST-MODIFIED:20260907T224700Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nX-POKEMON-PRIORITY:IMPORTANT\r\nX-POKEMON-ACTION:PREORDER\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:72\r\nX-POKEMON-USER-EFFECT:lego-pokemon-72154-fr-20261001\r\nX-POKEMON-PRODUCT-SKU:72154\r\nDTSTART;VALUE=DATE:20261001\r\nDTEND;VALUE=DATE:20261002\r\nSUMMARY:🧱 LEGO Pokémon — Poké Ball Moments culte de Dresseur 72154\r\nLOCATION:France — LEGO.com\r\nDESCRIPTION:Précommande ouverte sur la boutique LEGO officielle France. Prix officiel : 259,99 €. Expédition annoncée à partir du 1 octobre 2026. Limite officielle : 3 exemplaires par foyer. Set de 2 386 pièces. Source officielle : https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154\r\nURL:https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154\r\nCATEGORIES:POKEMON,LEGO,PRODUIT-LICENCIE,PRECOMMANDE,FRANCE\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:LEGO Pokémon 72154 — expédition annoncée à partir de demain.\r\nEND:VALARM\r\nEND:VEVENT"
+}
