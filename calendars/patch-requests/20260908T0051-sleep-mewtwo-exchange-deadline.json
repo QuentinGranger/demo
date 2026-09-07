@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-sleep-mewtwo-exchange-deadline-20261001@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-sleep-mewtwo-exchange-deadline-20261001@openai\r\nDTSTAMP:20260907T225100Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nX-POKEMON-PRIORITY:IMPORTANT\r\nX-POKEMON-ACTION:CLAIM\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:80\r\nX-POKEMON-USER-EFFECT:pokemon-sleep-mewtwo-exchange-deadline-20261001\r\nDTSTART;TZID=Europe/Paris:20261001T035900\r\nDTEND;TZID=Europe/Paris:20261001T041400\r\nSUMMARY:⏳ Pokémon Sleep — fin échange ADN de Mewtwo\r\nDESCRIPTION:Fin de la période d’échange de l’évènement Mewtwo. L’ADN de Mewtwo restant ne pourra plus être échangé après la fermeture de l’échange. La page officielle indique une fin le 1 octobre 2026 à 03:59. Source officielle : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/\r\nURL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/\r\nCATEGORIES:POKEMON,POKEMON-SLEEP,MEWTWO,DEADLINE\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Pokémon Sleep — l’échange ADN de Mewtwo ferme demain matin.\r\nEND:VALARM\r\nEND:VEVENT"
+}
