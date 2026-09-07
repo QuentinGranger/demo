@@ -646,4 +646,25 @@ ACTION:DISPLAY
 DESCRIPTION:Les récompenses Pokémon GO des Mondiaux 2026 expirent demain à 22h.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-city-safari-marseille-20260926@openai
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260928
+SUMMARY:📍 Pokémon GO — City Safari — Marseille
+LOCATION:Marseille, France
+DESCRIPTION:Événement Pokémon GO City Safari officiellement programmé à Marseille les 26 et 27 septembre 2026. La liste officielle des événements Pokémon GO confirme Marseille et ces deux dates. Les horaires précis ne sont pas sur-précisés ici faute de preuve primaire exploitable dans ce scan. Source : https://pokemongolive.com/en/featured-in-person-events
+URL:https://pokemongolive.com/en/featured-in-person-events
+CATEGORIES:POKEMON,POKEMON-GO,PHYSICAL-EVENT,CITY-SAFARI,MARSEILLE
+X-POKEMON-USER-EFFECT-ID:pokemon-go-city-safari-marseille-20260926
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO City Safari Marseille commence demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
