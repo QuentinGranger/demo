@@ -1016,4 +1016,177 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO Terres Sauvages 2026 : Mondial commence demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-20261010@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:60
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-20261010
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:⭐ Pokémon GO — Journée Communauté — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Journée Communauté du 10 octobre 2026. Pokémon vedette et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,COMMUNITY-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-20261121@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:60
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-20261121
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:⭐ Pokémon GO — Journée Communauté — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Journée Communauté du 21 novembre 2026. Pokémon vedette et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,COMMUNITY-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hatch-day-20261017@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-hatch-day-20261017
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:🥚 Pokémon GO — Journée Éclosion — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Éclosion le 17 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,HATCH-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-max-battle-day-20261003@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-max-battle-day-20261003
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:⚔️ Pokémon GO — Journée Combat Dynamax — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Saison Pokémon GO. Le contenu détaillé et les horaires seront ajoutés sur le même UID quand ils seront publiés.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,MAX-BATTLE-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-max-battle-day-20261024@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-max-battle-day-20261024
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:⚔️ Pokémon GO — Journée Combat Dynamax — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Combat Dynamax le 24 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,MAX-BATTLE-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-super-mega-raid-day-20261031@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT:pokemon-go-super-mega-raid-day-20261031
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Super Méga-Raids le 31 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-super-mega-raid-day-20261128@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT:pokemon-go-super-mega-raid-day-20261128
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Super Méga-Raids le 28 novembre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-september-timed-incubator-expiry-20261013@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:USE
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:48
+X-POKEMON-USER-EFFECT:pokemon-go-pass-september-timed-incubator-expiry-20261013
+DTSTART;TZID=Europe/Paris:20261013T100000
+DTEND;TZID=Europe/Paris:20261013T101500
+SUMMARY:⏳ Pokémon GO — expiration Incubateur temporaire du Passe septembre
+DESCRIPTION:Pour les personnes ayant obtenu l’Incubateur temporaire du Passe GO deluxe de septembre : il expire le 13 octobre 2026 à 10:00 heure locale.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+URL:https://pokemongo.com/news/go-pass-september-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L’Incubateur temporaire du Passe septembre expire demain à 10:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
