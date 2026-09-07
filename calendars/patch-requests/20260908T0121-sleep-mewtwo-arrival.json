@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-sleep-mewtwo-arrival-20260914T1500@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-sleep-mewtwo-arrival-20260914T1500@openai\r\nDTSTAMP:20260907T232149Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nX-POKEMON-PRIORITY:IMPORTANT\r\nX-POKEMON-ACTION:PLAY\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:69\r\nX-POKEMON-USER-EFFECT:mewtwo-available-pokemon-sleep-20260914T1500\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nDTSTART;TZID=Europe/Paris:20260914T150000\r\nDTEND;TZID=Europe/Paris:20260914T151500\r\nSUMMARY:🧬 Pokémon Sleep — Mewtwo devient disponible\r\nDESCRIPTION:Mewtwo devient disponible dans Pokémon Sleep le 14 septembre 2026 à 15:00. À partir de cette heure, les encens Mewtwo peuvent être utilisés. Zones annoncées : Île Vertepousse, Île Vertepousse (expert) et Plage Cyan (expert). Source officielle : https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/\r\nURL:https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/\r\nCATEGORIES:Pokémon,Pokémon Sleep,Mewtwo,Disponibilité\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Pokémon Sleep — Mewtwo devient disponible demain à 15 h\r\nEND:VALARM\r\nEND:VEVENT"
+}
