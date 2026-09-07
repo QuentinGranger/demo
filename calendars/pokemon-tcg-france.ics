@@ -767,4 +767,30 @@ ACTION:DISPLAY
 DESCRIPTION:Le code JCC Pokémon Pocket Worlds 2026 expire demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-worlds2026-codes-expiry-20260930@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT:pokemon-champions-worlds2026-codes-expiry-20260930
+DTSTART;TZID=Europe/Paris:20260930T015900
+DTEND;TZID=Europe/Paris:20260930T021400
+SUMMARY:⏳ Pokémon Champions — fin des codes Worlds 2026
+DESCRIPTION:Deadline officielle d'échange des codes de récompenses Pokémon Champions distribués via les diffusions et co-streams des Championnats du Monde Pokémon 2026. Pokémon indique que ces codes sont valables jusqu'au 29 septembre 2026 à 23:59 UTC, soit le 30 septembre 2026 à 01:59 Europe/Paris. Cette échéance concerne les codes déjà obtenus ; ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-CHAMPIONS,REWARD,CODE,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les codes Pokémon Champions des Mondiaux 2026 expirent demain nuit.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
