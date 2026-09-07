@@ -600,4 +600,31 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Sentiers crépusculaires commence demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-reglement-mc-20260909@openai
+DTSTAMP:20260907T001700Z
+LAST-MODIFIED:20260907T001700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:64
+X-POKEMON-USER-EFFECT-ID:pokemon-champions-mc-fr-20260909
+DTSTART;TZID=Europe/Paris:20260909T040000
+DTEND;TZID=Europe/Paris:20261202T030000
+SUMMARY:🎮 Pokémon Champions — Règlement M-C
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:✅ Confirmé officiellement par Pokémon France. Le règlement M-C entre en vigueur le 9 septembre 2026 à 04:00 (Europe/Paris) et reste actif jusqu’au 2 décembre 2026 à 02:59. Il ajoute notamment de nouvelles Méga-Évolutions Z et de nouveaux Pokémon jouables.\nPrécision : EXACT_DATETIME.\nConfiance : 99/100. Actionability : 64/100.\nSource : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+CATEGORIES:POKEMON,POKEMON CHAMPIONS,JEU VIDEO,COMPETITIF,REGLEMENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rappel — règlement M-C Pokémon Champions
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
