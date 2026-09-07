@@ -1291,4 +1291,77 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon Sleep — l’échange ADN de Mewtwo ferme demain matin.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-maintenance-3-8-0-20260909@openai
+DTSTAMP:20260907T224800Z
+LAST-MODIFIED:20260907T224800Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAN
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-sleep-maintenance-3-8-0-20260909
+DTSTART;TZID=Europe/Paris:20260909T043000
+DTEND;TZID=Europe/Paris:20260909T090000
+SUMMARY:🛠️ Pokémon Sleep — maintenance version 3.8.0
+DESCRIPTION:Maintenance officielle Pokémon Sleep pour la version 3.8.0, annoncée du 9 septembre 2026 à 04:30 au 9 septembre à 09:00. Important : si vous souhaitez mesurer votre sommeil pendant la maintenance, évitez de mettre l’application à jour vers la version 3.8.0 avant de démarrer la mesure et lancez-la depuis l’écran « Maintenance en cours ». Source officielle : https://www.pokemonsleep.net/fr/news/343339383630393136303431383039393236/
+URL:https://www.pokemonsleep.net/fr/news/343339383630393136303431383039393236/
+CATEGORIES:POKEMON,POKEMON-SLEEP,MAINTENANCE,UPDATE
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — maintenance 3.8.0 dans 3 heures.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mew-gift-deadline-20261109@openai
+DTSTAMP:20260907T224900Z
+SEQUENCE:0
+STATUS:CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:76
+X-POKEMON-USER-EFFECT:pokemon-sleep-mew-gift-deadline-20261109
+DTSTART;TZID=Europe/Paris:20261109T035900
+DTEND;TZID=Europe/Paris:20261109T041400
+SUMMARY:⏳ Pokémon Sleep — fin du cadeau Mew
+DESCRIPTION:Fin de la période du cadeau de renforcement de Mew. La période officielle va du 7 septembre 2026 à 03:00 au 9 novembre 2026 à 03:59. Source : https://www.pokemonsleep.net/fr/news/343330313931393335303335303135313730/
+URL:https://www.pokemonsleep.net/fr/news/343330313931393335303335303135313730/
+CATEGORIES:POKEMON,POKEMON-SLEEP,REWARD,DEADLINE,MEW
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le cadeau Mew Pokémon Sleep se termine demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-event-20260914@openai
+DTSTAMP:20260907T225000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-sleep-mewtwo-event-20260914
+DTSTART;TZID=Europe/Paris:20260914T040000
+DTEND;TZID=Europe/Paris:20260928T035900
+SUMMARY:🌙 Pokémon Sleep — Recherches en terres inconnues : Mewtwo
+DESCRIPTION:Évènement officiel Pokémon Sleep en deux semaines. Semaine 1 : du 14 septembre à 04:00 au 21 septembre à 03:59. Semaine 2 : du 21 septembre à 04:00 au 28 septembre à 03:59. Mewtwo apparaît plus fréquemment et l’ADN de Mewtwo peut être obtenu pendant l’évènement. Source officielle : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+URL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+CATEGORIES:POKEMON,POKEMON-SLEEP,EVENT,MEWTWO
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — l’évènement Mewtwo commence demain à 04:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
