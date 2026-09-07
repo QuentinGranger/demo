@@ -1212,4 +1212,30 @@ DESCRIPTION:Sortie française de Pokémon - Le grand livre de stickers Halloween
 URL:https://www.hachette.fr/livre/pokemon-le-grand-livre-de-stickers-halloween-9782017901785/
 CATEGORIES:POKEMON,LIVRE,HALLOWEEN,FRANCE,SORTIE
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-unite-worlds2026-rewards-expiry-20261003@openai
+DTSTAMP:20260907T072000Z
+LAST-MODIFIED:20260907T072000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:pokemon-unite-worlds2026-rewards-expiry-20261003
+DTSTART;TZID=Europe/Paris:20261003T015900
+DTEND;TZID=Europe/Paris:20261003T021400
+SUMMARY:⏳ Pokémon UNITE — fin récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle des récompenses Pokémon UNITE obtenues via les Drops Twitch des Championnats du Monde Pokémon 2026, dont la Boîte de permis Unité des Champions du Monde 2025. Pokémon indique une validité jusqu'au 2 octobre 2026 à 23:59 UTC, soit le 3 octobre à 01:59 Europe/Paris. Ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-UNITE,REWARD,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon UNITE des Mondiaux 2026 expirent demain nuit.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
