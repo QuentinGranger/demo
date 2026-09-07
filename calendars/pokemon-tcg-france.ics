@@ -1364,4 +1364,54 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon Sleep — l’évènement Mewtwo commence demain à 04:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-arrival-20260914T1500@openai
+DTSTAMP:20260907T232149Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:69
+X-POKEMON-USER-EFFECT:mewtwo-available-pokemon-sleep-20260914T1500
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+DTSTART;TZID=Europe/Paris:20260914T150000
+DTEND;TZID=Europe/Paris:20260914T151500
+SUMMARY:🧬 Pokémon Sleep — Mewtwo devient disponible
+DESCRIPTION:Mewtwo devient disponible dans Pokémon Sleep le 14 septembre 2026 à 15:00. À partir de cette heure, les encens Mewtwo peuvent être utilisés. Zones annoncées : Île Vertepousse, Île Vertepousse (expert) et Plage Cyan (expert). Source officielle : https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/
+URL:https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/
+CATEGORIES:Pokémon,Pokémon Sleep,Mewtwo,Disponibilité
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — Mewtwo devient disponible demain à 15 h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-new-moon-17-20260910@openai
+DTSTAMP:20260907T232149Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:64
+X-POKEMON-USER-EFFECT:new-moon-17-pokemon-sleep-20260910
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+DTSTART;TZID=Europe/Paris:20260910T040000
+DTEND;TZID=Europe/Paris:20260913T035900
+SUMMARY:🌑 Pokémon Sleep — Journée de la nouvelle lune nº17
+DESCRIPTION:Évènement officiel Pokémon Sleep du 10 septembre 2026 à 04:00 au 13 septembre 2026 à 03:59. Apparitions spéciales de Mew et Darkrai, Pokémon plus difficiles à rassasier au premier goûter, possibilité de Pokémon chromatiques et +3 points d’amitié lors d’une rencontre bénéficiant du taux spécial. Source officielle : https://www.pokemonsleep.net/fr/news/343330313733363436343737303636323437/
+URL:https://www.pokemonsleep.net/fr/news/343330313733363436343737303636323437/
+CATEGORIES:Pokémon,Pokémon Sleep,Évènement,Nouvelle lune
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — Journée de la nouvelle lune nº17 demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
