@@ -1421,4 +1421,58 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon Sleep — Journée de la nouvelle lune nº17 demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-lego-store-rewards-deadline-20260930@openai
+DTSTAMP:20260908T135223Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-go-lego-store-rewards-deadline-20260930
+DTSTART;TZID=Europe/Paris:20260930T235900
+DTEND;TZID=Europe/Paris:20261001T001400
+SUMMARY:⏳ Pokémon GO × LEGO Store — fin Étude / Chasse aux tampons
+LOCATION:France — LEGO Stores participants
+DESCRIPTION:Deadline officielle de l’activation Pokémon GO × LEGO Store : commencer la Chasse aux tampons avant le 30 septembre 2026 à 23:59 heure locale et terminer/récupérer les récompenses de l’Étude ponctuelle avant cette même heure. Cela concerne notamment la veste LEGO pour avatar et les récompenses liées à l’activation. Source officielle : https://pokemongo.com/fr/news/lego-pokemon-go-2026
+URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
+CATEGORIES:POKEMON,POKEMON-GO,LEGO,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Dernier jour demain pour l’Étude et la Chasse aux tampons Pokémon GO × LEGO Store.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-lego-store-paris-idf-20260803@openai
+DTSTAMP:20260908T135223Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-lego-store-paris-idf-20260803
+X-POKEMON-PHYSICAL-EVENT-ID:lego-pokemon-go-paris-idf-2026
+X-POKEMON-EVENT-TYPE:OFFICIAL_ACTIVATION
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20261001
+SUMMARY:📍 Pokémon GO × LEGO Store — Paris / IDF
+LOCATION:LEGO Stores participants — Paris / Île-de-France
+DESCRIPTION:Activation officielle Pokémon GO × LEGO Store en France du 3 août au 30 septembre 2026. Dans les magasins participants : raids Pikachu, Chasse aux tampons avec rencontres Pikachu à fond spécial, Étude ponctuelle permettant d’obtenir une veste LEGO pour avatar, stickers exclusifs et démonstration LEGO Pokémon SMART Play selon disponibilité locale. Pages LEGO officielles confirmant l’activation Pokémon dans plusieurs LEGO Stores Paris/IDF : Les Halles, Les 4 Temps et So Ouest. Adresses : 1 Passage de la Canopée, 75001 Paris ; 15 Parvis de la Défense, 92092 Puteaux ; Centre Commercial So Ouest, 21 rue d’Alsace, 92300 Levallois-Perret. Source principale : https://pokemongo.com/fr/news/lego-pokemon-go-2026
+URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
+CATEGORIES:POKEMON,POKEMON-GO,LEGO,PHYSICAL-EVENT,PARIS,IDF
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO × LEGO Store — dernier mois de l’activation Paris/IDF.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
