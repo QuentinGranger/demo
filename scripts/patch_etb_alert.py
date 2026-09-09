@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 
 SOURCE = Path('calendars/pokemon-tcg-france.ics')
 UID = 'UID:watch-etb-30ans-fr-20260830@openai'
-URL = 'https://www.atmos-arena.com/product/fr-pokemon-30-ans-30c-etb-precommande/'
-ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SELLER=90;PRICE=259.00:{URL}'
+URL = 'https://comptoirdesecoliers.com/index.php/produit/pokemon-30-anniversaire-etb-pre-commande-en-attente/'
+ALERT_LINK = f'X-POKEMON-ALERT-LINK;RETAILER=Comptoir-des-Ecoliers;STATUS=PREORDER_CLOSED;CONFIDENCE=82;SELLER=89;PRICE=69.95:{URL}'
 
 text = SOURCE.read_text(encoding='utf-8')
 pos = text.find(UID)
@@ -19,7 +19,6 @@ if start < 0 or end < 0:
 end += len('\nEND:VEVENT')
 block = text[start:end]
 
-# Preserve all prior retailer history and append this event only once.
 if ALERT_LINK not in block:
     alert_lines = list(re.finditer(r'^X-POKEMON-ALERT-LINK.*$', block, flags=re.M))
     if alert_lines:
@@ -34,12 +33,12 @@ sequence = int(seq_match.group(1)) + 1 if seq_match else 1
 now_utc = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 
 latest_description = (
-    'DESCRIPTION:🔴 PRÉCO OUVERTE\\n\\n'
-    "Atmos Arena — précommande ouverte pour l’ETB Pokémon JCC 30e Anniversaire FR ; EAN exact et bouton Ajouter au panier actif. Offre exploitable mais très au-dessus du prix de référence.\\n"
-    'Prix : 259,00 € TTC | score D | écart vs 62,99 € : +196,01 € | livraison : calculée au checkout\\n'
-    'Date/heure Europe/Paris : détectée au 02/09/2026 07:14 | limite/client : non publiée | retrait : boutique physique Paris confirmée, disponibilité retrait produit non confirmée\\n'
-    'Confiance produit : 82/100 | SELLER_RELIABILITY : 90/100 TRUSTED | EAN 0196214144835\\n'
-    'ATTENDS UNE MEILLEURE OFFRE'
+    'DESCRIPTION:⚫ ÉPUISÉ / PRÉCOMMANDE FERMÉE\\n\\n'
+    "Comptoir des Écoliers / FANTASIO — l’ETB Pokémon JCC 30e Anniversaire FR est repassée en rupture de stock après une fenêtre de précommande ouverte plus tôt aujourd’hui.\\n"
+    'Prix : 69,95 € | score A | écart vs 62,99 € : +6,96 € | commande actuellement impossible\\n'
+    'Date/heure Europe/Paris : constat au 09/09/2026 20:49 | limite : 1 commande/jour, même produit non renouvelable | retrait : Villeurbanne proposé par la boutique\\n'
+    'Confiance produit : 82/100 | SELLER_RELIABILITY : 89/100 TRUSTED | EAN 0196214144835\\n'
+    'INFO À SURVEILLER'
 )
 block, count = re.subn(r'^DESCRIPTION:.*?(?=^URL:)', latest_description + '\n', block, count=1, flags=re.M | re.S)
 if count != 1:
@@ -48,15 +47,15 @@ if count != 1:
 replacements = {
     r'^LAST-MODIFIED:.*$': f'LAST-MODIFIED:{now_utc}',
     r'^SEQUENCE:\d+$': f'SEQUENCE:{sequence}',
-    r'^SUMMARY:.*$': 'SUMMARY:🔴 PRÉCO OUVERTE — Atmos Arena — ETB 30 ans',
-    r'^LOCATION:.*$': 'LOCATION:France — Atmos Arena',
+    r'^SUMMARY:.*$': 'SUMMARY:⚫ ÉPUISÉ — Comptoir des Écoliers — ETB 30 ans',
+    r'^LOCATION:.*$': 'LOCATION:France — Comptoir des Écoliers / FANTASIO',
     r'^URL:.*$': f'URL:{URL}',
-    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:PREORDER_OPEN',
-    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Atmos-Arena',
-    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:PREORDER_OPEN',
+    r'^X-POKEMON-LATEST-ALERT-LEVEL:.*$': 'X-POKEMON-LATEST-ALERT-LEVEL:OUT_OF_STOCK',
+    r'^X-POKEMON-LATEST-ALERT-RETAILER:.*$': 'X-POKEMON-LATEST-ALERT-RETAILER:Comptoir-des-Ecoliers',
+    r'^X-POKEMON-LATEST-ALERT-STATUS:.*$': 'X-POKEMON-LATEST-ALERT-STATUS:PREORDER_CLOSED',
     r'^X-POKEMON-LATEST-ALERT-CONFIDENCE:.*$': 'X-POKEMON-LATEST-ALERT-CONFIDENCE:82',
-    r'^X-POKEMON-LATEST-SELLER-RELIABILITY:.*$': 'X-POKEMON-LATEST-SELLER-RELIABILITY:90',
-    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260902T071400+0200',
+    r'^X-POKEMON-LATEST-SELLER-RELIABILITY:.*$': 'X-POKEMON-LATEST-SELLER-RELIABILITY:89',
+    r'^X-POKEMON-LATEST-ALERT-AT:.*$': 'X-POKEMON-LATEST-ALERT-AT:20260909T204900+0200',
 }
 for pattern, replacement in replacements.items():
     block, count = re.subn(pattern, replacement, block, count=1, flags=re.M)
