@@ -843,22 +843,25 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-pass-september-20260908@openai
+SEQUENCE:1
 DTSTAMP:20260907T070500Z
 LAST-MODIFIED:20260907T070500Z
-SEQUENCE:0
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
 X-POKEMON-ACTION:PLAY
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260908T100000 Europe/Paris
+X-POKEMON-EXACT-END:20261006T100000 Europe/Paris
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-CONFIDENCE:99
 X-POKEMON-ACTIONABILITY:76
 X-POKEMON-USER-EFFECT:pokemon-go-pass-september-20260908
-DTSTART;TZID=Europe/Paris:20260908T100000
-DTEND;TZID=Europe/Paris:20261006T100000
-SUMMARY:🎟️ Pokémon GO — Passe GO septembre — Latios
-DESCRIPTION:Passe GO de septembre disponible du 8 septembre 2026 à 10:00 au 6 octobre à 10:00 heure locale. Récompense vedette : Latios.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20261007
+SUMMARY:🎟️ GO — Passe septembre — Latios
+DESCRIPTION:Passe GO de septembre disponible du 8 septembre 2026 à 10:00 au 6 octobre à 10:00 heure locale. Récompense vedette : Latios. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
 URL:https://pokemongo.com/news/go-pass-september-2026
 CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,LATIOS
 BEGIN:VALARM
