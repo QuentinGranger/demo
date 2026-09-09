@@ -1607,4 +1607,34 @@ ACTION:DISPLAY
 DESCRIPTION:La bourse d’échange Pokémon Cultura Saint-Priest a lieu demain à 16:30.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-baldwin-biodiversite-20261128@openai
+DTSTAMP:20260909T135141Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:70
+X-POKEMON-USER-EFFECT-ID:paris-baldwin-pokemon-biodiversite-20261128
+X-POKEMON-PHYSICAL-EVENT-ID:paris-baldwin-pokemon-biodiversite-20261128
+X-POKEMON-EVENT-TYPE:CULTURAL_WORKSHOP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20261128T103000
+DTEND;TZID=Europe/Paris:20261128T123000
+SUMMARY:📍 Pokémon — Atelier biodiversité — Paris 19e
+LOCATION:Médiathèque James Baldwin\, 10 Bis rue Henri Ribière\, 75019 Paris\, France
+DESCRIPTION:Atelier Pokémon et biodiversité organisé à la Médiathèque James Baldwin : dessiner les espèces animales et végétales qui inspirent les Pokémon. Le samedi 28 novembre 2026 de 10:30 à 12:30. Gratuit ; inscription auprès des bibliothécaires. Public à partir de 12 ans.\nSource officielle : https://www.paris.fr/evenements/atelier-pokemon-et-biodiversite-dessiner-les-especes-qui-inspirent-les-pokemon-115881
+URL:https://www.paris.fr/evenements/atelier-pokemon-et-biodiversite-dessiner-les-especes-qui-inspirent-les-pokemon-115881
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,ATELIER,BIODIVERSITE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L’atelier Pokémon et biodiversité à Paris 19e a lieu demain à 10:30.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
