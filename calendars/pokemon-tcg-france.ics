@@ -1475,4 +1475,29 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO × LEGO Store — dernier mois de l’activation Paris/IDF.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-20260929@openai
+DTSTAMP:20260909T020233Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-20260929
+DTSTART;TZID=Europe/Paris:20260929T100000
+DTEND;TZID=Europe/Paris:20261005T200000
+SUMMARY:🍎 Pokémon GO — Festival des récoltes
+DESCRIPTION:Événement officiel Pokémon GO du 29 septembre 2026 à 10:00 au 5 octobre 2026 à 20:00 heure locale. Verpom chromatique fait ses débuts et un Passe GO Festival des récoltes est proposé. Les tâches et récompenses de l’Étude ponctuelle doivent être terminées/récupérées avant le 5 octobre à 20:00. Source officielle : https://pokemongo.com/de/news/harvest-festival-2026
+URL:https://pokemongo.com/de/news/harvest-festival-2026
+CATEGORIES:POKEMON,POKEMON-GO,EVENT,HARVEST-FESTIVAL
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Festival des récoltes commence demain à 10:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
