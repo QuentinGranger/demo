@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-harvest-festival-20260929@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-harvest-festival-20260929@openai\r\nDTSTAMP:20260909T020233Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nX-POKEMON-PRIORITY:IMPORTANT\r\nX-POKEMON-ACTION:PLAY\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:99\r\nX-POKEMON-ACTIONABILITY:82\r\nX-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-20260929\r\nDTSTART;TZID=Europe/Paris:20260929T100000\r\nDTEND;TZID=Europe/Paris:20261005T200000\r\nSUMMARY:🍎 Pokémon GO — Festival des récoltes\r\nDESCRIPTION:Événement officiel Pokémon GO du 29 septembre 2026 à 10:00 au 5 octobre 2026 à 20:00 heure locale. Verpom chromatique fait ses débuts et un Passe GO Festival des récoltes est proposé. Les tâches et récompenses de l’Étude ponctuelle doivent être terminées/récupérées avant le 5 octobre à 20:00. Source officielle : https://pokemongo.com/de/news/harvest-festival-2026\r\nURL:https://pokemongo.com/de/news/harvest-festival-2026\r\nCATEGORIES:POKEMON,POKEMON-GO,EVENT,HARVEST-FESTIVAL\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Pokémon GO — Festival des récoltes commence demain à 10:00.\r\nEND:VALARM\r\nEND:VEVENT"
+}
