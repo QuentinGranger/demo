@@ -1637,4 +1637,35 @@ ACTION:DISPLAY
 DESCRIPTION:L’atelier Pokémon et biodiversité à Paris 19e a lieu demain à 10:30.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-gutenberg-biodiversite-20261128@openai
+DTSTAMP:20260909T174347Z
+LAST-MODIFIED:20260909T174347Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT-ID:paris-gutenberg-pokemon-biodiversite-20261128
+X-POKEMON-PHYSICAL-EVENT-ID:paris-gutenberg-pokemon-biodiversite-20261128
+X-POKEMON-EVENT-TYPE:CULTURAL_WORKSHOP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20261128T150000
+DTEND;TZID=Europe/Paris:20261128T163000
+SUMMARY:📍 Pokémon — Atelier biodiversité — Paris 15e
+LOCATION:Bibliothèque Gutenberg\, 8 rue de la Montagne d'Aulas\, 75015 Paris\, France
+DESCRIPTION:Atelier Pokémon et biodiversité organisé par la Bibliothèque Gutenberg : découvrir les espèces vivantes ayant inspiré des Pokémon puis les dessiner à l'encre de Chine. Le samedi 28 novembre 2026 de 15:00 à 16:30. Gratuit\, uniquement sur réservation\, à partir de 7 ans.\nSource officielle : https://www.paris.fr/evenements/pokemon-et-biodiversite-113313
+URL:https://www.paris.fr/evenements/pokemon-et-biodiversite-113313
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,ATELIER,BIODIVERSITE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L'atelier Pokémon et biodiversité à Paris 15e a lieu demain à 15:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
