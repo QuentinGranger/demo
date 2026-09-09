@@ -1555,4 +1555,34 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Festival des récoltes : Offensive commence demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-cultura-saint-priest-bourse-20260919@openai
+DTSTAMP:20260909T094106Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:62
+X-POKEMON-USER-EFFECT-ID:cultura-saint-priest-pokemon-bourse-20260919
+X-POKEMON-PHYSICAL-EVENT-ID:cultura-saint-priest-pokemon-bourse-20260919
+X-POKEMON-EVENT-TYPE:RETAIL_EVENT
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20260919T163000
+DTEND;TZID=Europe/Paris:20260919T183000
+SUMMARY:📍 Pokémon — Bourse d’échange cartes — Saint-Priest
+LOCATION:Cultura Saint-Priest — Salle Créative\, Boulevard André Bouloche\, 69800 Saint-Priest\, France
+DESCRIPTION:Activité officielle organisée par Cultura Saint-Priest : bourse d’échange autour des cartes et objets Pokémon pour adultes et juniors. Session le 19 septembre 2026 de 16:30 à 18:30. Accès gratuit ; réservation ouverte sur la page officielle Cultura. Public indiqué : adultes 16+ et juniors 11–15 ans.\nSource officielle : https://www.cultura.com/s-Bourse-d__change-Adulte-et-Junior---Cartes-Pokemon--sdp-6014ba36-8ce0-11f1-b457-7dd52eb6d637.html
+URL:https://www.cultura.com/s-Bourse-d__change-Adulte-et-Junior---Cartes-Pokemon--sdp-6014ba36-8ce0-11f1-b457-7dd52eb6d637.html
+CATEGORIES:POKEMON,PHYSICAL-EVENT,CULTURA,SAINT-PRIEST,RETAIL-EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La bourse d’échange Pokémon Cultura Saint-Priest a lieu demain à 16:30.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
