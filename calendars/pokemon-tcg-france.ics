@@ -1500,4 +1500,34 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — Festival des récoltes commence demain à 10:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-pass-rewards-expiry-20261007@openai
+DTSTAMP:20260909T020400Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-pass-rewards-expiry-20261007
+DTSTART;TZID=Europe/Paris:20261007T200000
+DTEND;TZID=Europe/Paris:20261007T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Festival des récoltes
+DESCRIPTION:Les récompenses débloquées dans le Passe GO Festival des récoltes expirent le 7 octobre 2026 à 20:00 heure locale. Pense à récupérer les récompenses obtenues avant cette échéance. Source officielle : https://pokemongo.com/en/news/harvest-festival-tgr-2026
+URL:https://pokemongo.com/en/news/harvest-festival-tgr-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Festival des récoltes expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour récupérer les récompenses du Passe GO Festival des récoltes.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
