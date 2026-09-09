@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "update",
+  "uid": "pokemon-go-pass-september-20260908@openai",
+  "event": "BEGIN:VEVENT\nUID:pokemon-go-pass-september-20260908@openai\nDTSTAMP:20260907T070500Z\nLAST-MODIFIED:20260907T070500Z\nSTATUS:CONFIRMED\nPRIORITY:5\nX-POKEMON-PRIORITY:IMPORTANT\nX-POKEMON-ACTION:PLAY\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\nX-POKEMON-EXACT-START:20260908T100000 Europe/Paris\nX-POKEMON-EXACT-END:20261006T100000 Europe/Paris\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\nX-POKEMON-CONFIDENCE:99\nX-POKEMON-ACTIONABILITY:76\nX-POKEMON-USER-EFFECT:pokemon-go-pass-september-20260908\nDTSTART;VALUE=DATE:20260908\nDTEND;VALUE=DATE:20261007\nSUMMARY:🎟️ GO — Passe septembre — Latios\nDESCRIPTION:Passe GO de septembre disponible du 8 septembre 2026 à 10:00 au 6 octobre à 10:00 heure locale. Récompense vedette : Latios. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\\nSource officielle : https://pokemongo.com/news/go-pass-september-2026\nURL:https://pokemongo.com/news/go-pass-september-2026\nCATEGORIES:POKEMON,POKEMON-GO,GO-PASS,LATIOS\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:Le Passe GO de septembre commence demain à 10:00.\nEND:VALARM\nEND:VEVENT"
+}
