@@ -55,8 +55,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260904T223435Z
-SEQUENCE:19
+LAST-MODIFIED:20260909T185159Z
+SEQUENCE:20
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -92,19 +92,26 @@ X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SEL
 X-POKEMON-ALERT-LINK;RETAILER=DestockTCG;STATUS=INDEXED_NOT_OPEN;CONFIDENCE=82;SELLER=90:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
 X-POKEMON-ALERT-LINK;RETAILER=Smyths-France;STATUS=PREOPEN_PROBABLE;CONFIDENCE=88;SELLER=95;PRICE=55.99:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
 X-POKEMON-ALERT-LINK;RETAILER=King-Jouet;STATUS=DATE_TIME_ANNOUNCED;CONFIDENCE=88;SELLER=95;DATE=20260916T090000+0200:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
+X-POKEMON-ALERT-LINK;RETAILER=Comptoir-des-Ecoliers;STATUS=PREORDER_CLOSED;CONFIDENCE=82;SELLER=89;PRICE=69.95:https://comptoirdesecoliers.com/index.php/produit/pokemon-30-anniversaire-etb-pre-commande-en-attente/
 X-POKEMON-SELLER-RELIABILITY;RETAILER=DestockTCG;SCORE=90;BAND=TRUSTED:LEGAL_IDENTITY20|REGISTRY_VERIFICATION15|ADDRESS_CONSISTENCY10|DOMAIN_HISTORY7|PAYMENT_PROTECTION10|EXTERNAL_REPUTATION11|FULFILLMENT_TRACK_RECORD7|CONTACT_TRANSPARENCY5|POLICY_QUALITY5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟠 DATE/HEURE ANNONCÉE — King Jouet — ETB 30 ans
-LOCATION:France — King Jouet
-DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nKing Jouet annonce l'ouverture du drop JCC Pokémon 30 ans le 16/09/2026 à 09:00 Europe/Paris. La page officielle King Jouet cite explicitement un coffret Dresseur d'Élite dans la sélection du drop. La précommande/vente ETB n'est pas encore ouverte et aucun prix ETB n'est publié.\nPrix/livré : non annoncé | score : — | écart vs 62,99 € : —\nDate/heure Europe/Paris : 16/09/2026 09:00 | limite/client : non publiée | retrait : non publié\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | TIER 1\nPRÉPARE-TOI À L'OUVERTURE
-URL:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
-X-POKEMON-LATEST-ALERT-LEVEL:DATE_TIME_ANNOUNCED
-X-POKEMON-LATEST-ALERT-RETAILER:King-Jouet
-X-POKEMON-LATEST-ALERT-STATUS:DATE_TIME_ANNOUNCED
-X-POKEMON-LATEST-ALERT-CONFIDENCE:88
-X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260905T003435+0200
+SUMMARY:⚫ ÉPUISÉ — Comptoir des Écoliers — ETB 30 ans
+LOCATION:France — Comptoir des Écoliers / FANTASIO
+DESCRIPTION:⚫ ÉPUISÉ / PRÉCOMMANDE FERMÉE
+
+Comptoir des Écoliers / FANTASIO — l’ETB Pokémon JCC 30e Anniversaire FR est repassée en rupture de stock après une fenêtre de précommande ouverte plus tôt aujourd’hui.
+Prix : 69,95 € | score A | écart vs 62,99 € : +6,96 € | commande actuellement impossible
+Date/heure Europe/Paris : constat au 09/09/2026 20:49 | limite : 1 commande/jour, même produit non renouvelable | retrait : Villeurbanne proposé par la boutique
+Confiance produit : 82/100 | SELLER_RELIABILITY : 89/100 TRUSTED | EAN 0196214144835
+INFO À SURVEILLER
+URL:https://comptoirdesecoliers.com/index.php/produit/pokemon-30-anniversaire-etb-pre-commande-en-attente/
+X-POKEMON-LATEST-ALERT-LEVEL:OUT_OF_STOCK
+X-POKEMON-LATEST-ALERT-RETAILER:Comptoir-des-Ecoliers
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_CLOSED
+X-POKEMON-LATEST-ALERT-CONFIDENCE:82
+X-POKEMON-LATEST-SELLER-RELIABILITY:89
+X-POKEMON-LATEST-ALERT-AT:20260909T204900+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z

@@ -12,6 +12,34 @@ X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 X-POKEMON-RETAILER-POLICY:RETAILER_WATCH_ALL_FR_V2
 BEGIN:VEVENT
+UID:pokemon-go-lego-store-paris-idf-20260803@openai
+DTSTAMP:20260908T135223Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-lego-store-paris-idf-20260803
+X-POKEMON-PHYSICAL-EVENT-ID:lego-pokemon-go-paris-idf-2026
+X-POKEMON-EVENT-TYPE:OFFICIAL_ACTIVATION
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20261001
+SUMMARY:📍 Pokémon GO × LEGO Store — Paris / IDF
+LOCATION:LEGO Stores participants — Paris / Île-de-France
+DESCRIPTION:Activation officielle Pokémon GO × LEGO Store en France du 3 août au 30 septembre 2026. Dans les magasins participants : raids Pikachu, Chasse aux tampons avec rencontres Pikachu à fond spécial, Étude ponctuelle permettant d’obtenir une veste LEGO pour avatar, stickers exclusifs et démonstration LEGO Pokémon SMART Play selon disponibilité locale. Pages LEGO officielles confirmant l’activation Pokémon dans plusieurs LEGO Stores Paris/IDF : Les Halles, Les 4 Temps et So Ouest. Adresses : 1 Passage de la Canopée, 75001 Paris ; 15 Parvis de la Défense, 92092 Puteaux ; Centre Commercial So Ouest, 21 rue d’Alsace, 92300 Levallois-Perret. Source principale : https://pokemongo.com/fr/news/lego-pokemon-go-2026
+URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
+CATEGORIES:POKEMON,POKEMON-GO,LEGO,PHYSICAL-EVENT,PARIS,IDF
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO × LEGO Store — dernier mois de l’activation Paris/IDF.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
 DTSTAMP:20260819T031000Z
 LAST-MODIFIED:20260819T031000Z
@@ -194,8 +222,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:watch-etb-30ans-fr-20260830@openai
 DTSTAMP:20260830T051000Z
-LAST-MODIFIED:20260904T223435Z
-SEQUENCE:19
+LAST-MODIFIED:20260909T185159Z
+SEQUENCE:20
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -231,19 +259,26 @@ X-POKEMON-ALERT-LINK;RETAILER=Atmos-Arena;STATUS=PREORDER_OPEN;CONFIDENCE=82;SEL
 X-POKEMON-ALERT-LINK;RETAILER=DestockTCG;STATUS=INDEXED_NOT_OPEN;CONFIDENCE=82;SELLER=90:https://www.destocktcg.fr/product/30e-anniversaire-coffret-dresseur-delite-etb-pokemon-fr-1750
 X-POKEMON-ALERT-LINK;RETAILER=Smyths-France;STATUS=PREOPEN_PROBABLE;CONFIDENCE=88;SELLER=95;PRICE=55.99:https://www.smythstoys.com/fr/fr-fr/jouets/jeux-de-societe-et-puzzles/cartes-a-collectionner/cartes-pokemon/pokemon-coffret-dresseur-delite-30eme-anniversaire/p/261821
 X-POKEMON-ALERT-LINK;RETAILER=King-Jouet;STATUS=DATE_TIME_ANNOUNCED;CONFIDENCE=88;SELLER=95;DATE=20260916T090000+0200:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
+X-POKEMON-ALERT-LINK;RETAILER=Comptoir-des-Ecoliers;STATUS=PREORDER_CLOSED;CONFIDENCE=82;SELLER=89;PRICE=69.95:https://comptoirdesecoliers.com/index.php/produit/pokemon-30-anniversaire-etb-pre-commande-en-attente/
 X-POKEMON-SELLER-RELIABILITY;RETAILER=DestockTCG;SCORE=90;BAND=TRUSTED:LEGAL_IDENTITY20|REGISTRY_VERIFICATION15|ADDRESS_CONSISTENCY10|DOMAIN_HISTORY7|PAYMENT_PROTECTION10|EXTERNAL_REPUTATION11|FULFILLMENT_TRACK_RECORD7|CONTACT_TRANSPARENCY5|POLICY_QUALITY5
 DTSTART;VALUE=DATE:20260830
 DTEND;VALUE=DATE:20260917
-SUMMARY:🟠 DATE/HEURE ANNONCÉE — King Jouet — ETB 30 ans
-LOCATION:France — King Jouet
-DESCRIPTION:🟠 DATE/HEURE ANNONCÉE\n\nKing Jouet annonce l'ouverture du drop JCC Pokémon 30 ans le 16/09/2026 à 09:00 Europe/Paris. La page officielle King Jouet cite explicitement un coffret Dresseur d'Élite dans la sélection du drop. La précommande/vente ETB n'est pas encore ouverte et aucun prix ETB n'est publié.\nPrix/livré : non annoncé | score : — | écart vs 62,99 € : —\nDate/heure Europe/Paris : 16/09/2026 09:00 | limite/client : non publiée | retrait : non publié\nConfiance produit : 88/100 | SELLER_RELIABILITY : 95/100 TRUSTED | TIER 1\nPRÉPARE-TOI À L'OUVERTURE
-URL:https://www.king-jouet.com/pokemon-30-ans-tcg.htm
-X-POKEMON-LATEST-ALERT-LEVEL:DATE_TIME_ANNOUNCED
-X-POKEMON-LATEST-ALERT-RETAILER:King-Jouet
-X-POKEMON-LATEST-ALERT-STATUS:DATE_TIME_ANNOUNCED
-X-POKEMON-LATEST-ALERT-CONFIDENCE:88
-X-POKEMON-LATEST-SELLER-RELIABILITY:95
-X-POKEMON-LATEST-ALERT-AT:20260905T003435+0200
+SUMMARY:⚫ ÉPUISÉ — Comptoir des Écoliers — ETB 30 ans
+LOCATION:France — Comptoir des Écoliers / FANTASIO
+DESCRIPTION:⚫ ÉPUISÉ / PRÉCOMMANDE FERMÉE
+
+Comptoir des Écoliers / FANTASIO — l’ETB Pokémon JCC 30e Anniversaire FR est repassée en rupture de stock après une fenêtre de précommande ouverte plus tôt aujourd’hui.
+Prix : 69,95 € | score A | écart vs 62,99 € : +6,96 € | commande actuellement impossible
+Date/heure Europe/Paris : constat au 09/09/2026 20:49 | limite : 1 commande/jour, même produit non renouvelable | retrait : Villeurbanne proposé par la boutique
+Confiance produit : 82/100 | SELLER_RELIABILITY : 89/100 TRUSTED | EAN 0196214144835
+INFO À SURVEILLER
+URL:https://comptoirdesecoliers.com/index.php/produit/pokemon-30-anniversaire-etb-pre-commande-en-attente/
+X-POKEMON-LATEST-ALERT-LEVEL:OUT_OF_STOCK
+X-POKEMON-LATEST-ALERT-RETAILER:Comptoir-des-Ecoliers
+X-POKEMON-LATEST-ALERT-STATUS:PREORDER_CLOSED
+X-POKEMON-LATEST-ALERT-CONFIDENCE:82
+X-POKEMON-LATEST-SELLER-RELIABILITY:89
+X-POKEMON-LATEST-ALERT-AT:20260909T204900+0200
 CATEGORIES:Pokémon,TCG,Précommande,Raffle,Surveillance,30e Anniversaire,Priorité Critique
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260902T080000Z
@@ -267,10 +302,354 @@ DESCRIPTION:🚨 ETB 30 ans demain — prépare achat et retrait magasin
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-go-mega-finale-20260905@openai
+DTSTART;TZID=Europe/Paris:20260905T100000
+DTEND;TZID=Europe/Paris:20260906T180000
+SUMMARY:🌐 Pokémon GO — Festival 2026 Méga-Finale
+DESCRIPTION:Festival Pokémon GO 2026 Méga-Finale. Samedi 5 et dimanche 6 septembre 2026 de 10:00 à 18:00 (heure locale). Source officielle : https://pokemongo.com/fr/gofest/megafinale
+URL:https://pokemongo.com/fr/gofest/megafinale
+CATEGORIES:POKEMON,POKEMON GO,EVENT
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:94
+X-POKEMON-USER-EFFECT:pokemon-go-mega-finale-20260905
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Festival Pokémon GO 2026 Méga-Finale demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:preorder-guizette-etb-30ans-20260906@openai
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
+RELATED-TO;RELTYPE=PARENT:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260907
+SUMMARY:🔥 ✅ 🔔 Précommande — ETB 30 ans (Guizette Family)
+LOCATION:En ligne — France
+DESCRIPTION:Priorité : 🔥 Critique — produit anniversaire très demandé et ouverture de précommande nécessitant une action rapide.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour l'ETB Pokémon 30e Anniversaire le 6 septembre 2026. Cette date concerne Guizette Family et non l'ensemble des revendeurs français. Sortie prévue le 16 septembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire — 16 septembre 2026.\nSource : https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
+URL:https://www.guizettefamily.com/produit/etb-30-ans-pokemon/
+CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : ETB 30 ans
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : ETB 30 ans
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hordes-mega-20260908@openai
+SEQUENCE:1
+DTSTAMP:20260905T103407Z
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260908T100000 Europe/Paris
+X-POKEMON-EXACT-END:20260914T200000 Europe/Paris
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260915
+SUMMARY:⚡ GO — Hordes Méga
+DESCRIPTION:Événement officiel Pokémon GO du 8 septembre 2026 à 10h au 14 septembre à 20h (heure locale). Débuts de Grondogue et Dogrino, Flamenroule chromatique disponible pour la première fois, nouveaux Super Niveaux Max pour Méga-Dardargnan et Méga-Démolosse. Les récompenses du Passe GO expirent le 16 septembre à 20h. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici. Source: https://pokemongo.com/fr/news/mega-squads-2026
+URL:https://pokemongo.com/fr/news/mega-squads-2026
+CATEGORIES:POKEMON,POKEMON GO,EVENEMENT
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:pokemon-go-hordes-mega-20260908
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Rappel — Pokémon GO Hordes Méga demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-september-20260908@openai
+SEQUENCE:1
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260908T100000 Europe/Paris
+X-POKEMON-EXACT-END:20261006T100000 Europe/Paris
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:76
+X-POKEMON-USER-EFFECT:pokemon-go-pass-september-20260908
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20261007
+SUMMARY:🎟️ GO — Passe septembre — Latios
+DESCRIPTION:Passe GO de septembre disponible du 8 septembre 2026 à 10:00 au 6 octobre à 10:00 heure locale. Récompense vedette : Latios. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+URL:https://pokemongo.com/news/go-pass-september-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,LATIOS
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le Passe GO de septembre commence demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-sentiers-crepusculaires-20260908@openai
+SEQUENCE:1
+DTSTAMP:20260906T235900Z
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260908T100000 Europe/Paris
+X-POKEMON-EXACT-END:20261201T100000 Europe/Paris
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20261202
+SUMMARY:✅ GO — Saison Sentiers crépusculaires
+LOCATION:Pokémon GO — France
+DESCRIPTION:Saison Pokémon GO Sentiers crépusculaires. Du 8 septembre 2026 à 10:00 au 1er décembre 2026 à 10:00, heure locale. Date et horaires confirmés par Pokémon GO. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\nSource officielle : https://pokemongo.com/fr/seasons/twilight-trails
+URL:https://pokemongo.com/fr/seasons/twilight-trails
+CATEGORIES:Pokémon,Pokémon GO,Saison
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:76
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:POKEMON_GO_TWILIGHT_TRAILS_FR_20260908
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Sentiers crépusculaires commence demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-reglement-mc-20260909@openai
+DTSTAMP:20260907T001700Z
+LAST-MODIFIED:20260907T001700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:DIGITAL_RELEASE_INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:64
+X-POKEMON-USER-EFFECT-ID:pokemon-champions-mc-fr-20260909
+DTSTART;TZID=Europe/Paris:20260909T040000
+DTEND;TZID=Europe/Paris:20261202T030000
+SUMMARY:🎮 Pokémon Champions — Règlement M-C
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:✅ Confirmé officiellement par Pokémon France. Le règlement M-C entre en vigueur le 9 septembre 2026 à 04:00 (Europe/Paris) et reste actif jusqu’au 2 décembre 2026 à 02:59. Il ajoute notamment de nouvelles Méga-Évolutions Z et de nouveaux Pokémon jouables.\nPrécision : EXACT_DATETIME.\nConfiance : 99/100. Actionability : 64/100.\nSource : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
+CATEGORIES:POKEMON,POKEMON CHAMPIONS,JEU VIDEO,COMPETITIF,REGLEMENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rappel — règlement M-C Pokémon Champions
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-maintenance-3-8-0-20260909@openai
+DTSTAMP:20260907T224800Z
+LAST-MODIFIED:20260907T224800Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAN
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-sleep-maintenance-3-8-0-20260909
+DTSTART;TZID=Europe/Paris:20260909T043000
+DTEND;TZID=Europe/Paris:20260909T090000
+SUMMARY:🛠️ Pokémon Sleep — maintenance version 3.8.0
+DESCRIPTION:Maintenance officielle Pokémon Sleep pour la version 3.8.0, annoncée du 9 septembre 2026 à 04:30 au 9 septembre à 09:00. Important : si vous souhaitez mesurer votre sommeil pendant la maintenance, évitez de mettre l’application à jour vers la version 3.8.0 avant de démarrer la mesure et lancez-la depuis l’écran « Maintenance en cours ». Source officielle : https://www.pokemonsleep.net/fr/news/343339383630393136303431383039393236/
+URL:https://www.pokemonsleep.net/fr/news/343339383630393136303431383039393236/
+CATEGORIES:POKEMON,POKEMON-SLEEP,MAINTENANCE,UPDATE
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — maintenance 3.8.0 dans 3 heures.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-new-moon-17-20260910@openai
+DTSTAMP:20260907T232149Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:64
+X-POKEMON-USER-EFFECT:new-moon-17-pokemon-sleep-20260910
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+DTSTART;TZID=Europe/Paris:20260910T040000
+DTEND;TZID=Europe/Paris:20260913T035900
+SUMMARY:🌑 Pokémon Sleep — Journée de la nouvelle lune nº17
+DESCRIPTION:Évènement officiel Pokémon Sleep du 10 septembre 2026 à 04:00 au 13 septembre 2026 à 03:59. Apparitions spéciales de Mew et Darkrai, Pokémon plus difficiles à rassasier au premier goûter, possibilité de Pokémon chromatiques et +3 points d’amitié lors d’une rencontre bénéficiant du taux spécial. Source officielle : https://www.pokemonsleep.net/fr/news/343330313733363436343737303636323437/
+URL:https://www.pokemonsleep.net/fr/news/343330313733363436343737303636323437/
+CATEGORIES:Pokémon,Pokémon Sleep,Évènement,Nouvelle lune
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — Journée de la nouvelle lune nº17 demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tcgl-maintenance-1-42-0-20260910@openai
+SEQUENCE:0
+DTSTART;TZID=Europe/Paris:20260910T170000
+DTEND;TZID=Europe/Paris:20260911T010000
+SUMMARY:🛠️ JCC Pokémon Live — maintenance 1.42.0
+DESCRIPTION:Maintenance officielle du JCC Pokémon Live pour la version 1.42.0. Le service sera hors ligne le 10 septembre 2026 de 15:00 à 23:00 UTC, soit de 17:00 à 01:00 Europe/Paris. Source officielle : https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+URL:https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+CATEGORIES:POKEMON,TCG-LIVE,MAINTENANCE,UPDATE
+X-POKEMON-USER-EFFECT-ID:tcgl-maintenance-1-42-0-20260910
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:70
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon Live sera en maintenance dans 1 heure.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-main-rewards-expiry-20260911@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:86
+X-POKEMON-USER-EFFECT:pokemon-go-worlds2026-main-rewards-expiry-20260911
+DTSTART;TZID=Europe/Paris:20260911T220000
+DTEND;TZID=Europe/Paris:20260911T221500
+SUMMARY:⏳ Pokémon GO — fin des récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle des récompenses Pokémon GO obtenues pendant les Championnats du Monde Pokémon 2026 via les diffusions Twitch. Pokémon indique que toutes ces récompenses expirent le 11 septembre 2026 à 13:00 PDT, soit 22:00 Europe/Paris. Cela inclut notamment les Études ponctuelles et récompenses Worlds décrites sur la page officielle. Cette échéance est distincte de la récompense PokémonXP Pikachu en costume, dont la deadline est plus tardive. Ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-GO,REWARD,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon GO des Mondiaux 2026 expirent demain à 22:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures — récompenses Pokémon GO Mondiaux 2026.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds2026-reward-expiry-20260911@openai
+SEQUENCE:1
+DTSTART;TZID=Europe/Paris:20260912T050000
+DTEND;TZID=Europe/Paris:20260912T051500
+SUMMARY:⏳ Pokémon GO — fin récompense PokémonXP Mondiaux 2026
+DESCRIPTION:Correction de deadline : la page officielle Pokémon indique que la récompense Pokémon GO obtenue après 30 minutes de visionnage du panel Pokémon GO de PokémonXP (Étude ponctuelle permettant de rencontrer Pikachu en costume PokémonXP) doit être récupérée avant le 11 septembre 2026 à 20:00 PDT. Cela correspond au 12 septembre 2026 à 05:00 Europe/Paris. Cette échéance ne doit pas être confondue avec les deadlines distinctes des récompenses Pokémon Champions ou JCC Pokémon Live. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-GO,REWARD,DEADLINE,WORLDS-2026
+X-POKEMON-USER-EFFECT-ID:pokemon-go-worlds2026-reward-expiry-20260911
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La récompense Pokémon GO PokémonXP/Mondiaux expire demain matin à 05:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-classic-griknot-20260912@openai
+DTSTAMP:20260905T103407Z
+DTSTART;TZID=Europe/Paris:20260912T140000
+DTEND;TZID=Europe/Paris:20260912T170000
+SUMMARY:⭐ Pokémon GO — Journée Communauté classique Griknot
+DESCRIPTION:Événement officiel Pokémon GO le 12 septembre 2026 de 14h à 17h (heure locale). Griknot est le Pokémon vedette. Faites évoluer Carmache avant 21h pour obtenir Carchacrok avec Telluriforce. Source: https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
+URL:https://pokemongo.com/fr/news/communitydayclassic-gible-september-2026
+CATEGORIES:POKEMON,POKEMON GO,COMMUNITY DAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-classic-griknot-20260912
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Rappel — Journée Communauté classique Griknot demain
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-event-20260914@openai
+DTSTAMP:20260907T225000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-sleep-mewtwo-event-20260914
+DTSTART;TZID=Europe/Paris:20260914T040000
+DTEND;TZID=Europe/Paris:20260928T035900
+SUMMARY:🌙 Pokémon Sleep — Recherches en terres inconnues : Mewtwo
+DESCRIPTION:Évènement officiel Pokémon Sleep en deux semaines. Semaine 1 : du 14 septembre à 04:00 au 21 septembre à 03:59. Semaine 2 : du 21 septembre à 04:00 au 28 septembre à 03:59. Mewtwo apparaît plus fréquemment et l’ADN de Mewtwo peut être obtenu pendant l’évènement. Source officielle : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+URL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+CATEGORIES:POKEMON,POKEMON-SLEEP,EVENT,MEWTWO
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — l’évènement Mewtwo commence demain à 04:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-arrival-20260914T1500@openai
+DTSTAMP:20260907T232149Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:69
+X-POKEMON-USER-EFFECT:mewtwo-available-pokemon-sleep-20260914T1500
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+DTSTART;TZID=Europe/Paris:20260914T150000
+DTEND;TZID=Europe/Paris:20260914T151500
+SUMMARY:🧬 Pokémon Sleep — Mewtwo devient disponible
+DESCRIPTION:Mewtwo devient disponible dans Pokémon Sleep le 14 septembre 2026 à 15:00. À partir de cette heure, les encens Mewtwo peuvent être utilisés. Zones annoncées : Île Vertepousse, Île Vertepousse (expert) et Plage Cyan (expert). Source officielle : https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/
+URL:https://www.pokemonsleep.net/fr/news/343333373536323135303133353339383437/
+CATEGORIES:Pokémon,Pokémon Sleep,Mewtwo,Disponibilité
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — Mewtwo devient disponible demain à 15 h
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:74a1a108-68cd-4c81-b8f1-9206bfa31970@openai
 DTSTAMP:20260819T025700Z
-LAST-MODIFIED:20260905T183733Z
-SEQUENCE:13
+LAST-MODIFIED:20260830T051000Z
+SEQUENCE:11
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -278,15 +657,12 @@ X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
 X-POKEMON-GROUP-ID:TCG-30TH-LAUNCH-20260916
 X-POKEMON-WAVE-ID:TCG-30TH-LAUNCH-20260916
-X-POKEMON-WAVE-COMPLETENESS:COMPLETE
-X-POKEMON-WAVE-PRODUCT-COUNT:5
-X-POKEMON-WAVE-PREORDER-COUNT:0
-X-POKEMON-WAVE-PRODUCTS:Coffret Dresseur d’Élite 30 ans|Coffret Nymphali-ex 30 ans|Coffret Amphinobi-ex 30 ans|Collection Poster 30 ans|Collection Autocollant réajustable 30 ans
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Dresseur d’Élite 30 ans
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Nymphali-ex 30 ans
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Coffret Amphinobi-ex 30 ans
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection Poster 30 ans
-X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Collection Autocollant réajustable 30 ans
+X-POKEMON-WAVE-COMPLETENESS:PARTIAL
+X-POKEMON-WAVE-PRODUCT-COUNT:2
+X-POKEMON-WAVE-PREORDER-COUNT:1
+X-POKEMON-WAVE-PRODUCTS:Extension JCC 30e Anniversaire|ETB 30 ans
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED:Extension JCC 30e Anniversaire
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=20260906:ETB 30 ans
 X-POKEMON-PRODUCT-EAN:0196214144835
 X-POKEMON-PRODUCT-UPC:196214144835
 X-POKEMON-DISTRIBUTOR-REFS:POK1010447102|POK2114483|CLD-169049
@@ -295,17 +671,13 @@ X-POKEMON-WATCH-FREQUENCY:HOURLY
 X-POKEMON-REFERENCE-PRICE-EUR:62.99
 X-POKEMON-PRICE-BANDS:SPLUS_LE_59.99|S_60_62.99|A_63_69.99|B_70_79.99|C_80_99.99|D_GE_100
 X-POKEMON-WATCH-TIER1:Fnac|Cultura|Micromania|Carrefour|E.Leclerc|Auchan|Amazon-FR|Smyths|JoueClub|King-Jouet
+RELATED-TO;RELTYPE=CHILD:preorder-guizette-etb-30ans-20260906@openai
 RELATED-TO;RELTYPE=CHILD:watch-etb-30ans-fr-20260830@openai
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:⭐ ✅ 🃏 Sortie JCC — 30e Anniversaire
 LOCATION:France
-DESCRIPTION:Priorité : ⭐ Important — sortie majeure de la gamme 30ᵉ Anniversaire.
-Fiabilité : ✅ Pokémon confirme la sortie mondiale du 16 septembre 2026 et sa page produits de septembre recoupe la vague de lancement.
-📦 Checklist consolidée : Coffret Dresseur d’Élite 30 ans ; Coffret Nymphali-ex 30 ans ; Coffret Amphinobi-ex 30 ans ; Collection Poster 30 ans ; Collection Autocollant réajustable 30 ans.
-La précédente précommande Guizette du 6 septembre est invalidée et ne doit plus être présentée comme opportunité publique.
-DATE_PRECISION=EXACT_DATE. Aucun horaire de vente global n’est inventé.
-Source : https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026
+DESCRIPTION:Priorité : ⭐ Important — sortie majeure d'extension anniversaire.\nFiabilité : ✅ Confirmé officiel Pokémon pour la sortie suivie.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n✅ Extension JCC 30e Anniversaire\n✅ ETB 30 ans — 🔔 précommande Guizette le 6 septembre\nComplétude : liste partielle des produits de lancement actuellement suivis ; aucun produit non nommé n'est compté.\n🔎 Veille ZERO MISS ULTRA active jusqu’au lancement : recherche horaire par EAN/UPC/références distributeur, priorité aux grands retailers FR/EU, détection des fiches publiques pré-ouverture, contrôle anti-doublon et score de confiance/prix.\n💶 Référence : 62,99 € ; S+ ≤ 59,99 € ; S 60–62,99 € ; A 63–69,99 €.\nRappels calendrier : J-14, J-7, J-3 et J-1 — vérifier précommandes, compte client, paiement et disponibilité.\nLié à : 🔥 ✅ 🔔 Précommande ETB 30 ans (Guizette Family) — 6 septembre 2026.\nSource : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 URL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
@@ -327,6 +699,96 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🃏 Sortie demain — prépare ton achat : 30e Anniversaire
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-celebration-20260916@openai
+SEQUENCE:1
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260916T100000 Europe/Paris
+X-POKEMON-EXACT-END:20260922T200000 Europe/Paris
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:pokemon-go-horizons-celebration-20260916
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260923
+SUMMARY:🌅 GO — Célébration Pokémon Horizons
+DESCRIPTION:Célébration pour La série : Pokémon, les horizons du 16 septembre 2026 à 10:00 au 22 septembre à 20:00 heure locale. Salamèche avec les lunettes de Friede fait ses débuts et un Passe GO d’événement est proposé. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\nSource officielle : https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+URL:https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+CATEGORIES:POKEMON,POKEMON-GO,POKEMON-HORIZONS,EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Célébration Pokémon Horizons commence demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hordes-mega-pass-rewards-expiry-20260916@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-hordes-mega-pass-rewards-expiry-20260916
+DTSTART;TZID=Europe/Paris:20260916T200000
+DTEND;TZID=Europe/Paris:20260916T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Hordes Méga
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de l’événement Hordes Méga expirent le 16 septembre 2026 à 20:00 heure locale. Pense à réclamer les récompenses obtenues avant l’expiration.\nSource officielle : https://pokemongo.com/fr/news/mega-squads-2026
+URL:https://pokemongo.com/fr/news/mega-squads-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Hordes Méga expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour réclamer les récompenses Hordes Méga.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:preorder-guizette-bundle-30ans-20260919@openai
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
+RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:⭐ ✅ 🔔 Précommande — Bundle 6 boosters 30 ans (Guizette Family)
+LOCATION:En ligne — France
+DESCRIPTION:Priorité : ⭐ Important — précommande notable liée à la vague 30 ans, sans caractère critique identifié.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Bundle 6 boosters Pokémon 30e Anniversaire le 19 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
+URL:https://www.guizettefamily.com/categorie/pokemon/items-produits/page/4/
+CATEGORIES:Pokémon,TCG,Précommande,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : Bundle 6 boosters 30 ans
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Bundle 6 boosters 30 ans
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -358,6 +820,115 @@ DESCRIPTION:Événement Pokémon 30 ans à la Fnac Beaune demain
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-go-staraptor-super-mega-raid-day-20260919@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:86
+X-POKEMON-USER-EFFECT:pokemon-go-staraptor-super-mega-raid-day-20260919
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids Étouraptor
+DESCRIPTION:Journée de Super Méga-Raids Étouraptor le 19 septembre 2026 de 14:00 à 17:00 heure locale. Début de Méga-Étouraptor dans les Super Méga-Raids.\nSource officielle : https://pokemongo.com/news/staraptor-super-mega-raid-day-2026
+URL:https://pokemongo.com/news/staraptor-super-mega-raid-day-2026
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Journée Super Méga-Raids Étouraptor a lieu demain.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Super Méga-Raids Étouraptor dans 1 heure.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-cultura-saint-priest-bourse-20260919@openai
+DTSTAMP:20260909T094106Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:62
+X-POKEMON-USER-EFFECT-ID:cultura-saint-priest-pokemon-bourse-20260919
+X-POKEMON-PHYSICAL-EVENT-ID:cultura-saint-priest-pokemon-bourse-20260919
+X-POKEMON-EVENT-TYPE:RETAIL_EVENT
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20260919T163000
+DTEND;TZID=Europe/Paris:20260919T183000
+SUMMARY:📍 Pokémon — Bourse d’échange cartes — Saint-Priest
+LOCATION:Cultura Saint-Priest — Salle Créative\, Boulevard André Bouloche\, 69800 Saint-Priest\, France
+DESCRIPTION:Activité officielle organisée par Cultura Saint-Priest : bourse d’échange autour des cartes et objets Pokémon pour adultes et juniors. Session le 19 septembre 2026 de 16:30 à 18:30. Accès gratuit ; réservation ouverte sur la page officielle Cultura. Public indiqué : adultes 16+ et juniors 11–15 ans.\nSource officielle : https://www.cultura.com/s-Bourse-d__change-Adulte-et-Junior---Cartes-Pokemon--sdp-6014ba36-8ce0-11f1-b457-7dd52eb6d637.html
+URL:https://www.cultura.com/s-Bourse-d__change-Adulte-et-Junior---Cartes-Pokemon--sdp-6014ba36-8ce0-11f1-b457-7dd52eb6d637.html
+CATEGORIES:POKEMON,PHYSICAL-EVENT,CULTURA,SAINT-PRIEST,RETAIL-EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La bourse d’échange Pokémon Cultura Saint-Priest a lieu demain à 16:30.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:preorder-guizette-classeur-30ans-20260920@openai
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:6
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-REMINDER-PROFILE:PREORDER_INFO
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
+RELATED-TO;RELTYPE=PARENT:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:ℹ️ ✅ 🔔 Précommande — Coffret Classeur 30 ans (Guizette Family)
+LOCATION:En ligne — France
+DESCRIPTION:Priorité : ℹ️ Info — produit secondaire de la vague anniversaire, sans urgence forte identifiée.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce l'ouverture de ses précommandes pour le Coffret Classeur Pokémon 30e Anniversaire le 20 septembre 2026. Cette date concerne Guizette Family. Sortie prévue le 2 octobre 2026.\nRappels : J-1 uniquement — précommande informative.\nLié à : ⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre — 2 octobre 2026.\nSource : https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
+URL:https://www.guizettefamily.com/produit/coffret-classeur-30-ans-pokemon/
+CATEGORIES:Pokémon,TCG,Précommande,Priorité Info
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande demain — vérifie si elle t'intéresse : Coffret Classeur 30 ans
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-hachette-halloween-stickers-fr-20260923@openai
+DTSTAMP:20260907T071500Z
+LAST-MODIFIED:20260907T071500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:BUY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:28
+X-POKEMON-PRODUCT-EAN:9782017901785
+X-POKEMON-USER-EFFECT:pokemon-hachette-halloween-stickers-fr-20260923
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:📚 Pokémon — Grand livre de stickers Halloween — sortie FR
+LOCATION:France
+DESCRIPTION:Sortie française de Pokémon - Le grand livre de stickers Halloween, par The Pokémon Company chez Hachette Jeunesse. 120 pages, plus de 700 stickers. Prix éditeur papier : 14,90 €. EAN 9782017901785.\nSource éditeur : https://www.hachette.fr/livre/pokemon-le-grand-livre-de-stickers-halloween-9782017901785/
+URL:https://www.hachette.fr/livre/pokemon-le-grand-livre-de-stickers-halloween-9782017901785/
+CATEGORIES:POKEMON,LIVRE,HALLOWEEN,FRANCE,SORTIE
+END:VEVENT
+BEGIN:VEVENT
 UID:pokemon-horizons-t18-fr-20260923@openai
 DTSTAMP:20260903T225932Z
 LAST-MODIFIED:20260903T225932Z
@@ -377,6 +948,331 @@ LOCATION:France
 DESCRIPTION:Sortie française de Pokémon Les Horizons, Tome 18 — Face au Conseil 4 de Paldea ! Hachette Jeunesse. 64 pages. EAN 9782017392101. Prix éditeur papier : 5,90 €. Date confirmée par l'éditeur Hachette : 23 septembre 2026.\nSource : https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/
 URL:https://www.hachette.fr/livre/pokemon-les-horizons-tome-18-face-au-conseil-4-de-paldea-9782017392101/
 CATEGORIES:Pokémon,Livre,France,Sortie
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-pass-rewards-expiry-20260924@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-go-horizons-pass-rewards-expiry-20260924
+DTSTART;TZID=Europe/Paris:20260924T200000
+DTEND;TZID=Europe/Paris:20260924T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Pokémon Horizons
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de la Célébration Pokémon Horizons expirent le 24 septembre 2026 à 20:00 heure locale.\nSource officielle : https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+URL:https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
+CATEGORIES:POKEMON,POKEMON-GO,POKEMON-HORIZONS,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Pokémon Horizons expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour réclamer les récompenses Pokémon Horizons.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:tcgl-worlds2026-redeem-deadline-20260925@openai
+SEQUENCE:0
+DTSTART;TZID=Europe/Paris:20260925T180000
+DTEND;TZID=Europe/Paris:20260925T181500
+SUMMARY:⏳ Fin code JCC Pokémon Live — récompenses Mondiaux/PokémonXP 2026
+DESCRIPTION:Deadline officielle d'échange des codes JCC Pokémon Live obtenus via les Drops Twitch des Mondiaux Pokémon 2026 et de PokémonXP. Les codes expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 Europe/Paris. Cet événement concerne uniquement les récompenses déjà réclamées et les codes personnels déjà générés. Ne jamais partager un code personnel. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,TCG-LIVE,CODE,DEADLINE
+X-POKEMON-USER-EFFECT-ID:tcgl-worlds2026-redeem-deadline-20260925
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les codes JCC Pokémon Live des Mondiaux/PokémonXP expirent demain à 18h.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-city-safari-marseille-20260926@openai
+DTSTAMP:20260908T054200Z
+LAST-MODIFIED:20260908T054200Z
+SEQUENCE:1
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT-ID:pokemon-go-city-safari-marseille-20260926
+X-POKEMON-TICKETING-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20260926T100000
+DTEND;TZID=Europe/Paris:20260927T180000
+SUMMARY:📍 Pokémon GO — City Safari — Marseille
+LOCATION:Marseille, France
+DESCRIPTION:Pokémon GO City Safari officiellement programmé à Marseille les 26 et 27 septembre 2026. Horaires officiels : 10:00 à 18:00 CEST chaque jour. Billetterie officielle ouverte ; ticket d’événement live annoncé à 10,00 € taxes et frais applicables compris. Possibilité d’acheter un ticket pour l’un des deux jours ou un ticket d’une journée avec supplément pour la seconde. Source officielle : https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
+URL:https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
+CATEGORIES:POKEMON,POKEMON-GO,PHYSICAL-EVENT,CITY-SAFARI,MARSEILLE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO City Safari Marseille commence demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-phantump-catch-mastery-20260926@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT:pokemon-go-phantump-catch-mastery-20260926
+DTSTART;TZID=Europe/Paris:20260926T100000
+DTEND;TZID=Europe/Paris:20260926T200000
+SUMMARY:🎯 Pokémon GO — Maîtrise de capture Brocélôme
+DESCRIPTION:Événement Maîtrise de capture Brocélôme le 26 septembre 2026 de 10:00 à 20:00 heure locale. Les tâches et récompenses d’Étude ponctuelle expirent à 20:00.\nSource officielle : https://pokemongo.com/en/news/catch-mastery-phantump-2026
+URL:https://pokemongo.com/en/news/catch-mastery-phantump-2026
+CATEGORIES:POKEMON,POKEMON-GO,CATCH-MASTERY,PHANTUMP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:La Maîtrise de capture Brocélôme a lieu demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-20260929@openai
+SEQUENCE:1
+DTSTAMP:20260909T020233Z
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20260929T100000 Europe/Paris
+X-POKEMON-EXACT-END:20261005T200000 Europe/Paris
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-20260929
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20261006
+SUMMARY:🍎 GO — Festival des récoltes
+DESCRIPTION:Événement officiel Pokémon GO du 29 septembre 2026 à 10:00 au 5 octobre 2026 à 20:00 heure locale. Verpom chromatique fait ses débuts et un Passe GO Festival des récoltes est proposé. Les tâches et récompenses de l’Étude ponctuelle doivent être terminées/récupérées avant le 5 octobre à 20:00. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici. Source officielle : https://pokemongo.com/de/news/harvest-festival-2026
+URL:https://pokemongo.com/de/news/harvest-festival-2026
+CATEGORIES:POKEMON,POKEMON-GO,EVENT,HARVEST-FESTIVAL
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Festival des récoltes commence demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-worlds2026-codes-expiry-20260930@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT:pokemon-champions-worlds2026-codes-expiry-20260930
+DTSTART;TZID=Europe/Paris:20260930T015900
+DTEND;TZID=Europe/Paris:20260930T021400
+SUMMARY:⏳ Pokémon Champions — fin des codes Worlds 2026
+DESCRIPTION:Deadline officielle d'échange des codes de récompenses Pokémon Champions distribués via les diffusions et co-streams des Championnats du Monde Pokémon 2026. Pokémon indique que ces codes sont valables jusqu'au 29 septembre 2026 à 23:59 UTC, soit le 30 septembre 2026 à 01:59 Europe/Paris. Cette échéance concerne les codes déjà obtenus ; ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-CHAMPIONS,REWARD,CODE,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les codes Pokémon Champions des Mondiaux 2026 expirent demain nuit.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-lego-store-rewards-deadline-20260930@openai
+DTSTAMP:20260908T135223Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-go-lego-store-rewards-deadline-20260930
+DTSTART;TZID=Europe/Paris:20260930T235900
+DTEND;TZID=Europe/Paris:20261001T001400
+SUMMARY:⏳ Pokémon GO × LEGO Store — fin Étude / Chasse aux tampons
+LOCATION:France — LEGO Stores participants
+DESCRIPTION:Deadline officielle de l’activation Pokémon GO × LEGO Store : commencer la Chasse aux tampons avant le 30 septembre 2026 à 23:59 heure locale et terminer/récupérer les récompenses de l’Étude ponctuelle avant cette même heure. Cela concerne notamment la veste LEGO pour avatar et les récompenses liées à l’activation. Source officielle : https://pokemongo.com/fr/news/lego-pokemon-go-2026
+URL:https://pokemongo.com/fr/news/lego-pokemon-go-2026
+CATEGORIES:POKEMON,POKEMON-GO,LEGO,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Dernier jour demain pour l’Étude et la Chasse aux tampons Pokémon GO × LEGO Store.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:lego-pokemon-72154-fr-20261001@openai
+DTSTAMP:20260907T224700Z
+LAST-MODIFIED:20260907T224700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:lego-pokemon-72154-fr-20261001
+X-POKEMON-PRODUCT-SKU:72154
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:🧱 LEGO Pokémon — Poké Ball Moments culte de Dresseur 72154
+LOCATION:France — LEGO.com
+DESCRIPTION:Précommande ouverte sur la boutique LEGO officielle France. Prix officiel : 259,99 €. Expédition annoncée à partir du 1 octobre 2026. Limite officielle : 3 exemplaires par foyer. Set de 2 386 pièces. Source officielle : https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
+URL:https://www.lego.com/fr-fr/product/iconic-trainer-moments-poke-ball-72154
+CATEGORIES:POKEMON,LEGO,PRODUIT-LICENCIE,PRECOMMANDE,FRANCE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:LEGO Pokémon 72154 — expédition annoncée à partir de demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-collection-classeur-q4-2026@openai
+DTSTAMP:20260904T014900Z
+LAST-MODIFIED:20260904T014900Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:7
+X-POKEMON-PRIORITY:MONITOR
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:QUARTER
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:45
+X-POKEMON-PRODUCT-SMYTHS-REF:261831
+X-POKEMON-USER-EFFECT-ID:tcg-30th-binder-collection-fr-q4-2026
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270101
+SUMMARY:🟡 🃏 Fenêtre de sortie — Collection classeur 30ᵉ Anniversaire
+LOCATION:France
+DESCRIPTION:Produit officiellement confirmé par Pokémon France pour le 4ᵉ trimestre 2026. Contenu : 1 classeur à thème à 9 pochettes et 5 boosters 30ᵉ Anniversaire. Les dates exactes actuellement publiées par des retailers français/européens sont contradictoires (notamment 2 octobre et 23 octobre) : aucune date exacte n'est donc retenue tant qu'une source plus forte ne tranche. Réf. Smyths France repérée : 261831.\nSource officielle : https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-classeur-30-anniversaire
+URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-classeur-30-anniversaire
+CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,À confirmer
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-exchange-deadline-20261001@openai
+DTSTAMP:20260907T225100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:pokemon-sleep-mewtwo-exchange-deadline-20261001
+DTSTART;TZID=Europe/Paris:20261001T035900
+DTEND;TZID=Europe/Paris:20261001T041400
+SUMMARY:⏳ Pokémon Sleep — fin échange ADN de Mewtwo
+DESCRIPTION:Fin de la période d’échange de l’évènement Mewtwo. L’ADN de Mewtwo restant ne pourra plus être échangé après la fermeture de l’échange. La page officielle indique une fin le 1 octobre 2026 à 03:59. Source officielle : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+URL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+CATEGORIES:POKEMON,POKEMON-SLEEP,MEWTWO,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon Sleep — l’échange ADN de Mewtwo ferme demain matin.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
+DTSTAMP:20260819T025700Z
+LAST-MODIFIED:20260819T025700Z
+SEQUENCE:10
+STATUS:TENTATIVE
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
+X-POKEMON-ACTION:BUY
+X-POKEMON-GROUP-ID:TCG-30TH-WAVE-20261002
+X-POKEMON-WAVE-ID:TCG-30TH-WAVE-20261002
+X-POKEMON-WAVE-COMPLETENESS:PARTIAL
+X-POKEMON-WAVE-PRODUCT-COUNT:3
+X-POKEMON-WAVE-PREORDER-COUNT:2
+X-POKEMON-WAVE-PRODUCTS:Bundle 6 boosters|Coffret Classeur|Mini-Tins
+X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20260919:Bundle 6 boosters
+X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20260920:Coffret Classeur
+X-POKEMON-WAVE-ITEM;STATE=TENTATIVE:Mini-Tins
+RELATED-TO;RELTYPE=CHILD:preorder-guizette-bundle-30ans-20260919@openai
+RELATED-TO;RELTYPE=CHILD:preorder-guizette-classeur-30ans-20260920@openai
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:⭐ 🟠 🃏 Sortie JCC — Vague 30 ans d'octobre
+LOCATION:France
+DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anniversaire.\nFiabilité : 🟠 pour la vague globale ; le niveau de preuve de chaque produit est indiqué ci-dessous.\n📦 Checklist produits — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n🟡 Bundle 6 boosters — 🔔 précommande Guizette le 19 septembre\n🟡 Coffret Classeur — 🔔 précommande Guizette le 20 septembre\n🟡 Mini-Tins\nComplétude : liste partielle. D'autres produits peuvent appartenir à la vague, mais ils ne sont pas comptés tant qu'ils ne sont pas nommés assez précisément.\nRappels : J-7 et J-1 — vérifier disponibilité et prix.\nLié à : ⭐ ✅ 🔔 Précommande Bundle 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret Classeur — 20 septembre 2026.\nSource : https://www.pokeindex.fr/calendrier-sorties
+URL:https://www.pokeindex.fr/calendrier-sorties
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🃏 Sortie dans 7 jours — vérifie disponibilité et prix : Vague 30 ans d'octobre
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🃏 Sortie demain — prépare ton achat : Vague 30 ans d'octobre
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-taken-over-20261002@openai
+SEQUENCE:1
+DTSTAMP:20260909T020300Z
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20261002T000000 Europe/Paris
+X-POKEMON-EXACT-END:20261005T200000 Europe/Paris
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-taken-over-20261002
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261006
+SUMMARY:🚀 GO — Festival des récoltes : Offensive
+DESCRIPTION:Événement officiel Pokémon GO du 2 octobre 2026 à 00:00 au 5 octobre 2026 à 20:00 heure locale. Giovanni revient avec Zekrom Obscur via le Passe GO Festival des récoltes ; pendant l’événement les CT Attaque Chargée permettent de faire oublier Frustration aux Pokémon Obscurs. Gribouraigne chromatique et de nouveaux Pokémon Obscurs sont également annoncés. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici. Source officielle : https://pokemongo.com/en/news/harvest-festival-tgr-2026
+URL:https://pokemongo.com/en/news/harvest-festival-tgr-2026
+CATEGORIES:POKEMON,POKEMON-GO,TEAM-GO-ROCKET,SHADOW-ZEKROM,EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — Festival des récoltes : Offensive commence demain.
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
@@ -442,6 +1338,186 @@ DESCRIPTION:🎪 Événement demain — vérifie horaires, accès et billetterie
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-go-max-battle-day-20261003@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-max-battle-day-20261003
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:⚔️ Pokémon GO — Journée Combat Dynamax — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Saison Pokémon GO. Le contenu détaillé et les horaires seront ajoutés sur le même UID quand ils seront publiés.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,MAX-BATTLE-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-unite-worlds2026-rewards-expiry-20261003@openai
+DTSTAMP:20260907T072000Z
+LAST-MODIFIED:20260907T072000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:REDEEM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:pokemon-unite-worlds2026-rewards-expiry-20261003
+DTSTART;TZID=Europe/Paris:20261003T015900
+DTEND;TZID=Europe/Paris:20261003T021400
+SUMMARY:⏳ Pokémon UNITE — fin récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle des récompenses Pokémon UNITE obtenues via les Drops Twitch des Championnats du Monde Pokémon 2026, dont la Boîte de permis Unité des Champions du Monde 2025. Pokémon indique une validité jusqu'au 2 octobre 2026 à 23:59 UTC, soit le 3 octobre à 01:59 Europe/Paris. Ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:POKEMON,POKEMON-UNITE,REWARD,DEADLINE,WORLDS-2026
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon UNITE des Mondiaux 2026 expirent demain nuit.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:preorder-guizette-premium-30ans-20261004@openai
+DTSTAMP:20260819T024000Z
+LAST-MODIFIED:20260819T024000Z
+SEQUENCE:7
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-PRIORITY:CRITICAL
+X-POKEMON-REMINDER-PROFILE:PREORDER_ACTION
+X-POKEMON-ACTION:PREORDER
+X-POKEMON-GROUP-ID:TCG-30TH-PREMIUM-20261106
+RELATED-TO;RELTYPE=PARENT:pokemon-30th-premium-wave-20261106@openai
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY:🔥 ✅ 🔔 Précommande — Vague premium 30 ans (Guizette Family)
+LOCATION:En ligne — France
+DESCRIPTION:Priorité : 🔥 Critique — UPC et coffrets premium anniversaire avec forte demande attendue et ouverture de précommande à surveiller.\nFiabilité : ✅ Confirmé par le revendeur concerné. Guizette Family annonce le 4 octobre 2026 l'ouverture de précommandes de produits premium 30e Anniversaire\, notamment les UPC Journée Mentali-ex / Soirée Noctali-ex et les coffrets figurine Mew / Mewtwo. Cette date concerne Guizette Family. Sortie prévue le 6 novembre 2026.\nRappels : J-7 et J-1 ; H-1 seulement si une heure officielle est publiée.\nLié à : ⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans — 6 novembre 2026.\nSource : https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+URL:https://www.guizettefamily.com/produit/upc-noctali-30-ans-pokemon/
+CATEGORIES:Pokémon,TCG,Précommande,Priorité Critique
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande dans 7 jours — vérifie la boutique : Vague premium 30 ans
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Vague premium 30 ans
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-pass-rewards-expiry-20261007@openai
+DTSTAMP:20260909T020400Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-harvest-festival-pass-rewards-expiry-20261007
+DTSTART;TZID=Europe/Paris:20261007T200000
+DTEND;TZID=Europe/Paris:20261007T201500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO Festival des récoltes
+DESCRIPTION:Les récompenses débloquées dans le Passe GO Festival des récoltes expirent le 7 octobre 2026 à 20:00 heure locale. Pense à récupérer les récompenses obtenues avant cette échéance. Source officielle : https://pokemongo.com/en/news/harvest-festival-tgr-2026
+URL:https://pokemongo.com/en/news/harvest-festival-tgr-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO Festival des récoltes expirent demain à 20:00.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT3H
+ACTION:DISPLAY
+DESCRIPTION:Dernières heures pour récupérer les récompenses du Passe GO Festival des récoltes.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-september-rewards-expiry-20261008@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:CLAIM
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:74
+X-POKEMON-USER-EFFECT:pokemon-go-pass-september-rewards-expiry-20261008
+DTSTART;TZID=Europe/Paris:20261008T100000
+DTEND;TZID=Europe/Paris:20261008T101500
+SUMMARY:⏳ Pokémon GO — fin récompenses Passe GO septembre
+DESCRIPTION:Les récompenses débloquées dans le Passe GO de septembre expirent le 8 octobre 2026 à 10:00 heure locale.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+URL:https://pokemongo.com/news/go-pass-september-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,REWARD,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses du Passe GO septembre expirent demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-20261010@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:60
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-20261010
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:⭐ Pokémon GO — Journée Communauté — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Journée Communauté du 10 octobre 2026. Pokémon vedette et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,COMMUNITY-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-september-timed-incubator-expiry-20261013@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:USE
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:48
+X-POKEMON-USER-EFFECT:pokemon-go-pass-september-timed-incubator-expiry-20261013
+DTSTART;TZID=Europe/Paris:20261013T100000
+DTEND;TZID=Europe/Paris:20261013T101500
+SUMMARY:⏳ Pokémon GO — expiration Incubateur temporaire du Passe septembre
+DESCRIPTION:Pour les personnes ayant obtenu l’Incubateur temporaire du Passe GO deluxe de septembre : il expire le 13 octobre 2026 à 10:00 heure locale.\nSource officielle : https://pokemongo.com/news/go-pass-september-2026
+URL:https://pokemongo.com/news/go-pass-september-2026
+CATEGORIES:POKEMON,POKEMON-GO,GO-PASS,DEADLINE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L’Incubateur temporaire du Passe septembre expire demain à 10:00.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
 DTSTAMP:20260819T031000Z
 LAST-MODIFIED:20260819T031000Z
@@ -477,6 +1553,27 @@ TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🏆 Régionaux demain — ouvre Plans et prépare ton déplacement : Nice
 END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hatch-day-20261017@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-hatch-day-20261017
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:🥚 Pokémon GO — Journée Éclosion — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Éclosion le 17 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,HATCH-DAY,SAVE-THE-DATE
 END:VEVENT
 BEGIN:VEVENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
@@ -516,6 +1613,27 @@ DESCRIPTION:🎪 Événement demain — ouvre Plans et prépare billet + trajet 
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-go-max-battle-day-20261024@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:52
+X-POKEMON-USER-EFFECT:pokemon-go-max-battle-day-20261024
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:⚔️ Pokémon GO — Journée Combat Dynamax — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Combat Dynamax le 24 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,MAX-BATTLE-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
 DTSTAMP:20260819T025700Z
 LAST-MODIFIED:20260819T025700Z
@@ -549,6 +1667,27 @@ TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🃏 Sortie demain — prépare ton achat : Decks Mentali-ex & Noctali-ex
 END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-super-mega-raid-day-20261031@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT:pokemon-go-super-mega-raid-day-20261031
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Super Méga-Raids le 31 octobre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY,SAVE-THE-DATE
 END:VEVENT
 BEGIN:VEVENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
@@ -611,6 +1750,7 @@ X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20261004:UPC Journée Mentali-ex
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20261004:UPC Soirée Noctali-ex
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20261004:Coffret figurine Mew
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20261004:Coffret figurine Mewtwo
+RELATED-TO;RELTYPE=CHILD:preorder-guizette-premium-30ans-20261004@openai
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:⭐ 🟡 🃏 Sortie JCC — Vague premium 30 ans
@@ -627,6 +1767,28 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🃏 Sortie demain — prépare ton achat : Vague premium 30 ans
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mew-gift-deadline-20261109@openai
+DTSTAMP:20260907T224900Z
+SEQUENCE:0
+STATUS:CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:76
+X-POKEMON-USER-EFFECT:pokemon-sleep-mew-gift-deadline-20261109
+DTSTART;TZID=Europe/Paris:20261109T035900
+DTEND;TZID=Europe/Paris:20261109T041400
+SUMMARY:⏳ Pokémon Sleep — fin du cadeau Mew
+DESCRIPTION:Fin de la période du cadeau de renforcement de Mew. La période officielle va du 7 septembre 2026 à 03:00 au 9 novembre 2026 à 03:59. Source : https://www.pokemonsleep.net/fr/news/343330313931393335303335303135313730/
+URL:https://www.pokemonsleep.net/fr/news/343330313931393335303335303135313730/
+CATEGORIES:POKEMON,POKEMON-SLEEP,REWARD,DEADLINE,MEW
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le cadeau Mew Pokémon Sleep se termine demain.
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -664,6 +1826,135 @@ BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
 DESCRIPTION:🎪 Salon demain — ouvre Plans et prépare billet + trajet : Le Royaume du TCG
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-wild-area-global-20261114@openai
+DTSTAMP:20260907T070500Z
+LAST-MODIFIED:20260907T070500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:pokemon-go-wild-area-global-20261114
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261116
+SUMMARY:🌍 Pokémon GO — Terres Sauvages 2026 : Mondial
+DESCRIPTION:L’événement Pokémon GO Terres Sauvages 2026 : Mondial est officiellement annoncé pour les 14 et 15 novembre 2026. Horaires et programme détaillé à venir ; aucune heure n’est sur-précisée.\nSource officielle : https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
+URL:https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
+CATEGORIES:POKEMON,POKEMON-GO,WILD-AREA,GLOBAL-EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO Terres Sauvages 2026 : Mondial commence demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-community-day-20261121@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:60
+X-POKEMON-USER-EFFECT:pokemon-go-community-day-20261121
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:⭐ Pokémon GO — Journée Communauté — détails à venir
+DESCRIPTION:Date officiellement annoncée pour la Journée Communauté du 21 novembre 2026. Pokémon vedette et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,COMMUNITY-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-super-mega-raid-day-20261128@openai
+DTSTAMP:20260907T071000Z
+LAST-MODIFIED:20260907T071000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:58
+X-POKEMON-USER-EFFECT:pokemon-go-super-mega-raid-day-20261128
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:⚡ Pokémon GO — Journée Super Méga-Raids — détails à venir
+DESCRIPTION:Date officiellement annoncée pour une Journée Super Méga-Raids le 28 novembre 2026. Détails et horaires à venir ; mise à jour future sur le même UID.\nSource officielle : https://pokemongo.com/news/save-the-date-s24
+URL:https://pokemongo.com/news/save-the-date-s24
+CATEGORIES:POKEMON,POKEMON-GO,SUPER-MEGA-RAID-DAY,SAVE-THE-DATE
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-baldwin-biodiversite-20261128@openai
+DTSTAMP:20260909T135141Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:70
+X-POKEMON-USER-EFFECT-ID:paris-baldwin-pokemon-biodiversite-20261128
+X-POKEMON-PHYSICAL-EVENT-ID:paris-baldwin-pokemon-biodiversite-20261128
+X-POKEMON-EVENT-TYPE:CULTURAL_WORKSHOP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20261128T103000
+DTEND;TZID=Europe/Paris:20261128T123000
+SUMMARY:📍 Pokémon — Atelier biodiversité — Paris 19e
+LOCATION:Médiathèque James Baldwin\, 10 Bis rue Henri Ribière\, 75019 Paris\, France
+DESCRIPTION:Atelier Pokémon et biodiversité organisé à la Médiathèque James Baldwin : dessiner les espèces animales et végétales qui inspirent les Pokémon. Le samedi 28 novembre 2026 de 10:30 à 12:30. Gratuit ; inscription auprès des bibliothécaires. Public à partir de 12 ans.\nSource officielle : https://www.paris.fr/evenements/atelier-pokemon-et-biodiversite-dessiner-les-especes-qui-inspirent-les-pokemon-115881
+URL:https://www.paris.fr/evenements/atelier-pokemon-et-biodiversite-dessiner-les-especes-qui-inspirent-les-pokemon-115881
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,ATELIER,BIODIVERSITE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L’atelier Pokémon et biodiversité à Paris 19e a lieu demain à 10:30.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-gutenberg-biodiversite-20261128@openai
+DTSTAMP:20260909T174347Z
+LAST-MODIFIED:20260909T174347Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT-ID:paris-gutenberg-pokemon-biodiversite-20261128
+X-POKEMON-PHYSICAL-EVENT-ID:paris-gutenberg-pokemon-biodiversite-20261128
+X-POKEMON-EVENT-TYPE:CULTURAL_WORKSHOP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-RESERVATION-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20261128T150000
+DTEND;TZID=Europe/Paris:20261128T163000
+SUMMARY:📍 Pokémon — Atelier biodiversité — Paris 15e
+LOCATION:Bibliothèque Gutenberg\, 8 rue de la Montagne d'Aulas\, 75015 Paris\, France
+DESCRIPTION:Atelier Pokémon et biodiversité organisé par la Bibliothèque Gutenberg : découvrir les espèces vivantes ayant inspiré des Pokémon puis les dessiner à l'encre de Chine. Le samedi 28 novembre 2026 de 15:00 à 16:30. Gratuit\, uniquement sur réservation\, à partir de 7 ans.\nSource officielle : https://www.paris.fr/evenements/pokemon-et-biodiversite-113313
+URL:https://www.paris.fr/evenements/pokemon-et-biodiversite-113313
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,ATELIER,BIODIVERSITE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L'atelier Pokémon et biodiversité à Paris 15e a lieu demain à 15:00.
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -722,218 +2013,34 @@ DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et tr
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:pokemon-go-super-mega-etouraptor-20260919@openai
-DTSTAMP:20260905T115400Z
+UID:pokemon-pocket-worlds2026-code-expiry-20271128@openai
+DTSTAMP:20260907T064500Z
+LAST-MODIFIED:20260907T064500Z
 SEQUENCE:0
 STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:ATTEND
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:86
-X-POKEMON-USER-EFFECT:go-super-mega-etouraptor-fr-20260919
-DTSTART;TZID=Europe/Paris:20260919T140000
-DTEND;TZID=Europe/Paris:20260919T170000
-SUMMARY:⭐ ✅ Pokémon GO — Journée de Super Méga-Raids Étouraptor
-LOCATION:France — Pokémon GO
-DESCRIPTION:Événement officiel Pokémon GO le samedi 19 septembre 2026 de 14 h à 17 h heure locale. Début de Méga-Étouraptor dans les Super Méga-Raids et accès au nouveau Super Niveau Max. Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes. Étude ponctuelle pendant l’événement. Ticket optionnel disponible jusqu’à 17 h locale. Source officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-URL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,Raid
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Pokémon GO — Journée de Super Méga-Raids Étouraptor demain à 14 h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-horizons-celebration-20260916@openai
-DTSTAMP:20260905T115500Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:80
-X-POKEMON-USER-EFFECT:go-horizons-celebration-fr-20260916
-DTSTART;TZID=Europe/Paris:20260916T100000
-DTEND;TZID=Europe/Paris:20260922T200000
-SUMMARY:⭐ ✅ Pokémon GO — Célébration Pokémon, les horizons
-LOCATION:France — Pokémon GO
-DESCRIPTION:Événement officiel Pokémon GO du 16 septembre 2026 à 10 h au 22 septembre à 20 h heure locale. Début de Salamèche portant les lunettes de Friede, avec évolution possible jusqu’à Dracaufeu costumé. Passe GO de collaboration disponible pendant l’événement. Les récompenses du Passe GO expirent le 24 septembre 2026 à 20 h heure locale. Source officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-URL:https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
-CATEGORIES:Pokémon,Pokémon GO,Événement,Pokémon Horizons
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Pokémon GO — Célébration Pokémon Horizons commence demain à 10 h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:tcgl-worlds2026-redeem-deadline-20260925@openai
-SEQUENCE:0
-DTSTART;TZID=Europe/Paris:20260925T180000
-DTEND;TZID=Europe/Paris:20260925T181500
-SUMMARY:⏳ Fin code TCG Live — récompenses Mondiaux/PokémonXP 2026
-DESCRIPTION:Deadline officielle de redemption des codes JCC Pokémon Live générés via les Twitch Drops des Mondiaux Pokémon 2026 et de PokémonXP. Les fenêtres de claim Twitch sont terminées : cet événement concerne uniquement les récompenses déjà réclamées et les codes personnels déjà générés. Ne jamais partager un code personnel. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:POKEMON,TCG-LIVE,CODE,DEADLINE
-X-POKEMON-USER-EFFECT-ID:tcgl-worlds2026-redeem-deadline-20260925
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:78
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:REDEEM
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Les codes JCC Pokémon Live des Mondiaux/PokémonXP expirent demain à 18h.
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-jcc-30ans-poster-fr-20260916@openai
-DTSTAMP:20260905T135648Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260917
-SUMMARY:🃏 Sortie JCC Pokémon — Collection Poster 30ᵉ Anniversaire (FR)
-DESCRIPTION:Sortie France de la Collection Poster 30ᵉ Anniversaire du JCC Pokémon. EAN/GTIN: 0196214147225 / 196214147225. Contenu: 3 cartes promo brillantes Artikodin, Électhor et Sulfura, 1 poster double face et 3 boosters 30ᵉ Anniversaire. DATE_PRECISION=EXACT_DATE. CONFIDENCE=98. ACTIONABILITY=58. Sources: Pokémon officiel; CLD Distribution ID 169048; retailers FR recoupés.
-CATEGORIES:POKEMON,JCC,RELEASE,30TH
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-CONFIDENCE:98
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
 X-POKEMON-ACTIONABILITY:58
-X-POKEMON-PRODUCT-EAN:196214147225
-X-POKEMON-USER-EFFECT:product-196214147225-release-fr-20260916
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-jcc-30ans-wave2-fr-20261002@openai
-DTSTAMP:20260905T162100Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
-X-POKEMON-ACTION:BUY
-X-POKEMON-WAVE-ID:TCG-30TH-WAVE2-20261002
-X-POKEMON-WAVE-COMPLETENESS:RECONCILED
-X-POKEMON-WAVE-PRODUCT-COUNT:3
-X-POKEMON-WAVE-PRODUCTS:Collection Classeur 30e Anniversaire|Lot de 6 boosters 30e Anniversaire|Mini-boîtes 30e Anniversaire
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-CONFIDENCE:90
-X-POKEMON-ACTIONABILITY:64
-X-POKEMON-USER-EFFECT-ID:tcg-30th-wave2-fr-20261002
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
-SUMMARY:⭐ ✅ 🃏 JCC Pokémon — 30ᵉ Anniversaire — vague 2
-LOCATION:France
-DESCRIPTION:Vague France recoupée pour le 2 octobre 2026. Produits : Collection Classeur 30ᵉ Anniversaire (5 boosters + classeur 9 pochettes), Lot de 6 boosters 30ᵉ Anniversaire, et Mini-boîtes 30ᵉ Anniversaire (2 boosters + carte artistique + autocollants). La gamme officielle Pokémon confirme l’existence de ces produits ; la date France du 2 octobre est recoupée par plusieurs sources retail/spécialisées indépendantes. EAN vérifié pour la Collection Classeur : 0196214145153. Aucun horaire n’est inventé. Sources : https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026 ; https://www.destocktcg.fr/product/30e-anniversaire-collection-classeur-pokemon-fr-1755 ; https://www.hamacards.com/produit/coffret-pokemon-collection-classeur-30e-anniversaire-francais/ ; https://www.eternia.fr/article/la-gamme-de-produits-celebrant-l-extension-30e-anniversaire-du-jcc-pokemon-se-devoile
-URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-septembre-2026
-CATEGORIES:Pokémon,JCC Pokémon,30e Anniversaire,Sortie France,Priorité Important
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:JCC Pokémon 30ᵉ Anniversaire — vague 2 demain
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-regulation-mc-20260909@openai
-DTSTAMP:20260905T162821Z
-LAST-MODIFIED:20260905T162821Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:72
-X-POKEMON-USER-EFFECT-ID:pokemon-champions-regulation-mc-global-20260909
-DTSTART;TZID=Europe/Paris:20260909T040000
-DTEND;TZID=Europe/Paris:20261202T025900
-SUMMARY:⭐ ✅ 🎮 Pokémon Champions — Règlement M-C
-LOCATION:En ligne — Pokémon Champions (Nintendo Switch / iOS / Android)
-DESCRIPTION:Priorité : ⭐ Important — nouveau règlement de combats classés Pokémon Champions.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 2 septembre 2026.\n📅 Période officielle : du 9 septembre 2026 à 02:00 UTC au 2 décembre 2026 à 01:59 UTC, soit du 9 septembre à 04:00 (CEST) au 2 décembre à 02:59 (CET) en heure de Paris.\n🎮 Contenu : 24 nouveaux Pokémon jouables et 6 nouvelles Méga-Évolutions, dont Méga-Absol Z, Méga-Carchacrok Z, Méga-Lucario Z, Méga-Drattak, Méga-Sarmuraï et Méga-Glaivodo.\nDATE_PRECISION=EXACT_DATETIME. CONFIDENCE=99. ACTIONABILITY=72.\nSource officielle : https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions\nRecoupement secondaire : https://www.serebii.net/pokemonchampions/rankedbattle/regulationm-c.shtml
-URL:https://www.pokemon.com/fr/actualites/le-reglement-m-c-arrive-dans-pokemon-champions
-CATEGORIES:Pokémon,Pokémon Champions,Jeu vidéo,Combat classé,Règlement,Priorité Important
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-champions-worlds2026-codes-deadline-20260930@openai
-DTSTAMP:20260905T195626Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:REDEEM
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:78
-X-POKEMON-USER-EFFECT:champions-worlds2026-twitch-codes-redeem-deadline-global
-DTSTART;TZID=Europe/Paris:20260930T015900
-DTEND;TZID=Europe/Paris:20260930T021400
-SUMMARY:⏳ Fin codes Pokémon Champions — récompenses Mondiaux/PokémonXP 2026
-LOCATION:En ligne — Pokémon Champions
-DESCRIPTION:Deadline officielle d’échange des codes Pokémon Champions générés via les Twitch Drops des Mondiaux Pokémon 2026 / PokémonXP : 29 septembre 2026 à 23:59 UTC, soit 30 septembre 2026 à 01:59 heure de Paris (CEST). Cela concerne notamment les codes à usage unique obtenus via les Drops pour des récompenses d’entraînement. Ne pas confondre avec les mots de passe Félinferno / tenue des Mondiaux, expirés le 3 septembre. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+X-POKEMON-USER-EFFECT:pokemon-pocket-worlds2026-code-expiry-20271128
+DTSTART;TZID=Europe/Paris:20271128T155900
+DTEND;TZID=Europe/Paris:20271128T161400
+SUMMARY:⏳ JCC Pokémon Pocket — fin du code Worlds 2026
+DESCRIPTION:Deadline officielle du code de récompense JCC Pokémon Pocket distribué pendant PokémonXP et les Championnats du Monde Pokémon 2026 pour obtenir 24 Sabliers Booster. Pokémon indique que ce code est valable jusqu'au 28 novembre 2027 à 14:59 UTC, soit 15:59 Europe/Paris. Cette échéance concerne uniquement le code déjà obtenu ; ne jamais partager de code personnel.\nSource officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
 URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon Champions,Code,Deadline,Mondiaux 2026
+CATEGORIES:POKEMON,TCG-POCKET,REWARD,CODE,DEADLINE,WORLDS-2026
 BEGIN:VALARM
-TRIGGER:-P1D
+TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:Les codes Pokémon Champions des Mondiaux/PokémonXP expirent demain.
+DESCRIPTION:Le code JCC Pokémon Pocket Worlds 2026 expire dans 7 jours.
 END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-worlds2026-rewards-deadline-20260911@openai
-DTSTAMP:20260905T205437Z
-LAST-MODIFIED:20260905T205437Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DEADLINE
-X-POKEMON-ACTION:REDEEM
-X-POKEMON-FIRST-ADDED-AT:20260905T205437Z
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:82
-X-POKEMON-USER-EFFECT-ID:pokemon-go-worlds2026-rewards-expiry-fr-20260911
-DTSTART;TZID=Europe/Paris:20260911T220000
-DTEND;TZID=Europe/Paris:20260911T220000
-SUMMARY:⏳ Fin récompenses Pokémon GO — Mondiaux 2026
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — deadline officielle de récompense.\nFiabilité : ✅ Source primaire Pokémon. Les récompenses Pokémon GO obtenues via les diffusions des Championnats du Monde 2026 expirent le 11 septembre 2026 à 13h PDT, soit 22h en Europe/Paris (CEST). Cela couvre notamment les Études ponctuelles et récompenses associées annoncées par Pokémon.\nAction : récupère/valide la récompense avant cette échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drops,Récompense
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:⏳ Fin récompenses Pokémon GO — Mondiaux 2026 dans 24 h
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-xp2026-pikachu-reward-deadline-20260912@openai
-DTSTAMP:20260905T205437Z
-LAST-MODIFIED:20260905T205437Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-REMINDER-PROFILE:DEADLINE
-X-POKEMON-ACTION:REDEEM
-X-POKEMON-FIRST-ADDED-AT:20260905T205437Z
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:82
-X-POKEMON-USER-EFFECT-ID:pokemon-go-pokemonxp2026-pikachu-claim-fr-20260912
-DTSTART;TZID=Europe/Paris:20260912T050000
-DTEND;TZID=Europe/Paris:20260912T050000
-SUMMARY:⏳ Fin récupération Pokémon GO — Pikachu PokémonXP
-LOCATION:En ligne — Pokémon GO
-DESCRIPTION:Priorité : ⭐ Important — deadline officielle de récompense.\nFiabilité : ✅ Source primaire Pokémon. La récompense Pokémon GO du panel PokémonXP permettant une Étude ponctuelle avec Pikachu en costume PokémonXP doit être récupérée avant le 11 septembre 2026 à 20h PDT, soit le 12 septembre à 05h en Europe/Paris (CEST).\nAction : récupère/valide la récompense avant cette échéance.\nSource : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Pokémon GO,Deadline,Twitch Drops,Récompense
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:⏳ Fin récupération Pokémon GO — Pikachu PokémonXP dans 24 h
+DESCRIPTION:Le code JCC Pokémon Pocket Worlds 2026 expire demain.
 END:VALARM
 END:VEVENT
 END:VCALENDAR
