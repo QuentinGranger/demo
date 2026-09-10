@@ -1022,28 +1022,30 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-wild-area-global-20261114@openai
-DTSTAMP:20260907T070500Z
-LAST-MODIFIED:20260907T070500Z
-SEQUENCE:0
+DTSTAMP:20260910T230600Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:PLAY_OPTIONAL_TICKET
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
 X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:72
-X-POKEMON-USER-EFFECT:pokemon-go-wild-area-global-20261114
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:pokemon-go-wild-area-global-2026
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20261114T100000
+X-POKEMON-EXACT-END:20261115T180000
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:🌍 Pokémon GO — Terres Sauvages 2026 : Mondial
-DESCRIPTION:L’événement Pokémon GO Terres Sauvages 2026 : Mondial est officiellement annoncé pour les 14 et 15 novembre 2026. Horaires et programme détaillé à venir ; aucune heure n’est sur-précisée.\nSource officielle : https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
-URL:https://pokemongo.com/fr/news/save-the-date-go-wild-area-2026
-CATEGORIES:POKEMON,POKEMON-GO,WILD-AREA,GLOBAL-EVENT
+DESCRIPTION:Événement mondial Pokémon GO Terres Sauvages 2026. Gameplay les 14 et 15 novembre 2026 de 10:00 à 18:00 heure locale. Dialga Dynamax le samedi 14, Palkia Dynamax le dimanche 15. Ticket mondial désormais disponible via le site officiel ; l’événement reste jouable mondialement avec bonus gratuits pour tout le monde, certaines fonctionnalités étant réservées aux détenteurs de ticket.\nSource officielle : https://pokemongo.com/fr/gowildarea/global
+URL:https://pokemongo.com/fr/gowildarea/global
+CATEGORIES:POKEMON,POKEMON-GO,GLOBAL-EVENT,GO-WILD-AREA
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Pokémon GO Terres Sauvages 2026 : Mondial commence demain.
+DESCRIPTION:Terres Sauvages Pokémon GO : Mondial commence demain à 10:00.
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
