@@ -1818,4 +1818,32 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO : plus qu'une heure avant la fin de réclamation des récompenses du Festival des récoltes.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcgl-maintenance-v1-42-0-20260910@openai
+DTSTAMP:20260910T125700Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:4
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:AVOID_PLAY_WINDOW
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT:tcgl-maintenance-20260910-v1-42-0
+X-POKEMON-SERVICE-ID:pokemon-tcg-live
+X-POKEMON-EVENT-TYPE:TIMED_MAINTENANCE
+DTSTART;TZID=Europe/Paris:20260910T170000
+DTEND;TZID=Europe/Paris:20260911T010000
+SUMMARY:🛠️ JCC Pokémon Live — Maintenance 1.42.0
+LOCATION:En ligne
+DESCRIPTION:Le JCC Pokémon Live sera indisponible pendant la maintenance de la version 1.42.0. Fenêtre officielle : 15:00 → 23:00 UTC, soit 17:00 le 10 septembre → 01:00 le 11 septembre en Europe/Paris. Durée annoncée : environ 8 heures. Éviter de lancer une partie importante juste avant la coupure. Source officielle : https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+URL:https://community.pokemon.com/en-us/discussion/25821/version-1-42-0-patch-notes
+CATEGORIES:Pokémon,TCG Live,Maintenance,Mise à jour
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🛠️ JCC Pokémon Live — maintenance dans 30 minutes
+END:VALARM
+END:VEVENT
 END:VCALENDAR
