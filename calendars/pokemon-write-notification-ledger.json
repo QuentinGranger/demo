@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "write_notice_key": "pokemon-go-wild-area-global-2026|pokemon-go-wild-area-global-20261114@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json",
+      "user_effect": "pokemon-go-wild-area-global-2026",
+      "uid": "pokemon-go-wild-area-global-20261114@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T01:07:30+02:00"
+    }
+  ]
+}
