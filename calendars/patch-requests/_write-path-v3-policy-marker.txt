@@ -1,0 +1,1 @@
+WRITE_PATH_V3 enabled 2026-09-10. Canonical calendar mutations must be requested through calendars/patch-requests/*.json and verified by pokemon-calendar-safe-patch workflow before success is claimed.
