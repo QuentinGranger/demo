@@ -1878,4 +1878,27 @@ ACTION:DISPLAY
 DESCRIPTION:👟 Pokémon × adidas Originals demain — vérifie heure de drop, stock et tailles France
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds-2026-rewards-deadline-20260911@openai
+DTSTAMP:20260910T224900Z
+LAST-MODIFIED:20260910T224900Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:1
+X-POKEMON-USER-EFFECT:pokemon_go_reward_deadline:worlds-2026:fr
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-ACTIONABILITY:90
+X-POKEMON-ACTION:REDEEM
+DTSTART;TZID=Europe/Paris:20260911T220000
+SUMMARY:🎁 Pokémon GO — Fin des récompenses Mondiaux 2026
+DESCRIPTION:Deadline officielle pour récupérer les récompenses Pokémon GO liées aux Championnats du Monde Pokémon 2026. Pokémon indique une expiration le 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Action : récupérer les récompenses avant 22:00.
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Pokémon GO,Deadline,Récompense,Mondiaux 2026
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:🎁 Pokémon GO — récupère les récompenses Mondiaux avant 22:00
+END:VALARM
+END:VEVENT
 END:VCALENDAR
