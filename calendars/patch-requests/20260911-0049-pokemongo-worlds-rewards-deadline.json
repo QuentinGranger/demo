@@ -1,0 +1,7 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-worlds-2026-rewards-deadline-20260911@openai",
+  "user_effect": "pokemon_go_reward_deadline:worlds-2026:fr",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-worlds-2026-rewards-deadline-20260911@openai\r\nDTSTAMP:20260910T224900Z\r\nLAST-MODIFIED:20260910T224900Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:1\r\nX-POKEMON-USER-EFFECT:pokemon_go_reward_deadline:worlds-2026:fr\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-ACTIONABILITY:90\r\nX-POKEMON-ACTION:REDEEM\r\nDTSTART;TZID=Europe/Paris:20260911T220000\r\nSUMMARY:🎁 Pokémon GO — Fin des récompenses Mondiaux 2026\r\nDESCRIPTION:Deadline officielle pour récupérer les récompenses Pokémon GO liées aux Championnats du Monde Pokémon 2026. Pokémon indique une expiration le 11 septembre 2026 à 13:00 PDT, soit 22:00 à Paris. Action : récupérer les récompenses avant 22:00.\r\nURL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\r\nCATEGORIES:Pokémon,Pokémon GO,Deadline,Récompense,Mondiaux 2026\r\nBEGIN:VALARM\r\nTRIGGER:-PT2H\r\nACTION:DISPLAY\r\nDESCRIPTION:🎁 Pokémon GO — récupère les récompenses Mondiaux avant 22:00\r\nEND:VALARM\r\nEND:VEVENT"
+}
