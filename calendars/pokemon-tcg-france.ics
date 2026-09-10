@@ -1793,4 +1793,29 @@ ACTION:DISPLAY
 DESCRIPTION:Festival des récoltes Pokémon GO demain.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-2026-claim-deadline@openai
+DTSTAMP:20260910T121932Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:3
+X-POKEMON-PRIORITY:HIGH
+X-POKEMON-ACTION:CLAIM_REWARDS
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:92
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT:go-harvest-2026-claim-rewards-deadline
+DTSTART;TZID=Europe/Paris:20261007T193000
+DTEND;TZID=Europe/Paris:20261007T200000
+SUMMARY:⏳ GO — Réclamer les récompenses Festival des récoltes
+LOCATION:Pokémon GO — France
+DESCRIPTION:Dernière fenêtre pour réclamer les récompenses du Passe GO : Festival des récoltes 2026. Échéance exacte : 7 octobre 2026 à 20:00 Europe/Paris.
+CATEGORIES:Pokémon,Pokémon GO,Deadline,Récompenses
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO : plus qu'une heure avant la fin de réclamation des récompenses du Festival des récoltes.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
