@@ -1846,4 +1846,36 @@ ACTION:DISPLAY
 DESCRIPTION:🛠️ JCC Pokémon Live — maintenance dans 30 minutes
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fashion-release-pokemon-adidas-originals-fr-20260922@openai
+DTSTAMP:20260910T215800Z
+LAST-MODIFIED:20260910T215800Z
+SEQUENCE:0
+STATUS:TENTATIVE
+PRIORITY:5
+X-POKEMON-PRIORITY:ACTIONABLE_SOON
+X-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-originals-collection:fr
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-CATEGORY:FASHION_SNEAKERS
+X-POKEMON-BRAND:adidas Originals
+X-POKEMON-CHANNEL:SNEAKER_RETAIL
+X-POKEMON-RETAILER:FENOM
+X-POKEMON-STATE:ANNOUNCED
+X-POKEMON-CONFIDENCE:72
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-SKUS:KI2857|KI2858|KI5326|KI8213
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:👟 Pokémon × adidas Originals — sortie France annoncée
+LOCATION:France — FENOM.com
+DESCRIPTION:Collection Pokémon × adidas Originals annoncée pour le 22 septembre 2026 chez FENOM en France. Plusieurs sneakers et colorways sont référencés avec les SKU KI2857, KI2858, KI5326 et KI8213. Fourchette de prix annoncée : 120 à 160 €. État : ANNOUNCED / ACTIONABLE_SOON — ne pas considérer comme vente ouverte tant qu’un CTA d’achat actif n’est pas directement vérifié pour ces SKU. adidas France n’a pas encore fourni de fiche produit officielle correspondante lors de cette vérification. Source France : https://www.sneakers.fr/pokemon-x-adidas-originals-collection/
+URL:https://www.sneakers.fr/pokemon-x-adidas-originals-collection/
+CATEGORIES:Pokémon,Fashion,Sneakers,adidas,France
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:👟 Pokémon × adidas Originals demain — vérifie heure de drop, stock et tailles France
+END:VALARM
+END:VEVENT
 END:VCALENDAR
