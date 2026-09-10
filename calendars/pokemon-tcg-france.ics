@@ -1705,4 +1705,34 @@ ACTION:DISPLAY
 DESCRIPTION:Soirée Pokémon avec Julien Bardakoff demain à 18:30 au Musée en Herbe.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-bardakoff-musee-en-herbe-20261027@openai
+DTSTAMP:20260910T114500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:RESERVE_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:86
+X-POKEMON-USER-EFFECT:paris-musee-en-herbe-bardakoff-20261027
+X-POKEMON-PHYSICAL-EVENT-ID:musee-en-herbe-bardakoff-20261027
+X-POKEMON-EVENT-TYPE:MEET_AND_GREET
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+DTSTART;TZID=Europe/Paris:20261027T183000
+DTEND;TZID=Europe/Paris:20261027T203000
+SUMMARY:📍 Pokémon — Soirée Julien Bardakoff — Paris
+LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
+DESCRIPTION:Soirée officielle du Musée en Herbe avec Julien Bardakoff autour des noms français de Pokémon : quiz\, échanges et atelier créatif. Cartes Pokémon bienvenues pour une séance de dédicaces. Le billet comprend aussi la visite libre de l’exposition « Admirez-les tous ! ». Accueil du musée dès 17:30 ; rencontre de 18:30 à 20:30. Billetterie accessible depuis la page officielle.\nSource officielle : https://www.musee-en-herbe.com/?m=fpage629
+URL:https://www.musee-en-herbe.com/?m=fpage629
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,MUSEE,RENCONTRE,DEDICACE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Soirée Pokémon avec Julien Bardakoff demain à 18:30 au Musée en Herbe.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
