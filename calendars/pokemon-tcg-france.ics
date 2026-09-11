@@ -2085,4 +2085,35 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-challenge-graine-de-geek-la-ferte-alais-20260926@openai
+DTSTAMP:20260911T050315Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:94
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:graine-de-geek-la-ferte-alais:2026-09-26
+X-POKEMON-PHYSICAL-EVENT-ID:graine-de-geek-league-challenge-20260926
+X-POKEMON-EVENT-TYPE:LEAGUE_CHALLENGE
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:B
+DTSTART;TZID=Europe/Paris:20260926T140000
+DTEND;TZID=Europe/Paris:20260926T170000
+SUMMARY:🎴 Défi de Ligue Pokémon — Graine de Geek — La Ferté-Alais
+LOCATION:Graine de Geek - Pop Culture & TCG\, 23 rue de l'Hôtel de ville\, 91590 La Ferté-Alais\, France
+DESCRIPTION:Premier Défi de Ligue Pokémon de Graine de Geek. Arrivée à 13:30 et première ronde à 14:00. Format Standard (régulations H/I/J)\, rondes suisses BO1 de 30 min\, sans phases finales. Decklist et identifiant de joueur Pokémon obligatoires. Paiement annoncé sur place : 10 €.\nSource organisateur/billetterie : https://www.billetweb.fr/defi-de-ligue-de-septembre-tournoi-pokemon
+URL:https://www.billetweb.fr/defi-de-ligue-de-septembre-tournoi-pokemon
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,ILE-DE-FRANCE,LEAGUE-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi de Ligue Pokémon demain à 14:00 à Graine de Geek, La Ferté-Alais.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
