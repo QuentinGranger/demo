@@ -2315,4 +2315,22 @@ DESCRIPTION:Exposition hommage à Pokémon au Musée en Herbe. Le musée confirm
 URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
 CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,EXHIBITION,MUSEE
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-worlds-2026-rewards-deadline-20260911@quentingranger
+DTSTAMP:20260911T161613Z
+DTSTART;TZID=Europe/Paris:20260911T220000
+DTEND;TZID=Europe/Paris:20260911T220500
+SUMMARY:Pokémon GO — fin de validité des récompenses Worlds 2026
+DESCRIPTION:Date limite officielle pour utiliser les récompenses Pokémon GO des Worlds 2026 : Team Building: Great League Bonus Timed Research, 2025 World Champion Timed Research (Tinkaton + CT Chargée d’élite) et code public du T-shirt Worlds 2026 vert. Échéance : 11 septembre 2026 à 20:00 UTC / 22:00 Europe/Paris. Source officielle : https://worlds.pokemon.com/en-us/coverage-rewards/rewards
+X-POKEMON-USER-EFFECT:pokemon_go_worlds_rewards_deadline:2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-ACTIONABILITY:CRITICAL_ACTION_NOW
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Les récompenses Pokémon GO Worlds 2026 expirent dans 1 heure.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
