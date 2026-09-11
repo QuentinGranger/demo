@@ -2147,4 +2147,34 @@ ACTION:DISPLAY
 DESCRIPTION:Coupe Pokémon demain à 09:30 à La Caverne du Gobelin Metz.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-vgc-league-challenge-extralife-paris-20260913@openai
+DTSTAMP:20260911T083025Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:91
+X-POKEMON-ACTIONABILITY:88
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-vgc-league-challenge:extra-life-cafe-paris:2026-09-13
+X-POKEMON-PHYSICAL-EVENT-ID:extra-life-cafe-paris-vgc-league-challenge-20260913
+X-POKEMON-EVENT-TYPE:VGC_LEAGUE_CHALLENGE
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260913T153000
+SUMMARY:🎮 Défi de Ligue Pokémon Champions — Extra Life Café Paris
+LOCATION:Extra Life Café\, 9 Passage des Patriarches\, 75005 Paris\, France
+DESCRIPTION:Défi de Ligue officiel Pokémon Champions annoncé par VGC France. Format Duo\, règlement M-C\, 16 participants maximum\, Points de Championnat. Préinscription obligatoire. Frais annoncés à partir de 13 €.\nSource organisateur : https://x.com/VGC_FR
+URL:https://x.com/VGC_FR
+CATEGORIES:POKEMON,PLAY-POKEMON,VGC,POKEMON-CHAMPIONS,PHYSICAL-EVENT,PARIS,LEAGUE-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi de Ligue Pokémon Champions demain à 15:30 à Extra Life Café Paris.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
