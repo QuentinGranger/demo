@@ -1963,4 +1963,35 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-30ans-fnac-beaune-pokeshow-20260919@openai
+DTSTAMP:20260911T000600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19
+X-POKEMON-PHYSICAL-EVENT-ID:fnac-beaune-pokemon30-pokeshow-20260919
+X-POKEMON-EVENT-TYPE:ANNIVERSARY_RETAIL_EVENT
+X-POKEMON-ACCESS-TYPE:FREE_OPEN_ACCESS
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:Pokemon 30 ans - Pokeshow a la Fnac Beaune
+LOCATION:Fnac Beaune\, Beaune\, France
+DESCRIPTION:Evenement gratuit pour les 30 ans de Pokemon avec Pokeshow. La Fnac annonce notamment la mise en vente de la collection 30 ans, des animations et un tirage au sort autour d'une ETB 30 ans. Acces libre dans la limite des places disponibles.\nSource officielle Fnac : https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/
+URL:https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/
+CATEGORIES:POKEMON,PHYSICAL-EVENT,FRANCE,FNAC,30-ANS,RETAIL-EVENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Evenement Pokemon 30 ans demain a la Fnac Beaune de 14:00 a 17:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
