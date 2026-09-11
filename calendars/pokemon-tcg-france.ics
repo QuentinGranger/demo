@@ -2364,4 +2364,25 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO — la récompense PokémonXP Pikachu expire dans 1 heure.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-league-challenge-drakkar-ludik-longjumeau-20260922@quentingranger-demo
+DTSTAMP:20260911T212004Z
+DTSTART;TZID=Europe/Paris:20260922T190000
+DTEND;TZID=Europe/Paris:20260922T210000
+SUMMARY:Pokémon Challenge — Défi de Ligue à Longjumeau
+LOCATION:Drakkar Ludik'\, 20 place Charles Steber\, 91160 Longjumeau\, France
+DESCRIPTION:Défi de Ligue Pokémon officiel chez Drakkar Ludik'. 16 places. Tarif annoncé 10 € + 0\,25 € de frais de billetterie. Identifiant Play! Pokémon requis. L'organisateur affiche 2 places restantes lors du contrôle du 11 septembre 2026. Source: https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26
+URL:https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26
+STATUS:CONFIRMED
+SEQUENCE:0
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-USER-EFFECT:physical_event:pokemon-tcg-league-challenge-drakkar-ludik-longjumeau-2026-09-22
+X-POKEMON-ACTIONABILITY:HIGH_ACTION
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Demain : Défi de Ligue Pokémon à Longjumeau
+END:VALARM
+END:VEVENT
 END:VCALENDAR
