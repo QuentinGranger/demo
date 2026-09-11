@@ -2333,4 +2333,17 @@ ACTION:DISPLAY
 DESCRIPTION:Les récompenses Pokémon GO Worlds 2026 expirent dans 1 heure.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-challenge-meisia-republique-20260912@openai
+DTSTAMP:20260911T165800Z
+DTSTART;TZID=Europe/Paris:20260912T100000
+DTEND;TZID=Europe/Paris:20260912T150000
+SUMMARY:Pokémon – Défi de ligue (League Challenge) — MEiSiA République
+LOCATION:MEiSiA République\, 84 rue René Boulanger\, 75010 Paris\, France
+DESCRIPTION:Défi de Ligue Pokémon à MEiSiA République. Horaires officiels : 10 h–15 h. Tarif à partir de 10 €. Réservation proposée par l’organisateur. Source : https://shop.cafemeisia.com/evenements/
+URL:https://shop.cafemeisia.com/evenements/
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+END:VEVENT
 END:VCALENDAR
