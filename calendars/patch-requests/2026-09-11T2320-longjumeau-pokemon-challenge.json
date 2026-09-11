@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-tcg-league-challenge-drakkar-ludik-longjumeau-20260922@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcg-league-challenge-drakkar-ludik-longjumeau-20260922@quentingranger-demo\r\nDTSTAMP:20260911T212004Z\r\nDTSTART;TZID=Europe/Paris:20260922T190000\r\nDTEND;TZID=Europe/Paris:20260922T210000\r\nSUMMARY:Pokémon Challenge — Défi de Ligue à Longjumeau\r\nLOCATION:Drakkar Ludik'\\, 20 place Charles Steber\\, 91160 Longjumeau\\, France\r\nDESCRIPTION:Défi de Ligue Pokémon officiel chez Drakkar Ludik'. 16 places. Tarif annoncé 10 € + 0\\,25 € de frais de billetterie. Identifiant Play! Pokémon requis. L'organisateur affiche 2 places restantes lors du contrôle du 11 septembre 2026. Source: https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26\r\nURL:https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-tcg-league-challenge-drakkar-ludik-longjumeau-2026-09-22\r\nX-POKEMON-ACTIONABILITY:HIGH_ACTION\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Demain : Défi de Ligue Pokémon à Longjumeau\r\nEND:VALARM\r\nEND:VEVENT"
+}
