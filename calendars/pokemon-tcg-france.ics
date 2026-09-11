@@ -2385,4 +2385,20 @@ ACTION:DISPLAY
 DESCRIPTION:Demain : Défi de Ligue Pokémon à Longjumeau
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:physical-event-pokemon-card-exchange-lassigny-20260912@openai
+DTSTAMP:20260911T213957Z
+DTSTART;TZID=Europe/Paris:20260912T140000
+DTEND;TZID=Europe/Paris:20260912T170000
+SUMMARY:Bourse d’échange cartes Pokémon — Lassigny
+LOCATION:12 Place Saint-Crépin\, 60310 Lassigny\, France
+DESCRIPTION:Bourse d’échange de cartes Pokémon. Tarif : 2 € l’entrée. Source officielle : Communauté de Communes du Pays des Sources — https://www.cc-pays-sources.fr/evenement/bourse-dechange-cartes-pokemon/
+URL:https://www.cc-pays-sources.fr/evenement/bourse-dechange-cartes-pokemon/
+STATUS:CONFIRMED
+CATEGORIES:Pokémon,Cartes,Événement physique
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:physical_event:pokemon-card-exchange:lassigny:2026-09-12
+X-POKEMON-SOURCE-TIER:A2
+END:VEVENT
 END:VCALENDAR
