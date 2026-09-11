@@ -2346,4 +2346,22 @@ X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:meisia-republ
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pokemonxp-pikachu-reward-deadline-20260912@openai
+DTSTAMP:20260911T201938Z
+DTSTART;TZID=Europe/Paris:20260912T050000
+DTEND;TZID=Europe/Paris:20260912T050500
+SUMMARY:Pokémon GO — deadline récompense PokémonXP Pikachu
+DESCRIPTION:Date limite officielle pour récupérer la récompense Twitch Pokémon GO du panel PokémonXP : une Étude ponctuelle permettant de rencontrer un Pikachu en costume PokémonXP. Il fallait regarder le panel Pokémon GO pendant 30 minutes sur Twitch.tv/PokemonXP. L’échéance officielle est le 11 septembre 2026 à 20 h PDT, soit le 12 septembre 2026 à 05 h 00 Europe/Paris. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+X-POKEMON-USER-EFFECT:pokemon_go_pokemonxp_twitch_reward_deadline:2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-ACTIONABILITY:CRITICAL_ACTION_NOW
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO — la récompense PokémonXP Pikachu expire dans 1 heure.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
