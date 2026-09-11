@@ -99,6 +99,15 @@
       "patch_request": "calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T15:41:20+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12|play-pokemon-league-challenge-meisia-republique-20260912@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12",
+      "uid": "play-pokemon-league-challenge-meisia-republique-20260912@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T18:58:00+02:00"
     }
   ]
 }
