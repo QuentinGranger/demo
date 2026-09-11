@@ -2234,4 +2234,35 @@ ACTION:DISPLAY
 DESCRIPTION:Deadline decklists Pokémon TCG Pocket Cergy dans 3 heures.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-tcg-league-cup-cergy-20260920@openai
+DTSTAMP:20260911T125000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:84
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-cup:koezio-cergy:2026-09-20
+X-POKEMON-PHYSICAL-EVENT-ID:cergy-back-on-track-tcg-cup-20260920
+X-POKEMON-EVENT-TYPE:LEAGUE_CUP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260920T110000
+DTEND;TZID=Europe/Paris:20260920T190000
+SUMMARY:🎴 Coupe de Ligue Pokémon TCG — Back On Track — Cergy
+LOCATION:Koezio Cergy\, 11 Avenue de la Plaine des Sports\, 95800 Cergy\, France
+DESCRIPTION:Coupe de Ligue Pokémon TCG Back On Track organisée par Pokémon VGC France. Inscription à 15 €. Capacité annoncée : 16 participants. Format Standard, cartes H, I et J. Identifiant de joueur Play! Pokémon requis.\nSource organisateur : https://www.helloasso.com/associations/pokemon-vgc-france/evenements/coupe-tcg-back-on-track-20-09-2026-a-cergy-95
+URL:https://www.helloasso.com/associations/pokemon-vgc-france/evenements/coupe-tcg-back-on-track-20-09-2026-a-cergy-95
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,IDF,CERGY,LEAGUE-CUP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Coupe de Ligue Pokémon TCG Back On Track demain à 11:00 à Cergy.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
