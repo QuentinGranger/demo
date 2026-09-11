@@ -1994,4 +1994,35 @@ ACTION:DISPLAY
 DESCRIPTION:Evenement Pokemon 30 ans demain a la Fnac Beaune de 14:00 a 17:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai
+DTSTAMP:20260911T015408Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:4
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:90
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22
+X-POKEMON-PHYSICAL-EVENT-ID:drakkar-ludik-league-challenge-20260922
+X-POKEMON-EVENT-TYPE:LEAGUE_CHALLENGE
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260922T190000
+DTEND;TZID=Europe/Paris:20260922T210000
+SUMMARY:🎴 Défi de Ligue Pokémon — Drakkar Ludik Longjumeau
+LOCATION:Drakkar Ludik'\, 20 place Charles Steber\, 91160 Longjumeau\, France
+DESCRIPTION:Défi de Ligue Pokémon organisé par Drakkar Ludik'. Inscription à 10 € + 0,25 € de frais de billetterie. 16 places annoncées ; la page organisateur affiche 2 places restantes au contrôle du 11 septembre 2026. Un identifiant Play! Pokémon est requis.\nSource organisateur : https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26
+URL:https://www.drakkar-ludik.com/event-details/pokemon-challenge-septembre-26
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,IDF,LEAGUE-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi de Ligue Pokémon demain à 19:00 chez Drakkar Ludik à Longjumeau.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
