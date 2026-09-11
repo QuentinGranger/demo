@@ -81,6 +81,15 @@
       "patch_request": "calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12|play-pokemon-cup-metz-caverne-gobelin-20260912@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json",
+      "user_effect": "physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12",
+      "uid": "play-pokemon-cup-metz-caverne-gobelin-20260912@openai",
+      "write_status": "PATCH_REQUEST_CREATED",
+      "patch_request": "calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T10:14:09+02:00"
     }
   ]
 }
