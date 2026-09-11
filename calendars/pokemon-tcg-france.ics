@@ -2291,4 +2291,28 @@ ACTION:DISPLAY
 DESCRIPTION:Défi Mensuel Pokémon Champions demain à 04:00.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-paris-musee-en-herbe-admirez-les-tous-2026@openai
+DTSTAMP:20260911T144100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:ACTIONABLE_SOON
+X-POKEMON-ACTION:RESERVE_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:physical_event:pokemon-exhibition-admirez-les-tous:musee-en-herbe-paris:2026
+X-POKEMON-PHYSICAL-EVENT-ID:musee-en-herbe-admirez-les-tous-2026
+X-POKEMON-EVENT-TYPE:EXHIBITION
+X-POKEMON-ACCESS-TYPE:RESERVATION_REQUIRED
+DTSTART;VALUE=DATE:20260416
+DTEND;VALUE=DATE:20270104
+SUMMARY:🖼️ Pokémon — « Admirez-les tous ! » — Musée en Herbe Paris
+LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
+DESCRIPTION:Exposition hommage à Pokémon au Musée en Herbe. Le musée confirme qu’elle se poursuit jusqu’au 3 janvier 2027. Ouvert tous les jours de 10h à 19h ; fermeture à 17h les 24 et 31 décembre ; fermé le 25 décembre et le 1er janvier. Réservation requise pour la visite libre.\nSource officielle : https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nConfirmation de fin : https://www.musee-en-herbe.com/visite-atelier-wo520.html
+URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,EXHIBITION,MUSEE
+END:VEVENT
 END:VCALENDAR
