@@ -2055,4 +2055,34 @@ ACTION:DISPLAY
 DESCRIPTION:Coupe de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai
+DTSTAMP:20260911T025200Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:94
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28
+X-POKEMON-PHYSICAL-EVENT-ID:ultrajeux-oberkampf-league-challenge-20261128
+X-POKEMON-EVENT-TYPE:LEAGUE_CHALLENGE
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20261128T100000
+SUMMARY:🎴 Défi de Ligue Pokémon — UltraJeux Oberkampf
+LOCATION:UltraJeux Oberkampf\, 108 boulevard Richard-Lenoir\, 75011 Paris\, France
+DESCRIPTION:Défi de Ligue Pokémon organisé par UltraJeux. Inscription affichée à 10 €. La page événements UltraJeux confirme la date du samedi 28 novembre 2026 à 10:00 à Oberkampf.\nSource organisateur : https://www.ultrajeux.com/produit-33040-defi-de-ligue-pokemon-samedi-28-novembre-a-10h-oberkampf-0000000000000.html
+URL:https://www.ultrajeux.com/produit-33040-defi-de-ligue-pokemon-samedi-28-novembre-a-10h-oberkampf-0000000000000.html
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,PARIS,LEAGUE-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
