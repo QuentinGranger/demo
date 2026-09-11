@@ -2265,4 +2265,30 @@ ACTION:DISPLAY
 DESCRIPTION:Coupe de Ligue Pokémon TCG Back On Track demain à 11:00 à Cergy.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-monthly-challenge-202609@openai
+DTSTAMP:20260911T133948Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_PLAY
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:88
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:champions_monthly_challenge:2026-09:register_play
+X-POKEMON-EVENT-TYPE:ONLINE_COMPETITION
+DTSTART;TZID=Europe/Paris:20260918T040000
+DTEND;TZID=Europe/Paris:20260921T035900
+SUMMARY:🎮 Pokémon Champions — Défi Mensuel septembre 2026
+DESCRIPTION:Défi Mensuel de septembre 2026 de Pokémon Champions. Inscriptions ouvertes du 11 septembre 2026 à 04:00 au 21 septembre 2026 à 03:59 (heure de Paris). Compétition du 18 septembre à 04:00 au 21 septembre à 03:59. Règlement M-C. Récompense de participation après au moins 3 matchs : Wimessir (Femelle), 100 Coupons de Vitesse et titre Outsider (MCS 09/2026). Sources recoupées : Pokébip (sources déclarées : actualités en jeu et site officiel Pokémon Champions), Pokémon Zone, OP.GG.
+URL:https://www.pokebip.com/news/7533/pokemon-champions-participez-au-defi-mensuel-de-septembre-2026
+CATEGORIES:POKEMON,CHAMPIONS,ONLINE-COMPETITION,MONTHLY-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi Mensuel Pokémon Champions demain à 04:00.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
