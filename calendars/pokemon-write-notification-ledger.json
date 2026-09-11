@@ -9,6 +9,24 @@
       "patch_request": "calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T01:07:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26|play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T02:06:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19|pokemon-30ans-fnac-beaune-pokeshow-20260919@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json",
+      "user_effect": "physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19",
+      "uid": "pokemon-30ans-fnac-beaune-pokeshow-20260919@openai",
+      "write_status": "PATCH_REQUEST_CREATED",
+      "patch_request": "calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T02:06:30+02:00"
     }
   ]
 }
