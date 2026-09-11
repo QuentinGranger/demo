@@ -90,6 +90,15 @@
       "patch_request": "calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T10:14:09+02:00"
+    },
+    {
+      "write_notice_key": "champions_monthly_challenge:2026-09:register_play|pokemon-champions-monthly-challenge-202609@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json",
+      "user_effect": "champions_monthly_challenge:2026-09:register_play",
+      "uid": "pokemon-champions-monthly-challenge-202609@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T15:41:20+02:00"
     }
   ]
 }
