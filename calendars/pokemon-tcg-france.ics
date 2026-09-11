@@ -2177,4 +2177,35 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon Champions demain à 15:30 à Extra Life Café Paris.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-pocket-cergy-ailes-des-enfers-20260927@openai
+DTSTAMP:20260911T083425Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:physical_event:pokemon-tcg-pocket:cergy-ailes-des-enfers:2026-09-27
+X-POKEMON-PHYSICAL-EVENT-ID:cergy-tcg-pocket-ailes-des-enfers-20260927
+X-POKEMON-EVENT-TYPE:TCG_POCKET_TOURNAMENT
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260927T110000
+DTEND;TZID=Europe/Paris:20260927T190000
+SUMMARY:📱 Pokémon TCG Pocket — Ailes des Enfers — Cergy
+LOCATION:Koezio Cergy\, 11 Avenue de la Plaine des Sports\, 95800 Cergy\, France
+DESCRIPTION:Tournoi Pokémon TCG Pocket organisé par Pokémon VGC France. Préinscription obligatoire\, 5 €\, 32 participants maximum\, format Conquest classique BO3. Date limite annoncée pour envoyer les trois decklists : vendredi 25 septembre à 22:00.
+URL:https://www.helloasso.com/associations/pokemon-vgc-france/evenements/tournoi-tcg-pocket-ailes-des-enfers-27-09-2026-a-cergy-95
+CATEGORIES:POKEMON,TCG-POCKET,PHYSICAL-EVENT,CERGY,TOURNAMENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Tournoi Pokémon TCG Pocket demain à Cergy.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
