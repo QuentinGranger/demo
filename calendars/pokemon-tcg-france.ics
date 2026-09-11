@@ -1933,4 +1933,34 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon demain à 10:30 chez UltraJeux Bastille.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai
+DTSTAMP:20260911T000500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26
+X-POKEMON-PHYSICAL-EVENT-ID:ultrajeux-oberkampf-league-challenge-20260926
+X-POKEMON-EVENT-TYPE:LEAGUE_CHALLENGE
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260926T100000
+SUMMARY:🎴 Défi de Ligue Pokémon — UltraJeux Oberkampf
+LOCATION:UltraJeux Oberkampf\, 108 Bd Richard Lenoir\, 75011 Paris\, France
+DESCRIPTION:Défi de Ligue Pokémon organisé par UltraJeux. Réservation ouverte à 10 €. Limite annoncée : 8 joueurs. Format Standard en rondes suisses Bo3. Numéro de joueur Play! Pokémon et decklist requis. Réservation non annulable et non remboursable selon l’organisateur.\nSource organisateur : https://www.ultrajeux.com/produit-33038-evenements-pokemon-defi-de-ligue-pokemon-samedi-26-septembre-a-10h-oberkampf-0000000000000.html
+URL:https://www.ultrajeux.com/produit-33038-evenements-pokemon-defi-de-ligue-pokemon-samedi-26-septembre-a-10h-oberkampf-0000000000000.html
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,PARIS,LEAGUE-CHALLENGE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Défi de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
