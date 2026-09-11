@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "play-pokemon-league-challenge-meisia-republique-20260912@openai",
+  "event": "BEGIN:VEVENT\r\nUID:play-pokemon-league-challenge-meisia-republique-20260912@openai\r\nDTSTAMP:20260911T165800Z\r\nDTSTART;TZID=Europe/Paris:20260912T100000\r\nDTEND;TZID=Europe/Paris:20260912T150000\r\nSUMMARY:Pokémon – Défi de ligue (League Challenge) — MEiSiA République\r\nLOCATION:MEiSiA République\\, 84 rue René Boulanger\\, 75010 Paris\\, France\r\nDESCRIPTION:Défi de Ligue Pokémon à MEiSiA République. Horaires officiels : 10 h–15 h. Tarif à partir de 10 €. Réservation proposée par l’organisateur. Source : https://shop.cafemeisia.com/evenements/\r\nURL:https://shop.cafemeisia.com/evenements/\r\nX-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nEND:VEVENT"
+}
