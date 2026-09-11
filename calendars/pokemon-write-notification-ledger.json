@@ -27,6 +27,15 @@
       "patch_request": "calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T02:06:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22|play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22",
+      "uid": "play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T03:55:10+02:00"
     }
   ]
 }
