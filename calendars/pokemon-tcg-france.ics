@@ -2025,4 +2025,34 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon demain à 19:00 chez Drakkar Ludik à Longjumeau.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai
+DTSTAMP:20260911T024800Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH_ACTION
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:94
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03
+X-POKEMON-PHYSICAL-EVENT-ID:ultrajeux-oberkampf-league-cup-20261003
+X-POKEMON-EVENT-TYPE:LEAGUE_CUP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20261003T100000
+SUMMARY:🏆 Coupe de Ligue Pokémon — UltraJeux Oberkampf
+LOCATION:UltraJeux Oberkampf\, 108 boulevard Richard-Lenoir\, 75011 Paris\, France
+DESCRIPTION:Coupe de Ligue Pokémon organisée par UltraJeux. Inscription affichée à 10 €. La page événements UltraJeux confirme la date du samedi 3 octobre 2026 à 10:00 à Oberkampf.\nSource organisateur : https://www.ultrajeux.com/produit-33041-coupe-de-ligue-pokemon-samedi-3-octobre-a-10h-oberkampf-0000000000000.html
+URL:https://www.ultrajeux.com/produit-33041-coupe-de-ligue-pokemon-samedi-3-octobre-a-10h-oberkampf-0000000000000.html
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,PARIS,LEAGUE-CUP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Coupe de Ligue Pokémon demain à 10:00 chez UltraJeux Oberkampf.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
