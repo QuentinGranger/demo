@@ -36,6 +36,51 @@
       "patch_request": "calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json",
       "state": "RESERVED",
       "reserved_at": "2026-09-11T03:55:10+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03|play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json",
+      "user_effect": "physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03",
+      "uid": "play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04|play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04",
+      "uid": "play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11|play-pokemon-league-cup-ultrajeux-bastille-20261011@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json",
+      "user_effect": "physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11",
+      "uid": "play-pokemon-league-cup-ultrajeux-bastille-20261011@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31|play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28|play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
     }
   ]
 }
