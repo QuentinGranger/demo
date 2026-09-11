@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "physical-event-pokemon-card-exchange-lassigny-20260912@openai",
+  "event": "BEGIN:VEVENT\r\nUID:physical-event-pokemon-card-exchange-lassigny-20260912@openai\r\nDTSTAMP:20260911T213957Z\r\nDTSTART;TZID=Europe/Paris:20260912T140000\r\nDTEND;TZID=Europe/Paris:20260912T170000\r\nSUMMARY:Bourse d’échange cartes Pokémon — Lassigny\r\nLOCATION:12 Place Saint-Crépin\\, 60310 Lassigny\\, France\r\nDESCRIPTION:Bourse d’échange de cartes Pokémon. Tarif : 2 € l’entrée. Source officielle : Communauté de Communes du Pays des Sources — https://www.cc-pays-sources.fr/evenement/bourse-dechange-cartes-pokemon/\r\nURL:https://www.cc-pays-sources.fr/evenement/bourse-dechange-cartes-pokemon/\r\nSTATUS:CONFIRMED\r\nCATEGORIES:Pokémon,Cartes,Événement physique\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-card-exchange:lassigny:2026-09-12\r\nX-POKEMON-SOURCE-TIER:A2\r\nEND:VEVENT"
+}
