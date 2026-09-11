@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-tcg-pocket-cergy-ailes-des-enfers-decklists-20260925@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcg-pocket-cergy-ailes-des-enfers-decklists-20260925@openai\r\nDTSTAMP:20260911T083525Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:5\r\nX-POKEMON-PRIORITY:HIGH_ACTION\r\nX-POKEMON-ACTION:SUBMIT_DECKLISTS\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:98\r\nX-POKEMON-ACTIONABILITY:86\r\nX-POKEMON-USER-EFFECT:deadline:pokemon-tcg-pocket:cergy-ailes-des-enfers:decklists:2026-09-25T22:00\r\nX-POKEMON-EVENT-TYPE:DEADLINE\r\nX-POKEMON-SOURCE-TIER:A2\r\nDTSTART;TZID=Europe/Paris:20260925T220000\r\nSUMMARY:⏰ Deadline decklists — Pokémon TCG Pocket Cergy\r\nDESCRIPTION:Date limite annoncée par Pokémon VGC France pour transmettre les trois decklists du tournoi « Ailes des Enfers » du 27 septembre à Cergy. Les informations doivent être reçues avant 22:00.\r\nURL:https://www.helloasso.com/associations/pokemon-vgc-france/evenements/tournoi-tcg-pocket-ailes-des-enfers-27-09-2026-a-cergy-95\r\nCATEGORIES:POKEMON,TCG-POCKET,DEADLINE,CERGY\r\nBEGIN:VALARM\r\nTRIGGER:-PT3H\r\nACTION:DISPLAY\r\nDESCRIPTION:Deadline decklists Pokémon TCG Pocket Cergy dans 3 heures.\r\nEND:VALARM\r\nEND:VEVENT"
+}
