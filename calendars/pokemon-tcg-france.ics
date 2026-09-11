@@ -2116,4 +2116,35 @@ ACTION:DISPLAY
 DESCRIPTION:Défi de Ligue Pokémon demain à 14:00 à Graine de Geek, La Ferté-Alais.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:play-pokemon-cup-metz-caverne-gobelin-20260912@openai
+DTSTAMP:20260911T081409Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:3
+X-POKEMON-PRIORITY:CRITICAL_ACTION_NOW
+X-POKEMON-ACTION:REGISTER_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:96
+X-POKEMON-ACTIONABILITY:92
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12
+X-POKEMON-PHYSICAL-EVENT-ID:caverne-gobelin-metz-pokemon-cup-20260912
+X-POKEMON-EVENT-TYPE:LEAGUE_CUP
+X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
+X-POKEMON-TICKETING-STATE:OPEN
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;TZID=Europe/Paris:20260912T093000
+DTEND;TZID=Europe/Paris:20260912T180000
+SUMMARY:🎴 Coupe Pokémon — La Caverne du Gobelin Metz
+LOCATION:La Caverne du Gobelin\, 11 rue des Clercs\, 57000 Metz\, France
+DESCRIPTION:Coupe Pokémon format Standard organisée par La Caverne du Gobelin à Metz. La page officielle d'inscription affichait l'événement complet lors d'un contrôle antérieur et affiche désormais 2 places restantes. Tarif : 14 €.\nSource organisateur : https://www.lesanimationsdugobelin.com/animations/evenements/cartes-a-collectionner/pokemon
+URL:https://www.lesanimationsdugobelin.com/animations/evenements/cartes-a-collectionner/pokemon
+CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,METZ,LEAGUE-CUP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Coupe Pokémon demain à 09:30 à La Caverne du Gobelin Metz.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
