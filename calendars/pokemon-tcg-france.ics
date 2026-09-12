@@ -2408,4 +2408,19 @@ X-POKEMON-USER-EFFECT:digital_reward_deadline:tcg-live-worlds-2026-twitch-codes:
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-harvest-festival-2026-fr@pokemon-watch
+DTSTAMP:20260912T082050Z
+SUMMARY:Pokémon GO — Festival des récoltes : Cueillette de Verpom
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20261006
+DESCRIPTION:Événement mondial disponible en France. Du 29 septembre 2026 à 10:00 au 5 octobre 2026 à 20:00 (heure locale). Début de Verpom chromatique. Passe GO et Passe GO deluxe disponibles pendant l’événement. Récompenses du Passe GO à récupérer avant le 7 octobre 2026 à 20:00. Source officielle : https://pokemongo.com/fr/news/harvest-festival-2026
+X-POKEMON-USER-EFFECT:pokemon_go_event:harvest-festival-2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-09-29T10:00:00+02:00
+X-POKEMON-EXACT-END:2026-10-05T20:00:00+02:00
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
