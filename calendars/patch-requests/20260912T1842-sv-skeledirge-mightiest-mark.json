@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-sv-skeledirge-mightiest-20260911@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-sv-skeledirge-mightiest-20260911@pokemon-france\r\nDTSTAMP:20260912T164200Z\r\nDTSTART;VALUE=DATE:20260911\r\nDTEND;VALUE=DATE:20260919\r\nSUMMARY:Pokémon Écarlate/Violet — Flâmigator Surpuissant (raid 7★)\r\nDESCRIPTION:Flâmigator avec l’Insigne Surpuissant revient dans les raids Téracristal 7★ au cristal noir. Type Téracristal Feu. Capture limitée à un exemplaire par sauvegarde si vous ne l’avez pas déjà obtenu lors d’un précédent événement. Fenêtre officielle: du 11 septembre 2026 à 00:00 UTC au 17 septembre 2026 à 23:59 UTC (soit du 11 septembre 02:00 au 18 septembre 01:59 à Paris). Source officielle: https://sv-news.pokemon.co.jp/en/page/477.html\r\nURL:https://sv-news.pokemon.co.jp/en/page/477.html\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-09-11T02:00:00+02:00\r\nX-POKEMON-EXACT-END:2026-09-18T01:59:00+02:00\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-USER-EFFECT:game_event:sv-skeledirge-mightiest-mark:2026-09\r\nX-POKEMON-ACTIONABILITY:75\r\nEND:VEVENT"
+}
