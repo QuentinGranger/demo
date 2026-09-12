@@ -2409,4 +2409,15 @@ X-POKEMON-EXACT-START:2026-09-29T10:00:00+02:00
 X-POKEMON-EXACT-END:2026-10-05T20:00:00+02:00
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-gigantamax-cinderace-20261003@openai
+DTSTAMP:20260912T100100Z
+DTSTART;TZID=Europe/Paris:20261003T140000
+DTEND;TZID=Europe/Paris:20261003T170000
+SUMMARY:Pokémon GO — Journée Combat Dynamax Pyrobut Gigamax
+DESCRIPTION:Samedi 3 octobre 2026 de 14:00 à 17:00 heure locale. Pyrobut Gigamax en Combats Dynamax de niveau 6 et première disponibilité de sa forme chromatique dans Pokémon GO. Ticket optionnel disponible jusqu'à 17:00. Source officielle: https://pokemongo.com/fr/news/gigantamax-cinderace-max-battle-day-2026
+X-POKEMON-USER-EFFECT:pokemon-go-event:gigantamax-cinderace-max-battle-day-2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+END:VEVENT
 END:VCALENDAR
