@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-horizons-celebration-20260916@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-horizons-celebration-20260916@openai\r\nDTSTAMP:20260912T095900Z\r\nDTSTART;VALUE=DATE:20260916\r\nDTEND;VALUE=DATE:20260923\r\nSUMMARY:Pokémon GO — Célébration Pokémon les horizons\r\nDESCRIPTION:Événement Pokémon GO du 16 septembre 2026 à 10:00 au 22 septembre 2026 à 20:00 heure locale. Début de Salamèche portant les lunettes de Friede. Passe GO de collaboration disponible pendant la fenêtre. Récompenses du Passe à récupérer avant le 24 septembre 2026 à 20:00. Source officielle: https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026\r\nX-POKEMON-USER-EFFECT:pokemon-go-event:horizons-celebration-2026:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-09-16T10:00:00+02:00\r\nX-POKEMON-EXACT-END:2026-09-22T20:00:00+02:00\r\nEND:VEVENT"
+}
