@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-card-exchange-arcadia-chateauneuf-20260913@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-card-exchange-arcadia-chateauneuf-20260913@openai\r\nDTSTAMP:20260912T004239Z\r\nDTSTART;TZID=Europe/Paris:20260913T140000\r\nDTEND;TZID=Europe/Paris:20260913T180000\r\nSUMMARY:Pokémon — Bourse d’échange Arcadia\r\nLOCATION:Arcadia — L'Hacienda\\, Route du Jaï\\, 13220 Châteauneuf-les-Martigues\r\nDESCRIPTION:Bourse d’échange de cartes Pokémon gratuite pour les 30 ans de Pokémon. Sans limite de places et sans réservation obligatoire. Vente entre particuliers interdite. Découverte de Pokkén Tournament DX également proposée sur inscription séparée. Source: https://arcadiacafe.fr/evenements/bourse-dechange-pokemon-decouverte-pokken\r\nURL:https://arcadiacafe.fr/evenements/bourse-dechange-pokemon-decouverte-pokken\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-card-exchange:arcadia-chateauneuf-les-martigues:2026-09-13\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nEND:VEVENT"
+}
