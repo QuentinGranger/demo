@@ -910,32 +910,18 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-horizons-celebration-20260916@openai
-SEQUENCE:1
-DTSTAMP:20260907T070500Z
-LAST-MODIFIED:20260907T070500Z
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:IMPORTANT
-X-POKEMON-ACTION:PLAY
-X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
-X-POKEMON-EXACT-START:20260916T100000 Europe/Paris
-X-POKEMON-EXACT-END:20260922T200000 Europe/Paris
-X-POKEMON-DATE-PRECISION:EXACT_DATETIME
-X-POKEMON-TERRITORY:FRANCE_CONFIRMED
-X-POKEMON-CONFIDENCE:99
-X-POKEMON-ACTIONABILITY:84
-X-POKEMON-USER-EFFECT:pokemon-go-horizons-celebration-20260916
+SEQUENCE:2
+DTSTAMP:20260912T095900Z
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260923
-SUMMARY:🌅 GO — Célébration Pokémon Horizons
-DESCRIPTION:Célébration pour La série : Pokémon, les horizons du 16 septembre 2026 à 10:00 au 22 septembre à 20:00 heure locale. Salamèche avec les lunettes de Friede fait ses débuts et un Passe GO d’événement est proposé. Affichage calendrier compact : fenêtre multi-jours en journée entière ; horaires exacts conservés ici.\nSource officielle : https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
-URL:https://pokemongo.com/news/pokemon-horizons-celebration-event-2026
-CATEGORIES:POKEMON,POKEMON-GO,POKEMON-HORIZONS,EVENT
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:La Célébration Pokémon Horizons commence demain à 10:00.
-END:VALARM
+SUMMARY:Pokémon GO — Célébration Pokémon les horizons
+DESCRIPTION:Événement Pokémon GO du 16 septembre 2026 à 10:00 au 22 septembre 2026 à 20:00 heure locale. Début de Salamèche portant les lunettes de Friede. Passe GO de collaboration disponible pendant la fenêtre. Récompenses du Passe à récupérer avant le 24 septembre 2026 à 20:00. Source officielle: https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026
+X-POKEMON-USER-EFFECT:pokemon-go-event:horizons-celebration-2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-09-16T10:00:00+02:00
+X-POKEMON-EXACT-END:2026-09-22T20:00:00+02:00
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-pass-september-rewards-expiry-20261008@openai
