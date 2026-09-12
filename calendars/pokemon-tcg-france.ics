@@ -1905,33 +1905,16 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:play-pokemon-league-challenge-ultrajeux-bastille-20260913@openai
-DTSTAMP:20260910T225600Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-POKEMON-PRIORITY:HIGH_ACTION
-X-POKEMON-ACTION:REGISTER_ATTEND
+SEQUENCE:1
+DTSTAMP:20260912T004039Z
+DTSTART;TZID=Europe/Paris:20260913T103000
+SUMMARY:Pokémon — Défi de Ligue UltraJeux Bastille
+LOCATION:UltraJeux Bastille\, 13 rue Amelot\, 75011 Paris
+DESCRIPTION:Défi de Ligue Pokémon. 16 joueurs maximum. PAF 10 €. Format Standard. Rondes suisses BO3. Numéro Play! Pokémon et decklist requis. Réservation non annulable / non remboursable. Fin non publiée par l'organisateur. Source: https://www.ultrajeux.com/produit-33054-evenements-pokemon-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html
+URL:https://www.ultrajeux.com/produit-33054-evenements-pokemon-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html
+X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-09-13
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
-X-POKEMON-CONFIDENCE:96
-X-POKEMON-ACTIONABILITY:85
-X-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-09-13
-X-POKEMON-PHYSICAL-EVENT-ID:ultrajeux-bastille-league-challenge-20260913
-X-POKEMON-EVENT-TYPE:LEAGUE_CHALLENGE
-X-POKEMON-ACCESS-TYPE:REGISTRATION_REQUIRED
-X-POKEMON-TICKETING-STATE:OPEN
-X-POKEMON-SOURCE-TIER:A2
-DTSTART;TZID=Europe/Paris:20260913T103000
-SUMMARY:🎴 Défi de Ligue Pokémon — UltraJeux Bastille
-LOCATION:UltraJeux Bastille\, 13 rue Amelot\, 75011 Paris\, France
-DESCRIPTION:Défi de Ligue Pokémon organisé par UltraJeux. Réservation ouverte à 10 €. Limite annoncée : 16 joueurs. Format Standard en rondes suisses Bo3. Numéro de joueur Play! Pokémon et decklist requis. Réservation non annulable et non remboursable selon l’organisateur.\nSource organisateur : https://www.ultrajeux.com/produit-33054-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html
-URL:https://www.ultrajeux.com/produit-33054-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html
-CATEGORIES:POKEMON,TCG,PLAY-POKEMON,PHYSICAL-EVENT,PARIS,LEAGUE-CHALLENGE
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:Défi de Ligue Pokémon demain à 10:30 chez UltraJeux Bastille.
-END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai
