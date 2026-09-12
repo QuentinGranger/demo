@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "tcg-live-worlds-2026-twitch-code-deadline@openai",
+  "event": "BEGIN:VEVENT\r\nUID:tcg-live-worlds-2026-twitch-code-deadline@openai\r\nDTSTAMP:20260912T010200Z\r\nDTSTART;TZID=Europe/Paris:20260925T174500\r\nDTEND;TZID=Europe/Paris:20260925T180000\r\nSUMMARY:Deadline — codes Twitch JCC Pokémon Live Mondiaux 2026\r\nDESCRIPTION:Les codes JCC Pokémon Live obtenus via les drops Twitch des Championnats du Monde Pokémon 2026 expirent le 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris. À échanger avant l'échéance. Source officielle : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\r\nX-POKEMON-USER-EFFECT:digital_reward_deadline:tcg-live-worlds-2026-twitch-codes:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nEND:VEVENT"
+}
