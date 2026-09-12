@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "play-pokemon-league-challenge-ultrajeux-bastille-20260913@openai",
+  "event": "BEGIN:VEVENT\r\nUID:play-pokemon-league-challenge-ultrajeux-bastille-20260913@openai\r\nDTSTAMP:20260912T004039Z\r\nDTSTART;TZID=Europe/Paris:20260913T103000\r\nSUMMARY:Pokémon — Défi de Ligue UltraJeux Bastille\r\nLOCATION:UltraJeux Bastille\\, 13 rue Amelot\\, 75011 Paris\r\nDESCRIPTION:Défi de Ligue Pokémon. 16 joueurs maximum. PAF 10 €. Format Standard. Rondes suisses BO3. Numéro Play! Pokémon et decklist requis. Réservation non annulable / non remboursable. Fin non publiée par l'organisateur. Source: https://www.ultrajeux.com/produit-33054-evenements-pokemon-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html\r\nURL:https://www.ultrajeux.com/produit-33054-evenements-pokemon-defi-de-ligue-pokemon-dimanche-13-septembre-a-10h30-bastille-0000000000000.html\r\nX-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-09-13\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nEND:VEVENT"
+}
