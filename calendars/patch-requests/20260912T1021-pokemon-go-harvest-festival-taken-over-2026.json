@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-harvest-festival-taken-over-2026-fr@pokemon-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-harvest-festival-taken-over-2026-fr@pokemon-watch\r\nDTSTAMP:20260912T082150Z\r\nSUMMARY:Pokémon GO — Festival des récoltes : Offensive\r\nDTSTART;VALUE=DATE:20261002\r\nDTEND;VALUE=DATE:20261006\r\nDESCRIPTION:Événement mondial disponible en France. Du 2 octobre 2026 à 00:00 au 5 octobre 2026 à 20:00 (heure locale). Zekrom Obscur via Giovanni\; Gribouraigne chromatique fait ses débuts. Les récompenses du Passe GO restent disponibles jusqu’au 7 octobre 2026 à 20:00. Source officielle : https://pokemongo.com/fr/news/harvest-festival-tgr-2026\r\nX-POKEMON-USER-EFFECT:pokemon_go_event:harvest-festival-taken-over-2026:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-02T00:00:00+02:00\r\nX-POKEMON-EXACT-END:2026-10-05T20:00:00+02:00\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
