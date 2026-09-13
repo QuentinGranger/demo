@@ -2529,4 +2529,25 @@ X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-30e-anniversaire-fr-20260916@openai
+DTSTAMP:20260913T151020Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:JCC Pokémon — Sortie 30ᵉ Anniversaire en France
+LOCATION:France
+DESCRIPTION:Sortie officielle en France de l’extension spéciale JCC Pokémon 30ᵉ Anniversaire et de sa première vague de produits. Date officielle : 16 septembre 2026. Source A1 Pokémon France : https://www.pokemon.com/fr/actualites/jcc-pokemon-produits-30-anniversaire
+URL:https://www.pokemon.com/fr/actualites/jcc-pokemon-produits-30-anniversaire
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:tcg_release:30e-anniversaire:fr
+X-POKEMON-ACTIONABILITY:90
+X-POKEMON-ACTION:BUY
+CATEGORIES:Pokémon,JCC,30e Anniversaire,Sortie France
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Demain : sortie JCC Pokémon 30ᵉ Anniversaire
+END:VALARM
+END:VEVENT
 END:VCALENDAR
