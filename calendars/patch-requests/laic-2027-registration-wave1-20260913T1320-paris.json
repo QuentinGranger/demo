@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "play-laic-2027-competitor-registration-wave1@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:play-laic-2027-competitor-registration-wave1@pokemon-france\r\nDTSTAMP:20260913T112000Z\r\nDTSTART;TZID=Europe/Paris:20260923T000000\r\nDTEND;TZID=Europe/Paris:20260923T003000\r\nSUMMARY:Pokémon LAIC 2027 — ouverture inscriptions compétiteurs (vague 1)\r\nDESCRIPTION:Ouverture de la première vague d’inscriptions compétiteurs pour les Championnats Internationaux Pokémon d’Amérique latine 2027 à São Paulo. Première vague : 22 septembre 2026 à 19:00 BRT = 23 septembre à 00:00 Europe/Paris. Deuxième vague compétiteurs et inscriptions spectateurs : 23 septembre à 09:00 BRT = 14:00 Europe/Paris. Compétitions JCC Pokémon, Pokémon Champions et Pokémon GO. Événement : 20–22 novembre 2026.\r\nLOCATION:Inscription en ligne — São Paulo, Brésil\r\nURL:https://www.pokemon.com/fr/actualites/preparez-vous-a-vous-inscrire-aux-championnats-internationaux-damerique-latine-2027\r\nX-POKEMON-USER-EFFECT:play_registration:laic2027:competitor-wave1\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
