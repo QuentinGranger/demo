@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-champions-mcs-2026-09@pokemon-fr",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-champions-mcs-2026-09@pokemon-fr\r\nDTSTAMP:20260913T052654Z\r\nDTSTART;TZID=Europe/Paris:20260918T040000\r\nDTEND;TZID=Europe/Paris:20260921T035900\r\nSUMMARY:Pokémon Champions — Défi Mensuel septembre 2026\r\nDESCRIPTION:Compétition en ligne sous règlement M-C. Inscriptions ouvertes depuis le 11 septembre à 04:00 et jusqu'au 21 septembre 2026 à 03:59 (Paris). Combats du 18 septembre à 04:00 au 21 septembre à 03:59. Récompense de participation après au moins 3 combats : Wimessir femelle + 100 Coupons de Vitesse + titre Outsider (MCS 09/2026).\r\nX-POKEMON-USER-EFFECT:pokemon_champions_monthly_challenge:2026-09:global\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
