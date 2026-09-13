@@ -2501,4 +2501,18 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-worlds-2026-reward-codes-deadline@pokemon-france
+DTSTAMP:20260913T094800Z
+DTSTART;TZID=Europe/Paris:20260930T015900
+DTEND;TZID=Europe/Paris:20260930T021400
+SUMMARY:Deadline — Pokémon Champions : codes récompenses Mondiaux 2026
+DESCRIPTION:Échéance pour échanger les codes Pokémon Champions obtenus via les drops Twitch des Championnats du Monde Pokémon 2026 (récompenses d'entraînement/co-stream). L'annonce officielle indique une validité jusqu'au 29 septembre 2026 à 23:59 UTC, soit le 30 septembre à 01:59 à Paris. Ne contient aucun code personnel. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+X-POKEMON-USER-EFFECT:distribution_deadline:pokemon-champions-worlds-2026-reward-codes:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
