@@ -2463,4 +2463,16 @@ X-POKEMON-USER-EFFECT:physical_event:fnac-beaune-pokemon30-pokeshow:2026-09-19
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-mcs-2026-09@pokemon-fr
+DTSTAMP:20260913T052654Z
+DTSTART;TZID=Europe/Paris:20260918T040000
+DTEND;TZID=Europe/Paris:20260921T035900
+SUMMARY:Pokémon Champions — Défi Mensuel septembre 2026
+DESCRIPTION:Compétition en ligne sous règlement M-C. Inscriptions ouvertes depuis le 11 septembre à 04:00 et jusqu'au 21 septembre 2026 à 03:59 (Paris). Combats du 18 septembre à 04:00 au 21 septembre à 03:59. Récompense de participation après au moins 3 combats : Wimessir femelle + 100 Coupons de Vitesse + titre Outsider (MCS 09/2026).
+X-POKEMON-USER-EFFECT:pokemon_champions_monthly_challenge:2026-09:global
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
