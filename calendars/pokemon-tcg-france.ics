@@ -2475,4 +2475,16 @@ X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-champions-global-challenge-2027-1@pokemon-fr
+DTSTAMP:20260913T052654Z
+DTSTART;TZID=Europe/Paris:20260925T040000
+DTEND;TZID=Europe/Paris:20260928T035900
+SUMMARY:Pokémon Champions — Défi mondial I (2027)
+DESCRIPTION:Compétition en ligne sous règlement M-C. Inscriptions du 18 septembre 2026 à 04:00 au 28 septembre à 03:59 (Paris). Combats du 25 septembre à 04:00 au 28 septembre à 03:59. Permet de gagner des points pour la saison compétitive 2027 ; récompense de participation après au moins 3 combats : Pondralugon.
+X-POKEMON-USER-EFFECT:pokemon_champions_global_challenge:2027-1:global
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
