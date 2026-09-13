@@ -2451,4 +2451,16 @@ X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
 X-POKEMON-USER-EFFECT:game_event:sv-skeledirge-mightiest-mark:2026-09
 X-POKEMON-ACTIONABILITY:75
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon30-fnac-beaune-pokeshow-20260919@quentingranger
+DTSTAMP:20260913T044300Z
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:Pokémon 30 ans × Pokeshow — Fnac Beaune
+LOCATION:Fnac Beaune
+DESCRIPTION:Événement officiel Fnac pour les 30 ans de Pokémon avec Pokeshow. Mise en vente de la collection 30 ans, opening en direct, lots à gagner, vente aux enchères et tirage au sort pour une ETB 30 ans. Accès gratuit dans la limite des places disponibles. Source: https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/
+X-POKEMON-USER-EFFECT:physical_event:fnac-beaune-pokemon30-pokeshow:2026-09-19
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+END:VEVENT
 END:VCALENDAR
