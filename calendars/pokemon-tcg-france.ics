@@ -2671,4 +2671,31 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon 30 ans à Bay 2 demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:bay2-pokemon30-20260926@openai
+DTSTAMP:20260914T145144Z
+LAST-MODIFIED:20260914T145144Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PARIS_LIMITED_EVENT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:82
+X-POKEMON-USER-EFFECT-ID:physical_event:bay2-pokemon30-quiz-20260926:idf
+DTSTART;TZID=Europe/Paris:20260926T150000
+DTEND;TZID=Europe/Paris:20260926T180000
+SUMMARY:⭐ 🎪 Bay 2 — Pokémon 30 ans : grand quiz et cadeaux
+LOCATION:Centre commercial Bay 2\, Rue du Général de Gaulle\, 77090 Collégien\, France
+DESCRIPTION:Grand quiz Pokémon 30 ans. Session enfants à 15h et adultes à 17h. L’organisateur annonce des cadeaux à gagner, dont Nintendo Switch 2, jeu Pokopia, peluches et cartes. Heure de fin non publiée ; créneau calendrier jusqu’à 18h à titre pratique.\nSource : https://www.centre-commercial.fr/bay2/news-centre/pokemon-debarque-dans-votre-centre/
+URL:https://www.centre-commercial.fr/bay2/news-centre/pokemon-debarque-dans-votre-centre/
+CATEGORIES:Pokémon,Événement,Île-de-France,Bay 2,30e anniversaire
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Grand quiz Pokémon à Bay 2 demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
