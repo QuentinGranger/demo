@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "tcg-release-30e-anniversaire-fr-20260916@pokemon-fr",
+  "event": "BEGIN:VEVENT\r\nUID:tcg-release-30e-anniversaire-fr-20260916@pokemon-fr\r\nDTSTAMP:20260914T110906Z\r\nDTSTART;VALUE=DATE:20260916\r\nDTEND;VALUE=DATE:20260917\r\nSUMMARY:JCC Pokémon — sortie 30ᵉ Anniversaire (France)\r\nDESCRIPTION:Sortie officielle en France de l’extension spéciale 30ᵉ Anniversaire du JCC Pokémon. Chaque booster contient cinq cartes brillantes, dont une des 30 cartes Pikachu aux illustrations uniques, ainsi qu’une carte Énergie de base brillante. Source officielle Pokémon France : https://www.pokemon.com/fr/actualites/jcc-pokemon-produits-30-anniversaire\r\nCATEGORIES:Pokémon,JCC,Sortie,France\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:tcg_release:pokemon-30e-anniversaire:fr\r\nEND:VEVENT"
+}
