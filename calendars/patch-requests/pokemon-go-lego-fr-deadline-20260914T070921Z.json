@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-lego-2026-deadline-fr@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-lego-2026-deadline-fr@quentingranger-demo\r\nDTSTAMP:20260914T070921Z\r\nDTSTART;TZID=Europe/Paris:20260930T233000\r\nDTEND;TZID=Europe/Paris:20261001T000000\r\nSUMMARY:Pokémon GO × LEGO — fin de campagne France\r\nDESCRIPTION:Deadline officielle France : terminer et réclamer les récompenses des Études ponctuelles LEGO Pokémon GO avant le 30 septembre 2026 à 23:59 heure locale. La Stamp Rally et les activités en LEGO Stores participants se terminent également le 30 septembre. Source officielle : https://pokemongo.com/news/lego-pokemon-go-2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:pokemon_go:lego_2026_deadline:fr\r\nX-POKEMON-ACTIONABILITY:85\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
