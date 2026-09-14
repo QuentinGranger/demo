@@ -2619,4 +2619,17 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon TCG Live — 30ᵉ Anniversaire disponible dans 1 h.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-live-worlds-2026-twitch-drop-deadline@pokemon-france
+DTSTAMP:20260914T101356Z
+DTSTART;TZID=Europe/Paris:20260925T174500
+DTEND;TZID=Europe/Paris:20260925T180000
+SUMMARY:Deadline — Codes JCC Pokémon Live des Mondiaux 2026
+DESCRIPTION:Échanger avant l’expiration les codes JCC Pokémon Live reçus via les Drops Twitch des Championnats du Monde Pokémon 2026. Pokémon France fixe l’expiration au 25 septembre 2026 à 09:00 PDT, soit 18:00 à Paris (CEST). Concerne uniquement les codes déjà obtenus via les Drops correspondants. Source officielle: https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:distribution_deadline:tcg-live-worlds-2026-twitch-drops:redeem
+X-POKEMON-ACTIONABILITY:82
+END:VEVENT
 END:VCALENDAR
