@@ -2550,4 +2550,18 @@ ACTION:DISPLAY
 DESCRIPTION:Demain : sortie JCC Pokémon 30ᵉ Anniversaire
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-lego-2026-deadline-fr@quentingranger-demo
+DTSTAMP:20260914T070921Z
+DTSTART;TZID=Europe/Paris:20260930T233000
+DTEND;TZID=Europe/Paris:20261001T000000
+SUMMARY:Pokémon GO × LEGO — fin de campagne France
+DESCRIPTION:Deadline officielle France : terminer et réclamer les récompenses des Études ponctuelles LEGO Pokémon GO avant le 30 septembre 2026 à 23:59 heure locale. La Stamp Rally et les activités en LEGO Stores participants se terminent également le 30 septembre. Source officielle : https://pokemongo.com/news/lego-pokemon-go-2026
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:pokemon_go:lego_2026_deadline:fr
+X-POKEMON-ACTIONABILITY:85
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
