@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-city-safari-marseille-2026@pokemon-france-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-city-safari-marseille-2026@pokemon-france-watch\r\nDTSTAMP:20260914T192624Z\r\nDTSTART;TZID=Europe/Paris:20260926T100000\r\nDTEND;TZID=Europe/Paris:20260927T180000\r\nSUMMARY:Pokémon GO City Safari — Marseille\r\nLOCATION:Marseille (point officiel : Escale Borély — sous la Grande Roue, 148 Av. Pierre Mendès France, 13008 Marseille)\r\nDESCRIPTION:Pokémon GO City Safari Marseille, les 26 et 27 septembre 2026 de 10:00 à 18:00 heure locale. Jeu dans toute la ville pour les détenteurs de billet. Point officiel Pokémon GO à Escale Borély, sous la Grande Roue, avec goodies, photos et activités. La communauté de Marseille prévoit aussi plusieurs rendez-vous découverte et un meetup Modules Leurre Doré en bord de mer le samedi soir. Source officielle : https://pokemongo.com/en/news/city-safaris-europe-2026\r\nURL:https://pokemongo.com/en/news/city-safaris-europe-2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-go-city-safari-marseille-2026:fr\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
