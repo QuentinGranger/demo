@@ -2644,4 +2644,31 @@ X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-USER-EFFECT:tcg_release:pokemon-30e-anniversaire:fr
 END:VEVENT
+BEGIN:VEVENT
+UID:bay2-pokemon30-20260916@openai
+DTSTAMP:20260914T145144Z
+LAST-MODIFIED:20260914T145144Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-REMINDER-PROFILE:PARIS_LIMITED_EVENT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:78
+X-POKEMON-USER-EFFECT-ID:physical_event:bay2-pokemon30-trade-challenge-20260916:idf
+DTSTART;TZID=Europe/Paris:20260916T110000
+DTEND;TZID=Europe/Paris:20260916T190000
+SUMMARY:⭐ 🎪 Bay 2 — Pokémon 30 ans : bourse officielle + défis JCC
+LOCATION:Centre commercial Bay 2\, Rue du Général de Gaulle\, 77090 Collégien\, France
+DESCRIPTION:Animations Pokémon 30 ans au centre Bay 2. Bourse d’échange officielle et défis Pokémon avec 2 000 packs loisirs du JCC Pokémon annoncés à gagner. Sessions 11h–13h et 14h30–19h.\nSource : https://www.centre-commercial.fr/bay2/news-centre/pokemon-debarque-dans-votre-centre/
+URL:https://www.centre-commercial.fr/bay2/news-centre/pokemon-debarque-dans-votre-centre/
+CATEGORIES:Pokémon,JCC Pokémon,Événement,Île-de-France,Bay 2,30e anniversaire
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon 30 ans à Bay 2 demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
