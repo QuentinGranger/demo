@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-tcgl-30th-celebration-20260915T1900@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcgl-30th-celebration-20260915T1900@openai\r\nDTSTAMP:20260914T083706Z\r\nLAST-MODIFIED:20260914T083706Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nPRIORITY:4\r\nX-POKEMON-PRIORITY:IMPORTANT\r\nX-POKEMON-ACTION:PLAY\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-CONFIDENCE:100\r\nX-POKEMON-ACTIONABILITY:82\r\nX-POKEMON-USER-EFFECT:tcgl_release:30th-celebration:fr\r\nDTSTART;TZID=Europe/Paris:20260915T190000\r\nDTEND;TZID=Europe/Paris:20260915T200000\r\nSUMMARY:🃏 Pokémon TCG Live — 30ᵉ Anniversaire disponible\r\nLOCATION:Pokémon TCG Live\r\nDESCRIPTION:L’extension JCC Pokémon 30ᵉ Anniversaire devient jouable dans Pokémon TCG Live le 15 septembre 2026 à 19 h CEST, avant la sortie physique du 16 septembre. Source officielle : https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon\r\nURL:https://www.pokemon.com/fr/actualites/preparez-vous-pour-lextension-30-anniversaire-du-jcc-pokemon\r\nCATEGORIES:POKEMON,TCG-LIVE,30E-ANNIVERSAIRE,LANCEMENT\r\nBEGIN:VALARM\r\nTRIGGER:-PT1H\r\nACTION:DISPLAY\r\nDESCRIPTION:Pokémon TCG Live — 30ᵉ Anniversaire disponible dans 1 h.\r\nEND:VALARM\r\nEND:VEVENT"
+}
