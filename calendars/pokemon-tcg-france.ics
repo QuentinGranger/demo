@@ -2725,4 +2725,20 @@ X-POKEMON-USER-EFFECT:tcg_release:pokemon-tcg-30e-anniversaire:fr
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-choose-your-path-twilight-trails-20260923-fr@pokemon-france
+DTSTAMP:20260915T031900Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260929
+SUMMARY:Pokémon GO — Étude ponctuelle Choisis ton parcours : Sentiers crépusculaires
+DESCRIPTION:Étude ponctuelle Pokémon GO du 23 septembre 2026 à 10 h au 28 septembre 2026 à 20 h, heures locales. Choisissez votre parcours et terminez l’Étude avant sa fermeture. Source officielle Pokémon GO France.
+X-POKEMON-USER-EFFECT:go_timed_research:choose-your-path-twilight-trails:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-09-23T10:00:00+02:00
+X-POKEMON-EXACT-END:2026-09-28T20:00:00+02:00
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
