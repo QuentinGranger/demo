@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-city-safari-marseille-20260926@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-city-safari-marseille-20260926@pokemon-france\r\nDTSTAMP:20260915T072138Z\r\nDTSTART;TZID=Europe/Paris:20260926T100000\r\nDTEND;TZID=Europe/Paris:20260926T180000\r\nRRULE:FREQ=DAILY;COUNT=2\r\nSUMMARY:Pokémon GO City Safari — Marseille\r\nLOCATION:Marseille\, France\r\nDESCRIPTION:Pokémon GO City Safari à Marseille les 26 et 27 septembre 2026 de 10 h à 18 h (heure locale). Ticket d’événement live : 10 € taxes et frais applicables compris. Source officielle Pokémon GO.\r\nURL:https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-go-city-safari:marseille:2026-09-26-27\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
