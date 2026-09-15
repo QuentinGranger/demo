@@ -2750,4 +2750,25 @@ X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:physical-event-pokemon30-pokeshow-fnac-beaune-20260919@openai
+DTSTAMP:20260915T234400Z
+SEQUENCE:0
+STATUS:CONFIRMED
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:🎉 Pokémon 30 ans — Pokeshow à la Fnac Beaune
+LOCATION:Fnac Beaune, Beaune, France
+DESCRIPTION:Événement gratuit Pokémon 30 ans en présence du Pokeshow. Au programme annoncé par la Fnac : mise en vente de la collection 30 ans, opening en direct, lots à gagner, vente aux enchères et tirage au sort pour une ETB 30 ans. Accès libre dans la limite des places disponibles.\n\nUSER_EFFECT: physical_event:pokemon-30ans-pokeshow:fnac-beaune:20260919\nDATE_PRECISION: EXACT_DATETIME\nTERRITORY: FRANCE_CONFIRMED\nSOURCE: https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/
+URL:https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/
+X-POKEMON-USER-EFFECT:physical_event:pokemon-30ans-pokeshow:fnac-beaune:20260919
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+CATEGORIES:Pokémon,Événement physique,30e Anniversaire,Fnac
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon 30 ans à la Fnac Beaune demain de 14 h à 17 h
+END:VALARM
+END:VEVENT
 END:VCALENDAR
