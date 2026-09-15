@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-sleep-mewtwo-event-20260914@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-sleep-mewtwo-event-20260914@pokemon-france\r\nDTSTAMP:20260915T011133Z\r\nDTSTART;TZID=Europe/Paris:20260914T040000\r\nDTEND;TZID=Europe/Paris:20260928T035900\r\nSUMMARY:Pokémon Sleep — Recherches en terres inconnues : Où est Mewtwo ?\r\nDESCRIPTION:Évènement Pokémon Sleep officiel de deux semaines. Semaine 1 : 14 septembre 04:00 → 21 septembre 03:59. Semaine 2 : 21 septembre 04:00 → 28 septembre 03:59. Mewtwo apparaît à partir du 14 septembre à 15:00. Échange de l’évènement et récupération des récompenses disponibles jusqu’au 1er octobre 2026 à 03:59. Zones : Île Vertepousse et Île Vertepousse (expert). Source : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/\r\nURL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:live_service_event:pokemon-sleep-mewtwo:2026-09\r\nX-POKEMON-ACTIONABILITY:HIGH_ACTION\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
