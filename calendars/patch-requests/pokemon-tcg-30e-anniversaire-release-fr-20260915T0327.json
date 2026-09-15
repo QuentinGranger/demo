@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-tcg-30e-anniversaire-release-fr-20260916@zero-miss",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcg-30e-anniversaire-release-fr-20260916@zero-miss\r\nDTSTAMP:20260915T012737Z\r\nDTSTART;VALUE=DATE:20260916\r\nDTEND;VALUE=DATE:20260917\r\nSUMMARY:JCC Pokémon — sortie 30ᵉ Anniversaire en France\r\nDESCRIPTION:Sortie de l’extension 30ᵉ Anniversaire du JCC Pokémon le 16 septembre 2026. Source officielle Pokémon France.\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:tcg_release:pokemon-tcg-30e-anniversaire:fr\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
