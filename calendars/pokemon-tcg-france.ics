@@ -2698,4 +2698,18 @@ ACTION:DISPLAY
 DESCRIPTION:Grand quiz Pokémon à Bay 2 demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-sleep-mewtwo-event-20260914@pokemon-france
+DTSTAMP:20260915T011133Z
+DTSTART;TZID=Europe/Paris:20260914T040000
+DTEND;TZID=Europe/Paris:20260928T035900
+SUMMARY:Pokémon Sleep — Recherches en terres inconnues : Où est Mewtwo ?
+DESCRIPTION:Évènement Pokémon Sleep officiel de deux semaines. Semaine 1 : 14 septembre 04:00 → 21 septembre 03:59. Semaine 2 : 21 septembre 04:00 → 28 septembre 03:59. Mewtwo apparaît à partir du 14 septembre à 15:00. Échange de l’évènement et récupération des récompenses disponibles jusqu’au 1er octobre 2026 à 03:59. Zones : Île Vertepousse et Île Vertepousse (expert). Source : https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+URL:https://www.pokemonsleep.net/fr/news/343239383235333132383433333636343032/
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:live_service_event:pokemon-sleep-mewtwo:2026-09
+X-POKEMON-ACTIONABILITY:HIGH_ACTION
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
