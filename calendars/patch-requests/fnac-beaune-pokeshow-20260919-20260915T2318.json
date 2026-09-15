@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "physical-event-pokemon-30-fnac-beaune-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:physical-event-pokemon-30-fnac-beaune-20260919@pokemon-france\r\nDTSTAMP:20260915T211839Z\r\nDTSTART;TZID=Europe/Paris:20260919T140000\r\nDTEND;TZID=Europe/Paris:20260919T170000\r\nSUMMARY:Pokémon 30 ans — Pokeshow à la Fnac Beaune\r\nLOCATION:Fnac Beaune, Beaune, France\r\nDESCRIPTION:Événement gratuit à la Fnac Beaune avec Pokeshow : mise en vente de la collection Pokémon 30 ans, lots, opening en direct, vente aux enchères et tirage au sort pour gagner une ETB 30 ans. Accès libre dans la limite des places disponibles. Source officielle Fnac.\r\nURL:https://leclaireur.fnac.com/evenement/cp72088-evenement-pokemon-30-ans-en-presence-du-pokeshow-a-la-fnac-beaune/\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-30-pokeshow:fnac-beaune:2026-09-19\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
