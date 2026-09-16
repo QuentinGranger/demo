@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-kingdultes-nantes-animations-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-kingdultes-nantes-animations-20260919@pokemon-france\r\nDTSTAMP:20260916T153500Z\r\nDTSTART;TZID=Europe/Paris:20260919T100000\r\nDTEND;TZID=Europe/Paris:20260919T190000\r\nSUMMARY:Pokémon 30 ans — animations au KingDultes Nantes\r\nLOCATION:KingDultes - Le Repaire des TCG\, 1 Rue Guépin\, 44000 Nantes\, France\r\nDESCRIPTION:Animations officielles annoncées pour le samedi 19 septembre au nouvel espace Pokémon de KingDultes Nantes : rencontre/photo avec Pikachu\, espace échanges et parties de JCC Pokémon\, et cadeaux pour certains visiteurs. La plage 10:00–19:00 correspond aux horaires d'ouverture du magasin ; les horaires précis des animations n'ont pas été publiés. Source officielle Pokémon France : https://www.pokemon.com/fr/news/ouverture-dun-espace-pokemon-au-magasin-kingdultes-de-nantes\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-30ans:kingdultes-nantes-animations:2026-09-19\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-SOURCE-TIER:A1\r\nX-POKEMON-ACTIONABILITY:75\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
