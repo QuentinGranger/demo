@@ -2418,18 +2418,16 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-city-safari-marseille-2026@pokemon-france
-DTSTAMP:20260912T104000Z
+SEQUENCE:1
+DTSTAMP:20260916T115051Z
 DTSTART;TZID=Europe/Paris:20260926T100000
 DTEND;TZID=Europe/Paris:20260927T180000
 SUMMARY:Pokémon GO City Safari — Marseille
 LOCATION:Marseille, France
-DESCRIPTION:Pokémon GO City Safari à Marseille les 26 et 27 septembre 2026, de 10 h à 18 h CEST. Ticket officiel à 10 € pour une journée, taxes et frais applicables compris. Achat via la page officielle Pokémon GO. Source: https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
-URL:https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
+DESCRIPTION:Pokémon GO City Safari à Marseille les 26 et 27 septembre 2026 de 10 h à 18 h (heure locale). Événement avec ticket ; stands Pokémon GO officiels, activités et opportunités spéciales en ville. Source officielle : https://pokemongo.com/fr/news/city-safaris-europe-2026
+X-POKEMON-USER-EFFECT:physical_event:pokemon-go-city-safari-marseille-2026:fr
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
-X-POKEMON-USER-EFFECT:physical_event:pokemon-go-city-safari-marseille-2026:fr
-X-POKEMON-ACTIONABILITY:HIGH_ACTION
-STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-sv-skeledirge-mightiest-20260911@pokemon-france
