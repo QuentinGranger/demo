@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-horizons-reward-deadline-2026-fr@pokemon-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-horizons-reward-deadline-2026-fr@pokemon-watch\r\nDTSTAMP:20260917T114119Z\r\nDTSTART;TZID=Europe/Paris:20260924T193000\r\nDTEND;TZID=Europe/Paris:20260924T200000\r\nSUMMARY:Pokémon GO — récupérer les récompenses du Passe GO Horizons\r\nDESCRIPTION:Les récompenses du Passe GO Célébration pour La série : Pokémon\, les horizons expirent le 24 septembre 2026 à 20:00 heure locale. Récupérer les récompenses avant l'échéance. Source officielle : https://pokemongo.com/fr/news/pokemon-horizons-celebration-event-2026\r\nX-POKEMON-USER-EFFECT:pokemon_go_deadline:horizons-celebration-2026-pass-rewards:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nEND:VEVENT"
+}
