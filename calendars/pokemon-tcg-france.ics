@@ -2752,4 +2752,16 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon 30 ans à la Fnac Beaune demain de 14 h à 17 h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:physical-event-pokemon-kingdultes-nantes-20260919@pokemon-france
+DTSTAMP:20260917T053204Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:Pokémon — animations au nouvel espace King’Dultes Nantes
+LOCATION:King’Dultes Nantes\, 1 rue Guépin\, 44000 Nantes\, France
+DESCRIPTION:Animations Pokémon annoncées pour le samedi 19 septembre 2026 dans le nouvel espace Pokémon de King’Dultes Nantes : photos avec Pikachu\, espace d’échange et de jeu du JCC Pokémon et possibilité de cadeaux. Espace accessible librement. Aucun horaire spécifique des animations n’est confirmé par la source Pokémon ; le magasin est annoncé ouvert 10h–19h par King Jouet.\nUSER_EFFECT: physical_event:pokemon-kingdultes-nantes-animations-20260919:fr\nTERRITORY: FRANCE_CONFIRMED\nDATE_PRECISION: EXACT_DATE
+X-POKEMON-USER-EFFECT:physical_event:pokemon-kingdultes-nantes-animations-20260919:fr
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+END:VEVENT
 END:VCALENDAR
