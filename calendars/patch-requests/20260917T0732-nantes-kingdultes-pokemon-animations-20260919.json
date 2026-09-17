@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "physical-event-pokemon-kingdultes-nantes-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:physical-event-pokemon-kingdultes-nantes-20260919@pokemon-france\r\nDTSTAMP:20260917T053204Z\r\nDTSTART;VALUE=DATE:20260919\r\nDTEND;VALUE=DATE:20260920\r\nSUMMARY:Pokémon — animations au nouvel espace King’Dultes Nantes\r\nLOCATION:King’Dultes Nantes\\, 1 rue Guépin\\, 44000 Nantes\\, France\r\nDESCRIPTION:Animations Pokémon annoncées pour le samedi 19 septembre 2026 dans le nouvel espace Pokémon de King’Dultes Nantes : photos avec Pikachu\\, espace d’échange et de jeu du JCC Pokémon et possibilité de cadeaux. Espace accessible librement. Aucun horaire spécifique des animations n’est confirmé par la source Pokémon ; le magasin est annoncé ouvert 10h–19h par King Jouet.\\nUSER_EFFECT: physical_event:pokemon-kingdultes-nantes-animations-20260919:fr\\nTERRITORY: FRANCE_CONFIRMED\\nDATE_PRECISION: EXACT_DATE\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-kingdultes-nantes-animations-20260919:fr\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nEND:VEVENT"
+}
