@@ -2778,4 +2778,17 @@ X-POKEMON-USER-EFFECT:go_raid_day:staraptor-super-mega-raid-day:fr
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokeween-2026-play-pokemon-fr@pokemon-france
+DTSTAMP:20260917T204000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261101
+SUMMARY:Pokéween 2026 — événements Play! Pokémon en France
+DESCRIPTION:Du 1er au 31 octobre 2026, les Play! Pokémon Stores peuvent proposer des activités Pokéween (jeu libre, échanges, tournois et autres activités locales) avec des récompenses saisonnières, dont des cartes promo Pokéween et une planche d’autocollants. Les horaires et modalités varient selon chaque boutique : vérifier le Localisateur Play! et la boutique avant déplacement. Source officielle : https://www.pokemon.com/fr/actualites/fetez-pokeween-avec-des-evenements-play-pokemon
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+X-POKEMON-USER-EFFECT:physical_event:pokeween-2026:fr
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+END:VEVENT
 END:VCALENDAR
