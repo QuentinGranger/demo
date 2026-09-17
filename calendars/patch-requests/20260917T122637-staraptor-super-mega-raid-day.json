@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-super-mega-raid-day-staraptor-20260919-fr@pokemon-france-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-super-mega-raid-day-staraptor-20260919-fr@pokemon-france-watch\r\nDTSTAMP:20260917T102637Z\r\nDTSTART;TZID=Europe/Paris:20260919T140000\r\nDTEND;TZID=Europe/Paris:20260919T170000\r\nSUMMARY:Pokémon GO — Journée de Super Méga-Raids Étouraptor\r\nDESCRIPTION:Samedi 19 septembre 2026 de 14 h à 17 h (heure locale). Première apparition de Méga-Étouraptor via les Super Méga-Raids. Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes. Ticket optionnel disponible jusqu’à 17 h. Source officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026\r\nURL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:go_raid_day:staraptor-super-mega-raid-day:fr\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
