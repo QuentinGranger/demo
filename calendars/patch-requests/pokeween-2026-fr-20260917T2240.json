@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokeween-2026-play-pokemon-fr@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokeween-2026-play-pokemon-fr@pokemon-france\r\nDTSTAMP:20260917T204000Z\r\nDTSTART;VALUE=DATE:20261001\r\nDTEND;VALUE=DATE:20261101\r\nSUMMARY:Pokéween 2026 — événements Play! Pokémon en France\r\nDESCRIPTION:Du 1er au 31 octobre 2026, les Play! Pokémon Stores peuvent proposer des activités Pokéween (jeu libre, échanges, tournois et autres activités locales) avec des récompenses saisonnières, dont des cartes promo Pokéween et une planche d’autocollants. Les horaires et modalités varient selon chaque boutique : vérifier le Localisateur Play! et la boutique avant déplacement. Source officielle : https://www.pokemon.com/fr/actualites/fetez-pokeween-avec-des-evenements-play-pokemon\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nX-POKEMON-USER-EFFECT:physical_event:pokeween-2026:fr\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nEND:VEVENT"
+}
