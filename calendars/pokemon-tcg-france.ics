@@ -2764,4 +2764,18 @@ X-POKEMON-USER-EFFECT:physical_event:pokemon-kingdultes-nantes-animations-202609
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-DATE-PRECISION:EXACT_DATE
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-super-mega-raid-day-staraptor-20260919-fr@pokemon-france-watch
+DTSTAMP:20260917T102637Z
+DTSTART;TZID=Europe/Paris:20260919T140000
+DTEND;TZID=Europe/Paris:20260919T170000
+SUMMARY:Pokémon GO — Journée de Super Méga-Raids Étouraptor
+DESCRIPTION:Samedi 19 septembre 2026 de 14 h à 17 h (heure locale). Première apparition de Méga-Étouraptor via les Super Méga-Raids. Jusqu’à 6 passes de Raid supplémentaires gratuits via les PhotoDisques des Arènes. Ticket optionnel disponible jusqu’à 17 h. Source officielle : https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
+URL:https://pokemongo.com/fr/news/staraptor-super-mega-raid-day-2026
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:go_raid_day:staraptor-super-mega-raid-day:fr
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
