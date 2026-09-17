@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "fashion-release-pokemon-adidas-originals-fr-20260922@openai",
+  "event": "BEGIN:VEVENT\r\nUID:fashion-release-pokemon-adidas-originals-fr-20260922@openai\r\nDTSTAMP:20260917T041033Z\r\nDTSTART;VALUE=DATE:20260922\r\nDTEND;VALUE=DATE:20260923\r\nSUMMARY:Pokémon x adidas Originals — sortie France\r\nDESCRIPTION:Sortie France annoncée pour la collection Pokémon x adidas Originals célébrant les 30 ans. Vérifier adidas France et les retailers français le jour du lancement avant achat. Preuve France actuellement issue d'une publication française spécialisée ; horaire France officiel non confirmé.\r\nX-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-originals-30th-collection:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
