@@ -2827,4 +2827,16 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon 30 ans à la Fnac Beaune demain à 14 h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fashion-release-pokemon-adidas-originals-30th-fr-20260922@pokemon-tcg-france
+DTSTAMP:20260918T203356Z
+DTSTART;TZID=Europe/Paris:20260922T100000
+DTEND;TZID=Europe/Paris:20260922T103000
+SUMMARY:Pokémon x adidas Originals 30e anniversaire — drop France
+DESCRIPTION:Sortie France suivie pour la collection Pokémon x adidas Originals 30e anniversaire. Le Site de la Sneaker indique notamment la Handball Spezial Mewtwo SKU KI8213 sur adidas.fr le 22/09/2026 à 10:00 (110 €). Vérifier adidas.fr au lancement; assortiment et disponibilités peuvent varier selon les modèles.
+X-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-originals-30th-anniversary:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
