@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france\r\nDTSTAMP:20260918T221438Z\r\nDTSTART;VALUE=DATE:20260919\r\nDTEND;VALUE=DATE:20260920\r\nSUMMARY:Pokémon — rencontre Pikachu chez KingDultes Nantes\r\nLOCATION:KingDultes\, 1 Rue Guépin\, 44000 Nantes\, France\r\nDESCRIPTION:Rencontre avec Pikachu annoncée officiellement pour le samedi 19 septembre 2026 dans l’espace Pokémon de KingDultes Nantes. Horaire précis non communiqué par la source officielle. Source: https://www.pokemon.com/fr/actualites/ouverture-dun-espace-pokemon-au-magasin-kingdultes-de-nantes\r\nURL:https://www.pokemon.com/fr/actualites/ouverture-dun-espace-pokemon-au-magasin-kingdultes-de-nantes\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:physical_event:kingdultes-nantes-pikachu-meet:2026-09-19\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
