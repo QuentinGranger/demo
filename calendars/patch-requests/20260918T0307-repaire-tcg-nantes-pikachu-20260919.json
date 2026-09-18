@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-repaire-tcg-nantes-pikachu-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-repaire-tcg-nantes-pikachu-20260919@pokemon-france\r\nDTSTAMP:20260918T010723Z\r\nDTSTART;VALUE=DATE:20260919\r\nDTEND;VALUE=DATE:20260920\r\nSUMMARY:Pokémon — Pikachu au Repaire des TCG à Nantes\r\nLOCATION:Le Repaire des TCG / KingDultes, Nantes, France\r\nDESCRIPTION:Le Repaire des TCG de King Jouet à Nantes célèbre son ouverture au public avec la présence de la mascotte officielle Pikachu le 19 septembre 2026. L'espace comprend notamment 80 m² consacrés à Pokémon. Horaire précis de présence non confirmé dans la source. Source: Points de Vente, 17 septembre 2026.\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-repaire-tcg-nantes:pikachu:2026-09-19\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-ACTIONABILITY:75\r\nEND:VEVENT"
+}
