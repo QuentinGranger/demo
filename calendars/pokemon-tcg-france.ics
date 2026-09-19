@@ -2928,4 +2928,16 @@ X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:fashion-release-pokemon-adidas-superstar-vintage-glurak-fr@pokemon-tcg-france
+DTSTAMP:20260919T095622Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:adidas x Pokémon Superstar Vintage Glurak — sortie France
+DESCRIPTION:Sortie annoncée le 22 septembre 2026. Listing France chez 43einhalb à 179,95 EUR avec livraison en France et tailles EU 41 1/3 à 46 indiquées en alerte avant ouverture. État observé: COMING_SOON. Ne pas considérer comme OPEN avant vérification commerciale directe.
+X-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-superstar-vintage-glurak:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-STATE:COMING_SOON
+END:VEVENT
 END:VCALENDAR
