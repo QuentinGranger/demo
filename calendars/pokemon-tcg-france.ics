@@ -2940,4 +2940,27 @@ X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-STATE:COMING_SOON
 END:VEVENT
+BEGIN:VEVENT
+UID:physical-event-esa-pokemon-open-days-paris-20260919@openai
+DTSTAMP:20260919T124229Z
+LAST-MODIFIED:20260919T124229Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-USER-EFFECT:physical_event:esa-pokemon-open-days-paris:20260919-20
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-SOURCE-TIER:A2
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260921
+SUMMARY:🚀 Pokémon × ESA — exposition aux Open Days de Paris
+LOCATION:ESA Headquarters, Paris, France
+DESCRIPTION:L’ESA et The Pokémon Company International confirment le lancement de leur nouvelle exposition Pokémon × ESA aux Open Days du siège de l’ESA à Paris les 19 et 20 septembre 2026. L’exposition mêle contenus scientifiques spatiaux et univers Pokémon. Source officielle ESA : https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
+
+L’activation Pokémon GO liée à la collaboration commence séparément le 4 octobre 2026.
+URL:https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
+CATEGORIES:Pokémon,ESA,Paris,Exposition,Événement physique
+END:VEVENT
 END:VCALENDAR
