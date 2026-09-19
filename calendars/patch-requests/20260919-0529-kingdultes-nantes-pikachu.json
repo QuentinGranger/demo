@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "physical-event-kingdultes-nantes-pikachu-20260919@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:physical-event-kingdultes-nantes-pikachu-20260919@pokemon-france\r\nDTSTAMP:20260919T032941Z\r\nDTSTART;VALUE=DATE:20260919\r\nDTEND;VALUE=DATE:20260920\r\nSUMMARY:Pokémon chez KingDultes Nantes — Pikachu + JCC\r\nLOCATION:KingDultes\, 1 Rue Guépin\, 44000 Nantes\, France\r\nDESCRIPTION:Événement officiel Pokémon chez KingDultes Nantes le samedi 19 septembre 2026 : rencontre/photo avec Pikachu et espace d’échange et de jeu du JCC Pokémon. L’espace Pokémon est accessible librement. Source officielle : https://www.pokemon.com/fr/news/ouverture-dun-espace-pokemon-au-magasin-kingdultes-de-nantes\r\nX-POKEMON-USER-EFFECT:physical_event:kingdultes-nantes-pikachu-jcc:2026-09-19\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
