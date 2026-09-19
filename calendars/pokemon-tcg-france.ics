@@ -2888,4 +2888,31 @@ DESCRIPTION:Début parisien de l’exposition officielle ESA x Pokémon pendant 
 URL:https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
 CATEGORIES:POKEMON,ESA,EVENEMENT,PARIS,FRANCE
 END:VEVENT
+BEGIN:VEVENT
+UID:esa-pokemon-paris-open-day-20260920@openai
+DTSTAMP:20260919T064500Z
+LAST-MODIFIED:20260919T064500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-USER-EFFECT:physical_event:esa-pokemon-open-day-paris:2026-09-20
+DTSTART;TZID=Europe/Paris:20260920T093000
+DTEND;TZID=Europe/Paris:20260920T163000
+SUMMARY:🚀 ESA x Pokémon — exposition au siège de l’ESA Paris
+LOCATION:ESA Headquarters, Paris 15e, France
+DESCRIPTION:Deuxième journée parisienne de l’exposition officielle ESA x Pokémon pendant les Journées portes ouvertes de l’ESA. Portes ouvertes de 09:30 à 16:30. Source officielle ESA : https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
+URL:https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
+CATEGORIES:POKEMON,ESA,EVENEMENT,PARIS,FRANCE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:ESA x Pokémon à Paris demain.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
