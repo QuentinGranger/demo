@@ -2980,4 +2980,18 @@ X-POKEMON-EXACT-END:2027-04-30
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-esa-hq-paris-20260920@pokemon-france
+DTSTAMP:20260919T221549Z
+DTSTART;TZID=Europe/Paris:20260920T100000
+DTEND;TZID=Europe/Paris:20260920T160000
+SUMMARY:Pokémon × ESA — exposition au siège de l’ESA à Paris
+LOCATION:ESA HQ Mario Nikis\, 8-10 rue Mario Nikis\, 75015 Paris\, France
+DESCRIPTION:L’exposition officielle Pokémon × ESA est présentée au siège parisien de l’ESA pendant les Journées portes ouvertes. Dimanche 20 septembre : 10 h–16 h. L’accès aux espaces libres des portes ouvertes ne nécessite pas d’inscription ; conférences et simulations sont sur inscription. Source : ESA, annonce officielle du 19 septembre 2026.
+URL:https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
+X-POKEMON-USER-EFFECT:physical_event:pokemon-esa-exhibition:esa-hq-paris:2026-09-20
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
