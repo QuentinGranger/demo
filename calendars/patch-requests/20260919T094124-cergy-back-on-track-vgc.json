@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-vgc-cergy-back-on-track-20260920@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-vgc-cergy-back-on-track-20260920@pokemon-france\r\nDTSTAMP:20260919T074124Z\r\nDTSTART;TZID=Europe/Paris:20260920T110000\r\nDTEND;TZID=Europe/Paris:20260920T190000\r\nSUMMARY:Pokémon Champions — Défi de Ligue VG « Back On Track » (Cergy)\r\nLOCATION:Koezio Cergy\\, 11 Avenue de la Plaine des Sports\\, 95800 Cergy\\, France\r\nDESCRIPTION:Défi de Ligue VG Pokémon Champions organisé par Pokémon VGC France. Ouverture 11h00\\; ronde 1 à 11h15. Masters 10 €\\; Juniors/Seniors 5 €. Billetterie HelloAsso avec places disponibles lors de la vérification du 19/09/2026 (10 Masters\\, 6 Juniors/Seniors). Règlement M-C.\r\nX-POKEMON-USER-EFFECT:physical_event:play-pokemon-league-challenge:cergy-back-on-track:2026-09-20\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
