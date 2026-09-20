@@ -3026,4 +3026,16 @@ X-POKEMON-EXACT-START:2026-10-04
 X-POKEMON-EXACT-END:2027-04-30
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-horizons-0004pokemongo-deadline-fr@pokemon-tcg-france
+DTSTAMP:20260920T180618Z
+DTSTART;TZID=Europe/Paris:20260922T200000
+DTEND;TZID=Europe/Paris:20260922T201500
+SUMMARY:Pokémon GO — fin Recherche Pokémon Horizons (code 0004POKEMONGO)
+DESCRIPTION:Échanger le code public 0004POKEMONGO puis terminer la Recherche ponctuelle et récupérer toutes les récompenses avant 20:00 heure locale. Récompense vedette : rencontre avec Salamèche portant les lunettes de Friede. Source officielle Pokémon GO.
+X-POKEMON-USER-EFFECT:code_deadline:pokemon-go-horizons-0004pokemongo:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
