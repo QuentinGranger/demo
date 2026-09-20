@@ -2994,4 +2994,18 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-DATE-PRECISION:EXACT_DATETIME
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-esa-pokemon-paris-20261004@quentingranger-demo
+DTSTAMP:20260920T012000Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261011
+SUMMARY:Pokémon GO × ESA — gameplay spécial à Paris
+DESCRIPTION:Du 4 au 10 octobre 2026, les sites ESA en Europe proposent le gameplay ESA × Pokémon GO : Raids 1 étoile avec Pikachu Astronaute, Étude ponctuelle, rencontres spéciales, Études de terrain et apparitions accrues. Source officielle ESA du 19 septembre 2026.
+LOCATION:ESA, 8-10 rue Mario Nikis, 75015 Paris, France
+X-POKEMON-USER-EFFECT:pokemon_go_esa_activation:paris-fr:2026-10-04
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
