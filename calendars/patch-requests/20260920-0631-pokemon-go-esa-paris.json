@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-esa-paris-20261004@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-esa-paris-20261004@pokemon-france\r\nDTSTAMP:20260920T043115Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20261011\r\nSUMMARY:Pokémon GO × ESA — activités spéciales à Paris\r\nLOCATION:Siège de l’ESA, Paris, France\r\nDESCRIPTION:Du 4 au 10 octobre 2026, les activités Pokémon GO × ESA sont disponibles près du siège de l’ESA à Paris : raids 1★ Pikachu astronaute, Étude ponctuelle, Étude de terrain et apparitions sauvages thématiques. Les Fonds de lieu ne sont pas disponibles sur les sites ESA. Source officielle : https://pokemongo.com/fr/news/european-space-agency-event\r\nX-POKEMON-USER-EFFECT:pokemon_go_esa:paris:2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-04\r\nX-POKEMON-EXACT-END:2026-10-10\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
