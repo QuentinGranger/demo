@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-horizons-0004pokemongo-deadline-fr@pokemon-tcg-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-horizons-0004pokemongo-deadline-fr@pokemon-tcg-france\r\nDTSTAMP:20260920T180618Z\r\nDTSTART;TZID=Europe/Paris:20260922T200000\r\nDTEND;TZID=Europe/Paris:20260922T201500\r\nSUMMARY:Pokémon GO — fin Recherche Pokémon Horizons (code 0004POKEMONGO)\r\nDESCRIPTION:Échanger le code public 0004POKEMONGO puis terminer la Recherche ponctuelle et récupérer toutes les récompenses avant 20:00 heure locale. Récompense vedette : rencontre avec Salamèche portant les lunettes de Friede. Source officielle Pokémon GO.\r\nX-POKEMON-USER-EFFECT:code_deadline:pokemon-go-horizons-0004pokemongo:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
