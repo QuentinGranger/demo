@@ -3057,23 +3057,4 @@ X-POKEMON-EXACT-END:2027-04-30
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
-BEGIN:VEVENT
-UID:pokemon-go-esa-space-museums-fr-20261004@pokemon-france
-DTSTAMP:20260921T031653Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20270501
-SUMMARY:Pokémon GO × ESA — Pikachu astronaute (France)
-DESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, les visiteurs des musées de science et d’espace participants peuvent accéder à des activités Pokémon GO spéciales, dont Pikachu astronaute, Étude ponctuelle, raids 1 étoile et rencontres. En France, la Cité de l’espace à Toulouse figure parmi les lieux annoncés par l’ESA. Du 4 au 10 octobre, du gameplay thématique supplémentaire est prévu dans les lieux participants. Horaires quotidiens non précisés par les sources officielles au 21 septembre 2026. Source Pokémon GO: https://pokemongo.com/fr/news/european-space-agency-event ; source ESA: https://www.esa.int/About_Us/Branding_and_Partnerships/ESA_and_The_Pokemon_Company_International_reveal_Europe-wide_exhibition_and_astronaut_Pikachu_experience
-LOCATION:Cité de l’espace, Toulouse, France
-URL:https://pokemongo.com/fr/news/european-space-agency-event
-STATUS:CONFIRMED
-TRANSP:TRANSPARENT
-CATEGORIES:Pokémon GO,France,ESA
-X-POKEMON-USER-EFFECT:pokemon-go:esa-astronaut-pikachu-museums:fr
-X-POKEMON-DATE-PRECISION:EXACT_DATE
-X-POKEMON-TERRITORY:FRANCE_CONFIRMED
-X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
-X-POKEMON-EXACT-START:2026-10-04;TIME=UNKNOWN
-X-POKEMON-EXACT-END:2027-04-30;TIME=UNKNOWN
-END:VEVENT
 END:VCALENDAR
