@@ -3041,21 +3041,21 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-esa-cite-espace-toulouse-2026@quentingranger-demo
-DTSTAMP:20260921T021247Z
-SUMMARY:Pokémon GO × ESA — Cité de l’espace Toulouse
+SEQUENCE:1
+DTSTAMP:20260921T080000Z
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20270501
-DESCRIPTION:À la Cité de l’espace à Toulouse : activités Pokémon GO spéciales liées à ESA × Pokémon du 4 octobre 2026 au 30 avril 2027. Raids 1★ avec Pikachu astronaute, Étude ponctuelle et rencontres spéciales. Du 4 au 10 octobre, Études de terrain et apparitions sauvages accrues sur les lieux participants. Source officielle Pokémon GO et ESA.
+SUMMARY:Pokémon GO × ESA — Cité de l’espace Toulouse
+DESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, activités Pokémon GO spéciales à la Cité de l’espace de Toulouse dans le cadre du partenariat ESA × Pokémon GO, dont des rencontres avec Pikachu astronaute. Vérifier les horaires d’ouverture du musée avant déplacement. Source officielle: https://pokemongolive.com/fr/news/european-space-agency-event
 LOCATION:Cité de l’espace, Toulouse, France
-URL:https://pokemongo.com/fr/news/european-space-agency-event
-X-POKEMON-USER-EFFECT:pokemon_go_esa_museum:toulouse-fr
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+X-POKEMON-USER-EFFECT:pokemon_go_esa_cite_espace_toulouse_2026
 X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
 X-POKEMON-EXACT-START:2026-10-04
 X-POKEMON-EXACT-END:2027-04-30
-STATUS:CONFIRMED
-SEQUENCE:0
 END:VEVENT
 BEGIN:VEVENT
 UID:pokemon-go-esa-cite-espace-toulouse-2026@pokemon-france
