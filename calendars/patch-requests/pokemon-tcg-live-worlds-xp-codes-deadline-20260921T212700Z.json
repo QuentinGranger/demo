@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-tcg-live-worlds-xp-codes-deadline-20260925@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcg-live-worlds-xp-codes-deadline-20260925@quentingranger-demo\r\nDTSTAMP:20260921T212700Z\r\nDTSTART;TZID=Europe/Paris:20260925T173000\r\nDTEND;TZID=Europe/Paris:20260925T180000\r\nSUMMARY:Deadline — codes JCC Pokémon Live Mondiaux / PokémonXP\r\nDESCRIPTION:Action : échanger avant 18:00 (heure de Paris) les codes JCC Pokémon Live obtenus via les drops Twitch des Mondiaux 2026 ou de PokémonXP. L’annonce officielle Pokémon fixe l’expiration au 25 septembre 2026 à 09:00 PDT, soit 18:00 CEST à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:codes_deadline:tcglive-worlds-pokemonxp-2026:fr\r\nX-POKEMON-ACTIONABILITY:HIGH_ACTION\r\nEND:VEVENT"
+}
