@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-esa-hq-paris-2026@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-esa-hq-paris-2026@pokemon-france\r\nDTSTAMP:20260921T050600Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20261011\r\nSUMMARY:Pokémon GO × ESA — siège ESA Paris\r\nLOCATION:ESA HQ, Paris, France\r\nDESCRIPTION:Du 4 au 10 octobre 2026. Gameplay Pokémon GO spécial au siège de l’ESA à Paris : raids Pikachu Astronaute, Études de terrain, rencontres sauvages et contenus thématiques. Les fonds de lieu sont exclus sur les sites ESA. Source officielle Pokémon GO : https://pokemongo.com/fr/news/european-space-agency-event\r\nX-POKEMON-USER-EFFECT:pokemon_go_physical:pokemon-go-esa-hq-paris:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
