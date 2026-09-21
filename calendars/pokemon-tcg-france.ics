@@ -3124,4 +3124,29 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-USER-EFFECT:codes_deadline:tcglive-worlds-pokemonxp-2026:fr
 X-POKEMON-ACTIONABILITY:HIGH_ACTION
 END:VEVENT
+BEGIN:VEVENT
+UID:esa-pokemon-toulouse-20261004@openai
+DTSTAMP:20260921T223629Z
+LAST-MODIFIED:20260921T223629Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH
+X-POKEMON-ACTION:VISIT
+X-POKEMON-USER-EFFECT:physical_event:esa-pokemon-cite-espace-toulouse:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20270501
+SUMMARY:🚀 ESA × Pokémon — exposition + Pokémon GO à Toulouse
+LOCATION:Cité de l’espace, Toulouse, France
+DESCRIPTION:Collaboration officielle ESA × Pokémon. À la Cité de l’espace de Toulouse, exposition Pokémon/espace et activation Pokémon GO du 4 octobre 2026 au 30 avril 2027 : Pikachu Astronaute en raids 1 étoile, recherches chronométrées et rencontres spéciales. Du 4 au 10 octobre 2026, fonctionnalités supplémentaires liées à la Semaine mondiale de l’espace. Produits dérivés officiels annoncés via les canaux ESA/Pokémon et boutiques partenaires, sans prix ni date détaillée confirmés à ce stade. Source ESA France : https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
+URL:https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
+CATEGORIES:Pokémon,Événement France,Pokémon GO,ESA,Toulouse,Collaboration
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🚀 ESA × Pokémon à Toulouse commence demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
