@@ -3110,4 +3110,18 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon GO City Safari Marseille demain — vérifie ton billet et prépare ta journée
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-tcg-live-worlds-xp-codes-deadline-20260925@quentingranger-demo
+DTSTAMP:20260921T212700Z
+DTSTART;TZID=Europe/Paris:20260925T173000
+DTEND;TZID=Europe/Paris:20260925T180000
+SUMMARY:Deadline — codes JCC Pokémon Live Mondiaux / PokémonXP
+DESCRIPTION:Action : échanger avant 18:00 (heure de Paris) les codes JCC Pokémon Live obtenus via les drops Twitch des Mondiaux 2026 ou de PokémonXP. L’annonce officielle Pokémon fixe l’expiration au 25 septembre 2026 à 09:00 PDT, soit 18:00 CEST à Paris. Source : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:codes_deadline:tcglive-worlds-pokemonxp-2026:fr
+X-POKEMON-ACTIONABILITY:HIGH_ACTION
+END:VEVENT
 END:VCALENDAR
