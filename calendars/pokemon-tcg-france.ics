@@ -3088,4 +3088,32 @@ X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
 X-POKEMON-EXACT-START:20261004T000000
 X-POKEMON-EXACT-END:20270430T235959
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-city-safari-marseille-20260927@openai
+DTSTAMP:20260921T124915Z
+LAST-MODIFIED:20260921T124915Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH
+X-POKEMON-REMINDER-PROFILE:PHYSICAL_EVENT
+X-POKEMON-ACTION:ATTEND
+X-POKEMON-USER-EFFECT:physical_event:pokemon-go-city-safari-marseille:2026-09-27
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:98
+X-POKEMON-ACTIONABILITY:88
+DTSTART;TZID=Europe/Paris:20260927T100000
+DTEND;TZID=Europe/Paris:20260927T180000
+SUMMARY:📍 Pokémon GO City Safari — Marseille (dimanche)
+LOCATION:Marseille, France
+DESCRIPTION:Événement officiel Pokémon GO City Safari à Marseille. Ticket requis pour le contenu de l’événement. Billet 1 jour : 10 € taxes et frais applicables compris. Chasse aux tampons City Safari : jusqu’à 8 tampons, chacun donnant une rencontre avec Évoli coiffé d’un chapeau d’explorateur. L’événement se déroule dans toute la ville de 10 h à 18 h CEST. Source officielle : https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
+URL:https://pokemongo.com/fr/featured-in-person-events/citysafari/marseille
+CATEGORIES:Pokémon,Pokémon GO,Événement physique,Marseille,France
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon GO City Safari Marseille demain — vérifie ton ticket et prépare ta journée.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
