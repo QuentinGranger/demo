@@ -3228,4 +3228,17 @@ X-POKEMON-EXACT-END:2027-04-30
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-world-space-week-research-deadline-20261012@quentingranger.demo
+DTSTAMP:20260922T042255Z
+SUMMARY:Pokémon GO — Fin Étude World Space Week
+DTSTART;TZID=Europe/Paris:20261012T230000
+DTEND;TZID=Europe/Paris:20261012T235900
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:go_deadline:world-space-week-2026:timed-research:fr
+DESCRIPTION:Terminer les tâches et récupérer les récompenses de l’Étude ponctuelle gratuite World Space Week avant le 12 octobre 2026 à 23:59 heure locale. Elle permet notamment de rencontrer Pikachu astronaute. Source officielle Pokémon GO France: https://pokemongo.com/fr/news/world-space-week-2026
+URL:https://pokemongo.com/fr/news/world-space-week-2026
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
