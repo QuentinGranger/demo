@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-esa-museums-france-2026@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-esa-museums-france-2026@quentingranger-demo\r\nDTSTAMP:20260922T014400Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20270501\r\nSUMMARY:Pokémon GO × ESA — activation musées participants (France/Europe)\r\nDESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, les visiteurs des musées de sciences et de l’espace participants en Europe, dont la Cité de l’espace à Toulouse, peuvent accéder à des activités Pokémon GO ESA × Pokémon incluant Pikachu Astronaute, raids 1 étoile, Études ponctuelles et rencontres spéciales. Du 4 au 10 octobre, contenu événementiel supplémentaire. Source officielle ESA France (21/09/2026).\r\nLOCATION:Cité de l’espace, Toulouse, France\r\nX-POKEMON-USER-EFFECT:pokemon_go_esa_museums:pikachu_astronaute:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-04\r\nX-POKEMON-EXACT-END:2027-04-30\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
