@@ -3177,4 +3177,20 @@ ACTION:DISPLAY
 DESCRIPTION:🚀 Demain — Pokémon GO × ESA démarre à la Cité de l’espace de Toulouse
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-world-space-week-2026-fr@quentingranger
+DTSTAMP:20260922T003337Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261011
+SUMMARY:Pokémon GO — World Space Week 2026 (Pikachu astronaute)
+DESCRIPTION:Événement officiel Pokémon GO du 4 octobre 2026 à 00:00 au 10 octobre 2026 à 23:59 heure locale. Première apparition de Pikachu astronaute dans les Raids et via Études ponctuelles. L’Étude ponctuelle gratuite reste à terminer avant le 12 octobre 2026 à 23:59. Source officielle : https://pokemongo.com/fr/news/world-space-week-2026
+X-POKEMON-USER-EFFECT:pokemon_go_event:world_space_week_2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-ACTIONABILITY:HIGH_ACTION
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20261004T000000+0200
+X-POKEMON-EXACT-END:20261010T235900+0200
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
