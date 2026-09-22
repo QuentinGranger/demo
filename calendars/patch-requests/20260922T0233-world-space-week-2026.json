@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-world-space-week-2026-fr@quentingranger",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-world-space-week-2026-fr@quentingranger\r\nDTSTAMP:20260922T003337Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20261011\r\nSUMMARY:Pokémon GO — World Space Week 2026 (Pikachu astronaute)\r\nDESCRIPTION:Événement officiel Pokémon GO du 4 octobre 2026 à 00:00 au 10 octobre 2026 à 23:59 heure locale. Première apparition de Pikachu astronaute dans les Raids et via Études ponctuelles. L’Étude ponctuelle gratuite reste à terminer avant le 12 octobre 2026 à 23:59. Source officielle : https://pokemongo.com/fr/news/world-space-week-2026\r\nX-POKEMON-USER-EFFECT:pokemon_go_event:world_space_week_2026:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-ACTIONABILITY:HIGH_ACTION\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:20261004T000000+0200\r\nX-POKEMON-EXACT-END:20261010T235900+0200\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
