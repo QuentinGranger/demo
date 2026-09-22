@@ -3274,4 +3274,32 @@ X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
 X-POKEMON-EXACT-START:2026-10-04
 X-POKEMON-EXACT-END:2027-04-30
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-esa-france-20261004@openai
+DTSTAMP:20260922T143212Z
+LAST-MODIFIED:20260922T143212Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:HIGH
+X-POKEMON-ACTION:VISIT_AND_PLAY
+X-POKEMON-USER-EFFECT:pokemon_go_esa_activation:fr:20261004
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:20261004T100000
+X-POKEMON-EXACT-END:20270430T200000
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20270501
+SUMMARY:🚀 Pokémon GO × ESA — Pikachu astronaute en France
+LOCATION:Cité de l’espace Toulouse + sites ESA France
+DESCRIPTION:Activation officielle ESA × Pokémon GO en France. Du 4 octobre 2026 à 10 h au 30 avril 2027 à 20 h (heures locales), la Cité de l’espace à Toulouse propose du gameplay spécial avec Pikachu astronaute en raid 1★, recherches chronométrées et rencontres spéciales. Du 4 au 10 octobre, fonctionnalités supplémentaires dans les musées participants et sites ESA, dont le site parisien : recherches de terrain et apparitions sauvages accrues. Exposition ESA × Pokémon et produits dérivés officiels associés. Source ESA : https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
+URL:https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
+CATEGORIES:Pokémon,Pokémon GO,ESA,France,Toulouse,Paris,Événement
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Demain — début de l’activation Pokémon GO × ESA en France
+END:VALARM
+END:VEVENT
 END:VCALENDAR
