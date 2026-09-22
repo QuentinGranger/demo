@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-esa-cite-espace-toulouse-20261004@quentingranger.demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-esa-cite-espace-toulouse-20261004@quentingranger.demo\r\nDTSTAMP:20260922T185722Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20270501\r\nSUMMARY:Pokémon GO × ESA — Pikachu Astronaute à la Cité de l’espace\r\nDESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, gameplay spécial Pokémon GO à la Cité de l’espace à Toulouse dans le cadre de la collaboration ESA × Pokémon. Activités annoncées : raids 1 étoile avec Pikachu Astronaute, Étude ponctuelle et rencontres spéciales. Du 4 au 10 octobre 2026, contenu supplémentaire lié à la Semaine mondiale de l’espace. Source officielle : ESA / Pokémon GO.\r\nLOCATION:Cité de l’espace, Toulouse, France\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nX-POKEMON-USER-EFFECT:pokemon_go_esa_museum:toulouse-fr:2026-2027\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-04\r\nX-POKEMON-EXACT-END:2027-04-30\r\nURL:https://pokemongolive.com/news/european-space-agency-event\r\nEND:VEVENT"
+}
