@@ -3302,4 +3302,22 @@ ACTION:DISPLAY
 DESCRIPTION:Demain — début de l’activation Pokémon GO × ESA en France
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-esa-astronaut-pikachu-cite-espace-toulouse-20261004@quentingranger-demo
+DTSTAMP:20260922T155218Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20270501
+SUMMARY:Pokémon GO × ESA — Pikachu Astronaute à la Cité de l’espace
+LOCATION:Cité de l’espace, Toulouse, France
+DESCRIPTION:Activation officielle ESA × Pokémon GO du 4 octobre 2026 au 30 avril 2027 dans les musées participants, dont la Cité de l’espace à Toulouse. Raids 1 étoile avec Pikachu Astronaute, recherches chronométrées et rencontres spéciales; certains Pokémon peuvent avoir un arrière-plan de lieu. Du 4 au 10 octobre 2026, recherches de terrain et apparitions sauvages thématiques supplémentaires. Source: ESA, 21 septembre 2026. Les heures précises d’ouverture/fermeture ne sont pas publiées; les champs exact-start/end conservent donc les dates officielles sans heure inventée.
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-04
+X-POKEMON-EXACT-END:2027-04-30
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:pokemon_go_esa_astronaut_pikachu_cite_espace_toulouse_fr
+X-POKEMON-ACTIONABILITY:80
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
