@@ -3381,4 +3381,19 @@ ACTION:DISPLAY
 DESCRIPTION:Pokémon UNITE Aeos Crown 2027 — finales demain à Tokyo.
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-esa-france-20261004@pokemon-france-watch
+DTSTAMP:20260923T111607Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20270501
+SUMMARY:Pokémon GO × ESA — Pikachu astronaute (France)
+DESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, gameplay Pokémon GO spécial à la Cité de l’espace à Toulouse : raids 1 étoile Pikachu astronaute et Étude ponctuelle. Du 4 au 10 octobre 2026, contenu additionnel à la Cité de l’espace et au siège de l’ESA à Paris (sans Location Background à l’ESA HQ). Source officielle Pokémon GO et ESA.
+LOCATION:Cité de l’espace, Toulouse, France
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-04
+X-POKEMON-EXACT-END:2027-04-30
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:pokemon_go_esa_astronaut_pikachu_france_2026_2027
+END:VEVENT
 END:VCALENDAR
