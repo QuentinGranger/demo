@@ -3482,4 +3482,19 @@ X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
 X-POKEMON-USER-EFFECT:competition:pokemon-unite-aeos-crown-2027-finals:global
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-october-2026@quentingranger-demo
+DTSTAMP:20260923T191600Z
+SUMMARY:Pokémon GO — Passe GO : octobre 2026
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261104
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-06T10:00:00+02:00
+X-POKEMON-EXACT-END:2026-11-03T10:00:00+01:00
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:go_pass:october-2026:fr
+DESCRIPTION:Passe GO d’octobre disponible automatiquement du 6 octobre à 10h au 3 novembre à 10h (heure locale). Récompense vedette : rencontre avec Kyogre. Passe GO deluxe : Bibelot Chance notamment. Les récompenses doivent être récupérées avant le 5 novembre 2026 à 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026
+URL:https://pokemongo.com/fr/news/go-pass-october-2026
+END:VEVENT
 END:VCALENDAR
