@@ -3338,4 +3338,20 @@ X-POKEMON-EXACT-START:2026-10-04
 X-POKEMON-EXACT-END:2027-04-30
 URL:https://pokemongolive.com/news/european-space-agency-event
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-twilight-trails-20260923@openai
+DTSTAMP:20260923T030957Z
+LAST-MODIFIED:20260923T030957Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pokémon GO — Choose Your Path: Twilight Trails
+DTSTART;TZID=Europe/Paris:20260923T100000
+DTEND;TZID=Europe/Paris:20260928T200000
+DESCRIPTION:Étude ponctuelle Choose Your Path : choisir Explore, Catch ou Battle. Le choix détermine les tâches et bonus pendant la fenêtre. Source officielle Pokémon GO : https://pokemongolive.com/news/choose-your-path-twilight-trails-2026
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:pokemon_go_event:twilight-trails:fr
+X-POKEMON-ACTION:PLAY
+X-POKEMON-SOURCE-TIER:A1
+END:VEVENT
 END:VCALENDAR
