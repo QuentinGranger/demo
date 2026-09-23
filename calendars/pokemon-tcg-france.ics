@@ -3509,4 +3509,20 @@ X-POKEMON-USER-EFFECT:go_pass_rewards_deadline:october-2026:fr
 DESCRIPTION:Date limite officielle : les récompenses du Passe GO d’octobre expirent le 5 novembre 2026 à 10h heure locale. Pense à les récupérer avant 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026
 URL:https://pokemongo.com/fr/news/go-pass-october-2026
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-fall-marathon-buddy-trek-2026-fr@quentingranger.demo
+DTSTAMP:20260923T203715Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261020
+SUMMARY:Pokémon GO — Marathon automnal : Explore avec tes Copains
+DESCRIPTION:Événement Pokémon GO du 13 octobre 2026 à 10:00 au 19 octobre 2026 à 20:00 (heure locale). Première apparition de Virovent dans Pokémon GO via les tâches du Passe GO ou après utilisation d’un Encens. Source officielle : https://pokemongo.com/fr/news/fall-marathon-buddy-trek-2026
+X-POKEMON-USER-EFFECT:pokemon_go_event:fall-marathon-buddy-trek-2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-13T10:00:00+02:00
+X-POKEMON-EXACT-END:2026-10-19T20:00:00+02:00
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
