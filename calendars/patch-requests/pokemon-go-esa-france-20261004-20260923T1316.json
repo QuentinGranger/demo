@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-esa-france-20261004@pokemon-france-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-esa-france-20261004@pokemon-france-watch\r\nDTSTAMP:20260923T111607Z\r\nDTSTART;VALUE=DATE:20261004\r\nDTEND;VALUE=DATE:20270501\r\nSUMMARY:Pokémon GO × ESA — Pikachu astronaute (France)\r\nDESCRIPTION:Du 4 octobre 2026 au 30 avril 2027, gameplay Pokémon GO spécial à la Cité de l’espace à Toulouse : raids 1 étoile Pikachu astronaute et Étude ponctuelle. Du 4 au 10 octobre 2026, contenu additionnel à la Cité de l’espace et au siège de l’ESA à Paris (sans Location Background à l’ESA HQ). Source officielle Pokémon GO et ESA.\r\nLOCATION:Cité de l’espace, Toulouse, France\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-04\r\nX-POKEMON-EXACT-END:2027-04-30\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:pokemon_go_esa_astronaut_pikachu_france_2026_2027\r\nEND:VEVENT"
+}
