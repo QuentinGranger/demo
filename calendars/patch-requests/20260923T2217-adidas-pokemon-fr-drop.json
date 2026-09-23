@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "fashion-release-adidas-pokemon-fr-20260922@openai",
+  "event": "BEGIN:VEVENT\r\nUID:fashion-release-adidas-pokemon-fr-20260922@openai\r\nDTSTAMP:20260923T201700Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nX-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-originals-30th-collection:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-STATE:OPEN\r\nX-POKEMON-ACTIONABILITY:95\r\nX-POKEMON-CHANNEL:BRAND_DIRECT\r\nDTSTART;VALUE=DATE:20260922\r\nDTEND;VALUE=DATE:20260923\r\nSUMMARY:👟 adidas Originals x Pokémon — lancement France\r\nLOCATION:France — adidas CONFIRMED / revendeurs autorisés\r\nDESCRIPTION:Collection adidas Originals x Pokémon disponible en France. Pages adidas France confirmées pour plusieurs modèles, notamment Superstar Vintage Dracaufeu KI2861 à 180 € et Samba OG Mewtwo KI8220 à 130 €, via adidas CONFIRMED. Revendeur autorisé Footdistrict France référence également plusieurs modèles de la collection. Date de lancement principale : 22 septembre 2026.\r\nURL:https://www.adidas.fr/chaussure-adidas-pokemon-superstar-vintage/KI2861.html\r\nCATEGORIES:Pokémon,Fashion,Sneakers,adidas,France\r\nEND:VEVENT"
+}
