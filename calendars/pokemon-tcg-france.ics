@@ -3497,4 +3497,16 @@ X-POKEMON-USER-EFFECT:go_pass:october-2026:fr
 DESCRIPTION:Passe GO d’octobre disponible automatiquement du 6 octobre à 10h au 3 novembre à 10h (heure locale). Récompense vedette : rencontre avec Kyogre. Passe GO deluxe : Bibelot Chance notamment. Les récompenses doivent être récupérées avant le 5 novembre 2026 à 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026
 URL:https://pokemongo.com/fr/news/go-pass-october-2026
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-pass-october-2026-rewards-deadline@quentingranger-demo
+DTSTAMP:20260923T191600Z
+SUMMARY:Pokémon GO — récupérer les récompenses du Passe GO d’octobre
+DTSTART;TZID=Europe/Paris:20261105T093000
+DTEND;TZID=Europe/Paris:20261105T100000
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-USER-EFFECT:go_pass_rewards_deadline:october-2026:fr
+DESCRIPTION:Date limite officielle : les récompenses du Passe GO d’octobre expirent le 5 novembre 2026 à 10h heure locale. Pense à les récupérer avant 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026
+URL:https://pokemongo.com/fr/news/go-pass-october-2026
+END:VEVENT
 END:VCALENDAR
