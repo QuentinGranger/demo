@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-pass-october-2026-rewards-deadline@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-pass-october-2026-rewards-deadline@quentingranger-demo\r\nDTSTAMP:20260923T191600Z\r\nSUMMARY:Pokémon GO — récupérer les récompenses du Passe GO d’octobre\r\nDTSTART;TZID=Europe/Paris:20261105T093000\r\nDTEND;TZID=Europe/Paris:20261105T100000\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:go_pass_rewards_deadline:october-2026:fr\r\nDESCRIPTION:Date limite officielle : les récompenses du Passe GO d’octobre expirent le 5 novembre 2026 à 10h heure locale. Pense à les récupérer avant 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026\r\nURL:https://pokemongo.com/fr/news/go-pass-october-2026\r\nEND:VEVENT"
+}
