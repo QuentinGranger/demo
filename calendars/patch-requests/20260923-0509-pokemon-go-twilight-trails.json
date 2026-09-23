@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-twilight-trails-20260923@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-twilight-trails-20260923@openai\r\nDTSTAMP:20260923T030957Z\r\nLAST-MODIFIED:20260923T030957Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Pokémon GO — Choose Your Path: Twilight Trails\r\nDTSTART;TZID=Europe/Paris:20260923T100000\r\nDTEND;TZID=Europe/Paris:20260928T200000\r\nDESCRIPTION:Étude ponctuelle Choose Your Path : choisir Explore, Catch ou Battle. Le choix détermine les tâches et bonus pendant la fenêtre. Source officielle Pokémon GO : https://pokemongolive.com/news/choose-your-path-twilight-trails-2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:pokemon_go_event:twilight-trails:fr\r\nX-POKEMON-ACTION:PLAY\r\nX-POKEMON-SOURCE-TIER:A1\r\nEND:VEVENT"
+}
