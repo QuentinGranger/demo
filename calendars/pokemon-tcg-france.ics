@@ -3426,4 +3426,16 @@ X-POKEMON-USER-EFFECT:pokemon_go_esa_toulouse_2026_2027
 LOCATION:Cité de l’espace, Toulouse, France
 DESCRIPTION:Activation Pokémon GO ESA × Pokémon à la Cité de l’espace du 4 octobre 2026 au 30 avril 2027. Gameplay spécial incluant raids 1 étoile avec Pikachu astronaute, Étude ponctuelle et rencontres spéciales; certains Pokémon peuvent avoir un arrière-plan de lieu. Du 4 au 10 octobre 2026, contenu additionnel avec Études de terrain et apparitions sauvages accrues. Source officielle ESA: https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
 END:VEVENT
+BEGIN:VEVENT
+UID:fashion-release-pokemon-adidas-30th-collection-fr@pokemon-france
+DTSTAMP:20260923T134605Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:Pokémon × adidas 30e anniversaire — sortie France
+DESCRIPTION:Collection Pokémon × adidas 30e anniversaire disponible en France chez des revendeurs français vérifiés. Lancement France constaté le 22 septembre 2026. USER_EFFECT=fashion_release:pokemon-adidas-30th-collection:fr | TERRITORY=FRANCE_CONFIRMED | DATE_PRECISION=EXACT_DATE.
+X-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-30th-collection:fr
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
