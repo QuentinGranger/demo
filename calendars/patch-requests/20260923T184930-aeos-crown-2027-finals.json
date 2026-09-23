@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-unite-aeos-crown-2027-finals@pokemon-france-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-unite-aeos-crown-2027-finals@pokemon-france-watch\r\nDTSTAMP:20260923T164930Z\r\nDTSTART;VALUE=DATE:20270320\r\nDTEND;VALUE=DATE:20270322\r\nSUMMARY:Pokémon UNITE Aeos Crown 2027 — Finale mondiale\r\nDESCRIPTION:Finale officielle Pokémon UNITE Aeos Crown 2027 à Tokyo les 20 et 21 mars 2027. 32 équipes : 31 vainqueurs des qualifications régionales + le champion du monde UNITE 2026. Prize pool total annoncé : 1 000 000 USD. Les détails des régions éligibles et des qualifications seront annoncés ultérieurement. Source officielle : https://www.pokemon.com/fr/actualites/annonce-de-la-pokemon-unite-aeos-crown-2027\r\nLOCATION:Tokyo, Japon\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-USER-EFFECT:competition:pokemon-unite-aeos-crown-2027-finals:global\r\nEND:VEVENT"
+}
