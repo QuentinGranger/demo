@@ -3354,4 +3354,31 @@ X-POKEMON-USER-EFFECT:pokemon_go_event:twilight-trails:fr
 X-POKEMON-ACTION:PLAY
 X-POKEMON-SOURCE-TIER:A1
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-unite-aeos-crown-2027-finals@openai
+DTSTAMP:20260923T043254Z
+LAST-MODIFIED:20260923T043254Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-POKEMON-PRIORITY:IMPORTANT
+X-POKEMON-ACTION:WATCH_COMPETITION
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:70
+X-POKEMON-USER-EFFECT:competition:pokemon-unite-aeos-crown-2027-finals
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270322
+SUMMARY:🏆 Pokémon UNITE Aeos Crown 2027 — Finales Tokyo
+LOCATION:Tokyo, Japon
+DESCRIPTION:Finales hors ligne de la Pokémon UNITE Aeos Crown 2027 les 20 et 21 mars 2027 à Tokyo. 32 équipes : 31 qualifiées via les qualifications régionales et l'équipe championne du WCS 2026. Dotation totale annoncée : 1 000 000 USD. Les équipes qualifiées reçoivent un travel award. Source officielle Pokémon : https://www.pokemon.com/fr/actualites/annonce-de-la-pokemon-unite-aeos-crown-2027
+URL:https://www.pokemon.com/fr/actualites/annonce-de-la-pokemon-unite-aeos-crown-2027
+CATEGORIES:POKEMON,UNITE,COMPETITION,ESPORT,GLOBAL
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Pokémon UNITE Aeos Crown 2027 — finales demain à Tokyo.
+END:VALARM
+END:VEVENT
 END:VCALENDAR
