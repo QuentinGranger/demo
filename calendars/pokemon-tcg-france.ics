@@ -3438,4 +3438,19 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-DATE-PRECISION:EXACT_DATE
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-esa-paris-20261004@quentingranger-demo
+DTSTAMP:20260923T143930Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261011
+SUMMARY:Pokémon GO × ESA — Pikachu astronaute à Paris
+LOCATION:Siège de l’ESA, Paris, France
+DESCRIPTION:Activation Pokémon GO ESA × Pokémon au siège de l’ESA à Paris du 4 au 10 octobre 2026. Raids 1 étoile avec Pikachu astronaute, recherches et apparitions thématiques. Les arrière-plans de lieu sont exclus sur les sites ESA. Source officielle ESA: https://www.esa.int/Space_in_Member_States/France/L_ESA_et_The_Pokemon_Company_International_devoilent_une_exposition_europeenne_et_une_experience_Pikachu_astronaute
+X-POKEMON-USER-EFFECT:pokemon_go_esa_paris:pikachu-astronaute:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-04
+X-POKEMON-EXACT-END:2026-10-10
+END:VEVENT
 END:VCALENDAR
