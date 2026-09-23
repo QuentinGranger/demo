@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "fashion-release-pokemon-adidas-30th-collection-fr@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:fashion-release-pokemon-adidas-30th-collection-fr@pokemon-france\r\nDTSTAMP:20260923T134605Z\r\nDTSTART;VALUE=DATE:20260922\r\nDTEND;VALUE=DATE:20260923\r\nSUMMARY:Pokémon × adidas 30e anniversaire — sortie France\r\nDESCRIPTION:Collection Pokémon × adidas 30e anniversaire disponible en France chez des revendeurs français vérifiés. Lancement France constaté le 22 septembre 2026. USER_EFFECT=fashion_release:pokemon-adidas-30th-collection:fr | TERRITORY=FRANCE_CONFIRMED | DATE_PRECISION=EXACT_DATE.\r\nX-POKEMON-USER-EFFECT:fashion_release:pokemon-adidas-30th-collection:fr\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
