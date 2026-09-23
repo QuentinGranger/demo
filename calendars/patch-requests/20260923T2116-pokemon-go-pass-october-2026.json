@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-pass-october-2026@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-pass-october-2026@quentingranger-demo\r\nDTSTAMP:20260923T191600Z\r\nSUMMARY:Pokémon GO — Passe GO : octobre 2026\r\nDTSTART;VALUE=DATE:20261006\r\nDTEND;VALUE=DATE:20261104\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-06T10:00:00+02:00\r\nX-POKEMON-EXACT-END:2026-11-03T10:00:00+01:00\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:go_pass:october-2026:fr\r\nDESCRIPTION:Passe GO d’octobre disponible automatiquement du 6 octobre à 10h au 3 novembre à 10h (heure locale). Récompense vedette : rencontre avec Kyogre. Passe GO deluxe : Bibelot Chance notamment. Les récompenses doivent être récupérées avant le 5 novembre 2026 à 10h. Source officielle : https://pokemongo.com/fr/news/go-pass-october-2026\r\nURL:https://pokemongo.com/fr/news/go-pass-october-2026\r\nEND:VEVENT"
+}
