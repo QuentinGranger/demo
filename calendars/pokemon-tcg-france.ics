@@ -3617,4 +3617,17 @@ X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
 X-POKEMON-EXACT-START:2026-10-04
 X-POKEMON-EXACT-END:2027-04-30
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-esa-exposition-cite-espace-toulouse-fr@zero-miss
+DTSTAMP:20260924T173332Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:Pokémon × ESA — ouverture à la Cité de l’espace (Toulouse)
+LOCATION:Cité de l’espace\, Toulouse\, France
+DESCRIPTION:Ouverture officiellement annoncée à partir du 2 octobre 2026 de l’exposition Pokémon × ESA à la Cité de l’espace. Exposition co-créée par l’ESA et Pokémon. DATE_PRECISION=EXACT_DATE. TERRITORY=FRANCE_CONFIRMED.
+X-POKEMON-USER-EFFECT:physical_event:pokemon-esa-cite-espace-toulouse:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
