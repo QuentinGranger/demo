@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-adidas-timed-research-acquisition-deadline-20270115@quentingranger.demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-adidas-timed-research-acquisition-deadline-20270115@quentingranger.demo\r\nDTSTAMP:20260924T082645Z\r\nDTSTART;TZID=Europe/Paris:20270115T200000\r\nDTEND;TZID=Europe/Paris:20270115T201500\r\nSUMMARY:Pokémon GO × adidas — deadline pour obtenir l’Étude ponctuelle\r\nDESCRIPTION:Dernière limite annoncée pour obtenir l’Étude ponctuelle Pokémon GO × adidas en ouvrant Pokémon GO sur un site adidas participant : 15 janvier 2027 à 20 h, heure locale. Les tâches obtenues peuvent ensuite être terminées jusqu’au 13 février 2027 à 20 h. Vérifier qu’un site participant est disponible avant déplacement. Source officielle : https://pokemongo.com/fr/news/pokemon-x-adidas-2026\r\nCATEGORIES:Pokémon GO,adidas,Distribution\r\nX-POKEMON-USER-EFFECT:distribution:pokemon-go-adidas-timed-research:acquisition-deadline\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
