@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-esa-exposition-cite-espace-toulouse-fr@zero-miss",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-esa-exposition-cite-espace-toulouse-fr@zero-miss\r\nDTSTAMP:20260924T173332Z\r\nDTSTART;VALUE=DATE:20261002\r\nDTEND;VALUE=DATE:20261003\r\nSUMMARY:Pokémon × ESA — ouverture à la Cité de l’espace (Toulouse)\r\nLOCATION:Cité de l’espace\\, Toulouse\\, France\r\nDESCRIPTION:Ouverture officiellement annoncée à partir du 2 octobre 2026 de l’exposition Pokémon × ESA à la Cité de l’espace. Exposition co-créée par l’ESA et Pokémon. DATE_PRECISION=EXACT_DATE. TERRITORY=FRANCE_CONFIRMED.\r\nX-POKEMON-USER-EFFECT:physical_event:pokemon-esa-cite-espace-toulouse:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nSTATUS:CONFIRMED\r\nEND:VEVENT"
+}
