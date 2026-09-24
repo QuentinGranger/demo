@@ -3645,4 +3645,18 @@ X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-adidas-timed-research-obtain-deadline-2027@quentingranger.demo
+DTSTAMP:20260924T224639Z
+DTSTART;TZID=Europe/Paris:20270115T200000
+DTEND;TZID=Europe/Paris:20270115T201500
+SUMMARY:Pokémon GO × adidas — limite pour obtenir l’Étude ponctuelle
+DESCRIPTION:Ouvrir Pokémon GO sur un site adidas participant avant 20 h (heure locale) pour obtenir l’Étude ponctuelle adidas × Pokémon. Récompenses annoncées : adidas Jacket et Cap pour l’avatar\, PX\, Poussières Étoiles\, rencontre avec Lucario et Méga-Énergie Lucario. La liste France/Paris des sites participants n’est pas encore confirmée. Source officielle : https://pokemongo.com/fr/news/pokemon-x-adidas-2026
+URL:https://pokemongo.com/fr/news/pokemon-x-adidas-2026
+X-POKEMON-USER-EFFECT:pokemon_go_adidas_timed_research_obtain_deadline:global
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
 END:VCALENDAR
