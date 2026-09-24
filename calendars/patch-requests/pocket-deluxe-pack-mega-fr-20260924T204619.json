@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "add",
+  "uid": "pokemon-pocket-deluxe-pack-mega-fr-20260930@zero-miss",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-pocket-deluxe-pack-mega-fr-20260930@zero-miss\r\nDTSTAMP:20260924T184600Z\r\nDTSTART;VALUE=DATE:20260930\r\nDTEND;VALUE=DATE:20261030\r\nSUMMARY:Pokémon JCC Pocket — Booster de Luxe Méga\r\nDESCRIPTION:Disponible pour une durée limitée du 30 septembre au 29 octobre 2026. Booster de 4 cartes avec au moins une carte de rareté ♦♦♦♦ ou supérieure. Source officielle Pokémon France : https://www.pokemon.com/fr/actualites/booster-de-luxe-mega-arrive-prochainement-dans-le-jcc-pokemon-pocket\r\nURL:https://www.pokemon.com/fr/actualites/booster-de-luxe-mega-arrive-prochainement-dans-le-jcc-pokemon-pocket\r\nX-POKEMON-USER-EFFECT:pocket_release:deluxe-pack-mega:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
