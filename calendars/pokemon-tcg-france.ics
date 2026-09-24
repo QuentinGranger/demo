@@ -3542,4 +3542,17 @@ X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-USER-EFFECT:pokemon_go_event:esa-pokemon-astronaut-pikachu:fr
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-adidas-timed-research-acquisition-deadline-20270115@quentingranger.demo
+DTSTAMP:20260924T082645Z
+DTSTART;TZID=Europe/Paris:20270115T200000
+DTEND;TZID=Europe/Paris:20270115T201500
+SUMMARY:Pokémon GO × adidas — deadline pour obtenir l’Étude ponctuelle
+DESCRIPTION:Dernière limite annoncée pour obtenir l’Étude ponctuelle Pokémon GO × adidas en ouvrant Pokémon GO sur un site adidas participant : 15 janvier 2027 à 20 h, heure locale. Les tâches obtenues peuvent ensuite être terminées jusqu’au 13 février 2027 à 20 h. Vérifier qu’un site participant est disponible avant déplacement. Source officielle : https://pokemongo.com/fr/news/pokemon-x-adidas-2026
+CATEGORIES:Pokémon GO,adidas,Distribution
+X-POKEMON-USER-EFFECT:distribution:pokemon-go-adidas-timed-research:acquisition-deadline
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
