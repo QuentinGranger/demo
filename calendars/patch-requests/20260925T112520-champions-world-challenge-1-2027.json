@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-champions-world-challenge-1-2027-fr@pokemon-france",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-champions-world-challenge-1-2027-fr@pokemon-france\r\nDTSTAMP:20260925T092500Z\r\nDTSTART;TZID=Europe/Paris:20260925T040000\r\nDTEND;TZID=Europe/Paris:20260928T035900\r\nSUMMARY:Pokémon Champions — Défi Mondial I (2027)\r\nDESCRIPTION:Compétition officielle Pokémon Champions. Inscriptions ouvertes jusqu'au 28 septembre 2026 à 03:59 (heure de Paris). Participer à au moins 3 matchs permet d'obtenir Pondralugon après publication des résultats.\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-USER-EFFECT:champions_competition:world-challenge-1-2027:fr\r\nX-POKEMON-ACTIONABILITY:90\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT"
+}
