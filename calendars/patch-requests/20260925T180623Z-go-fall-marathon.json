@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-go-fall-marathon-buddy-trek-20261013-fr@quentingranger-demo",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-go-fall-marathon-buddy-trek-20261013-fr@quentingranger-demo\r\nDTSTAMP:20260925T180621Z\r\nDTSTART;VALUE=DATE:20261013\r\nDTEND;VALUE=DATE:20261020\r\nSUMMARY:Pokémon GO — Marathon automnal : Explore avec tes Copains\r\nDESCRIPTION:Événement officiel Pokémon GO du 13 octobre 2026 à 10 h au 19 octobre 2026 à 20 h (heure locale). Première apparition de Virovent dans Pokémon GO. Source : https://pokemongo.com/fr/news/fall-marathon-buddy-trek-2026\r\nX-POKEMON-USER-EFFECT:pokemon_go_event:fall-marathon-buddy-trek:fr:2026\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:20261013T100000 Europe/Paris\r\nX-POKEMON-EXACT-END:20261019T200000 Europe/Paris\r\nSTATUS:CONFIRMED\r\nEND:VEVENT\r\n"
+}
