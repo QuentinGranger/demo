@@ -3686,4 +3686,16 @@ X-POKEMON-USER-EFFECT:pocket_release:booster-deluxe-mega:fr
 STATUS:CONFIRMED
 SEQUENCE:0
 END:VEVENT
+BEGIN:VEVENT
+UID:pokemon-go-hatch-day-sandile-20261017-fr@quentingranger-demo
+DTSTAMP:20260925T180621Z
+DTSTART;TZID=Europe/Paris:20261017T110000
+DTEND;TZID=Europe/Paris:20261017T170000
+SUMMARY:Pokémon GO — Journée Éclosion de Mascaïman
+DESCRIPTION:Événement officiel Pokémon GO. Mascaïman apparaît plus souvent dans les Œufs de 2 km. Bonus : Bonbons x2 à l’éclosion, distance d’éclosion divisée par 2, chances accrues de Mascaïman chromatique. Étude ponctuelle gratuite à terminer avant 17 h.\nSource : https://pokemongo.com/fr/news/sandile-hatch-day-2026
+X-POKEMON-USER-EFFECT:pokemon_go_hatch_day:sandile:fr:2026-10-17
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
