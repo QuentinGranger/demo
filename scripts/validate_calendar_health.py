@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import hashlib
 import json
 import re
@@ -14,7 +15,7 @@ POLICY = CAL / "calendar-health-policy.json"
 STATE = CAL / "calendar-health-state.json"
 HEARTBEAT = CAL / "calendar-health-heartbeat.json"
 
-EXPECTED_POLICY = "CROSS_CALENDAR_HEALTH_POLICY_FR_V2"
+EXPECTED_POLICY = "CROSS_CALENDAR_HEALTH_POLICY_FR_V3"
 EXPECTED_STATE = "CROSS_CALENDAR_HEALTH_STATE_FR_V2"
 EXPECTED_HEARTBEAT = "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2"
 VALID_HEALTH = {"HEALTHY", "DEGRADED", "CRITICAL"}
@@ -136,9 +137,15 @@ def monitored_automations(policy):
     return result
 
 
-def main():
-    online = "--online" in sys.argv[1:]
+def main(argv=None):
+    parser = argparse.ArgumentParser(description='Validate calendar contracts and observed monitor health')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--online', action='store_true', help='Also verify the public master feeds')
+    mode.add_argument('--static', action='store_true', help='Validate repository contracts only; live incidents are reported separately')
+    args = parser.parse_args(argv)
+    online = args.online
     errors = []
+    runtime_errors = []
     for path in (POLICY, STATE, HEARTBEAT):
         if not path.exists():
             errors.append(f"missing required file: {path.relative_to(ROOT)}")
@@ -180,7 +187,7 @@ def main():
         if not isinstance(max_age, (int, float)) or max_age <= 0:
             errors.append("heartbeat max_age_hours must be positive")
         elif age_hours > max_age:
-            errors.append(f"WATCHDOG_HEARTBEAT_STALE: heartbeat age {age_hours:.1f}h exceeds {max_age}h")
+            runtime_errors.append(f"WATCHDOG_HEARTBEAT_STALE: heartbeat age {age_hours:.1f}h exceeds {max_age}h")
     except Exception as exc:
         observed_at = None
         errors.append(f"invalid last_observer_check_at: {exc}")
@@ -195,7 +202,8 @@ def main():
     if not isinstance(minimum_observers, int) or minimum_observers < 1:
         errors.append("minimum_enabled_observers must be a positive integer")
     if heartbeat.get("observer_title") not in observer_titles:
-        if not (heartbeat.get("migration_bootstrap") is True and heartbeat.get("observer_title") == "MANUAL_POLICY_MIGRATION"):
+        maintenance = heartbeat.get('observer_title') in observer_cfg.get('maintenance_observers', [])
+        if not maintenance and not (heartbeat.get("migration_bootstrap") is True and heartbeat.get("observer_title") == "MANUAL_POLICY_MIGRATION"):
             errors.append("heartbeat observer_title is not a declared observer")
 
     declared_paths = set()
@@ -265,14 +273,20 @@ def main():
     expected_timezone = policy.get("automation_liveness", {}).get("expected_timezone")
     for title, expected in monitor_cfg.items():
         info = snapshot.get(title, {})
+        monitor_errors_before = len(runtime_errors)
+        if info.get('exists') is False:
+            runtime_errors.append(f"AUTOMATION_MISSING: {title}")
+            if info.get('liveness') == 'HEALTHY':
+                errors.append(f"heartbeat falsely marks missing monitor HEALTHY: {title}")
+            continue
         if info.get("enabled") is not True:
-            errors.append(f"AUTOMATION_DISABLED: {title}")
+            runtime_errors.append(f"AUTOMATION_DISABLED: {title}")
         if info.get("finite") is not False:
-            errors.append(f"AUTOMATION_FINITE: {title}")
+            runtime_errors.append(f"AUTOMATION_FINITE: {title}")
         if info.get("expected_recurrence") != expected.get("expected_recurrence") or info.get("observed_recurrence") != expected.get("expected_recurrence"):
-            errors.append(f"AUTOMATION_CADENCE_CHANGED: {title}")
+            runtime_errors.append(f"AUTOMATION_CADENCE_CHANGED: {title}")
         if info.get("timezone") != expected_timezone:
-            errors.append(f"AUTOMATION_TIMEZONE_CHANGED: {title}")
+            runtime_errors.append(f"AUTOMATION_TIMEZONE_CHANGED: {title}")
 
         max_gap = expected.get("max_gap")
         if observed_at is not None and isinstance(max_gap, (int, float)) and max_gap > 0:
@@ -282,7 +296,7 @@ def main():
                     updated = parse_utc(info.get("updated_at"))
                     since_update = (observed_at - updated).total_seconds() / 3600
                     if since_update > max_gap:
-                        errors.append(f"AUTOMATION_FIRST_RUN_OVERDUE: {title} had no run {since_update:.1f}h after update")
+                        runtime_errors.append(f"AUTOMATION_FIRST_RUN_OVERDUE: {title} had no run {since_update:.1f}h after update")
                 except Exception as exc:
                     errors.append(f"invalid updated_at for {title}: {exc}")
             else:
@@ -292,10 +306,12 @@ def main():
                     if gap < -1:
                         errors.append(f"{title} last_run_time is after heartbeat observation")
                     elif gap > max_gap:
-                        errors.append(f"AUTOMATION_STALE: {title} gap {gap:.1f}h exceeds {max_gap}h at observation")
+                        runtime_errors.append(f"AUTOMATION_STALE: {title} gap {gap:.1f}h exceeds {max_gap}h at observation")
                 except Exception as exc:
                     errors.append(f"invalid last_run_time for {title}: {exc}")
-        if title in observer_titles and info.get("enabled") is True and info.get("finite") is False and info.get("liveness") == "HEALTHY":
+        if info.get('liveness') == 'HEALTHY' and len(runtime_errors) > monitor_errors_before:
+            errors.append(f"heartbeat falsely marks unhealthy monitor HEALTHY: {title}")
+        if title in observer_titles and info.get("enabled") is True and info.get("finite") is False and info.get("liveness") == "HEALTHY" and len(runtime_errors) == monitor_errors_before:
             healthy_observers += 1
 
     if heartbeat.get("healthy_observer_count") != healthy_observers:
@@ -303,7 +319,10 @@ def main():
     if heartbeat.get("minimum_required_observers") != minimum_observers:
         errors.append("heartbeat minimum_required_observers does not match policy")
     if isinstance(minimum_observers, int) and healthy_observers < minimum_observers:
-        errors.append(f"OBSERVER_REDUNDANCY_LOST: only {healthy_observers}/{minimum_observers} observers healthy")
+        runtime_errors.append(f"OBSERVER_REDUNDANCY_LOST: only {healthy_observers}/{minimum_observers} observers healthy")
+
+    if heartbeat.get('overall_result') == 'HEALTHY' and any(not e.startswith('WATCHDOG_HEARTBEAT_STALE:') for e in runtime_errors):
+        errors.append('heartbeat overall_result is HEALTHY despite observed monitor failures')
 
     baseline_paths = set()
     for franchise, items in state.get("baseline_manifest", {}).items():
@@ -357,14 +376,23 @@ def main():
         if incident.get("state") not in VALID_INCIDENT:
             errors.append(f"incident history entry has invalid state {incident.get('state')}")
 
+    if args.static:
+        for err in runtime_errors:
+            print(f"LIVE INCIDENT (not a repository defect): {err}")
+    else:
+        errors.extend(runtime_errors)
+
     if errors:
         for err in errors:
             print(f"ERROR: {err}")
         print(f"FAILED: {len(errors)} health validation error(s)")
         return 1
 
-    mode = "online+local" if online else "local"
-    print(f"OK: permanent redundant calendar health validated ({mode}) — {len(declared_paths)} ICS paths, {len(monitor_cfg)} monitors, {healthy_observers} observers")
+    if args.static:
+        print(f"OK: repository contracts validated — {len(declared_paths)} ICS paths; live monitor health not certified")
+    else:
+        mode = "online+local" if online else "local"
+        print(f"OK: permanent redundant calendar health validated ({mode}) — {len(declared_paths)} ICS paths, {len(monitor_cfg)} monitors, {healthy_observers} observers")
     return 0
 
 

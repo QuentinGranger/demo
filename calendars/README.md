@@ -41,3 +41,25 @@ GitHub Actions signale les écritures directes qui ne respectent pas cette polit
 L'application d'agenda récupère les changements à son prochain rafraîchissement
 après publication sur `master` ; les événements déjà copiés manuellement ne sont
 pas liés à l'abonnement.
+
+## Contrôle de santé du dépôt
+
+La politique V3 déclare huit chemins surveillés. `pokemon-paris.ics` reste un
+miroir de compatibilité ; l'abonnement Pokémon canonique est `pokemon-tcg-france.ics`.
+
+`python scripts/validate_calendar_health.py --static` vérifie les contrats du
+dépôt dans les pull requests : schéma, chemins, noms, structure ICS, manifeste
+et cohérence du diagnostic. Les incidents des tâches externes sont affichés
+séparément et ne certifient jamais un service sain.
+
+Sans option (et avec `--online` sur master), le contrôle exige aussi une
+surveillance active et récente. Une tâche absente, désactivée, périmée ou une
+redondance insuffisante restent des échecs. Le contrôle planifié et son suivi
+d'incident GitHub restent actifs.
+
+Le heartbeat est une observation datée, y compris quand elle est `DEGRADED`.
+Un observateur actif peut l'actualiser quotidiennement avec les résultats réels.
+Il ne doit ni recopier un ancien état `HEALTHY`, ni inventer une exécution, ni
+réactiver une tâche mise en pause. Le contrôle manuel du 26 septembre 2026 a
+constaté une veille Pokémon active, deux veilles désactivées (Fortnite et Harry
+Potter) et une veille billetterie absente ; ces incidents restent déclarés.
