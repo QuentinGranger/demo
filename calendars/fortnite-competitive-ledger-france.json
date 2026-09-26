@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-08-28T22:06:02Z",
+  "updated_at": "2026-09-26T13:49:02Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -2400,14 +2400,143 @@
           "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
         }
       ]
+    },
+    {
+      "competition_id": "fncs-solo-qualifiers-eu-2026",
+      "official_event_id": "S42_FNCSSoloQualifiers",
+      "official_event_slug": "S42_FNCSSoloQualifiers",
+      "series_id": "FNCS",
+      "season_id": "C7S4",
+      "name": "Qualifications FNCS Solo 2026 — Europe",
+      "competition_class": "FNCS_QUALIFIER",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-09-28",
+        "end_date": "2026-10-11",
+        "time_precision": "DATE_WINDOW_WITH_EXACT_SESSIONS"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "PARTIAL",
+        "minimum_rank": "Top 200000 du classement Power Ranking global",
+        "account_level": null,
+        "age_min": 13,
+        "two_factor_required": true,
+        "region_lock": "EU",
+        "platform_requirements": null,
+        "team_requirements": "SOLOS",
+        "other_rules": "Le top 2000 peut passer directement au round 2 ; participer au round 1 annule cet accès direct.",
+        "rules_url": "https://www.fortnite.com/competitive/rules-guidelines/rules-library"
+      },
+      "prize_pool": null,
+      "qualification": {
+        "round1_eu_to_round2": 8000,
+        "round2_to_round3": 1000,
+        "qualifier1_round3_to_fast_track": 100,
+        "qualifier2_round3_to_heats": 108
+      },
+      "visibility": "CALENDAR",
+      "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai",
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang=fr&region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1",
+          "name": "Qualifier 1 — Round 1",
+          "phase_type": "QUALIFIER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
+              "official_session_id": "S42_FNCSSoloQualifiers_Qual1Round1Day1_EU",
+              "name": "Qualifications FNCS Solo — Qualifier 1, round 1, jour 1",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "Qualifier 1 — Round 1 — Jour 1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-28T17:00:00+02:00",
+              "end_at": "2026-09-28T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": {
+                "combined_days": true,
+                "advances_to": "Qualifier 1 — Round 2",
+                "eu_slots": 8000
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang=fr&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai",
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2",
+              "official_session_id": "S42_FNCSSoloQualifiers_Qual1Round1Day2_EU",
+              "name": "Qualifications FNCS Solo — Qualifier 1, round 1, jour 2",
+              "session_number": 2,
+              "round_number": 1,
+              "round_label": "Qualifier 1 — Round 1 — Jour 2",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-29T17:00:00+02:00",
+              "end_at": "2026-09-29T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": {
+                "combined_days": true,
+                "advances_to": "Qualifier 1 — Round 2",
+                "eu_slots": 8000
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang=fr&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "PARTIAL_EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-09-26T13:49:02Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU event page published the Sep 28–Oct 11 window and exact first-round Day 1/Day 2 sessions. Promoted to CALENDAR under the FNCS series policy."
+        }
+      ]
     }
   ],
-  "watch_targets": [
-    {
-      "watch_id": "fncs-solo-october-2026",
-      "related_candidate_id": "fortnite-fncs-solos-october-2026",
-      "state": "WATCHING",
-      "promotion_rule": "Create competition/phase/session records as soon as the official EU schedule publishes stable event/session identifiers and exact dates. Calendar projection depends on importance; ledger ingestion does not."
-    }
-  ]
+  "watch_targets": []
 }

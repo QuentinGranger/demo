@@ -687,4 +687,45 @@ DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload
  à 17h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-fncs-solo-qualifiers-eu-2026@openai
+DTSTAMP:20260926T134902Z
+LAST-MODIFIED:20260926T134902Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-LAST-CHANGE-ID:chg_701110cd7a046deefdd483da
+X-FORTNITE-COMPETITION-ID:fncs-solo-qualifiers-eu-2026
+X-FORTNITE-PROJECTION-LEVEL:CALENDAR
+X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
+X-FORTNITE-REGION:EU
+X-FORTNITE-RULESET:BUILD
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-PLATFORM:ALL_SUPPORTED
+X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY1:20260928T170000/20260928T200000
+X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY2:20260929T170000/20260929T200000
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261012
+SUMMARY:🏆 ✅ 🆕 Qualifications FNCS Solo — Europe
+DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Premi
+ ères sessions exactes du round 1 : lundi 28 et mardi 29 septembre de 17h0
+ 0 à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux 
+ jours sont cumulés. Éligibilité annoncée : top 200 000 du Power Rankin
+ g global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directe
+ ment au round 2 ; participer au round 1 annule cet accès direct. Top 8 00
+ 0 EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source of
+ ficielle Fortnite Competitive.
+URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang
+ =fr&region=EU
+CATEGORIES:Fortnite,Compétition,FNCS,Solos,Europe
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🏆 Les qualifications FNCS Solo Europe commencent demain
+END:VALARM
+END:VEVENT
 END:VCALENDAR
