@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendrier — Jeux & collection</title>
+<meta name="description" content="Sorties, tournois et rendez-vous Pokémon, Fortnite et Harry Potter. Recherche, filtres et abonnements.">
+<style>
+:root{color-scheme:light;--ink:#202924;--muted:#626c63;--paper:#f6f5ef;--line:#dddfd5;--green:#24523d;--poke:#356346;--fort:#555c9b;--hp:#91642c;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button,a{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:wait;opacity:.55}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bf791c;outline-offset:3px}button{color:inherit;border:1px solid var(--line);border-radius:8px;background:white;padding:10px 14px}button:hover{background:#edf0e8}a{color:var(--green)}.shell{max-width:1450px;margin:auto;padding:32px 40px}.topline{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px}.wordmark{font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.brand-mark{display:inline-grid;place-items:center;background:var(--green);color:white;width:28px;height:28px;border-radius:50%;margin-right:10px}.top-actions{display:flex;gap:8px}.primary{background:var(--green);color:white;border-color:var(--green)}.primary:hover{background:#183c2c}.hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;padding:36px 0 28px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin:0 0 12px}h1{font-family:Georgia,serif;font-size:clamp(34px,4vw,54px);font-weight:400;letter-spacing:-.04em;margin:0 0 12px;line-height:1.1}.intro{color:var(--muted);max-width:580px;line-height:1.6;margin:0}.sync{text-align:right;font-size:12px;color:var(--muted);max-width:270px;line-height:1.6}.sync-dot{color:var(--green)}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px}aside{border-top:1px solid var(--line);padding-top:20px}.filter-label{display:block;font-size:11px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:var(--muted)}.universe{width:100%;display:flex;align-items:center;gap:10px;border:none;margin:4px 0;background:transparent;text-align:left;padding:12px 10px}.universe[aria-pressed=true]{background:white;box-shadow:0 1px 4px #2033210a}.universe[aria-pressed=false]{opacity:.55}.dot{width:8px;height:8px;border-radius:50%;background:var(--poke);flex-shrink:0}.fortnite .dot{background:var(--fort)}.harry .dot{background:var(--hp)}.check{margin-left:auto;font-size:12px}.filter-group{margin-bottom:26px}.filter-group select,.search input{border:1px solid var(--line);background:white;border-radius:8px;padding:12px;color:var(--ink);width:100%;min-width:0}.filter-group label:not(.filter-label){font-size:13px;display:flex;gap:8px;align-items:start;line-height:1.5}.filter-group input{accent-color:var(--green);margin-top:4px}.reset{font-size:12px;background:transparent;border:none;padding-left:0;text-decoration:underline}.side-note{font-size:12px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:16px 0;border-top:1px solid var(--line)}.month-nav{display:flex;gap:8px;align-items:center}.arrow{padding:8px 12px;font-size:18px}.month-nav h2{font-family:Georgia,serif;font-weight:400;font-size:25px;min-width:200px;margin:0 12px 0 0;text-transform:capitalize}.view-switch{display:flex;background:#e9ece3;padding:3px;border-radius:8px}.view-switch button{border:0;background:transparent;font-size:12px;padding:8px 12px}.view-switch button[aria-pressed=true]{background:white;box-shadow:0 1px 4px #0001}.search{position:relative;display:flex;gap:10px;align-items:center;margin-bottom:16px}.search input{padding-left:14px}.search-count{font-size:12px;color:var(--muted);white-space:nowrap}.warning{background:#fff1d7;border:1px solid #ead5ad;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.6;margin:0 0 16px}.ongoing{border:1px solid var(--line);border-radius:10px;margin-bottom:16px;background:#eeefe7;padding:12px 16px}.ongoing summary{cursor:pointer;font-size:13px;font-weight:600}.ongoing .periods{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.periods button{font-size:12px;text-align:left}.weekdays,.month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.weekdays div{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:12px 8px;color:var(--muted)}.month-grid{border-left:1px solid var(--line);border-top:1px solid var(--line);background:white;border-radius:8px;overflow:hidden}.day{min-height:126px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 6px;min-width:0}.day.outside{background:#efefe8}.day-number{border:none;background:none;font-size:12px;padding:5px 7px;border-radius:50%;margin-bottom:5px;min-width:28px;min-height:28px}.day.today .day-number{background:var(--green);color:white}.day.outside .day-number{color:#92998e}.event{display:block;width:100%;border:none;border-left:3px solid var(--poke);border-radius:4px;padding:6px 7px;margin:3px 0;text-align:left;background:#edf3eb;color:#2a5035;font-size:11px;line-height:1.4;overflow:hidden}.event.fortnite{background:#f0eff8;border-color:var(--fort);color:#484b81}.event.harry{background:#f6efe4;border-color:var(--hp);color:#77511f}.event small{display:block;font-size:10px;margin-bottom:2px;opacity:.85}.event-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.event.cancelled .event-title{text-decoration:line-through}.more{border:0;background:none;padding:5px;font-size:11px;font-weight:650;color:var(--muted)}.footnote{font-size:12px;color:var(--muted);line-height:1.6;margin-top:12px}.empty{border:1px dashed var(--line);padding:40px 24px;border-radius:10px;text-align:center;background:#fff8;color:var(--muted);line-height:1.6}.agenda-day{display:grid;grid-template-columns:80px minmax(0,1fr);gap:18px;padding:20px 0;border-top:1px solid var(--line)}.date-block{font-size:12px;color:var(--muted);text-transform:uppercase}.date-block strong{display:block;font-size:32px;color:var(--ink);font-weight:450;margin-top:4px}.agenda-event{display:flex;align-items:center;gap:14px;text-align:left;background:white;border:1px solid var(--line);width:100%;margin-bottom:8px;padding:16px;border-radius:9px}.agenda-event .body{flex:1;min-width:0}.agenda-event strong{overflow-wrap:anywhere;display:block;font-size:14px;font-weight:650;line-height:1.5}.agenda-event small{overflow-wrap:anywhere;display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}.badge{display:inline-block;font-size:10px;line-height:1.4;background:#f4e7c7;color:#725420;border-radius:4px;padding:3px 5px;margin-left:5px}.cancelled .badge{color:#933f36;background:#f8e8e5}dialog{border:1px solid var(--line);border-radius:16px;max-width:640px;width:calc(100% - 32px);max-height:85vh;padding:28px;background:var(--paper);color:var(--ink)}dialog::backdrop{background:#16231dcc;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:start;gap:20px}.dialog-head h2{font-family:Georgia,serif;font-size:27px;font-weight:400;line-height:1.2;margin:8px 0 18px}.close{font-size:22px;line-height:1;padding:5px 10px;background:transparent}.details-meta{font-size:14px;line-height:1.7;padding:14px 0;border-block:1px solid var(--line)}.description{white-space:pre-wrap;font-size:14px;line-height:1.8;overflow-wrap:anywhere;margin:20px 0}.dialog-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.dialog-actions a{font-size:13px;overflow-wrap:anywhere}.subscription{border-top:1px solid var(--line);padding:18px 0}.subscription h3{font-size:16px;margin:0 0 8px}.subscription p{font-size:12px;line-height:1.6;color:var(--muted);margin:8px 0}.subscription input{width:100%;padding:10px;font-size:11px;border:1px solid var(--line);border-radius:6px;margin:10px 0;background:white}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}footer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);margin-top:32px;padding:18px 0;display:flex;justify-content:space-between;gap:16px}[hidden]{display:none!important}
+@media(max-width:1050px){.shell{padding:24px}.layout{grid-template-columns:170px minmax(0,1fr);gap:18px}.month-nav h2{min-width:0;font-size:22px}.toolbar{flex-wrap:wrap}.day{min-height:110px}.hero{align-items:start}.sync{max-width:190px}}
+@media(max-width:720px){.shell{padding:16px}.topline{gap:12px}.wordmark{font-size:10px;letter-spacing:.06em}.brand-mark{display:none}.top-actions button{font-size:11px;padding:9px}.hero{display:block;padding:28px 0 20px}.hero h1{font-size:38px}.intro{font-size:14px}.sync{text-align:left;max-width:none;margin-top:14px}.layout{display:block}aside{display:grid;grid-template-columns:1fr 1fr;gap:12px}.filter-group{margin-bottom:8px}.universes{grid-column:1/-1}.universe-list{display:flex;gap:6px}.universe{font-size:12px;padding:10px 8px;margin:0;border:1px solid var(--line)}.universe .check{display:none}.side-note{display:none}.filter-label{font-size:10px;margin-bottom:8px}.filter-group select{font-size:12px;padding:10px}.toolbar{margin-top:10px;gap:12px}.month-nav{width:100%;justify-content:space-between}.month-nav h2{flex:1;font-size:25px}.view-switch{margin-left:auto}.search{flex-wrap:wrap}.search-count{width:100%}.day{padding:4px 2px;min-height:100px}.event{font-size:9px;padding:4px 3px;border-left-width:2px}.event small{font-size:8px}.weekdays div{padding:10px 2px;text-align:center;font-size:9px}.day-number{font-size:10px;padding:4px;min-width:24px;min-height:24px}.more{font-size:9px;padding:3px}.agenda-day{grid-template-columns:48px minmax(0,1fr);gap:10px}.agenda-event{padding:12px;gap:10px}.agenda-event strong{font-size:13px}.agenda-event small{font-size:11px}.date-block strong{font-size:26px}dialog{padding:20px}.dialog-head h2{font-size:25px}footer{flex-direction:column;gap:6px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topline"><div class="wordmark"><span class="brand-mark">C</span>Jeux & collection</div><div class="top-actions"><button id="refresh" aria-label="Actualiser les événements">↻ Actualiser</button><button class="primary" id="subscribe">S’abonner</button></div></header>
+<section class="hero"><div><p class="eyebrow">Votre agenda, au même endroit</p><h1>Les prochains rendez-vous.</h1><p class="intro">Sorties, tournois et découvertes. Gardez une vue claire sur ce qui vous intéresse, sans perdre les détails.</p></div><div class="sync" id="sync" role="status">Chargement des calendriers…</div></section>
+<div class="layout">
+<aside aria-label="Filtres des événements">
+<div class="filter-group universes"><span class="filter-label">Vos univers</span><div class="universe-list"><button class="universe pokemon" data-feed="pokemon" aria-pressed="true"><span class="dot"></span>Pokémon<span class="check">✓</span></button><button class="universe fortnite" data-feed="fortnite" aria-pressed="true"><span class="dot"></span>Fortnite<span class="check">✓</span></button><button class="universe harry" data-feed="harry" aria-pressed="true"><span class="dot"></span>Harry Potter<span class="check">✓</span></button></div></div>
+<div class="filter-group"><label class="filter-label" for="kind">Type de rendez-vous</label><select id="kind"><option value="all">Tous les événements</option><option value="release">Sorties & précommandes</option><option value="competition">Tournois & compétitions</option><option value="visit">Salons & sorties</option><option value="deadline">Dates limites & récompenses</option><option value="game">Jeux & mises à jour</option><option value="other">Autres rendez-vous</option></select></div>
+<div class="filter-group"><label class="filter-label" for="certainty">Statut de la date</label><select id="certainty"><option value="all">Tous les statuts</option><option value="confirmed">Confirmée dans le flux</option><option value="tentative">À confirmer</option><option value="unspecified">Non précisé</option><option value="cancelled">Annulée</option></select></div>
+<div class="filter-group"><label><input type="checkbox" id="future"> À venir uniquement</label><button class="reset" id="reset">Réinitialiser les filtres</button></div>
+<p class="side-note">Heures de Paris.<br>Pokémon GO et Sleep sont exclus.<br><br>Les dates et statuts proviennent des calendriers suivis. Consultez les sources avant de réserver.</p>
+</aside>
+<main>
+<div class="toolbar"><div class="month-nav"><h2 id="month-label"></h2><button class="arrow" id="previous" aria-label="Mois précédent">‹</button><button class="arrow" id="next" aria-label="Mois suivant">›</button><button id="today">Aujourd’hui</button></div><div class="view-switch" aria-label="Mode d’affichage"><button data-view="month" aria-pressed="true">Mois</button><button data-view="agenda" aria-pressed="false">Agenda</button></div></div>
+<div class="search"><label class="sr-only" for="search">Rechercher un événement, un lieu ou un produit dans le mois affiché</label><input id="search" type="search" placeholder="Rechercher dans ce mois : événement, ville, produit…"><span class="search-count" id="count" role="status"></span></div>
+<div id="warning" class="warning" role="status" hidden></div>
+<details class="ongoing" id="ongoing" hidden><summary id="ongoing-label"></summary><div class="periods" id="periods"></div></details>
+<div id="calendar"></div>
+<p class="footnote">Les périodes longues apparaissent à leur début et dans « Périodes en cours ». Cliquez sur un événement pour les horaires, les sources et les détails.</p>
+</main>
+</div>
+<footer><span>Pokémon · Fortnite · Harry Potter — France</span><a href="https://github.com/QuentinGranger/demo" target="_blank" rel="noopener noreferrer">Voir le dépôt et les flux ↗</a></footer>
+</div>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><div><p class="eyebrow" id="detail-universe"></p><h2 id="detail-title"></h2></div><button class="close" data-close="detail" aria-label="Fermer les détails">×</button></div><div id="detail-content"></div></dialog>
+<dialog id="subscriptions" aria-labelledby="subscriptions-title"><div class="dialog-head"><h2 id="subscriptions-title">Retrouver ces dates dans votre agenda</h2><button class="close" data-close="subscriptions" aria-label="Fermer les abonnements">×</button></div><p class="intro">Choisissez un seul flux par univers. Si vous êtes déjà abonné, gardez votre lien actuel pour éviter les doublons.</p><div id="subscription-list"></div><p class="footnote">Le bouton « Actualiser » recharge cette page. Apple, Google et Outlook actualisent leurs abonnements selon leur propre cadence.</p></dialog>
+<script id="calendar-core">
+'use strict';
+const CalendarCore = (() => {
+ const paris = new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'});
+ const text = value => (value || '').replace(/\\([nN,;\\])/g,(_,c)=>/[nN]/.test(c)?'\n':c);
+ const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const dayKey = epoch => {const p=Object.fromEntries(paris.formatToParts(new Date(epoch)).map(p=>[p.type,p.value]));return `${p.year}-${p.month}-${p.day}`;};
+ const addDays = (key,n) => new Date(Date.parse(key+'T12:00:00Z')+n*86400000).toISOString().slice(0,10);
+ function dateValue(value,params={},zone='Europe/Paris') {
+  const m=/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})(Z)?)?$/.exec(value||'');
+  if(!m)throw Error('Date iCalendar non reconnue');
+  const day=`${m[1]}-${m[2]}-${m[3]}`,allDay=!m[4];
+  const target=Date.UTC(+m[1],+m[2]-1,+m[3],+(m[4]||0),+(m[5]||0),+(m[6]||0));
+  if(new Date(target).toISOString().slice(0,10)!==day||+(m[4]||0)>23||+(m[5]||0)>59||+(m[6]||0)>59)throw Error('Date iCalendar invalide');
+  let epoch=target;
+  if(!m[7]) {
+   const formatter=new Intl.DateTimeFormat('en-GB',{timeZone:allDay?'Europe/Paris':params.TZID||zone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
+   for(let i=0;i<3;i++) {const p=Object.fromEntries(formatter.formatToParts(new Date(epoch)).map(p=>[p.type,p.value]));const wall=Date.UTC(+p.year,+p.month-1,+p.day,+p.hour,+p.minute,+p.second);epoch+=target-wall;}
+  }
+  return {epoch,allDay,day:allDay?day:dayKey(epoch)};
+ }
+ function category(title,categories='') {
+  const s=normalize(title+' '+categories);
+  if(/deadline|date limite|fin (?:du |des |de |code|recompense)|expiry/.test(s))return 'deadline';
+  if(/precommande|sortie jcc|^jcc —|sortie (?:fr|livre|collector|france)|booster|lego|collection|release|drop france/.test(s))return 'release';
+  if(/tournoi|ligue|championship|championnat|fncs|qualification|cup|defi mondial|defi mensuel|competition/.test(s))return 'competition';
+  if(/salon|convention|exposition|expo|atelier|soiree|bourse|spectacle|concert|show|pop-up|animation/.test(s))return 'visit';
+  if(/maintenance|mise a jour|raid|reglement|saison|jeu|game/.test(s))return 'game';
+  return 'other';
+ }
+ function parseICS(raw,feed) {
+  if(!raw.includes('BEGIN:VCALENDAR')||!raw.includes('END:VCALENDAR'))throw Error('Flux iCalendar invalide');
+  const unfolded=raw.replace(/\r\n/g,'\n').replace(/\r/g,'\n').replace(/\n[ \t]/g,'');
+  const zone=/^X-WR-TIMEZONE:(.+)$/m.exec(unfolded)?.[1]||'Europe/Paris';
+  const events=[],warnings=[];
+  for(const match of unfolded.matchAll(/BEGIN:VEVENT\n([\s\S]*?)\nEND:VEVENT/g)) {
+   const props={};let depth=0;
+   for(const line of match[1].split('\n')) {
+    if(line.startsWith('BEGIN:')){depth++;continue;}if(line.startsWith('END:')){depth--;continue;}if(depth)continue;
+    let colon=-1,quoted=false;
+    for(let i=0;i<line.length;i++){if(line[i]==='"')quoted=!quoted;else if(line[i]===':'&&!quoted){colon=i;break;}}
+    if(colon<0)continue;
+    const [key,...parts]=line.slice(0,colon).match(/(?:[^;"]|"[^"]*")+/g)||[];const params={};
+    for(const part of parts){const eq=part.indexOf('=');if(eq>0)params[part.slice(0,eq)]=part.slice(eq+1).replace(/^"|"$/g,'');}
+    props[key]={value:line.slice(colon+1),params};
+   }
+   const v=key=>props[key]?.value||'';
+   const identity=normalize([v('UID'),v('SUMMARY'),v('CATEGORIES'),v('URL')].join(' '));
+   if(/pokemon[\s_-]*(go|sleep)\b|pokemongolive\.com|pokemonsleep\.net/.test(identity)||/^\W*go\s*[—–-]/.test(normalize(v('SUMMARY'))))continue;
+   try {
+    if(!v('UID')||!v('DTSTART'))throw Error('UID ou date manquants');
+    if(['RRULE','RDATE','EXDATE','RECURRENCE-ID'].some(k=>props[k]))throw Error('Récurrence à consulter dans le flux abonné');
+    const start=dateValue(v('DTSTART'),props.DTSTART.params,zone);
+    let end=props.DTEND?dateValue(v('DTEND'),props.DTEND.params,zone):(start.allDay?dateValue(addDays(start.day,1).replaceAll('-',''),{},zone):{...start});
+    if(props.DURATION&&!props.DTEND){const d=/^P(?:(\d+)W)?(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$/.exec(v('DURATION'));if(!d)throw Error('Durée non reconnue');end={...start,epoch:start.epoch+((+d[1]||0)*604800+(+d[2]||0)*86400+(+d[3]||0)*3600+(+d[4]||0)*60+(+d[5]||0))*1000};}
+    if(end.epoch<start.epoch)throw Error('Fin antérieure au début');
+    const original=text(v('SUMMARY'));
+    const status=v('STATUS')==='CANCELLED'?'cancelled':v('STATUS')==='TENTATIVE'||/🟡|🟠|\[À confirmer\]/.test(original)?'tentative':v('STATUS')==='CONFIRMED'?'confirmed':'unspecified';
+    const title=original.replace(/^ℹ\ufe0f?\s*/,'').replace(/^[^\p{L}\p{N}\[]+/u,'').replace(/\s*\[À confirmer\]/g,'').trim();
+    const lastDay=dayKey(Math.max(start.epoch,end.epoch-1));
+    events.push({uid:v('UID'),feed,title,description:text(v('DESCRIPTION')),location:text(v('LOCATION')),url:v('URL'),start:start.epoch,end:end.epoch,day:start.day,lastDay,allDay:start.allDay,status,kind:category(title,v('CATEGORIES')),sequence:+v('SEQUENCE')||0,modified:v('LAST-MODIFIED')||v('DTSTAMP'),periodStart:v('X-POKEMON-PERIOD-START'),periodEnd:v('X-POKEMON-PERIOD-END')});
+   }catch(error){warnings.push(`${text(v('SUMMARY'))||v('UID')||'Événement'} : ${error.message}`);}
+  }
+  const byUID=new Map();
+  for(const event of events){const old=byUID.get(event.uid);if(!old||event.sequence>old.sequence||(event.sequence===old.sequence&&event.modified>old.modified))byUID.set(event.uid,event);}
+  return {events:[...byUID.values()],warnings};
+ }
+ const overlaps=(event,first,last)=>event.day<=last&&event.lastDay>=first;
+ function filterEvents(events,filters) {
+  const q=normalize(filters.query||'');
+  return events.filter(e=>filters.feeds.includes(e.feed)&&(filters.kind==='all'||e.kind===filters.kind)&&(filters.status==='all'||e.status===filters.status)&&(!filters.future||Math.max(e.end,e.start)>=filters.now)&&overlaps(e,filters.first,filters.last)&&(!q||normalize([e.title,e.description,e.location].join(' ')).includes(q))).sort((a,b)=>a.start-b.start||a.title.localeCompare(b.title,'fr'));
+ }
+ return {text,normalize,dayKey,addDays,dateValue,parseICS,filterEvents,overlaps};
+})();
+if(typeof module!=='undefined')module.exports=CalendarCore;
+</script>
+<script id="calendar-app">
+'use strict';
+const C=CalendarCore;
+const FEEDS={pokemon:{name:'Pokémon',file:'pokemon-paris.ics',subscribe:'pokemon-tcg-france.ics'},fortnite:{name:'Fortnite',file:'fortnite-paris.ics'},harry:{name:'Harry Potter',file:'harry-potter-paris.ics'}};
+const ROOT='https://raw.githubusercontent.com/QuentinGranger/demo/master/calendars/';
+const KIND={release:'Sortie / précommande',competition:'Tournoi / compétition',visit:'Salon / sortie',deadline:'Date limite',game:'Jeu / mise à jour',other:'Rendez-vous'};
+const STATUS={confirmed:'Confirmé dans le flux',tentative:'À confirmer',unspecified:'Statut non précisé',cancelled:'Annulé'};
+const $=id=>document.getElementById(id);
+const nowDay=C.dayKey(Date.now());
+let month=nowDay.slice(0,7),events=[],view=matchMedia('(max-width:720px)').matches?'agenda':'month',selectedFeeds=Object.keys(FEEDS),loaded=false;
+const dateLabel=key=>new Intl.DateTimeFormat('fr-FR',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}).format(new Date(key+'T12:00:00Z'));
+const timeLabel=epoch=>new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',hour:'2-digit',minute:'2-digit'}).format(new Date(epoch));
+function node(tag,className,content){const element=document.createElement(tag);if(className)element.className=className;if(content!==undefined)element.textContent=content;return element;}
+function button(label,handler,className=''){const element=node('button',className,label);element.addEventListener('click',handler);return element;}
+function safeURL(value){try{const url=new URL(value);return ['https:','http:'].includes(url.protocol)?url.href:null;}catch{return null;}}
+function eventRange(e){if(e.allDay)return e.day===e.lastDay?dateLabel(e.day)+' · Journée entière':dateLabel(e.day)+' → '+dateLabel(e.lastDay);return dateLabel(e.day)+' · '+timeLabel(e.start)+(e.end>e.start?' → '+(C.dayKey(e.end)!==e.day?dateLabel(C.dayKey(e.end))+' · ':'')+timeLabel(e.end):'')+' (Paris)';}
+function render(){
+ const first=month+'-01',last=C.addDays(new Date(Date.UTC(+month.slice(0,4),+month.slice(5,7),1)).toISOString().slice(0,10),-1);
+ $('month-label').textContent=new Intl.DateTimeFormat('fr-FR',{timeZone:'UTC',month:'long',year:'numeric'}).format(new Date(first+'T12:00:00Z'));
+ const filtered=C.filterEvents(events,{feeds:selectedFeeds,kind:$('kind').value,status:$('certainty').value,query:$('search').value,future:$('future').checked,now:Date.now(),first,last});
+ $('count').textContent=`${filtered.length} rendez-vous ce mois-ci`;
+ document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
+ document.querySelectorAll('[data-feed]').forEach(b=>b.setAttribute('aria-pressed',String(selectedFeeds.includes(b.dataset.feed))));
+ const periods=filtered.filter(e=>e.lastDay>e.day);
+ $('ongoing').hidden=!periods.length;$('ongoing-label').textContent=`${periods.length} période${periods.length>1?'s':''} en cours dans ce mois`;
+ $('periods').replaceChildren(...periods.map(e=>button(e.title+' · '+eventRange(e),()=>showEvent(e))));
+ const root=$('calendar');root.replaceChildren();
+ if(!loaded){root.append(node('div','empty','Chargement des événements…'));return;}
+ if(!filtered.length){root.append(node('div','empty','Aucun événement pour ces filtres dans ce mois. Changez de mois ou réinitialisez les filtres.'));return;}
+ if(view==='agenda'){
+  const groups=new Map();for(const e of filtered){const key=e.day<first?'ongoing':e.day;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e);}
+  for(const [day,list] of groups){const section=node('section','agenda-day');const date=node('div','date-block');date.textContent=day==='ongoing'?'En cours':new Intl.DateTimeFormat('fr-FR',{timeZone:'UTC',weekday:'short'}).format(new Date(day+'T12:00:00Z'));date.append(node('strong','',day==='ongoing'?'↔':String(+day.slice(-2))));section.append(date);const rows=node('div');list.forEach(e=>rows.append(eventButton(e,true)));section.append(rows);root.append(section);}
+ }else{
+  const week=node('div','weekdays');['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'].forEach(d=>week.append(node('div','',d)));root.append(week);
+  const grid=node('div','month-grid');const offset=(new Date(first+'T12:00:00Z').getUTCDay()+6)%7;const begin=C.addDays(first,-offset);const total=Math.ceil((offset+Number(last.slice(-2)))/7)*7;
+  for(let i=0;i<total;i++){const day=C.addDays(begin,i),cell=node('div','day'+(day.slice(0,7)!==month?' outside':'')+(day===C.dayKey(Date.now())?' today':''));const dayButton=button(String(+day.slice(-2)),()=>showDay(day,filtered),'day-number');dayButton.setAttribute('aria-label',dateLabel(day)+' : afficher les événements');cell.append(dayButton);const list=filtered.filter(e=>e.day===day);list.slice(0,2).forEach(e=>cell.append(eventButton(e)));if(list.length>2)cell.append(button(`+ ${list.length-2} autres`,()=>showDay(day,filtered),'more'));grid.append(cell);}root.append(grid);
+ }
+}
+function eventButton(e,agenda=false){
+ const b=button('',()=>showEvent(e),(agenda?'agenda-event':'event')+' '+e.feed+' '+e.status);b.title=e.title+' — '+eventRange(e);b.setAttribute('aria-label',b.title);
+ if(agenda)b.append(node('span','dot'));
+ const body=node('span',agenda?'body':'');
+ if(!agenda)body.append(node('small','',e.allDay?(e.lastDay>e.day?'Période ↔':'Journée entière'):timeLabel(e.start)));
+ body.append(node(agenda?'strong':'span',agenda?'':'event-title',e.title));
+ if(e.status==='tentative'||e.status==='cancelled')body.append(node('span','badge',STATUS[e.status]));
+ if(agenda)body.append(node('small','',FEEDS[e.feed].name+' · '+eventRange(e)+(e.location?' · '+e.location.replace(/https?:\/\/\S+/g,'').replace(/^[\s•—–-]+/,'').trim():'')));
+ b.append(body);return b;
+}
+function openDetail(){if(!$('detail').open)$('detail').showModal();}
+function showDay(day,filtered){$('detail-universe').textContent='Rendez-vous du jour';$('detail-title').textContent=dateLabel(day);const list=filtered.filter(e=>C.overlaps(e,day,day));$('detail-content').replaceChildren(...(list.length?list.map(e=>eventButton(e,true)):[node('p','description','Aucun événement pour cette journée avec les filtres actuels.')]));openDetail();}
+function showEvent(e){
+ $('detail-universe').textContent=FEEDS[e.feed].name+' / '+KIND[e.kind];$('detail-title').textContent=e.title;
+ const meta=node('div','details-meta');meta.append(node('div','',eventRange(e)),node('div','',STATUS[e.status]));if(e.location)meta.append(node('div','',e.location));
+ if(e.periodStart)meta.append(node('div','', 'Repère de début : la période complète figure dans la description.'));
+ const desc=node('div','description',e.description||'Aucun détail supplémentaire dans le flux.');const actions=node('div','dialog-actions');
+ const url=safeURL(e.url);if(url){const link=node('a','','Consulter la source ↗');link.href=url;link.target='_blank';link.rel='noopener noreferrer';actions.append(link);}
+ if(e.location&&!/^(france|en ligne|online)$/i.test(e.location.trim())){const map=node('a','','Rechercher le lieu ↗');map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.location);map.target='_blank';map.rel='noopener noreferrer';actions.append(map);}
+ $('detail-content').replaceChildren(meta,desc,actions);openDetail();
+}
+function subscriptionList(){for(const [key,feed] of Object.entries(FEEDS)){const row=node('section','subscription');row.append(node('h3','',feed.name));const url=ROOT+(feed.subscribe||feed.file);const input=node('input');input.value=url;input.readOnly=true;input.setAttribute('aria-label','Lien d’abonnement '+feed.name);row.append(input);const actions=node('div','dialog-actions');actions.append(button('Copier le lien',async function(){try{await navigator.clipboard.writeText(url);this.textContent='Lien copié';}catch{input.focus();input.select();this.textContent='Lien sélectionné : copiez-le';}}));const link=node('a','','Ouvrir dans l’agenda ↗');link.href=url.replace(/^https:/,'webcal:');actions.append(link);row.append(actions);if(key==='pokemon')row.append(node('p','','La vue affiche aussi les salons du flux global. Le lien proposé conserve l’abonnement Pokémon canonique existant.'));$('subscription-list').append(row);}}
+async function refresh(){
+ $('refresh').disabled=true;$('sync').textContent='Actualisation des calendriers…';
+ const results=await Promise.allSettled(Object.entries(FEEDS).map(async([id,feed])=>{const response=await fetch(ROOT+feed.file,{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('HTTP '+response.status);return {id,...C.parseICS(await response.text(),id)};}));
+ const failures=[],warnings=[];let successes=0;
+ results.forEach((result,index)=>{const id=Object.keys(FEEDS)[index];if(result.status==='fulfilled'){events=events.filter(e=>e.feed!==id).concat(result.value.events);warnings.push(...result.value.warnings);successes++;}else failures.push(FEEDS[id].name);});
+ loaded=true;$('refresh').disabled=false;
+ $('sync').textContent=successes===3?'● Flux récupérés à '+timeLabel(Date.now())+' · Heure de Paris':`${successes}/3 flux récupérés. Actualisation incomplète.`;
+ $('warning').hidden=!failures.length&&!warnings.length;
+ $('warning').textContent=(failures.length?'Impossible de recharger : '+failures.join(', ')+'. Les données déjà chargées sont conservées ; elles peuvent être anciennes. Réessayez avec « Actualiser ». ':'')+(warnings.length?`${warnings.length} événement(s) non affiché(s) : format non pris en charge. Consultez le flux abonné pour les détails.`:'');
+ render();
+}
+function moveMonth(delta){const d=new Date(month+'-01T12:00:00Z');d.setUTCMonth(d.getUTCMonth()+delta);month=d.toISOString().slice(0,7);render();}
+$('previous').onclick=()=>moveMonth(-1);$('next').onclick=()=>moveMonth(1);$('today').onclick=()=>{month=C.dayKey(Date.now()).slice(0,7);render();};
+$('refresh').onclick=refresh;$('subscribe').onclick=()=>$('subscriptions').showModal();
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;render();});
+document.querySelectorAll('[data-feed]').forEach(b=>b.onclick=()=>{const id=b.dataset.feed;selectedFeeds=selectedFeeds.includes(id)?selectedFeeds.filter(x=>x!==id):[...selectedFeeds,id];render();});
+['kind','certainty','future'].forEach(id=>$(id).onchange=render);$('search').oninput=render;
+$('reset').onclick=()=>{selectedFeeds=Object.keys(FEEDS);$('kind').value='all';$('certainty').value='all';$('future').checked=false;$('search').value='';render();};
+subscriptionList();render();refresh();
+</script>
+</body>
+</html>
