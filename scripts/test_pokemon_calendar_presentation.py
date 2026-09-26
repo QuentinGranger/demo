@@ -6,7 +6,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from pokemon_calendar_presentation import (
-    assert_allowed, assert_no_duplicate, clean_calendar, excluded, logical, present_event, properties,
+    assert_allowed, assert_no_duplicate, assert_unique_calendar, clean_calendar,
+    clean_description, excluded, logical, present_event, properties,
 )
 from pokemon_calendar_safe_patch import apply_request
 from pokemon_calendar_batch_patch import apply_batch
@@ -38,9 +39,10 @@ class PresentationTests(unittest.TestCase):
         source = event(title='ℹ️ 🟡 🃏 Sortie JCC — Test')
         result = present_event(source, '20260926T080000Z')
         before, after = properties(source), properties(result)
-        for key in ('UID', 'DTSTART', 'DTEND', 'DESCRIPTION'):
+        for key in ('UID', 'DTSTART', 'DTEND'):
             self.assertEqual(before[key], after[key])
-        self.assertEqual(after['SUMMARY'], 'Sortie JCC — Test [À confirmer]')
+        self.assertEqual(after['SUMMARY'], 'JCC — Test [À confirmer]')
+        self.assertEqual(after['DESCRIPTION'], before['DESCRIPTION'].replace(r'\nSource', r'\n\nSource'))
         self.assertEqual(after['SEQUENCE'], '4')
         self.assertEqual(after['TRANSP'], 'TRANSPARENT')
         self.assertEqual(source.split('BEGIN:VALARM')[1], result.split('BEGIN:VALARM')[1])
@@ -53,6 +55,41 @@ class PresentationTests(unittest.TestCase):
         for line in result.splitlines():
             if line.startswith(('SUMMARY:', ' ')):
                 self.assertLessEqual(len(line.encode('utf-8')), 75)
+
+    def test_long_notes_and_urls_round_trip_with_utf8_folding(self):
+        source = event(extra='URL:https://example.org/' + 'é' * 120)
+        result = present_event(source)
+        self.assertEqual(properties(result)['URL'], properties(source)['URL'])
+        self.assertTrue(all(len(line.encode('utf-8')) <= 75 for line in result.splitlines()))
+        self.assertEqual(present_event(result), result)
+
+    def test_description_spacing_preserves_details_and_certainty(self):
+        notes = r'📦 Checklist produits :\n🟡 Coffret Mew — 49,99 €\n🟠 ETB\nSource : https://example.org/a\,b\nRappels : J-1'
+        result = clean_description(notes)
+        self.assertIn('[À confirmer] Coffret Mew — 49,99 €', result)
+        self.assertIn('[Distributeur] ETB', result)
+        self.assertIn(r'\n\nSource : https://example.org/a\,b', result)
+        self.assertEqual(clean_description(result), result)
+        self.assertEqual(clean_description(r'Literal \\n preserved'), r'Literal \\n preserved')
+
+    def test_direct_write_duplicate_caught_by_validation(self):
+        with self.assertRaises(SystemExit):
+            assert_unique_calendar(calendar(event('a'), event('b')))
+        with self.assertRaises(SystemExit):
+            assert_unique_calendar(calendar(event('a'), event('a', 'Autre titre')))
+        with self.assertRaises(SystemExit):
+            assert_unique_calendar(calendar(event('go', 'Pokémon GO — Raid')))
+
+    def test_different_zones_durations_and_recurrences_are_not_duplicates(self):
+        source = event('a').replace('DTSTART;VALUE=DATE:20261001', 'DTSTART;TZID=Europe/Paris:20261001T100000')
+        assert_no_duplicate(calendar(source), source.replace('UID:a', 'UID:b').replace('Europe/Paris', 'America/New_York'))
+        assert_no_duplicate(calendar(source), source.replace('UID:a', 'UID:b').replace('20261002', '20261003'))
+        assert_no_duplicate(calendar(source), source.replace('UID:a', 'UID:b').replace('SEQUENCE:3', 'RRULE:FREQ=DAILY;COUNT=2\nSEQUENCE:3'))
+
+    def test_title_normalization_cannot_hide_duplicate(self):
+        source = event('a', 'JCC Pokémon Pocket — Booster')
+        with self.assertRaises(SystemExit):
+            assert_no_duplicate(calendar(source), event('b', 'Pocket — Booster [À confirmer]'))
 
     def test_cleaning_deduplicates_only_known_alias_with_keeper(self):
         keeper = 'fnac-beaune-pokemon-30-20260919@openai'
