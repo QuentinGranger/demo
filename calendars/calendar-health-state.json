@@ -2,9 +2,9 @@
   "version": "CROSS_CALENDAR_HEALTH_STATE_FR_V2",
   "policy": "calendar-health-policy.json",
   "baseline_at": "2026-08-19T16:10:00Z",
-  "last_policy_migration_at": "2026-09-26T08:11:52.319437Z",
-  "current_overall_state": "DEGRADED",
-  "redundancy_state": "DEGRADED",
+  "last_policy_migration_at": "2026-09-26T13:06:40.272832Z",
+  "current_overall_state": "HEALTHY",
+  "redundancy_state": "HEALTHY",
   "baseline_manifest": {
     "FORTNITE": [
       {
@@ -46,53 +46,14 @@
     ]
   },
   "franchise_state": {
-    "FORTNITE": "DEGRADED",
-    "HARRY_POTTER": "DEGRADED",
+    "FORTNITE": "HEALTHY",
+    "HARRY_POTTER": "HEALTHY",
     "POKEMON": "HEALTHY"
   },
   "observer_state": {
-    "Calendriers Fortnite France & Europe": "DEGRADED",
-    "Billetterie Harry Potter France": "DEGRADED",
-    "Calendriers Pokémon France & Paris": "HEALTHY"
+    "Calendriers jeux — France": "HEALTHY"
   },
-  "active_incidents": [
-    {
-      "incident_key": "health|FORTNITE|AUTOMATION_DISABLED|Calendriers Fortnite France & Europe",
-      "state": "OPEN",
-      "code": "AUTOMATION_DISABLED",
-      "franchise": "FORTNITE",
-      "severity": "DEGRADED",
-      "opened_at": "2026-08-30T05:40:58Z",
-      "evidence": "automations.peek reports Calendriers Fortnite France & Europe is_enabled=false while the health policy requires it enabled; no automatic re-enable was performed."
-    },
-    {
-      "incident_key": "health|SYSTEM|OBSERVER_REDUNDANCY_LOST|hourly-observers",
-      "state": "OPEN",
-      "code": "OBSERVER_REDUNDANCY_LOST",
-      "franchise": "FORTNITE",
-      "severity": "DEGRADED",
-      "opened_at": "2026-08-30T05:40:58Z",
-      "evidence": "Only one of the two declared hourly cross-calendar observers is enabled: Billetterie Harry Potter France is active, Calendriers Fortnite France & Europe is disabled."
-    },
-    {
-      "incident_key": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris",
-      "state": "OPEN",
-      "code": "AUTOMATION_DISABLED",
-      "franchise": "HARRY_POTTER",
-      "severity": "DEGRADED",
-      "opened_at": "2026-09-26T08:12:50.591416Z",
-      "evidence": "Live automations.peek: Calendriers Harry Potter France & Paris: disabled"
-    },
-    {
-      "incident_key": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France",
-      "state": "OPEN",
-      "code": "AUTOMATION_MISSING",
-      "franchise": "HARRY_POTTER",
-      "severity": "DEGRADED",
-      "opened_at": "2026-09-26T08:12:50.591416Z",
-      "evidence": "Live automations.peek: Billetterie Harry Potter France: not found"
-    }
-  ],
+  "active_incidents": [],
   "incident_history": [
     {
       "incident_id": "health-fortnite-competitive-validation-20260826-open",
@@ -176,6 +137,50 @@
       "evidence": "Live automations.peek: Billetterie Harry Potter France: not found",
       "incident_id": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France|20260926",
       "at": "2026-09-26T08:12:50.591416Z"
+    },
+    {
+      "incident_key": "health|FORTNITE|AUTOMATION_DISABLED|Calendriers Fortnite France & Europe",
+      "state": "RECOVERED",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T05:40:58Z",
+      "evidence": "User explicitly chose consolidated monitoring. The active combined task update was verified by live read-back; legacy separate tasks retired by design, not silently re-enabled.",
+      "incident_id": "health|FORTNITE|AUTOMATION_DISABLED|Calendriers Fortnite France & Europe|consolidated-20260926",
+      "at": "2026-09-26T13:07:28.966040Z"
+    },
+    {
+      "incident_key": "health|SYSTEM|OBSERVER_REDUNDANCY_LOST|hourly-observers",
+      "state": "RECOVERED",
+      "code": "OBSERVER_REDUNDANCY_LOST",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T05:40:58Z",
+      "evidence": "User explicitly chose consolidated monitoring. The active combined task update was verified by live read-back; legacy separate tasks retired by design, not silently re-enabled.",
+      "incident_id": "health|SYSTEM|OBSERVER_REDUNDANCY_LOST|hourly-observers|consolidated-20260926",
+      "at": "2026-09-26T13:07:28.966040Z"
+    },
+    {
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris",
+      "state": "RECOVERED",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "HARRY_POTTER",
+      "severity": "DEGRADED",
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "User explicitly chose consolidated monitoring. The active combined task update was verified by live read-back; legacy separate tasks retired by design, not silently re-enabled.",
+      "incident_id": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris|consolidated-20260926",
+      "at": "2026-09-26T13:07:28.966040Z"
+    },
+    {
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France",
+      "state": "RECOVERED",
+      "code": "AUTOMATION_MISSING",
+      "franchise": "HARRY_POTTER",
+      "severity": "DEGRADED",
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "User explicitly chose consolidated monitoring. The active combined task update was verified by live read-back; legacy separate tasks retired by design, not silently re-enabled.",
+      "incident_id": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France|consolidated-20260926",
+      "at": "2026-09-26T13:07:28.966040Z"
     }
   ],
   "history": [
@@ -208,6 +213,11 @@
       "at": "2026-09-26T08:11:52.319437Z",
       "type": "HEALTH_V3_CONTRACT_REPAIR",
       "note": "Validator aligned with V3 and eight declared paths. Current live observation: Pokémon hourly enabled; Fortnite and Harry Potter daily disabled; Harry Potter ticketing missing. No tasks enabled or created. Failed observations can refresh an explicitly DEGRADED heartbeat."
+    },
+    {
+      "at": "2026-09-26T13:06:40.272832Z",
+      "type": "USER_APPROVED_MONITOR_CONSOLIDATION",
+      "note": "Legacy monitoring tasks replaced by one active task plus independent GitHub Actions. Service update confirmed. Health will be determined from a fresh task snapshot."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "version": "CROSS_CALENDAR_HEALTH_POLICY_FR_V3",
-  "updated_at": "2026-09-26T08:11:52.319437Z",
+  "version": "CROSS_CALENDAR_HEALTH_POLICY_FR_V4",
+  "updated_at": "2026-09-26T13:06:40.272832Z",
   "scope": "Permanent redundant health monitoring for subscribed Fortnite, Harry Potter and Pokemon calendars in QuentinGranger/demo",
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -8,7 +8,7 @@
     "subscription_path_stability": "A subscribed .ics path on the pinned master branch is a public compatibility contract. Never rename/remove it silently. If an internal migration is needed, keep the old path as a valid compatibility mirror unless the user explicitly accepts a subscription URL change.",
     "no_expiry": "Recurring health-critical monitor schedules must not contain RRULE UNTIL or COUNT unless explicitly requested by the user.",
     "no_news_is_not_failure": "A calendar may legitimately receive no Git commit for a long period. Health is based on monitor liveness, repository/path/raw-endpoint availability and ICS integrity, not file modification frequency alone.",
-    "no_single_watchdog": "No single ChatGPT automation is authoritative for cross-calendar health. At least two independent recurring observers must be able to inspect all monitored automations; GitHub Actions is the external validation plane.",
+    "no_single_watchdog": "User-authorized consolidation: one active ChatGPT observer plus the independent GitHub Actions validation plane. Do not count retired tasks as missing monitors.",
     "incident_only_state_writes": "Routine healthy checks do not update calendar-health-state.json. Persist only incident transitions or deliberate policy migrations.",
     "low_frequency_heartbeat": "calendar-health-heartbeat.json is a low-frequency observer proof and snapshot, not a calendar fact. Any declared observer may refresh it after a successful cross-check.",
     "respect_manual_control": "Never silently re-enable an automation the user deliberately disabled. Detect and report disabled/finite/stale monitoring instead.",
@@ -68,31 +68,16 @@
   "observers": {
     "chatgpt_observers": [
       {
-        "title": "Calendriers Fortnite France & Europe",
-        "expected_recurrence": "HOURLY",
-        "max_liveness_gap_hours": 3
-      },
-      {
-        "title": "Billetterie Harry Potter France",
-        "expected_recurrence": "HOURLY",
-        "max_liveness_gap_hours": 3
-      },
-      {
-        "title": "Calendriers Pokémon France & Paris",
+        "title": "Calendriers jeux — France",
         "expected_recurrence": "HOURLY",
         "max_liveness_gap_hours": 3
       }
     ],
-    "minimum_enabled_observers": 2,
-    "fallback_monitors": [
-      "Calendriers Harry Potter France & Paris",
-      "Calendriers Pokémon France & Paris"
-    ],
-    "rule": "Every declared ChatGPT observer performs the lightweight cross-check on each run. If one observer dies, the other can open the incident. GitHub Actions remains independent of ChatGPT and detects stale heartbeat/file corruption.",
-    "self_check": "The currently executing observer is itself evidence of execution, but it must still inspect the other observer and all monitored schedules via automations state.",
+    "minimum_enabled_observers": 1,
     "maintenance_observers": [
       "MANUAL_HEALTH_REPAIR"
-    ]
+    ],
+    "rule": "One consolidated ChatGPT task performs discovery and live task checks; GitHub Actions independently validates repository, public feeds and observed task health twice daily. This is not two independent discovery tasks."
   },
   "heartbeat": {
     "file": "calendars/calendar-health-heartbeat.json",
@@ -152,7 +137,7 @@
   },
   "franchises": {
     "FORTNITE": {
-      "main_automation_title": "Calendriers Fortnite France & Europe",
+      "main_automation_title": "Calendriers jeux — France",
       "expected_recurrence": "HOURLY",
       "max_liveness_gap_hours": 3,
       "global_file": "calendars/fortnite-paris.ics",
@@ -162,16 +147,9 @@
       ]
     },
     "HARRY_POTTER": {
-      "main_automation_title": "Calendriers Harry Potter France & Paris",
-      "expected_recurrence": "DAILY",
-      "max_liveness_gap_hours": 36,
-      "supporting_automations": [
-        {
-          "title": "Billetterie Harry Potter France",
-          "expected_recurrence": "HOURLY",
-          "max_liveness_gap_hours": 3
-        }
-      ],
+      "main_automation_title": "Calendriers jeux — France",
+      "expected_recurrence": "HOURLY",
+      "max_liveness_gap_hours": 3,
       "global_file": "calendars/harry-potter-paris.ics",
       "specialist_files": [
         "calendars/harry-potter-releases-france.ics",
@@ -179,7 +157,7 @@
       ]
     },
     "POKEMON": {
-      "main_automation_title": "Calendriers Pokémon France & Paris",
+      "main_automation_title": "Calendriers jeux — France",
       "expected_recurrence": "HOURLY",
       "max_liveness_gap_hours": 3,
       "global_file": "calendars/pokemon-tcg-france.ics",
@@ -215,11 +193,36 @@
     "Read health policy/state/heartbeat and verify repository/master availability.",
     "Verify declared ICS paths and the three global subscription contracts.",
     "Inspect all monitored automations for existence, enabled state, infinite recurrence, expected cadence/timezone and liveness.",
-    "Verify at least minimum_enabled_observers are healthy; losing redundancy is itself an incident even if one observer remains alive.",
+    "Verify the consolidated observer is healthy and preserve the independent GitHub Actions health workflow.",
     "Do not classify an unchanged ICS as stale solely from file age.",
     "For each new incident, fresh-fetch state, append OPEN through compare-and-swap and notify once; same OPEN incident stays silent; recovery appends RECOVERED once.",
     "Any observer may refresh heartbeat at most daily after successful cross-check; record failed observations as DEGRADED with evidence; never mark them HEALTHY.",
     "Once daily and after material ICS writes, perform deep structure/franchise validation and verify global raw subscription endpoints.",
     "Never create a separate recurring ChatGPT automation solely for health while declared observers can perform it."
-  ]
+  ],
+  "monitor_tasks": {
+    "Calendriers jeux — France": {
+      "automation_id": "6a84c4941c608191bcfb74e78a025c39",
+      "expected_recurrence": "HOURLY",
+      "max_liveness_gap_hours": 3,
+      "covers": [
+        "FORTNITE",
+        "HARRY_POTTER",
+        "POKEMON",
+        "HARRY_POTTER_TICKETING"
+      ]
+    }
+  },
+  "consolidation": {
+    "requested_at": "2026-09-26",
+    "reason": "User chose consolidated monitoring because all five active task slots are occupied.",
+    "retired_task_titles": [
+      "Calendriers Fortnite France & Europe",
+      "Calendriers Harry Potter France & Paris",
+      "Billetterie Harry Potter France"
+    ],
+    "general_harry_potter_cadence": "DAILY",
+    "other_domain_cadence": "HOURLY",
+    "independent_validation": ".github/workflows/validate-calendar-health.yml"
+  }
 }

@@ -4,7 +4,7 @@ import argparse
 import json
 import re
 import unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,6 +95,7 @@ def present_event(event, stamp=None):
     event = set_property(original, 'SUMMARY', title)
     # Subscription information does not reserve the user's personal availability.
     event = set_property(event, 'TRANSP', 'TRANSPARENT')
+    event = compact_period(event)
     if event != original:
         stamp = stamp or datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
         event = set_property(event, 'SEQUENCE', str(int(props.get('SEQUENCE', '0')) + 1))
@@ -110,6 +111,60 @@ def assert_allowed(event):
     for keeper, aliases in policy()['duplicate_aliases'].items():
         if uid in aliases:
             raise SystemExit(f'Duplicate event UID: update the existing canonical UID {keeper}')
+    props = properties(event)
+    for rule in policy().get('identity_rules', []):
+        if (props.get('DTSTART', '')[:8] == rule['date']
+                and all(re.search(pattern, plain(props.get('SUMMARY', ''))) for pattern in rule['title_patterns'])
+                and uid != rule['uid']):
+            raise SystemExit(f"Duplicate event identity: update canonical UID {rule['uid']}")
+
+
+def assert_no_duplicate(calendar_text, event):
+    """Reject a new UID for an existing effect or identical titled session."""
+    incoming = properties(event)
+    def key(props):
+        title = re.sub(r'\W+', ' ', plain(clean_title(props.get('SUMMARY', '')))).strip()
+        return (title, props.get('DTSTART'), plain(props.get('LOCATION', '')))
+    for match in EVENT.finditer(logical(calendar_text)):
+        existing = properties(match.group())
+        if existing.get('UID') == incoming.get('UID'):
+            continue
+        effect = incoming.get('X-POKEMON-USER-EFFECT')
+        if ((effect and effect == existing.get('X-POKEMON-USER-EFFECT'))
+                or (incoming.get('SUMMARY') and incoming.get('DTSTART') and key(incoming) == key(existing))):
+            raise SystemExit(f"Duplicate event: update canonical UID {existing['UID']}")
+
+
+def compact_period(event):
+    """Show reviewed long information windows as start markers, keeping real dates."""
+    props = properties(event)
+    title = policy().get('compact_periods', {}).get(props.get('UID'))
+    if not title or props.get('X-POKEMON-DISPLAY-MODE') == 'START_MARKER':
+        return event
+    # These require explicit recurrence/end-relative alarm handling, not guesswork.
+    if props.get('RRULE') or 'RELATED=END' in event:
+        return event
+    start, end = props.get('DTSTART'), props.get('DTEND')
+    if not start or not end:
+        return event
+    all_day = len(start) == 8
+    fmt = '%Y%m%d' if all_day else ('%Y%m%dT%H%M%SZ' if start.endswith('Z') else '%Y%m%dT%H%M%S')
+    first, last = datetime.strptime(start, fmt), datetime.strptime(end, fmt)
+    if last - first <= timedelta(days=7):
+        return event
+    event = set_property(event, 'X-POKEMON-PERIOD-START', start)
+    event = set_property(event, 'X-POKEMON-PERIOD-END', end)
+    event = set_property(event, 'X-POKEMON-DISPLAY-MODE', 'START_MARKER')
+    original_end_line = next(line for line in event.splitlines() if line.startswith(('DTEND:', 'DTEND;')))
+    marker_end = first + (timedelta(days=1) if all_day else timedelta(minutes=15))
+    event = event.replace(original_end_line, original_end_line.split(':', 1)[0] + ':' + marker_end.strftime(fmt), 1)
+    datefmt = '%d/%m/%Y' if all_day else '%d/%m/%Y à %H:%M'
+    inclusive_end = last - timedelta(days=1) if all_day else last
+    zone = ' UTC' if start.endswith('Z') else (' (heure du calendrier)' if not all_day else '')
+    note = ('Repère de début de période. Période complète : du ' + first.strftime(datefmt)
+            + ' au ' + inclusive_end.strftime(datefmt) + zone + '.\\n\\n')
+    event = set_property(event, 'DESCRIPTION', note + props.get('DESCRIPTION', ''))
+    return set_property(event, 'SUMMARY', title.replace('{title}', props.get('SUMMARY', '')))
 
 
 def clean_calendar(text, stamp=None):
@@ -135,6 +190,10 @@ def clean_calendar(text, stamp=None):
             end = match.end()
         chunks.append(text[end:])
         base = ''.join(chunks)
+        if 'REFRESH-INTERVAL;' not in base:
+            base = base.replace('VERSION:2.0\n', 'VERSION:2.0\nREFRESH-INTERVAL;VALUE=DURATION:PT1H\n')
+        if 'X-PUBLISHED-TTL:' not in base:
+            base = base.replace('VERSION:2.0\n', 'VERSION:2.0\nX-PUBLISHED-TTL:PT1H\n')
         result = base.replace('END:VCALENDAR', '\n'.join(kept) + '\nEND:VCALENDAR')
     else:
         result = text

@@ -1,5 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
+X-PUBLISHED-TTL:PT1H
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
 PRODID:-//OpenAI//Pokemon Calendars//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
@@ -9,32 +11,33 @@ X-POKEMON-REMINDER-POLICY:TYPE_FIRST_V2
 X-POKEMON-LOCATION-POLICY:FULL_ADDRESS_GEO_TICKETING_MAPS_V2
 X-POKEMON-CHANGE-POLICY:UID_STABLE_HISTORY_V1
 BEGIN:VEVENT
+X-POKEMON-DISPLAY-MODE:START_MARKER
+X-POKEMON-PERIOD-END:20270104
+X-POKEMON-PERIOD-START:20260416
+LAST-MODIFIED:20260926T130540Z
 TRANSP:TRANSPARENT
-UID:4fd55ecb-e663-4845-95a9-42cebe192c0f@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+UID:pokemon-paris-musee-en-herbe-admirez-les-tous-2026@openai
+DTSTAMP:20260926T130540Z
+SEQUENCE:2
 STATUS:CONFIRMED
-PRIORITY:9
-X-POKEMON-PRIORITY:INFO
-X-POKEMON-REMINDER-PROFILE:EVENT_ONGOING_INFO
-X-POKEMON-ACTION:INFO
-DTSTART;VALUE=DATE:20260818
-DTEND;VALUE=DATE:20270104
-SUMMARY:Convention / événement — Admirez-les tous !
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe":Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
-GEO:48.86507;2.34186
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=50;X-TITLE=Musée en Herbe:geo:48.86507,2.34186
-X-POKEMON-LOCATION-PRECISION:BUILDING
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe
-X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.86507,2.34186
-X-POKEMON-TICKET-URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
-X-POKEMON-TICKET-STATUS:AVAILABLE
-X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
-X-POKEMON-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ℹ️ Info — exposition longue durée, sans action urgente.\nFiabilité : ✅ Confirmé officiel (organisateur). Exposition Pokémon à Paris. Fin annoncée : 3 janvier 2027.\n📍 Adresse : Musée en Herbe — 23 rue de l'Arbre-Sec, 75001 Paris, France.\n📌 Précision GEO : bâtiment.\n🗺️ Plans : https://maps.apple.com/?ll=48.86507,2.34186&q=Mus%C3%A9e%20en%20Herbe\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.86507,2.34186\n🎟️ Billetterie : page officielle de l'exposition avec liens de réservation par période — https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nRappels : aucun rappel de début — l'exposition est déjà en cours.\nSource : https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
-URL:https://www.musee-en-herbe.com/50-ans-ca-se-fete-en-grand-lo4435.html
-CATEGORIES:Pokémon,Événement,Convention,Priorité Info
+PRIORITY:5
+X-POKEMON-PRIORITY:ACTIONABLE_SOON
+X-POKEMON-ACTION:RESERVE_ATTEND
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:72
+X-POKEMON-USER-EFFECT:physical_event:pokemon-exhibition-admirez-les-tous:musee-en-herbe-paris:2026
+X-POKEMON-PHYSICAL-EVENT-ID:musee-en-herbe-admirez-les-tous-2026
+X-POKEMON-EVENT-TYPE:EXHIBITION
+X-POKEMON-ACCESS-TYPE:RESERVATION_REQUIRED
+DTSTART;VALUE=DATE:20260416
+DTEND;VALUE=DATE:20260417
+SUMMARY:Ouverture — Admirez-les tous ! — Musée en Herbe
+LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
+DESCRIPTION:Repère de début de période. Période complète : du 16/04/2026 au 03/01/2027.\n\nExposition hommage à Pokémon au Musée en Herbe. Le musée confirme qu’elle se poursuit jusqu’au 3 janvier 2027. Ouvert tous les jours de 10h à 19h ; fermeture à 17h les 24 et 31 décembre ; fermé le 25 décembre et le 1er janvier. Réservation requise pour la visite libre.\nSource officielle : https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nConfirmation de fin : https://www.musee-en-herbe.com/visite-atelier-wo520.html
+URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
+CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,EXHIBITION,MUSEE
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT

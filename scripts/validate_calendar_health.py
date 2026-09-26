@@ -15,7 +15,7 @@ POLICY = CAL / "calendar-health-policy.json"
 STATE = CAL / "calendar-health-state.json"
 HEARTBEAT = CAL / "calendar-health-heartbeat.json"
 
-EXPECTED_POLICY = "CROSS_CALENDAR_HEALTH_POLICY_FR_V3"
+EXPECTED_POLICY = "CROSS_CALENDAR_HEALTH_POLICY_FR_V4"
 EXPECTED_STATE = "CROSS_CALENDAR_HEALTH_STATE_FR_V2"
 EXPECTED_HEARTBEAT = "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2"
 VALID_HEALTH = {"HEALTHY", "DEGRADED", "CRITICAL"}
@@ -117,6 +117,11 @@ def fetch_raw(url, attempts=3, timeout=12):
 
 
 def monitored_automations(policy):
+    if policy.get('monitor_tasks'):
+        return {title: {
+            'expected_recurrence': cfg['expected_recurrence'],
+            'max_gap': cfg['max_liveness_gap_hours'],
+        } for title, cfg in policy['monitor_tasks'].items()}
     result = {}
     for franchise, cfg in policy.get("franchises", {}).items():
         title = cfg.get("main_automation_title")

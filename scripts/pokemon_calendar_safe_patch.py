@@ -4,7 +4,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from pokemon_calendar_presentation import assert_allowed, logical, present_event
+from pokemon_calendar_presentation import assert_allowed, assert_no_duplicate, logical, present_event
 
 # Canonical Apple/iOS subscribed feed. Legacy pokemon-paris.ics is intentionally
 # not writable through the safe patch path anymore, to prevent split-brain writes.
@@ -113,6 +113,7 @@ def apply_request(req_path: Path):
     if op in ('add', 'upsert', 'update'):
         event = normalize_event(req['event'])
         assert_allowed(event)
+        assert_no_duplicate(text, event)
         event = normalize_event(present_event(event))
         event_uid = uid_of(event)
         if uid and uid != event_uid:
