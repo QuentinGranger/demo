@@ -56,9 +56,37 @@ def clean_title(title, status=''):
     uncertain = status == 'TENTATIVE' or '🟡' in title or '🟠' in title
     title = re.sub(r'^[^\w\[]+', '', title).strip()
     title = re.sub(r'^ℹ\ufe0f?\s*[^\w\[]*', '', title).strip()
+    for prefix, replacement in policy().get('title_prefixes', {}).items():
+        if title.startswith(prefix):
+            title = replacement + title[len(prefix):]
+            break
     if uncertain and '[À confirmer]' not in title:
         title += ' [À confirmer]'
     return title
+
+
+def clean_description(value):
+    """Space existing notes without rewriting sources, prices or certainty."""
+    # Keep escaped backslashes intact: a literal \\n is not a line separator.
+    lines = re.split(r'(?<!\\)\\[nN]', value)
+    sections = re.compile(
+        r'^(?:Fiabilité|Checklist|Complétude|Rappels?|Lié à|Sources?(?: [^:]*)?)\s*:',
+        re.I,
+    )
+    result = []
+    for line in lines:
+        line = line.strip()
+        # Decorative markers do not carry facts. Status badges do: spell them out.
+        line = re.sub(r'^(?:[⭐📦✨🔥🔔🆕]\ufe0f?\s*)+', '', line)
+        line = re.sub(r'^(?:🟡|🟠|✅)\ufe0f?\s*', lambda m: {
+            '🟡': '[À confirmer] ', '🟠': '[Distributeur] ', '✅': '[Confirmé] ',
+        }[m.group()[0]], line)
+        # Separate notes from reliability, products, reminders and source links.
+        if sections.match(line) and result and result[-1]:
+            result.append('')
+        if line or (result and result[-1]):
+            result.append(line)
+    return r'\n'.join(result).strip()
 
 
 def fold(line):
@@ -96,12 +124,16 @@ def present_event(event, stamp=None):
     # Subscription information does not reserve the user's personal availability.
     event = set_property(event, 'TRANSP', 'TRANSPARENT')
     event = compact_period(event)
+    description = properties(event).get('DESCRIPTION')
+    if description is not None:
+        event = set_property(event, 'DESCRIPTION', clean_description(description))
     if event != original:
         stamp = stamp or datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
         event = set_property(event, 'SEQUENCE', str(int(props.get('SEQUENCE', '0')) + 1))
         event = set_property(event, 'LAST-MODIFIED', stamp)
         event = set_property(event, 'DTSTAMP', stamp)
-    return '\n'.join(fold(line) if line.startswith('SUMMARY:') else line for line in event.splitlines())
+    # RFC 5545 limits physical content lines to 75 UTF-8 octets, not characters.
+    return '\n'.join(fold(line) for line in event.splitlines())
 
 
 def assert_allowed(event):
@@ -122,17 +154,39 @@ def assert_allowed(event):
 def assert_no_duplicate(calendar_text, event):
     """Reject a new UID for an existing effect or identical titled session."""
     incoming = properties(event)
-    def key(props):
-        title = re.sub(r'\W+', ' ', plain(clean_title(props.get('SUMMARY', '')))).strip()
-        return (title, props.get('DTSTART'), plain(props.get('LOCATION', '')))
+    def key(block):
+        props = properties(block)
+        title = clean_title(props.get('SUMMARY', '')).replace('[À confirmer]', '')
+        title = re.sub(r'\W+', ' ', plain(title)).strip()
+        # Same wall-clock time in different zones is not the same session.
+        # Preserve recurrence/exception identity and different session lengths.
+        timing = tuple(line for line in logical(block).splitlines()
+                       if line.split(':', 1)[0].split(';')[0] in
+                       ('DTSTART', 'DTEND', 'DURATION', 'RRULE', 'RDATE', 'EXDATE', 'RECURRENCE-ID'))
+        return (title, tuple(sorted(timing)), plain(props.get('LOCATION', '')))
     for match in EVENT.finditer(logical(calendar_text)):
         existing = properties(match.group())
         if existing.get('UID') == incoming.get('UID'):
             continue
         effect = incoming.get('X-POKEMON-USER-EFFECT')
         if ((effect and effect == existing.get('X-POKEMON-USER-EFFECT'))
-                or (incoming.get('SUMMARY') and incoming.get('DTSTART') and key(incoming) == key(existing))):
+                or (incoming.get('SUMMARY') and incoming.get('DTSTART') and key(event) == key(match.group()))):
             raise SystemExit(f"Duplicate event: update canonical UID {existing['UID']}")
+
+
+def assert_unique_calendar(text):
+    """Check direct writes too; never silently discard an unreviewed event."""
+    seen = []
+    uids = set()
+    for match in EVENT.finditer(logical(text)):
+        event = match.group()
+        uid = properties(event).get('UID')
+        if not uid or uid in uids:
+            raise SystemExit(f'Missing or duplicate UID: {uid}')
+        assert_allowed(event)
+        assert_no_duplicate('\n'.join(seen), event)
+        seen.append(event)
+        uids.add(uid)
 
 
 def compact_period(event):
@@ -204,18 +258,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
-    dirty = False
+    updates = []
     for name in policy()['feeds']:
         path = ROOT / name
         raw = path.read_bytes()
         result, removed = clean_calendar(raw.decode('utf-8'))
+        # Preflight every feed before writing any file.
+        assert_unique_calendar(result)
         if result.encode('utf-8') != raw:
-            dirty = True
             print(f'{name}: {len(removed)} removed; presentation updated')
-            if not args.check:
-                path.write_bytes(result.encode('utf-8'))
-    if args.check and dirty:
+            updates.append((path, result))
+    if args.check and updates:
         raise SystemExit('Run python scripts/pokemon_calendar_presentation.py')
+    for path, result in updates:
+        path.write_bytes(result.encode('utf-8'))
 
 
 if __name__ == '__main__':

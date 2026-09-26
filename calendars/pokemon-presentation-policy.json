@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "excluded_products": [
     "Pokémon GO",
     "Pokémon Sleep"
@@ -93,5 +93,15 @@
         "(?:mondiaux|worlds).*2026"
       ]
     }
-  ]
+  ],
+  "title_prefixes": {
+    "JCC Pokémon Pocket — ": "Pocket — ",
+    "Pokémon TCG Pocket — ": "Pocket — ",
+    "JCC Pokémon Live — ": "Live — ",
+    "Pokémon TCG Live — ": "Live — ",
+    "Pokémon Champions — ": "Champions — ",
+    "Pokémon UNITE — ": "UNITE — ",
+    "Pokémon Écarlate/Violet — ": "Écarlate/Violet — ",
+    "Sortie JCC — ": "JCC — "
+  }
 }

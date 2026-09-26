@@ -9,7 +9,12 @@ Les chemins et noms des calendriers existants sont conservés.
 ## Présentation
 
 - Titres sans accumulation de pictogrammes de priorité, de nouveauté ou de statut.
+- Libellés courts et homogènes : `JCC — …`, `Pocket — …`, `Live — …`,
+  `Champions — …`, sans répéter Pokémon dans chaque ligne du même agenda.
 - Mention textuelle `[À confirmer]` pour les dates incertaines.
+- Descriptions aérées : produits, fiabilité, rappels et sources séparés par des
+  lignes vides. Les statuts des produits restent explicites ; les prix et liens
+  existants sont conservés. Cette mise en forme ne revérifie pas les annonces.
 - Dates réelles, horaires, sources et rappels conservés ; repères visuels explicitement distingués des périodes complètes.
 - Événements informatifs marqués « disponible » : ils ne bloquent pas l'agenda personnel.
 - Pokémon GO et Pokémon Sleep exclus des trois flux publics concernés.
@@ -25,6 +30,16 @@ Les vraies sessions, dates et produits distincts restent séparés.
 Les doublons sont archivés dans `archive/pokemon-duplicates-20260926.json`.
 L'import vérifie aussi l'identité métier et les sessions identiques, même sous
 un nouvel UID. Un lot contenant un doublon est refusé avant toute écriture.
+Le contrôle de présentation vérifie désormais aussi les doublons des écritures
+directes, y compris après normalisation des titres. Il signale les cas non
+répertoriés pour examen, sans supprimer automatiquement des événements différents.
+Les fuseaux horaires, durées et récurrences distinguent les sessions.
+Les trois flux sont contrôlés avant toute réécriture par le script de présentation.
+
+Toutes les lignes des événements sont repliées à 75 octets UTF-8 pour éviter
+les descriptions ou liens tronqués dans les clients iCalendar. Les UID, dates,
+horaires et alarmes restent inchangés ; les modifications de présentation
+incrémentent la révision de l'événement pour les abonnements existants.
 
 ## Maintenance
 

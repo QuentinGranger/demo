@@ -14,11 +14,11 @@ BEGIN:VEVENT
 X-POKEMON-DISPLAY-MODE:START_MARKER
 X-POKEMON-PERIOD-END:20270104
 X-POKEMON-PERIOD-START:20260416
-LAST-MODIFIED:20260926T130540Z
+LAST-MODIFIED:20260926T212932Z
 TRANSP:TRANSPARENT
 UID:pokemon-paris-musee-en-herbe-admirez-les-tous-2026@openai
-DTSTAMP:20260926T130540Z
-SEQUENCE:2
+DTSTAMP:20260926T212932Z
+SEQUENCE:3
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:ACTIONABLE_SOON
@@ -27,7 +27,8 @@ X-POKEMON-DATE-PRECISION:EXACT_DATE
 X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 X-POKEMON-CONFIDENCE:99
 X-POKEMON-ACTIONABILITY:72
-X-POKEMON-USER-EFFECT:physical_event:pokemon-exhibition-admirez-les-tous:musee-en-herbe-paris:2026
+X-POKEMON-USER-EFFECT:physical_event:pokemon-exhibition-admirez-les-tous:mu
+ see-en-herbe-paris:2026
 X-POKEMON-PHYSICAL-EVENT-ID:musee-en-herbe-admirez-les-tous-2026
 X-POKEMON-EVENT-TYPE:EXHIBITION
 X-POKEMON-ACCESS-TYPE:RESERVATION_REQUIRED
@@ -35,16 +36,24 @@ DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
 SUMMARY:Ouverture — Admirez-les tous ! — Musée en Herbe
 LOCATION:Musée en Herbe\, 23 rue de l'Arbre-Sec\, 75001 Paris\, France
-DESCRIPTION:Repère de début de période. Période complète : du 16/04/2026 au 03/01/2027.\n\nExposition hommage à Pokémon au Musée en Herbe. Le musée confirme qu’elle se poursuit jusqu’au 3 janvier 2027. Ouvert tous les jours de 10h à 19h ; fermeture à 17h les 24 et 31 décembre ; fermé le 25 décembre et le 1er janvier. Réservation requise pour la visite libre.\nSource officielle : https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html\nConfirmation de fin : https://www.musee-en-herbe.com/visite-atelier-wo520.html
-URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-aux-pokemon-lo4435.html
+DESCRIPTION:Repère de début de période. Période complète : du 16/04/20
+ 26 au 03/01/2027.\n\nExposition hommage à Pokémon au Musée en Herbe. Le
+  musée confirme qu’elle se poursuit jusqu’au 3 janvier 2027. Ouvert t
+ ous les jours de 10h à 19h ; fermeture à 17h les 24 et 31 décembre ; fe
+ rmé le 25 décembre et le 1er janvier. Réservation requise pour la visit
+ e libre.\n\nSource officielle : https://www.musee-en-herbe.com/admirez-les
+ -tous-une-exposition-hommage-aux-pokemon-lo4435.html\nConfirmation de fin
+  : https://www.musee-en-herbe.com/visite-atelier-wo520.html
+URL:https://www.musee-en-herbe.com/admirez-les-tous-une-exposition-hommage-
+ aux-pokemon-lo4435.html
 CATEGORIES:POKEMON,PHYSICAL-EVENT,PARIS,EXHIBITION,MUSEE
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-worlds-celebration-stores-20260821@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:1
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:1
 X-POKEMON-PRIORITY:CRITICAL
@@ -58,21 +67,42 @@ DTSTART;VALUE=DATE:20260821
 DTEND;VALUE=DATE:20260831
 SUMMARY:Play! Pokémon — Célébration des Mondiaux 2026 + promo Pikachu
 LOCATION:Play! Pokémon Stores participants — France
-DESCRIPTION:Priorité : 🔥 Critique — événement officiel imminent avec récompense promotionnelle distribuée dans la limite des stocks disponibles.\nFiabilité : ✅ Confirmé officiellement par Pokémon. Du 21 au 30 août 2026, les Play! Pokémon Stores participants organisent des tournois « Célébration des Mondiaux 2026 ».\n🎁 Participation : carte promo Pikachu Mondiaux 2026 dans la limite des stocks disponibles et selon l'ordre d'arrivée ; les personnes en tête des catégories junior, senior et master dans chaque magasin peuvent recevoir la version estampillée « WINNER ». Des accessoires commémoratifs sont aussi annoncés pour les vainqueurs.\n📍 France : rechercher le magasin et la séance exacte dans le Localisateur d'évènements Play! Pokémon en utilisant le nom « Célébration des Mondiaux 2026 ». Aucun magasin parisien précis n'est affirmé tant qu'une fiche locale officielle n'a pas été vérifiée.\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-1 uniquement ; le rappel J-7 est déjà passé au moment de l'ajout.\nSource : https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
-URL:https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local-et-obtenez-une-carte-promo-pikachu
-CATEGORIES:Pokémon,Play! Pokémon,Événement,Promo,Championnat du Monde,Priorité Critique,Nouveau
+DESCRIPTION:Priorité : 🔥 Critique — événement officiel imminent ave
+ c récompense promotionnelle distribuée dans la limite des stocks disponi
+ bles.\n\nFiabilité : ✅ Confirmé officiellement par Pokémon. Du 21 au
+  30 août 2026, les Play! Pokémon Stores participants organisent des tour
+ nois « Célébration des Mondiaux 2026 ».\n🎁 Participation : carte pr
+ omo Pikachu Mondiaux 2026 dans la limite des stocks disponibles et selon l
+ 'ordre d'arrivée ; les personnes en tête des catégories junior, senior
+  et master dans chaque magasin peuvent recevoir la version estampillée «
+  WINNER ». Des accessoires commémoratifs sont aussi annoncés pour les v
+ ainqueurs.\n📍 France : rechercher le magasin et la séance exacte dans
+  le Localisateur d'évènements Play! Pokémon en utilisant le nom « Cél
+ ébration des Mondiaux 2026 ». Aucun magasin parisien précis n'est affir
+ mé tant qu'une fiche locale officielle n'a pas été vérifiée.\nAjouté
+  au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\n\nRap
+ pels : J-1 uniquement ; le rappel J-7 est déjà passé au moment de l'ajo
+ ut.\n\nSource : https://www.pokemon.com/fr/actualites/participez-a-des-tou
+ rnois-de-celebration-des-championnats-du-monde-2026-dans-votre-play-pokemo
+ n-store-local-et-obtenez-une-carte-promo-pikachu
+URL:https://www.pokemon.com/fr/actualites/participez-a-des-tournois-de-cele
+ bration-des-championnats-du-monde-2026-dans-votre-play-pokemon-store-local
+ -et-obtenez-une-carte-promo-pikachu
+CATEGORIES:Pokémon,Play! Pokémon,Événement,Promo,Championnat du Monde,P
+ riorité Critique,Nouveau
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 Célébration des Mondiaux demain — trouve ton Play! Pokémon Store et vérifie la promo Pikachu
+DESCRIPTION:🏆 Célébration des Mondiaux demain — trouve ton Play! Pok
+ émon Store et vérifie la promo Pikachu
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-pocket-team-rocket-paris-20260822@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:2
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:3
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -90,21 +120,42 @@ X-POKEMON-SESSION;DATE=20260823;START=0900;END=1800:Paris Saint-Lazare
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260824
 SUMMARY:Pop-up Pokémon Pocket — Team Rocket — Paris Saint-Lazare
-LOCATION;ALTREP="https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20Rue%20d%27Amsterdam%2C%2075008%20Paris":Gare Saint-Lazare\, 13 Rue d'Amsterdam\, 75008 Paris\, France
+LOCATION;ALTREP="https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20Ru
+ e%20d%27Amsterdam%2C%2075008%20Paris":Gare Saint-Lazare\, 13 Rue d'Amsterd
+ am\, 75008 Paris\, France
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20Rue%20d%27Amsterdam%2C%2075008%20Paris
+X-POKEMON-MAPS-URL:https://maps.apple.com/?q=Gare%20Saint-Lazare%2C%2013%20
+ Rue%20d%27Amsterdam%2C%2075008%20Paris
 X-POKEMON-TICKET-STATUS:FREE_NO_TICKET
 X-POKEMON-ACCESS-MODE:FREE
-DESCRIPTION:Priorité : ⭐ Important — activation Pokémon Pocket très courte à Paris.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 21 août 2026. Pokémon confirme les stands Team Rocket à la gare Saint-Lazare à Paris les 22 et 23 août 2026\, de 09:00 à 18:00.\n📅 Sessions officielles : samedi 22 et dimanche 23 août 2026\, de 9h à 18h.\n📍 Point de rendez-vous officiel : gare Saint-Lazare\, Paris. L'adresse 13 Rue d'Amsterdam correspond à l'adresse officielle de la gare ; l'emplacement exact dans la gare n'est pas inventé.\n🎟️ Participation : accès libre au stand éphémère.\n🧩 Parcours : énigmes et code secret permettant d'accéder à un lieu secret et à un message du Boss.\n🎁 Récompense annoncée : tote bag et code échangeable contre 24 Sabliers Booster dans le JCC Pokémon Pocket.\n✨ Mise à jour majeure le 27 août 2026 : la source Pokémon officielle remplace la qualification tentative antérieure. L'événement est déjà terminé ; aucun rappel rétroactif n'est créé.\nSource officielle : https://www.pokemon.com/fr/actualites/rejoignez-les-fans-de-la-team-rocket-a-londres-ou-a-paris\nSource adresse gare : https://www.transilien.com/fr/gare/gare-de-paris-saint-lazare-8738400
-URL:https://www.pokemon.com/fr/actualites/rejoignez-les-fans-de-la-team-rocket-a-londres-ou-a-paris
-CATEGORIES:Pokémon,Pokémon Pocket,Événement,Paris,Pop-up,Team Rocket,Mise à jour,Priorité Important
+DESCRIPTION:Priorité : ⭐ Important — activation Pokémon Pocket très
+  courte à Paris.\n\nFiabilité : ✅ Confirmé officiellement par Pokémo
+ n le 21 août 2026. Pokémon confirme les stands Team Rocket à la gare Sa
+ int-Lazare à Paris les 22 et 23 août 2026\, de 09:00 à 18:00.\n📅 Ses
+ sions officielles : samedi 22 et dimanche 23 août 2026\, de 9h à 18h.\n
+ 📍 Point de rendez-vous officiel : gare Saint-Lazare\, Paris. L'adresse
+  13 Rue d'Amsterdam correspond à l'adresse officielle de la gare ; l'empl
+ acement exact dans la gare n'est pas inventé.\n🎟️ Participation : ac
+ cès libre au stand éphémère.\n🧩 Parcours : énigmes et code secret
+  permettant d'accéder à un lieu secret et à un message du Boss.\n🎁 R
+ écompense annoncée : tote bag et code échangeable contre 24 Sabliers Bo
+ oster dans le JCC Pokémon Pocket.\nMise à jour majeure le 27 août 2026
+  : la source Pokémon officielle remplace la qualification tentative anté
+ rieure. L'événement est déjà terminé ; aucun rappel rétroactif n'est
+  créé.\n\nSource officielle : https://www.pokemon.com/fr/actualites/rejo
+ ignez-les-fans-de-la-team-rocket-a-londres-ou-a-paris\n\nSource adresse ga
+ re : https://www.transilien.com/fr/gare/gare-de-paris-saint-lazare-8738400
+URL:https://www.pokemon.com/fr/actualites/rejoignez-les-fans-de-la-team-roc
+ ket-a-londres-ou-a-paris
+CATEGORIES:Pokémon,Pokémon Pocket,Événement,Paris,Pop-up,Team Rocket,Mi
+ se à jour,Priorité Important
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-pocket-team-rocket-ambition-20260827@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:1
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -116,18 +167,29 @@ X-POKEMON-FRESHNESS:NEW
 X-POKEMON-BADGE:NEW
 DTSTART;TZID=Europe/Paris:20260827T030000
 DTEND;TZID=Europe/Paris:20260827T031500
-SUMMARY:JCC Pokémon Pocket — L’Ambition de la Team Rocket
+SUMMARY:Pocket — L’Ambition de la Team Rocket
 LOCATION:En ligne — JCC Pokémon Pocket (iOS / Android)
-DESCRIPTION:Priorité : ℹ️ Info — sortie numérique officielle importante pour Pokémon Pocket mais sans déplacement physique.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 20 août 2026. L'extension L’Ambition de la Team Rocket est sortie le 27 août 2026 à 01:00 UTC\, soit 03:00 heure de Paris (CEST).\n📱 Contenu : extension centrée sur la Team Rocket avec nouvelles cartes et Pokémon associés à l'organisation.\n🆕 Ajoutée le jour de sortie ; aucun rappel rétroactif n'est créé car l'heure de lancement était déjà passée au moment de cette veille.\nSource : https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextension-lambition-de-la-team-rocket-arrive-bientot
-URL:https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextension-lambition-de-la-team-rocket-arrive-bientot
-CATEGORIES:Pokémon,Pokémon Pocket,Sortie numérique,Team Rocket,Nouveau,Priorité Info
+DESCRIPTION:Priorité : ℹ️ Info — sortie numérique officielle import
+ ante pour Pokémon Pocket mais sans déplacement physique.\n\nFiabilité :
+  ✅ Confirmé officiellement par Pokémon le 20 août 2026. L'extension L
+ ’Ambition de la Team Rocket est sortie le 27 août 2026 à 01:00 UTC\, s
+ oit 03:00 heure de Paris (CEST).\n📱 Contenu : extension centrée sur la
+  Team Rocket avec nouvelles cartes et Pokémon associés à l'organisation
+ .\nAjoutée le jour de sortie ; aucun rappel rétroactif n'est créé car
+  l'heure de lancement était déjà passée au moment de cette veille.\n\n
+ Source : https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextensi
+ on-lambition-de-la-team-rocket-arrive-bientot
+URL:https://www.pokemon.com/fr/actualites/jcc-pokemon-pocket-lextension-lam
+ bition-de-la-team-rocket-arrive-bientot
+CATEGORIES:Pokémon,Pokémon Pocket,Sortie numérique,Team Rocket,Nouveau,P
+ riorité Info
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-worlds-pokemonxp-streams-20260828@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:1
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -138,28 +200,60 @@ X-POKEMON-NEW-UNTIL:20260831T184340Z
 X-POKEMON-FRESHNESS:NEW
 X-POKEMON-BADGE:NEW
 X-POKEMON-SOURCE-TIMEZONE:America/Los_Angeles
-X-POKEMON-SESSION;DATE=20260828;START=2200;END=2300:Pokémon TCG — The Making of Full-Art Card Illustrations
-X-POKEMON-SESSION;DATE=20260829;START=0200;END=0300:Pokémon TCG Pocket — Cards\, Creators and Clashes
-X-POKEMON-SESSION;DATE=20260829;START=1900;END=2000:Pokémon GO — panel PokémonXP
+X-POKEMON-SESSION;DATE=20260828;START=2200;END=2300:Pokémon TCG — The Ma
+ king of Full-Art Card Illustrations
+X-POKEMON-SESSION;DATE=20260829;START=0200;END=0300:Pokémon TCG Pocket —
+  Cards\, Creators and Clashes
+X-POKEMON-SESSION;DATE=20260829;START=1900;END=2000:Pokémon GO — panel P
+ okémonXP
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260831
 SUMMARY:Mondiaux 2026 & PokémonXP — diffusions + drops
-LOCATION:En ligne — Pokemon.com / Twitch officiel Pokémon / Twitch PokémonXP
-DESCRIPTION:Priorité : ⭐ Important — week-end officiel des Mondiaux et de PokémonXP avec plusieurs récompenses limitées liées au visionnage.\nFiabilité : ✅ Confirmé officiellement par Pokémon le 24 août 2026. Les Championnats du Monde Pokémon et PokémonXP se déroulent du 28 au 30 août 2026 et sont retransmis en ligne.\n🎁 Drops Mondiaux : récompenses Pokémon Champions les 28\, 29 et 30 août ; Félinferno des Mondiaux après 60 minutes de diffusion VGC ; autres récompenses JCC Live\, Pokémon GO\, UNITE et Pocket selon les chaînes et durées publiées.\n🃏 PokémonXP — vendredi 28 août 22h–23h heure de Paris : panel « The Making of Full-Art Card Illustrations » ; après 30 minutes sur Twitch PokémonXP\, code JCC Pokémon Live pour 6 boosters Méga-Évolution – Nuit Noire + 1 Jeton d’évènement Stratégies et Combats.\n📱 Pokémon Pocket — samedi 29 août 02h–03h heure de Paris : panel « Cards\, Creators and Clashes—From B Series to What’s Next » ; le temps de visionnage peut contribuer au drop de 24 Sabliers Booster.\n📍 Pokémon GO — samedi 29 août 19h–20h heure de Paris : panel Pokémon GO sur Twitch PokémonXP ; après 30 minutes\, Étude ponctuelle permettant de rencontrer un Pikachu en costume PokémonXP.\n⏱️ Les horaires ci-dessus sont les horaires officiels PDT convertis en Europe/Paris (+9 h fin août). Les rediffusions publiées dans l’heure suivant chaque journée peuvent aussi compter pour certains drops selon Pokémon.\n🆕 Ajouté au calendrier le 26 août 2026.\nRappel : J-1 — activer les drops Twitch et vérifier les chaînes officielles avant le début du week-end.\nSource principale : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu\nProgramme officiel : https://championships.pokemon.com/en-gb/broadcasts/pxp
-URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonxp-pour-obtenir-de-superbes-recompenses-en-jeu
-CATEGORIES:Pokémon,Événement,Play! Pokémon,Mondiaux,PokémonXP,Streaming,Drops,Nouveau,Priorité Important
+LOCATION:En ligne — Pokemon.com / Twitch officiel Pokémon / Twitch Poké
+ monXP
+DESCRIPTION:Priorité : ⭐ Important — week-end officiel des Mondiaux et
+  de PokémonXP avec plusieurs récompenses limitées liées au visionnage.
+ \n\nFiabilité : ✅ Confirmé officiellement par Pokémon le 24 août 202
+ 6. Les Championnats du Monde Pokémon et PokémonXP se déroulent du 28 au
+  30 août 2026 et sont retransmis en ligne.\n🎁 Drops Mondiaux : récomp
+ enses Pokémon Champions les 28\, 29 et 30 août ; Félinferno des Mondiau
+ x après 60 minutes de diffusion VGC ; autres récompenses JCC Live\, Pok
+ émon GO\, UNITE et Pocket selon les chaînes et durées publiées.\n🃏
+  PokémonXP — vendredi 28 août 22h–23h heure de Paris : panel « The
+  Making of Full-Art Card Illustrations » ; après 30 minutes sur Twitch P
+ okémonXP\, code JCC Pokémon Live pour 6 boosters Méga-Évolution – Nu
+ it Noire + 1 Jeton d’évènement Stratégies et Combats.\n📱 Pokémon
+  Pocket — samedi 29 août 02h–03h heure de Paris : panel « Cards\, Cr
+ eators and Clashes—From B Series to What’s Next » ; le temps de visio
+ nnage peut contribuer au drop de 24 Sabliers Booster.\n📍 Pokémon GO
+  — samedi 29 août 19h–20h heure de Paris : panel Pokémon GO sur Twit
+ ch PokémonXP ; après 30 minutes\, Étude ponctuelle permettant de rencon
+ trer un Pikachu en costume PokémonXP.\n⏱️ Les horaires ci-dessus sont
+  les horaires officiels PDT convertis en Europe/Paris (+9 h fin août). Le
+ s rediffusions publiées dans l’heure suivant chaque journée peuvent au
+ ssi compter pour certains drops selon Pokémon.\nAjouté au calendrier le
+  26 août 2026.\n\nRappel : J-1 — activer les drops Twitch et vérifier
+  les chaînes officielles avant le début du week-end.\n\nSource principal
+ e : https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemon
+ xp-pour-obtenir-de-superbes-recompenses-en-jeu\nProgramme officiel : https
+ ://championships.pokemon.com/en-gb/broadcasts/pxp
+URL:https://www.pokemon.com/fr/actualites/regardez-les-mondiaux-et-pokemonx
+ p-pour-obtenir-de-superbes-recompenses-en-jeu
+CATEGORIES:Pokémon,Événement,Play! Pokémon,Mondiaux,PokémonXP,Streamin
+ g,Drops,Nouveau,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:📡 Mondiaux Pokémon & PokémonXP demain — active les drops Twitch et vérifie les horaires
+DESCRIPTION:📡 Mondiaux Pokémon & PokémonXP demain — active les drops
+  Twitch et vérifie les horaires
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:38d9901a-b37c-44c2-a276-1573292eca1c@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -168,31 +262,47 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Convention — Lille Card Show [À confirmer]
-LOCATION;ALTREP="https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village":B'Twin Village\, 4 rue du Professeur Langevin\, 59000 Lille\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20V
+ illage":B'Twin Village\, 4 rue du Professeur Langevin\, 59000 Lille\, Fran
+ ce
 GEO:50.62012;3.08449
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=B'Twin Village:geo:50.62012,3.08449
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=B'Twin Vil
+ lage:geo:50.62012,3.08449
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%2
+ 0Village
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=50.62012,3.08449
 X-POKEMON-TICKET-URL:https://lillecardshow.fr/infos-pratiques/
 X-POKEMON-TICKET-STATUS:FREE_OPTIONAL_EARLY_ACCESS
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:FREE
-DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer côté présence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\n📍 Adresse : B'Twin Village — 4 rue du Professeur Langevin, 59000 Lille, France (entrée 3).\n📌 Précision GEO : site B'Twin Village ; l'indication « entrée 3 » reste dans l'adresse humaine.\n🗺️ Plans : https://maps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=50.62012,3.08449\n🎟️ Billetterie : entrée générale gratuite ; Early Access / pass éventuels via la page officielle — https://lillecardshow.fr/infos-pratiques/\nRappels : J-1 uniquement — présence Pokémon encore à confirmer.\nSource : https://lillecardshow.fr/
+DESCRIPTION:Priorité : ℹ️ Info — salon intéressant, mais présence
+  Pokémon encore à confirmer.\n\nFiabilité : 🟡 À confirmer côté pr
+ ésence Pokémon. Salon cartes et TCG officiel le 3 octobre 2026.\n📍 Ad
+ resse : B'Twin Village — 4 rue du Professeur Langevin, 59000 Lille, Fran
+ ce (entrée 3).\n📌 Précision GEO : site B'Twin Village ; l'indication
+  « entrée 3 » reste dans l'adresse humaine.\n🗺️ Plans : https://ma
+ ps.apple.com/?ll=50.62012,3.08449&q=B%27Twin%20Village\n🧭 Itinéraire d
+ epuis la position actuelle : https://maps.apple.com/?daddr=50.62012,3.0844
+ 9\n🎟️ Billetterie : entrée générale gratuite ; Early Access / pass
+  éventuels via la page officielle — https://lillecardshow.fr/infos-prat
+ iques/\n\nRappels : J-1 uniquement — présence Pokémon encore à confir
+ mer.\n\nSource : https://lillecardshow.fr/
 URL:https://lillecardshow.fr/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Événement demain — vérifie présence Pokémon, horaires et Early Access : Lille Card Show
+DESCRIPTION:🎪 Événement demain — vérifie présence Pokémon, horair
+ es et Early Access : Lille Card Show
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:9d0d150f-a5be-407d-812e-4465301f3d7c@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -201,30 +311,46 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
 SUMMARY:Convention — Breizh TCG [À confirmer]
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc":Parc des Expositions de Saint-Brieuc\, rue Pierre de Coubertin\, 22000 Saint-Brieuc\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%
+ 20Expositions%20de%20Saint-Brieuc":Parc des Expositions de Saint-Brieuc\,
+  rue Pierre de Coubertin\, 22000 Saint-Brieuc\, France
 GEO:48.50174;-2.76358
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Parc des Expositions de Saint-Brieuc:geo:48.50174,-2.76358
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Parc des E
+ xpositions de Saint-Brieuc:geo:48.50174,-2.76358
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20de
+ s%20Expositions%20de%20Saint-Brieuc
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.50174,-2.76358
 X-POKEMON-TICKET-STATUS:NOT_PUBLISHED
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:UNKNOWN
-DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence Pokémon encore à confirmer.\nFiabilité : 🟡 À confirmer. Convention TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon attendue.\n📍 Adresse : Parc des Expositions de Saint-Brieuc — rue Pierre de Coubertin, 22000 Saint-Brieuc, France.\n📌 Précision GEO : enceinte du parc des expositions ; entrée exacte non affirmée.\n🗺️ Plans : https://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de%20Saint-Brieuc\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.50174,-2.76358\n🎟️ Billetterie : entrée annoncée payante, mais aucun lien direct suffisamment fiable n'est encore publié dans les sources suivies.\nRappels : J-1 uniquement — événement secondaire.\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
+DESCRIPTION:Priorité : ℹ️ Info — événement secondaire et présence
+  Pokémon encore à confirmer.\n\nFiabilité : 🟡 À confirmer. Conventi
+ on TCG référencée les 3 et 4 octobre 2026 avec présence Pokémon atten
+ due.\n📍 Adresse : Parc des Expositions de Saint-Brieuc — rue Pierre d
+ e Coubertin, 22000 Saint-Brieuc, France.\n📌 Précision GEO : enceinte d
+ u parc des expositions ; entrée exacte non affirmée.\n🗺️ Plans : ht
+ tps://maps.apple.com/?ll=48.50174,-2.76358&q=Parc%20des%20Expositions%20de
+ %20Saint-Brieuc\n🧭 Itinéraire depuis la position actuelle : https://ma
+ ps.apple.com/?daddr=48.50174,-2.76358\n🎟️ Billetterie : entrée annon
+ cée payante, mais aucun lien direct suffisamment fiable n'est encore publ
+ ié dans les sources suivies.\n\nRappels : J-1 uniquement — événement
+  secondaire.\n\nSource : https://kyoriyu.fr/pages/evenements-tcg-france
 URL:https://kyoriyu.fr/pages/evenements-tcg-france
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Événement demain — vérifie horaires, accès et billetterie : Breizh TCG
+DESCRIPTION:🎪 Événement demain — vérifie horaires, accès et billet
+ terie : Breizh TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:52bae124-e599-451c-ab1a-26bfac506275@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -233,36 +359,55 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261019
 SUMMARY:Play! Pokémon — Championnats Régionaux — Nice
-LOCATION;ALTREP="https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice":Palais des Expositions de Nice\, Parvis de l'Europe\, 06000 Nice\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des
+ %20Expositions%20de%20Nice":Palais des Expositions de Nice\, Parvis de l'E
+ urope\, 06000 Nice\, France
 GEO:43.70889;7.28278
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=Palais des Expositions de Nice:geo:43.70889,7.28278
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=100;X-TITLE=Palais des
+  Expositions de Nice:geo:43.70889,7.28278
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20d
+ es%20Expositions%20de%20Nice
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=43.70889,7.28278
-X-POKEMON-TICKET-URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
+X-POKEMON-TICKET-URL:https://championships.pokemon.com/fr-fr/events/regiona
+ ls/2027/nice
 X-POKEMON-TICKET-STATUS:REGISTRATION_EVENT_PAGE
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:REGISTRATION
-DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur nécessitant une planification.\nFiabilité : ✅ Confirmé officiel Pokémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\n📍 Adresse : Palais des Expositions de Nice — Parvis de l'Europe, 06000 Nice, France.\n📌 Précision GEO : enceinte du Palais des Expositions ; entrée/hall exact à privilégier si l'organisateur le précise plus tard.\n🗺️ Plans : https://maps.apple.com/?ll=43.70889,7.28278&q=Palais%20des%20Expositions%20de%20Nice\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=43.70889,7.28278\n🎟️ Inscription / informations participants : page officielle Play! Pokémon — https://championships.pokemon.com/fr-fr/events/regionals/2027/nice\nRappels : J-7 et J-1 — vérifier inscription, transport et horaires.\nSource : https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
+DESCRIPTION:Priorité : ⭐ Important — événement Play! Pokémon majeur
+  nécessitant une planification.\n\nFiabilité : ✅ Confirmé officiel Po
+ kémon. Événement Play! Pokémon — Championnats Régionaux de Nice.\n
+ 📍 Adresse : Palais des Expositions de Nice — Parvis de l'Europe, 0600
+ 0 Nice, France.\n📌 Précision GEO : enceinte du Palais des Expositions
+  ; entrée/hall exact à privilégier si l'organisateur le précise plus t
+ ard.\n🗺️ Plans : https://maps.apple.com/?ll=43.70889,7.28278&q=Palais
+ %20des%20Expositions%20de%20Nice\n🧭 Itinéraire depuis la position actu
+ elle : https://maps.apple.com/?daddr=43.70889,7.28278\n🎟️ Inscription
+  / informations participants : page officielle Play! Pokémon — https://
+ championships.pokemon.com/fr-fr/events/regionals/2027/nice\n\nRappels : J-
+ 7 et J-1 — vérifier inscription, transport et horaires.\n\nSource : htt
+ ps://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 URL:https://championships.pokemon.com/fr-fr/events/regionals/2027/nice
 CATEGORIES:Pokémon,Play! Pokémon,Compétition,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🏆 Régionaux dans 7 jours — vérifie inscription, transport et horaires : Nice
+DESCRIPTION:🏆 Régionaux dans 7 jours — vérifie inscription, transpor
+ t et horaires : Nice
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 Régionaux demain — ouvre Plans et prépare ton déplacement : Nice
+DESCRIPTION:🏆 Régionaux demain — ouvre Plans et prépare ton déplace
+ ment : Nice
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:9a774b0e-f20a-4740-8831-6c531d18ee16@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -271,36 +416,53 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261026
 SUMMARY:Convention — Paris Games Week + Gala TCG
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles":Paris Expo Porte de Versailles\, 1 place de la Porte de Versailles\, 75015 Paris\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo
+ %20Porte%20de%20Versailles":Paris Expo Porte de Versailles\, 1 place de la
+  Porte de Versailles\, 75015 Paris\, France
 GEO:48.83246;2.28785
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Paris Expo Porte de Versailles:geo:48.83246,2.28785
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=120;X-TITLE=Paris Expo
+  Porte de Versailles:geo:48.83246,2.28785
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Ex
+ po%20Porte%20de%20Versailles
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.83246,2.28785
 X-POKEMON-TICKET-URL:https://www.parisgamesweek.com/fr/billetterie
 X-POKEMON-TICKET-STATUS:AVAILABLE
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à Paris, mais sans exclusivité limitée identifiée.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Paris Games Week avec espace Gala TCG et présence Pokémon annoncée.\n📍 Adresse : Paris Expo Porte de Versailles — 1 place de la Porte de Versailles, 75015 Paris, France.\n📌 Précision GEO : parc des expositions ; le hall exact sera ajouté s'il est publié.\n🗺️ Plans : https://maps.apple.com/?ll=48.83246,2.28785&q=Paris%20Expo%20Porte%20de%20Versailles\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.83246,2.28785\n🎟️ Billetterie officielle : https://www.parisgamesweek.com/fr/billetterie\nRappels : J-7 et J-1 — vérifier billet, horaires et accès.\nSource : https://www.parisgamesweek.com/fr/espaces/gala-tcg
+DESCRIPTION:Priorité : ⭐ Important — gros événement Pokémon/TCG à
+  Paris, mais sans exclusivité limitée identifiée.\n\nFiabilité : ✅ C
+ onfirmé officiel par l'organisateur. Paris Games Week avec espace Gala TC
+ G et présence Pokémon annoncée.\n📍 Adresse : Paris Expo Porte de Ver
+ sailles — 1 place de la Porte de Versailles, 75015 Paris, France.\n📌
+  Précision GEO : parc des expositions ; le hall exact sera ajouté s'il e
+ st publié.\n🗺️ Plans : https://maps.apple.com/?ll=48.83246,2.28785&q
+ =Paris%20Expo%20Porte%20de%20Versailles\n🧭 Itinéraire depuis la positi
+ on actuelle : https://maps.apple.com/?daddr=48.83246,2.28785\n🎟️ Bill
+ etterie officielle : https://www.parisgamesweek.com/fr/billetterie\n\nRapp
+ els : J-7 et J-1 — vérifier billet, horaires et accès.\n\nSource : htt
+ ps://www.parisgamesweek.com/fr/espaces/gala-tcg
 URL:https://www.parisgamesweek.com/fr/espaces/gala-tcg
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Événement dans 7 jours — vérifie billet, horaires et accès : Paris Games Week + Gala TCG
+DESCRIPTION:🎪 Événement dans 7 jours — vérifie billet, horaires et
+  accès : Paris Games Week + Gala TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Événement demain — ouvre Plans et prépare billet + trajet : Paris Games Week + Gala TCG
+DESCRIPTION:🎪 Événement demain — ouvre Plans et prépare billet + tr
+ ajet : Paris Games Week + Gala TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:9639e861-d366-45a3-bcf5-6816a7d78bf0@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:CONFIRMED
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -309,36 +471,53 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:Convention — Le Royaume du TCG
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte":Paris Nord Villepinte — Hall 3\, ZAC Paris Nord 2\, 93420 Villepinte\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord
+ %20Villepinte":Paris Nord Villepinte — Hall 3\, ZAC Paris Nord 2\, 93420
+  Villepinte\, France
 GEO:48.97046;2.52131
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord Villepinte:geo:48.97046,2.52131
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord
+  Villepinte:geo:48.97046,2.52131
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20No
+ rd%20Villepinte
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.97046,2.52131
 X-POKEMON-TICKET-URL:https://www.royaumedutcg.com/billetterie
 X-POKEMON-TICKET-STATUS:AVAILABLE
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte présence Pokémon et déplacement à anticiper.\nFiabilité : ✅ Confirmé officiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.\n📍 Adresse : Paris Nord Villepinte — Hall 3, ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; Hall 3 est connu mais la coordonnée représente le site, pas une porte spécifique.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://www.royaumedutcg.com/billetterie\nRappels : J-7 et J-1 — vérifier billet, transport et horaires.\nSource : https://www.royaumedutcg.com/
+DESCRIPTION:Priorité : ⭐ Important — grand salon TCG avec forte prése
+ nce Pokémon et déplacement à anticiper.\n\nFiabilité : ✅ Confirmé o
+ fficiel par l'organisateur. Grand salon TCG avec forte présence Pokémon.
+ \n📍 Adresse : Paris Nord Villepinte — Hall 3, ZAC Paris Nord 2, 93420
+  Villepinte, France.\n📌 Précision GEO : parc des expositions ; Hall 3
+  est connu mais la coordonnée représente le site, pas une porte spécifi
+ que.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%
+ 20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https:
+ //maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle :
+  https://www.royaumedutcg.com/billetterie\n\nRappels : J-7 et J-1 — vér
+ ifier billet, transport et horaires.\n\nSource : https://www.royaumedutcg.
+ com/
 URL:https://www.royaumedutcg.com/
 CATEGORIES:Pokémon,Événement,Convention,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Salon dans 7 jours — vérifie billet, transport et horaires : Le Royaume du TCG
+DESCRIPTION:🎪 Salon dans 7 jours — vérifie billet, transport et horai
+ res : Le Royaume du TCG
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Salon demain — ouvre Plans et prépare billet + trajet : Le Royaume du TCG
+DESCRIPTION:🎪 Salon demain — ouvre Plans et prépare billet + trajet :
+  Le Royaume du TCG
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:ed9346e9-9a83-4be1-9376-4f0d7ef4c34f@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:7
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:8
 STATUS:CONFIRMED
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -348,21 +527,30 @@ DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:Événement — Pokémon Day 2027
 LOCATION:France / en ligne
-DESCRIPTION:Priorité : ℹ️ Info — date repère officielle, mais programmation française/parisienne encore inconnue. La priorité pourra être relevée si une grosse activation est annoncée.\nFiabilité : ✅ Confirmé officiel pour la date annuelle du Pokémon Day. La programmation française et parisienne 2027 reste à annoncer.\nRappels : J-1 uniquement tant qu'aucune activation française majeure n'est annoncée.\nSource : https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
-URL:https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-de-la-journee-pokemon-2026
+DESCRIPTION:Priorité : ℹ️ Info — date repère officielle, mais progr
+ ammation française/parisienne encore inconnue. La priorité pourra être
+  relevée si une grosse activation est annoncée.\n\nFiabilité : ✅ Conf
+ irmé officiel pour la date annuelle du Pokémon Day. La programmation fra
+ nçaise et parisienne 2027 reste à annoncer.\n\nRappels : J-1 uniquement
+  tant qu'aucune activation française majeure n'est annoncée.\n\nSource :
+  https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-presents-
+ de-la-journee-pokemon-2026
+URL:https://www.pokemon.com/fr/actualites/les-actualites-du-pokemon-present
+ s-de-la-journee-pokemon-2026
 CATEGORIES:Pokémon,Événement,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:ℹ️ Pokémon Day demain — vérifie si une programmation française a été annoncée
+DESCRIPTION:ℹ️ Pokémon Day demain — vérifie si une programmation fr
+ ançaise a été annoncée
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:57771081-d189-4102-a78d-68758413cbc7@openai
-DTSTAMP:20260926T080058Z
-LAST-MODIFIED:20260926T080058Z
-SEQUENCE:9
+DTSTAMP:20260926T212932Z
+LAST-MODIFIED:20260926T212932Z
+SEQUENCE:10
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
@@ -371,23 +559,40 @@ X-POKEMON-ACTION:ATTEND
 DTSTART;VALUE=DATE:20270708
 DTEND;VALUE=DATE:20270712
 SUMMARY:Convention — Japan Expo Paris 2027 [À confirmer]
-LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte":Paris Nord Villepinte\, ZAC Paris Nord 2\, 93420 Villepinte\, France
+LOCATION;ALTREP="https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord
+ %20Villepinte":Paris Nord Villepinte\, ZAC Paris Nord 2\, 93420 Villepinte
+ \, France
 GEO:48.97046;2.52131
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord Villepinte:geo:48.97046,2.52131
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-RADIUS=180;X-TITLE=Paris Nord
+  Villepinte:geo:48.97046,2.52131
 X-POKEMON-LOCATION-PRECISION:VENUE
-X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte
+X-POKEMON-MAPS-URL:https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20No
+ rd%20Villepinte
 X-POKEMON-DIRECTIONS-URL:https://maps.apple.com/?daddr=48.97046,2.52131
 X-POKEMON-TICKET-URL:https://ticket.japan-expo.com/fr
 X-POKEMON-TICKET-STATUS:PORTAL_AVAILABLE_2027_NOT_PUBLISHED
 X-POKEMON-TICKET-CHECKED-AT:20260819T031000Z
 X-POKEMON-ACCESS-MODE:TICKET_NOT_YET_RELEASED
-DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais présence Pokémon 2027 non confirmée.\nFiabilité : 🟡 À confirmer côté Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Pokémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositions Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n📌 Précision GEO : parc des expositions ; hall/entrée 2027 non encore précisé.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q=Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle : https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie officielle : https://ticket.japan-expo.com/fr — portail actif, billets spécifiques 2027 pas encore publiés au moment de la vérification.\nRappels : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\nSource : https://paris.japan-expo.com/fr
+DESCRIPTION:Priorité : ℹ️ Info — dates du salon connues, mais prése
+ nce Pokémon 2027 non confirmée.\n\nFiabilité : 🟡 À confirmer côté
+  Pokémon. Les dates de Japan Expo sont officielles\, mais la présence Po
+ kémon 2027 n'est pas encore annoncée.\n📍 Adresse : Parc des Expositio
+ ns Paris Nord Villepinte — ZAC Paris Nord 2, 93420 Villepinte, France.\n
+ 📌 Précision GEO : parc des expositions ; hall/entrée 2027 non encore
+  précisé.\n🗺️ Plans : https://maps.apple.com/?ll=48.97046,2.52131&q
+ =Paris%20Nord%20Villepinte\n🧭 Itinéraire depuis la position actuelle :
+  https://maps.apple.com/?daddr=48.97046,2.52131\n🎟️ Billetterie offic
+ ielle : https://ticket.japan-expo.com/fr — portail actif, billets spéci
+ fiques 2027 pas encore publiés au moment de la vérification.\n\nRappels
+  : J-1 uniquement tant que la présence Pokémon n'est pas confirmée.\n\n
+ Source : https://paris.japan-expo.com/fr
 URL:https://paris.japan-expo.com/fr
 CATEGORIES:Pokémon,Événement,Convention,Priorité Info
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet et trajet dans Plans
+DESCRIPTION:🎪 Japan Expo demain — vérifie présence Pokémon, billet
+  et trajet dans Plans
 END:VALARM
 END:VEVENT
 END:VCALENDAR
