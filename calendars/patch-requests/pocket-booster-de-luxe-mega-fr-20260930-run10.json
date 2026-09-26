@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "upsert",
+  "uid": "pokemon-pocket-booster-de-luxe-mega-fr-20260930@pokemon-france-watch",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-pocket-booster-de-luxe-mega-fr-20260930@pokemon-france-watch\r\nDTSTAMP:20260926T071129Z\r\nDTSTART;TZID=Europe/Paris:20260930T030000\r\nDTEND;TZID=Europe/Paris:20260930T031500\r\nSUMMARY:JCC Pokémon Pocket — sortie Booster de Luxe Méga\r\nDESCRIPTION:Sortie France de l’extension Booster de Luxe Méga dans JCC Pokémon Pocket. Date officielle : 30 septembre 2026 à 01:00 UTC (03:00 Europe/Paris). Source : pokemon.com/fr/actualites/booster-de-luxe-mega-arrive-prochainement-dans-le-jcc-pokemon-pocket\r\nX-POKEMON-USER-EFFECT:pocket_release:booster-de-luxe-mega:fr\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nEND:VEVENT"
+}
