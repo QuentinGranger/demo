@@ -4,6 +4,7 @@ import json
 import re
 import tempfile
 from pathlib import Path
+from pokemon_calendar_presentation import assert_allowed
 
 from pokemon_calendar_safe_patch import (
     CANONICAL_CALENDAR,
@@ -34,6 +35,8 @@ def validate_request(req: dict, source: Path) -> tuple[str, str]:
     op = req.get("operation")
     if op not in {"add", "upsert", "update", "delete"}:
         raise SystemExit(f"{source}: unsupported operation: {op}")
+    if op != 'delete':
+        assert_allowed(req.get('event', ''))
     return resolve_uid(req), op
 
 

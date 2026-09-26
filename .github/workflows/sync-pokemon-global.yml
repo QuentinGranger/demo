@@ -7,6 +7,8 @@ on:
       - 'calendars/pokemon-tcg-france.ics'
       - 'calendars/pokemon-events-france-paris.ics'
       - 'scripts/sync_pokemon_global.py'
+      - 'scripts/pokemon_calendar_presentation.py'
+      - 'calendars/pokemon-presentation-policy.json'
       - '.github/workflows/sync-pokemon-global.yml'
   workflow_dispatch:
 

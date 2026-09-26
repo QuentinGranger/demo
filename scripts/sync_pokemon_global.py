@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import re
+from pokemon_calendar_presentation import clean_calendar
 
 ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / "calendars"
@@ -51,6 +52,7 @@ def main():
 
     ordered = sorted(events.values(), key=dtstart_key)
     output = HEADER + "\r\n".join(to_crlf(block) for block in ordered) + "\r\nEND:VCALENDAR\r\n"
+    output, _ = clean_calendar(output)
 
     old = TARGET.read_text(encoding="utf-8") if TARGET.exists() else ""
     old_norm = old.replace("\r\n", "\n").replace("\r", "\n")
