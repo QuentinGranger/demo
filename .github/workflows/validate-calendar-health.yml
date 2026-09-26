@@ -11,6 +11,7 @@ on:
       - 'calendars/harry-potter-*.ics'
       - 'calendars/pokemon-*.ics'
       - 'scripts/validate_calendar_health.py'
+      - 'scripts/test_calendar_health.py'
       - '.github/workflows/validate-calendar-health.yml'
   pull_request:
     paths:
@@ -21,6 +22,7 @@ on:
       - 'calendars/harry-potter-*.ics'
       - 'calendars/pokemon-*.ics'
       - 'scripts/validate_calendar_health.py'
+      - 'scripts/test_calendar_health.py'
       - '.github/workflows/validate-calendar-health.yml'
   schedule:
     - cron: '17 4,16 * * *'
@@ -42,7 +44,9 @@ jobs:
           python-version: '3.12'
       - name: Validate local calendar contracts
         if: github.event_name == 'pull_request'
-        run: python scripts/validate_calendar_health.py
+        run: python scripts/validate_calendar_health.py --static
+      - name: Test contract and live monitoring validation
+        run: python -m unittest discover -s scripts -p 'test_calendar_health.py'
       - name: Validate permanent health and live raw subscription URLs
         if: github.event_name != 'pull_request'
         run: |

@@ -1,60 +1,64 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-08-29T17:03:59Z",
-  "last_deep_check_at": "2026-08-20T17:08:03Z",
+  "last_observer_check_at": "2026-09-26T08:12:50.591416Z",
+  "last_deep_check_at": "2026-09-26T08:12:50.591416Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "Calendriers Fortnite France & Europe",
+  "observer_title": "MANUAL_HEALTH_REPAIR",
   "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
   "repository_reachable": true,
   "pinned_branch_reachable": true,
-  "verified_ics_path_count": 9,
-  "healthy_observer_count": 2,
+  "verified_ics_path_count": 8,
+  "healthy_observer_count": 1,
   "minimum_required_observers": 2,
   "automation_snapshot": {
     "Calendriers Fortnite France & Europe": {
-      "enabled": true,
+      "exists": true,
+      "enabled": false,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-29T16:10:43.121821Z",
-      "updated_at": "2026-08-29T16:11:05.201749Z",
-      "liveness": "HEALTHY"
+      "last_run_time": "2026-08-30T04:08:13.256970+00:00",
+      "updated_at": "2026-08-30T05:03:02.173070+00:00",
+      "liveness": "DEGRADED"
     },
     "Calendriers Harry Potter France & Paris": {
-      "enabled": true,
+      "exists": true,
+      "enabled": false,
       "expected_recurrence": "DAILY",
       "observed_recurrence": "DAILY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-29T01:53:59.434701Z",
-      "updated_at": "2026-08-29T01:54:23.153315Z",
-      "liveness": "HEALTHY"
+      "last_run_time": "2026-08-31T01:47:00.492138+00:00",
+      "updated_at": "2026-08-31T12:47:16.048562+00:00",
+      "liveness": "DEGRADED"
     },
     "Billetterie Harry Potter France": {
+      "exists": false,
+      "enabled": false,
+      "expected_recurrence": "HOURLY",
+      "observed_recurrence": null,
+      "finite": null,
+      "timezone": null,
+      "last_run_time": null,
+      "updated_at": null,
+      "liveness": "MISSING"
+    },
+    "Calendriers Pokémon France & Paris": {
+      "exists": true,
       "enabled": true,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-29T16:43:30.962662Z",
-      "updated_at": "2026-08-29T16:43:53.651645Z",
-      "liveness": "HEALTHY"
-    },
-    "Calendriers Pokémon France & Paris": {
-      "enabled": true,
-      "expected_recurrence": "DAILY",
-      "observed_recurrence": "DAILY",
-      "finite": false,
-      "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-29T13:21:30.137872Z",
-      "updated_at": "2026-08-29T13:21:31.099040Z",
+      "last_run_time": "2026-09-26T07:37:51.133139+00:00",
+      "updated_at": "2026-09-26T07:38:14.431909+00:00",
       "liveness": "HEALTHY"
     }
   },
-  "overall_result": "HEALTHY",
-  "note": "Healthy lightweight cross-calendar observer refresh. Repository/master and all nine declared calendar paths are present; both hourly observers and all four monitored automation cadences, timezones and liveness windows are healthy. No new material Fortnite delta was confirmed beyond already-canonical same-day events. last_deep_check_at is retained because this runtime could not complete the independent raw-endpoint and full validator deep pass; this is not classified as a calendar outage."
+  "overall_result": "DEGRADED",
+  "note": "Verified by live automations.peek, repository/master fetch, eight local ICS structure checks and three public RAW comparisons against master. Pokémon hourly task healthy; Fortnite and Harry Potter daily disabled; ticketing task missing. No paused task was enabled. This is a fresh failed observation, not a healthy certificate."
 }

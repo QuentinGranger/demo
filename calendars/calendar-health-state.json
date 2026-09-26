@@ -2,34 +2,58 @@
   "version": "CROSS_CALENDAR_HEALTH_STATE_FR_V2",
   "policy": "calendar-health-policy.json",
   "baseline_at": "2026-08-19T16:10:00Z",
-  "last_policy_migration_at": "2026-08-19T16:54:00Z",
+  "last_policy_migration_at": "2026-09-26T08:11:52.319437Z",
   "current_overall_state": "DEGRADED",
   "redundancy_state": "DEGRADED",
   "baseline_manifest": {
     "FORTNITE": [
-      {"path":"calendars/fortnite-paris.ics","sha":"45202efd91f0d03ce7d1eae0a39e0b8853de991e"},
-      {"path":"calendars/fortnite-updates-france.ics","sha":"8d96e6c9a0a9e036b61b58bc304969fc6156177b"},
-      {"path":"calendars/fortnite-competitive-france.ics","sha":"016beebf774be7cefd329837da1799867ab35d92"}
+      {
+        "path": "calendars/fortnite-paris.ics",
+        "sha": "45202efd91f0d03ce7d1eae0a39e0b8853de991e"
+      },
+      {
+        "path": "calendars/fortnite-updates-france.ics",
+        "sha": "8d96e6c9a0a9e036b61b58bc304969fc6156177b"
+      },
+      {
+        "path": "calendars/fortnite-competitive-france.ics",
+        "sha": "016beebf774be7cefd329837da1799867ab35d92"
+      }
     ],
     "HARRY_POTTER": [
-      {"path":"calendars/harry-potter-paris.ics","sha":"9902b123d8d3bfb3c2ef5419c17d7aac2d9711d6"},
-      {"path":"calendars/harry-potter-releases-france.ics","sha":"1d706edcd0f1cd39b9284b215ea1af041b259107"},
-      {"path":"calendars/harry-potter-events-france-paris.ics","sha":"779bf97064638e0637ac3fcabebc66caecabbb32"}
+      {
+        "path": "calendars/harry-potter-paris.ics",
+        "sha": "9902b123d8d3bfb3c2ef5419c17d7aac2d9711d6"
+      },
+      {
+        "path": "calendars/harry-potter-releases-france.ics",
+        "sha": "1d706edcd0f1cd39b9284b215ea1af041b259107"
+      },
+      {
+        "path": "calendars/harry-potter-events-france-paris.ics",
+        "sha": "779bf97064638e0637ac3fcabebc66caecabbb32"
+      }
     ],
     "POKEMON": [
-      {"path":"calendars/pokemon-paris.ics","sha":"f71403a12e16e5a8c37f40cc2b72b759c9e9d5f3"},
-      {"path":"calendars/pokemon-tcg-france.ics","sha":"fa0fd92ae865c51f025dc470e86c7821f9364eee"},
-      {"path":"calendars/pokemon-events-france-paris.ics","sha":"5bbe7237a48c4ee3cdd35575d730ef764c92b1e8"}
+      {
+        "path": "calendars/pokemon-tcg-france.ics",
+        "sha": "fa0fd92ae865c51f025dc470e86c7821f9364eee"
+      },
+      {
+        "path": "calendars/pokemon-events-france-paris.ics",
+        "sha": "5bbe7237a48c4ee3cdd35575d730ef764c92b1e8"
+      }
     ]
   },
   "franchise_state": {
     "FORTNITE": "DEGRADED",
-    "HARRY_POTTER": "HEALTHY",
+    "HARRY_POTTER": "DEGRADED",
     "POKEMON": "HEALTHY"
   },
   "observer_state": {
     "Calendriers Fortnite France & Europe": "DEGRADED",
-    "Billetterie Harry Potter France": "HEALTHY"
+    "Billetterie Harry Potter France": "DEGRADED",
+    "Calendriers Pokémon France & Paris": "HEALTHY"
   },
   "active_incidents": [
     {
@@ -51,13 +75,22 @@
       "evidence": "Only one of the two declared hourly cross-calendar observers is enabled: Billetterie Harry Potter France is active, Calendriers Fortnite France & Europe is disabled."
     },
     {
-      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris",
       "state": "OPEN",
-      "code": "WATCHDOG_HEARTBEAT_STALE",
-      "franchise": "FORTNITE",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "HARRY_POTTER",
       "severity": "DEGRADED",
-      "opened_at": "2026-08-30T23:43:14Z",
-      "evidence": "calendar-health-heartbeat.json last_observer_check_at=2026-08-29T17:03:59Z is older than the 30h health-policy limit. The current Harry Potter observer is alive, but policy forbids refreshing a HEALTHY heartbeat while cross-calendar checks fail because the Fortnite observer remains disabled."
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "Live automations.peek: Calendriers Harry Potter France & Paris: disabled"
+    },
+    {
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France",
+      "state": "OPEN",
+      "code": "AUTOMATION_MISSING",
+      "franchise": "HARRY_POTTER",
+      "severity": "DEGRADED",
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "Live automations.peek: Billetterie Harry Potter France: not found"
     }
   ],
   "incident_history": [
@@ -110,6 +143,39 @@
       "severity": "DEGRADED",
       "at": "2026-08-30T23:43:14Z",
       "evidence": "Shared cross-calendar heartbeat exceeded its 30h maximum age while observer redundancy remained degraded."
+    },
+    {
+      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "state": "RECOVERED",
+      "code": "WATCHDOG_HEARTBEAT_STALE",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "opened_at": "2026-08-30T23:43:14Z",
+      "evidence": "Fresh observed DEGRADED snapshot recorded; paused/missing tasks remain incidents.",
+      "at": "2026-09-26T08:12:50.591416Z",
+      "incident_id": "health-heartbeat-repaired-20260926"
+    },
+    {
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris",
+      "state": "OPEN",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "HARRY_POTTER",
+      "severity": "DEGRADED",
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "Live automations.peek: Calendriers Harry Potter France & Paris: disabled",
+      "incident_id": "health|HARRY_POTTER|AUTOMATION_DISABLED|Calendriers Harry Potter France & Paris|20260926",
+      "at": "2026-09-26T08:12:50.591416Z"
+    },
+    {
+      "incident_key": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France",
+      "state": "OPEN",
+      "code": "AUTOMATION_MISSING",
+      "franchise": "HARRY_POTTER",
+      "severity": "DEGRADED",
+      "opened_at": "2026-09-26T08:12:50.591416Z",
+      "evidence": "Live automations.peek: Billetterie Harry Potter France: not found",
+      "incident_id": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France|20260926",
+      "at": "2026-09-26T08:12:50.591416Z"
     }
   ],
   "history": [
@@ -137,6 +203,11 @@
       "at": "2026-08-30T23:43:14Z",
       "type": "SHARED_HEARTBEAT_STALE",
       "note": "The shared cross-calendar heartbeat exceeded 30 hours. It was intentionally not refreshed as HEALTHY because the Fortnite observer is still disabled and the cross-calendar check is not fully healthy."
+    },
+    {
+      "at": "2026-09-26T08:11:52.319437Z",
+      "type": "HEALTH_V3_CONTRACT_REPAIR",
+      "note": "Validator aligned with V3 and eight declared paths. Current live observation: Pokémon hourly enabled; Fortnite and Harry Potter daily disabled; Harry Potter ticketing missing. No tasks enabled or created. Failed observations can refresh an explicitly DEGRADED heartbeat."
     }
   ]
 }
