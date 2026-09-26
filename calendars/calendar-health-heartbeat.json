@@ -1,8 +1,8 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-09-26T08:12:50.591416Z",
-  "last_deep_check_at": "2026-09-26T08:12:50.591416Z",
+  "last_observer_check_at": "2026-09-26T13:07:28.966040Z",
+  "last_deep_check_at": "2026-09-26T13:07:28.966040Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "MANUAL_HEALTH_REPAIR",
   "migration_bootstrap": false,
@@ -12,53 +12,20 @@
   "pinned_branch_reachable": true,
   "verified_ics_path_count": 8,
   "healthy_observer_count": 1,
-  "minimum_required_observers": 2,
+  "minimum_required_observers": 1,
   "automation_snapshot": {
-    "Calendriers Fortnite France & Europe": {
-      "exists": true,
-      "enabled": false,
-      "expected_recurrence": "HOURLY",
-      "observed_recurrence": "HOURLY",
-      "finite": false,
-      "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-30T04:08:13.256970+00:00",
-      "updated_at": "2026-08-30T05:03:02.173070+00:00",
-      "liveness": "DEGRADED"
-    },
-    "Calendriers Harry Potter France & Paris": {
-      "exists": true,
-      "enabled": false,
-      "expected_recurrence": "DAILY",
-      "observed_recurrence": "DAILY",
-      "finite": false,
-      "timezone": "Europe/Paris",
-      "last_run_time": "2026-08-31T01:47:00.492138+00:00",
-      "updated_at": "2026-08-31T12:47:16.048562+00:00",
-      "liveness": "DEGRADED"
-    },
-    "Billetterie Harry Potter France": {
-      "exists": false,
-      "enabled": false,
-      "expected_recurrence": "HOURLY",
-      "observed_recurrence": null,
-      "finite": null,
-      "timezone": null,
-      "last_run_time": null,
-      "updated_at": null,
-      "liveness": "MISSING"
-    },
-    "Calendriers Pokémon France & Paris": {
+    "Calendriers jeux — France": {
       "exists": true,
       "enabled": true,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-09-26T07:37:51.133139+00:00",
-      "updated_at": "2026-09-26T07:38:14.431909+00:00",
+      "last_run_time": "2026-09-26T12:25:24.633830+00:00",
+      "updated_at": "2026-09-26T13:03:01.135573+00:00",
       "liveness": "HEALTHY"
     }
   },
-  "overall_result": "DEGRADED",
-  "note": "Verified by live automations.peek, repository/master fetch, eight local ICS structure checks and three public RAW comparisons against master. Pokémon hourly task healthy; Fortnite and Harry Potter daily disabled; ticketing task missing. No paused task was enabled. This is a fresh failed observation, not a healthy certificate."
+  "overall_result": "HEALTHY",
+  "note": "User-approved consolidation verified through automations.peek: existing active hourly task renamed and updated, with all three franchise scopes and ticketing. Eight ICS structures and three current master RAW feeds verified. Existing last_run_time is preserved; the first scheduled execution of the expanded scope is still pending. Retired separate tasks are not counted as active monitors."
 }

@@ -68,8 +68,10 @@ jobs:
             git reset --hard origin/master
 
             python3 scripts/pokemon_calendar_batch_patch.py "${reqs[@]}"
+            python3 scripts/pokemon_calendar_presentation.py
+            python3 scripts/sync_pokemon_global.py
 
-            unexpected=$(git diff --name-only | grep -v -F -x "$target" || true)
+            unexpected=$(git diff --name-only | grep -v -E '^calendars/pokemon-(tcg-france|events-france-paris|paris)\.ics$' || true)
             if [ -n "$unexpected" ]; then
               echo "Unexpected changed files:"
               echo "$unexpected"
@@ -94,14 +96,14 @@ jobs:
           print(f'Validated {len(uids)} unique VEVENT UIDs; bytes={len(raw)}')
           PY
 
-            if git diff --quiet -- "$target"; then
+            if git diff --quiet -- calendars/pokemon-*.ics; then
               echo "No business change after recompute on latest master"
               changed=0
               success=1
               break
             fi
 
-            git add "$target"
+            git add calendars/pokemon-tcg-france.ics calendars/pokemon-events-france-paris.ics calendars/pokemon-paris.ics
             git commit -m "calendar: apply transactional batch patch (${{ steps.requests.outputs.count }} request(s))"
             if git push origin HEAD:master; then
               changed=1

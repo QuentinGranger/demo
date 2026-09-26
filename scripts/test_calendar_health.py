@@ -29,15 +29,24 @@ class HealthTests(unittest.TestCase):
                 result = health.main(args or [])
             return result, output.getvalue()
 
-    def test_v3_static_contracts_accept_honest_degraded_observation(self):
+    def test_v4_static_contracts_accept_observed_state(self):
         result, text = self.run_check(args=['--static'])
         self.assertEqual(result, 0, text)
         self.assertIn('live monitor health not certified', text)
 
     def test_default_check_still_fails_on_paused_and_missing_monitors(self):
-        result, text = self.run_check()
+        def disabled(data):
+            item = next(iter(data['HEARTBEAT']['automation_snapshot'].values()))
+            item.update(enabled=False, liveness='DEGRADED')
+            data['HEARTBEAT'].update(overall_result='DEGRADED', healthy_observer_count=0)
+        result, text = self.run_check(disabled)
         self.assertEqual(result, 1)
         self.assertIn('AUTOMATION_DISABLED', text)
+        def missing(data):
+            disabled(data)
+            next(iter(data['HEARTBEAT']['automation_snapshot'].values()))['exists'] = False
+        result, text = self.run_check(missing)
+        self.assertEqual(result, 1)
         self.assertIn('AUTOMATION_MISSING', text)
         self.assertIn('OBSERVER_REDUNDANCY_LOST', text)
 
@@ -60,7 +69,7 @@ class HealthTests(unittest.TestCase):
 
     def test_false_healthy_snapshot_blocks_static_contracts(self):
         def fake(data):
-            data['HEARTBEAT']['automation_snapshot']['Calendriers Fortnite France & Europe']['liveness'] = 'HEALTHY'
+            next(iter(data['HEARTBEAT']['automation_snapshot'].values())).update(enabled=False, liveness='HEALTHY')
         result, text = self.run_check(fake, ['--static'])
         self.assertEqual(result, 1)
         self.assertIn('falsely marks unhealthy monitor HEALTHY', text)

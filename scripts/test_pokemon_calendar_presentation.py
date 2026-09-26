@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from pokemon_calendar_presentation import (
-    assert_allowed, clean_calendar, excluded, logical, present_event, properties,
+    assert_allowed, assert_no_duplicate, clean_calendar, excluded, logical, present_event, properties,
 )
 from pokemon_calendar_safe_patch import apply_request
 from pokemon_calendar_batch_patch import apply_batch
@@ -94,6 +94,50 @@ class PresentationTests(unittest.TestCase):
     def test_alias_cannot_be_reintroduced(self):
         with self.assertRaises(SystemExit):
             assert_allowed(event('pokemon-30ans-fnac-beaune-pokeshow-20260919@openai'))
+
+    def test_new_uid_cannot_reintroduce_same_pocket_release(self):
+        incoming = event('new-unknown-uid', 'Pokémon Pocket — Booster de Luxe Méga').replace('20261001', '20260930')
+        with self.assertRaises(SystemExit):
+            assert_allowed(incoming)
+
+    def test_same_session_rejected_but_different_dates_and_places_preserved(self):
+        existing = calendar(event('a', 'Tournoi', 'LOCATION:Paris'))
+        with self.assertRaises(SystemExit):
+            assert_no_duplicate(existing, event('b', 'TOURNOI', 'LOCATION:Paris'))
+        assert_no_duplicate(existing, event('b', 'Tournoi', 'LOCATION:Lyon'))
+        assert_no_duplicate(existing, event('b', 'Tournoi', 'LOCATION:Paris').replace('20261001', '20261003'))
+
+    def test_compact_period_preserves_real_window_and_notes(self):
+        uid = 'pokemon-30ans-collection-classeur-q4-2026@openai'
+        source = event(uid, 'Fenêtre classeur [À confirmer]').replace('DTEND;VALUE=DATE:20261002', 'DTEND;VALUE=DATE:20270101')
+        result = present_event(source)
+        props = properties(result)
+        self.assertEqual(props['DTSTART'], '20261001')
+        self.assertEqual(props['DTEND'], '20261002')
+        self.assertEqual(props['X-POKEMON-PERIOD-END'], '20270101')
+        self.assertIn('31/12/2026', props['DESCRIPTION'])
+        self.assertIn('Notes conservées', props['DESCRIPTION'])
+        self.assertIn('À confirmer', props['SUMMARY'])
+        self.assertEqual(present_event(result), result)
+
+    def test_end_relative_alarm_prevents_unsafe_compaction(self):
+        uid = 'pokemon-30ans-collection-classeur-q4-2026@openai'
+        source = event(uid).replace('DTEND;VALUE=DATE:20261002', 'DTEND;VALUE=DATE:20270101').replace('TRIGGER:', 'TRIGGER;RELATED=END:')
+        self.assertEqual(properties(present_event(source))['DTEND'], '20270101')
+
+    def test_batch_duplicate_preflight_leaves_calendar_untouched(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            cal = Path(tmp) / 'calendar.ics'
+            cal.write_bytes(calendar(event()).replace('\n', '\r\n').encode())
+            original = cal.read_bytes()
+            paths = []
+            for uid in ('first', 'second'):
+                request = Path(tmp) / f'{uid}.json'
+                request.write_text(json.dumps({'operation': 'upsert', 'calendar_path': str(cal), 'event': event(uid, 'Un seul événement')}))
+                paths.append(request)
+            with patch('pokemon_calendar_batch_patch.CANONICAL_CALENDAR', str(cal)), self.assertRaises(SystemExit):
+                apply_batch(paths)
+            self.assertEqual(cal.read_bytes(), original)
 
 
 if __name__ == '__main__':

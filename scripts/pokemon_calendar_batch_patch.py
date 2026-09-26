@@ -4,7 +4,7 @@ import json
 import re
 import tempfile
 from pathlib import Path
-from pokemon_calendar_presentation import assert_allowed
+from pokemon_calendar_presentation import assert_allowed, assert_no_duplicate
 
 from pokemon_calendar_safe_patch import (
     CANONICAL_CALENDAR,
@@ -77,6 +77,7 @@ def apply_batch(request_paths: list[Path]) -> int:
 
     prepared: list[tuple[Path, dict, str, str]] = []
     seen_uids: set[str] = set()
+    candidate_text = base_text
 
     for path in request_paths:
         req = json.loads(path.read_text(encoding="utf-8"))
@@ -92,6 +93,9 @@ def apply_batch(request_paths: list[Path]) -> int:
             )
 
         assert_no_cross_uid_user_effect_collision(base_text, req, uid)
+        if op != 'delete':
+            assert_no_duplicate(candidate_text, req['event'])
+            candidate_text += '\n' + req['event']
         prepared.append((path, req, uid, op))
 
     changed_count = 0
