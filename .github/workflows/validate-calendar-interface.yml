@@ -1,0 +1,28 @@
+name: Validate interactive calendar
+
+on:
+  push:
+    paths:
+      - 'calendar.html'
+      - 'tests/calendar-core.test.cjs'
+      - 'calendars/*-paris.ics'
+      - '.github/workflows/validate-calendar-interface.yml'
+  pull_request:
+    paths:
+      - 'calendar.html'
+      - 'tests/calendar-core.test.cjs'
+      - 'calendars/*-paris.ics'
+      - '.github/workflows/validate-calendar-interface.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  calendar-interface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/calendar-core.test.cjs
