@@ -1707,6 +1707,37 @@ X-POKEMON-TERRITORY:FRANCE_CONFIRMED
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+LAST-MODIFIED:20260927T103443Z
+TRANSP:TRANSPARENT
+UID:pokemon-tcgl-trainer-trial-pikachu-a-gogo-20261002@openai
+DTSTAMP:20260927T103443Z
+SEQUENCE:1
+STATUS:CONFIRMED
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261016
+SUMMARY:Début — JCC Pokémon Live : Test Pikachu à gogo
+DESCRIPTION:Test de Dresseurs et Dresseuses officiel du JCC Pokémon Live d
+ u 2 au 15 octobre 2026 inclus. Permet de découvrir les Pikachu de l’ext
+ ension 30ᵉ Anniversaire. Source officielle Pokémon (lettre de l’équi
+ pe de développement) : https://community.pokemon.com/fr-fr/discussion/260
+ 14/lettre-a-la-communaute-15-septembre-2026
+URL:https://community.pokemon.com/fr-fr/discussion/26014/lettre-a-la-commun
+ aute-15-septembre-2026
+CATEGORIES:POKEMON,JCC POKEMON LIVE,TRAINER TRIAL
+X-POKEMON-USER-EFFECT:tcgl_trainer_trial:pikachu-a-gogo:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-02
+X-POKEMON-EXACT-END:2026-10-15
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le Test Pikachu à gogo commence demain dans le JCC Pokémon Li
+ ve.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 LAST-MODIFIED:20260926T212932Z
 TRANSP:TRANSPARENT
 UID:pokemon-paris-bardakoff-musee-en-herbe-20261002@openai
