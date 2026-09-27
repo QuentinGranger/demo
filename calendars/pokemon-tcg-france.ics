@@ -1894,6 +1894,37 @@ DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Va
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+LAST-MODIFIED:20260927T103558Z
+TRANSP:TRANSPARENT
+UID:pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai
+DTSTAMP:20260927T103558Z
+SEQUENCE:1
+STATUS:CONFIRMED
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261106
+SUMMARY:Début — JCC Pokémon Live : Retour sur les Mondiaux 2024
+DESCRIPTION:Test de Dresseurs et Dresseuses officiel du JCC Pokémon Live d
+ u 16 octobre au 5 novembre 2026 inclus. Permet de rejouer avec la méta de
+ s Championnats du Monde Pokémon 2024. Source officielle Pokémon (lettre
+  de l’équipe de développement) : https://community.pokemon.com/fr-fr/d
+ iscussion/26014/lettre-a-la-communaute-15-septembre-2026
+URL:https://community.pokemon.com/fr-fr/discussion/26014/lettre-a-la-commun
+ aute-15-septembre-2026
+CATEGORIES:POKEMON,JCC POKEMON LIVE,TRAINER TRIAL,WORLDS 2024
+X-POKEMON-USER-EFFECT:tcgl_trainer_trial:return-to-worlds-2024:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-16
+X-POKEMON-EXACT-END:2026-11-05
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Le Test Retour sur les Mondiaux 2024 commence demain dans le JC
+ C Pokémon Live.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 LAST-MODIFIED:20260926T212932Z
 TRANSP:TRANSPARENT
 UID:pokemon-paris-bardakoff-musee-en-herbe-20261022@openai
