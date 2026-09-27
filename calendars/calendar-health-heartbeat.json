@@ -1,10 +1,10 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-09-26T13:07:28.966040Z",
-  "last_deep_check_at": "2026-09-26T13:07:28.966040Z",
+  "last_observer_check_at": "2026-09-27T13:21:43.378Z",
+  "last_deep_check_at": "2026-09-27T13:21:43.378Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "MANUAL_HEALTH_REPAIR",
+  "observer_title": "Calendriers jeux — France",
   "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-09-26T12:25:24.633830+00:00",
-      "updated_at": "2026-09-26T13:03:01.135573+00:00",
+      "last_run_time": "2026-09-27T11:41:39.818725+00:00",
+      "updated_at": "2026-09-27T11:42:02.754131+00:00",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "User-approved consolidation verified through automations.peek: existing active hourly task renamed and updated, with all three franchise scopes and ticketing. Eight ICS structures and three current master RAW feeds verified. Existing last_run_time is preserved; the first scheduled execution of the expanded scope is still pending. Retired separate tasks are not counted as active monitors."
+  "note": "Daily consolidated observer check: active hourly automation verified by automations.peek; eight ICS paths, strict calendar checks and the three public master RAW feeds validated against current master. No incident transition."
 }
