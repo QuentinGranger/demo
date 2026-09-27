@@ -728,4 +728,46 @@ ACTION:DISPLAY
 DESCRIPTION:🏆 Les qualifications FNCS Solo Europe commencent demain
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-solo-reload-victory-cup-eu-2026@openai
+DTSTAMP:20260927T051346Z
+LAST-MODIFIED:20260927T051346Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-LAST-CHANGE-ID:chg_523db7153f37570be0fc5212
+X-FORTNITE-COMPETITION-ID:solo-reload-victory-cup-eu-2026
+X-FORTNITE-PROJECTION-LEVEL:CALENDAR
+X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
+X-FORTNITE-REGION:EU
+X-FORTNITE-RULESET:RELOAD
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-PLATFORM:ALL_SUPPORTED
+X-FORTNITE-SESSION;ROUND=SESSION1-R1:20261002T170000/20261002T190000
+X-FORTNITE-SESSION;ROUND=SESSION1-R2:20261002T200000/20261002T204500
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261024
+SUMMARY:🏆 ✅ 🆕 Coupe victoire solo (Recharge) — Europe
+DESCRIPTION:Période officielle : du 2 au 23 octobre 2026. Première journ
+ ée exacte : vendredi 2 octobre, round 1 de 17h00 à 19h00 puis round 2 de
+  20h00 à 20h45 (Paris). Éligibilité : atteindre Platine ou plus en clas
+ sé Recharge combiné pendant la saison précédente ou actuelle, avoir au
+  moins 13 ans et activer l’A2F. Le top 4 000 EU du round 1 accède au ro
+ und 2 ; chaque Victoire royale du round 2 rapporte 100 $ US. Les horaires 
+ ultérieurs ne sont pas extrapolés ici. Source officielle Fortnite Compet
+ itive.
+URL:https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup/?l
+ ang=fr&region=EU
+CATEGORIES:Fortnite,Compétition,Coupe victoire,Recharge,Solos,Europe
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:🏆 La Coupe victoire solo Recharge Europe commence demain à 
+ 17h
+END:VALARM
+END:VEVENT
 END:VCALENDAR

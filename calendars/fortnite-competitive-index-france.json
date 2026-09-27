@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-09-26T13:49:02Z",
+  "generated_at": "2026-09-27T05:13:46Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "bb7a4b5e5b750ec7cf3e1225038a7017960238ae",
+    "ledger_sha": "9ea1a67321d7fea91711f3e283707a10bf90b5e4",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -34,7 +34,8 @@
     "performance-evaluation-eu-2026",
     "reload-elite-ewc-paris-2026",
     "reload-zb-duos-cash-eu-20260830",
-    "shadow-cup-eu-2026-08-21"
+    "shadow-cup-eu-2026-08-21",
+    "solo-reload-victory-cup-eu-2026"
   ],
   "by_visibility": {
     "FEATURED": [
@@ -59,7 +60,8 @@
     "CALENDAR": [
       "fncs-solo-qualifiers-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ]
   },
   "by_status": {
@@ -79,7 +81,8 @@
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "reload-zb-duos-cash-eu-20260830",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "COMPLETED": [
       "fncs-global-last-chance-eu-2026",
@@ -107,7 +110,8 @@
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
       "reload-zb-duos-cash-eu-20260830",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ]
   },
   "by_series_id": {
@@ -152,6 +156,9 @@
     ],
     "RELOAD_CASH_CUP": [
       "reload-zb-duos-cash-eu-20260830"
+    ],
+    "VICTORY_CUP": [
+      "solo-reload-victory-cup-eu-2026"
     ]
   },
   "by_competition_class": {
@@ -178,7 +185,8 @@
       "override-series-eu-20260828"
     ],
     "VICTORY_CUP": [
-      "console-zb-solo-victory-eu-20260829"
+      "console-zb-solo-victory-eu-20260829",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "RANKED_CUP": [
       "duos-ranked-br-eu-20260829",
@@ -210,7 +218,8 @@
     "RELOAD": [
       "duos-reload-ranked-br-eu-20260830",
       "mobile-series-championship-copenhagen-2026",
-      "reload-elite-ewc-paris-2026"
+      "reload-elite-ewc-paris-2026",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "MIXED": [
       "override-series-crash-bandicoot-eu-2026-08-28",
@@ -245,7 +254,8 @@
       "console-zb-solo-victory-eu-20260829",
       "fncs-solo-qualifiers-eu-2026",
       "mobile-series-championship-copenhagen-2026",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "UNKNOWN": [
       "arenas-test-eu-20260830",
@@ -268,7 +278,8 @@
       "performance-evaluation-eu-2026",
       "reload-elite-ewc-paris-2026",
       "reload-zb-duos-cash-eu-20260830",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "MOBILE": [
       "mobile-series-championship-copenhagen-2026"
@@ -309,14 +320,15 @@
       "shadow-cup-eu-2026-08-21:zero-build"
     ],
     "QUALIFIER": [
-      "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1"
+      "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1",
+      "solo-reload-victory-cup-eu-2026:session-1"
     ]
   },
   "by_date": {
-    "2026-09-26": [
+    "2026-09-27": [
       "fncs-global-2026-antwerp"
     ],
-    "2026-09-27": [
+    "2026-09-26": [
       "fncs-global-2026-antwerp"
     ],
     "2026-08-22": [
@@ -389,6 +401,12 @@
     ],
     "2026-09-29": [
       "fncs-solo-qualifiers-eu-2026"
+    ],
+    "2026-10-02": [
+      "solo-reload-victory-cup-eu-2026"
+    ],
+    "2026-10-23": [
+      "solo-reload-victory-cup-eu-2026"
     ]
   },
   "sessions": {
@@ -422,7 +440,9 @@
       "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
       "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
       "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
-      "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+      "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1",
+      "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
+      "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
     ],
     "by_exact_date": {
       "2026-08-19": [
@@ -486,6 +506,10 @@
       ],
       "2026-09-29": [
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2"
+      ],
+      "2026-10-02": [
+        "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
+        "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
       ]
     },
     "by_status": {
@@ -521,7 +545,9 @@
         "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
         "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
         "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
-        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1"
+        "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1",
+        "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
+        "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
       ]
     },
     "by_start_at": {
@@ -596,6 +622,12 @@
       ],
       "2026-09-29T17:00:00+02:00": [
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2"
+      ],
+      "2026-10-02T17:00:00+02:00": [
+        "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700"
+      ],
+      "2026-10-02T20:00:00+02:00": [
+        "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
       ]
     }
   },
@@ -615,7 +647,8 @@
     "PLAY": [
       "fncs-solo-qualifiers-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
-      "shadow-cup-eu-2026-08-21"
+      "shadow-cup-eu-2026-08-21",
+      "solo-reload-victory-cup-eu-2026"
     ],
     "FOLLOW": [
       "fncs-global-last-chance-eu-2026"
@@ -728,6 +761,11 @@
       "initial_level": "CALENDAR",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai"
+    },
+    "solo-reload-victory-cup-eu-2026": {
+      "initial_level": "CALENDAR",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-solo-reload-victory-cup-eu-2026@openai"
     }
   },
   "conflicts": [
