@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-09-27T18:20:11Z",
+  "generated_at": "2026-09-27T20:46:51Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "7fea0f4dbfe68caa8a52bbe4a3d2cfd5377de1ac",
+    "ledger_sha": "2303cf82e44905d9c2f6148dc86a238be1ae36c8",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -74,7 +74,6 @@
       "duos-reload-ranked-zb-eu-20260830",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
-      "fncs-global-2026-antwerp",
       "fncs-solo-qualifiers-eu-2026",
       "mobile-series-championship-copenhagen-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
@@ -85,6 +84,7 @@
       "solo-reload-victory-cup-eu-2026"
     ],
     "COMPLETED": [
+      "fncs-global-2026-antwerp",
       "fncs-global-last-chance-eu-2026",
       "reload-elite-ewc-paris-2026"
     ]

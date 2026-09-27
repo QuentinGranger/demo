@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-09-27T18:20:11Z",
+  "updated_at": "2026-09-27T20:46:51Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -346,7 +346,7 @@
       "season_id": null,
       "name": "Fortnite Global Championship 2026 — Anvers",
       "competition_class": "FNCS",
-      "status": "SCHEDULED",
+      "status": "COMPLETED",
       "regions": [
         "GLOBAL"
       ],
@@ -387,7 +387,8 @@
       ],
       "source_urls": [
         "https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr",
-        "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1"
+        "https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1",
+        "https://www.fortnite.com/competitive/events/FNCS%20GC%20LAN/?region=EU"
       ],
       "phases": [
         {
@@ -395,7 +396,7 @@
           "name": "Global Championship",
           "phase_type": "CHAMPIONSHIP",
           "order": 1,
-          "status": "SCHEDULED",
+          "status": "COMPLETED",
           "registration": null,
           "eligibility_override": null,
           "qualification_override": null,
@@ -419,8 +420,38 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Seeded from existing confirmed Fortnite calendar state; exact competitive session times remain unpublished/untrusted."
+        },
+        {
+          "at": "2026-09-27T20:46:51Z",
+          "type": "COMPETITION_STATUS_CHANGED",
+          "source_id": "fortnite_competitive",
+          "note": "Official Fortnite final leaderboard marks the Global Championship complete after 12 matches. HavoK pixie + HavoK SwizzY won with 525 points; AURA t3eny + AURA shxrk placed second with 523, and BIG Malibuca + BIG Vico third with 521. Results do not alter calendar DTSTART/DTEND."
         }
-      ]
+      ],
+      "result": {
+        "finality": "FINAL_OFFICIAL",
+        "champion_duo": [
+          "[FNCSGC26] HavoK pixie",
+          "[FNCSGC26] HavoK SwizzY"
+        ],
+        "champion_points": 525,
+        "victory_royales": 1,
+        "matches": 12,
+        "eliminations": 39,
+        "runner_up_duo": [
+          "AURA t3eny",
+          "AURA shxrk"
+        ],
+        "runner_up_points": 523,
+        "third_place_duo": [
+          "BIG Malibuca",
+          "BIG Vico"
+        ],
+        "third_place_points": 521,
+        "source_id": "fortnite_competitive",
+        "source_url": "https://www.fortnite.com/competitive/events/FNCS%20GC%20LAN/?region=EU",
+        "observed_at": "2026-09-27T20:46:51Z"
+      }
     },
     {
       "competition_id": "reload-elite-ewc-paris-2026",
