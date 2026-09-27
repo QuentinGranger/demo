@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-08-30T00:50:46Z",
+  "updated_at": "2026-09-27T08:56:26Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -101,14 +101,37 @@
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "LONG_RUN",
-      "last_verified_at": "2026-08-19T05:55:00Z",
-      "last_changed_at": null,
+      "last_verified_at": "2026-09-27T08:56:26Z",
+      "last_changed_at": "2026-09-27T08:56:26Z",
       "run_start": "2026-10-17",
       "run_end": "2027-01-17",
+      "price_min_eur": 20.0,
+      "price_max_eur": 60.0,
       "session_catalog_mode": "SPARSE_ONLY",
-      "session_states": [],
-      "verification_notes": "La saison 2 est confirmée par le Théâtre du Gymnase et le site officiel Potted Potter : 17 octobre 2026–17 janvier 2027, réservations ouvertes. L'ancienne page event-pro du théâtre affiche encore la saison précédente et n'est plus utilisée comme URL de billetterie courante.",
-      "history": []
+      "session_states": [
+        {
+          "session_key": "2026-10-17T14:00-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": [
+            {"category_key":"carre-or","status":"ON_SALE","price_eur":60.0,"scarcity_evidence":"UNKNOWN"},
+            {"category_key":"categorie-1","status":"ON_SALE","price_eur":50.0,"scarcity_evidence":"UNKNOWN"},
+            {"category_key":"categorie-2","status":"ON_SALE","price_eur":43.0,"scarcity_evidence":"UNKNOWN"},
+            {"category_key":"categorie-3","status":"ON_SALE","price_eur":39.0,"scarcity_evidence":"UNKNOWN"},
+            {"category_key":"categorie-4","status":"ON_SALE","price_eur":25.0,"scarcity_evidence":"UNKNOWN"},
+            {"category_key":"categorie-5-visibilite-reduite","status":"ON_SALE","price_eur":20.0,"scarcity_evidence":"UNKNOWN"}
+          ]
+        }
+      ],
+      "verification_notes": "La saison 2 est confirmée par le Théâtre du Gymnase et la billetterie directe : 17 octobre 2026–17 janvier 2027, réservations ouvertes. La première séance vérifiée est le 17 octobre à 14:00 ; six catégories sont proposées de 20 € à 60 €. Aucune rareté n'est inférée.",
+      "history": [
+        {
+          "at": "2026-09-27T08:56:26Z",
+          "transition": "PRICE_STRUCTURE_VERIFIED",
+          "source_id": "theatre-gymnase",
+          "note": "Première séance vérifiée le 17 octobre 2026 à 14:00 ; tarifs directs de 20 € à 60 € selon six catégories. Enrichissement silencieux, sans rareté ni changement de disponibilité inféré."
+        }
+      ]
     },
     {
       "event_uid": "hp-cine-concert-philosophers-stone-paris-20261104@openai",

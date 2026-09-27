@@ -286,9 +286,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:hp-potted-potter-paris-20261017@openai
-DTSTAMP:20260819T035300Z
-LAST-MODIFIED:20260819T035300Z
-SEQUENCE:1
+DTSTAMP:20260927T085626Z
+LAST-MODIFIED:20260927T085626Z
+SEQUENCE:2
 STATUS:CONFIRMED
 PRIORITY:5
 X-HARRYPOTTER-PRIORITY:IMPORTANT
@@ -301,20 +301,25 @@ X-HARRYPOTTER-RUN-MODE:DATE_RANGE
 X-HARRYPOTTER-SESSION-MODE:ONE_RUN_NOT_EACH_SHOW
 X-HARRYPOTTER-FIRST-ADDED-AT:20260819T034700Z
 X-HARRYPOTTER-NEW-UNTIL:20260824T034700Z
-X-HARRYPOTTER-FRESHNESS:NEW
-X-HARRYPOTTER-BADGE:NEW
+X-HARRYPOTTER-LAST-MAJOR-UPDATE-AT:20260927T085626Z
+X-HARRYPOTTER-UPDATE-UNTIL:20260930T085626Z
+X-HARRYPOTTER-FRESHNESS:UPDATED
+X-HARRYPOTTER-BADGE:UPDATED
+X-HARRYPOTTER-SESSION-TIME-1:20261017T140000
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20270118
-SUMMARY:⭐ ✅ 🆕 🎭 Spectacle — Potted Potter — Paris
+SUMMARY:⭐ ✅ ✨ 🎭 Spectacle — Potted Potter — Paris
 LOCATION;ALTREP="https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris":Théâtre du Gymnase Marie Bell\, 38 boulevard de Bonne Nouvelle\, 75010 Paris\, France
 X-HARRYPOTTER-LOCATION-PRECISION:BUILDING
 X-HARRYPOTTER-MAPS-URL:https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris
-X-HARRYPOTTER-TICKET-URL:https://theatredugymnase.com/event-pro/potted-potter
-X-HARRYPOTTER-TICKET-STATUS:AVAILABLE
+X-HARRYPOTTER-TICKET-URL:https://billetterie-jmd.tickandlive.com/evenement/potted-potter-1?idwl=28
+X-HARRYPOTTER-TICKET-STATUS:ON_SALE
 X-HARRYPOTTER-ACCESS-MODE:TICKET
-DESCRIPTION:Priorité : ⭐ Important — longue série de représentations Harry Potter à Paris.\nFiabilité : ✅ Confirmé par le Théâtre du Gymnase Marie Bell.\nType : 🎭 spectacle vivant — une seule fiche pour toute la période, pas un événement par représentation.\nPériode : du 17 octobre 2026 au 17 janvier 2027. Horaires variables selon les jours ; vérifier la séance avant réservation.\n📍 Adresse : Théâtre du Gymnase Marie Bell — 38 boulevard de Bonne Nouvelle, 75010 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris\n🎟️ Billetterie : https://theatredugymnase.com/event-pro/potted-potter\n🆕 Ajouté au calendrier le 19 août 2026 — nouveau jusqu'au 24 août 2026.\nRappels : J-7 et J-1 avant le début de la série.\nSource : https://theatredugymnase.com/
-URL:https://theatredugymnase.com/
-CATEGORIES:Harry Potter,Événement,Paris,Théâtre,Nouveau,Priorité Important
+X-HARRYPOTTER-TICKET-PRICE-MIN-EUR:20.00
+X-HARRYPOTTER-TICKET-PRICE-MAX-EUR:60.00
+DESCRIPTION:Priorité : ⭐ Important — longue série de représentations Harry Potter à Paris.\nFiabilité : ✅ Confirmé par la billetterie directe du Théâtre du Gymnase Marie Bell.\nType : 🎭 spectacle vivant — une seule fiche pour toute la période, pas un événement par représentation.\nPériode : du 17 octobre 2026 au 17 janvier 2027. Première séance vérifiée : samedi 17 octobre à 14h00 ; les autres horaires varient selon les jours.\n🎟️ Tarifs vérifiés pour la première séance : 20 € à 60 € selon six catégories ; aucune rareté n'est inférée.\n📍 Adresse : Théâtre du Gymnase Marie Bell — 38 boulevard de Bonne Nouvelle, 75010 Paris, France.\n🗺️ Plans : https://maps.apple.com/?q=Th%C3%A9%C3%A2tre%20du%20Gymnase%20Marie%20Bell%2C%2038%20boulevard%20de%20Bonne%20Nouvelle%2C%2075010%20Paris\n🎟️ Billetterie : https://billetterie-jmd.tickandlive.com/evenement/potted-potter-1?idwl=28\n✨ Mise à jour majeure le 27 septembre 2026 : première séance et structure tarifaire vérifiées.\nRappels : J-7 et J-1 avant le début de la série.\nSource : https://billetterie-jmd.tickandlive.com/evenement/potted-potter-1?idwl=28
+URL:https://billetterie-jmd.tickandlive.com/evenement/potted-potter-1?idwl=28
+CATEGORIES:Harry Potter,Événement,Paris,Théâtre,Mis à jour,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
