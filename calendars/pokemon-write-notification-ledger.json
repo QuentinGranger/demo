@@ -1,23 +1,185 @@
 {
   "version": 1,
   "entries": [
-    {"write_notice_key":"pokemon-go-wild-area-global-2026|pokemon-go-wild-area-global-20261114@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json","user_effect":"pokemon-go-wild-area-global-2026","uid":"pokemon-go-wild-area-global-20261114@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json","state":"RESERVED","reserved_at":"2026-09-11T01:07:30+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26|play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json","user_effect":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26","uid":"play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json","state":"RESERVED","reserved_at":"2026-09-11T02:06:30+02:00"},
-    {"write_notice_key":"physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19|pokemon-30ans-fnac-beaune-pokeshow-20260919@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json","user_effect":"physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19","uid":"pokemon-30ans-fnac-beaune-pokeshow-20260919@openai","write_status":"PATCH_REQUEST_CREATED","patch_request":"calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json","state":"RESERVED","reserved_at":"2026-09-11T02:06:30+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22|play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json","user_effect":"physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22","uid":"play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json","state":"RESERVED","reserved_at":"2026-09-11T03:55:10+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03|play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json","user_effect":"physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03","uid":"play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json","state":"RESERVED","reserved_at":"2026-09-11T04:52:00+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04|play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json","user_effect":"physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04","uid":"play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json","state":"RESERVED","reserved_at":"2026-09-11T04:52:00+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11|play-pokemon-league-cup-ultrajeux-bastille-20261011@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json","user_effect":"physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11","uid":"play-pokemon-league-cup-ultrajeux-bastille-20261011@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json","state":"RESERVED","reserved_at":"2026-09-11T04:52:00+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31|play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json","user_effect":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31","uid":"play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json","state":"RESERVED","reserved_at":"2026-09-11T04:52:00+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28|play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json","user_effect":"physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28","uid":"play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json","state":"RESERVED","reserved_at":"2026-09-11T04:52:00+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12|play-pokemon-cup-metz-caverne-gobelin-20260912@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json","user_effect":"physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12","uid":"play-pokemon-cup-metz-caverne-gobelin-20260912@openai","write_status":"PATCH_REQUEST_CREATED","patch_request":"calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json","state":"RESERVED","reserved_at":"2026-09-11T10:14:09+02:00"},
-    {"write_notice_key":"champions_monthly_challenge:2026-09:register_play|pokemon-champions-monthly-challenge-202609@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json","user_effect":"champions_monthly_challenge:2026-09:register_play","uid":"pokemon-champions-monthly-challenge-202609@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json","state":"RESERVED","reserved_at":"2026-09-11T15:41:20+02:00"},
-    {"write_notice_key":"physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12|play-pokemon-league-challenge-meisia-republique-20260912@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json","user_effect":"physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12","uid":"play-pokemon-league-challenge-meisia-republique-20260912@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json","state":"RESERVED","reserved_at":"2026-09-11T18:58:00+02:00"},
-    {"write_notice_key":"game_event:sv-skeledirge-mightiest-mark:2026-09|pokemon-sv-skeledirge-mightiest-20260911@pokemon-france|WORKFLOW_RUNNING|calendars/patch-requests/20260912T1842-sv-skeledirge-mightiest-mark.json","user_effect":"game_event:sv-skeledirge-mightiest-mark:2026-09","uid":"pokemon-sv-skeledirge-mightiest-20260911@pokemon-france","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260912T1842-sv-skeledirge-mightiest-mark.json","state":"RESERVED","reserved_at":"2026-09-12T18:42:30+02:00"},
-    {"write_notice_key":"physical_event:kingdultes-nantes-pikachu-meet:2026-09-19|pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france|WORKFLOW_RUNNING|calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json","user_effect":"physical_event:kingdultes-nantes-pikachu-meet:2026-09-19","uid":"pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json","state":"RESERVED","reserved_at":"2026-09-19T00:15:40+02:00"},
-    {"write_notice_key":"physical_event:kingdultes-nantes-pikachu-meet:2026-09-19|pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france|WRITE_FAILED|calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json","user_effect":"physical_event:kingdultes-nantes-pikachu-meet:2026-09-19","uid":"pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france","write_status":"WRITE_FAILED","patch_request":"calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json","state":"RESERVED","reserved_at":"2026-09-19T00:16:30+02:00"},
-    {"write_notice_key":"physical_event:esa-pokemon-open-days-paris:20260919-20|physical-event-esa-pokemon-open-days-paris-20260919@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260919T144229-esa-pokemon-open-days-paris.json","user_effect":"physical_event:esa-pokemon-open-days-paris:20260919-20","uid":"physical-event-esa-pokemon-open-days-paris-20260919@openai","write_status":"WORKFLOW_RUNNING","patch_request":"calendars/patch-requests/20260919T144229-esa-pokemon-open-days-paris.json","state":"RESERVED","reserved_at":"2026-09-19T14:43:20+02:00"},
-    {"write_notice_key":"pokemon_go_esa_astronaut_pikachu:fr|pokemon-go-esa-astronaut-pikachu-fr-20261004@quentingranger-demo|PATCH_REQUEST_CREATED|calendars/patch-requests/pokemon-go-esa-astronaut-pikachu-fr-20260919T2251.json","user_effect":"pokemon_go_esa_astronaut_pikachu:fr","uid":"pokemon-go-esa-astronaut-pikachu-fr-20261004@quentingranger-demo","write_status":"PATCH_REQUEST_CREATED","patch_request":"calendars/patch-requests/pokemon-go-esa-astronaut-pikachu-fr-20260919T2251.json","state":"RESERVED","reserved_at":"2026-09-19T22:51:30+02:00"},
-    {"write_notice_key":"go_event:esa-pikachu-astronaute:toulouse-fr|pokemon-go-esa-pikachu-astronaute-toulouse-fr-20261004@quentingranger.demo|WRITE_FAILED|calendars/patch-requests/20260921T170851-pokemon-go-esa-pikachu-astronaute-fr.json","user_effect":"go_event:esa-pikachu-astronaute:toulouse-fr","uid":"pokemon-go-esa-pikachu-astronaute-toulouse-fr-20261004@quentingranger.demo","write_status":"WRITE_FAILED","patch_request":"calendars/patch-requests/20260921T170851-pokemon-go-esa-pikachu-astronaute-fr.json","state":"RESERVED","reserved_at":"2026-09-21T21:18:30+02:00"}
+    {
+      "write_notice_key": "pokemon-go-wild-area-global-2026|pokemon-go-wild-area-global-20261114@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json",
+      "user_effect": "pokemon-go-wild-area-global-2026",
+      "uid": "pokemon-go-wild-area-global-20261114@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0106-pokemon-go-wild-area-global-2026.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T01:07:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26|play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-09-26",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20260926@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0205-ultrajeux-oberkampf-league-challenge-20260926.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T02:06:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19|pokemon-30ans-fnac-beaune-pokeshow-20260919@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json",
+      "user_effect": "physical_event:pokemon-30ans:fnac-beaune-pokeshow:2026-09-19",
+      "uid": "pokemon-30ans-fnac-beaune-pokeshow-20260919@openai",
+      "write_status": "PATCH_REQUEST_CREATED",
+      "patch_request": "calendars/patch-requests/20260911T0206-fnac-beaune-pokemon30-20260919.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T02:06:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22|play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:drakkar-ludik-longjumeau:2026-09-22",
+      "uid": "play-pokemon-league-challenge-drakkar-longjumeau-20260922@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0354-drakkar-longjumeau-league-challenge-20260922.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T03:55:10+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03|play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json",
+      "user_effect": "physical_event:play-pokemon-league-cup:ultrajeux-oberkampf-paris:2026-10-03",
+      "uid": "play-pokemon-league-cup-ultrajeux-oberkampf-20261003@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0448-ultrajeux-oberkampf-league-cup-20261003.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04|play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-bastille-paris:2026-10-04",
+      "uid": "play-pokemon-league-challenge-ultrajeux-bastille-20261004@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0449-ultrajeux-bastille-league-challenge-20261004.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11|play-pokemon-league-cup-ultrajeux-bastille-20261011@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json",
+      "user_effect": "physical_event:play-pokemon-league-cup:ultrajeux-bastille-paris:2026-10-11",
+      "uid": "play-pokemon-league-cup-ultrajeux-bastille-20261011@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0450-ultrajeux-bastille-league-cup-20261011.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31|play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-10-31",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20261031@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0451-ultrajeux-oberkampf-league-challenge-20261031.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28|play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:ultrajeux-oberkampf-paris:2026-11-28",
+      "uid": "play-pokemon-league-challenge-ultrajeux-oberkampf-20261128@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T0452-ultrajeux-oberkampf-league-challenge-20261128.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T04:52:00+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12|play-pokemon-cup-metz-caverne-gobelin-20260912@openai|PATCH_REQUEST_CREATED|calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json",
+      "user_effect": "physical_event:play-pokemon-cup:caverne-gobelin-metz:2026-09-12",
+      "uid": "play-pokemon-cup-metz-caverne-gobelin-20260912@openai",
+      "write_status": "PATCH_REQUEST_CREATED",
+      "patch_request": "calendars/patch-requests/20260911T1014-metz-pokemon-cup-restock.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T10:14:09+02:00"
+    },
+    {
+      "write_notice_key": "champions_monthly_challenge:2026-09:register_play|pokemon-champions-monthly-challenge-202609@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json",
+      "user_effect": "champions_monthly_challenge:2026-09:register_play",
+      "uid": "pokemon-champions-monthly-challenge-202609@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T1539-pokemon-champions-mcs-september-2026.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T15:41:20+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12|play-pokemon-league-challenge-meisia-republique-20260912@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json",
+      "user_effect": "physical_event:play-pokemon-league-challenge:meisia-republique-paris:2026-09-12",
+      "uid": "play-pokemon-league-challenge-meisia-republique-20260912@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260911T1858-meisia-republique-league-challenge-20260912.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-11T18:58:00+02:00"
+    },
+    {
+      "write_notice_key": "game_event:sv-skeledirge-mightiest-mark:2026-09|pokemon-sv-skeledirge-mightiest-20260911@pokemon-france|WORKFLOW_RUNNING|calendars/patch-requests/20260912T1842-sv-skeledirge-mightiest-mark.json",
+      "user_effect": "game_event:sv-skeledirge-mightiest-mark:2026-09",
+      "uid": "pokemon-sv-skeledirge-mightiest-20260911@pokemon-france",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260912T1842-sv-skeledirge-mightiest-mark.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-12T18:42:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:kingdultes-nantes-pikachu-meet:2026-09-19|pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france|WORKFLOW_RUNNING|calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json",
+      "user_effect": "physical_event:kingdultes-nantes-pikachu-meet:2026-09-19",
+      "uid": "pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-19T00:15:40+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:kingdultes-nantes-pikachu-meet:2026-09-19|pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france|WRITE_FAILED|calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json",
+      "user_effect": "physical_event:kingdultes-nantes-pikachu-meet:2026-09-19",
+      "uid": "pokemon-physical-kingdultes-nantes-pikachu-20260919@pokemon-france",
+      "write_status": "WRITE_FAILED",
+      "patch_request": "calendars/patch-requests/20260919T001438-kingdultes-nantes-pikachu-meet.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-19T00:16:30+02:00"
+    },
+    {
+      "write_notice_key": "physical_event:esa-pokemon-open-days-paris:20260919-20|physical-event-esa-pokemon-open-days-paris-20260919@openai|WORKFLOW_RUNNING|calendars/patch-requests/20260919T144229-esa-pokemon-open-days-paris.json",
+      "user_effect": "physical_event:esa-pokemon-open-days-paris:20260919-20",
+      "uid": "physical-event-esa-pokemon-open-days-paris-20260919@openai",
+      "write_status": "WORKFLOW_RUNNING",
+      "patch_request": "calendars/patch-requests/20260919T144229-esa-pokemon-open-days-paris.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-19T14:43:20+02:00"
+    },
+    {
+      "write_notice_key": "pokemon_go_esa_astronaut_pikachu:fr|pokemon-go-esa-astronaut-pikachu-fr-20261004@quentingranger-demo|PATCH_REQUEST_CREATED|calendars/patch-requests/pokemon-go-esa-astronaut-pikachu-fr-20260919T2251.json",
+      "user_effect": "pokemon_go_esa_astronaut_pikachu:fr",
+      "uid": "pokemon-go-esa-astronaut-pikachu-fr-20261004@quentingranger-demo",
+      "write_status": "PATCH_REQUEST_CREATED",
+      "patch_request": "calendars/patch-requests/pokemon-go-esa-astronaut-pikachu-fr-20260919T2251.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-19T22:51:30+02:00"
+    },
+    {
+      "write_notice_key": "go_event:esa-pikachu-astronaute:toulouse-fr|pokemon-go-esa-pikachu-astronaute-toulouse-fr-20261004@quentingranger.demo|WRITE_FAILED|calendars/patch-requests/20260921T170851-pokemon-go-esa-pikachu-astronaute-fr.json",
+      "user_effect": "go_event:esa-pikachu-astronaute:toulouse-fr",
+      "uid": "pokemon-go-esa-pikachu-astronaute-toulouse-fr-20261004@quentingranger.demo",
+      "write_status": "WRITE_FAILED",
+      "patch_request": "calendars/patch-requests/20260921T170851-pokemon-go-esa-pikachu-astronaute-fr.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-21T21:18:30+02:00"
+    },
+    {
+      "user_effect": "tcgl_trainer_trial:pikachu-a-gogo:fr",
+      "uid": "pokemon-tcgl-trainer-trial-pikachu-a-gogo-20261002@openai",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/20260927T103235-tcgl-trainer-trial-pikachu-a-gogo.json",
+      "write_notice_key": "tcgl_trainer_trial:pikachu-a-gogo:fr|pokemon-tcgl-trainer-trial-pikachu-a-gogo-20261002@openai|WRITE_VERIFIED_RAW|3b668ca157e462d9c5af0e5110e851583ec1de94",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-27T12:32:35+02:00"
+    },
+    {
+      "user_effect": "tcgl_trainer_trial:return-to-worlds-2024:fr",
+      "uid": "pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/20260927T103236-tcgl-trainer-trial-worlds-2024.json",
+      "write_notice_key": "tcgl_trainer_trial:return-to-worlds-2024:fr|pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai|WRITE_VERIFIED_RAW|3b668ca157e462d9c5af0e5110e851583ec1de94",
+      "state": "RESERVED",
+      "reserved_at": "2026-09-27T12:32:35+02:00"
+    }
   ]
 }
