@@ -1,0 +1,6 @@
+{
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "add",
+  "uid": "pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai\r\nDTSTAMP:20260927T103235Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nDTSTART;VALUE=DATE:20261016\r\nDTEND;VALUE=DATE:20261106\r\nSUMMARY:Début — JCC Pokémon Live : Retour sur les Mondiaux 2024\r\nDESCRIPTION:Test de Dresseurs et Dresseuses officiel du JCC Pokémon Live du 16 octobre au 5 novembre 2026 inclus. Permet de rejouer avec la méta des Championnats du Monde Pokémon 2024. Source officielle Pokémon (lettre de l’équipe de développement) : https://community.pokemon.com/fr-fr/discussion/26014/lettre-a-la-communaute-15-septembre-2026\r\nURL:https://community.pokemon.com/fr-fr/discussion/26014/lettre-a-la-communaute-15-septembre-2026\r\nCATEGORIES:POKEMON,JCC POKEMON LIVE,TRAINER TRIAL,WORLDS 2024\r\nX-POKEMON-USER-EFFECT:tcgl_trainer_trial:return-to-worlds-2024:fr\r\nX-POKEMON-DATE-PRECISION:EXACT_DATE\r\nX-POKEMON-TERRITORY:FRANCE_CONFIRMED\r\nX-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW\r\nX-POKEMON-EXACT-START:2026-10-16\r\nX-POKEMON-EXACT-END:2026-11-05\r\nBEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:Le Test Retour sur les Mondiaux 2024 commence demain dans le JCC Pokémon Live.\r\nEND:VALARM\r\nEND:VEVENT"
+}
