@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-09-27T05:13:46Z",
+  "generated_at": "2026-09-27T18:20:11Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "9ea1a67321d7fea91711f3e283707a10bf90b5e4",
+    "ledger_sha": "7fea0f4dbfe68caa8a52bbe4a3d2cfd5377de1ac",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -433,6 +433,8 @@
       "override-series-eu-20260828:base:EU:20260828T1700:session1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
       "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
+      "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1",
+      "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260819T1500:group-stage-day1",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260820T1500:group-stage-day2",
       "reload-elite-ewc-paris-2026:championship:GLOBAL:20260821T1500:survival",
@@ -510,6 +512,10 @@
       "2026-10-02": [
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
+      ],
+      "2026-10-01": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1",
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
       ]
     },
     "by_status": {
@@ -542,6 +548,8 @@
         "override-series-eu-20260828:base:EU:20260828T1700:session1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2",
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1",
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2",
         "reload-zb-duos-cash-eu-20260830:main:EU:20260830T1700:session1",
         "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
         "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
@@ -628,6 +636,12 @@
       ],
       "2026-10-02T20:00:00+02:00": [
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
+      ],
+      "2026-10-01T16:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1"
+      ],
+      "2026-10-01T19:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
       ]
     }
   },
