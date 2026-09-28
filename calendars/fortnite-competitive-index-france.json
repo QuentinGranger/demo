@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-09-27T20:46:51Z",
+  "generated_at": "2026-09-28T01:58:19Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "2303cf82e44905d9c2f6148dc86a238be1ae36c8",
+    "ledger_sha": "b40d17ca2a17760e7a4e8ecfdc52f0dd9c16a045",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -35,6 +35,10 @@
     "reload-elite-ewc-paris-2026",
     "reload-zb-duos-cash-eu-20260830",
     "shadow-cup-eu-2026-08-21",
+    "solo-ranked-br-eu-20260928",
+    "solo-ranked-zb-eu-20260928",
+    "solo-reload-ranked-br-eu-20260929",
+    "solo-reload-ranked-zb-eu-20260929",
     "solo-reload-victory-cup-eu-2026"
   ],
   "by_visibility": {
@@ -55,7 +59,11 @@
       "fncs-global-last-chance-eu-2026",
       "override-series-eu-20260828",
       "performance-evaluation-eu-2026",
-      "reload-zb-duos-cash-eu-20260830"
+      "reload-zb-duos-cash-eu-20260830",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929"
     ],
     "CALENDAR": [
       "fncs-solo-qualifiers-eu-2026",
@@ -65,6 +73,11 @@
     ]
   },
   "by_status": {
+    "COMPLETED": [
+      "fncs-global-2026-antwerp",
+      "fncs-global-last-chance-eu-2026",
+      "reload-elite-ewc-paris-2026"
+    ],
     "SCHEDULED": [
       "arenas-test-eu-20260830",
       "console-zb-solo-victory-eu-20260829",
@@ -81,12 +94,11 @@
       "performance-evaluation-eu-2026",
       "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929",
       "solo-reload-victory-cup-eu-2026"
-    ],
-    "COMPLETED": [
-      "fncs-global-2026-antwerp",
-      "fncs-global-last-chance-eu-2026",
-      "reload-elite-ewc-paris-2026"
     ]
   },
   "by_region": {
@@ -111,6 +123,10 @@
       "performance-evaluation-eu-2026",
       "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929",
       "solo-reload-victory-cup-eu-2026"
     ]
   },
@@ -145,14 +161,18 @@
     ],
     "RANKED_CUP": [
       "duos-ranked-br-eu-20260829",
-      "duos-ranked-zb-eu-20260829"
+      "duos-ranked-zb-eu-20260829",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928"
     ],
     "ARENAS_TEST": [
       "arenas-test-eu-20260830"
     ],
     "RANKED_RELOAD": [
       "duos-reload-ranked-br-eu-20260830",
-      "duos-reload-ranked-zb-eu-20260830"
+      "duos-reload-ranked-zb-eu-20260830",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929"
     ],
     "RELOAD_CASH_CUP": [
       "reload-zb-duos-cash-eu-20260830"
@@ -192,7 +212,11 @@
       "duos-ranked-br-eu-20260829",
       "duos-ranked-zb-eu-20260829",
       "duos-reload-ranked-br-eu-20260830",
-      "duos-reload-ranked-zb-eu-20260830"
+      "duos-reload-ranked-zb-eu-20260830",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929"
     ],
     "TEST_CUP": [
       "arenas-test-eu-20260830"
@@ -213,12 +237,14 @@
       "fncs-global-last-chance-eu-2026",
       "fncs-solo-qualifiers-eu-2026",
       "override-series-eu-20260828",
-      "performance-evaluation-eu-2026"
+      "performance-evaluation-eu-2026",
+      "solo-ranked-br-eu-20260928"
     ],
     "RELOAD": [
       "duos-reload-ranked-br-eu-20260830",
       "mobile-series-championship-copenhagen-2026",
       "reload-elite-ewc-paris-2026",
+      "solo-reload-ranked-br-eu-20260929",
       "solo-reload-victory-cup-eu-2026"
     ],
     "MIXED": [
@@ -229,7 +255,9 @@
       "console-zb-solo-victory-eu-20260829",
       "duos-ranked-zb-eu-20260829",
       "duos-reload-ranked-zb-eu-20260830",
-      "reload-zb-duos-cash-eu-20260830"
+      "reload-zb-duos-cash-eu-20260830",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-zb-eu-20260929"
     ],
     "UNKNOWN": [
       "arenas-test-eu-20260830"
@@ -255,6 +283,10 @@
       "fncs-solo-qualifiers-eu-2026",
       "mobile-series-championship-copenhagen-2026",
       "shadow-cup-eu-2026-08-21",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929",
       "solo-reload-victory-cup-eu-2026"
     ],
     "UNKNOWN": [
@@ -279,6 +311,10 @@
       "reload-elite-ewc-paris-2026",
       "reload-zb-duos-cash-eu-20260830",
       "shadow-cup-eu-2026-08-21",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929",
       "solo-reload-victory-cup-eu-2026"
     ],
     "MOBILE": [
@@ -317,7 +353,11 @@
       "reload-zb-duos-cash-eu-20260830:main",
       "shadow-cup-eu-2026-08-21:battle-royale",
       "shadow-cup-eu-2026-08-21:mobile",
-      "shadow-cup-eu-2026-08-21:zero-build"
+      "shadow-cup-eu-2026-08-21:zero-build",
+      "solo-ranked-br-eu-20260928:main",
+      "solo-ranked-zb-eu-20260928:main",
+      "solo-reload-ranked-br-eu-20260929:main",
+      "solo-reload-ranked-zb-eu-20260929:main"
     ],
     "QUALIFIER": [
       "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1",
@@ -362,16 +402,19 @@
     "2026-08-08": [
       "fncs-global-last-chance-eu-2026"
     ],
-    "2026-10-22": [
-      "performance-evaluation-eu-2026"
-    ],
     "2026-08-23": [
       "performance-evaluation-eu-2026"
     ],
-    "2026-10-24": [
-      "mobile-series-championship-copenhagen-2026"
+    "2026-10-22": [
+      "performance-evaluation-eu-2026"
+    ],
+    "2026-10-01": [
+      "performance-evaluation-eu-2026"
     ],
     "2026-10-25": [
+      "mobile-series-championship-copenhagen-2026"
+    ],
+    "2026-10-24": [
       "mobile-series-championship-copenhagen-2026"
     ],
     "2026-08-28": [
@@ -393,14 +436,18 @@
     "2026-08-31": [
       "fncs-div1-practice-eu-20260831"
     ],
+    "2026-09-28": [
+      "fncs-solo-qualifiers-eu-2026",
+      "solo-ranked-br-eu-20260928",
+      "solo-ranked-zb-eu-20260928"
+    ],
     "2026-10-11": [
       "fncs-solo-qualifiers-eu-2026"
     ],
-    "2026-09-28": [
-      "fncs-solo-qualifiers-eu-2026"
-    ],
     "2026-09-29": [
-      "fncs-solo-qualifiers-eu-2026"
+      "fncs-solo-qualifiers-eu-2026",
+      "solo-reload-ranked-br-eu-20260929",
+      "solo-reload-ranked-zb-eu-20260929"
     ],
     "2026-10-02": [
       "solo-reload-victory-cup-eu-2026"
@@ -443,6 +490,10 @@
       "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
       "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
       "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1",
+      "solo-ranked-br-eu-20260928:main:EU:20260928T1700:session1",
+      "solo-ranked-zb-eu-20260928:main:EU:20260928T1700:session1",
+      "solo-reload-ranked-br-eu-20260929:main:EU:20260929T1700:session1",
+      "solo-reload-ranked-zb-eu-20260929:main:EU:20260929T1700:session1",
       "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
       "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
     ],
@@ -481,6 +532,10 @@
         "performance-evaluation-eu-2026:test-series:EU:20260823T1600:s1r1",
         "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"
       ],
+      "2026-10-01": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1",
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
+      ],
       "2026-08-28": [
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
@@ -504,18 +559,18 @@
         "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1"
       ],
       "2026-09-28": [
-        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1"
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
+        "solo-ranked-br-eu-20260928:main:EU:20260928T1700:session1",
+        "solo-ranked-zb-eu-20260928:main:EU:20260928T1700:session1"
       ],
       "2026-09-29": [
-        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2"
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2",
+        "solo-reload-ranked-br-eu-20260929:main:EU:20260929T1700:session1",
+        "solo-reload-ranked-zb-eu-20260929:main:EU:20260929T1700:session1"
       ],
       "2026-10-02": [
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
-      ],
-      "2026-10-01": [
-        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1",
-        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
       ]
     },
     "by_status": {
@@ -554,6 +609,10 @@
         "shadow-cup-eu-2026-08-21:battle-royale:EU:20260821T1700:session1",
         "shadow-cup-eu-2026-08-21:mobile:EU:20260821T1600:session1",
         "shadow-cup-eu-2026-08-21:zero-build:EU:20260821T1700:session1",
+        "solo-ranked-br-eu-20260928:main:EU:20260928T1700:session1",
+        "solo-ranked-zb-eu-20260928:main:EU:20260928T1700:session1",
+        "solo-reload-ranked-br-eu-20260929:main:EU:20260929T1700:session1",
+        "solo-reload-ranked-zb-eu-20260929:main:EU:20260929T1700:session1",
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
       ]
@@ -599,6 +658,12 @@
       "2026-08-23T19:00:00+02:00": [
         "performance-evaluation-eu-2026:test-series:EU:20260823T1900:s1r2"
       ],
+      "2026-10-01T16:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1"
+      ],
+      "2026-10-01T19:00:00+02:00": [
+        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
+      ],
       "2026-08-28T16:00:00+02:00": [
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1"
       ],
@@ -626,42 +691,40 @@
         "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1"
       ],
       "2026-09-28T17:00:00+02:00": [
-        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1"
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
+        "solo-ranked-br-eu-20260928:main:EU:20260928T1700:session1",
+        "solo-ranked-zb-eu-20260928:main:EU:20260928T1700:session1"
       ],
       "2026-09-29T17:00:00+02:00": [
-        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2"
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2",
+        "solo-reload-ranked-br-eu-20260929:main:EU:20260929T1700:session1",
+        "solo-reload-ranked-zb-eu-20260929:main:EU:20260929T1700:session1"
       ],
       "2026-10-02T17:00:00+02:00": [
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700"
       ],
       "2026-10-02T20:00:00+02:00": [
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
-      ],
-      "2026-10-01T16:00:00+02:00": [
-        "performance-evaluation-eu-2026:test-series:EU:20261001T1600:round1"
-      ],
-      "2026-10-01T19:00:00+02:00": [
-        "performance-evaluation-eu-2026:test-series:EU:20261001T1900:round2"
       ]
     }
   },
   "actionable": {
     "ATTEND": [
       "fncs-global-2026-antwerp",
-      "mobile-series-championship-copenhagen-2026",
-      "reload-elite-ewc-paris-2026"
+      "reload-elite-ewc-paris-2026",
+      "mobile-series-championship-copenhagen-2026"
     ],
     "WATCH": [
       "fncs-global-2026-antwerp",
-      "mobile-series-championship-copenhagen-2026",
-      "reload-elite-ewc-paris-2026"
+      "reload-elite-ewc-paris-2026",
+      "mobile-series-championship-copenhagen-2026"
     ],
     "REGISTER": [],
     "CHECK_IN": [],
     "PLAY": [
-      "fncs-solo-qualifiers-eu-2026",
-      "override-series-crash-bandicoot-eu-2026-08-28",
       "shadow-cup-eu-2026-08-21",
+      "override-series-crash-bandicoot-eu-2026-08-28",
+      "fncs-solo-qualifiers-eu-2026",
       "solo-reload-victory-cup-eu-2026"
     ],
     "FOLLOW": [
@@ -780,6 +843,26 @@
       "initial_level": "CALENDAR",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": "fortnite-solo-reload-victory-cup-eu-2026@openai"
+    },
+    "solo-ranked-br-eu-20260928": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "solo-ranked-zb-eu-20260928": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "solo-reload-ranked-br-eu-20260929": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "solo-reload-ranked-zb-eu-20260929": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
     }
   },
   "conflicts": [

@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-09-27T20:46:51Z",
+  "updated_at": "2026-09-28T01:58:19Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -2771,6 +2771,378 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Official EU event page confirmed the Oct 2–23 window, the first two exact sessions, eligibility, qualification threshold and victory prize."
+        }
+      ]
+    },
+    {
+      "competition_id": "solo-ranked-br-eu-20260928",
+      "official_event_id": "S42_RankedCupSolo",
+      "official_event_slug": "S42_RankedCupSolo",
+      "series_id": "RANKED_CUP",
+      "season_id": "C7S4",
+      "name": "Coupe classée solo (Battle Royale) — EU — 28 septembre 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-09-28",
+        "end_date": "2026-09-28",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "OFFICIAL",
+        "minimum_age": 13,
+        "mfa_required": true
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event5_EU&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB/schedule?region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "solo-ranked-br-eu-20260928:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "solo-ranked-br-eu-20260928:main:EU:20260928T1700:session1",
+              "official_session_id": "S42_RankedCupSolo_Event5_EU",
+              "name": "Coupe classée solo (Battle Royale) — EU — 28 septembre 2026",
+              "session_number": 1,
+              "round_number": 5,
+              "round_label": "SESSION1_ROUND5",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-28T17:00:00+02:00",
+              "end_at": "2026-09-28T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": null,
+              "prize": {
+                "type": "COSMETIC_REWARDS",
+                "details": "SEE_IN_GAME_COMPETE_TAB"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event5_EU&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-09-28T01:58:19Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "solo-ranked-zb-eu-20260928",
+      "official_event_id": "S42_RankedCupSolo_ZB",
+      "official_event_slug": "S42_RankedCupSolo_ZB",
+      "series_id": "RANKED_CUP",
+      "season_id": "C7S4",
+      "name": "Coupe classée solo (Zéro construction) — EU — 28 septembre 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-09-28",
+        "end_date": "2026-09-28",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "OFFICIAL",
+        "minimum_age": 13,
+        "mfa_required": true
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event5_EU&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB/schedule?region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "solo-ranked-zb-eu-20260928:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "solo-ranked-zb-eu-20260928:main:EU:20260928T1700:session1",
+              "official_session_id": "S42_RankedCupSolo_ZB_Event5_EU",
+              "name": "Coupe classée solo (Zéro construction) — EU — 28 septembre 2026",
+              "session_number": 1,
+              "round_number": 5,
+              "round_label": "SESSION1_ROUND5",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-28T17:00:00+02:00",
+              "end_at": "2026-09-28T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": null,
+              "prize": {
+                "type": "COSMETIC_REWARDS",
+                "details": "SEE_IN_GAME_COMPETE_TAB"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event5_EU&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-09-28T01:58:19Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "solo-reload-ranked-br-eu-20260929",
+      "official_event_id": "S42_RankedCupSoloReload",
+      "official_event_slug": "S42_RankedCupSoloReload",
+      "series_id": "RANKED_RELOAD",
+      "season_id": "C7S4",
+      "name": "Coupe classée Recharge solo (Battle Royale) — EU — 29 septembre 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "RELOAD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-09-29",
+        "end_date": "2026-09-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "OFFICIAL",
+        "minimum_age": 13,
+        "mfa_required": true
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event5_EU&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB/schedule?region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "solo-reload-ranked-br-eu-20260929:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "solo-reload-ranked-br-eu-20260929:main:EU:20260929T1700:session1",
+              "official_session_id": "S42_RankedCupSoloReload_Event5_EU",
+              "name": "Coupe classée Recharge solo (Battle Royale) — EU — 29 septembre 2026",
+              "session_number": 1,
+              "round_number": 5,
+              "round_label": "SESSION1_ROUND5",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-29T17:00:00+02:00",
+              "end_at": "2026-09-29T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 12,
+              "qualification": null,
+              "prize": {
+                "type": "COSMETIC_REWARDS",
+                "details": "SEE_IN_GAME_COMPETE_TAB"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event5_EU&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-09-28T01:58:19Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
+        }
+      ]
+    },
+    {
+      "competition_id": "solo-reload-ranked-zb-eu-20260929",
+      "official_event_id": "S42_RankedCupSoloReload_ZB",
+      "official_event_slug": "S42_RankedCupSoloReload_ZB",
+      "series_id": "RANKED_RELOAD",
+      "season_id": "C7S4",
+      "name": "Coupe classée Recharge solo (Zéro construction) — EU — 29 septembre 2026",
+      "competition_class": "RANKED_CUP",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "ZERO_BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-09-29",
+        "end_date": "2026-09-29",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "OFFICIAL",
+        "minimum_age": 13,
+        "mfa_required": true
+      },
+      "prize_pool": null,
+      "qualification": null,
+      "visibility": "LEDGER_ONLY",
+      "calendar_uid": null,
+      "source_ids": [
+        "fortnite_competitive"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event5_EU&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB/schedule?region=EU"
+      ],
+      "phases": [
+        {
+          "phase_id": "solo-reload-ranked-zb-eu-20260929:main",
+          "name": "Official EU session",
+          "phase_type": "OTHER",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "solo-reload-ranked-zb-eu-20260929:main:EU:20260929T1700:session1",
+              "official_session_id": "S42_RankedCupSoloReload_ZB_Event5_EU",
+              "name": "Coupe classée Recharge solo (Zéro construction) — EU — 29 septembre 2026",
+              "session_number": 1,
+              "round_number": 5,
+              "round_label": "SESSION1_ROUND5",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "ZERO_BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-09-29T17:00:00+02:00",
+              "end_at": "2026-09-29T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 12,
+              "qualification": null,
+              "prize": {
+                "type": "COSMETIC_REWARDS",
+                "details": "SEE_IN_GAME_COMPETE_TAB"
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event5_EU&region=EU",
+              "visibility": "LEDGER_ONLY",
+              "calendar_uid": null,
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-09-28T01:58:19Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule session ingested exhaustively under LEDGER_ONLY anti-bazar policy."
         }
       ]
     }
