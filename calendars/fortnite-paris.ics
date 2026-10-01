@@ -706,23 +706,25 @@ X-FORTNITE-REGION:EU
 X-FORTNITE-RULESET:BUILD
 X-FORTNITE-FORMAT:SOLOS
 X-FORTNITE-PLATFORM:ALL_SUPPORTED
-X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY1:20260928T170000/20260928T200000
-X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY2:20260929T170000/20260929T200000
+X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY1:20260928T170000/20260928T2000
+ 00
+X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY2:20260929T170000/20260929T2000
+ 00
 X-FORTNITE-SESSION;ROUND=QUALIFIER1-R2:20261003T170000/20261003T200000
 X-FORTNITE-SESSION;ROUND=QUALIFIER1-R3:20261004T170000/20261004T200000
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20261012
 SUMMARY:🏆 ✅ 🆕 Qualifications FNCS Solo — Europe
-DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Sessi
- ons exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 17h00
-  à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux j
- ours sont cumulés. Éligibilité annoncée : top 200 000 du Power Ranking
-  global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directem
- ent au round 2 ; participer au round 1 annule cet accès direct. Top 8 000
-  EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source off
- icielle Fortnite Competitive.
-URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang
- =fr&region=EU
+DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Ses
+ sions exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 1
+ 7h00 à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des 
+ deux jours sont cumulés. Éligibilité annoncée : top 200 000 du Power
+  Ranking global, 13 ans minimum et A2F activée. Le top 2 000 peut passe
+ r directement au round 2 ; participer au round 1 annule cet accès direc
+ t. Top 8 000 EU du round 1 vers le round 2, puis top 1 000 vers le round
+  3. Source officielle Fortnite Competitive.
+URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?la
+ ng=fr&region=EU
 CATEGORIES:Fortnite,Compétition,FNCS,Solos,Europe
 BEGIN:VALARM
 TRIGGER:-P1D
