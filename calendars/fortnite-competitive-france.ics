@@ -328,45 +328,214 @@ DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload
  à 17h
 END:VALARM
 END:VEVENT
-BEGIN:VEVENT
-UID:fortnite-fncs-solo-qualifiers-eu-2026@openai
-DTSTAMP:20260926T134902Z
-LAST-MODIFIED:20260926T134902Z
-SEQUENCE:0
-STATUS:CONFIRMED
-PRIORITY:5
-X-FORTNITE-PRIORITY:IMPORTANT
-X-FORTNITE-ACTION:PLAY
-X-FORTNITE-EVIDENCE-GRADE:A
-X-FORTNITE-SOURCE-ID:fortnite_competitive
-X-FORTNITE-LAST-CHANGE-ID:chg_701110cd7a046deefdd483da
-X-FORTNITE-COMPETITION-ID:fncs-solo-qualifiers-eu-2026
-X-FORTNITE-PROJECTION-LEVEL:CALENDAR
-X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
-X-FORTNITE-REGION:EU
-X-FORTNITE-RULESET:BUILD
-X-FORTNITE-FORMAT:SOLOS
-X-FORTNITE-PLATFORM:ALL_SUPPORTED
-X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY1:20260928T170000/20260928T200000
-X-FORTNITE-SESSION;ROUND=QUALIFIER1-R1-DAY2:20260929T170000/20260929T200000
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20261012
-SUMMARY:🏆 ✅ 🆕 Qualifications FNCS Solo — Europe
-DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Premi
- ères sessions exactes du round 1 : lundi 28 et mardi 29 septembre de 17h0
- 0 à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux 
- jours sont cumulés. Éligibilité annoncée : top 200 000 du Power Rankin
- g global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directe
- ment au round 2 ; participer au round 1 annule cet accès direct. Top 8 00
- 0 EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source of
- ficielle Fortnite Competitive.
-URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang
- =fr&region=EU
-CATEGORIES:Fortnite,Compétition,FNCS,Solos,Europe
+B
+ E
+ G
+ I
+ N
+ :
+ V
+ E
+ V
+ E
+ N
+ T
+U
+ I
+ D
+ :
+ f
+ o
+ r
+ t
+ n
+ i
+ t
+ e
+ -
+ f
+ n
+ c
+ s
+ -
+ s
+ o
+ l
+ o
+ -
+ q
+ u
+ a
+ l
+ i
+ f
+ i
+ e
+ r
+ s
+ -
+ e
+ u
+ -
+ 2
+ 0
+ 2
+ 6
+ @
+ o
+ p
+ e
+ n
+ a
+ i
+DT
+ S
+ T
+ A
+ M
+ P
+ :
+ 2
+ 0
+ 2
+ 6
+ 1
+ 0
+ 0
+ 1
+ T
+ 0
+ 5
+ 5
+ 6
+ 1
+ 5
+ Z
+LAS
+ T-
+ MO
+ DI
+ FI
+ ED
+ :2
+ 02
+ 61
+ 00
+ 1T
+ 05
+ 56
+ 15
+ Z
+SEQU
+ ENC
+ E:1
+STATU
+ S:CO
+ NFIR
+ MED
+PRIORI
+ TY:5
+X-FORTN
+ ITE-PR
+ IORITY
+ :IMPOR
+ TANT
+X-FORTNI
+ TE-ACTI
+ ON:PLAY
+X-FORTNIT
+ E-EVIDEN
+ CE-GRADE
+ :A
+X-FORTNITE
+ -SOURCE-I
+ D:fortnit
+ e_competi
+ tive
+X-FORTNITE-
+ LAST-CHANG
+ E-ID:chg_e
+ 96d51f2927
+ 83e035f2f1
+ c70
+X-FORTNITE-C
+ OMPETITION-
+ ID:fncs-sol
+ o-qualifier
+ s-eu-2026
+X-FORTNITE-PR
+ OJECTION-LEV
+ EL:CALENDAR
+X-FORTNITE-PRO
+ JECTION-GRANU
+ LARITY:COMPET
+ ITION
+X-FORTNITE-REGI
+ ON:EU
+X-FORTNITE-RULES
+ ET:BUILD
+X-FORTNITE-FORMAT
+ :SOLOS
+X-FORTNITE-PLATFOR
+ M:ALL_SUPPORTED
+X-FORTNITE-SESSION;
+ ROUND=QUALIFIER1-R
+ 1-DAY1:20260928T17
+ 0000/20260928T2000
+ 00
+X-FORTNITE-SESSION;R
+ OUND=QUALIFIER1-R1-
+ DAY2:20260929T17000
+ 0/20260929T200000
+X-FORTNITE-SESSION;RO
+ UND=QUALIFIER1-R2:20
+ 261003T170000/202610
+ 03T200000
+X-FORTNITE-SESSION;ROU
+ ND=QUALIFIER1-R3:2026
+ 1004T170000/20261004T
+ 200000
+DTSTART;VALUE=DATE:2026
+ 0928
+DTEND;VALUE=DATE:2026101
+ 2
+SUMMARY:🏆 ✅ 🆕 Qua
+ lifications FNCS Solo 
+ — Europe
+DESCRIPTION:Période offic
+ ielle : du 28 septembre a
+ u 11 octobre 2026. Sessio
+ ns exactes confirmées : 
+ 28 et 29 septembre, puis 
+ 3 et 4 octobre de 17h00 
+ à 20h00 (Paris), jusqu
+ ’à 11 matchs par sessi
+ on. Les scores des deux j
+ ours sont cumulés. Élig
+ ibilité annoncée : top 
+ 200 000 du Power Ranking 
+ global, 13 ans minimum et
+  A2F activée. Le top 2 0
+ 00 peut passer directemen
+ t au round 2 ; participer
+  au round 1 annule cet ac
+ cès direct. Top 8 000 EU
+  du round 1 vers le round
+  2, puis top 1 000 vers l
+ e round 3. Source officie
+ lle Fortnite Competitive.
+URL:https://www.fortnite.co
+ m/competitive/events/S42_F
+ NCSSoloQualifiers?lang=fr&
+ region=EU
+CATEGORIES:Fortnite,Compéti
+ tion,FNCS,Solos,Europe
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 Les qualifications FNCS Solo Europe commencent demain
+DESCRIPTION:🏆 Les qualificati
+ ons FNCS Solo Europe commencent
+  demain
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
