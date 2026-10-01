@@ -1,10 +1,10 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-09-27T13:21:43.378Z",
+  "last_observer_check_at": "2026-10-01T05:27:32Z",
   "last_deep_check_at": "2026-09-27T13:21:43.378Z",
   "heartbeat_max_age_hours": 30,
-  "observer_title": "Calendriers jeux — France",
+  "observer_title": "MANUAL_HEALTH_REPAIR",
   "migration_bootstrap": false,
   "repository": "QuentinGranger/demo",
   "pinned_branch": "master",
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-09-27T11:41:39.818725+00:00",
-      "updated_at": "2026-09-27T11:42:02.754131+00:00",
+      "last_run_time": "2026-10-01T04:46:16.447365Z",
+      "updated_at": "2026-10-01T04:46:38.345302Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Daily consolidated observer check: active hourly automation verified by automations.peek; eight ICS paths, strict calendar checks and the three public master RAW feeds validated against current master. No incident transition."
+  "note": "Manual health repair after WATCHDOG_HEARTBEAT_STALE: live consolidated automation verified enabled/hourly/Europe-Paris and healthy; all eight declared ICS paths were freshly checked for core structure and duplicate UIDs; the three public RAW subscription feeds matched current master exactly. last_deep_check_at intentionally unchanged because franchise-specific deep validators were not re-run in this manual check."
 }
