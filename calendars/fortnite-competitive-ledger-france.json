@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-09-28T01:58:19Z",
+  "updated_at": "2026-10-01T05:56:15Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -2630,6 +2630,92 @@
             }
           ],
           "schedule_completeness": "PARTIAL_EXACT"
+        },
+        {
+          "phase_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2",
+          "name": "Qualifier 1 — Round 2",
+          "phase_type": "QUALIFIER",
+          "order": 2,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2",
+              "official_session_id": null,
+              "name": "Qualifications FNCS Solo — Session 2",
+              "session_number": 3,
+              "round_number": 2,
+              "round_label": "Qualifier 1 — Round 2",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-10-03T17:00:00+02:00",
+              "end_at": "2026-10-03T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": {
+                "advances_to": "Qualifier 1 — Round 3",
+                "eu_slots": 1000
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3",
+          "name": "Qualifier 1 — Round 3",
+          "phase_type": "QUALIFIER",
+          "order": 3,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "session_id": "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3",
+              "official_session_id": null,
+              "name": "Qualifications FNCS Solo — Session 3",
+              "session_number": 4,
+              "round_number": 3,
+              "round_label": "Qualifier 1 — Round 3",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-10-04T17:00:00+02:00",
+              "end_at": "2026-10-04T20:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 11,
+              "qualification": {
+                "advances_to": "Fast Track",
+                "eu_slots": 100
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-fncs-solo-qualifiers-eu-2026@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "EXACT"
         }
       ],
       "history": [
@@ -2638,6 +2724,12 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Official EU event page published the Sep 28–Oct 11 window and exact first-round Day 1/Day 2 sessions. Promoted to CALENDAR under the FNCS series policy."
+        },
+        {
+          "at": "2026-10-01T05:56:15Z",
+          "type": "SESSION_ADDED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule now exposes FNCS Solo sessions on 3 and 4 October, 17:00–20:00 Europe/Paris; same canonical competition/UID retained."
         }
       ]
     },
