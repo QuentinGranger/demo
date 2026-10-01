@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-09-28T01:58:19Z",
+  "generated_at": "2026-10-01T05:56:15Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "b40d17ca2a17760e7a4e8ecfdc52f0dd9c16a045",
+    "ledger_sha": "646eb5315449d84f63b560a632ccb36296be9cbb",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -454,6 +454,12 @@
     ],
     "2026-10-23": [
       "solo-reload-victory-cup-eu-2026"
+    ],
+    "2026-10-03": [
+      "fncs-solo-qualifiers-eu-2026"
+    ],
+    "2026-10-04": [
+      "fncs-solo-qualifiers-eu-2026"
     ]
   },
   "sessions": {
@@ -474,6 +480,8 @@
       "fncs-global-last-chance-eu-2026:lcq:EU:20260808T1700:s3r2",
       "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
       "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2",
+      "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2",
+      "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3",
       "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
       "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
       "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
@@ -571,6 +579,12 @@
       "2026-10-02": [
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
+      ],
+      "2026-10-03": [
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2"
+      ],
+      "2026-10-04": [
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3"
       ]
     },
     "by_status": {
@@ -597,6 +611,8 @@
         "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260929T1700:day2",
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2",
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3",
         "override-series-crash-bandicoot-eu-2026-08-28:mobile:EU:20260828T1600:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:reload:EU:20260828T1700:session1",
         "override-series-crash-bandicoot-eu-2026-08-28:zero-build-reload:EU:20260828T1700:session1",
@@ -705,6 +721,12 @@
       ],
       "2026-10-02T20:00:00+02:00": [
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
+      ],
+      "2026-10-03T17:00:00+02:00": [
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2"
+      ],
+      "2026-10-04T17:00:00+02:00": [
+        "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3"
       ]
     }
   },
