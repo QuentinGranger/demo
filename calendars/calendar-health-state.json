@@ -181,6 +181,27 @@
       "evidence": "User explicitly chose consolidated monitoring. The active combined task update was verified by live read-back; legacy separate tasks retired by design, not silently re-enabled.",
       "incident_id": "health|HARRY_POTTER|AUTOMATION_MISSING|Billetterie Harry Potter France|consolidated-20260926",
       "at": "2026-09-26T13:07:28.966040Z"
+    },
+    {
+      "incident_id": "health-fortnite-ics-serialization-20261001-open",
+      "incident_key": "health|FORTNITE|ICS_STRUCTURALLY_INVALID|fortnite-calendar-serialization",
+      "state": "OPEN",
+      "code": "ICS_STRUCTURALLY_INVALID",
+      "franchise": "FORTNITE",
+      "severity": "DEGRADED",
+      "at": "2026-10-01T06:02:33Z",
+      "evidence": "GitHub Actions detected component mismatches in calendars/fortnite-paris.ics and calendars/fortnite-competitive-france.ics during the in-run FNCS update; external incident issue #21 was opened."
+    },
+    {
+      "incident_id": "health-fortnite-ics-serialization-20261001-recovered",
+      "incident_key": "health|FORTNITE|ICS_STRUCTURALLY_INVALID|fortnite-calendar-serialization",
+      "state": "RECOVERED",
+      "code": "ICS_STRUCTURALLY_INVALID",
+      "franchise": "FORTNITE",
+      "severity": "HEALTHY",
+      "opened_at": "2026-10-01T06:02:33Z",
+      "at": "2026-10-01T06:08:42Z",
+      "evidence": "Fortnite calendars were restored to deterministic RFC5545 serialization on the same paths; Fortnite validation and permanent calendar-health workflow run 36823088022 succeeded; external incident issue #21 closed automatically."
     }
   ],
   "history": [
@@ -218,6 +239,11 @@
       "at": "2026-09-26T13:06:40.272832Z",
       "type": "USER_APPROVED_MONITOR_CONSOLIDATION",
       "note": "Legacy monitoring tasks replaced by one active task plus independent GitHub Actions. Service update confirmed. Health will be determined from a fresh task snapshot."
+    },
+    {
+      "at": "2026-10-01T06:08:42Z",
+      "type": "FORTNITE_ICS_SERIALIZATION_RECOVERED",
+      "note": "A transient serialization fault introduced during the FNCS schedule update was caught by GitHub Actions and repaired in the same maintenance run. Same-path calendars retained their business data and the final health validator passed."
     }
   ]
 }
