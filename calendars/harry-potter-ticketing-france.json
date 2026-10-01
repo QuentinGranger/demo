@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-09-27T08:56:26Z",
+  "updated_at": "2026-10-01T05:56:15Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -178,14 +178,15 @@
       "provider_id": "droneart-paris",
       "source_id": "droneart-harry-potter-paris",
       "ticket_url": "https://thedroneartshow.com/paris/harry-potter/",
-      "status": "ON_SALE",
+      "status": "NEARLY_SOLD_OUT",
       "status_origin": "DIRECT_VERIFIED",
       "evidence_grade": "A",
       "confidence": "HIGH",
-      "scarcity_evidence": "UNKNOWN",
+      "scarcity_evidence": "EXPLICIT_TEXT",
       "check_tier": "WARM",
-      "last_verified_at": "2026-08-22T01:54:24Z",
-      "last_changed_at": "2026-08-22T01:54:24Z",
+      "last_verified_at": "2026-10-01T05:56:15Z",
+      "last_changed_at": "2026-10-01T05:56:15Z",
+      "verification_notes": "La billetterie officielle Fever liée au DroneArt Show indique explicitement qu’il ne reste que quelques places à Paris. Signal global au run, pas une preuve de SOLD_OUT pour une séance précise. Source: https://feverup.com/m/647897",
       "run_start": "2026-09-30",
       "run_end": "2026-10-10",
       "session_states": [
@@ -196,7 +197,7 @@
         {"session_key":"2026-10-08T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
         {"session_key":"2026-10-10T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]}
       ],
-      "history": [{"at":"2026-08-22T01:54:24Z","transition":"SALE_OPENED","source_id":"droneart-harry-potter-paris","note":"Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."}]
+      "history": [{"at":"2026-08-22T01:54:24Z","transition":"SALE_OPENED","source_id":"droneart-harry-potter-paris","note":"Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."},{"at":"2026-10-01T05:56:15Z","transition":"NEARLY_SOLD_OUT","source_id":"droneart-harry-potter-paris","note":"Fever, billetterie officielle liée à l’expérience, affiche explicitement qu’il ne reste que quelques places à Paris. Transition globale du run ; aucune séance individuelle n’est déclarée SOLD_OUT."}]
     },
     {
       "event_uid": "hp-back-to-hogwarts-versailles-20260829@openai",
