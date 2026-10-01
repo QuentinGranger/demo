@@ -1636,9 +1636,9 @@ END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:ff9a2a29-5818-4b14-bec0-38e9a74c1b2d@openai
-DTSTAMP:20260926T212932Z
-LAST-MODIFIED:20260926T212932Z
-SEQUENCE:12
+DTSTAMP:20261001T055619Z
+LAST-MODIFIED:20261001T055619Z
+SEQUENCE:13
 STATUS:TENTATIVE
 PRIORITY:5
 X-POKEMON-PRIORITY:IMPORTANT
@@ -1650,29 +1650,40 @@ X-POKEMON-WAVE-COMPLETENESS:PARTIAL
 X-POKEMON-WAVE-PRODUCT-COUNT:3
 X-POKEMON-WAVE-PREORDER-COUNT:2
 X-POKEMON-WAVE-PRODUCTS:Bundle 6 boosters|Coffret Classeur|Mini-Tins
-X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20260919:Bundle 6 boosters
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=OPEN:Bundle 6 boosters
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE;PREORDER=20260920:Coffret Classeur
-X-POKEMON-WAVE-ITEM;STATE=TENTATIVE:Mini-Tins
+X-POKEMON-WAVE-ITEM;STATE=CONFIRMED;PREORDER=OPEN:Mini-Tins
+X-POKEMON-USER-EFFECT:tcg_release_wave:pokemon-30th-20261002:fr
+X-POKEMON-KING-JOUET-BUNDLE-REF:1034922
+X-POKEMON-KING-JOUET-BUNDLE-EAN:0196214145221
+X-POKEMON-KING-JOUET-BUNDLE-PRICE-EUR:42.99
+X-POKEMON-KING-JOUET-MINITIN-REF:1034918
+X-POKEMON-KING-JOUET-MINITIN-EAN:0196214146297
+X-POKEMON-KING-JOUET-MINITIN-PRICE-EUR:19.99
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-bundle-30ans-20260919@openai
 RELATED-TO;RELTYPE=CHILD:preorder-guizette-classeur-30ans-20260920@openai
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-SUMMARY:JCC — Vague 30 ans d'octobre [À confirmer]
+SUMMARY:JCC — Vague 30 ans d'octobre [partiellement confirmée] [À confi
+ rmer]
 LOCATION:France
 DESCRIPTION:Priorité : ⭐ Important — vague produit majeure du 30e anni
- versaire.\n\nFiabilité : 🟠 pour la vague globale ; le niveau de preuve
-  de chaque produit est indiqué ci-dessous.\nChecklist produits — ✅ of
- ficiel/direct · 🟠 distributeur · 🟡 à confirmer :\n[À confirmer]
-  Bundle 6 boosters — 🔔 précommande Guizette le 19 septembre\n[À con
- firmer] Coffret Classeur — 🔔 précommande Guizette le 20 septembre\n[
- À confirmer] Mini-Tins\n\nComplétude : liste partielle. D'autres produit
- s peuvent appartenir à la vague, mais ils ne sont pas comptés tant qu'il
- s ne sont pas nommés assez précisément.\n\nRappels : J-7 et J-1 — vé
- rifier disponibilité et prix.\n\nLié à : ⭐ ✅ 🔔 Précommande Bund
- le 6 boosters — 19 septembre 2026 ; ℹ️ ✅ 🔔 Précommande Coffret
-  Classeur — 20 septembre 2026.\n\nSource : https://www.pokeindex.fr/cale
- ndrier-sorties
-URL:https://www.pokeindex.fr/calendrier-sorties
+ versaire.\n\nNouveau 1er octobre : King Jouet France affiche la précomman
+ de ouverte pour le Bundle 6 boosters (réf. 1034922, EAN 0196214145221, 42
+ ,99 €) et la Mini Tin assortiment (réf. 1034918, EAN 0196214146297, 19,
+ 99 €), avec disponibilité magasin et site annoncée à partir du 2 octo
+ bre 2026. Limite annoncée : 1 exemplaire par client/personne.\n\nChecklis
+ t :\n[Confirmé] Bundle 6 boosters — date France 02/10 confirmée par Ki
+ ng Jouet ; précommande ouverte.\n[À confirmer] Coffret Classeur — prod
+ uit officiel T4 2026 mais date exacte toujours contradictoire entre retail
+ ers ; reste à confirmer.\n[Confirmé] Mini-Tins — date France 02/10 con
+ firmée par King Jouet ; précommande ouverte.\n\nSources : https://www.ki
+ ng-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-1034922-po
+ kemon-30-ans-bundle-6-boosters.htm | https://www.king-jouet.com/jeu-jouet/
+ jeux-societes/cartes-a-collectionner/ref-1034918-pokemon-30-ans-mini-tin-a
+ ssortiment.htm
+URL:https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionn
+ er/ref-1034922-pokemon-30-ans-bundle-6-boosters.htm
 CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Important
 BEGIN:VALARM
 TRIGGER:-P7D
