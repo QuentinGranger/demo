@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-01T05:56:15Z",
+  "updated_at": "2026-10-02T22:05:09Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -184,20 +184,22 @@
       "confidence": "HIGH",
       "scarcity_evidence": "EXPLICIT_TEXT",
       "check_tier": "WARM",
-      "last_verified_at": "2026-10-01T05:56:15Z",
-      "last_changed_at": "2026-10-01T05:56:15Z",
-      "verification_notes": "La billetterie officielle Fever liée au DroneArt Show indique explicitement qu’il ne reste que quelques places à Paris. Signal global au run, pas une preuve de SOLD_OUT pour une séance précise. Source: https://feverup.com/m/647897",
+      "last_verified_at": "2026-10-02T22:05:09Z",
+      "last_changed_at": "2026-10-02T22:05:09Z",
+      "price_min_eur": 27.12,
+      "price_max_eur": 40.72,
+      "verification_notes": "La billetterie officielle Fever liée au DroneArt Show conserve le signal global de forte demande et affiche une promotion de 20 % pour la séance du 3 octobre 2026 à 20:45 : adulte 40,72 €, enfant 27,12 €, groupe 37,52 €. Aucune quantité ni disponibilité de catégorie n'est inférée. Source: https://feverup.com/m/647897",
       "run_start": "2026-09-30",
       "run_end": "2026-10-10",
       "session_states": [
         {"session_key":"2026-09-30T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
         {"session_key":"2026-10-01T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-10-03T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
+        {"session_key":"2026-10-03T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[{"category_key":"adult-standard","status":"ON_SALE","price_eur":40.72,"reference_price_eur":50.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"},{"category_key":"child-3-11","status":"ON_SALE","price_eur":27.12,"reference_price_eur":33.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"},{"category_key":"group-8-plus","status":"ON_SALE","price_eur":37.52,"reference_price_eur":46.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"}]},
         {"session_key":"2026-10-07T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
         {"session_key":"2026-10-08T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
         {"session_key":"2026-10-10T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]}
       ],
-      "history": [{"at":"2026-08-22T01:54:24Z","transition":"SALE_OPENED","source_id":"droneart-harry-potter-paris","note":"Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."},{"at":"2026-10-01T05:56:15Z","transition":"NEARLY_SOLD_OUT","source_id":"droneart-harry-potter-paris","note":"Fever, billetterie officielle liée à l’expérience, affiche explicitement qu’il ne reste que quelques places à Paris. Transition globale du run ; aucune séance individuelle n’est déclarée SOLD_OUT."}]
+      "history": [{"at":"2026-08-22T01:54:24Z","transition":"SALE_OPENED","source_id":"droneart-harry-potter-paris","note":"Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."},{"at":"2026-10-01T05:56:15Z","transition":"NEARLY_SOLD_OUT","source_id":"droneart-harry-potter-paris","note":"Fever, billetterie officielle liée à l’expérience, affiche explicitement qu’il ne reste que quelques places à Paris. Transition globale du run ; aucune séance individuelle n’est déclarée SOLD_OUT."},{"at":"2026-10-02T22:05:09Z","transition":"PRICE_STRUCTURE_CHANGED","source_id":"droneart-harry-potter-paris","notification_key":"hp-droneart-paris-20261003-discount20","notification_status":"DELIVERED_IN_CHATGPT","note":"Fever affiche une promotion de 20 % pour la séance du 3 octobre à 20:45 : adulte 40,72 €, enfant 27,12 €, groupe 37,52 €. Alerte utilisateur émise ; aucune rareté supplémentaire ni stock quantifié n'est inféré."}]
     },
     {
       "event_uid": "hp-back-to-hogwarts-versailles-20260829@openai",
