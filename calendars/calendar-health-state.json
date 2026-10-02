@@ -202,6 +202,27 @@
       "opened_at": "2026-10-01T06:02:33Z",
       "at": "2026-10-01T06:08:42Z",
       "evidence": "Fortnite calendars were restored to deterministic RFC5545 serialization on the same paths; Fortnite validation and permanent calendar-health workflow run 36823088022 succeeded; external incident issue #21 closed automatically."
+    },
+    {
+      "incident_id": "health-watchdog-heartbeat-stale-20261002-open",
+      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "state": "OPEN",
+      "code": "WATCHDOG_HEARTBEAT_STALE",
+      "franchise": "SYSTEM",
+      "severity": "DEGRADED",
+      "at": "2026-10-02T21:21:50Z",
+      "evidence": "The shared heartbeat was 39.3 hours old, exceeding its 30-hour maximum age, before this run's fresh checks."
+    },
+    {
+      "incident_id": "health-watchdog-heartbeat-stale-20261002-recovered",
+      "incident_key": "health|SYSTEM|WATCHDOG_HEARTBEAT_STALE|calendar-health-heartbeat.json",
+      "state": "RECOVERED",
+      "code": "WATCHDOG_HEARTBEAT_STALE",
+      "franchise": "SYSTEM",
+      "severity": "HEALTHY",
+      "opened_at": "2026-10-02T21:21:50Z",
+      "at": "2026-10-02T21:27:39Z",
+      "evidence": "A fresh deep check passed for all eight ICS paths and three public RAW feeds, the active hourly automation was verified live, and the heartbeat was refreshed."
     }
   ],
   "history": [
@@ -244,6 +265,11 @@
       "at": "2026-10-01T06:08:42Z",
       "type": "FORTNITE_ICS_SERIALIZATION_RECOVERED",
       "note": "A transient serialization fault introduced during the FNCS schedule update was caught by GitHub Actions and repaired in the same maintenance run. Same-path calendars retained their business data and the final health validator passed."
+    },
+    {
+      "at": "2026-10-02T21:27:39Z",
+      "type": "WATCHDOG_HEARTBEAT_STALE_RECOVERED",
+      "note": "The shared heartbeat had exceeded its 30-hour limit. The consolidated observer completed a fresh deep check, confirmed all eight ICS paths and all three public RAW feeds healthy, then refreshed the heartbeat."
     }
   ]
 }
