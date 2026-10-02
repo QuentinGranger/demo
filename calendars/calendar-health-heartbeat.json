@@ -1,8 +1,8 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-01T06:08:44Z",
-  "last_deep_check_at": "2026-09-27T13:21:43.378Z",
+  "last_observer_check_at": "2026-10-02T21:27:39Z",
+  "last_deep_check_at": "2026-10-02T21:27:39Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
   "migration_bootstrap": false,
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-01T05:42:25.616573Z",
-      "updated_at": "2026-10-01T05:42:48.349778Z",
+      "last_run_time": "2026-10-02T19:33:29.448606Z",
+      "updated_at": "2026-10-02T19:33:52.135689Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Consolidated observer transition check after the recovered Fortnite ICS serialization incident: active hourly automation verified live via automations.peek; all eight declared ICS paths freshly checked for core structure and duplicate UIDs; three public RAW feeds match current master; Fortnite deterministic calendar validation and permanent health validation succeeded. last_deep_check_at intentionally unchanged because not every franchise-specific deep validator was executed in this pass."
+  "note": "Fresh consolidated deep check: active hourly automation verified live via automations.peek; all eight declared ICS paths passed structure, balance, BOM and UID checks; Pokémon presentation policy validation passed; all Fortnite deterministic validators passed; and the three public RAW feeds matched current master byte-for-byte. The previously stale heartbeat was refreshed only after these checks completed successfully."
 }
