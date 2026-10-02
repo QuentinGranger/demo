@@ -2272,6 +2272,39 @@ DESCRIPTION:🔔 Précommande demain — prépare le lien et ton achat : Va
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-tcgl-client-update-1-43-0-20261006@pokemon-france
+DTSTAMP:20261002T224353Z
+LAST-MODIFIED:20261002T224353Z
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+PRIORITY:5
+DTSTART;TZID=Europe/Paris:20261006T190000
+SUMMARY:Live — mise à jour client 1.43.0
+LOCATION:Pokémon TCG Live
+DESCRIPTION:Mise à jour officielle du client JCC Pokémon Live vers la ver
+ sion 1.43.0 le 6 octobre 2026 à 17:00 UTC\, soit 19:00 Europe/Paris. Aucu
+ ne interruption de service n’est prévue et les parties en cours ne sero
+ nt pas interrompues. Les joueurs et joueuses connectés seront invités à
+  relancer le client pour installer la nouvelle version. La mise à jour pe
+ ut mettre jusqu’à une heure à apparaître dans les boutiques d’appli
+ cations mobiles. Source officielle : https://community.pokemon.com/en-us/d
+ iscussion/26277/version-1-43-0-patch-notes
+URL:https://community.pokemon.com/en-us/discussion/26277/version-1-43-0-pat
+ ch-notes
+CATEGORIES:POKEMON,TCG-LIVE,UPDATE
+X-POKEMON-USER-EFFECT:tcgl_update:client-1-43-0:global
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:100
+X-POKEMON-ACTIONABILITY:65
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:JCC Pokémon Live 1.43.0 sera disponible à partir de 19 h.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 LAST-MODIFIED:20260927T103558Z
 TRANSP:TRANSPARENT
 UID:pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai
