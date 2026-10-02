@@ -180,6 +180,17 @@
       "write_notice_key": "tcgl_trainer_trial:return-to-worlds-2024:fr|pokemon-tcgl-trainer-trial-worlds-2024-20261016@openai|WRITE_VERIFIED_RAW|3b668ca157e462d9c5af0e5110e851583ec1de94",
       "state": "RESERVED",
       "reserved_at": "2026-09-27T12:32:35+02:00"
+    },
+    {
+      "user_effect": "tcgl_update:client-1-43-0:global",
+      "uid": "pokemon-tcgl-client-update-1-43-0-20261006@pokemon-france",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/20261002T224353-tcgl-1-43-0-update.json",
+      "write_notice_key": "tcgl_update:client-1-43-0:global|pokemon-tcgl-client-update-1-43-0-20261006@pokemon-france|WRITE_VERIFIED_RAW|calendars/patch-requests/20261002T224353-tcgl-1-43-0-update.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-10-03T00:51:00+02:00",
+      "master_commit": "e543635d341933660e4b341bdb2ec48f9849dde1",
+      "workflow_run": "https://github.com/QuentinGranger/demo/actions/runs/37074505319"
     }
   ]
 }
