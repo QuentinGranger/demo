@@ -1574,39 +1574,108 @@ DESCRIPTION:LEGO Pokémon 72154 — expédition annoncée à partir de dema
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-X-POKEMON-DISPLAY-MODE:START_MARKER
-X-POKEMON-PERIOD-END:20270101
-X-POKEMON-PERIOD-START:20261001
 TRANSP:TRANSPARENT
 UID:pokemon-30ans-collection-classeur-q4-2026@openai
-DTSTAMP:20260926T212932Z
-LAST-MODIFIED:20260926T212932Z
-SEQUENCE:3
+DTSTAMP:20261002T220509Z
+LAST-MODIFIED:20261002T220509Z
+SEQUENCE:4
 STATUS:CONFIRMED
 PRIORITY:7
 X-POKEMON-PRIORITY:MONITOR
 X-POKEMON-ACTION:MONITOR
-X-POKEMON-DATE-PRECISION:QUARTER
-X-POKEMON-CONFIDENCE:96
-X-POKEMON-ACTIONABILITY:45
+X-POKEMON-DATE-PRECISION:MONTH
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:55
 X-POKEMON-PRODUCT-SMYTHS-REF:261831
-X-POKEMON-USER-EFFECT-ID:tcg-30th-binder-collection-fr-q4-2026
+X-POKEMON-USER-EFFECT:tcg_product_window:30th-binder-collection:fr:2026-10
+X-POKEMON-DISPLAY-MODE:START_MARKER
+X-POKEMON-PERIOD-START:20261001
+X-POKEMON-PERIOD-END:20261101
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Fenêtre T4 — Collection classeur 30 ans [À confirmer]
+SUMMARY:Fenêtre octobre — Collection classeur 30 ans
 LOCATION:France
 DESCRIPTION:Repère de début de période. Période complète : du 01/10/20
- 26 au 31/12/2026.\n\nProduit officiellement confirmé par Pokémon France
-  pour le 4ᵉ trimestre 2026. Contenu : 1 classeur à thème à 9 pochette
- s et 5 boosters 30ᵉ Anniversaire. Les dates exactes actuellement publié
- es par des retailers français/européens sont contradictoires (notamment
-  2 octobre et 23 octobre) : aucune date exacte n'est donc retenue tant qu'
- une source plus forte ne tranche. Réf. Smyths France repérée : 261831.\
- n\nSource officielle : https://www.pokemon.com/fr/jcc-pokemon/galerie-prod
- uits/collection-classeur-30-anniversaire
-URL:https://www.pokemon.com/fr/jcc-pokemon/galerie-produits/collection-clas
- seur-30-anniversaire
-CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,À confirmer
+ 26 au 31/10/2026.\n\nPokémon France confirme désormais la Collection cla
+ sseur 30e Anniversaire parmi les produits prévus en octobre 2026, sans pu
+ blier de jour précis. Contenu : un classeur à thème à neuf pochettes e
+ t cinq boosters 30e Anniversaire. Les dates exactes de retailers restent c
+ ontradictoires et ne sont pas retenues. Réf. Smyths France repérée : 26
+ 1831.\n\nSource officielle : https://www.pokemon.com/fr/actualites/decouvr
+ ez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-octobre-2026
+URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jc
+ c-pokemon-qui-sortiront-en-octobre-2026
+CATEGORIES:Pokémon,TCG,30e Anniversaire,Sortie JCC,Fenêtre,Octobre 2026
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+UID:pokemon-october-2026-deck-creation-collection@pokemon-france
+DTSTAMP:20261002T220509Z
+LAST-MODIFIED:20261002T220509Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:MONTH
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:55
+X-POKEMON-DISPLAY-MODE:START_MARKER
+X-POKEMON-PERIOD-START:20261001
+X-POKEMON-PERIOD-END:20261101
+X-POKEMON-USER-EFFECT:tcg_product_window:deck-creation-collection:fr:2026-1
+ 0
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Fenêtre octobre — Collection Création de deck
+LOCATION:France
+DESCRIPTION:Repère de début de période. Période complète : du 01/10/20
+ 26 au 31/10/2026.\n\nPokémon France confirme la Collection Création de d
+ eck pour octobre 2026 sans publier de date de sortie plus précise. Conten
+ u annoncé : une carte brillante Miaouss-ex, 39 cartes Dresseur utilisable
+ s en tournoi, un guide Création de deck, neuf séparateurs et un booster
+  du JCC Pokémon. Aucun prix ou stock n’est déduit.\n\nSource officiell
+ e : https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-j
+ cc-pokemon-qui-sortiront-en-octobre-2026
+URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jc
+ c-pokemon-qui-sortiront-en-octobre-2026
+CATEGORIES:Pokémon,TCG,Sortie JCC,Fenêtre,Octobre 2026
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+UID:pokemon-october-2026-enhanced-2pack-blister@pokemon-france
+DTSTAMP:20261002T220509Z
+LAST-MODIFIED:20261002T220509Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:9
+X-POKEMON-PRIORITY:INFO
+X-POKEMON-ACTION:MONITOR
+X-POKEMON-DATE-PRECISION:MONTH
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:99
+X-POKEMON-ACTIONABILITY:55
+X-POKEMON-DISPLAY-MODE:START_MARKER
+X-POKEMON-PERIOD-START:20261001
+X-POKEMON-PERIOD-END:20261101
+X-POKEMON-USER-EFFECT:tcg_product_window:enhanced-2pack-blister:fr:2026-10
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Fenêtre octobre — Blister amélioré de 2 boosters
+LOCATION:France
+DESCRIPTION:Repère de début de période. Période complète : du 01/10/20
+ 26 au 31/10/2026.\n\nPokémon France confirme ce produit pour octobre 2026
+  sans publier de date de sortie plus précise. Le blister contient des car
+ tes brillantes d’Ectoplasma, Marshadow et Mimiqui de la Team Rocket, une
+  pièce en plastique et deux boosters du JCC Pokémon. Aucune heure, prix
+  ou disponibilité n’est déduit.\n\nSource officielle : https://www.pok
+ emon.com/fr/actualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sort
+ iront-en-octobre-2026
+URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jc
+ c-pokemon-qui-sortiront-en-octobre-2026
+CATEGORIES:Pokémon,TCG,Sortie JCC,Fenêtre,Octobre 2026
 END:VEVENT
 BEGIN:VEVENT
 LAST-MODIFIED:20260926T130540Z
@@ -2016,14 +2085,18 @@ END:VEVENT
 BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
-DTSTAMP:20260926T212932Z
-LAST-MODIFIED:20260926T212932Z
-SEQUENCE:11
+DTSTAMP:20261002T220509Z
+LAST-MODIFIED:20261002T220509Z
+SEQUENCE:12
 STATUS:TENTATIVE
 PRIORITY:9
 X-POKEMON-PRIORITY:INFO
 X-POKEMON-REMINDER-PROFILE:TCG_RELEASE
 X-POKEMON-ACTION:BUY
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:85
+X-POKEMON-ACTIONABILITY:60
 X-POKEMON-WAVE-ID:TCG-DECKS-ESPEON-UMBREON-20261030
 X-POKEMON-WAVE-COMPLETENESS:COMPLETE
 X-POKEMON-WAVE-PRODUCT-COUNT:2
@@ -2031,19 +2104,26 @@ X-POKEMON-WAVE-PREORDER-COUNT:0
 X-POKEMON-WAVE-PRODUCTS:Deck Combat Mentali-ex|Deck Combat Noctali-ex
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE:Deck Combat Mentali-ex
 X-POKEMON-WAVE-ITEM;STATE=TENTATIVE:Deck Combat Noctali-ex
+X-POKEMON-OFFICIAL-WINDOW-START:20261001
+X-POKEMON-OFFICIAL-WINDOW-END:20261101
+X-POKEMON-USER-EFFECT:tcg_release_wave:battle-decks-mentali-noctali:fr:2026
+ -10-30
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:JCC — Vague Decks Mentali-ex & Noctali-ex [À confirmer]
 LOCATION:France
 DESCRIPTION:Priorité : ℹ️ Info — deux decks standards regroupés sur
-  leur date commune.\n\nFiabilité : 🟡 À confirmer.\nChecklist produits
-  — ✅ officiel/direct · 🟠 distributeur · 🟡 à confirmer :\n[À
-  confirmer] Deck Combat Mentali-ex\n[À confirmer] Deck Combat Noctali-ex\
- n\nComplétude : liste complète des deux decks actuellement référencés
-  ensemble.\n\nRappels : J-7 et J-1 — vérifier prix et stock.\n\nSource
-  : https://lorenzone.fr/products/deck-combat-30eme-anniversaire
-URL:https://lorenzone.fr/products/deck-combat-30eme-anniversaire
-CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Priorité Info
+  leur date commune.\n\nPokémon France confirme officiellement que les Dec
+ ks Combat 30e Anniversaire Mentali-ex et Noctali-ex sortiront en octobre 2
+ 026. Le jour précis du 30 octobre provient toujours d’un retailer et re
+ ste donc à confirmer. Chaque deck comprend 60 cartes brillantes ; Mentali
+ -ex inclut une promo illustration rare de Victini et Noctali-ex une promo
+  illustration rare de Zeraora.\n\nSources : https://www.pokemon.com/fr/act
+ ualites/decouvrez-tous-les-produits-du-jcc-pokemon-qui-sortiront-en-octobr
+ e-2026 | https://lorenzone.fr/products/deck-combat-30eme-anniversaire
+URL:https://www.pokemon.com/fr/actualites/decouvrez-tous-les-produits-du-jc
+ c-pokemon-qui-sortiront-en-octobre-2026
+CATEGORIES:Pokémon,TCG,Sortie JCC,Vague,Octobre 2026,À confirmer
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
