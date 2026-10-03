@@ -1,0 +1,8 @@
+{
+  "version": "POKEMON_CALENDAR_PATCH_REQUEST_V1",
+  "calendar_path": "calendars/pokemon-tcg-france.ics",
+  "operation": "add",
+  "uid": "pokemon-night-out-livestream-20261025@openai",
+  "user_effect": "livestream:pokemon-night-out-la-2026:global",
+  "event": "BEGIN:VEVENT\r\nUID:pokemon-night-out-livestream-20261025@openai\r\nDTSTAMP:20261003T214600Z\r\nLAST-MODIFIED:20261003T214600Z\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nPRIORITY:5\r\nDTSTART;TZID=Europe/Paris:20261025T033000\r\nSUMMARY:Live — Soirée électrisante Pokémon\r\nLOCATION:En ligne — Twitch et YouTube\r\nDESCRIPTION:Diffusion officielle en direct du spectacle Pokémon Night Out depuis Los Angeles. L'horaire annoncé est le 24 octobre 2026 à 19:30 PT, soit le 25 octobre à 03:30 Europe/Paris après le passage à l'heure d'hiver. Aucune heure de fin n'est communiquée. Diffusion sur les chaînes officielles Twitch et YouTube de Pokémon. Source officielle France : https://30.pokemon.com/fr-fr/night-out/\r\nURL:https://30.pokemon.com/fr-fr/night-out/\r\nCATEGORIES:POKEMON,30E-ANNIVERSAIRE,LIVESTREAM,MUSIQUE\r\nX-POKEMON-USER-EFFECT:livestream:pokemon-night-out-la-2026:global\r\nX-POKEMON-DATE-PRECISION:EXACT_DATETIME\r\nX-POKEMON-TERRITORY:GLOBAL_CONFIRMED\r\nX-POKEMON-CONFIDENCE:100\r\nX-POKEMON-ACTIONABILITY:68\r\nBEGIN:VALARM\r\nTRIGGER:-PT1H\r\nACTION:DISPLAY\r\nDESCRIPTION:La Soirée électrisante Pokémon commence dans une heure.\r\nEND:VALARM\r\nEND:VEVENT"
+}
