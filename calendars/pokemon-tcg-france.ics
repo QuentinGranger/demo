@@ -2077,6 +2077,36 @@ DESCRIPTION:Soirée Pokémon avec Julien Bardakoff demain à 18:30 au Musé
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-night-out-livestream-20261025@openai
+DTSTAMP:20261003T214600Z
+LAST-MODIFIED:20261003T214600Z
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+PRIORITY:5
+DTSTART;TZID=Europe/Paris:20261025T033000
+SUMMARY:Live — Soirée électrisante Pokémon
+LOCATION:En ligne — Twitch et YouTube
+DESCRIPTION:Diffusion officielle en direct du spectacle Pokémon Night Out
+  depuis Los Angeles. L'horaire annoncé est le 24 octobre 2026 à 19:30 PT
+ , soit le 25 octobre à 03:30 Europe/Paris après le passage à l'heure d'
+ hiver. Aucune heure de fin n'est communiquée. Diffusion sur les chaînes
+  officielles Twitch et YouTube de Pokémon. Source officielle France : htt
+ ps://30.pokemon.com/fr-fr/night-out/
+URL:https://30.pokemon.com/fr-fr/night-out/
+CATEGORIES:POKEMON,30E-ANNIVERSAIRE,LIVESTREAM,MUSIQUE
+X-POKEMON-USER-EFFECT:livestream:pokemon-night-out-la-2026:global
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:GLOBAL_CONFIRMED
+X-POKEMON-CONFIDENCE:100
+X-POKEMON-ACTIONABILITY:68
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La Soirée électrisante Pokémon commence dans une heure.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 LAST-MODIFIED:20260926T212932Z
 TRANSP:TRANSPARENT
 UID:pokemon-paris-bardakoff-musee-en-herbe-20261027@openai
