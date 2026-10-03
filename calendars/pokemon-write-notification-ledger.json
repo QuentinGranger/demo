@@ -191,6 +191,28 @@
       "reserved_at": "2026-10-03T00:51:00+02:00",
       "master_commit": "e543635d341933660e4b341bdb2ec48f9849dde1",
       "workflow_run": "https://github.com/QuentinGranger/demo/actions/runs/37074505319"
+    },
+    {
+      "user_effect": "game_release:legends-za-switch2-mega-dimension-bundle:fr",
+      "uid": "pokemon-legends-za-mega-dimension-pack-fr-20261029@openai",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/20261003T214100Z-legends-za-mega-dimension-pack-fr.json",
+      "write_notice_key": "game_release:legends-za-switch2-mega-dimension-bundle:fr|pokemon-legends-za-mega-dimension-pack-fr-20261029@openai|WRITE_VERIFIED_RAW|calendars/patch-requests/20261003T214100Z-legends-za-mega-dimension-pack-fr.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-10-03T21:52:22.872Z",
+      "master_commit": "e61d56e0e1fa9caac5a488394c3c0a5cd155e191",
+      "workflow_run": "https://github.com/QuentinGranger/demo/actions/runs/37155835869"
+    },
+    {
+      "user_effect": "livestream:pokemon-night-out-la-2026:global",
+      "uid": "pokemon-night-out-livestream-20261025@openai",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/20261003T214600Z-pokemon-night-out-livestream.json",
+      "write_notice_key": "livestream:pokemon-night-out-la-2026:global|pokemon-night-out-livestream-20261025@openai|WRITE_VERIFIED_RAW|calendars/patch-requests/20261003T214600Z-pokemon-night-out-livestream.json",
+      "state": "RESERVED",
+      "reserved_at": "2026-10-03T21:52:22.872Z",
+      "master_commit": "5a45f761242512c449f0602a1e2c54b60e6f10c3",
+      "workflow_run": "https://github.com/QuentinGranger/demo/actions/runs/37156076194"
     }
   ]
 }
