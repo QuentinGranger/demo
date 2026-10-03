@@ -1,12 +1,12 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-10-03T10:44:54Z",
+  "generated_at": "2026-10-03T11:08:41Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
     "ledger": "calendars/fortnite-competitive-ledger-france.json",
     "ledger_version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-    "ledger_sha": "6c5de7af78c4d57bd0df89403aea13b496df9402",
+    "ledger_sha": "533e0f6995ccef775dad2441911b8f6003bdd4f2",
     "engine": "calendars/fortnite-competitive-engine-france.json",
     "engine_version": "FORTNITE_COMPETITIVE_ENGINE_EU_V2",
     "engine_sha": "3b77957800f111952a2da17df853d2586d77d98c"
@@ -26,7 +26,9 @@
     "duos-ranked-zb-eu-20260829",
     "duos-ranked-zb-eu-20261003",
     "duos-reload-ranked-br-eu-20260830",
+    "duos-reload-ranked-br-eu-20261004",
     "duos-reload-ranked-zb-eu-20260830",
+    "duos-reload-ranked-zb-eu-20261004",
     "fncs-div1-practice-eu-20260829",
     "fncs-div1-practice-eu-20260831",
     "fncs-global-2026-antwerp",
@@ -63,7 +65,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-last-chance-eu-2026",
@@ -100,7 +104,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-solo-qualifiers-eu-2026",
@@ -135,7 +141,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-last-chance-eu-2026",
@@ -189,6 +197,8 @@
       "duos-ranked-br-eu-20261003",
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
+      "duos-reload-ranked-br-eu-20261004",
+      "duos-reload-ranked-zb-eu-20261004",
       "solo-ranked-br-eu-20260928",
       "solo-ranked-zb-eu-20260928"
     ],
@@ -248,7 +258,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "solo-ranked-br-eu-20260928",
       "solo-ranked-zb-eu-20260928",
       "solo-reload-ranked-br-eu-20260929",
@@ -270,6 +282,7 @@
     "BUILD": [
       "duos-ranked-br-eu-20260829",
       "duos-ranked-br-eu-20261003",
+      "duos-reload-ranked-br-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
@@ -297,6 +310,7 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "reload-zb-duos-cash-eu-20260830",
       "reload-zb-duos-cash-eu-20261004",
       "solo-ranked-zb-eu-20260928",
@@ -314,7 +328,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
@@ -353,7 +369,9 @@
       "duos-ranked-zb-eu-20260829",
       "duos-ranked-zb-eu-20261003",
       "duos-reload-ranked-br-eu-20260830",
+      "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
@@ -402,7 +420,9 @@
       "duos-ranked-zb-eu-20260829:main",
       "duos-ranked-zb-eu-20261003:main",
       "duos-reload-ranked-br-eu-20260830:main",
+      "duos-reload-ranked-br-eu-20261004:main",
       "duos-reload-ranked-zb-eu-20260830:main",
+      "duos-reload-ranked-zb-eu-20261004:main",
       "fncs-div1-practice-eu-20260829:main",
       "fncs-div1-practice-eu-20260831:main",
       "mobile-reload-mini-venture-victory-eu-20261003:main",
@@ -522,6 +542,8 @@
     ],
     "2026-10-04": [
       "arenas-test-eu-20261004",
+      "duos-reload-ranked-br-eu-20261004",
+      "duos-reload-ranked-zb-eu-20261004",
       "fncs-solo-qualifiers-eu-2026",
       "reload-zb-duos-cash-eu-20261004"
     ],
@@ -545,7 +567,9 @@
       "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
       "duos-ranked-zb-eu-20261003:main:EU:20261003T1700:session1",
       "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+      "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
       "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+      "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
       "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
       "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1",
@@ -665,6 +689,8 @@
       ],
       "2026-10-04": [
         "arenas-test-eu-20261004:main:EU:20261004T1300:session1",
+        "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
+        "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3",
         "reload-zb-duos-cash-eu-20261004:main:EU:20261004T1300:round1"
       ],
@@ -697,7 +723,9 @@
         "duos-ranked-zb-eu-20260829:main:EU:20260829T1700:session1",
         "duos-ranked-zb-eu-20261003:main:EU:20261003T1700:session1",
         "duos-reload-ranked-br-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
         "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
+        "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
         "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
         "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
@@ -816,6 +844,8 @@
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-2:EU:20261003T1700:session2"
       ],
       "2026-10-04T17:00:00+02:00": [
+        "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
+        "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-3:EU:20261004T1700:session3"
       ],
       "2026-10-02T17:00:00+02:00": [
@@ -1024,6 +1054,16 @@
       "calendar_uid": null
     },
     "reload-zb-duos-cash-eu-20261004": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-reload-ranked-zb-eu-20261004": {
+      "initial_level": "LEDGER_ONLY",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": null
+    },
+    "duos-reload-ranked-br-eu-20261004": {
       "initial_level": "LEDGER_ONLY",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": null

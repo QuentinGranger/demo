@@ -10,7 +10,7 @@ import apply_fortnite_sweep_20260829 as base
 
 ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / "calendars"
-AT = "2026-10-03T10:44:54Z"
+AT = "2026-10-03T11:08:41Z"
 
 
 def make(spec):
@@ -148,6 +148,46 @@ SPECS = [
         "source": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB/?lang=fr&region=EU",
         "sessions": [("round1", "Reload ZB Duos Cash Cup — round 1", "2026-10-04T13:00:00+02:00", "2026-10-04T15:30:00+02:00")],
     },
+    {
+        "competition_id": "duos-reload-ranked-zb-eu-20261004",
+        "official_event_id": "S42_RankedCupReloadDuos_ZB",
+        "series_id": "RANKED_CUP",
+        "name": "Duos Reload Ranked Cup (Zero Build) — Europe — 4 octobre 2026",
+        "competition_class": "RANKED_CUP",
+        "ruleset": "ZERO_BUILD",
+        "team_format": "DUOS",
+        "platform_scope": "ALL_SUPPORTED",
+        "source": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event5_EU&lang=fr&region=EU",
+        "sessions": [("session1", "Duos Reload Ranked Cup (Zero Build)", "2026-10-04T17:00:00+02:00", "2026-10-04T20:00:00+02:00")],
+        "eligibility": {
+            "status": "CONFIRMED",
+            "age_min": 13,
+            "two_factor_required": True,
+            "region_lock": "EU",
+            "team_requirements": "DUOS",
+        },
+        "session_patches": [{"index": 0, "values": {"official_session_id": "S42_RankedCupReloadDuos_ZB_Event5_EU", "max_matches": 12}}],
+    },
+    {
+        "competition_id": "duos-reload-ranked-br-eu-20261004",
+        "official_event_id": "S42_RankedCupReloadDuos",
+        "series_id": "RANKED_CUP",
+        "name": "Duos Reload Ranked Cup (Battle Royale) — Europe — 4 octobre 2026",
+        "competition_class": "RANKED_CUP",
+        "ruleset": "BUILD",
+        "team_format": "DUOS",
+        "platform_scope": "ALL_SUPPORTED",
+        "source": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event5_EU&lang=fr&region=EU",
+        "sessions": [("session1", "Duos Reload Ranked Cup (Battle Royale)", "2026-10-04T17:00:00+02:00", "2026-10-04T20:00:00+02:00")],
+        "eligibility": {
+            "status": "CONFIRMED",
+            "age_min": 13,
+            "two_factor_required": True,
+            "region_lock": "EU",
+            "team_requirements": "DUOS",
+        },
+        "session_patches": [{"index": 0, "values": {"official_session_id": "S42_RankedCupReloadDuos_Event5_EU", "max_matches": 12}}],
+    },
 ]
 
 
@@ -198,7 +238,7 @@ def main():
     change.setdefault("history", []).append({
         "at": AT,
         "type": "SILENT_COMPETITIVE_ENTITIES_CREATED",
-        "note": "Six official EU competition instances for October 3–4 were ingested exhaustively as LEDGER_ONLY; visible calendars and notification outbox are unchanged.",
+        "note": f"{len(added)} official EU competition instances for October 3–4 were ingested exhaustively as LEDGER_ONLY; visible calendars and notification outbox are unchanged.",
     })
     index["updated_at"] = AT
     index.setdefault("stats", {})["changes"] = len(change.get("changes", []))
