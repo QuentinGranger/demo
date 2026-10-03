@@ -2526,6 +2526,40 @@ DESCRIPTION:Soirée Pokémon avec Julien Bardakoff demain à 18:30 au Musé
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-legends-za-mega-dimension-pack-fr-20261029@openai
+DTSTAMP:20261003T214100Z
+LAST-MODIFIED:20261003T214100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+PRIORITY:5
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Jeu — Légendes Pokémon : Z-A + Méga-Dimension (pack Switch 2)
+LOCATION:France
+DESCRIPTION:Sortie France du pack comprenant Légendes Pokémon : Z-A - Nin
+ tendo Switch 2 Edition et le contenu additionnel Méga-Dimension sur une m
+ ême carte de jeu. Le pack inclut un code série à usage unique offrant 1
+ 00 Hyper Balls ; l'annonce officielle précise qu'aucune date d'expiration
+  n'est prévue pour ce code. Aucun prix n'est communiqué sur la page offi
+ cielle. Source officielle : https://legends.pokemon.com/fr-fr/news/ultraba
+ ll_bonus
+URL:https://legends.pokemon.com/fr-fr/news/ultraball_bonus
+CATEGORIES:POKEMON,JEU-VIDEO,NINTENDO-SWITCH-2,DLC,SORTIE-FRANCE
+X-POKEMON-USER-EFFECT:game_release:legends-za-switch2-mega-dimension-bundle
+ :fr
+X-POKEMON-DATE-PRECISION:EXACT_DATE
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:100
+X-POKEMON-ACTIONABILITY:72
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Demain : sortie du pack Légendes Pokémon : Z-A + Méga-Dimens
+ ion.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:pokemon-battle-decks-espeon-umbreon-20261030@openai
 DTSTAMP:20261002T220509Z
