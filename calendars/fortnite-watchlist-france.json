@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CANDIDATE_QUEUE_FR_V1",
-  "updated_at": "2026-08-29T09:13:36Z",
+  "updated_at": "2026-10-04T14:14:52Z",
   "scope": "Fortnite — France et Europe pertinente",
   "states": [
     "WATCHING",
@@ -193,6 +193,20 @@
       "official_event_url": "https://communities.epicgames.com/thread/the-final-showdown-event-returns-to-fortnite-og/Ull5",
       "related_calendar_uid": "fortnite-og-final-showdown-return-20260829@openai",
       "promoted_at": "2026-08-29T09:13:36Z"
+    },
+    {
+      "candidate_id": "fortnite-fortnitemares-nitemare-island-reload-20261008",
+      "state": "CALENDAR_ADDED",
+      "topic": "Fortnitemares 2026 — île Cauchemardesque mise à jour dans Recharge — 8 octobre",
+      "source_ids": [
+        "fortnite_news"
+      ],
+      "known": "Epic confirme que l’île Cauchemardesque mise à jour arrive dans Recharge le 8 octobre 2026, avec les cartes Stranger Things et Squid Grounds.",
+      "missing_for_calendar": [],
+      "promotion_rule": "Date officielle exacte mais heure non publiée : conserver DATE_ONLY et ne pas inférer l’heure de mise en ligne.",
+      "official_event_url": "https://www.fortnite.com/news/the-corruption-spreads-in-fortnitemares-2026",
+      "related_calendar_uid": "fortnite-fortnitemares-nitemare-island-reload-20261008@openai",
+      "promoted_at": "2026-10-04T14:14:52Z"
     }
   ]
 }
