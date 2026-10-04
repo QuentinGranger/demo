@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-02T22:05:09Z",
+  "updated_at": "2026-10-04T12:39:20Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -9,8 +9,36 @@
   "source_registry": "calendars/harry-potter-sources-france.json",
   "policy": {
     "canonical_key": "event_uid + provider_id + session_key/category_key lorsque la granularité est utile",
-    "statuses": ["NOT_ANNOUNCED","ANNOUNCED","ON_SALE","AVAILABLE","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","WAITLIST","CLOSED","ENDED","CANCELLED"],
-    "material_transitions": ["SALE_ANNOUNCED","SALE_OPENED","LOW_AVAILABILITY","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","NEW_SESSION_ADDED","SESSION_REMOVED","RUN_EXTENDED","LAST_SHOW","LAST_CHANCE","PRICE_STRUCTURE_CHANGED","SALE_CLOSED","EVENT_ENDED","CANCELLED"],
+    "statuses": [
+      "NOT_ANNOUNCED",
+      "ANNOUNCED",
+      "ON_SALE",
+      "AVAILABLE",
+      "LOW_AVAILABILITY",
+      "NEARLY_SOLD_OUT",
+      "SOLD_OUT",
+      "WAITLIST",
+      "CLOSED",
+      "ENDED",
+      "CANCELLED"
+    ],
+    "material_transitions": [
+      "SALE_ANNOUNCED",
+      "SALE_OPENED",
+      "LOW_AVAILABILITY",
+      "NEARLY_SOLD_OUT",
+      "SOLD_OUT",
+      "BACK_ON_SALE",
+      "NEW_SESSION_ADDED",
+      "SESSION_REMOVED",
+      "RUN_EXTENDED",
+      "LAST_SHOW",
+      "LAST_CHANCE",
+      "PRICE_STRUCTURE_CHANGED",
+      "SALE_CLOSED",
+      "EVENT_ENDED",
+      "CANCELLED"
+    ],
     "scarcity_evidence": {
       "EXPLICIT_TEXT": "La source directe dit explicitement dernières places, presque complet ou complet.",
       "OFFICIAL_SESSION_DISABLED": "La séance exacte est explicitement indisponible/épuisée sur la billetterie officielle.",
@@ -57,13 +85,27 @@
     "history": "X-HARRYPOTTER-TICKET-HISTORY"
   },
   "notification_policy": {
-    "always": ["SALE_OPENED","NEARLY_SOLD_OUT","SOLD_OUT","BACK_ON_SALE","NEW_SESSION_ADDED","RUN_EXTENDED","LAST_CHANCE","CANCELLED"],
+    "always": [
+      "SALE_OPENED",
+      "NEARLY_SOLD_OUT",
+      "SOLD_OUT",
+      "BACK_ON_SALE",
+      "NEW_SESSION_ADDED",
+      "RUN_EXTENDED",
+      "LAST_CHANCE",
+      "CANCELLED"
+    ],
     "conditional": {
       "LOW_AVAILABILITY": "notifier seulement pour 🔥/⭐ très demandé, Paris/IDF, séance proche ou preuve explicite forte",
       "PRICE_STRUCTURE_CHANGED": "notifier seulement si changement important/actionnable, pas une micro-variation de catégorie",
       "SALE_CLOSED": "silencieux sauf fermeture anticipée ou impact pratique"
     },
-    "silent": ["EVENT_ENDED","recheck_identique","timestamp_refresh","category_reorder"]
+    "silent": [
+      "EVENT_ENDED",
+      "recheck_identique",
+      "timestamp_refresh",
+      "category_reorder"
+    ]
   },
   "tracked": [
     {
@@ -82,9 +124,28 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-19T03:53:20Z",
       "last_changed_at": null,
-      "price_min_eur": 10.0,
-      "price_max_eur": 10.0,
-      "session_states": [{"session_key":"2026-08-30T17:00-Europe-Paris","status":"AVAILABLE","confidence":"HIGH","category_states":[{"category_key":"standard","status":"AVAILABLE","scarcity_evidence":"UNKNOWN"},{"category_key":"vip","status":"SOLD_OUT","scarcity_evidence":"CATEGORY_SOLD_OUT","notes":"VIP complet ne rend pas la séance globale complète."}]}],
+      "price_min_eur": 10,
+      "price_max_eur": 10,
+      "session_states": [
+        {
+          "session_key": "2026-08-30T17:00-Europe-Paris",
+          "status": "AVAILABLE",
+          "confidence": "HIGH",
+          "category_states": [
+            {
+              "category_key": "standard",
+              "status": "AVAILABLE",
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "vip",
+              "status": "SOLD_OUT",
+              "scarcity_evidence": "CATEGORY_SOLD_OUT",
+              "notes": "VIP complet ne rend pas la séance globale complète."
+            }
+          ]
+        }
+      ],
       "history": []
     },
     {
@@ -105,8 +166,8 @@
       "last_changed_at": "2026-09-27T08:56:26Z",
       "run_start": "2026-10-17",
       "run_end": "2027-01-17",
-      "price_min_eur": 20.0,
-      "price_max_eur": 60.0,
+      "price_min_eur": 20,
+      "price_max_eur": 60,
       "session_catalog_mode": "SPARSE_ONLY",
       "session_states": [
         {
@@ -114,12 +175,42 @@
           "status": "ON_SALE",
           "confidence": "HIGH",
           "category_states": [
-            {"category_key":"carre-or","status":"ON_SALE","price_eur":60.0,"scarcity_evidence":"UNKNOWN"},
-            {"category_key":"categorie-1","status":"ON_SALE","price_eur":50.0,"scarcity_evidence":"UNKNOWN"},
-            {"category_key":"categorie-2","status":"ON_SALE","price_eur":43.0,"scarcity_evidence":"UNKNOWN"},
-            {"category_key":"categorie-3","status":"ON_SALE","price_eur":39.0,"scarcity_evidence":"UNKNOWN"},
-            {"category_key":"categorie-4","status":"ON_SALE","price_eur":25.0,"scarcity_evidence":"UNKNOWN"},
-            {"category_key":"categorie-5-visibilite-reduite","status":"ON_SALE","price_eur":20.0,"scarcity_evidence":"UNKNOWN"}
+            {
+              "category_key": "carre-or",
+              "status": "ON_SALE",
+              "price_eur": 60,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "categorie-1",
+              "status": "ON_SALE",
+              "price_eur": 50,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "categorie-2",
+              "status": "ON_SALE",
+              "price_eur": 43,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "categorie-3",
+              "status": "ON_SALE",
+              "price_eur": 39,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "categorie-4",
+              "status": "ON_SALE",
+              "price_eur": 25,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "categorie-5-visibilite-reduite",
+              "status": "ON_SALE",
+              "price_eur": 20,
+              "scarcity_evidence": "UNKNOWN"
+            }
           ]
         }
       ],
@@ -149,27 +240,218 @@
       "check_tier": "COLD",
       "last_verified_at": null,
       "last_changed_at": null,
-      "price_min_eur": 25.0,
-      "price_max_eur": 99.0,
+      "price_min_eur": 25,
+      "price_max_eur": 99,
       "run_start": "2026-11-04",
       "run_end": "2026-11-08",
       "session_states": [
-        {"session_key":"2026-11-04T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-05T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-06T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-07T15:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-07T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-08T15:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},
-        {"session_key":"2026-11-08T20:30-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}
+        {
+          "session_key": "2026-11-04T20:30-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-05T20:30-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-06T20:30-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-07T15:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-07T20:30-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-08T15:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-11-08T20:30-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
       ],
       "history": []
     },
-    {"event_uid":"hp-cine-concert-hbp-toulouse-20261228@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Toulouse","city":"Toulouse","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2026-12-28T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
-    {"event_uid":"hp-cine-concert-hbp-bordeaux-20261229@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Bordeaux/Floirac","city":"Floirac / Bordeaux","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2026-12-29T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
-    {"event_uid":"hp-cine-concert-hbp-nantes-20261230@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Nantes","city":"Saint-Herblain / Nantes","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2026-12-30T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
-    {"event_uid":"hp-cine-concert-hbp-lille-20270102@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Lille","city":"Lille","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2027-01-02T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]},{"session_key":"2027-01-03T16:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
-    {"event_uid":"hp-cine-concert-hbp-lyon-20270109@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Lyon","city":"Lyon","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2027-01-09T20:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
-    {"event_uid":"hp-cine-concert-hbp-dijon-20270110@openai","title":"Le Prince de Sang-Mêlé en ciné-concert — Dijon","city":"Dijon","provider":"uGo&Play / Yellow Socks Orchestra","provider_id":"ugoplay","source_id":"ugoplay","ticket_url":"https://www.u-play.fr/harrypottercineconcert6","status":"ON_SALE","status_origin":"IMPORTED_FROM_ICS","evidence_grade":"A","confidence":"MEDIUM","scarcity_evidence":"UNKNOWN","check_tier":"COLD","last_verified_at":null,"last_changed_at":null,"session_states":[{"session_key":"2027-01-10T17:00-Europe-Paris","status":"UNKNOWN","confidence":"LOW","category_states":[]}],"history":[]},
+    {
+      "event_uid": "hp-cine-concert-hbp-toulouse-20261228@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Toulouse",
+      "city": "Toulouse",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2026-12-28T20:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-bordeaux-20261229@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Bordeaux/Floirac",
+      "city": "Floirac / Bordeaux",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2026-12-29T20:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-nantes-20261230@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Nantes",
+      "city": "Saint-Herblain / Nantes",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2026-12-30T20:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-lille-20270102@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Lille",
+      "city": "Lille",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2027-01-02T20:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        },
+        {
+          "session_key": "2027-01-03T16:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-lyon-20270109@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Lyon",
+      "city": "Lyon",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2027-01-09T20:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
+    {
+      "event_uid": "hp-cine-concert-hbp-dijon-20270110@openai",
+      "title": "Le Prince de Sang-Mêlé en ciné-concert — Dijon",
+      "city": "Dijon",
+      "provider": "uGo&Play / Yellow Socks Orchestra",
+      "provider_id": "ugoplay",
+      "source_id": "ugoplay",
+      "ticket_url": "https://www.u-play.fr/harrypottercineconcert6",
+      "status": "ON_SALE",
+      "status_origin": "IMPORTED_FROM_ICS",
+      "evidence_grade": "A",
+      "confidence": "MEDIUM",
+      "scarcity_evidence": "UNKNOWN",
+      "check_tier": "COLD",
+      "last_verified_at": null,
+      "last_changed_at": null,
+      "session_states": [
+        {
+          "session_key": "2027-01-10T17:00-Europe-Paris",
+          "status": "UNKNOWN",
+          "confidence": "LOW",
+          "category_states": []
+        }
+      ],
+      "history": []
+    },
     {
       "event_uid": "hp-droneart-paris-20260930@openai",
       "title": "DroneArt Show: Harry Potter — Paris-Vincennes",
@@ -183,23 +465,115 @@
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "EXPLICIT_TEXT",
-      "check_tier": "WARM",
-      "last_verified_at": "2026-10-02T22:05:09Z",
-      "last_changed_at": "2026-10-02T22:05:09Z",
-      "price_min_eur": 27.12,
-      "price_max_eur": 40.72,
-      "verification_notes": "La billetterie officielle Fever liée au DroneArt Show conserve le signal global de forte demande et affiche une promotion de 20 % pour la séance du 3 octobre 2026 à 20:45 : adulte 40,72 €, enfant 27,12 €, groupe 37,52 €. Aucune quantité ni disponibilité de catégorie n'est inférée. Source: https://feverup.com/m/647897",
+      "check_tier": "HOT",
+      "last_verified_at": "2026-10-04T12:39:20Z",
+      "last_changed_at": "2026-10-04T12:39:20Z",
+      "price_min_eur": 40.72,
+      "verification_notes": "La billetterie officielle Fever affiche désormais le run restant du 7 au 10 octobre 2026 avec réservation ouverte et un prix d’appel remisé à 40,72 € au lieu de 50,90 € (-20 %). La page ne rattache pas ce prix à une séance ou catégorie précise : aucune disponibilité individuelle, aucun stock et aucun tarif enfant/groupe ne sont inférés. Source: https://feverup.com/m/647897",
       "run_start": "2026-09-30",
       "run_end": "2026-10-10",
       "session_states": [
-        {"session_key":"2026-09-30T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-10-01T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-10-03T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[{"category_key":"adult-standard","status":"ON_SALE","price_eur":40.72,"reference_price_eur":50.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"},{"category_key":"child-3-11","status":"ON_SALE","price_eur":27.12,"reference_price_eur":33.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"},{"category_key":"group-8-plus","status":"ON_SALE","price_eur":37.52,"reference_price_eur":46.90,"discount_percent":20,"scarcity_evidence":"UNKNOWN"}]},
-        {"session_key":"2026-10-07T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-10-08T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-10-10T20:45-Europe-Paris","status":"ON_SALE","confidence":"HIGH","category_states":[]}
+        {
+          "session_key": "2026-09-30T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-10-01T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-10-03T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": [
+            {
+              "category_key": "adult-standard",
+              "status": "ON_SALE",
+              "price_eur": 40.72,
+              "reference_price_eur": 50.9,
+              "discount_percent": 20,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "child-3-11",
+              "status": "ON_SALE",
+              "price_eur": 27.12,
+              "reference_price_eur": 33.9,
+              "discount_percent": 20,
+              "scarcity_evidence": "UNKNOWN"
+            },
+            {
+              "category_key": "group-8-plus",
+              "status": "ON_SALE",
+              "price_eur": 37.52,
+              "reference_price_eur": 46.9,
+              "discount_percent": 20,
+              "scarcity_evidence": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "session_key": "2026-10-07T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-10-08T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-10-10T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
+        }
       ],
-      "history": [{"at":"2026-08-22T01:54:24Z","transition":"SALE_OPENED","source_id":"droneart-harry-potter-paris","note":"Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."},{"at":"2026-10-01T05:56:15Z","transition":"NEARLY_SOLD_OUT","source_id":"droneart-harry-potter-paris","note":"Fever, billetterie officielle liée à l’expérience, affiche explicitement qu’il ne reste que quelques places à Paris. Transition globale du run ; aucune séance individuelle n’est déclarée SOLD_OUT."},{"at":"2026-10-02T22:05:09Z","transition":"PRICE_STRUCTURE_CHANGED","source_id":"droneart-harry-potter-paris","notification_key":"hp-droneart-paris-20261003-discount20","notification_status":"DELIVERED_IN_CHATGPT","note":"Fever affiche une promotion de 20 % pour la séance du 3 octobre à 20:45 : adulte 40,72 €, enfant 27,12 €, groupe 37,52 €. Alerte utilisateur émise ; aucune rareté supplémentaire ni stock quantifié n'est inféré."}]
+      "history": [
+        {
+          "at": "2026-08-22T01:54:24Z",
+          "transition": "SALE_OPENED",
+          "source_id": "droneart-harry-potter-paris",
+          "note": "Billets proposés en ligne sur la page officielle de l'expérience ; aucune rareté inférée."
+        },
+        {
+          "at": "2026-10-01T05:56:15Z",
+          "transition": "NEARLY_SOLD_OUT",
+          "source_id": "droneart-harry-potter-paris",
+          "note": "Fever, billetterie officielle liée à l’expérience, affiche explicitement qu’il ne reste que quelques places à Paris. Transition globale du run ; aucune séance individuelle n’est déclarée SOLD_OUT."
+        },
+        {
+          "at": "2026-10-02T22:05:09Z",
+          "transition": "PRICE_STRUCTURE_CHANGED",
+          "source_id": "droneart-harry-potter-paris",
+          "notification_key": "hp-droneart-paris-20261003-discount20",
+          "notification_status": "DELIVERED_IN_CHATGPT",
+          "note": "Fever affiche une promotion de 20 % pour la séance du 3 octobre à 20:45 : adulte 40,72 €, enfant 27,12 €, groupe 37,52 €. Alerte utilisateur émise ; aucune rareté supplémentaire ni stock quantifié n'est inféré."
+        },
+        {
+          "at": "2026-10-04T12:39:20Z",
+          "transition": "PRICE_STRUCTURE_CHANGED",
+          "source_id": "droneart-harry-potter-paris",
+          "notification_key": "hp-droneart-paris-20261007-10-discount20",
+          "notification_status": "RESERVED",
+          "note": "Fever affiche le run restant du 7 au 10 octobre avec réservation ouverte et un prix d’appel de 40,72 € au lieu de 50,90 € (-20 %). Portée page entière seulement ; aucune attribution à une séance ou catégorie précise."
+        }
+      ],
+      "reference_price_min_eur": 50.9,
+      "discount_percent": 20,
+      "current_offer_scope": {
+        "start_date": "2026-10-07",
+        "end_date": "2026-10-10",
+        "price_scope": "PAGE_LEVEL_STARTING_PRICE_NOT_SESSION_SPECIFIC",
+        "status": "ON_SALE",
+        "source_url": "https://feverup.com/m/647897"
+      }
     },
     {
       "event_uid": "hp-back-to-hogwarts-versailles-20260829@openai",
@@ -217,17 +591,42 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-29T00:46:01Z",
       "last_changed_at": "2026-08-30T00:50:46Z",
-      "price_min_eur": 0.0,
-      "price_max_eur": 0.0,
+      "price_min_eur": 0,
+      "price_max_eur": 0,
       "session_states": [
-        {"session_key":"2026-08-29T09:00-Europe-Paris","status":"ENDED","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-08-29T13:00-Europe-Paris","status":"ENDED","confidence":"HIGH","category_states":[]},
-        {"session_key":"2026-08-29T17:00-Europe-Paris","status":"ENDED","confidence":"HIGH","category_states":[]}
+        {
+          "session_key": "2026-08-29T09:00-Europe-Paris",
+          "status": "ENDED",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-08-29T13:00-Europe-Paris",
+          "status": "ENDED",
+          "confidence": "HIGH",
+          "category_states": []
+        },
+        {
+          "session_key": "2026-08-29T17:00-Europe-Paris",
+          "status": "ENDED",
+          "confidence": "HIGH",
+          "category_states": []
+        }
       ],
       "verification_notes": "Inscription gratuite obligatoire. Au 29 août 2026, le parcours d'inscription officiel ne proposait plus de réservation ; l'événement est maintenant terminé selon son planning officiel.",
       "history": [
-        {"at":"2026-08-29T00:46:01Z","transition":"SALE_CLOSED","source_id":"retourapoudlard-fr","note":"Le flux d'inscription officiel ne propose plus de réservation et renvoie vers un formulaire de contact ; aucun billet sur place selon la FAQ. Fermeture de vente/inscription, sans inférer SOLD_OUT."},
-        {"at":"2026-08-30T00:50:46Z","transition":"EVENT_ENDED","source_id":"retourapoudlard-fr","note":"Les trois sessions officielles du 29 août sont terminées ; transition de maintenance silencieuse, sans nouvelle alerte utilisateur."}
+        {
+          "at": "2026-08-29T00:46:01Z",
+          "transition": "SALE_CLOSED",
+          "source_id": "retourapoudlard-fr",
+          "note": "Le flux d'inscription officiel ne propose plus de réservation et renvoie vers un formulaire de contact ; aucun billet sur place selon la FAQ. Fermeture de vente/inscription, sans inférer SOLD_OUT."
+        },
+        {
+          "at": "2026-08-30T00:50:46Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "retourapoudlard-fr",
+          "note": "Les trois sessions officielles du 29 août sont terminées ; transition de maintenance silencieuse, sans nouvelle alerte utilisateur."
+        }
       ]
     },
     {
@@ -246,11 +645,28 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-24T01:59:44Z",
       "last_changed_at": "2026-08-30T00:50:46Z",
-      "session_states": [{"session_key":"2026-08-29T20:30-Europe-Paris","status":"ENDED","confidence":"HIGH","scarcity_evidence":"EXPLICIT_TEXT","category_states":[]}],
+      "session_states": [
+        {
+          "session_key": "2026-08-29T20:30-Europe-Paris",
+          "status": "ENDED",
+          "confidence": "HIGH",
+          "scarcity_evidence": "EXPLICIT_TEXT",
+          "category_states": []
+        }
+      ],
       "verification_notes": "La FAQ officielle Retour à Poudlard indiquait explicitement que les Grandes Eaux Nocturnes Retour à Poudlard étaient complètes ; l'unique séance du 29 août est maintenant terminée.",
       "history": [
-        {"at":"2026-08-24T01:59:44Z","transition":"SOLD_OUT","note":"État complet confirmé lors de l'enrôlement initial."},
-        {"at":"2026-08-30T00:50:46Z","transition":"EVENT_ENDED","source_id":"chateau-versailles-spectacles","note":"La séance officielle du 29 août est passée ; transition de maintenance silencieuse."}
+        {
+          "at": "2026-08-24T01:59:44Z",
+          "transition": "SOLD_OUT",
+          "note": "État complet confirmé lors de l'enrôlement initial."
+        },
+        {
+          "at": "2026-08-30T00:50:46Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "chateau-versailles-spectacles",
+          "note": "La séance officielle du 29 août est passée ; transition de maintenance silencieuse."
+        }
       ]
     },
     {
@@ -269,12 +685,20 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-29T01:50:55Z",
       "last_changed_at": "2026-08-29T01:50:55Z",
-      "price_min_eur": 40.0,
-      "price_max_eur": 40.0,
+      "price_min_eur": 40,
+      "price_max_eur": 40,
       "run_start": "2026-08-29",
       "run_end": "2026-08-30",
       "session_states": [],
-      "history": [{"at":"2026-08-29T01:50:55Z","transition":"SALE_OPENED","from":"NOT_TRACKED","to":"ON_SALE","evidence":"Direct official cinema page verified on 2026-08-29"}]
+      "history": [
+        {
+          "at": "2026-08-29T01:50:55Z",
+          "transition": "SALE_OPENED",
+          "from": "NOT_TRACKED",
+          "to": "ON_SALE",
+          "evidence": "Direct official cinema page verified on 2026-08-29"
+        }
+      ]
     },
     {
       "event_uid": "hp-cgr-torcy-marathon-25ans-20260829@openai",
@@ -292,12 +716,20 @@
       "check_tier": "HOT",
       "last_verified_at": "2026-08-29T01:50:55Z",
       "last_changed_at": "2026-08-29T01:50:55Z",
-      "price_min_eur": 20.0,
-      "price_max_eur": 48.0,
+      "price_min_eur": 20,
+      "price_max_eur": 48,
       "run_start": "2026-08-29",
       "run_end": "2026-08-30",
       "session_states": [],
-      "history": [{"at":"2026-08-29T01:50:55Z","transition":"SALE_OPENED","from":"NOT_TRACKED","to":"ON_SALE","evidence":"Direct official cinema page verified on 2026-08-29"}]
+      "history": [
+        {
+          "at": "2026-08-29T01:50:55Z",
+          "transition": "SALE_OPENED",
+          "from": "NOT_TRACKED",
+          "to": "ON_SALE",
+          "evidence": "Direct official cinema page verified on 2026-08-29"
+        }
+      ]
     }
   ]
 }
