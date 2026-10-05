@@ -1,7 +1,7 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-05T22:41:00Z",
+  "last_observer_check_at": "2026-10-05T22:43:03Z",
   "last_deep_check_at": "2026-10-04T21:33:09Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
@@ -16,16 +16,16 @@
   "automation_snapshot": {
     "Calendriers jeux — France": {
       "exists": true,
-      "enabled": false,
+      "enabled": true,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
       "last_run_time": "2026-10-05T15:24:32.569895Z",
-      "updated_at": "2026-10-05T15:25:37.400570Z",
+      "updated_at": "2026-10-05T22:43:03.270931Z",
       "liveness": "DEGRADED"
     }
   },
   "overall_result": "DEGRADED",
-  "note": "Transition verified live via automations.peek: the consolidated hourly automation exists but is disabled. The latest independent GitHub Actions permanent calendar-health run (37383573449) completed successfully on master at 2026-10-05T22:37:00Z. No legacy task was re-enabled. last_deep_check_at was not advanced because this run did not complete a fresh full deep check of all public RAW feeds."
+  "note": "Recovery action verified live via automations.peek: the consolidated hourly automation is enabled again with an infinite HOURLY recurrence in Europe/Paris. Liveness remains DEGRADED until a new successful automation run is actually observed; no execution time was invented. Legacy separate monitoring tasks remain disabled. last_deep_check_at was not advanced because no fresh full deep check was performed in this transition."
 }
