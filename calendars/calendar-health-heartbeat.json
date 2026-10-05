@@ -1,7 +1,7 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-04T21:33:09Z",
+  "last_observer_check_at": "2026-10-05T22:41:00Z",
   "last_deep_check_at": "2026-10-04T21:33:09Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
@@ -11,21 +11,21 @@
   "repository_reachable": true,
   "pinned_branch_reachable": true,
   "verified_ics_path_count": 8,
-  "healthy_observer_count": 1,
+  "healthy_observer_count": 0,
   "minimum_required_observers": 1,
   "automation_snapshot": {
     "Calendriers jeux — France": {
       "exists": true,
-      "enabled": true,
+      "enabled": false,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-04T20:46:17.524333Z",
-      "updated_at": "2026-10-04T20:46:39.978495Z",
-      "liveness": "HEALTHY"
+      "last_run_time": "2026-10-05T15:24:32.569895Z",
+      "updated_at": "2026-10-05T15:25:37.400570Z",
+      "liveness": "DEGRADED"
     }
   },
-  "overall_result": "HEALTHY",
-  "note": "Fresh consolidated deep check: active hourly automation verified live via automations.peek; all eight declared ICS paths passed structure, balance, BOM and UID checks; Pokemon presentation policy validation passed; all Fortnite deterministic validators passed; and the three public RAW feeds matched current master byte-for-byte."
+  "overall_result": "DEGRADED",
+  "note": "Transition verified live via automations.peek: the consolidated hourly automation exists but is disabled. The latest independent GitHub Actions permanent calendar-health run (37383573449) completed successfully on master at 2026-10-05T22:37:00Z. No legacy task was re-enabled. last_deep_check_at was not advanced because this run did not complete a fresh full deep check of all public RAW feeds."
 }
