@@ -2645,6 +2645,46 @@ DESCRIPTION:🃏 Sortie demain — prépare ton achat : Decks Mentali-ex &
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-champions-global-challenge-2027-2@pokemon-fr
+DTSTAMP:20261008T221100Z
+LAST-MODIFIED:20261008T221100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+PRIORITY:5
+DTSTART;TZID=Europe/Paris:20261030T030000
+DTEND;TZID=Europe/Paris:20261102T025900
+SUMMARY:Champions — Défi Mondial II (2027)
+LOCATION:En ligne — Pokémon Champions
+DESCRIPTION:Compétition officielle Pokémon Champions au format Combat Duo
+  sous règlement M-C. Inscriptions du 23 octobre 2026 à 04:00 (Europe/Par
+ is) au 2 novembre à 02:59. Compétition du 30 octobre à 03:00 au 2 novem
+ bre à 02:59. Au moins 3 matchs disputés permettent de recevoir un Paragr
+ uel mâle après consultation des résultats. Des Championship Points peuv
+ ent être obtenus sous réserve des conditions de compte et d'association
+  indiquées par Pokémon. Source officielle France : https://www.pokemon.c
+ om/fr/actualites/participez-a-la-competition-en-ligne-du-defi-mondial-ii-2
+ 027
+URL:https://www.pokemon.com/fr/actualites/participez-a-la-competition-en-li
+ gne-du-defi-mondial-ii-2027
+CATEGORIES:POKEMON,CHAMPIONS,COMPETITION,ONLINE
+X-POKEMON-USER-EFFECT:champions_competition:world-challenge-2-2027:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:100
+X-POKEMON-ACTIONABILITY:92
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20261023T020000Z
+ACTION:DISPLAY
+DESCRIPTION:Les inscriptions au Défi Mondial II (2027) sont ouvertes.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Le Défi Mondial II (2027) commence dans une heure.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 TRANSP:TRANSPARENT
 UID:bc885b95-af58-4c88-826c-263ff5e18983@openai
 DTSTAMP:20260926T212932Z
