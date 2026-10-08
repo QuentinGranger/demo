@@ -2038,6 +2038,42 @@ DESCRIPTION:Le Test Retour sur les Mondiaux 2024 commence demain dans le JC
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:pokemon-pokopia-sweet-surprises-pumpkaboo-2026@pokemon-fr
+DTSTAMP:20261008T231500Z
+LAST-MODIFIED:20261008T231500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+PRIORITY:5
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261102
+SUMMARY:Début — Pokopia : Les surprises sucrées de Pitrouille
+LOCATION:Pokémon Pokopia — Nintendo Switch 2
+DESCRIPTION:Événement Halloween officiel « Les surprises sucrées de Pit
+ rouille » du 17 octobre 2026 à 05:00 au 1er novembre 2026 à 04:59 (Euro
+ pe/Paris). Jouez pendant la période pour vous lier d’amitié avec Pitro
+ uille et Banshitrouye et échanger les sucettes citrouille contre des réc
+ ompenses thématiques. Source officielle Pokémon France : https://www.pok
+ emon.com/fr/actualites/recoltez-des-sucettes-citrouille-pour-pitrouille-da
+ ns-pokemon-pokopia
+URL:https://www.pokemon.com/fr/actualites/recoltez-des-sucettes-citrouille-
+ pour-pitrouille-dans-pokemon-pokopia
+CATEGORIES:POKEMON,POKOPIA,EVENEMENT,HALLOWEEN
+X-POKEMON-USER-EFFECT:game_event:pokopia-sweet-surprises-pumpkaboo-2026:fr
+X-POKEMON-DATE-PRECISION:EXACT_DATETIME
+X-POKEMON-TERRITORY:FRANCE_CONFIRMED
+X-POKEMON-CONFIDENCE:100
+X-POKEMON-ACTIONABILITY:80
+X-POKEMON-DISPLAY-MODE:ALLDAY_WINDOW
+X-POKEMON-EXACT-START:2026-10-17T05:00:00+02:00
+X-POKEMON-EXACT-END:2026-11-01T04:59:00+01:00
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:L’événement Halloween de Pokémon Pokopia commence demain.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 LAST-MODIFIED:20260926T212932Z
 TRANSP:TRANSPARENT
 UID:pokemon-paris-bardakoff-musee-en-herbe-20261022@openai
