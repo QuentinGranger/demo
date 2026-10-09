@@ -1,7 +1,7 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-08T22:13:00Z",
+  "last_observer_check_at": "2026-10-09T22:03:00Z",
   "last_deep_check_at": "2026-10-04T21:33:09Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
@@ -11,7 +11,7 @@
   "repository_reachable": true,
   "pinned_branch_reachable": true,
   "verified_ics_path_count": 8,
-  "healthy_observer_count": 0,
+  "healthy_observer_count": 1,
   "minimum_required_observers": 1,
   "automation_snapshot": {
     "Calendriers jeux — France": {
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-05T23:17:58.562934Z",
-      "updated_at": "2026-10-08T22:11:40.448011Z",
-      "liveness": "DEGRADED"
+      "last_run_time": "2026-10-09T20:37:39.224388Z",
+      "updated_at": "2026-10-09T20:38:00.690872Z",
+      "liveness": "HEALTHY"
     }
   },
-  "overall_result": "DEGRADED",
-  "note": "Fresh transition observation via automations.peek: the unique consolidated hourly automation is enabled again in Europe/Paris, but no new successful run has yet been observed since 2026-10-05T23:17:58.562934Z. GitHub Actions health remains failing on stale automation/observer state at the latest checked run, so overall_result stays DEGRADED. last_deep_check_at was not advanced because no fresh full deep check was completed in this transition. The existing verified_ics_path_count is preserved from the previous deep check, not claimed as newly verified here. Legacy separate monitoring tasks remain disabled."
+  "overall_result": "HEALTHY",
+  "note": "Fresh transition observation via automations.peek: the unique consolidated hourly automation is enabled, infinite, on Europe/Paris, and a new completed run was observed at 2026-10-09T20:37:39.224388Z, within the 3-hour liveness threshold. Eight declared ICS paths were freshly read from master and passed UTF-8/BOM, VCALENDAR, VERSION:2.0, component nesting and duplicate-UID checks. The three global Git blobs matched the current master files byte-for-byte. last_deep_check_at was not advanced because the stable raw.githubusercontent.com endpoints were not independently re-fetched in this runtime; no claim of fresh RAW CDN propagation is made. Legacy separate monitoring tasks remain disabled."
 }
