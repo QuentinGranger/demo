@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-04T12:39:20Z",
+  "updated_at": "2026-10-09T22:45:08Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -460,18 +460,18 @@
       "provider_id": "droneart-paris",
       "source_id": "droneart-harry-potter-paris",
       "ticket_url": "https://thedroneartshow.com/paris/harry-potter/",
-      "status": "NEARLY_SOLD_OUT",
+      "status": "ON_SALE",
       "status_origin": "DIRECT_VERIFIED",
       "evidence_grade": "A",
       "confidence": "HIGH",
-      "scarcity_evidence": "EXPLICIT_TEXT",
+      "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-10-04T12:39:20Z",
-      "last_changed_at": "2026-10-04T12:39:20Z",
-      "price_min_eur": 40.72,
-      "verification_notes": "La billetterie officielle Fever affiche désormais le run restant du 7 au 10 octobre 2026 avec réservation ouverte et un prix d’appel remisé à 40,72 € au lieu de 50,90 € (-20 %). La page ne rattache pas ce prix à une séance ou catégorie précise : aucune disponibilité individuelle, aucun stock et aucun tarif enfant/groupe ne sont inférés. Source: https://feverup.com/m/647897",
+      "last_verified_at": "2026-10-09T22:45:08Z",
+      "last_changed_at": "2026-10-09T22:45:08Z",
+      "price_min_eur": 43.92,
+      "verification_notes": "La billetterie officielle Fever affiche deux séances encore réservables les 10 et 11 octobre 2026 à 20:45, avec une promotion de 20 % (adulte 43,92 € au lieu de 54,90 €, enfant 29,52 € au lieu de 36,90 €, groupe 39,92 € au lieu de 49,90 €). L’organisateur DroneArt publie également le 11 octobre. La séance du 11 octobre est nouvelle par rapport au registre précédent ; aucune quantité de places n’est inférée. Sources: https://feverup.com/m/647897 ; https://thedroneartshow.com/paris/harry-potter/",
       "run_start": "2026-09-30",
-      "run_end": "2026-10-10",
+      "run_end": "2026-10-11",
       "session_states": [
         {
           "session_key": "2026-09-30T20:45-Europe-Paris",
@@ -533,6 +533,12 @@
           "status": "ON_SALE",
           "confidence": "HIGH",
           "category_states": []
+        },
+        {
+          "session_key": "2026-10-11T20:45-Europe-Paris",
+          "status": "ON_SALE",
+          "confidence": "HIGH",
+          "category_states": []
         }
       ],
       "history": [
@@ -563,14 +569,22 @@
           "notification_key": "hp-droneart-paris-20261007-10-discount20",
           "notification_status": "RESERVED",
           "note": "Fever affiche le run restant du 7 au 10 octobre avec réservation ouverte et un prix d’appel de 40,72 € au lieu de 50,90 € (-20 %). Portée page entière seulement ; aucune attribution à une séance ou catégorie précise."
+        },
+        {
+          "at": "2026-10-09T22:45:08Z",
+          "transition": "NEW_SESSION_ADDED",
+          "source_id": "droneart-harry-potter-paris",
+          "notification_key": "hp-droneart-paris-20261011-new-session",
+          "notification_status": "RESERVED",
+          "note": "Nouvelle séance du dimanche 11 octobre 2026 à 20:45 confirmée par Fever et l’organisateur ; réservation ouverte. Prix directs affichés avec remise de 20 %, sans stock quantifié."
         }
       ],
-      "reference_price_min_eur": 50.9,
+      "reference_price_min_eur": 54.9,
       "discount_percent": 20,
       "current_offer_scope": {
-        "start_date": "2026-10-07",
-        "end_date": "2026-10-10",
-        "price_scope": "PAGE_LEVEL_STARTING_PRICE_NOT_SESSION_SPECIFIC",
+        "start_date": "2026-10-10",
+        "end_date": "2026-10-11",
+        "price_scope": "PAGE_LEVEL_AND_CURRENT_SELECTION_NOT_SESSION_QUANTITY",
         "status": "ON_SALE",
         "source_url": "https://feverup.com/m/647897"
       }
