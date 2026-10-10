@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-09T22:45:08Z",
+  "updated_at": "2026-10-10T03:18:01Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -575,8 +575,9 @@
           "transition": "NEW_SESSION_ADDED",
           "source_id": "droneart-harry-potter-paris",
           "notification_key": "hp-droneart-paris-20261011-new-session",
-          "notification_status": "RESERVED",
-          "note": "Nouvelle séance du dimanche 11 octobre 2026 à 20:45 confirmée par Fever et l’organisateur ; réservation ouverte. Prix directs affichés avec remise de 20 %, sans stock quantifié."
+          "notification_status": "DELIVERED_IN_CHATGPT",
+          "note": "Nouvelle séance du dimanche 11 octobre 2026 à 20:45 confirmée par Fever et l’organisateur ; réservation ouverte. Prix directs affichés avec remise de 20 %, sans stock quantifié.",
+          "delivered_at": "2026-10-09T22:50:00Z"
         }
       ],
       "reference_price_min_eur": 54.9,
