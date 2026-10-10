@@ -1,8 +1,8 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-09T22:03:00Z",
-  "last_deep_check_at": "2026-10-04T21:33:09Z",
+  "last_observer_check_at": "2026-10-10T23:54:33Z",
+  "last_deep_check_at": "2026-10-10T23:54:33Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
   "migration_bootstrap": false,
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-09T20:37:39.224388Z",
-      "updated_at": "2026-10-09T20:38:00.690872Z",
+      "last_run_time": "2026-10-10T22:28:59.002712Z",
+      "updated_at": "2026-10-10T22:29:20.492905Z",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Fresh transition observation via automations.peek: the unique consolidated hourly automation is enabled, infinite, on Europe/Paris, and a new completed run was observed at 2026-10-09T20:37:39.224388Z, within the 3-hour liveness threshold. Eight declared ICS paths were freshly read from master and passed UTF-8/BOM, VCALENDAR, VERSION:2.0, component nesting and duplicate-UID checks. The three global Git blobs matched the current master files byte-for-byte. last_deep_check_at was not advanced because the stable raw.githubusercontent.com endpoints were not independently re-fetched in this runtime; no claim of fresh RAW CDN propagation is made. Legacy separate monitoring tasks remain disabled."
+  "note": "Daily fresh observation via automations.peek: the consolidated hourly automation is enabled, infinite, on Europe/Paris, and its latest completed run at 2026-10-10T22:28:59.002712Z is within the 3-hour liveness threshold. Eight declared ICS paths were freshly read from master and passed VCALENDAR, VERSION:2.0, component-nesting and duplicate-UID checks. The three stable raw.githubusercontent.com global feeds were independently fetched and matched the current master files byte-for-byte, with BEGIN:VCALENDAR and X-WR-CALNAME present. The latest Validate permanent calendar health GitHub Actions run completed successfully at 2026-10-10T20:03:36Z. Legacy separate monitoring tasks remain disabled."
 }
