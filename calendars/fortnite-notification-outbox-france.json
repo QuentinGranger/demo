@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-10-10T14:10:39Z",
+  "updated_at": "2026-10-10T19:08:27Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -701,6 +701,14 @@
       "at": "2026-10-10T14:10:39Z",
       "reservation_id": "nrs_0f15b354cffba45875cdc56f",
       "note": "Reserved after fresh official verification of the newly published same-day Spooky Dash Sprites Power Hours. This consumes the key before user-visible emission."
+    },
+    {
+      "delivery_event_id": "nde_3f8b9d366f4116ac2f2460bb",
+      "intent_id": "nti_16b61becd97cb8804a4e91c7",
+      "notification_key": "ntf_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9",
+      "state": "SENT",
+      "at": "2026-10-10T19:08:27Z",
+      "note": "Delivery confirmed from the user-visible Fortnite Spooky Dash Sprites alert in the prior automation run."
     }
   ],
   "consumed_keys": {
@@ -776,8 +784,8 @@
     },
     "ntf_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9": {
       "intent_id": "nti_16b61becd97cb8804a4e91c7",
-      "state": "RESERVED",
-      "last_event_id": "nde_bd487b68bc18cc762f61aaed"
+      "state": "SENT",
+      "last_event_id": "nde_3f8b9d366f4116ac2f2460bb"
     }
   },
   "group_index": {
@@ -937,6 +945,12 @@
       "type": "NOTIFICATION_RESERVED",
       "notification_key": "ntf_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9",
       "note": "One notification reserved for the official Spooky Dash Sprites Power Hours exact windows."
+    },
+    {
+      "at": "2026-10-10T19:08:27Z",
+      "type": "NOTIFICATION_SENT",
+      "notification_key": "ntf_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9",
+      "note": "Delivery confirmed after the user-facing Spooky Dash Sprites Power Hours alert."
     }
   ]
 }
