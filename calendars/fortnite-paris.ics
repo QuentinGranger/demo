@@ -814,4 +814,51 @@ DESCRIPTION:🏆 La Coupe victoire solo Recharge Europe commence demain à
  17h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-spooky-dash-sprites-power-hours-20261010@openai
+DTSTAMP:20261010T141039Z
+LAST-MODIFIED:20261010T141039Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PLAY
+X-FORTNITE-EVENT-TYPE:LIMITED_TIME_EVENT
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-THEME:SPOOKY_DASH_SPRITES
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_communities
+X-FORTNITE-SOURCE-TIMEZONE:UTC
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-CANDIDATE-ID:fortnite-spooky-dash-sprites-power-hours-20261010
+X-FORTNITE-LAST-CHANGE-ID:chg_d0c731cb3653d9126ed5dd3f
+X-FORTNITE-FIRST-ADDED-AT:20261010T141039Z
+X-FORTNITE-NEW-UNTIL:20261015T141039Z
+X-FORTNITE-SESSION;TYPE=POWER_HOUR_1:20261010T200000/20261010T220000
+X-FORTNITE-SESSION;TYPE=POWER_HOUR_2:20261011T030000/20261011T050000
+DTSTART;TZID=Europe/Paris:20261010T200000
+DTEND;TZID=Europe/Paris:20261010T220000
+SUMMARY:⭐ ✅ 🆕 🎃 Power Hours — Spooky Dash Sprites
+DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité
+  confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 10 octobre 
+ 20h00–22h00 à Paris.\nFenêtre 2 : dimanche 11 octobre 03h00–05h00 à
+  Paris.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’e
+ st pas présenté comme actif entre 22h00 et 03h00.\nChaque partie commenc
+ e avec un balai de sorcière. Les Sprites Cerf\, Vampire et Spooky Dash ap
+ paraissent plus souvent\, avec davantage de coffres citrouilles. Des jeton
+ s 1-Up et extracteurs portables peuvent aussi apparaître dans les coffres
+ . Aucun taux chiffré ni garantie de drop n’est déduit.\nSource : https
+ ://communities.epicgames.com/thread/power-hours-spooky-dash-sprites-octobe
+ r-10/nrHH
+URL:https://communities.epicgames.com/thread/power-hours-spooky-dash-sprite
+ s-october-10/nrHH
+CATEGORIES:Fortnite,Battle Royale,Power Hours,Spooky Dash,Sprites,Événeme
+ nt limité
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:🎃 Power Hours Spooky Dash Sprites dans 1 h — première fen
+ être à 20h00
+END:VALARM
+END:VEVENT
 END:VCALENDAR
