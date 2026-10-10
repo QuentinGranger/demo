@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-10-10T14:10:39Z",
+  "updated_at": "2026-10-10T19:08:27Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
