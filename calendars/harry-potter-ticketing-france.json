@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-12T04:02:23Z",
+  "updated_at": "2026-10-12T05:01:52Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -116,20 +116,20 @@
       "provider_id": "grand-rex",
       "source_id": "grand-rex",
       "ticket_url": "https://www.legrandrex.com/cinema",
-      "status": "AVAILABLE",
-      "status_origin": "ICS_VERIFIED",
+      "status": "ENDED",
+      "status_origin": "TIME_ELAPSED_FROM_CONFIRMED_SCHEDULE",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-08-19T03:53:20Z",
-      "last_changed_at": null,
+      "last_verified_at": "2026-10-12T05:01:52Z",
+      "last_changed_at": "2026-10-12T05:01:52Z",
       "price_min_eur": 10,
       "price_max_eur": 10,
       "session_states": [
         {
           "session_key": "2026-08-30T17:00-Europe-Paris",
-          "status": "AVAILABLE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": [
             {
@@ -146,7 +146,14 @@
           ]
         }
       ],
-      "history": []
+      "history": [
+        {
+          "at": "2026-10-12T05:01:52Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "grand-rex",
+          "note": "Fin normale et silencieuse après la dernière date confirmée du calendrier officiel ; aucune prolongation n’est publiée."
+        }
+      ]
     },
     {
       "event_uid": "hp-potted-potter-paris-20261017@openai",
@@ -698,14 +705,14 @@
       "provider_id": "ugc-fr",
       "source_id": "ugc-fr",
       "ticket_url": "https://www.ugc.fr/cinema-ugc-cine-cite-sqy-ouest.html",
-      "status": "ON_SALE",
-      "status_origin": "DIRECT_VERIFIED",
+      "status": "ENDED",
+      "status_origin": "TIME_ELAPSED_FROM_CONFIRMED_SCHEDULE",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-08-29T01:50:55Z",
-      "last_changed_at": "2026-08-29T01:50:55Z",
+      "last_verified_at": "2026-10-12T05:01:52Z",
+      "last_changed_at": "2026-10-12T05:01:52Z",
       "price_min_eur": 40,
       "price_max_eur": 40,
       "run_start": "2026-08-29",
@@ -718,6 +725,12 @@
           "from": "NOT_TRACKED",
           "to": "ON_SALE",
           "evidence": "Direct official cinema page verified on 2026-08-29"
+        },
+        {
+          "at": "2026-10-12T05:01:52Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "ugc-fr",
+          "note": "Fin normale et silencieuse après la dernière date confirmée du calendrier officiel ; aucune prolongation n’est publiée."
         }
       ]
     },
@@ -729,14 +742,14 @@
       "provider_id": "cgr-fr",
       "source_id": "cgr-fr",
       "ticket_url": "https://www.cgrcinemas.fr/evenements/77943-harry-potter-le-marathon-des-25-ans/",
-      "status": "ON_SALE",
-      "status_origin": "DIRECT_VERIFIED",
+      "status": "ENDED",
+      "status_origin": "TIME_ELAPSED_FROM_CONFIRMED_SCHEDULE",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-08-29T01:50:55Z",
-      "last_changed_at": "2026-08-29T01:50:55Z",
+      "last_verified_at": "2026-10-12T05:01:52Z",
+      "last_changed_at": "2026-10-12T05:01:52Z",
       "price_min_eur": 20,
       "price_max_eur": 48,
       "run_start": "2026-08-29",
@@ -749,6 +762,12 @@
           "from": "NOT_TRACKED",
           "to": "ON_SALE",
           "evidence": "Direct official cinema page verified on 2026-08-29"
+        },
+        {
+          "at": "2026-10-12T05:01:52Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "cgr-fr",
+          "note": "Fin normale et silencieuse après la dernière date confirmée du calendrier officiel ; aucune prolongation n’est publiée."
         }
       ]
     }
