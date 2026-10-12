@@ -1,6 +1,6 @@
 {
   "version": "TICKETING_INTELLIGENCE_FR_V2",
-  "updated_at": "2026-10-10T03:18:01Z",
+  "updated_at": "2026-10-12T04:02:23Z",
   "scope": "Harry Potter / Wizarding World — billetterie France, priorité Paris/Île-de-France",
   "linked_calendars": [
     "calendars/harry-potter-paris.ics",
@@ -460,34 +460,34 @@
       "provider_id": "droneart-paris",
       "source_id": "droneart-harry-potter-paris",
       "ticket_url": "https://thedroneartshow.com/paris/harry-potter/",
-      "status": "ON_SALE",
+      "status": "ENDED",
       "status_origin": "DIRECT_VERIFIED",
       "evidence_grade": "A",
       "confidence": "HIGH",
       "scarcity_evidence": "UNKNOWN",
       "check_tier": "HOT",
-      "last_verified_at": "2026-10-09T22:45:08Z",
-      "last_changed_at": "2026-10-09T22:45:08Z",
+      "last_verified_at": "2026-10-12T04:02:23Z",
+      "last_changed_at": "2026-10-12T04:02:23Z",
       "price_min_eur": 43.92,
-      "verification_notes": "La billetterie officielle Fever affiche deux séances encore réservables les 10 et 11 octobre 2026 à 20:45, avec une promotion de 20 % (adulte 43,92 € au lieu de 54,90 €, enfant 29,52 € au lieu de 36,90 €, groupe 39,92 € au lieu de 49,90 €). L’organisateur DroneArt publie également le 11 octobre. La séance du 11 octobre est nouvelle par rapport au registre précédent ; aucune quantité de places n’est inférée. Sources: https://feverup.com/m/647897 ; https://thedroneartshow.com/paris/harry-potter/",
+      "verification_notes": "L’organisateur officiel DroneArt liste comme dernière séance le 11 octobre 2026 à 20:45. Au 12 octobre 2026 (Europe/Paris), le run est terminé ; aucun stock, prix actuel ou prolongation n’est inféré.",
       "run_start": "2026-09-30",
       "run_end": "2026-10-11",
       "session_states": [
         {
           "session_key": "2026-09-30T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         },
         {
           "session_key": "2026-10-01T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         },
         {
           "session_key": "2026-10-03T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": [
             {
@@ -518,25 +518,25 @@
         },
         {
           "session_key": "2026-10-07T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         },
         {
           "session_key": "2026-10-08T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         },
         {
           "session_key": "2026-10-10T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         },
         {
           "session_key": "2026-10-11T20:45-Europe-Paris",
-          "status": "ON_SALE",
+          "status": "ENDED",
           "confidence": "HIGH",
           "category_states": []
         }
@@ -578,6 +578,12 @@
           "notification_status": "DELIVERED_IN_CHATGPT",
           "note": "Nouvelle séance du dimanche 11 octobre 2026 à 20:45 confirmée par Fever et l’organisateur ; réservation ouverte. Prix directs affichés avec remise de 20 %, sans stock quantifié.",
           "delivered_at": "2026-10-09T22:50:00Z"
+        },
+        {
+          "at": "2026-10-12T04:02:23Z",
+          "transition": "EVENT_ENDED",
+          "source_id": "droneart-harry-potter-paris",
+          "note": "Fin normale et silencieuse après la dernière séance officielle du 11 octobre 2026 à 20:45 ; aucune prolongation publiée par l’organisateur."
         }
       ],
       "reference_price_min_eur": 54.9,
@@ -586,7 +592,7 @@
         "start_date": "2026-10-10",
         "end_date": "2026-10-11",
         "price_scope": "PAGE_LEVEL_AND_CURRENT_SELECTION_NOT_SESSION_QUANTITY",
-        "status": "ON_SALE",
+        "status": "ENDED",
         "source_url": "https://feverup.com/m/647897"
       }
     },
