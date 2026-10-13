@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INDEX_EU_V1",
-  "generated_at": "2026-10-03T11:08:41Z",
+  "generated_at": "2026-10-13T05:14:39Z",
   "derived_only": true,
   "authority": "NONE — rebuild from competitive ledger + competitive engine when inconsistent.",
   "source": {
@@ -29,6 +29,7 @@
     "duos-reload-ranked-br-eu-20261004",
     "duos-reload-ranked-zb-eu-20260830",
     "duos-reload-ranked-zb-eu-20261004",
+    "elite-kado-thorne-cup-eu-20261013",
     "fncs-div1-practice-eu-20260829",
     "fncs-div1-practice-eu-20260831",
     "fncs-global-2026-antwerp",
@@ -82,6 +83,7 @@
       "solo-reload-ranked-zb-eu-20260929"
     ],
     "CALENDAR": [
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-solo-qualifiers-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
       "shadow-cup-eu-2026-08-21",
@@ -107,6 +109,7 @@
       "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
       "duos-reload-ranked-zb-eu-20261004",
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-solo-qualifiers-eu-2026",
@@ -144,6 +147,7 @@
       "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
       "duos-reload-ranked-zb-eu-20261004",
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-last-chance-eu-2026",
@@ -221,6 +225,9 @@
     ],
     "MOBILE_VICTORY_CUP": [
       "mobile-reload-mini-venture-victory-eu-20261003"
+    ],
+    "ELITE_KADO_THORNE_CUP": [
+      "elite-kado-thorne-cup-eu-20261013"
     ]
   },
   "by_competition_class": {
@@ -243,6 +250,7 @@
       "mobile-series-championship-copenhagen-2026"
     ],
     "OTHER": [
+      "elite-kado-thorne-cup-eu-20261013",
       "override-series-crash-bandicoot-eu-2026-08-28",
       "override-series-eu-20260828"
     ],
@@ -294,6 +302,7 @@
     ],
     "RELOAD": [
       "duos-reload-ranked-br-eu-20260830",
+      "elite-kado-thorne-cup-eu-20261013",
       "mobile-reload-mini-venture-victory-eu-20261003",
       "mobile-series-championship-copenhagen-2026",
       "reload-elite-ewc-paris-2026",
@@ -344,6 +353,7 @@
     "SOLOS": [
       "console-zb-solo-victory-eu-20260829",
       "console-zb-solo-victory-eu-20261003",
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-solo-qualifiers-eu-2026",
       "mobile-reload-mini-venture-victory-eu-20261003",
       "mobile-series-championship-copenhagen-2026",
@@ -372,6 +382,7 @@
       "duos-reload-ranked-br-eu-20261004",
       "duos-reload-ranked-zb-eu-20260830",
       "duos-reload-ranked-zb-eu-20261004",
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-div1-practice-eu-20260829",
       "fncs-div1-practice-eu-20260831",
       "fncs-global-2026-antwerp",
@@ -423,6 +434,7 @@
       "duos-reload-ranked-br-eu-20261004:main",
       "duos-reload-ranked-zb-eu-20260830:main",
       "duos-reload-ranked-zb-eu-20261004:main",
+      "elite-kado-thorne-cup-eu-20261013:main",
       "fncs-div1-practice-eu-20260829:main",
       "fncs-div1-practice-eu-20260831:main",
       "mobile-reload-mini-venture-victory-eu-20261003:main",
@@ -552,6 +564,9 @@
     ],
     "2026-10-23": [
       "solo-reload-victory-cup-eu-2026"
+    ],
+    "2026-10-13": [
+      "elite-kado-thorne-cup-eu-20261013"
     ]
   },
   "sessions": {
@@ -570,6 +585,7 @@
       "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
       "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
       "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
+      "elite-kado-thorne-cup-eu-20261013:main:EU:20261013T1700:session1",
       "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
       "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
       "fncs-global-last-chance-eu-2026:lcq:EU:20260803T1700:s2r1",
@@ -697,6 +713,9 @@
       "2026-10-02": [
         "solo-reload-victory-cup-eu-2026:session-1:round-1:EU:20261002T1700",
         "solo-reload-victory-cup-eu-2026:session-1:round-2:EU:20261002T2000"
+      ],
+      "2026-10-13": [
+        "elite-kado-thorne-cup-eu-20261013:main:EU:20261013T1700:session1"
       ]
     },
     "by_status": {
@@ -726,6 +745,7 @@
         "duos-reload-ranked-br-eu-20261004:main:EU:20261004T1700:session1",
         "duos-reload-ranked-zb-eu-20260830:main:EU:20260830T1700:session1",
         "duos-reload-ranked-zb-eu-20261004:main:EU:20261004T1700:session1",
+        "elite-kado-thorne-cup-eu-20261013:main:EU:20261013T1700:session1",
         "fncs-div1-practice-eu-20260829:main:EU:20260829T1700:session1",
         "fncs-div1-practice-eu-20260831:main:EU:20260831T1700:session1",
         "fncs-solo-qualifiers-eu-2026:qualifier-1-round-1:EU:20260928T1700:day1",
@@ -869,6 +889,9 @@
       "2026-10-04T13:00:00+02:00": [
         "arenas-test-eu-20261004:main:EU:20261004T1300:session1",
         "reload-zb-duos-cash-eu-20261004:main:EU:20261004T1300:round1"
+      ],
+      "2026-10-13T17:00:00+02:00": [
+        "elite-kado-thorne-cup-eu-20261013:main:EU:20261013T1700:session1"
       ]
     }
   },
@@ -886,6 +909,7 @@
     "REGISTER": [],
     "CHECK_IN": [],
     "PLAY": [
+      "elite-kado-thorne-cup-eu-20261013",
       "fncs-solo-qualifiers-eu-2026",
       "override-series-crash-bandicoot-eu-2026-08-28",
       "shadow-cup-eu-2026-08-21",
@@ -1067,6 +1091,11 @@
       "initial_level": "LEDGER_ONLY",
       "v2_score_status": "NOT_MATERIALIZED",
       "calendar_uid": null
+    },
+    "elite-kado-thorne-cup-eu-20261013": {
+      "initial_level": "CALENDAR",
+      "v2_score_status": "NOT_MATERIALIZED",
+      "calendar_uid": "fortnite-elite-kado-thorne-cup-eu-20261013@openai"
     }
   },
   "conflicts": [
