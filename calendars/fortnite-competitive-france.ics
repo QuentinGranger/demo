@@ -413,4 +413,50 @@ DESCRIPTION:🏆 La Coupe victoire solo Recharge Europe commence demain à
  17h
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-elite-kado-thorne-cup-eu-20261013@openai
+DTSTAMP:20261013T051439Z
+LAST-MODIFIED:20261013T051439Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PARTICIPATE
+X-FORTNITE-EVENT-TYPE:SPECIAL_COSMETIC_CUP
+X-FORTNITE-SERIES:ELITE_KADO_THORNE_CUP
+X-FORTNITE-MODE:RELOAD
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-REGION:EU
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-LAST-CHANGE-ID:chg_1c2944f1d9d382f799197ab0
+X-FORTNITE-COMPETITION-ID:elite-kado-thorne-cup-eu-20261013
+X-FORTNITE-PROJECTION-LEVEL:CALENDAR
+X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
+X-FORTNITE-FIRST-ADDED-AT:20261013T051439Z
+X-FORTNITE-NEW-UNTIL:20261018T051439Z
+X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=SOLOS:20261013T170000/20261013T193000
+DTSTART;TZID=Europe/Paris:20261013T170000
+DTEND;TZID=Europe/Paris:20261013T193000
+SUMMARY:⭐ ✅ 🆕 Elite Kado Thorne Cup EU — cosmétiques
+DESCRIPTION:Priorité : ⭐ Important — coupe solo Recharge officielle au
+ jourd’hui de 17h00 à 19h30 (heure de Paris).\nLes 50 meilleurs joueurs 
+ EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’acc
+ essoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.\nJusqu’
+ à 12 matchs. Joueurs classés uniquement ; au moins 13 ans (ou minimum lo
+ cal) et A2F obligatoire. Le rang minimal exact n’est pas indiqué sur la
+  page publique des règles ; vérifier l’onglet Compétition en jeu.\nR
+ ègles : https://www.fortnite.com/competitive/rules-guidelines/rules-libra
+ ry/elite-kado-thorne-cup-chapter-7-season-4-official-rules
+URL:https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?regi
+ on=EU
+CATEGORIES:Fortnite,Compétition,Elite Kado Thorne,Recharge,Solos,EU,Récom
+ penses
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Elite Kado Thorne Cup EU dans 1 h — 17h00 à 19h30
+END:VALARM
+END:VEVENT
 END:VCALENDAR
