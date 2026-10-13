@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
-  "updated_at": "2026-10-10T14:10:39Z",
+  "updated_at": "2026-10-13T05:14:39Z",
   "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
   "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
   "notification_outbox": "fortnite-notification-outbox-france.json",
@@ -2811,6 +2811,61 @@
       ],
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
       "notes": "Same-day official limited event. Two exact sessions are represented separately; only the first window gets a calendar H-1 alarm to avoid a 02:00 overnight alarm."
+    },
+    {
+      "change_id": "chg_1c2944f1d9d382f799197ab0",
+      "domain": "COMPETITIVE",
+      "subject_scope_key": "sub_cb594cb3844047b00b4aa33d04630806b1cfb27c6e498174c975310f61ebb9ac",
+      "subject_key": "elite-kado-thorne-cup-eu-20261013",
+      "subject_revision": 1,
+      "causal_parent_change_id": null,
+      "change_type": "ENTITY_CREATED",
+      "materiality": "NOTIFY",
+      "state_fingerprint": "3c5597f339a9db83225359c3a07da1e6ba18b8f8b855578c40de9daed9be22f0",
+      "transition_fingerprint": "da6b094d75aa636347841645258dc165217df199f82cdf9c242daef8094edec9",
+      "detected_at": "2026-10-13T05:14:39Z",
+      "source_refs": [
+        "https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?region=EU",
+        "https://www.fortnite.com/competitive/rules-guidelines/rules-library/elite-kado-thorne-cup-chapter-7-season-4-official-rules"
+      ],
+      "notification_disposition": "ELIGIBLE_NOW",
+      "scope_key": "calendars/fortnite-paris.ics",
+      "material_before": null,
+      "material_after": {
+        "competition_id": "elite-kado-thorne-cup-eu-20261013",
+        "status": "SCHEDULED",
+        "date": "2026-10-13",
+        "visibility": "CALENDAR",
+        "session": {
+          "start_at": "2026-10-13T17:00:00+02:00",
+          "end_at": "2026-10-13T19:30:00+02:00",
+          "region": "EU",
+          "ruleset": "RELOAD",
+          "team_format": "SOLOS",
+          "max_matches": 12
+        },
+        "rewards": {
+          "rank_range": "1st-50th EU",
+          "items": [
+            "Elite Kado Thorne Outfit",
+            "Psyonic Spear Pickaxe",
+            "Psyonic Elite Cloak Back Bling",
+            "Kado Elite Wrap"
+          ]
+        },
+        "eligibility": {
+          "ranked_players": true,
+          "age_min": 13,
+          "mfa_required": true
+        }
+      },
+      "material_evidence_state": "FORTNITE_COMPETITIVE_OFFICIAL_EU_EXACT_PLUS_RULES_PRIZES",
+      "projection_targets": [
+        "calendars/fortnite-competitive-france.ics",
+        "calendars/fortnite-paris.ics"
+      ],
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+      "notes": "New official same-day EU cosmetic cup; exact session and top-50 EU reward bundle create an immediate play action."
     }
   ],
   "calendar_write_receipts": [],
