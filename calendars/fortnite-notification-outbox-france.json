@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-10-10T19:08:27Z",
+  "updated_at": "2026-10-13T05:14:39Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -475,6 +475,27 @@
         "event_future": true
       },
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
+    },
+    {
+      "intent_id": "nti_6b764e2180b5affbaed5929a",
+      "notification_key": "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb",
+      "change_ids": [
+        "chg_1c2944f1d9d382f799197ab0"
+      ],
+      "notice_kind": "ELITE_KADO_THORNE_CUP_EU_TODAY",
+      "audience_key": "user",
+      "channel_key": "chat",
+      "payload_fingerprint": "1e2962ae19ea5238df35ea564a91724fb2aab98c861a69b777c538ad0421ee68",
+      "render_version": "FORTNITE_ALERT_FR_V1",
+      "created_at": "2026-10-13T05:14:39Z",
+      "subject_key": "fortnite-elite-kado-thorne-cup-eu-20261013@openai",
+      "locale": "fr-FR",
+      "payload_snapshot": "🏆 Fortnite — la Coupe Elite Kado Thorne se joue aujourd’hui de 17 h à 19 h 30 en Europe. Les 50 meilleurs joueurs EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’accessoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.",
+      "condition_snapshot": {
+        "session": "2026-10-13T17:00:00+02:00/2026-10-13T19:30:00+02:00",
+        "event_future": true
+      },
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
     }
   ],
   "delivery_events": [
@@ -709,6 +730,15 @@
       "state": "SENT",
       "at": "2026-10-10T19:08:27Z",
       "note": "Delivery confirmed from the user-visible Fortnite Spooky Dash Sprites alert in the prior automation run."
+    },
+    {
+      "delivery_event_id": "nde_b2abc32e77b0efda7817bdd1",
+      "intent_id": "nti_6b764e2180b5affbaed5929a",
+      "notification_key": "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb",
+      "state": "RESERVED",
+      "at": "2026-10-13T05:14:39Z",
+      "reservation_id": "nrs_bf410fc1420ee3522c05955e",
+      "note": "Reserved after fresh official verification of the same-day Elite Kado Thorne Cup EU schedule and top-50 cosmetic rewards; key consumed before user-visible emission."
     }
   ],
   "consumed_keys": {
@@ -786,6 +816,12 @@
       "intent_id": "nti_16b61becd97cb8804a4e91c7",
       "state": "SENT",
       "last_event_id": "nde_3f8b9d366f4116ac2f2460bb"
+    },
+    "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb": {
+      "state": "RESERVED",
+      "intent_id": "nti_6b764e2180b5affbaed5929a",
+      "last_event_id": "nde_b2abc32e77b0efda7817bdd1",
+      "consumed_at": "2026-10-13T05:14:39Z"
     }
   },
   "group_index": {
@@ -794,7 +830,8 @@
     "grp_c687fd99accd95ab3187113683fa96955ca4d92729b8bf783d91ccab5f277899": "nti_26dfd133cfb3473e0515c046",
     "grp_d414c272c67a3abeee7f3268418d811bfb33b50260a4867e06ea899fc2ad3023": "nti_e249017a0a073ddb6b00af16",
     "grp_0190c5bd2507b8913ce6c9f552586f9680f19d5836021ac32d0f94a5578cbef2": "nti_2d102fbf6c99f76f67c1e9c9",
-    "grp_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9": "nti_16b61becd97cb8804a4e91c7"
+    "grp_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9": "nti_16b61becd97cb8804a4e91c7",
+    "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb": "nti_6b764e2180b5affbaed5929a"
   },
   "history": [
     {
@@ -951,6 +988,12 @@
       "type": "NOTIFICATION_SENT",
       "notification_key": "ntf_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9",
       "note": "Delivery confirmed after the user-facing Spooky Dash Sprites Power Hours alert."
+    },
+    {
+      "at": "2026-10-13T05:14:39Z",
+      "type": "NOTIFICATION_RESERVED",
+      "notification_key": "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb",
+      "note": "One notification reserved for the official same-day Elite Kado Thorne Cup EU."
     }
   ]
 }
