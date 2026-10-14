@@ -1,8 +1,8 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-13T05:22:00Z",
-  "last_deep_check_at": "2026-10-13T05:22:00Z",
+  "last_observer_check_at": "2026-10-14T06:22:54Z",
+  "last_deep_check_at": "2026-10-14T06:22:54Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
   "migration_bootstrap": false,
@@ -21,11 +21,11 @@
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-13T04:18:20.489839+00:00",
-      "updated_at": "2026-10-13T04:18:43.062890+00:00",
+      "last_run_time": "2026-10-14T04:34:15.163902+00:00",
+      "updated_at": "2026-10-14T04:34:37.265465+00:00",
       "liveness": "HEALTHY"
     }
   },
   "overall_result": "HEALTHY",
-  "note": "Daily fresh observation via automations.peek: the consolidated hourly automation is enabled, infinite, on Europe/Paris, and its latest completed run at 2026-10-13T04:18:20.489839+00:00 is within the 3-hour liveness threshold. Eight declared ICS paths were freshly read from the current master after the Elite Kado Thorne Cup write and passed VCALENDAR, VERSION:2.0, component-nesting and duplicate-UID checks. The three stable raw.githubusercontent.com global feeds matched the current master files byte-for-byte; the new Fortnite UID is present in the competitive and global feeds. The latest Fortnite-specific validation completed successfully; permanent health validation for the new write was still running at observation time."
+  "note": "Daily fresh observation via automations.peek: the consolidated hourly automation is enabled, infinite, on Europe/Paris, and its latest completed run at 2026-10-14T04:34:15.163902+00:00 is within the 3-hour liveness threshold. All eight declared ICS paths were freshly read from master 939768c62230853688daf968f1f93cca3ddab3d9 and passed VCALENDAR, VERSION:2.0, component-nesting and duplicate-UID checks. The three stable raw.githubusercontent.com global feeds and their commit-exact URLs matched the current master files byte-for-byte. The latest permanent calendar-health run 38469010175 completed successfully for this master SHA."
 }
