@@ -3,8 +3,8 @@
   "policy": "calendar-health-policy.json",
   "baseline_at": "2026-08-19T16:10:00Z",
   "last_policy_migration_at": "2026-09-26T13:06:40.272832Z",
-  "current_overall_state": "HEALTHY",
-  "redundancy_state": "HEALTHY",
+  "current_overall_state": "DEGRADED",
+  "redundancy_state": "DEGRADED",
   "baseline_manifest": {
     "FORTNITE": [
       {
@@ -51,9 +51,21 @@
     "POKEMON": "HEALTHY"
   },
   "observer_state": {
-    "Calendriers jeux — France": "HEALTHY"
+    "Calendriers jeux — France": "DEGRADED"
   },
-  "active_incidents": [],
+  "active_incidents": [
+    {
+      "incident_id": "health-consolidated-automation-disabled-20261015-open",
+      "incident_key": "health|SYSTEM|AUTOMATION_DISABLED|Calendriers jeux — France",
+      "state": "OPEN",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "SYSTEM",
+      "severity": "DEGRADED",
+      "opened_at": "2026-10-15T10:37:42Z",
+      "at": "2026-10-15T10:37:42Z",
+      "evidence": "Live automation observation reports Calendriers jeux — France is_enabled=false; the last completed run is 2026-10-15T06:46:51.194692Z. The retired legacy tasks remain intentionally retired and were not treated as failures."
+    }
+  ],
   "incident_history": [
     {
       "incident_id": "health-fortnite-competitive-validation-20260826-open",
@@ -223,6 +235,17 @@
       "opened_at": "2026-10-02T21:21:50Z",
       "at": "2026-10-02T21:27:39Z",
       "evidence": "A fresh deep check passed for all eight ICS paths and three public RAW feeds, the active hourly automation was verified live, and the heartbeat was refreshed."
+    },
+    {
+      "incident_id": "health-consolidated-automation-disabled-20261015-open",
+      "incident_key": "health|SYSTEM|AUTOMATION_DISABLED|Calendriers jeux — France",
+      "state": "OPEN",
+      "code": "AUTOMATION_DISABLED",
+      "franchise": "SYSTEM",
+      "severity": "DEGRADED",
+      "opened_at": "2026-10-15T10:37:42Z",
+      "at": "2026-10-15T10:37:42Z",
+      "evidence": "Live automation observation reports Calendriers jeux — France is_enabled=false; the last completed run is 2026-10-15T06:46:51.194692Z. The retired legacy tasks remain intentionally retired and were not treated as failures."
     }
   ],
   "history": [
@@ -270,6 +293,11 @@
       "at": "2026-10-02T21:27:39Z",
       "type": "WATCHDOG_HEARTBEAT_STALE_RECOVERED",
       "note": "The shared heartbeat had exceeded its 30-hour limit. The consolidated observer completed a fresh deep check, confirmed all eight ICS paths and all three public RAW feeds healthy, then refreshed the heartbeat."
+    },
+    {
+      "at": "2026-10-15T10:37:42Z",
+      "type": "CONSOLIDATED_OBSERVER_DISABLED",
+      "note": "Fresh live observation found the unique consolidated hourly task disabled. Calendar files and public-feed validation remain independently healthy, but monitoring redundancy is degraded until the consolidated task is re-enabled."
     }
   ]
 }
