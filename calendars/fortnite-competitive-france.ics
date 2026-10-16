@@ -42,10 +42,8 @@ X-FORTNITE-ADMISSION-MODE:PAID_TICKET
 X-FORTNITE-LAST-CHANGE-ID:chg_78c55475112852e25cfa46ad
 X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
 X-FORTNITE-TICKET-WAITLIST:YES
-X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=LOW_AVAILABILITY;SCARC
- ITY-EVIDENCE=EXPLICIT_TEXT:Billet standard 2 jours
-X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILA
- BLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=LOW_AVAILABILITY;SCARCITY-EVIDENCE=EXPLICIT_TEXT:Billet standard 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILABLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
 X-FORTNITE-AGE-RESTRICTION:16+
 X-FORTNITE-VENUE-TIME-1:20260926T140000
 X-FORTNITE-VENUE-TIME-2:20260927T183000
@@ -59,44 +57,23 @@ DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260928
 SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
-DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en 
- présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 part
- ies sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Compet
- itive.\n🎟️ Billetterie : retour d’inventaire après la liste d’at
- tente. Ticketmaster Belgique affiche maintenant le pass 2 jours en « Disp
- onibilité limitée » et propose l’accès aux tickets. La liste d’att
- ente reste proposée en parallèle \; aucun nombre de places restantes n
- ’est déduit. Aucun billet à la journée n’est annoncé.\n✨ Ultimat
- e Live Experience Package : 324\,70 € sur Lotto Arena \; le package rest
- e présenté avec un accès d’achat\, sans quantité restante affirmée.
- \n🔞 Restriction d’âge publiée : 16+.\n🕒 Lotto Arena affiche 14h0
- 0 le samedi 26 et 18h30 le dimanche 27 comme horaires salle \; ils ne sont
-  pas traités comme horaires officiels des parties FNCS.\n📍 Lotto Arena
- \, Schijnpoortweg 119\, Anvers\, Belgique.\nRappels : J-30\, J-7 et J-1.\n
- Ticketmaster : https://www.ticketmaster.be/discover/antwerpen?categoryId=K
- ZFzniwnSyZfZ7v7nE&classificationId=KnvZfZ7vAJF&language=fr-be\nLotto Arena
-  : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c
- 1ed5ce1
+DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 parties sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billetterie : retour d’inventaire après la liste d’attente. Ticketmaster Belgique affiche maintenant le pass 2 jours en « Disponibilité limitée » et propose l’accès aux tickets. La liste d’attente reste proposée en parallèle \; aucun nombre de places restantes n’est déduit. Aucun billet à la journée n’est annoncé.\n✨ Ultimate Live Experience Package : 324\,70 € sur Lotto Arena \; le package reste présenté avec un accès d’achat\, sans quantité restante affirmée.\n🔞 Restriction d’âge publiée : 16+.\n🕒 Lotto Arena affiche 14h00 le samedi 26 et 18h30 le dimanche 27 comme horaires salle \; ils ne sont pas traités comme horaires officiels des parties FNCS.\n📍 Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique.\nRappels : J-30\, J-7 et J-1.\nTicketmaster : https://www.ticketmaster.be/discover/antwerpen?categoryId=KZFzniwnSyZfZ7v7nE&classificationId=KnvZfZ7vAJF&language=fr-be\nLotto Arena : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
-CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
- p,Europe
+CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championship,Europe
 BEGIN:VALARM
 TRIGGER:-P30D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billet
- s, transport et hôtel pour Anvers
+DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billets, transport et hôtel pour Anvers
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaire
- s, billet et trajet
+DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaires, billet et trajet
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et tra
- jet vers Anvers
+DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et trajet vers Anvers
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -130,25 +107,17 @@ X-FORTNITE-ACCESS-ACTION:WATCH
 X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
 X-FORTNITE-TICKET-STATUS:PREREGISTRATION
 X-FORTNITE-TICKET-SCOPE:EWC_PARIS_MIXED_SCOPES
-X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY
- -EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
-X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=AVAILABLE;PRICE-E
- UR=4.99;PROVIDER-ID=platinumlist_paris:Billet Fan Fest valide pour la jour
- née — accès watch parties
-X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=AVAILABLE;ACCESS=FAN_F
- EST_DAY_TICKET:Watch parties Fortnite
-X-FORTNITE-WATCH-PARTY-TICKET-URL:https://paris.platinumlist.net/fr/event-t
- ickets/106986/fan-fest-at-ewc26
+X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY-EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
+X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=AVAILABLE;PRICE-EUR=4.99;PROVIDER-ID=platinumlist_paris:Billet Fan Fest valide pour la journée — accès watch parties
+X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=AVAILABLE;ACCESS=FAN_FEST_DAY_TICKET:Watch parties Fortnite
+X-FORTNITE-WATCH-PARTY-TICKET-URL:https://paris.platinumlist.net/fr/event-tickets/106986/fan-fest-at-ewc26
 X-FORTNITE-WATCH-PARTY-TICKET-PRICE-FROM-EUR:4.99
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-COMPETITIVE-SCHEDULE-PRECISION:EXACT_STARTS_ENDS_UNKNOWN
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T
- 150000
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260820T
- 150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260820T150000
 X-FORTNITE-COMPETITIVE-SESSION;PHASE=SURVIVAL;STATUS=LIVE:20260821T150000
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=FINALS;STATUS=SCHEDULED:20260822T12000
- 0
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=FINALS;STATUS=SCHEDULED:20260822T120000
 X-FORTNITE-COMPETITIVE-ZONE:Qiddiya City Grid
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
@@ -157,36 +126,15 @@ X-FORTNITE-UPDATE-UNTIL:20260824T171049Z
 X-FORTNITE-UPDATE-REASON:OFFICIAL_COMPETITIVE_SESSION_TIMES
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
-SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
-  — Paris
-LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
- \, 75015 Paris\, France
-DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
- réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
- août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Ver
- sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'e
- ntrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : 
- Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, 
- puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne so
- nt pas déduites. « Qiddiya City Grid » est conservé uniquement comme l
- ibellé de zone compétitive du planning EWC\, pas comme instruction d'ent
- rée publique.\n🎟️ Les billets de la scène principale Fortnite sont 
- complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parti
- es Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
- écessitent un billet Fan Fest valide pour la journée. Billets Fan Fest a
- ctuellement achetables à partir de 4\,99 € via Platinumlist ; la scène
-  principale Fortnite reste complète. Les horaires exacts des watch partie
- s ne sont pas affirmés.\nSource planning : https://ewc-web.prod.esf-syste
- ms.com/en/schedule\nGuide EWC : https://ewc-web.prod.esf-systems.com/en/ne
- ws/ewc26-fortnite-survival-guide
+SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026 — Paris
+LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles\, 75015 Paris\, France
+DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'entrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne sont pas déduites. « Qiddiya City Grid » est conservé uniquement comme libellé de zone compétitive du planning EWC\, pas comme instruction d'entrée publique.\n🎟️ Les billets de la scène principale Fortnite sont complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parties Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et nécessitent un billet Fan Fest valide pour la journée. Billets Fan Fest actuellement achetables à partir de 4\,99 € via Platinumlist ; la scène principale Fortnite reste complète. Les horaires exacts des watch parties ne sont pas affirmés.\nSource planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC : https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guide
 URL:https://ewc-web.prod.esf-systems.com/en/schedule
-CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
- yale,Duos,Paris,France
+CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Royale,Duos,Paris,France
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260822T090000Z
 ACTION:DISPLAY
-DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h
- 00 à Paris
+DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h00 à Paris
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -214,26 +162,13 @@ X-FORTNITE-SESSION;TYPE=ZERO_BUILD:20260821T170000/20260821T200000
 DTSTART;TZID=Europe/Paris:20260821T160000
 DTEND;TZID=Europe/Paris:20260821T200000
 SUMMARY:⭐ ✅ 🆕 🦔 Coupe Shadow EU — cosmétiques avant boutique
-DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
- lle le 21 août avec récompenses Shadow avant leur arrivée en boutique.\
- n📱 Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs 
- max. Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Do
- om's Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮
-  Battle Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : mêm
- e set cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Pow
- er.\n🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 
- 1000 EU : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 an
- s (ou minimum local) et A2F obligatoire.\nRègles : https://www.fortnite.c
- om/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-
- 4-official-rules
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle le 21 août avec récompenses Shadow avant leur arrivée en boutique.\n📱 Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs max. Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Doom's Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮 Battle Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Power.\n🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 ans (ou minimum local) et A2F obligatoire.\nRègles : https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules
 URL:https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU
-CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zér
- o construction,EU,Récompenses
+CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zéro construction,EU,Récompenses
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à
-  16h00
+DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à 16h00
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -253,8 +188,7 @@ X-FORTNITE-REGION:GLOBAL
 X-FORTNITE-PLATFORM:MOBILE
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
-X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-mobile-series-copenhagen-202
- 6
+X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-mobile-series-copenhagen-2026
 X-FORTNITE-VENUE-ID:blast_studios_copenhagen
 X-FORTNITE-LOCATION-PRECISION:VENUE
 X-FORTNITE-ACCESS-STATE:UNKNOWN
@@ -263,21 +197,11 @@ X-FORTNITE-FIRST-ADDED-AT:20260821T070228Z
 X-FORTNITE-NEW-UNTIL:20260826T070228Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261026
-SUMMARY:⭐ ✅ 🆕 📱 Fortnite Mobile Series Championship — Copenhagu
- e
+SUMMARY:⭐ ✅ 🆕 📱 Fortnite Mobile Series Championship — Copenhague
 LOCATION:BLAST Studios\, Copenhague\, Danemark
-DESCRIPTION:Priorité : ⭐ Important — premier championnat Fortnite Mobi
- le Series en présentiel.\nDates officielles : 24 et 25 octobre 2026 à BL
- AST Studios\, Copenhague\, Danemark.\nFormat : les 16 meilleurs joueurs Fo
- rtnite Mobile au monde\, en solos sur le parcours compétitif Mobile/Recha
- rge.\n💰 Fortnite annonce 1 000 000 $ sur l'écosystème Mobile Series/F
- inals ; aucun montant spécifique au seul Championship n'est affirmé ici.
- \n⚠️ Horaires de matchs\, adresse de rue\, accès spectateurs et bille
- tterie publique non publiés : aucun détail n'est inventé.\nSource : htt
- ps://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
+DESCRIPTION:Priorité : ⭐ Important — premier championnat Fortnite Mobile Series en présentiel.\nDates officielles : 24 et 25 octobre 2026 à BLAST Studios\, Copenhague\, Danemark.\nFormat : les 16 meilleurs joueurs Fortnite Mobile au monde\, en solos sur le parcours compétitif Mobile/Recharge.\n💰 Fortnite annonce 1 000 000 $ sur l'écosystème Mobile Series/Finals ; aucun montant spécifique au seul Championship n'est affirmé ici.\n⚠️ Horaires de matchs\, adresse de rue\, accès spectateurs et billetterie publique non publiés : aucun détail n'est inventé.\nSource : https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
 URL:https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
-CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenh
- ague,Danemark
+CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenhague,Danemark
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-crash-bandicoot-cup-eu-20260828@openai
@@ -302,30 +226,17 @@ X-FORTNITE-FIRST-ADDED-AT:20260827T200011Z
 X-FORTNITE-NEW-UNTIL:20260901T200011Z
 X-FORTNITE-SESSION;TYPE=MOBILE;FORMAT=SOLOS:20260828T160000/20260828T171500
 X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
-X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260
- 828T193000
+X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
 DTSTART;TZID=Europe/Paris:20260828T160000
 DTEND;TZID=Europe/Paris:20260828T193000
 SUMMARY:⭐ ✅ 🆕 🥭 Override Series — Crash Bandicoot Cup EU
-DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
- lle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobi
- le : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero 
- Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuv
- ent concourir pour tenter de gagner des récompenses cosmétiques Crash Ba
- ndicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont
-  pas matérialisés depuis les règles officielles.\nÉligibilité publié
- e : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA act
- ivée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBand
- icootCup/?region=EU
-URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?regi
- on=EU
-CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmét
- iques
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobile : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuvent concourir pour tenter de gagner des récompenses cosmétiques Crash Bandicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont pas matérialisés depuis les règles officielles.\nÉligibilité publiée : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA activée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU
+URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU
+CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmétiques
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload 
- à 17h
+DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload à 17h
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -354,16 +265,8 @@ X-FORTNITE-SESSION;ROUND=QUALIFIER1-R3:20261004T170000/20261004T200000
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20261012
 SUMMARY:🏆 ✅ 🆕 Qualifications FNCS Solo — Europe
-DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Sessi
- ons exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 17h00
-  à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux j
- ours sont cumulés. Éligibilité annoncée : top 200 000 du Power Ranking
-  global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directem
- ent au round 2 ; participer au round 1 annule cet accès direct. Top 8 000
-  EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source off
- icielle Fortnite Competitive.
-URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang
- =fr&region=EU
+DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Sessions exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 17h00 à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux jours sont cumulés. Éligibilité annoncée : top 200 000 du Power Ranking global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directement au round 2 ; participer au round 1 annule cet accès direct. Top 8 000 EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source officielle Fortnite Competitive.
+URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang=fr&region=EU
 CATEGORIES:Fortnite,Compétition,FNCS,Solos,Europe
 BEGIN:VALARM
 TRIGGER:-P1D
@@ -374,15 +277,15 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-solo-reload-victory-cup-eu-2026@openai
 DTSTAMP:20260927T051346Z
-LAST-MODIFIED:20260927T051346Z
-SEQUENCE:0
+LAST-MODIFIED:20261016T083200Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
 X-FORTNITE-ACTION:PLAY
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
-X-FORTNITE-LAST-CHANGE-ID:chg_523db7153f37570be0fc5212
+X-FORTNITE-LAST-CHANGE-ID:chg_7f31a9d6c2e84b50a1479c3d
 X-FORTNITE-COMPETITION-ID:solo-reload-victory-cup-eu-2026
 X-FORTNITE-PROJECTION-LEVEL:CALENDAR
 X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
@@ -392,25 +295,26 @@ X-FORTNITE-FORMAT:SOLOS
 X-FORTNITE-PLATFORM:ALL_SUPPORTED
 X-FORTNITE-SESSION;ROUND=SESSION1-R1:20261002T170000/20261002T190000
 X-FORTNITE-SESSION;ROUND=SESSION1-R2:20261002T200000/20261002T204500
+X-FORTNITE-SESSION;ROUND=SESSION3-R1:20261016T170000/20261016T190000
+X-FORTNITE-SESSION;ROUND=SESSION3-R2:20261016T200000/20261016T204500
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261024
-SUMMARY:🏆 ✅ 🆕 Coupe victoire solo (Recharge) — Europe
-DESCRIPTION:Période officielle : du 2 au 23 octobre 2026. Première journ
- ée exacte : vendredi 2 octobre, round 1 de 17h00 à 19h00 puis round 2 de
-  20h00 à 20h45 (Paris). Éligibilité : atteindre Platine ou plus en clas
- sé Recharge combiné pendant la saison précédente ou actuelle, avoir au
-  moins 13 ans et activer l’A2F. Le top 4 000 EU du round 1 accède au ro
- und 2 ; chaque Victoire royale du round 2 rapporte 100 $ US. Les horaires 
- ultérieurs ne sont pas extrapolés ici. Source officielle Fortnite Compet
- itive.
-URL:https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup/?l
- ang=fr&region=EU
+SUMMARY:🏆 ✅ 🔄 Coupe victoire solo (Recharge) — Europe
+DESCRIPTION:Période officielle : du 2 au 23 octobre 2026. Nouvelle se
+ ssion exacte aujourd’hui : round 1 de 17h00 à 19h00 puis round 2 d
+ e 20h00 à 20h45 (Paris). L’éligibilité officielle progresse selo
+ n l’édition : Platine pour les deux premières\, Diamant pour la t
+ roisième et Champion pour la finale ; vérifiez l’onglet Compétit
+ ion. Le top 960 EU du round 1 accède au round 2 ; chaque Victoire ro
+ yale au round 2 rapporte 100 $ US. Source officielle Fortnite Competi
+ tive.
+URL:https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryC
+ up?round=S42_ReloadSoloVictoryCup_Event4_Round1_EU&region=EU
 CATEGORIES:Fortnite,Compétition,Coupe victoire,Recharge,Solos,Europe
 BEGIN:VALARM
-TRIGGER:-P1D
+TRIGGER;VALUE=DATE-TIME:20261016T140000Z
 ACTION:DISPLAY
-DESCRIPTION:🏆 La Coupe victoire solo Recharge Europe commence demain à 
- 17h
+DESCRIPTION:🏆 Coupe victoire solo Recharge Europe dans 1 heure
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -440,19 +344,9 @@ X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=SOLOS:20261013T170000/20261013T193000
 DTSTART;TZID=Europe/Paris:20261013T170000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:⭐ ✅ 🆕 Elite Kado Thorne Cup EU — cosmétiques
-DESCRIPTION:Priorité : ⭐ Important — coupe solo Recharge officielle au
- jourd’hui de 17h00 à 19h30 (heure de Paris).\nLes 50 meilleurs joueurs 
- EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’acc
- essoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.\nJusqu’
- à 12 matchs. Joueurs classés uniquement ; au moins 13 ans (ou minimum lo
- cal) et A2F obligatoire. Le rang minimal exact n’est pas indiqué sur la
-  page publique des règles ; vérifier l’onglet Compétition en jeu.\nR
- ègles : https://www.fortnite.com/competitive/rules-guidelines/rules-libra
- ry/elite-kado-thorne-cup-chapter-7-season-4-official-rules
-URL:https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?regi
- on=EU
-CATEGORIES:Fortnite,Compétition,Elite Kado Thorne,Recharge,Solos,EU,Récom
- penses
+DESCRIPTION:Priorité : ⭐ Important — coupe solo Recharge officielle aujourd’hui de 17h00 à 19h30 (heure de Paris).\nLes 50 meilleurs joueurs EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’accessoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.\nJusqu’à 12 matchs. Joueurs classés uniquement ; au moins 13 ans (ou minimum local) et A2F obligatoire. Le rang minimal exact n’est pas indiqué sur la page publique des règles ; vérifier l’onglet Compétition en jeu.\nRègles : https://www.fortnite.com/competitive/rules-guidelines/rules-library/elite-kado-thorne-cup-chapter-7-season-4-official-rules
+URL:https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?region=EU
+CATEGORIES:Fortnite,Compétition,Elite Kado Thorne,Recharge,Solos,EU,Récompenses
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
