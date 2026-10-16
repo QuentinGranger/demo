@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-10-16T10:36:43Z",
+  "updated_at": "2026-10-16T11:42:33Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -4319,6 +4319,162 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Official EU same-day session ingested exhaustively under the LEDGER_ONLY anti-bazar policy; no calendar projection or user notification was created."
+        }
+      ]
+    },
+    {
+      "competition_id": "fncs-solos-heats-eu-20261017",
+      "official_event_id": "S42_FNCSSolo_HeatsStage",
+      "official_event_slug": "S42_FNCSSolo_HeatsStage",
+      "series_id": "FNCS_SOLOS_2026",
+      "season_id": "C7S4",
+      "name": "FNCS Solos Heats — Europe — 17–18 octobre 2026",
+      "competition_class": "FNCS",
+      "status": "SCHEDULED",
+      "regions": [
+        "EU"
+      ],
+      "ruleset": "BUILD",
+      "team_format": "SOLOS",
+      "platform_scope": "ALL_SUPPORTED",
+      "physical_event": false,
+      "venue": null,
+      "date_window": {
+        "start_date": "2026-10-17",
+        "end_date": "2026-10-18",
+        "time_precision": "EXACT"
+      },
+      "registration": null,
+      "eligibility": {
+        "status": "CONFIRMED",
+        "minimum_rank": "Qualified via FNCS Solos Fast Track or Qualifier 2 Round 3",
+        "age_min": 13,
+        "two_factor_required": true,
+        "region_lock": "EU",
+        "platform_requirements": "CROSS_PLATFORM",
+        "team_requirements": "SOLOS",
+        "other_rules": "200 players per region: 92 from Fast Track and 108 from Qualifier 2, seeded into two Heats of 100."
+      },
+      "prize_pool": null,
+      "qualification": {
+        "type": "ADVANCEMENT",
+        "from_phase": "HEATS",
+        "to_phase": "FINALS_OR_LCQ_FINAL",
+        "slots": null,
+        "criteria": "Each Victory Royale qualifies directly to Finals; then 29 highest-scoring non-winners per Heat qualify to Finals; places 36–50 qualify to LCQ Final.",
+        "tie_break": null,
+        "source_id": "fortnite_competitive_rules",
+        "confidence": "OFFICIAL"
+      },
+      "result": null,
+      "visibility": "FEATURED",
+      "calendar_uid": "fortnite-fncs-solos-heats-eu-20261017@openai",
+      "source_ids": [
+        "fortnite_competitive",
+        "fortnite_competitive_rules"
+      ],
+      "source_urls": [
+        "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage/?region=EU",
+        "https://www.fortnite.com/competitive/rules-guidelines/rules-library/fortnite-championship-series-fncs-solos-2026-official-rules"
+      ],
+      "phases": [
+        {
+          "phase_id": "fncs-solos-heats-eu-20261017:heat1",
+          "name": "Heat 1 Europe",
+          "phase_type": "HEATS",
+          "order": 1,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 6,
+              "qualification": {
+                "victory_royale": "Immediate qualification to FNCS Solos Finals; winner exits remaining Heat matches.",
+                "points": "After each Heat, the next 29 highest-scoring non-winners advance to Finals; places 36–50 advance to LCQ Final.",
+                "source_id": "fortnite_competitive_rules",
+                "confidence": "OFFICIAL"
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage/?region=EU",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-fncs-solos-heats-eu-20261017@openai",
+              "related_service_event_ids": [],
+              "session_id": "fncs-solos-heats-eu-20261017:heat1:EU:20261017T1300",
+              "official_session_id": null,
+              "name": "FNCS Solos Heat 1 Europe",
+              "session_number": 1,
+              "round_number": 1,
+              "round_label": "HEAT1",
+              "status": "SCHEDULED",
+              "start_at": "2026-10-17T13:00:00+02:00",
+              "end_at": "2026-10-17T15:40:00+02:00"
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        },
+        {
+          "phase_id": "fncs-solos-heats-eu-20261017:heat2",
+          "name": "Heat 2 Europe",
+          "phase_type": "HEATS",
+          "order": 2,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": null,
+          "qualification_override": null,
+          "sessions": [
+            {
+              "region": "EU",
+              "ruleset": "BUILD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": 6,
+              "qualification": {
+                "victory_royale": "Immediate qualification to FNCS Solos Finals; winner exits remaining Heat matches.",
+                "points": "After each Heat, the next 29 highest-scoring non-winners advance to Finals; places 36–50 advance to LCQ Final.",
+                "source_id": "fortnite_competitive_rules",
+                "confidence": "OFFICIAL"
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage/?region=EU",
+              "visibility": "FEATURED",
+              "calendar_uid": "fortnite-fncs-solos-heats-eu-20261017@openai",
+              "related_service_event_ids": [],
+              "session_id": "fncs-solos-heats-eu-20261017:heat2:EU:20261018T1300",
+              "official_session_id": null,
+              "name": "FNCS Solos Heat 2 Europe",
+              "session_number": 2,
+              "round_number": 2,
+              "round_label": "HEAT2",
+              "status": "SCHEDULED",
+              "start_at": "2026-10-18T13:00:00+02:00",
+              "end_at": "2026-10-18T15:40:00+02:00"
+            }
+          ],
+          "schedule_completeness": "EXACT"
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-10-16T11:42:33Z",
+          "type": "COMPETITION_CREATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU Heats schedule and qualification paths confirmed from the event page and 2026 FNCS Solos rules; promoted as FEATURED due to direct Finals and LCQ consequences."
         }
       ]
     }
