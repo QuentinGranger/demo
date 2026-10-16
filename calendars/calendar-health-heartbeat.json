@@ -1,8 +1,8 @@
 {
   "version": "CROSS_CALENDAR_HEALTH_HEARTBEAT_FR_V2",
   "policy": "calendar-health-policy.json",
-  "last_observer_check_at": "2026-10-15T10:37:42Z",
-  "last_deep_check_at": "2026-10-15T09:08:10Z",
+  "last_observer_check_at": "2026-10-16T10:24:00Z",
+  "last_deep_check_at": "2026-10-16T10:24:00Z",
   "heartbeat_max_age_hours": 30,
   "observer_title": "Calendriers jeux — France",
   "migration_bootstrap": false,
@@ -11,21 +11,21 @@
   "repository_reachable": true,
   "pinned_branch_reachable": true,
   "verified_ics_path_count": 8,
-  "healthy_observer_count": 0,
+  "healthy_observer_count": 1,
   "minimum_required_observers": 1,
   "automation_snapshot": {
     "Calendriers jeux — France": {
       "exists": true,
-      "enabled": false,
+      "enabled": true,
       "expected_recurrence": "HOURLY",
       "observed_recurrence": "HOURLY",
       "finite": false,
       "timezone": "Europe/Paris",
-      "last_run_time": "2026-10-15T06:46:51.194692Z",
-      "updated_at": "2026-10-15T06:47:55.336064Z",
-      "liveness": "DISABLED"
+      "last_run_time": "2026-10-16T08:36:44.912095+00:00",
+      "updated_at": "2026-10-16T08:37:07.974368+00:00",
+      "liveness": "HEALTHY"
     }
   },
-  "overall_result": "DEGRADED",
-  "note": "Fresh live observation at 2026-10-15T10:37:42Z found the unique consolidated hourly automation disabled; retired legacy tasks were not treated as failures. The latest independent permanent-health run 38710693635 completed successfully at 2026-10-15T09:08:10Z on master 2a13982edca311faf2edf61661b7182f168a0c03 and validated all eight declared ICS paths plus the three public RAW subscription feeds. The heartbeat therefore remains fresh but explicitly DEGRADED; no execution was invented and the task was not re-enabled."
+  "overall_result": "HEALTHY",
+  "note": "Fresh live observation confirmed the consolidated hourly automation enabled with Europe/Paris timezone and a completed run at 2026-10-16T08:36:44.912095+00:00. A deep check at 2026-10-16T10:24:00Z validated all eight declared ICS paths and confirmed the three public RAW subscription feeds match master. Retired legacy tasks were not treated as failures."
 }
