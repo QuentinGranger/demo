@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
-  "updated_at": "2026-10-16T10:36:43Z",
+  "updated_at": "2026-10-16T11:42:33Z",
   "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
   "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
   "notification_outbox": "fortnite-notification-outbox-france.json",
@@ -2977,6 +2977,68 @@
       "material_evidence_state": "FORTNITE_COMPETITIVE_OFFICIAL_EU_EXACT_AND_ELIGIBILITY",
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
       "notes": "Routine recurring cash cup ingested exhaustively as LEDGER_ONLY under the anti-bazar projection policy; no new publication timestamp or exceptional reward was established, so no notification is emitted."
+    },
+    {
+      "change_id": "chg_82f317fd006c4d0daf1f6c3a",
+      "domain": "COMPETITIVE",
+      "subject_scope_key": "sub_83b6eb3b7af47a16e9f0035fbca6af2659abca8e77bb27da88d79c772399df22",
+      "subject_key": "fncs-solos-heats-eu-20261017",
+      "subject_revision": 1,
+      "causal_parent_change_id": null,
+      "change_type": "ENTITY_CREATED",
+      "materiality": "NOTIFY",
+      "state_fingerprint": "f2b8e7ba3f6d75834072a94f8b595795068fd1fbb65e04ba79f3a92a2fdee3ff",
+      "transition_fingerprint": "71fff267a2b7dc9f562c3bf4de06a3016ebde1731792edb7c38f349e93d936be",
+      "detected_at": "2026-10-16T11:42:33Z",
+      "source_refs": [
+        "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage/?region=EU",
+        "https://www.fortnite.com/competitive/rules-guidelines/rules-library/fortnite-championship-series-fncs-solos-2026-official-rules"
+      ],
+      "notification_disposition": "ELIGIBLE_NOW",
+      "scope_key": "calendars/fortnite-paris.ics",
+      "material_before": null,
+      "material_after": {
+        "competition_id": "fncs-solos-heats-eu-20261017",
+        "status": "SCHEDULED",
+        "visibility": "FEATURED",
+        "date_window": {
+          "start_date": "2026-10-17",
+          "end_date": "2026-10-18"
+        },
+        "sessions": [
+          {
+            "heat": 1,
+            "start_at": "2026-10-17T13:00:00+02:00",
+            "end_at": "2026-10-17T15:40:00+02:00"
+          },
+          {
+            "heat": 2,
+            "start_at": "2026-10-18T13:00:00+02:00",
+            "end_at": "2026-10-18T15:40:00+02:00"
+          }
+        ],
+        "qualification": {
+          "participants_per_region": 200,
+          "fast_track": 92,
+          "qualifier_2": 108,
+          "players_per_heat": 100,
+          "per_match_victory_royale": "FINALS",
+          "top_points_per_heat": 29,
+          "places_36_50": "LCQ_FINAL"
+        },
+        "eligibility": {
+          "qualified_players_only": true,
+          "age_min": 13,
+          "mfa_required": true
+        }
+      },
+      "material_evidence_state": "FORTNITE_COMPETITIVE_OFFICIAL_EU_EXACT_PLUS_RULES_QUALIFICATION",
+      "projection_targets": [
+        "calendars/fortnite-competitive-france.ics",
+        "calendars/fortnite-paris.ics"
+      ],
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+      "notes": "Major FNCS qualification stage beginning tomorrow; exact EU Heat windows and direct Finals/LCQ consequences are actionable."
     }
   ],
   "calendar_write_receipts": [],
@@ -3141,6 +3203,11 @@
       "at": "2026-10-16T10:36:43Z",
       "type": "SILENT_COMPETITIVE_ENTITY_CREATED",
       "note": "Official EU Reload Zero Build Duos Cash Cup session for 16 October was ingested as LEDGER_ONLY; visible calendars and notification outbox remain unchanged."
+    },
+    {
+      "at": "2026-10-16T11:42:33Z",
+      "type": "MATERIAL_COMPETITIVE_ENTITY_CREATED",
+      "note": "Official FNCS Solos Heats Europe schedule for 17–18 October and qualification consequences accepted for calendar projection and notification."
     }
   ]
 }
