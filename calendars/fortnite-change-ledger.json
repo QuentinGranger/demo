@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
-  "updated_at": "2026-10-16T08:32:00Z",
+  "updated_at": "2026-10-16T10:36:43Z",
   "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
   "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
   "notification_outbox": "fortnite-notification-outbox-france.json",
@@ -2936,6 +2936,47 @@
       ],
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
       "notes": "Official EU schedule exposes today's third Solo Reload Victory Cup event and current event details; exact session times and progression threshold are now actionable."
+    },
+    {
+      "change_id": "chg_b28606580e27d3d16898fcad",
+      "domain": "COMPETITIVE",
+      "subject_scope_key": "sub_07c371bf484f133e786c51a92819e7848f10dd13c536a2cc237c4da03ab879b5",
+      "subject_key": "reload-zb-duos-cash-eu-20261016",
+      "subject_revision": 1,
+      "causal_parent_change_id": null,
+      "change_type": "ENTITY_CREATED",
+      "materiality": "LEDGER_ONLY",
+      "state_fingerprint": "7a25627e7c54a5ba0bec63f604b975303804783d2f2d899e8ea52fae529e5a5e",
+      "transition_fingerprint": "93c9342bc38666b764a4cceeb02719a877cccc257d78633699ece54b00f22443",
+      "detected_at": "2026-10-16T10:36:43Z",
+      "source_refs": [
+        "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB/?region=EU"
+      ],
+      "notification_disposition": "SILENT_POLICY",
+      "scope_key": null,
+      "material_before": null,
+      "material_after": {
+        "competition_id": "reload-zb-duos-cash-eu-20261016",
+        "status": "SCHEDULED",
+        "visibility": "LEDGER_ONLY",
+        "session": {
+          "start_at": "2026-10-16T17:00:00+02:00",
+          "end_at": "2026-10-16T19:15:00+02:00",
+          "region": "EU",
+          "ruleset": "ZERO_BUILD",
+          "team_format": "DUOS"
+        },
+        "eligibility": {
+          "minimum_rank": "PLATINUM_OR_HIGHER_RELOAD_COMBINED",
+          "age_min": 13,
+          "mfa_required": true
+        },
+        "prize_state": "CASH_PRIZE_OPPORTUNITY_EXACT_AMOUNT_NOT_PUBLIC"
+      },
+      "material_evidence_state": "FORTNITE_COMPETITIVE_OFFICIAL_EU_EXACT_AND_ELIGIBILITY",
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+      "notes": "Routine recurring cash cup ingested exhaustively as LEDGER_ONLY under the anti-bazar projection policy; no new publication timestamp or exceptional reward was established, so no notification is emitted."
     }
   ],
   "calendar_write_receipts": [],
@@ -3095,6 +3136,11 @@
       "at": "2026-10-10T14:10:39Z",
       "type": "MATERIAL_CALENDAR_PROMOTION",
       "note": "Official Spooky Dash Sprites Power Hours projected into updates + global calendars with two exact windows."
+    },
+    {
+      "at": "2026-10-16T10:36:43Z",
+      "type": "SILENT_COMPETITIVE_ENTITY_CREATED",
+      "note": "Official EU Reload Zero Build Duos Cash Cup session for 16 October was ingested as LEDGER_ONLY; visible calendars and notification outbox remain unchanged."
     }
   ]
 }
