@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_LEDGER_FR_V2",
-  "updated_at": "2026-10-13T05:14:39Z",
+  "updated_at": "2026-10-16T08:32:00Z",
   "scope": "Cross-ledger semantic change history and idempotency for Fortnite France/Europe",
   "purpose": "Persist causal material changes with stable subject revisions so replays converge to the same change while genuine repeated lifecycle transitions remain distinguishable.",
   "notification_outbox": "fortnite-notification-outbox-france.json",
@@ -2866,6 +2866,76 @@
       ],
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
       "notes": "New official same-day EU cosmetic cup; exact session and top-50 EU reward bundle create an immediate play action."
+    },
+    {
+      "change_id": "chg_7f31a9d6c2e84b50a1479c3d",
+      "domain": "CALENDAR_PROJECTION",
+      "subject_scope_key": "sub_171e72883a4e0f4df2a9b12e519cb636f449262dccc07ac5f9670252a976af37",
+      "subject_key": "calendars/fortnite-competitive-france.ics|fortnite-solo-reload-victory-cup-eu-2026@openai",
+      "subject_revision": 2,
+      "causal_parent_change_id": "chg_523db7153f37570be0fc5212",
+      "change_type": "SCHEDULE_CHANGED",
+      "materiality": "NOTIFY",
+      "state_fingerprint": "7f31a9d6c2e84b50a1479c3d5ad38758f45d83ca192fdd7a06af849813420bc1",
+      "transition_fingerprint": "a8d4c7516e913bb2f5c0e94a73526d189f3c61e275ab4c04f8953d6a1872e4bc",
+      "detected_at": "2026-10-16T08:32:00Z",
+      "source_refs": [
+        "https://www.fortnite.com/competitive/?lang=fr&region=EU",
+        "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round1_EU&region=EU"
+      ],
+      "notification_disposition": "ELIGIBLE_NOW",
+      "scope_key": "calendars/fortnite-paris.ics",
+      "material_before": {
+        "uid": "fortnite-solo-reload-victory-cup-eu-2026@openai",
+        "competition_id": "solo-reload-victory-cup-eu-2026",
+        "status": "SCHEDULED",
+        "action": "PLAY",
+        "region": "EU",
+        "format": "SOLOS",
+        "known_sessions": [
+          {
+            "start_at": "2026-10-02T17:00:00+02:00",
+            "end_at": "2026-10-02T19:00:00+02:00"
+          },
+          {
+            "start_at": "2026-10-02T20:00:00+02:00",
+            "end_at": "2026-10-02T20:45:00+02:00"
+          }
+        ],
+        "round2_eu_slots": 4000
+      },
+      "material_after": {
+        "uid": "fortnite-solo-reload-victory-cup-eu-2026@openai",
+        "competition_id": "solo-reload-victory-cup-eu-2026",
+        "status": "SCHEDULED",
+        "action": "PLAY",
+        "region": "EU",
+        "format": "SOLOS",
+        "new_sessions": [
+          {
+            "start_at": "2026-10-16T17:00:00+02:00",
+            "end_at": "2026-10-16T19:00:00+02:00"
+          },
+          {
+            "start_at": "2026-10-16T20:00:00+02:00",
+            "end_at": "2026-10-16T20:45:00+02:00"
+          }
+        ],
+        "current_event_minimum_rank": "DIAMANT",
+        "round2_eu_slots": 960,
+        "round2_victory_royale_usd": 100,
+        "projection_targets": [
+          "calendars/fortnite-competitive-france.ics",
+          "calendars/fortnite-paris.ics"
+        ]
+      },
+      "material_evidence_state": "FORTNITE_COMPETITIVE_OFFICIAL_EU_EXACT_CURRENT_SESSION",
+      "projection_targets": [
+        "calendars/fortnite-competitive-france.ics",
+        "calendars/fortnite-paris.ics"
+      ],
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2",
+      "notes": "Official EU schedule exposes today's third Solo Reload Victory Cup event and current event details; exact session times and progression threshold are now actionable."
     }
   ],
   "calendar_write_receipts": [],
