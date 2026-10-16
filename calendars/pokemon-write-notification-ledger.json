@@ -213,6 +213,16 @@
       "reserved_at": "2026-10-03T21:52:22.872Z",
       "master_commit": "5a45f761242512c449f0602a1e2c54b60e6f10c3",
       "workflow_run": "https://github.com/QuentinGranger/demo/actions/runs/37156076194"
+    },
+    {
+      "user_effect": "game_event:pokemon-sv-metagross-mightiest-mark-20261016:fr",
+      "uid": "pokemon-sv-metagross-mightiest-mark-20261016@pokemon-fr",
+      "write_status": "WRITE_VERIFIED_RAW",
+      "patch_request": "calendars/patch-requests/pokemon-metagross-mightiest-mark-20261016-20261016T0812Z.json",
+      "write_notice_key": "game_event:pokemon-sv-metagross-mightiest-mark-20261016:fr|pokemon-sv-metagross-mightiest-mark-20261016@pokemon-fr|WRITE_VERIFIED_RAW|aaa5e1cc3d21c2c3f6127f3339069cdb98d5621d",
+      "state": "RESERVED",
+      "reserved_at": "2026-10-16T10:15:30+02:00",
+      "master_commit": "aaa5e1cc3d21c2c3f6127f3339069cdb98d5621d"
     }
   ]
 }
