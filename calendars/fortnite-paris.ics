@@ -37,25 +37,14 @@ X-FORTNITE-FIRST-ADDED-AT:20260819T051529Z
 X-FORTNITE-NEW-UNTIL:20260824T051529Z
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260821
-SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 3 : R
- unners
-DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affich
- ée pour gagner les récompenses du Passe de combat Runners.\nEpic indique
-  que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026
-  en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas co
- nvertir cette date en heure française ni déduire l'heure de maintenance 
- ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale a
- nnoncée pour la fin de l'été reste en watchlist tant que sa date/heure 
- de lancement n'est pas officiellement publiée.\nSource : https://www.fort
- nite.com/battle-pass?lang=en-US
+SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 3 : Runners
+DESCRIPTION:Priorité : ⭐ Important — dernière date officielle affichée pour gagner les récompenses du Passe de combat Runners.\nEpic indique que le Passe de combat du Chapitre 7 Saison 3 se termine le 20 août 2026 en heure de l'Est.\n⚠️ Aucune heure exacte n'est publiée : ne pas convertir cette date en heure française ni déduire l'heure de maintenance ou le lancement de la saison suivante.\nLa nouvelle saison Battle Royale annoncée pour la fin de l'été reste en watchlist tant que sa date/heure de lancement n'est pas officiellement publiée.\nSource : https://www.fortnite.com/battle-pass?lang=en-US
 URL:https://www.fortnite.com/battle-pass?lang=en-US
-CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de comb
- at
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 3,Runners,Passe de combat
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date 
- officielle ET — termine tes récompenses
+DESCRIPTION:⏳ Le Passe de combat Runners se termine demain selon la date officielle ET — termine tes récompenses
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -80,25 +69,14 @@ X-FORTNITE-FIRST-ADDED-AT:20260820T070853Z
 X-FORTNITE-NEW-UNTIL:20260825T070853Z
 DTSTART;TZID=Europe/Paris:20260828T055900
 DTEND;TZID=Europe/Paris:20260828T060000
-SUMMARY:⭐ ✅ 🆕 🎁 Bonus lancement Passe Override — dernière limi
- te
-DESCRIPTION:Priorité : ⭐ Important — limite officielle du bonus de lan
- cement du Passe de combat Override.\nFortnite indique qu’obtenir le Pass
- e avant le 27 août à 23:59 ET donne la tenue Infiltrator Grace Crowne et
-  ses accessoires. Cette échéance correspond au 28 août à 05:59 heure d
- e Paris.\n⚠️ Cette heure concerne uniquement l’éligibilité à ce b
- onus de lancement : elle ne constitue ni la fermeture générale d’achat
-  du Passe\, ni la fin de progression\, ni la fin du Passe.\nSource : https
- ://www.fortnite.com/news/fortnite-override-break-the-rules-change-the-game
-URL:https://www.fortnite.com/news/fortnite-override-break-the-rules-change-
- the-game
-CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de com
- bat,Bonus
+SUMMARY:⭐ ✅ 🆕 🎁 Bonus lancement Passe Override — dernière limite
+DESCRIPTION:Priorité : ⭐ Important — limite officielle du bonus de lancement du Passe de combat Override.\nFortnite indique qu’obtenir le Passe avant le 27 août à 23:59 ET donne la tenue Infiltrator Grace Crowne et ses accessoires. Cette échéance correspond au 28 août à 05:59 heure de Paris.\n⚠️ Cette heure concerne uniquement l’éligibilité à ce bonus de lancement : elle ne constitue ni la fermeture générale d’achat du Passe\, ni la fin de progression\, ni la fin du Passe.\nSource : https://www.fortnite.com/news/fortnite-override-break-the-rules-change-the-game
+URL:https://www.fortnite.com/news/fortnite-override-break-the-rules-change-the-game
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de combat,Bonus
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎁 Bonus de lancement Override : plus que 24 h pour obtenir l
- e Passe avant la limite
+DESCRIPTION:🎁 Bonus de lancement Override : plus que 24 h pour obtenir le Passe avant la limite
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-PT2H
@@ -128,30 +106,19 @@ X-FORTNITE-FIRST-ADDED-AT:20260820T070853Z
 X-FORTNITE-NEW-UNTIL:20260825T070853Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 4 : O
- verride
-DESCRIPTION:Priorité : ⭐ Important — la page officielle Battle Pass in
- dique que le Passe Override du Chapitre 7 Saison 4 se termine le 1er novem
- bre 2026 en heure de l’Est.\nLe Passe est affiché comme disponible pour
-  800 V-Bucks.\n⚠️ Aucune heure exacte de fin n’est publiée : cette 
- date reste DATE_ONLY et n’est pas convertie en heure française. Elle ne
-  prouve pas non plus l’heure de fin de la saison Battle Royale\, un rese
- t Ranked ou le lancement d’une saison suivante.\nSource : https://www.fo
- rtnite.com/battle-pass?lang=en-US
+SUMMARY:⭐ ✅ 🆕 ⏳ Fin du Passe de combat — Chapitre 7 Saison 4 : Override
+DESCRIPTION:Priorité : ⭐ Important — la page officielle Battle Pass indique que le Passe Override du Chapitre 7 Saison 4 se termine le 1er novembre 2026 en heure de l’Est.\nLe Passe est affiché comme disponible pour 800 V-Bucks.\n⚠️ Aucune heure exacte de fin n’est publiée : cette date reste DATE_ONLY et n’est pas convertie en heure française. Elle ne prouve pas non plus l’heure de fin de la saison Battle Royale\, un reset Ranked ou le lancement d’une saison suivante.\nSource : https://www.fortnite.com/battle-pass?lang=en-US
 URL:https://www.fortnite.com/battle-pass?lang=en-US
-CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de com
- bat
+CATEGORIES:Fortnite,Battle Royale,Chapitre 7,Saison 4,Override,Passe de combat
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:⏳ Le Passe de combat Override se termine dans 7 jours selon l
- a date officielle ET
+DESCRIPTION:⏳ Le Passe de combat Override se termine dans 7 jours selon la date officielle ET
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:⏳ Le Passe de combat Override se termine demain selon la date
-  officielle ET
+DESCRIPTION:⏳ Le Passe de combat Override se termine demain selon la date officielle ET
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -170,8 +137,7 @@ X-FORTNITE-SERVICE-STATE:RESOLVED
 X-FORTNITE-SERVICE-PROVIDER-PHASE:RESOLVED
 X-FORTNITE-SERVICE-IMPACT:UNSPECIFIED
 X-FORTNITE-SERVICE-ACTIONABILITY:NONE
-X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,
- Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
+X-FORTNITE-AFFECTED-SERVICE:Game Services,Login,Parties/Friends,Voice Chat,Matchmaking,Stats/Leaderboards,Item Shop,Fortnite Crew
 X-FORTNITE-SERVICE-SOURCE-ID:epic_status
 X-FORTNITE-SERVICE-RELATION-TYPE:PATCH_DEPLOYMENT
 X-FORTNITE-PATCH-VERSION:42.00
@@ -184,14 +150,7 @@ X-FORTNITE-NEW-UNTIL:20260825T001202Z
 DTSTART;TZID=Europe/Paris:20260820T080000
 DTEND;TZID=Europe/Paris:20260820T133100
 SUMMARY:ℹ️ ✅ 🆕 🛠️ Maintenance Fortnite v42.00 — terminée
-DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite 
- v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 ao
- ût 2026 à 11:31 UTC, soit 13:31 heure de Paris.\nFortnite, Game Services
- , Login, Matchmaking, groupes/amis, chat vocal, stats/classements, boutiqu
- e et Fortnite Crew sont actuellement opérationnels sur Epic Status.\nLa f
- enêtre prévue se terminait à 13:00 à Paris ; l’heure 13:31 est l’h
- eure de fin réellement publiée, pas une estimation.\nSource : https://st
- atus.epicgames.com/incidents/b0jf1mxvlc2l
+DESCRIPTION:Priorité : ℹ️ Info — la maintenance planifiée Fortnite v42.00 est terminée.\nEpic Status l’a marquée « Completed » le 20 août 2026 à 11:31 UTC, soit 13:31 heure de Paris.\nFortnite, Game Services, Login, Matchmaking, groupes/amis, chat vocal, stats/classements, boutique et Fortnite Crew sont actuellement opérationnels sur Epic Status.\nLa fenêtre prévue se terminait à 13:00 à Paris ; l’heure 13:31 est l’heure de fin réellement publiée, pas une estimation.\nSource : https://status.epicgames.com/incidents/b0jf1mxvlc2l
 URL:https://status.epicgames.com/incidents/b0jf1mxvlc2l
 CATEGORIES:Fortnite,Maintenance,Mise à jour,v42.00,Services
 END:VEVENT
@@ -218,21 +177,13 @@ X-FORTNITE-NEW-UNTIL:20260829T001537Z
 DTSTART;TZID=Europe/Paris:20260827T100000
 DTEND;TZID=Europe/Paris:20260902T100000
 SUMMARY:⭐ ✅ 🆕 🧱 LEGO Fortnite Odyssey — portail du Monastère
-DESCRIPTION:Priorité : ⭐ Important — fenêtre limitée officiellement 
- publiée par Epic.\nDu 27 août 2026 à 10h00 au 2 septembre 2026 à 10h00
-  heure de Paris, le portail du Monastère rouvre dans LEGO Fortnite Odysse
- y.\nÉliminer le Shatter Spawn permet d’obtenir quatre récompenses dor
- ées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shuriken
- s of ICE.\nAucune autre condition, quota ou rareté n’est déduite.\nSou
- rce : https://www.fortnite.com/@epic/lego-fortnite-odyssey
+DESCRIPTION:Priorité : ⭐ Important — fenêtre limitée officiellement publiée par Epic.\nDu 27 août 2026 à 10h00 au 2 septembre 2026 à 10h00 heure de Paris, le portail du Monastère rouvre dans LEGO Fortnite Odyssey.\nÉliminer le Shatter Spawn permet d’obtenir quatre récompenses dorées : Sword of FIRE, Scythe of QUAKES, Nunchucks of LIGHTNING et Shurikens of ICE.\nAucune autre condition, quota ou rareté n’est déduite.\nSource : https://www.fortnite.com/@epic/lego-fortnite-odyssey
 URL:https://www.fortnite.com/@epic/lego-fortnite-odyssey
-CATEGORIES:Fortnite,LEGO Fortnite Odyssey,Événement limité,Monastère,R
- écompenses
+CATEGORIES:Fortnite,LEGO Fortnite Odyssey,Événement limité,Monastère,Récompenses
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée 
- LEGO Fortnite Odyssey
+DESCRIPTION:🧱 Portail du Monastère demain à 10h — fenêtre limitée LEGO Fortnite Odyssey
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -251,31 +202,21 @@ X-FORTNITE-SERVICE-STATE:DOWNTIME_ANNOUNCED
 X-FORTNITE-SERVICE-PROVIDER-PHASE:SCHEDULED
 X-FORTNITE-SERVICE-IMPACT:PARTIAL
 X-FORTNITE-SERVICE-ACTIONABILITY:MEDIUM
-X-FORTNITE-AFFECTED-SERVICE:Epic Online Services Lobbies,Sessions,Matchmaki
- ng
+X-FORTNITE-AFFECTED-SERVICE:Epic Online Services Lobbies,Sessions,Matchmaking
 X-FORTNITE-SERVICE-SOURCE-ID:epic_status
 X-FORTNITE-SERVICE-RELATION-TYPE:PLATFORM_MAINTENANCE
 X-FORTNITE-TIME-PRECISION:EXACT
 X-FORTNITE-LAST-CHANGE-ID:chg_62dc8da5562a2281fcacaa09
 DTSTART;TZID=Europe/Paris:20260922T080000
 DTEND;TZID=Europe/Paris:20260922T093000
-SUMMARY:ℹ️ ✅ 🛠️ Maintenance Epic Online Services — sessions/lo
- bbies
-DESCRIPTION:Priorité : ℹ️ Info — maintenance Epic Online Services pl
- anifiée.\nLe 22 septembre 2026 de 08h00 à 09h30 heure de Paris\, Epic pr
- évoit une disponibilité dégradée des services Sessions et Lobbies.\nEp
- ic indique que les sessions existantes expireront et que les clients seron
- t déconnectés \; création de nouvelles sessions\, invitations\, recherc
- he et matchmaking seront temporairement indisponibles pendant cette fenêt
- re.\nAucun patch Fortnite\, saison ou compétition n'est lié par inféren
- ce.\nSource : https://status.epicgames.com/incidents/djsq84vjvp45
+SUMMARY:ℹ️ ✅ 🛠️ Maintenance Epic Online Services — sessions/lobbies
+DESCRIPTION:Priorité : ℹ️ Info — maintenance Epic Online Services planifiée.\nLe 22 septembre 2026 de 08h00 à 09h30 heure de Paris\, Epic prévoit une disponibilité dégradée des services Sessions et Lobbies.\nEpic indique que les sessions existantes expireront et que les clients seront déconnectés \; création de nouvelles sessions\, invitations\, recherche et matchmaking seront temporairement indisponibles pendant cette fenêtre.\nAucun patch Fortnite\, saison ou compétition n'est lié par inférence.\nSource : https://status.epicgames.com/incidents/djsq84vjvp45
 URL:https://status.epicgames.com/incidents/djsq84vjvp45
 CATEGORIES:Fortnite,Maintenance,Epic Online Services,Matchmaking
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchm
- aking potentiellement indisponibles
+DESCRIPTION:🛠️ Maintenance EOS dans 1 h — sessions/lobbies et matchmaking potentiellement indisponibles
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -303,26 +244,13 @@ X-FORTNITE-SESSION;TYPE=POWER_HOUR_2:20260830T030000/20260830T050000
 DTSTART;TZID=Europe/Paris:20260829T200000
 DTEND;TZID=Europe/Paris:20260829T220000
 SUMMARY:⭐ ✅ 🆕 💨 Power Hours — Sonic Sprites
-DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité
-  confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 29 août 20
- h00–22h00 à Paris.\nFenêtre 2 : dimanche 30 août 03h00–05h00 à Par
- is.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’est p
- as présenté comme actif entre 22h et 03h.\nLe Storm Scout Sprite fait se
- s débuts pendant ces Power Hours. Sonic, Tails et Shadow Sprites apparais
- sent plus souvent, variantes incluses ; les Sonic Power Sneakers ont un ta
- ux de drop accru depuis les coffres. Des 1-Up Tokens et Portable Extractor
- s peuvent aussi apparaître comme trouvailles rares.\nAucun taux chiffré 
- ni garantie de drop n’est déduit.\nSource : https://communities.epicgam
- es.com/thread/power-hours-sonic-sprites-this-weekend-august-29/XvRq
-URL:https://communities.epicgames.com/thread/power-hours-sonic-sprites-this
- -weekend-august-29/XvRq
-CATEGORIES:Fortnite,Battle Royale,Power Hours,Sonic,Sprites,Événement lim
- ité
+DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 29 août 20h00–22h00 à Paris.\nFenêtre 2 : dimanche 30 août 03h00–05h00 à Paris.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’est pas présenté comme actif entre 22h et 03h.\nLe Storm Scout Sprite fait ses débuts pendant ces Power Hours. Sonic, Tails et Shadow Sprites apparaissent plus souvent, variantes incluses ; les Sonic Power Sneakers ont un taux de drop accru depuis les coffres. Des 1-Up Tokens et Portable Extractors peuvent aussi apparaître comme trouvailles rares.\nAucun taux chiffré ni garantie de drop n’est déduit.\nSource : https://communities.epicgames.com/thread/power-hours-sonic-sprites-this-weekend-august-29/XvRq
+URL:https://communities.epicgames.com/thread/power-hours-sonic-sprites-this-weekend-august-29/XvRq
+CATEGORIES:Fortnite,Battle Royale,Power Hours,Sonic,Sprites,Événement limité
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:💨 Sonic Sprites Power Hours dans 1 h — première fenêtre 
- à 20h
+DESCRIPTION:💨 Sonic Sprites Power Hours dans 1 h — première fenêtre à 20h
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -349,18 +277,8 @@ X-FORTNITE-JOIN-BY;TZID=Europe/Paris:20260829T195500
 DTSTART;TZID=Europe/Paris:20260829T200000
 DTEND;TZID=Europe/Paris:20260829T201000
 SUMMARY:🔥 ✅ 🆕 🎬 Fortnite OG — The Final Showdown
-DESCRIPTION:Priorité : 🔥 Critique — live event Fortnite OG officiel d
- e 10 minutes.\nDébut : samedi 29 août à 20h00 à Paris (18:00 UTC).\n
- ⚠️ Epic recommande d’entrer dans une partie Fortnite OG avant 19h55 
- à Paris.\nDix minutes avant l’événement, les dégâts sont désactiv
- és et la tempête mise en pause ; un Jetpack est fourni pour choisir un p
- oint d’observation. Après l’événement, dégâts et tempête sont r
- éactivés.\nEpic décrit une menace monstrueuse près de la côte au nord
-  de Lazy Lagoon ; aucune identité, relation ou causalité lore supplémen
- taire n’est déduite.\nSource : https://communities.epicgames.com/thread
- /the-final-showdown-event-returns-to-fortnite-og/Ull5
-URL:https://communities.epicgames.com/thread/the-final-showdown-event-retur
- ns-to-fortnite-og/Ull5
+DESCRIPTION:Priorité : 🔥 Critique — live event Fortnite OG officiel de 10 minutes.\nDébut : samedi 29 août à 20h00 à Paris (18:00 UTC).\n⚠️ Epic recommande d’entrer dans une partie Fortnite OG avant 19h55 à Paris.\nDix minutes avant l’événement, les dégâts sont désactivés et la tempête mise en pause ; un Jetpack est fourni pour choisir un point d’observation. Après l’événement, dégâts et tempête sont réactivés.\nEpic décrit une menace monstrueuse près de la côte au nord de Lazy Lagoon ; aucune identité, relation ou causalité lore supplémentaire n’est déduite.\nSource : https://communities.epicgames.com/thread/the-final-showdown-event-returns-to-fortnite-og/Ull5
+URL:https://communities.epicgames.com/thread/the-final-showdown-event-returns-to-fortnite-og/Ull5
 CATEGORIES:Fortnite,Fortnite OG,Live Event,The Final Showdown
 BEGIN:VALARM
 TRIGGER:-PT1H
@@ -370,8 +288,7 @@ END:VALARM
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:🔥 The Final Showdown dans 15 min — entre dans une partie O
- G avant 19h55
+DESCRIPTION:🔥 The Final Showdown dans 15 min — entre dans une partie OG avant 19h55
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -390,30 +307,20 @@ X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_news
 X-FORTNITE-SOURCE-TIMEZONE:UNKNOWN
 X-FORTNITE-TIME-PRECISION:DATE_ONLY
-X-FORTNITE-CANDIDATE-ID:fortnite-fortnitemares-nitemare-island-reload-20261
- 008
+X-FORTNITE-CANDIDATE-ID:fortnite-fortnitemares-nitemare-island-reload-20261008
 X-FORTNITE-LAST-CHANGE-ID:chg_ecf28e8c048766b81f7d7a60
 X-FORTNITE-FIRST-ADDED-AT:20261004T141452Z
 X-FORTNITE-NEW-UNTIL:20261009T141452Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:⭐ ✅ 🆕 🎃 Recharge — île Cauchemardesque mise à jour
-DESCRIPTION:Priorité : ⭐ Important — mise à jour de contenu Fortnitem
- ares confirmée directement par Epic.\nLe 8 octobre 2026, une version mise
-  à jour de l’île Cauchemardesque arrive dans Recharge, aux côtés des
-  cartes Stranger Things et Squid Grounds.\n⚠️ Epic n’a pas publié d
- ’heure exacte : la fiche reste en journée entière et aucune heure de m
- ise en ligne n’est inventée.\nSource : https://www.fortnite.com/news/th
- e-corruption-spreads-in-fortnitemares-2026
-URL:https://www.fortnite.com/news/the-corruption-spreads-in-fortnitemares-2
- 026
-CATEGORIES:Fortnite,Recharge,Fortnitemares 2026,Mise à jour,Stranger Thing
- s,Squid Grounds
+DESCRIPTION:Priorité : ⭐ Important — mise à jour de contenu Fortnitemares confirmée directement par Epic.\nLe 8 octobre 2026, une version mise à jour de l’île Cauchemardesque arrive dans Recharge, aux côtés des cartes Stranger Things et Squid Grounds.\n⚠️ Epic n’a pas publié d’heure exacte : la fiche reste en journée entière et aucune heure de mise en ligne n’est inventée.\nSource : https://www.fortnite.com/news/the-corruption-spreads-in-fortnitemares-2026
+URL:https://www.fortnite.com/news/the-corruption-spreads-in-fortnitemares-2026
+CATEGORIES:Fortnite,Recharge,Fortnitemares 2026,Mise à jour,Stranger Things,Squid Grounds
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🎃 Demain : mise à jour de l’île Cauchemardesque dans Rec
- harge
+DESCRIPTION:🎃 Demain : mise à jour de l’île Cauchemardesque dans Recharge
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -441,26 +348,13 @@ X-FORTNITE-SESSION;TYPE=POWER_HOUR_2:20261011T030000/20261011T050000
 DTSTART;TZID=Europe/Paris:20261010T200000
 DTEND;TZID=Europe/Paris:20261010T220000
 SUMMARY:⭐ ✅ 🆕 🎃 Power Hours — Spooky Dash Sprites
-DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité
-  confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 10 octobre 
- 20h00–22h00 à Paris.\nFenêtre 2 : dimanche 11 octobre 03h00–05h00 à
-  Paris.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’e
- st pas présenté comme actif entre 22h00 et 03h00.\nChaque partie commenc
- e avec un balai de sorcière. Les Sprites Cerf\, Vampire et Spooky Dash ap
- paraissent plus souvent\, avec davantage de coffres citrouilles. Des jeton
- s 1-Up et extracteurs portables peuvent aussi apparaître dans les coffres
- . Aucun taux chiffré ni garantie de drop n’est déduit.\nSource : https
- ://communities.epicgames.com/thread/power-hours-spooky-dash-sprites-octobe
- r-10/nrHH
-URL:https://communities.epicgames.com/thread/power-hours-spooky-dash-sprite
- s-october-10/nrHH
-CATEGORIES:Fortnite,Battle Royale,Power Hours,Spooky Dash,Sprites,Événeme
- nt limité
+DESCRIPTION:Priorité : ⭐ Important — événement Battle Royale limité confirmé directement par Epic/Fortnite.\nFenêtre 1 : samedi 10 octobre 20h00–22h00 à Paris.\nFenêtre 2 : dimanche 11 octobre 03h00–05h00 à Paris.\n⚠️ Les deux fenêtres sont distinctes : l’événement n’est pas présenté comme actif entre 22h00 et 03h00.\nChaque partie commence avec un balai de sorcière. Les Sprites Cerf\, Vampire et Spooky Dash apparaissent plus souvent\, avec davantage de coffres citrouilles. Des jetons 1-Up et extracteurs portables peuvent aussi apparaître dans les coffres. Aucun taux chiffré ni garantie de drop n’est déduit.\nSource : https://communities.epicgames.com/thread/power-hours-spooky-dash-sprites-october-10/nrHH
+URL:https://communities.epicgames.com/thread/power-hours-spooky-dash-sprites-october-10/nrHH
+CATEGORIES:Fortnite,Battle Royale,Power Hours,Spooky Dash,Sprites,Événement limité
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🎃 Power Hours Spooky Dash Sprites dans 1 h — première fen
- être à 20h00
+DESCRIPTION:🎃 Power Hours Spooky Dash Sprites dans 1 h — première fenêtre à 20h00
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -490,10 +384,8 @@ X-FORTNITE-ADMISSION-MODE:PAID_TICKET
 X-FORTNITE-LAST-CHANGE-ID:chg_78c55475112852e25cfa46ad
 X-FORTNITE-TICKET-PACKAGE:2_DAY_COMBO
 X-FORTNITE-TICKET-WAITLIST:YES
-X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=LOW_AVAILABILITY;SCARC
- ITY-EVIDENCE=EXPLICIT_TEXT:Billet standard 2 jours
-X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILA
- BLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=STANDARD_2_DAY;STATUS=LOW_AVAILABILITY;SCARCITY-EVIDENCE=EXPLICIT_TEXT:Billet standard 2 jours
+X-FORTNITE-TICKET-CATEGORY;KEY=ULTIMATE_LIVE_EXPERIENCE_2_DAY;STATUS=AVAILABLE;PRICE-EUR=324.70:Ultimate Live Experience Package 2 jours
 X-FORTNITE-AGE-RESTRICTION:16+
 X-FORTNITE-VENUE-TIME-1:20260926T140000
 X-FORTNITE-VENUE-TIME-2:20260927T183000
@@ -507,44 +399,23 @@ DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260928
 SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Fortnite Global Championship 2026 — Anvers
 LOCATION:Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique
-DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en 
- présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 part
- ies sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Compet
- itive.\n🎟️ Billetterie : retour d’inventaire après la liste d’at
- tente. Ticketmaster Belgique affiche maintenant le pass 2 jours en « Disp
- onibilité limitée » et propose l’accès aux tickets. La liste d’att
- ente reste proposée en parallèle \; aucun nombre de places restantes n
- ’est déduit. Aucun billet à la journée n’est annoncé.\n✨ Ultimat
- e Live Experience Package : 324\,70 € sur Lotto Arena \; le package rest
- e présenté avec un accès d’achat\, sans quantité restante affirmée.
- \n🔞 Restriction d’âge publiée : 16+.\n🕒 Lotto Arena affiche 14h0
- 0 le samedi 26 et 18h30 le dimanche 27 comme horaires salle \; ils ne sont
-  pas traités comme horaires officiels des parties FNCS.\n📍 Lotto Arena
- \, Schijnpoortweg 119\, Anvers\, Belgique.\nRappels : J-30\, J-7 et J-1.\n
- Ticketmaster : https://www.ticketmaster.be/discover/antwerpen?categoryId=K
- ZFzniwnSyZfZ7v7nE&classificationId=KnvZfZ7vAJF&language=fr-be\nLotto Arena
-  : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c
- 1ed5ce1
+DESCRIPTION:Priorité : ⭐ Important. Championnat global Fortnite 2026 en présentiel.\nDates : 26 et 27 septembre 2026.\nFormat : 50 duos\, 12 parties sur deux jours\, 2 000 000 $ de dotation annoncée par Fortnite Competitive.\n🎟️ Billetterie : retour d’inventaire après la liste d’attente. Ticketmaster Belgique affiche maintenant le pass 2 jours en « Disponibilité limitée » et propose l’accès aux tickets. La liste d’attente reste proposée en parallèle \; aucun nombre de places restantes n’est déduit. Aucun billet à la journée n’est annoncé.\n✨ Ultimate Live Experience Package : 324\,70 € sur Lotto Arena \; le package reste présenté avec un accès d’achat\, sans quantité restante affirmée.\n🔞 Restriction d’âge publiée : 16+.\n🕒 Lotto Arena affiche 14h00 le samedi 26 et 18h30 le dimanche 27 comme horaires salle \; ils ne sont pas traités comme horaires officiels des parties FNCS.\n📍 Lotto Arena\, Schijnpoortweg 119\, Anvers\, Belgique.\nRappels : J-30\, J-7 et J-1.\nTicketmaster : https://www.ticketmaster.be/discover/antwerpen?categoryId=KZFzniwnSyZfZ7v7nE&classificationId=KnvZfZ7vAJF&language=fr-be\nLotto Arena : https://www.lotto-arena.be/en/event/fortnite-global-championship-2026-c1ed5ce1
 URL:https://www.fortnite.com/competitive/fncs-2026-overview?lang=fr
-CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championshi
- p,Europe
+CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Duos,Global Championship,Europe
 BEGIN:VALARM
 TRIGGER:-P30D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billet
- s, transport et hôtel pour Anvers
+DESCRIPTION:🏆 FNCS Global Championship dans 30 jours — vérifie billets, transport et hôtel pour Anvers
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P7D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaire
- s, billet et trajet
+DESCRIPTION:🏆 FNCS Global Championship dans 7 jours — vérifie horaires, billet et trajet
 END:VALARM
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et tra
- jet vers Anvers
+DESCRIPTION:🏆 FNCS Global Championship demain — prépare billet et trajet vers Anvers
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -578,25 +449,17 @@ X-FORTNITE-ACCESS-ACTION:WATCH
 X-FORTNITE-TICKET-PROVIDER-ID:ewc_paris
 X-FORTNITE-TICKET-STATUS:PREREGISTRATION
 X-FORTNITE-TICKET-SCOPE:EWC_PARIS_MIXED_SCOPES
-X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY
- -EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
-X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=AVAILABLE;PRICE-E
- UR=4.99;PROVIDER-ID=platinumlist_paris:Billet Fan Fest valide pour la jour
- née — accès watch parties
-X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=AVAILABLE;ACCESS=FAN_F
- EST_DAY_TICKET:Watch parties Fortnite
-X-FORTNITE-WATCH-PARTY-TICKET-URL:https://paris.platinumlist.net/fr/event-t
- ickets/106986/fan-fest-at-ewc26
+X-FORTNITE-TICKET-CATEGORY;KEY=FORTNITE_MAIN_STAGE;STATUS=SOLD_OUT;SCARCITY-EVIDENCE=EXPLICIT_TEXT:Billet scène principale Fortnite
+X-FORTNITE-TICKET-CATEGORY;KEY=FAN_FEST_DAY_ACCESS;STATUS=AVAILABLE;PRICE-EUR=4.99;PROVIDER-ID=platinumlist_paris:Billet Fan Fest valide pour la journée — accès watch parties
+X-FORTNITE-PUBLIC-SESSION;TYPE=PUBLIC_VIEWING;STATUS=AVAILABLE;ACCESS=FAN_FEST_DAY_TICKET:Watch parties Fortnite
+X-FORTNITE-WATCH-PARTY-TICKET-URL:https://paris.platinumlist.net/fr/event-tickets/106986/fan-fest-at-ewc26
 X-FORTNITE-WATCH-PARTY-TICKET-PRICE-FROM-EUR:4.99
 X-FORTNITE-TIME-PRECISION:DATE_RANGE
 X-FORTNITE-COMPETITIVE-SCHEDULE-PRECISION:EXACT_STARTS_ENDS_UNKNOWN
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T
- 150000
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260820T
- 150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260819T150000
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=GROUP_STAGE;STATUS=COMPLETED:20260820T150000
 X-FORTNITE-COMPETITIVE-SESSION;PHASE=SURVIVAL;STATUS=LIVE:20260821T150000
-X-FORTNITE-COMPETITIVE-SESSION;PHASE=FINALS;STATUS=SCHEDULED:20260822T12000
- 0
+X-FORTNITE-COMPETITIVE-SESSION;PHASE=FINALS;STATUS=SCHEDULED:20260822T120000
 X-FORTNITE-COMPETITIVE-ZONE:Qiddiya City Grid
 X-FORTNITE-FIRST-ADDED-AT:20260819T071231Z
 X-FORTNITE-NEW-UNTIL:20260824T071231Z
@@ -605,36 +468,15 @@ X-FORTNITE-UPDATE-UNTIL:20260824T171049Z
 X-FORTNITE-UPDATE-REASON:OFFICIAL_COMPETITIVE_SESSION_TIMES
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260823
-SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026
-  — Paris
-LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles
- \, 75015 Paris\, France
-DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship 
- réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 
- août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Ver
- sailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'e
- ntrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : 
- Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, 
- puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne so
- nt pas déduites. « Qiddiya City Grid » est conservé uniquement comme l
- ibellé de zone compétitive du planning EWC\, pas comme instruction d'ent
- rée publique.\n🎟️ Les billets de la scène principale Fortnite sont 
- complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parti
- es Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et n
- écessitent un billet Fan Fest valide pour la journée. Billets Fan Fest a
- ctuellement achetables à partir de 4\,99 € via Platinumlist ; la scène
-  principale Fortnite reste complète. Les horaires exacts des watch partie
- s ne sont pas affirmés.\nSource planning : https://ewc-web.prod.esf-syste
- ms.com/en/schedule\nGuide EWC : https://ewc-web.prod.esf-systems.com/en/ne
- ws/ewc26-fortnite-survival-guide
+SUMMARY:⭐ ✅ 🆕 ✨ 🏆 Reload Elite Series Championship — EWC 2026 — Paris
+LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles\, 75015 Paris\, France
+DESCRIPTION:Priorité : ⭐ Important. Le Reload Elite Series Championship réunit les 40 meilleurs duos à l'Esports World Cup à Paris du 19 au 22 août 2026\, pour 1 000 000 $ US.\n📍 Site EWC : Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles\, 75015 Paris. Aucun point d'entrée Fortnite spécifique n'est affirmé.\n🕒 Planning EWC officiel : Group Stage à 15h00 les 19 et 20 août\, Survival à 15h00 le 21 août\, puis finale le 22 août à 12h00\, heure de Paris. Les heures de fin ne sont pas déduites. « Qiddiya City Grid » est conservé uniquement comme libellé de zone compétitive du planning EWC\, pas comme instruction d'entrée publique.\n🎟️ Les billets de la scène principale Fortnite sont complets. Ce SOLD OUT reste limité à cette scène.\n👀 Des watch parties Fortnite sont annoncées sur les Qiddiya City BattleGrounds stages et nécessitent un billet Fan Fest valide pour la journée. Billets Fan Fest actuellement achetables à partir de 4\,99 € via Platinumlist ; la scène principale Fortnite reste complète. Les horaires exacts des watch parties ne sont pas affirmés.\nSource planning : https://ewc-web.prod.esf-systems.com/en/schedule\nGuide EWC : https://ewc-web.prod.esf-systems.com/en/news/ewc26-fortnite-survival-guide
 URL:https://ewc-web.prod.esf-systems.com/en/schedule
-CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Ro
- yale,Duos,Paris,France
+CATEGORIES:Fortnite,Reload Elite Series,EWC,Compétition,Recharge,Battle Royale,Duos,Paris,France
 BEGIN:VALARM
 TRIGGER;VALUE=DATE-TIME:20260822T090000Z
 ACTION:DISPLAY
-DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h
- 00 à Paris
+DESCRIPTION:🏆 Finale Reload Elite Series EWC dans 1 h — départ à 12h00 à Paris
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -662,26 +504,13 @@ X-FORTNITE-SESSION;TYPE=ZERO_BUILD:20260821T170000/20260821T200000
 DTSTART;TZID=Europe/Paris:20260821T160000
 DTEND;TZID=Europe/Paris:20260821T200000
 SUMMARY:⭐ ✅ 🆕 🦔 Coupe Shadow EU — cosmétiques avant boutique
-DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
- lle le 21 août avec récompenses Shadow avant leur arrivée en boutique.\
- n📱 Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs 
- max. Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Do
- om's Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮
-  Battle Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : mêm
- e set cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Pow
- er.\n🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 
- 1000 EU : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 an
- s (ou minimum local) et A2F obligatoire.\nRègles : https://www.fortnite.c
- om/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-
- 4-official-rules
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle le 21 août avec récompenses Shadow avant leur arrivée en boutique.\n📱 Mobile : 16h00–17h15\, Fortnite Recharge\, Android/iOS\, 8 matchs max. Top 200 EU : tenue Shadow + emote Super Shadow + accessoire de dos Doom's Eye. Sprays : 20 points Sonic's Roll\, 5 points Shadow's Power.\n🎮 Battle Royale : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set cosmétique. Sprays : 40 points Sonic's Roll\, 8 points Shadow's Power.\n🚫 Zéro construction : 17h00–20h00\, solos\, 11 matchs max. Top 1000 EU : même set cosmétique. Sprays : 40/8 points.\nÂge minimum 13 ans (ou minimum local) et A2F obligatoire.\nRègles : https://www.fortnite.com/competitive/rules-guidelines/rules-library/shadow-cup-chapter-7-season-4-official-rules
 URL:https://www.fortnite.com/competitive/events/S42_ShadowCup_ZB/?region=EU
-CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zér
- o construction,EU,Récompenses
+CATEGORIES:Fortnite,Compétition,Shadow Cup,Solos,Mobile,Battle Royale,Zéro construction,EU,Récompenses
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à
-  16h00
+DESCRIPTION:🦔 Coupe Shadow EU dans 1 h — la session mobile commence à 16h00
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -701,8 +530,7 @@ X-FORTNITE-REGION:GLOBAL
 X-FORTNITE-PLATFORM:MOBILE
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
-X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-mobile-series-copenhagen-202
- 6
+X-FORTNITE-PHYSICAL-EVENT-ID:fortnite-physical-mobile-series-copenhagen-2026
 X-FORTNITE-VENUE-ID:blast_studios_copenhagen
 X-FORTNITE-LOCATION-PRECISION:VENUE
 X-FORTNITE-ACCESS-STATE:UNKNOWN
@@ -711,21 +539,11 @@ X-FORTNITE-FIRST-ADDED-AT:20260821T070228Z
 X-FORTNITE-NEW-UNTIL:20260826T070228Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261026
-SUMMARY:⭐ ✅ 🆕 📱 Fortnite Mobile Series Championship — Copenhagu
- e
+SUMMARY:⭐ ✅ 🆕 📱 Fortnite Mobile Series Championship — Copenhague
 LOCATION:BLAST Studios\, Copenhague\, Danemark
-DESCRIPTION:Priorité : ⭐ Important — premier championnat Fortnite Mobi
- le Series en présentiel.\nDates officielles : 24 et 25 octobre 2026 à BL
- AST Studios\, Copenhague\, Danemark.\nFormat : les 16 meilleurs joueurs Fo
- rtnite Mobile au monde\, en solos sur le parcours compétitif Mobile/Recha
- rge.\n💰 Fortnite annonce 1 000 000 $ sur l'écosystème Mobile Series/F
- inals ; aucun montant spécifique au seul Championship n'est affirmé ici.
- \n⚠️ Horaires de matchs\, adresse de rue\, accès spectateurs et bille
- tterie publique non publiés : aucun détail n'est inventé.\nSource : htt
- ps://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
+DESCRIPTION:Priorité : ⭐ Important — premier championnat Fortnite Mobile Series en présentiel.\nDates officielles : 24 et 25 octobre 2026 à BLAST Studios\, Copenhague\, Danemark.\nFormat : les 16 meilleurs joueurs Fortnite Mobile au monde\, en solos sur le parcours compétitif Mobile/Recharge.\n💰 Fortnite annonce 1 000 000 $ sur l'écosystème Mobile Series/Finals ; aucun montant spécifique au seul Championship n'est affirmé ici.\n⚠️ Horaires de matchs\, adresse de rue\, accès spectateurs et billetterie publique non publiés : aucun détail n'est inventé.\nSource : https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
 URL:https://www.fortnite.com/competitive/mobile-series?lang=en-US&region=EU
-CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenh
- ague,Danemark
+CATEGORIES:Fortnite,Compétition,Mobile Series,Recharge,Solos,Mobile,Copenhague,Danemark
 END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-crash-bandicoot-cup-eu-20260828@openai
@@ -750,30 +568,17 @@ X-FORTNITE-FIRST-ADDED-AT:20260827T200011Z
 X-FORTNITE-NEW-UNTIL:20260901T200011Z
 X-FORTNITE-SESSION;TYPE=MOBILE;FORMAT=SOLOS:20260828T160000/20260828T171500
 X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
-X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260
- 828T193000
+X-FORTNITE-SESSION;TYPE=ZERO_BUILD_RELOAD;FORMAT=DUOS:20260828T170000/20260828T193000
 DTSTART;TZID=Europe/Paris:20260828T160000
 DTEND;TZID=Europe/Paris:20260828T193000
 SUMMARY:⭐ ✅ 🆕 🥭 Override Series — Crash Bandicoot Cup EU
-DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officie
- lle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobi
- le : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero 
- Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuv
- ent concourir pour tenter de gagner des récompenses cosmétiques Crash Ba
- ndicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont
-  pas matérialisés depuis les règles officielles.\nÉligibilité publié
- e : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA act
- ivée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBand
- icootCup/?region=EU
-URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?regi
- on=EU
-CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmét
- iques
+DESCRIPTION:Priorité : ⭐ Important — opportunité compétitive officielle Crash Bandicoot le 28 août avec récompenses cosmétiques.\n📱 Mobile : 16h00–17h15, solos.\n🎮 Reload : 17h00–19h30, duos.\n🚫 Zero Build Reload : 17h00–19h30, duos.\nFortnite indique que les joueurs peuvent concourir pour tenter de gagner des récompenses cosmétiques Crash Bandicoot. Les seuils exacts ne sont pas affirmés ici tant qu’ils ne sont pas matérialisés depuis les règles officielles.\nÉligibilité publiée : au moins 13 ans (ou l’âge minimum du pays de résidence) et MFA activée.\nSource : https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU
+URL:https://www.fortnite.com/competitive/events/S42_CrashBandicootCup/?region=EU
+CATEGORIES:Fortnite,Compétition,Override Series,Crash Bandicoot,EU,Cosmétiques
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
-DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload 
- à 17h
+DESCRIPTION:🥭 Crash Bandicoot Cup EU dans 1 h — Mobile à 16h, Reload à 17h
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -802,16 +607,8 @@ X-FORTNITE-SESSION;ROUND=QUALIFIER1-R3:20261004T170000/20261004T200000
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20261012
 SUMMARY:🏆 ✅ 🆕 Qualifications FNCS Solo — Europe
-DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Sessi
- ons exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 17h00
-  à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux j
- ours sont cumulés. Éligibilité annoncée : top 200 000 du Power Ranking
-  global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directem
- ent au round 2 ; participer au round 1 annule cet accès direct. Top 8 000
-  EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source off
- icielle Fortnite Competitive.
-URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang
- =fr&region=EU
+DESCRIPTION:Période officielle : du 28 septembre au 11 octobre 2026. Sessions exactes confirmées : 28 et 29 septembre, puis 3 et 4 octobre de 17h00 à 20h00 (Paris), jusqu’à 11 matchs par session. Les scores des deux jours sont cumulés. Éligibilité annoncée : top 200 000 du Power Ranking global, 13 ans minimum et A2F activée. Le top 2 000 peut passer directement au round 2 ; participer au round 1 annule cet accès direct. Top 8 000 EU du round 1 vers le round 2, puis top 1 000 vers le round 3. Source officielle Fortnite Competitive.
+URL:https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?lang=fr&region=EU
 CATEGORIES:Fortnite,Compétition,FNCS,Solos,Europe
 BEGIN:VALARM
 TRIGGER:-P1D
@@ -822,15 +619,15 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fortnite-solo-reload-victory-cup-eu-2026@openai
 DTSTAMP:20260927T051346Z
-LAST-MODIFIED:20260927T051346Z
-SEQUENCE:0
+LAST-MODIFIED:20261016T083200Z
+SEQUENCE:1
 STATUS:CONFIRMED
 PRIORITY:5
 X-FORTNITE-PRIORITY:IMPORTANT
 X-FORTNITE-ACTION:PLAY
 X-FORTNITE-EVIDENCE-GRADE:A
 X-FORTNITE-SOURCE-ID:fortnite_competitive
-X-FORTNITE-LAST-CHANGE-ID:chg_523db7153f37570be0fc5212
+X-FORTNITE-LAST-CHANGE-ID:chg_7f31a9d6c2e84b50a1479c3d
 X-FORTNITE-COMPETITION-ID:solo-reload-victory-cup-eu-2026
 X-FORTNITE-PROJECTION-LEVEL:CALENDAR
 X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
@@ -840,25 +637,26 @@ X-FORTNITE-FORMAT:SOLOS
 X-FORTNITE-PLATFORM:ALL_SUPPORTED
 X-FORTNITE-SESSION;ROUND=SESSION1-R1:20261002T170000/20261002T190000
 X-FORTNITE-SESSION;ROUND=SESSION1-R2:20261002T200000/20261002T204500
+X-FORTNITE-SESSION;ROUND=SESSION3-R1:20261016T170000/20261016T190000
+X-FORTNITE-SESSION;ROUND=SESSION3-R2:20261016T200000/20261016T204500
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261024
-SUMMARY:🏆 ✅ 🆕 Coupe victoire solo (Recharge) — Europe
-DESCRIPTION:Période officielle : du 2 au 23 octobre 2026. Première journ
- ée exacte : vendredi 2 octobre, round 1 de 17h00 à 19h00 puis round 2 de
-  20h00 à 20h45 (Paris). Éligibilité : atteindre Platine ou plus en clas
- sé Recharge combiné pendant la saison précédente ou actuelle, avoir au
-  moins 13 ans et activer l’A2F. Le top 4 000 EU du round 1 accède au ro
- und 2 ; chaque Victoire royale du round 2 rapporte 100 $ US. Les horaires 
- ultérieurs ne sont pas extrapolés ici. Source officielle Fortnite Compet
- itive.
-URL:https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup/?l
- ang=fr&region=EU
+SUMMARY:🏆 ✅ 🔄 Coupe victoire solo (Recharge) — Europe
+DESCRIPTION:Période officielle : du 2 au 23 octobre 2026. Nouvelle se
+ ssion exacte aujourd’hui : round 1 de 17h00 à 19h00 puis round 2 d
+ e 20h00 à 20h45 (Paris). L’éligibilité officielle progresse selo
+ n l’édition : Platine pour les deux premières\, Diamant pour la t
+ roisième et Champion pour la finale ; vérifiez l’onglet Compétit
+ ion. Le top 960 EU du round 1 accède au round 2 ; chaque Victoire ro
+ yale au round 2 rapporte 100 $ US. Source officielle Fortnite Competi
+ tive.
+URL:https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryC
+ up?round=S42_ReloadSoloVictoryCup_Event4_Round1_EU&region=EU
 CATEGORIES:Fortnite,Compétition,Coupe victoire,Recharge,Solos,Europe
 BEGIN:VALARM
-TRIGGER:-P1D
+TRIGGER;VALUE=DATE-TIME:20261016T140000Z
 ACTION:DISPLAY
-DESCRIPTION:🏆 La Coupe victoire solo Recharge Europe commence demain à 
- 17h
+DESCRIPTION:🏆 Coupe victoire solo Recharge Europe dans 1 heure
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -888,19 +686,9 @@ X-FORTNITE-SESSION;TYPE=RELOAD;FORMAT=SOLOS:20261013T170000/20261013T193000
 DTSTART;TZID=Europe/Paris:20261013T170000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:⭐ ✅ 🆕 Elite Kado Thorne Cup EU — cosmétiques
-DESCRIPTION:Priorité : ⭐ Important — coupe solo Recharge officielle au
- jourd’hui de 17h00 à 19h30 (heure de Paris).\nLes 50 meilleurs joueurs 
- EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’acc
- essoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.\nJusqu’
- à 12 matchs. Joueurs classés uniquement ; au moins 13 ans (ou minimum lo
- cal) et A2F obligatoire. Le rang minimal exact n’est pas indiqué sur la
-  page publique des règles ; vérifier l’onglet Compétition en jeu.\nR
- ègles : https://www.fortnite.com/competitive/rules-guidelines/rules-libra
- ry/elite-kado-thorne-cup-chapter-7-season-4-official-rules
-URL:https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?regi
- on=EU
-CATEGORIES:Fortnite,Compétition,Elite Kado Thorne,Recharge,Solos,EU,Récom
- penses
+DESCRIPTION:Priorité : ⭐ Important — coupe solo Recharge officielle aujourd’hui de 17h00 à 19h30 (heure de Paris).\nLes 50 meilleurs joueurs EU remportent la tenue Elite Kado Thorne, la pioche Psyonic Spear, l’accessoire de dos Psyonic Elite Cloak et le revêtement Kado Elite.\nJusqu’à 12 matchs. Joueurs classés uniquement ; au moins 13 ans (ou minimum local) et A2F obligatoire. Le rang minimal exact n’est pas indiqué sur la page publique des règles ; vérifier l’onglet Compétition en jeu.\nRègles : https://www.fortnite.com/competitive/rules-guidelines/rules-library/elite-kado-thorne-cup-chapter-7-season-4-official-rules
+URL:https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?region=EU
+CATEGORIES:Fortnite,Compétition,Elite Kado Thorne,Recharge,Solos,EU,Récompenses
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
