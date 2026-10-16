@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_COMPETITIVE_INTELLIGENCE_EU_V1",
-  "updated_at": "2026-10-13T05:14:39Z",
+  "updated_at": "2026-10-16T08:32:00Z",
   "scope": "Fortnite competitive intelligence for EU sessions, with France-oriented calendar projection and global-major coverage",
   "source_of_truth": "Fortnite Competitive official schedule/event pages for tournament sessions, regions, formats and qualification structure; organizer/venue sources only for physical-event logistics and ticketing.",
   "principles": {
@@ -2758,7 +2758,7 @@
       "registration": null,
       "eligibility": {
         "status": "CONFIRMED",
-        "minimum_rank": "Platine ou plus en classé Recharge combiné pendant la saison précédente ou actuelle",
+        "minimum_rank": "Platine pour les deux premiers événements, Diamant pour le troisième et Champion pour la finale en classé Recharge",
         "account_level": null,
         "age_min": 13,
         "two_factor_required": true,
@@ -2772,7 +2772,7 @@
         "round_2_victory_royale_usd": 100
       },
       "qualification": {
-        "round1_eu_to_round2": 4000
+        "round1_eu_to_round2": 960
       },
       "visibility": "CALENDAR",
       "calendar_uid": "fortnite-solo-reload-victory-cup-eu-2026@openai",
@@ -2855,6 +2855,83 @@
             }
           ],
           "schedule_completeness": "PARTIAL_EXACT"
+        },
+        {
+          "phase_id": "solo-reload-victory-cup-eu-2026:session-3",
+          "name": "Session 3",
+          "phase_type": "QUALIFIER",
+          "order": 3,
+          "status": "SCHEDULED",
+          "registration": null,
+          "eligibility_override": {
+            "minimum_rank": "Diamant ou plus en classé Recharge"
+          },
+          "qualification_override": {
+            "round1_eu_to_round2": 960
+          },
+          "sessions": [
+            {
+              "session_id": "solo-reload-victory-cup-eu-2026:session-3:round-1:EU:20261016T1700",
+              "official_session_id": "S42_ReloadSoloVictoryCup_Event4_Round1_EU",
+              "name": "Coupe victoire solo (Recharge) — Session 3, round 1",
+              "session_number": 3,
+              "round_number": 1,
+              "round_label": "Session 3 — Round 1",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-10-16T17:00:00+02:00",
+              "end_at": "2026-10-16T19:00:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": {
+                "advances_to": "Session 3 — Round 2",
+                "eu_slots": 960
+              },
+              "prize": null,
+              "source_url": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round1_EU&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-solo-reload-victory-cup-eu-2026@openai",
+              "related_service_event_ids": []
+            },
+            {
+              "session_id": "solo-reload-victory-cup-eu-2026:session-3:round-2:EU:20261016T2000",
+              "official_session_id": "S42_ReloadSoloVictoryCup_Event4_Round2_EU",
+              "name": "Coupe victoire solo (Recharge) — Session 3, round 2",
+              "session_number": 3,
+              "round_number": 2,
+              "round_label": "Session 3 — Round 2",
+              "status": "SCHEDULED",
+              "region": "EU",
+              "ruleset": "RELOAD",
+              "team_format": "SOLOS",
+              "platform_scope": "ALL_SUPPORTED",
+              "start_at": "2026-10-16T20:00:00+02:00",
+              "end_at": "2026-10-16T20:45:00+02:00",
+              "source_timezone": "Europe/Paris",
+              "display_timezone": "Europe/Paris",
+              "time_precision": "EXACT",
+              "registration_deadline_at": null,
+              "check_in_at": null,
+              "max_matches": null,
+              "qualification": null,
+              "prize": {
+                "type": "VICTORY_ROYALE",
+                "amount_usd": 100
+              },
+              "source_url": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round2_EU&region=EU",
+              "visibility": "CALENDAR",
+              "calendar_uid": "fortnite-solo-reload-victory-cup-eu-2026@openai",
+              "related_service_event_ids": []
+            }
+          ],
+          "schedule_completeness": "PARTIAL_EXACT"
         }
       ],
       "history": [
@@ -2863,6 +2940,12 @@
           "type": "COMPETITION_CREATED",
           "source_id": "fortnite_competitive",
           "note": "Official EU event page confirmed the Oct 2–23 window, the first two exact sessions, eligibility, qualification threshold and victory prize."
+        },
+        {
+          "at": "2026-10-16T08:32:00Z",
+          "type": "SCHEDULE_UPDATED",
+          "source_id": "fortnite_competitive",
+          "note": "Official EU schedule confirms the 16 October sessions at 17:00–19:00 and 20:00–20:45 Europe/Paris; current official details specify top 960 EU to round 2 and progressive rank requirements."
         }
       ]
     },
