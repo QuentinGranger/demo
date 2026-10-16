@@ -459,4 +459,52 @@ ACTION:DISPLAY
 DESCRIPTION:Elite Kado Thorne Cup EU dans 1 h — 17h00 à 19h30
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:fortnite-fncs-solos-heats-eu-20261017@openai
+DTSTAMP:20261016T114233Z
+LAST-MODIFIED:20261016T114233Z
+SEQUENCE:0
+STATUS:CONFIRMED
+PRIORITY:5
+X-FORTNITE-PRIORITY:IMPORTANT
+X-FORTNITE-ACTION:PARTICIPATE_OR_WATCH
+X-FORTNITE-EVENT-TYPE:FNCS_HEATS
+X-FORTNITE-SERIES:FNCS_SOLOS_2026
+X-FORTNITE-MODE:BATTLE_ROYALE
+X-FORTNITE-FORMAT:SOLOS
+X-FORTNITE-REGION:EU
+X-FORTNITE-EVIDENCE-GRADE:A
+X-FORTNITE-SOURCE-ID:fortnite_competitive
+X-FORTNITE-TIME-PRECISION:EXACT
+X-FORTNITE-LAST-CHANGE-ID:chg_82f317fd006c4d0daf1f6c3a
+X-FORTNITE-COMPETITION-ID:fncs-solos-heats-eu-20261017
+X-FORTNITE-PROJECTION-LEVEL:FEATURED
+X-FORTNITE-PROJECTION-GRANULARITY:COMPETITION
+X-FORTNITE-FIRST-ADDED-AT:20261016T114233Z
+X-FORTNITE-NEW-UNTIL:20261021T114233Z
+X-FORTNITE-SESSION;PHASE=HEAT1:20261017T130000/20261017T154000
+X-FORTNITE-SESSION;PHASE=HEAT2:20261018T130000/20261018T154000
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261019
+SUMMARY:⭐ ✅ 🆕 🏆 Séries FNCS Solo — Europe
+DESCRIPTION:Priorité : ⭐ Important — séries FNCS Solo Europe les 17 e
+ t 18 octobre 2026\, de 13h00 à 15h40 (Paris) chaque jour.\n200 joueurs pa
+ r région : 92 issus de la Voie rapide et 108 de la Qualification 2\, rép
+ artis en deux séries de 100.\nChaque Victoire royale qualifie immédiatem
+ ent son vainqueur pour la finale. Après chaque série\, les 29 meilleurs 
+ joueurs aux points n’ayant pas gagné se qualifient aussi pour la finale
+  ; les places 36 à 50 accèdent à la finale de dernière chance.\nPartic
+ ipation réservée aux joueurs déjà qualifiés. Minimum 13 ans et A2F ob
+ ligatoire.\nSource : https://www.fortnite.com/competitive/events/S42_FNCSS
+ olo_HeatsStage/?region=EU
+URL:https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage/?re
+ gion=EU
+CATEGORIES:Fortnite,FNCS,Compétition,Battle Royale,Solos,Europe,Qualificat
+ ion
+BEGIN:VALARM
+TRIGGER;VALUE=DATE-TIME:20261017T100000Z
+ACTION:DISPLAY
+DESCRIPTION:🏆 Séries FNCS Solo Europe dans 1 h — série 1 à 13h00
+END:VALARM
+END:VEVENT
 END:VCALENDAR
