@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-10-16T08:36:00Z",
+  "updated_at": "2026-10-16T10:24:30Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -772,6 +772,14 @@
       "at": "2026-10-16T08:36:00Z",
       "reservation_id": "nrs_4f18a2c790e63db5419f27aa",
       "note": "Reserved after fresh official EU schedule verification and successful calendar projection; key consumed before user-visible emission."
+    },
+    {
+      "delivery_event_id": "nde_91f4c3d7a6b825e0f14c39ad",
+      "intent_id": "nti_0d9b71fa3c842e1568d7a220",
+      "notification_key": "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd",
+      "state": "SENT",
+      "at": "2026-10-16T10:24:30Z",
+      "note": "Delivery confirmed from the user-visible Fortnite Solo Reload Victory Cup alert in the prior automation run."
     }
   ],
   "consumed_keys": {
@@ -857,10 +865,11 @@
       "consumed_at": "2026-10-13T05:14:39Z"
     },
     "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd": {
-      "state": "RESERVED",
+      "state": "SENT",
       "intent_id": "nti_0d9b71fa3c842e1568d7a220",
-      "last_event_id": "nde_1b8c6e5394fd20a7c13e8562",
-      "consumed_at": "2026-10-16T08:36:00Z"
+      "last_event_id": "nde_91f4c3d7a6b825e0f14c39ad",
+      "consumed_at": "2026-10-16T08:36:00Z",
+      "sent_at": "2026-10-16T10:24:30Z"
     }
   },
   "group_index": {
