@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_CHANGE_INDEX_FR_V1",
-  "updated_at": "2026-10-10T19:08:27Z",
+  "updated_at": "2026-10-16T10:36:43Z",
   "source_ledger": "fortnite-change-ledger.json",
   "notification_outbox": "fortnite-notification-outbox-france.json",
   "authority": "DERIVED_ONLY",
@@ -157,8 +157,8 @@
       "change_id": "chg_e96d51f292783e035f2f1c70"
     },
     "sub_171e72883a4e0f4df2a9b12e519cb636f449262dccc07ac5f9670252a976af37": {
-      "revision": 1,
-      "change_id": "chg_523db7153f37570be0fc5212"
+      "revision": 2,
+      "change_id": "chg_7f31a9d6c2e84b50a1479c3d"
     },
     "sub_3b0cd37b9268cfced6d334cf0566b028043bbbb3e23b94f9361a317fb9d73a26": {
       "revision": 1,
@@ -219,6 +219,14 @@
     "sub_277a8836f082ddf060ca3379494fa819003a6e4c001d68fe38749db3878e1143": {
       "revision": 1,
       "change_id": "chg_d0c731cb3653d9126ed5dd3f"
+    },
+    "sub_cb594cb3844047b00b4aa33d04630806b1cfb27c6e498174c975310f61ebb9ac": {
+      "revision": 1,
+      "change_id": "chg_1c2944f1d9d382f799197ab0"
+    },
+    "sub_07c371bf484f133e786c51a92819e7848f10dd13c536a2cc237c4da03ab879b5": {
+      "revision": 1,
+      "change_id": "chg_b28606580e27d3d16898fcad"
     }
   },
   "by_domain": {
@@ -228,6 +236,7 @@
       "chg_150d60464f50a16dcc9097fd",
       "chg_186d8e9d0dc4c9c2e6ef6fa9",
       "chg_1a94650a74a9cc3bb1e35785",
+      "chg_1c2944f1d9d382f799197ab0",
       "chg_1c3f40be2cb38bc8b8fdaf34",
       "chg_2504f96807ee6976b6661995",
       "chg_2bcf99c98097156b87914e8a",
@@ -243,6 +252,7 @@
       "chg_9a22269bdd60b9c74ab681b7",
       "chg_a09adc1247fdf75f7484df48",
       "chg_acd93b3cf6946be12427e2f2",
+      "chg_b28606580e27d3d16898fcad",
       "chg_b33b0a97f133f2d29464a385",
       "chg_d0cd79c5bde9ce8bebe2ba56",
       "chg_d5da4a70fe53c8721dc50661",
@@ -298,6 +308,7 @@
       "chg_4420022ba3332a7f2d9d82f9",
       "chg_523db7153f37570be0fc5212",
       "chg_701110cd7a046deefdd483da",
+      "chg_7f31a9d6c2e84b50a1479c3d",
       "chg_d0c731cb3653d9126ed5dd3f",
       "chg_e96d51f292783e035f2f1c70",
       "chg_ecf28e8c048766b81f7d7a60"
@@ -340,6 +351,7 @@
       "chg_150d60464f50a16dcc9097fd",
       "chg_186d8e9d0dc4c9c2e6ef6fa9",
       "chg_1a94650a74a9cc3bb1e35785",
+      "chg_1c2944f1d9d382f799197ab0",
       "chg_1c3f40be2cb38bc8b8fdaf34",
       "chg_2504f96807ee6976b6661995",
       "chg_2bcf99c98097156b87914e8a",
@@ -355,6 +367,7 @@
       "chg_9a22269bdd60b9c74ab681b7",
       "chg_a09adc1247fdf75f7484df48",
       "chg_acd93b3cf6946be12427e2f2",
+      "chg_b28606580e27d3d16898fcad",
       "chg_b33b0a97f133f2d29464a385",
       "chg_d0cd79c5bde9ce8bebe2ba56",
       "chg_d5da4a70fe53c8721dc50661",
@@ -389,6 +402,9 @@
       "chg_701110cd7a046deefdd483da",
       "chg_d0c731cb3653d9126ed5dd3f",
       "chg_ecf28e8c048766b81f7d7a60"
+    ],
+    "SCHEDULE_CHANGED": [
+      "chg_7f31a9d6c2e84b50a1479c3d"
     ]
   },
   "open_changes_by_subject": {
@@ -515,7 +531,8 @@
       "chg_e96d51f292783e035f2f1c70"
     ],
     "sub_171e72883a4e0f4df2a9b12e519cb636f449262dccc07ac5f9670252a976af37": [
-      "chg_523db7153f37570be0fc5212"
+      "chg_523db7153f37570be0fc5212",
+      "chg_7f31a9d6c2e84b50a1479c3d"
     ],
     "sub_3b0cd37b9268cfced6d334cf0566b028043bbbb3e23b94f9361a317fb9d73a26": [
       "chg_dc114806f4ccfca4dcb32dd4"
@@ -561,6 +578,12 @@
     ],
     "sub_277a8836f082ddf060ca3379494fa819003a6e4c001d68fe38749db3878e1143": [
       "chg_d0c731cb3653d9126ed5dd3f"
+    ],
+    "sub_cb594cb3844047b00b4aa33d04630806b1cfb27c6e498174c975310f61ebb9ac": [
+      "chg_1c2944f1d9d382f799197ab0"
+    ],
+    "sub_07c371bf484f133e786c51a92819e7848f10dd13c536a2cc237c4da03ab879b5": [
+      "chg_b28606580e27d3d16898fcad"
     ]
   },
   "consumed_notification_keys": [
@@ -573,9 +596,11 @@
     "ntf_383af04e3dc9812683116dbd8547cd6642b3485859e4b0b19f4862a30d8dfc33",
     "ntf_48cb964bd6e0fb35a96279abb26c24f4e776ec11fe9fbe1955ac8da998269ab2",
     "ntf_4f8f391b502ce2f6c8a79d8135217e8d5ec1bf8bdbfa22eb0f89f5a23c78f266",
+    "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd",
     "ntf_78137b64b59c0a43b735cec2a31052ee9a1c30790e9afce406d3464ab6b84b0f",
     "ntf_8dac09795585b07d42ee12b9e3febf52d6fed2390667cbcbf237ee7517af0489",
     "ntf_95edcc00fe85d1567e43a2c152c4b0a9bcbbb3beed0b5be0331f92340513d212",
+    "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb",
     "ntf_dde33a01a8d8a67ad75630f27deaa239291afa295743af8bec9f6a3524c7e202",
     "ntf_e45076f139dd6c0f51670d59b9449509b039b943044362995f0f6e1a9f1fe357",
     "ntf_f24eba8dc7638c40840c716403e7b01be8b9ee75f71efb2fddfd89a14906d5aa"
@@ -593,10 +618,10 @@
   ],
   "pending_reconciliation": [],
   "stats": {
-    "changes": 66,
-    "subjects": 52,
-    "notification_intents": 15,
-    "consumed_notification_keys": 15,
+    "changes": 69,
+    "subjects": 54,
+    "notification_intents": 17,
+    "consumed_notification_keys": 17,
     "unknown_delivery": 9,
     "unknown_delivery_keys": 9
   }
