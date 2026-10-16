@@ -1,6 +1,6 @@
 {
   "version": "FORTNITE_NOTIFICATION_OUTBOX_FR_V1",
-  "updated_at": "2026-10-13T05:14:39Z",
+  "updated_at": "2026-10-16T08:36:00Z",
   "scope": "Transactional notification intent, reservation and delivery audit for Fortnite France/Europe monitoring",
   "change_ledger": "fortnite-change-ledger.json",
   "change_engine": "fortnite-change-engine-france.json",
@@ -496,6 +496,30 @@
         "event_future": true
       },
       "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
+    },
+    {
+      "intent_id": "nti_0d9b71fa3c842e1568d7a220",
+      "notification_key": "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd",
+      "change_ids": [
+        "chg_7f31a9d6c2e84b50a1479c3d"
+      ],
+      "notice_kind": "SOLO_RELOAD_VICTORY_CUP_EU_OCT16_TODAY",
+      "audience_key": "user",
+      "channel_key": "chat",
+      "payload_fingerprint": "3c8f29d1e7045ab96c32f1e87d094b615ef4a8c33927d0be5219476ca830fd12",
+      "render_version": "FORTNITE_ALERT_FR_V1",
+      "created_at": "2026-10-16T08:36:00Z",
+      "subject_key": "fortnite-solo-reload-victory-cup-eu-2026@openai",
+      "locale": "fr-FR",
+      "payload_snapshot": "🏆 Fortnite — une nouvelle session de la Coupe victoire solo Recharge Europe se joue aujourd’hui : round 1 de 17 h à 19 h, puis round 2 de 20 h à 20 h 45. Le top 960 EU accède au round 2, où chaque Victoire royale rapporte 100 $ US. Vérifier l’éligibilité dans l’onglet Compétition avant 17 h.",
+      "condition_snapshot": {
+        "session_round_1": "2026-10-16T17:00:00+02:00/2026-10-16T19:00:00+02:00",
+        "session_round_2": "2026-10-16T20:00:00+02:00/2026-10-16T20:45:00+02:00",
+        "event_future": true,
+        "round2_eu_slots": 960,
+        "round2_victory_royale_usd": 100
+      },
+      "policy_version": "FORTNITE_CHANGE_ENGINE_FR_V2"
     }
   ],
   "delivery_events": [
@@ -739,6 +763,15 @@
       "at": "2026-10-13T05:14:39Z",
       "reservation_id": "nrs_bf410fc1420ee3522c05955e",
       "note": "Reserved after fresh official verification of the same-day Elite Kado Thorne Cup EU schedule and top-50 cosmetic rewards; key consumed before user-visible emission."
+    },
+    {
+      "delivery_event_id": "nde_1b8c6e5394fd20a7c13e8562",
+      "intent_id": "nti_0d9b71fa3c842e1568d7a220",
+      "notification_key": "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd",
+      "state": "RESERVED",
+      "at": "2026-10-16T08:36:00Z",
+      "reservation_id": "nrs_4f18a2c790e63db5419f27aa",
+      "note": "Reserved after fresh official EU schedule verification and successful calendar projection; key consumed before user-visible emission."
     }
   ],
   "consumed_keys": {
@@ -822,6 +855,12 @@
       "intent_id": "nti_6b764e2180b5affbaed5929a",
       "last_event_id": "nde_b2abc32e77b0efda7817bdd1",
       "consumed_at": "2026-10-13T05:14:39Z"
+    },
+    "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd": {
+      "state": "RESERVED",
+      "intent_id": "nti_0d9b71fa3c842e1568d7a220",
+      "last_event_id": "nde_1b8c6e5394fd20a7c13e8562",
+      "consumed_at": "2026-10-16T08:36:00Z"
     }
   },
   "group_index": {
@@ -831,7 +870,8 @@
     "grp_d414c272c67a3abeee7f3268418d811bfb33b50260a4867e06ea899fc2ad3023": "nti_e249017a0a073ddb6b00af16",
     "grp_0190c5bd2507b8913ce6c9f552586f9680f19d5836021ac32d0f94a5578cbef2": "nti_2d102fbf6c99f76f67c1e9c9",
     "grp_21b8a57d76adf0b198f0b60b35472e26fad205afcf7554e1e76a8d18ff89c4f9": "nti_16b61becd97cb8804a4e91c7",
-    "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb": "nti_6b764e2180b5affbaed5929a"
+    "ntf_a65cd6171c9670eaf15c8d97385ab7feea3b96d3c4d6469d8958eed511b2c9bb": "nti_6b764e2180b5affbaed5929a",
+    "ntf_5b3e29f47c086ad193e4527fb1c8d604b83f7193ea2c56098d47af13c6e920bd": "nti_0d9b71fa3c842e1568d7a220"
   },
   "history": [
     {
